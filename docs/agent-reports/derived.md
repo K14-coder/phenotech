@@ -523,6 +523,47 @@ RTK–RAS(–PI3K) and RAF–MEK, both labelled gain of function. The RASopathy 
 from `data/curated/family_*.json`. It is stdlib, runs in under a second, and also runs at the end of
 `global_index.py`. Tonight: 0 family files, 14 rows flagged. Re-run it whenever a family lands.
 
+## Disease grouping for guided search: `groups.json`
+
+This file is new and additive; `index.json` is unchanged. It is built by
+`pipeline/derive/groups.py` from MONDO `is_a`. It contains:
+
+- `head_of`: maps a row id to its family head's id;
+- `groups[head]`: the head's `name`, `genes`, `n_members`, and `members[]` with `id`, `name`,
+  `distinction` and `basis`;
+- `similar_names_different_conditions[]`.
+
+**Rule.** A row's head is the nearest `is_a` ancestor that is itself an index row and passes the
+filters, chosen in this order:
+
+1. The ancestor whose core name is contained in the child's. The core name drops generic words such
+   as disease, syndrome, type and form.
+2. Otherwise, the lowest ancestor with at least 2 index rows beneath it.
+
+An ancestor never qualifies if it is:
+
+- a blocklisted generic class ("hereditary disease", "neurodegenerative disease", "epilepsy", …);
+- above more than 60 index rows;
+- fewer than 3 `is_a` steps from the MONDO root.
+
+Chains collapse to a single level. `distinction` is the child's name minus the head's words, with
+the gene added (e.g. "juvenile (HTT)", "type 3 (KRAS)").
+
+`similar_names_different_conditions` lists rows that contain every core word of the head's name but
+are **not** under it in MONDO. For example, the Huntington disease-like disorders appear under
+Huntington disease this way.
+
+Result: 3,218 of 11,456 rows have a head, in 755 groups.
+
+**UI.** Run search as before, map every hit through `head_of`, and de-duplicate. Show the heads,
+with the exact name match first. Then show "Which type?" with the members and their distinctions,
+and "Similar names, different conditions" with the similar-name rows.
+
+**Reference sequences.** Files are in `data/derived/sequences/`: 45 MANE Select genes with CDS,
+protein, RefSeq and exon tables on GRCh38 and GRCh37, `variant_positions.json` for VCF matching, and
+5 synthetic example files. The schema and the VCF assembly-detection rules are in
+`data/derived/sequences/README.md`.
+
 ## Open questions for a biochemist
 
 New ones this layer raises (the biology layer's seven still stand):
