@@ -1,0 +1,142 @@
+{
+  "kind": "proposal",
+  "id": "disease:PTPN11",
+  "title": "A shared registry conversation for PTPN11-related families",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At the Noonan Syndrome Association (UK), we support families affected by PTPN11-related disorders; the atlas infers that the Noonan Syndrome Foundation (US) reaches these families through its Noonan syndrome mission.",
+          "edge_ids": [
+            "org:noonan-syndrome-association-uk|serves|disease:PTPN11",
+            "org:noonan-syndrome-foundation|serves|disease:PTPN11"
+          ]
+        },
+        {
+          "text": "Noonan-causing PTPN11 changes and SOS1 changes can both make proteins overactive, offering a reason to explore shared registry work—not proof that every family's needs match.",
+          "edge_ids": [
+            "disease:PTPN11|driven_by|mech:gain-of-function",
+            "disease:SOS1|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptoms, but that connection has confidence 0.36, below 0.5.",
+          "edge_ids": [
+            "disease:PTPN11|similar_phenotype|disease:SOS1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "PATRAS, the patient-based RASopathies registry within EURAS, is a starting point; its PTPN11 coverage is inferred by the atlas rather than explicitly named on the page.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:PTPN11"
+          ]
+        },
+        {
+          "text": "The RASopathies Network is building a contact registry, whose PTPN11 connection is also atlas-inferred.",
+          "edge_ids": [
+            "asset:rasopathies-network-contact-registry|covers|disease:PTPN11"
+          ]
+        },
+        {
+          "text": "The Clinical, Genetic, and Epidemiologic Study of Children and Adults With RASopathies explicitly lists PTPN11 and SOS1.",
+          "edge_ids": [
+            "study:NCT04888936|studies|disease:PTPN11"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please check whether multiple digital exostoses, superior pectus carinatum and amegakaryocytic thrombocytopenia occur in SOS1, KRAS and CBL disorders, rather than treating missing records as absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "Before offering PATRAS to SOS1 families, let's confirm eligibility, access and permission with its team.",
+          "edge_ids": []
+        },
+        {
+          "text": "We must distinguish overactive PTPN11 changes from loss-of-function changes; how NSML changes affect protein activity remains contested.",
+          "edge_ids": [
+            "disease:PTPN11|driven_by|mech:dominant-negative",
+            "disease:PTPN11|driven_by|mech:gain-of-function",
+            "disease:PTPN11|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "Please include the two questions below in that review.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let's jointly draft one short enquiry to PATRAS asking whether and how we could offer registry participation to SOS1-related families.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "What treatment fits NSML-type PTPN11 hypertrophic cardiomyopathy, where protein activity is impaired—a question for reviewing published evidence with a neurologist, not a treatment recommendation?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual gene changes are activating, impair protein activity, or cause loss of function?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Noonan Syndrome Foundation (US) team,",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we explore a small registry collaboration?",
+          "edge_ids": []
+        },
+        {
+          "text": "PATRAS is linked to PTPN11-related families by atlas inference.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:PTPN11"
+          ]
+        },
+        {
+          "text": "We propose drafting a joint enquiry about opening this opportunity to SOS1 families.",
+          "edge_ids": []
+        },
+        {
+          "text": "Would you help us check suitability before sharing an invitation?",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this first step.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Noonan Syndrome Association (UK)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:55:30.340Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

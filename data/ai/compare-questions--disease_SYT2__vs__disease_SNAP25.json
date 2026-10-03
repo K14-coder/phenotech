@@ -1,0 +1,102 @@
+{
+  "kind": "compare-questions",
+  "id": "disease:SYT2__vs__disease:SNAP25",
+  "title": "Questions before SYT2 and SNAP25 groups join forces",
+  "sections": [
+    {
+      "heading": "Biology",
+      "sentences": [
+        {
+          "text": "Given the disputed link between SNAP25 and reduced protein function, which patients share this problem with SYT2 patients, and which have a protein that does too much?",
+          "edge_ids": [
+            "disease:SYT2|driven_by|mech:loss-of-function",
+            "disease:SNAP25|driven_by|mech:loss-of-function",
+            "disease:SNAP25|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "How strong is the evidence that one working gene copy is not enough in either condition, given that these links are inferred rather than directly tested?",
+          "edge_ids": [
+            "vg:SYT2:splice|has_effect|mech:haploinsufficiency",
+            "vg:SNAP25:splice|has_effect|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "How strong is the evidence that SYT2 helps calcium trigger the release of nerve messages?",
+          "edge_ids": [
+            "gene:SYT2|participates_in|mech:ca-triggered-exocytosis"
+          ]
+        },
+        {
+          "text": "How strong is the evidence that SNAP25 helps packets carrying nerve messages join the nerve cell membrane to release their contents?",
+          "edge_ids": [
+            "gene:SNAP25|participates_in|mech:synaptic-vesicle-fusion"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Who can take part",
+      "sentences": [
+        {
+          "text": "Do the different inheritance patterns in SYT2 and SNAP25 change who can join a shared study?",
+          "edge_ids": []
+        },
+        {
+          "text": "Do the eligibility rules and visit schedule of the amifampridine phosphate study suit both groups equally, given its requirement for genetically confirmed congenital myasthenic syndromes?",
+          "edge_ids": [
+            "study:NCT02562066|studies|disease:SYT2",
+            "study:NCT02562066|studies|disease:SNAP25"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Measuring progress",
+      "sentences": [
+        {
+          "text": "Given the different mixes of gene changes in SYT2 and SNAP25, would ways of measuring progress developed for one group work for the other?",
+          "edge_ids": [
+            "vg:SYT2:contiguous-gene-deletion|variant_in|gene:SYT2",
+            "vg:SYT2:missense|variant_in|gene:SYT2",
+            "vg:SYT2:splice|variant_in|gene:SYT2",
+            "vg:SNAP25:contiguous-gene-deletion|variant_in|gene:SNAP25",
+            "vg:SNAP25:missense|variant_in|gene:SNAP25",
+            "vg:SNAP25:splice|variant_in|gene:SNAP25"
+          ]
+        },
+        {
+          "text": "Are increased muscle electrical responses during repeated nerve stimulation and limited eye movements truly absent in SNAP25, or simply not documented?",
+          "edge_ids": [
+            "disease:SYT2|has_phenotype|phenotype:HP:0025680",
+            "disease:SYT2|has_phenotype|phenotype:HP:0007941"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Practical checks",
+      "sentences": [
+        {
+          "text": "What would Simons Searchlight need to change to include SYT2 families alongside SNAP25 families?",
+          "edge_ids": [
+            "asset:simons-searchlight|covers|disease:SNAP25"
+          ]
+        },
+        {
+          "text": "Could the Congenital Muscle Disease International Registry or RARE-X support shared data collection for both communities?",
+          "edge_ids": [
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:SYT2",
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:SNAP25",
+            "asset:rare-x-data-collection|covers|disease:SNAP25"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:53:06.673Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

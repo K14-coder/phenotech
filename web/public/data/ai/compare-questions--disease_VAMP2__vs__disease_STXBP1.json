@@ -1,0 +1,108 @@
+{
+  "kind": "compare-questions",
+  "id": "disease:VAMP2__vs__disease:STXBP1",
+  "title": "Questions before VAMP2 and STXBP1 groups join forces",
+  "sections": [
+    {
+      "heading": "Biology",
+      "sentences": [
+        {
+          "text": "Does protein instability or incorrect folding affect patients who would join from both groups, given the disputed evidence for STXBP1?",
+          "edge_ids": [
+            "vg:VAMP2:missense|has_effect|mech:protein-destabilization",
+            "disease:STXBP1|driven_by|mech:protein-destabilization"
+          ]
+        },
+        {
+          "text": "Is the disputed idea that the protein does too much, reported for a minority of changes in both genes, relevant to a joint project?",
+          "edge_ids": [
+            "disease:VAMP2|driven_by|mech:gain-of-function",
+            "disease:STXBP1|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "Does having one working gene copy leave too little working protein in prospective participants, given the inferred evidence for VAMP2 and disputed evidence for STXBP1?",
+          "edge_ids": [
+            "vg:VAMP2:splice|has_effect|mech:haploinsufficiency",
+            "disease:STXBP1|driven_by|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "How strong is the evidence that both genes help nerve cells release chemical messages in response to calcium, given that the VAMP2 finding still needs human review?",
+          "edge_ids": [
+            "gene:VAMP2|participates_in|mech:ca-triggered-exocytosis",
+            "gene:STXBP1|participates_in|mech:ca-triggered-exocytosis"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Who can take part",
+      "sentences": [
+        {
+          "text": "Do Simons Searchlight's entry rules suit both groups equally, given that VAMP2 coverage comes from its website rather than the study's condition list?",
+          "edge_ids": [
+            "study:NCT01238250|studies|disease:VAMP2",
+            "study:NCT01238250|studies|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "Do the entry rules for the retrospective epilepsy-dyskinesia survey and the epilepsy-dyskinesia registry suit both groups equally?",
+          "edge_ids": [
+            "study:NCT06585605|studies|disease:VAMP2",
+            "study:NCT06585605|studies|disease:STXBP1",
+            "study:NCT06967727|studies|disease:VAMP2",
+            "study:NCT06967727|studies|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Measuring progress",
+      "sentences": [
+        {
+          "text": "Would ways of measuring progress developed for one group work for the other, given their different mixes of gene changes?",
+          "edge_ids": [
+            "vg:VAMP2:contiguous-gene-deletion|variant_in|gene:VAMP2",
+            "vg:VAMP2:missense|variant_in|gene:VAMP2",
+            "vg:VAMP2:splice|variant_in|gene:VAMP2",
+            "vg:STXBP1:contiguous-gene-deletion|variant_in|gene:STXBP1",
+            "vg:STXBP1:missense|variant_in|gene:STXBP1",
+            "vg:STXBP1:splice|variant_in|gene:STXBP1"
+          ]
+        },
+        {
+          "text": "Are prolonged convulsive seizures, difficulty smoothly following sideways movement with the eyes, and disturbed brain function in infancy truly different between groups, or simply documented differently?",
+          "edge_ids": [
+            "disease:VAMP2|has_phenotype|phenotype:HP:0032660",
+            "disease:STXBP1|has_phenotype|phenotype:HP:0001151",
+            "disease:STXBP1|has_phenotype|phenotype:HP:0007105"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Practical checks",
+      "sentences": [
+        {
+          "text": "What would need to change for COMBINEDBrain Biorepository to include VAMP2 families alongside STXBP1 families?",
+          "edge_ids": [
+            "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "Could Simons Searchlight's registry, information on how conditions change over time, and stored biological samples support a joint project?",
+          "edge_ids": [
+            "asset:simons-searchlight|covers|disease:VAMP2",
+            "asset:simons-searchlight|covers|disease:STXBP1"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:45:54.882Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

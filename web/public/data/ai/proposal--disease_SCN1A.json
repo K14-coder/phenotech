@@ -1,0 +1,152 @@
+{
+  "kind": "proposal",
+  "id": "disease:SCN1A",
+  "title": "A small shared-registry conversation with The Cute Syndrome Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At Dravet Syndrome Foundation, we support families affected by SCN1A-related disorders, including Dravet syndrome; The Cute Syndrome Foundation supports SCN8A families.",
+          "edge_ids": [
+            "org:dravet-syndrome-foundation|serves|disease:SCN1A",
+            "org:cute-syndrome-foundation|serves|disease:SCN8A"
+          ]
+        },
+        {
+          "text": "Both genes help nerve cells send electrical signals through sodium channels.",
+          "edge_ids": [
+            "gene:SCN1A|participates_in|mech:action-potential",
+            "gene:SCN1A|participates_in|mech:voltage-gated-sodium-channel-activity",
+            "gene:SCN8A|participates_in|mech:action-potential",
+            "gene:SCN8A|participates_in|mech:voltage-gated-sodium-channel-activity"
+          ]
+        },
+        {
+          "text": "The atlas infers similar symptom patterns, but its confidence is 0.49, below 0.5—an invitation to explore, not proof that our communities’ needs are identical.",
+          "edge_ids": [
+            "disease:SCN1A|similar_phenotype|disease:SCN8A"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Simons Searchlight already includes SCN1A families through its registry and online study.",
+          "edge_ids": [
+            "asset:simons-searchlight|covers|disease:SCN1A",
+            "study:NCT01238250|studies|disease:SCN1A"
+          ]
+        },
+        {
+          "text": "The Registry and Natural History of Epilepsy-Dyskinesia Syndromes lists both SCN1A and SCN8A in its inclusion criteria.",
+          "edge_ids": [
+            "study:NCT06967727|studies|disease:SCN1A"
+          ]
+        },
+        {
+          "text": "We could compare these resources before proposing anything new.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please check whether spasmus nutans, EEG spike-wave complexes above 3.5 Hz, and myoclonic absence seizures also occur in SCN8A, rather than treating missing records as absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "We must read both sides of the contested SCN1A loss-of-function link: some variants reduce protein activity, while others increase it.",
+          "edge_ids": [
+            "disease:SCN1A|driven_by|mech:loss-of-function",
+            "vg:SCN1A:missense-gof|has_effect|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "The SCN8A link suggesting one working copy is insufficient is atlas-inferred, unverified, and below 0.5 confidence at 0.45.",
+          "edge_ids": [
+            "vg:SCN8A:splice|has_effect|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "Before combining information, please check the approval and individual-variant questions below.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send one exploratory email asking whether the International SCN8A Registry could include SCN1A-related disorders, including Dravet syndrome.",
+          "edge_ids": []
+        },
+        {
+          "text": "Shared loss-of-function biology motivates this question, but transferability remains a hypothesis.",
+          "edge_ids": [
+            "disease:SCN1A|driven_by|mech:loss-of-function",
+            "disease:SCN8A|driven_by|mech:loss-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "For discussion of published evidence with a neurologist: do Dravet approvals for fenfluramine, stiripentol, and cannabidiol apply equally to SCN1A-positive and SCN1A-negative patients?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants are activating, catalytically impaired, or loss of function—that is, increasing activity, impairing its chemical function, or reducing function?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear The Cute Syndrome Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I’m writing on behalf of Dravet Syndrome Foundation to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our communities have a possible biological connection through reduced protein function.",
+          "edge_ids": [
+            "disease:SCN1A|driven_by|mech:loss-of-function",
+            "disease:SCN8A|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "Could the International SCN8A Registry consider including SCN1A-related disorders, including Dravet syndrome?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome an initial discussion of feasibility and differences before making commitments.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Dravet Syndrome Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:56:13.906Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

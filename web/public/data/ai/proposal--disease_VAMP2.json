@@ -1,0 +1,147 @@
+{
+  "kind": "proposal",
+  "id": "disease:VAMP2",
+  "title": "A first collaboration conversation with STXBP1 Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "We invite STXBP1 Foundation to explore a practical partnership for VAMP2 families.",
+          "edge_ids": []
+        },
+        {
+          "text": "VAMP2 and STXBP1 help assemble SNARE machinery involved in communication between nerve cells.",
+          "edge_ids": [
+            "gene:VAMP2|participates_in|mech:snare-complex-assembly",
+            "gene:STXBP1|participates_in|mech:snare-complex-assembly",
+            "disease:STXBP1|shares_mechanism|disease:VAMP2"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptoms, but that connection has confidence 0.46, below 0.5, and should not be treated as proof that families have identical needs.",
+          "edge_ids": [
+            "disease:STXBP1|similar_phenotype|disease:VAMP2"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "VAMP2 resources include Simons Searchlight, the MRC-funded UCL–Yale VAMP2 / SNAREopathy project, and survey and natural-history studies of epilepsy-dyskinesia syndromes.",
+          "edge_ids": [
+            "asset:simons-searchlight|covers|disease:VAMP2",
+            "asset:vamp2-mrc-ucl-yale-project|covers|disease:VAMP2",
+            "study:NCT06585605|studies|disease:VAMP2",
+            "study:NCT06967727|studies|disease:VAMP2"
+          ]
+        },
+        {
+          "text": "Citizen Health and RARE-X include STXBP1 families; we could explore sharing experience with these platforms rather than starting from scratch.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:rare-x-data-collection|covers|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please confirm whether Citizen Health, RARE-X and the ENDD Center accept related conditions, including VAMP2.",
+          "edge_ids": []
+        },
+        {
+          "text": "Please check whether prolonged convulsive seizures (convulsive status epilepticus), repetitive hand wringing and self-injurious behavior occur in STXBP1, and clarify the seven additional symptom gaps flagged for resource reuse.",
+          "edge_ids": []
+        },
+        {
+          "text": "Please review differences involving an altered protein blocking the working protein and preparation of nerve-cell signal packets for release, rather than assuming identical biology.",
+          "edge_ids": []
+        },
+        {
+          "text": "Gain-of-function connections are contested, and the VAMP2 claim that one working copy is insufficient is atlas-inferred, unverified and below 0.5 confidence.",
+          "edge_ids": [
+            "disease:VAMP2|driven_by|mech:gain-of-function",
+            "disease:STXBP1|driven_by|mech:gain-of-function",
+            "vg:VAMP2:splice|has_effect|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "Before proceeding, check trial enrollment and whether a documented VAMP2 animal or cell model is accessible.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send one inquiry to STXBP1 Foundation asking whether STARR (STXBP1 Clinical Trial Ready) could include VAMP2-related disorders.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Is any interventional trial enrolling people with VAMP2-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "Is there a documented, accessible VAMP2 animal or cell model in the atlas?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants increase activity, impair activity or cause loss of function?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which GBA1, HEXA, NPC1 and GAA variants might respond to protein-folding support, and should this broader question inform our collaboration?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear STXBP1 Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we explore whether STARR could include VAMP2-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "Our genes share a role in SNARE complex assembly.",
+          "edge_ids": [
+            "gene:VAMP2|participates_in|mech:snare-complex-assembly",
+            "gene:STXBP1|participates_in|mech:snare-complex-assembly"
+          ]
+        },
+        {
+          "text": "We would welcome guidance on eligibility and differences that need checking.",
+          "edge_ids": []
+        },
+        {
+          "text": "Could you advise on this first step this month?",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of VAMP2.org / Raging Raymond Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:44:29.901Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

@@ -1,0 +1,96 @@
+{
+  "kind": "experiment",
+  "id": "therapy:4-phenylbutyrate|candidate_for|disease:VAMP2",
+  "title": "Cell-based test of 4-phenylbutyrate in VAMP2 disorders",
+  "sections": [
+    {
+      "heading": "What we would test",
+      "sentences": [
+        {
+          "text": "This is a hypothesis, not a finding: its weakest link is the contested VAMP2 destabilization connection, because the reported instability concerns the SNARE complex rather than protein degradation and rescue.",
+          "edge_ids": [
+            "therapy:4-phenylbutyrate|candidate_for|disease:VAMP2",
+            "disease:VAMP2|driven_by|mech:protein-destabilization"
+          ]
+        },
+        {
+          "text": "Test whether 4-phenylbutyrate improves variant VAMP2 protein levels and neuronal release, variant by variant.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Model or assay to use",
+      "sentences": [
+        {
+          "text": "Use a VAMP2-variant neuronal model, prioritizing the characterized C-terminal SNARE-motif variants.",
+          "edge_ids": []
+        },
+        {
+          "text": "Prefer the existing VAMP2 electrophysiology and Munc18-1 rescue assays; establish their combined use for this VAMP2 drug test rather than assume it is validated.",
+          "edge_ids": [
+            "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+            "disease:VAMP2|driven_by|mech:protein-destabilization"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What to measure",
+      "sentences": [
+        {
+          "text": "Measure variant and wild-type VAMP2 protein levels, SNARE-complex formation, and evoked and spontaneous release with and without 4-phenylbutyrate.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Controls",
+      "sentences": [
+        {
+          "text": "Include untreated comparisons, wild-type comparisons, and a variant that augments spontaneous release as a negative control.",
+          "edge_ids": [
+            "disease:VAMP2|driven_by|mech:protein-destabilization"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What result would change the plan",
+      "sentences": [
+        {
+          "text": "Continue preclinical investigation only if variant protein increases and evoked release recovers without increased spontaneous release.",
+          "edge_ids": []
+        },
+        {
+          "text": "Stop pursuing this rescue hypothesis if only wild-type protein rises or spontaneous release increases.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Caveats",
+      "sentences": [
+        {
+          "text": "The VAMP2 evidence concerns nine variants in model systems, not demonstrated treatment benefit in patients.",
+          "edge_ids": [
+            "therapy:4-phenylbutyrate|candidate_for|disease:VAMP2",
+            "disease:VAMP2|driven_by|mech:protein-destabilization"
+          ]
+        },
+        {
+          "text": "4-phenylbutyrate's mechanism remains unresolved, and high concentrations and potential toxicity limit chemical-chaperone approaches.",
+          "edge_ids": [
+            "therapy:4-phenylbutyrate|candidate_for|disease:VAMP2",
+            "therapy:4-phenylbutyrate|targets|mech:protein-destabilization"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:44:57.016Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}
