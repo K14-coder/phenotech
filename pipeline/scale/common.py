@@ -183,12 +183,33 @@ def fetch_direct(url: str, timeout: int = 12) -> tuple[int, str, str]:
 _TAG_BLOCK = re.compile(r"<(script|style|noscript|svg|template)[^>]*>.*?</\1>", re.S | re.I)
 _BR = re.compile(r"<\s*(br|/p|/div|/li|/h[1-6]|/tr|/td|/th|p|li|h[1-6]|tr)[^>]*>", re.I)
 _TAG = re.compile(r"<[^>]+>")
-EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+EMAIL_RE = re.compile(r"(?<![\w.+-])[\w.+-]{1,64}@[\w-]{1,63}(?:\.[\w-]{1,63}){1,6}")  # bounded: linear on long runs
+
+
+_BLOCK_OPEN = re.compile(r"<(script|style|noscript|svg|template)\b", re.I)
+
+
+def _strip_blocks(html: str) -> str:
+    """Linear-time removal of script/style/svg/... blocks (a lazy-regex version backtracks catastrophically on
+    multi-MB pages with unclosed tags)."""
+    low, out, i = html.lower(), [], 0
+    while True:
+        m = _BLOCK_OPEN.search(low, i)
+        if not m:
+            out.append(html[i:])
+            break
+        out.append(html[i:m.start()])
+        k = low.find("</" + m.group(1).lower(), m.end())
+        if k == -1:
+            break
+        e = low.find(">", k)
+        i = (e + 1) if e != -1 else len(html)
+    return " ".join(out)
 
 
 def html_to_text(html: str) -> str:
     import html as _h
-    s = _TAG_BLOCK.sub(" ", html)
+    s = _strip_blocks(html[:3_000_000])
     s = _BR.sub("\n", s)
     s = _TAG.sub(" ", s)
     s = _h.unescape(s)

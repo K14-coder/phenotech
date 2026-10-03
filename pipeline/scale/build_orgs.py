@@ -18,7 +18,7 @@ import re
 from pathlib import Path
 
 from build_trials import ONCO, SYMBOL_STOP, build_name_index, find_names, gene_hits, hpo_labels
-from common import (GLOBAL_INDEX, GRAPH, OUT, deinvert, domain_of, norm_text, read_json, slugify, today,
+from common import (GLOBAL_INDEX, GRAPH, OUT, RAW as ROOT_RAW, deinvert, domain_of, norm_text, read_json, slugify, today,
                     write_json)
 from directories import all_records, snippet
 
@@ -70,12 +70,18 @@ def main():
     cands = []   # {name, website, sources:set, records:[...], links: {did: [evidence]}}
 
     def add_link(c, did, ev):
+        if did not in ds:
+            return
         c["links"].setdefault(did, [])
         if ev not in c["links"][did]:
             c["links"][did].append(ev)
 
     NOT_PATIENT_ORG = re.compile(r"\bNIH\b|National Institutes? of|Section on|Department of|Universit|Hospital|"
-                                 r"\bClinic\b|Medical Cent|School of|\bLab(oratory)?\b", re.I)
+                                 r"\bClinic\b|Medical Cent|School of|\bLab(oratory)?\b|rhinolog|surgeon|physician|"
+                                 r"academy of|college of|movement disorders? society|heart association|thoracic|otolaryng|"
+                                 r"dermatolog|ophthalmolog|patholog|radiolog|anesthes|nurses|pharmacist|neurolog(y|ical) (society|association)|"
+                                 r"society (of|for) (clinical|pediatric|paediatric|medical|human genetics)|endocrine society|"
+                                 r"american association of|american society of|european society", re.I)
     for r in all_records():
         if NOT_PATIENT_ORG.search(r["name"]):
             continue
@@ -124,12 +130,54 @@ def main():
         cands.append(c)
 
     serp = read_json(OUT / "_serp_orgs.json", {"orgs": []})["orgs"]
+    SERP_BAD = re.compile(r"jacc|ahajournals|nemours|ludwig|cancerresearch|research\.org$|institute|kidshealth", re.I)
     for o in serp:
+        if SERP_BAD.search(domain_of(o["url"])):
+            continue   # post-filter added after the final spot-check (journal / hospital / research-institute hits)
         c = {"name": o["name"], "website": o["url"], "country": None, "sources": {"serp"}, "records": [],
              "links": {}}
         for did, ev in o["diseases"].items():
             add_link(c, did, {"source": "serp", **ev})
         cands.append(c)
+
+    # ---------------------------------------------------------------- verbatim check of directory quotes
+    from common import get_html as _gh, html_to_text as _h2t, norm_ws as _nw
+    import json as _json
+    page_text = {}
+
+    def stored_text(src, url):
+        key = (src, url)
+        if key not in page_text:
+            if src == "eurordis":
+                raw = _json.loads((ROOT_RAW / "directories" / "eurordis_members.json").read_text())["html"]
+                page_text[key] = _nw(_h2t(raw)).lower()
+            elif src == "globalgenes":
+                txt = []
+                for p in sorted((ROOT_RAW / "directories" / "globalgenes").glob("page_*.json")):
+                    for r in _json.loads(p.read_text())["records"]:
+                        txt.append(_nw(_h2t(r.get("title") or "")) + " " + _nw(_h2t(r.get("content") or "")))
+                page_text[key] = " ".join(txt).lower()
+            else:
+                page_text[key] = _nw(_h2t(_gh(url) or "")).lower()
+        return page_text[key]
+
+    n_unverified = 0
+    for c in cands:
+        for did in list(c["links"]):
+            kept = []
+            for e in c["links"][did]:
+                if e["source"] in ("eurordis", "nord", "globalgenes", "geneticalliance_uk"):
+                    q = _nw(e["quote"]).lower().rstrip(" .")
+                    if q and q in stored_text(e["source"], e.get("directory_page") or e["url"]):
+                        e["verified"] = True
+                    else:
+                        n_unverified += 1
+                        continue
+                kept.append(e)
+            if kept:
+                c["links"][did] = kept
+            else:
+                del c["links"][did]
 
     # ---------------------------------------------------------------- dedupe
     graph = read_json(GRAPH, {"nodes": []})
@@ -177,15 +225,29 @@ def main():
         for c in g:
             for did, evs in c["links"].items():
                 for e in evs:
-                    if e["source"] == "clinicaltrials.gov" and not in_directory and not (name_toks & disease_tokens(did)):
-                        dropped_trial_links += 1   # org not a known patient org and its name says nothing about this disease
-                        continue
+                    if e["source"] == "clinicaltrials.gov":
+                        dtok = disease_tokens(did)
+                        # (1) the org's own name must say something about this disease (or its gene)
+                        if not (name_toks & dtok):
+                            dropped_trial_links += 1
+                            continue
+                        # (2) gene-via links: the trial's conditions/title must share a phenotype word with this disease
+                        if e["rule"].count(":") >= 2:
+                            ctoks = {t for x in (e.get("conditions") or []) + [e.get("context") or ""]
+                                     for t in norm_text(x).split() if len(t) >= 4 and t not in GENERIC_TOK}
+                            if not (ctoks & (dtok - {g.lower() for g in ds[did]["genes"]})):
+                                dropped_trial_links += 1
+                                continue
                     if e not in links.get(did, []):
                         links.setdefault(did, []).append(e)
         if not links:
             continue
         # name/website: prefer directory records over trial/serp strings
-        g_sorted = sorted(g, key=lambda c: (0 if c["sources"] & {"eurordis", "nord", "globalgenes", "geneticalliance_uk"} else 1,
+        ORGW = re.compile(r"foundation|association|alliance|society|network|coalition|connect|trust|federation|support|"
+                          r"group|cure|fund|families|parents|charity|project|research|vereniging|verein|asociaci|associa|"
+                          r"stichting|fondation|fundaci|e\.v|onlus|asbl|uk|international|org", re.I)
+        g_sorted = sorted(g, key=lambda c: (0 if ORGW.search(c["name"]) else 1,
+                                            0 if c["sources"] & {"eurordis", "nord", "globalgenes", "geneticalliance_uk"} else 1,
                                             0 if c["website"] else 1))
         name = g_sorted[0]["name"]
         website = next((c["website"] for c in g_sorted if c["website"]), None)
@@ -205,7 +267,7 @@ def main():
             evs = sorted(evs, key=lambda e: RULE_RANK.get(e["rule"], 2 if e["rule"].startswith("trial") else 4))
             best = evs[0]
             diseases.append({"id": did, "name": ds[did]["name"], "mondo": ds[did].get("mondo"),
-                             "evidence": {k: best[k] for k in ("source", "url", "quote", "rule") if k in best}
+                             "evidence": {k: best[k] for k in ("source", "url", "quote", "rule", "verified") if k in best}
                              | ({"matched": best["matched"]} if best.get("matched") else {})
                              | ({"context": best["context"]} if best.get("context") else {}),
                              "also": [{k: e[k] for k in ("source", "url", "quote", "rule") if k in e} for e in evs[1:3]],
@@ -217,6 +279,27 @@ def main():
                      "nord_member": any(c.get("nord_member") for c in g) or None,
                      "sources": sources, "directory_records": records, "reused_graph_id": reused,
                      "extracted_by": "automated", "diseases": diseases})
+
+    # merge entries that resolved to the same id (two groups matching one existing graph org)
+    merged = {}
+    for o in orgs:
+        if o["id"] not in merged:
+            merged[o["id"]] = o
+            continue
+        m = merged[o["id"]]
+        m["sources"] = sorted(set(m["sources"]) | set(o["sources"]))
+        m["directory_records"] = (m["directory_records"] + o["directory_records"])[:6]
+        have_ids = {d["id"] for d in m["diseases"]}
+        m["diseases"] = sorted(m["diseases"] + [d for d in o["diseases"] if d["id"] not in have_ids], key=lambda x: x["id"])
+        m["website"] = m["website"] or o["website"]
+        m["url"] = m["url"] or o["url"]
+    orgs = list(merged.values())
+    by_disease = collections.defaultdict(list)
+    for o in orgs:
+        if not o["url"]:
+            o["url"] = o["diseases"][0]["evidence"]["url"]   # trial-only org: link its CT.gov record
+        for d in o["diseases"]:
+            by_disease[d["id"]].append(o["id"])
 
     # summary
     per_src = collections.Counter()
@@ -232,7 +315,8 @@ def main():
                        "evidence_items_by_source": dict(per_src),
                        "diseases_by_source": {k: len(v) for k, v in dis_src.items()},
                        "reused_graph_ids": sum(1 for o in orgs if o["reused_graph_id"]),
-                       "trial_links_dropped_by_relevance_rule": dropped_trial_links}}
+                       "trial_links_dropped_by_relevance_rule": dropped_trial_links,
+                       "directory_quotes_dropped_unverified": n_unverified}}
     write_json(OUT / "orgs.json", {"meta": meta, "orgs": orgs,
                                     "by_disease": {k: sorted(set(v)) for k, v in sorted(by_disease.items())}})
     print(meta["counts"])

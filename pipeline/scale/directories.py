@@ -85,7 +85,7 @@ def nord_records():
             name = _clean(m.group(2))
             rel = re.search(r"<span>Related Rare Diseases:</span>(.*?)</span>", block, re.S)
             related = [_clean(x) for x in re.findall(r"<a[^>]*>(.*?)</a>", rel.group(1), re.S)] if rel else []
-            quote = f"{name} " + ("Related Rare Diseases: " + " , ".join(related) if related else "")
+            quote = ("Related Rare Diseases: " + " , ".join(related)) if related else name
             out.append({"source": "nord", "name": name, "website": None, "country": None,
                         "focus": " , ".join(related), "focus_list": related,
                         "nord_member": "NORD Member" in block[:3000],

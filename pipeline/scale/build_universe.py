@@ -123,6 +123,15 @@ def main():
         if not d["name"]:
             d["name"] = (m or {}).get("label") or did
 
+    # somatic CANCER entries (e.g. 'Esophageal cancer, somatic') are not Mendelian diseases; somatic MOSAIC
+    # disorders (Proteus, Sturge-Weber, MCAP ...) are kept
+    ONCO = re.compile(r"cancer|carcinoma|tumou?r|neoplas|leuka?emia|lymphoma|melanoma|sarcoma|glioma|blastoma|"
+                      r"myeloma|adenoma|pilomatrixoma|mesothelioma|seminoma", re.I)
+    somatic_cancer = [k for k, d in diseases.items() if "somatic" in d["name"].lower() and ONCO.search(d["name"])]
+    for k in somatic_cancer:
+        del diseases[k]
+    dropped["somatic cancer entries (diseases)"] = len(somatic_cancer)
+
     genes = collections.defaultdict(list)
     for did, d in diseases.items():
         for g in d["genes"]:

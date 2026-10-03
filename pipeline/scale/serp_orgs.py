@@ -15,6 +15,9 @@ The quote is the verbatim page sentence that contains the match. Output: data/de
 from __future__ import annotations
 
 import concurrent.futures as cf
+import socket
+
+socket.setdefaulttimeout(20)
 import html as _h
 import json
 import math
@@ -40,7 +43,9 @@ BAD_DOMAIN = re.compile(
     r"pharma|therapeutics|simonssearchlight|rare-x|citizen\.health|ojrd|scielo|ijpediatrics|msdmanuals|"
     r"merckmanuals|britannica|dictionary|disorders\.eyes|dermnet|radiopaedia|patient\.info|nord\.|"
     r"rarediseasesnetwork|rarechromo|contactfamilies|genome\.gov|ghr\.|geneticsandmedicine|kidshealth|"
-    r"mayoclinic|clevelandclinic|cedars|mountsinai|massgeneral|stanford|ucsf|yale|harvard)", re.I)
+    r"mayoclinic|clevelandclinic|cedars|mountsinai|massgeneral|stanford|ucsf|yale|harvard|medicine|diagnostic|"
+    r"genetic|health|ern-|\.ern|gastro|acmg|ashg|aan\.com|academy|college|cancer\.gov|peacehealth|lpl|"
+    r"thinkgenetic|rarediseases\.info|disease-?info|sciencedaily|ivami|orphan|drugs?\.com|rxlist|lab)", re.I)
 ORG_WORDS = re.compile(r"\b(foundation|association|alliance|society|network|coalition|connect|trust|federation|"
                        r"support group|families|parents|charity|cure|fund|e\.v\.|community|project|organi[sz]ation)\b", re.I)
 SELF_ORG = re.compile(r"(non-?profit|501\s?\(c\)\s?\(?3\)?|registered charity|charity (no|number)|patient (advocacy )?"
@@ -57,13 +62,17 @@ def page_title(html: str) -> str | None:
     return _h.unescape(re.sub(r"\s+", " ", m.group(1))).strip() if m else None
 
 
-def org_name(serp_title: str, html: str | None) -> str:
+def org_name(serp_title: str, html: str | None, domain: str = "") -> str:
+    """og:site_name, else the title segment that names an organisation, else the domain (never a page title)."""
+    m = re.search(r'<meta[^>]+property="og:site_name"[^>]+content="([^"]+)"', html or "", re.I)
+    if m:
+        return _h.unescape(m.group(1)).strip()[:120]
     t = page_title(html or "") or serp_title or ""
     parts = [p.strip() for p in re.split(r"\s[|\-–—:]\s", t) if p.strip()]
-    for p in parts:
+    for p in parts[::-1]:
         if ORG_WORDS.search(p):
             return p[:120]
-    return (parts[0] if parts else t)[:120]
+    return domain
 
 
 def find_quote(text: str, terms_norm: list[str], gene: str | None):
@@ -83,7 +92,10 @@ def main():
     ds = universe["diseases"]
     trials = read_json(OUT / "trials.json")["diseases"]
     orgs = read_json(OUT / "orgs.json")
-    have = set(orgs["by_disease"])
+    # diseases that have an org from trials/directories (SERP-sourced links are ignored so that a re-run
+    # re-evaluates the same diseases from cache instead of moving on to new ones)
+    have = {d["id"] for o in orgs["orgs"] for d in o["diseases"]
+            if any(e["source"] != "serp" for e in [d["evidence"]] + d["also"])}
     concept = {did: (d.get("mondo") or did) for did, d in ds.items()}
     concepts_with_org = {concept[d] for d in have}
     idx = read_json(GLOBAL_INDEX, None)
@@ -153,9 +165,17 @@ def main():
             hit = find_quote(text, terms, usable_gene) if text else None
             selforg = bool(SELF_ORG.search(text[:20000])) if text else False
             rec["tried"].append({"url": link, "via": page.get("via"), "hit": bool(hit), "self_org": selforg})
+            ttl = (page_title(get_html(link) or "") or title).lower()
+            if re.search(r"journal|pdq|health professional|clinical (features|review|study)|case report|"
+                         r"\bpubmed\b|abstract|proceedings|guideline|task force|recommendation", ttl + " " + title.lower()):
+                hit = None   # article / guideline pages are not organisations
+            if hit and hit[1] == "serp_page_mentions_gene":
+                from build_trials import gene_hits as _gh
+                if not _gh(hit[0], {usable_gene}, strict=True, all_texts=[text[:5000]]):
+                    hit = None   # symbol without a gene context ('HADH Administration', 'LPL')
             if hit and selforg:
                 quote, rule, matched = hit
-                rec["accepted"] = {"name": org_name(title, get_html(link)), "url": link, "domain": dom,
+                rec["accepted"] = {"name": org_name(title, get_html(link), dom), "url": link, "domain": dom,
                                    "evidence": {"url": link, "quote": quote, "rule": rule, "matched": matched,
                                                 "query": q, "serp_rank": r.get("rank"), "retrieved": page.get("retrieved")}}
                 break

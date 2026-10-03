@@ -454,11 +454,17 @@ def main():
                 # focused trials only: <= 3 name-matched disease concepts, <= 2 matched genes
                 if (via is None and n_concepts > 3) or (via and n_genes > 2):
                     continue
+                if via:
+                    # gene-via links only for gene-named orgs ('POLG Foundation'), never to somatic/cancer/umbrella entities
+                    dn = ds[did]["name"].lower()
+                    if not re.search(r"(?<![A-Za-z0-9])" + re.escape(via) + r"(?![A-Za-z0-9])", nm) or \
+                            "somatic" in dn or ONCO.search(dn) or len(ds[did]["genes"]) >= 10:
+                        continue
                 ev = o["diseases"].setdefault(did, [])
                 if len(ev) < 3:
                     ev.append({"url": CTG + nct, "ref": nct, "quote": nm, "field": f"sponsorCollaboratorsModule ({role})",
                                "rule": f"trial_{role}:{rule}" + (f":{via}" if via else ""),
-                               "context": s["title"]})
+                               "context": s["title"], "conditions": s["conditions"][:12]})
     write_json(OUT / "_trial_orgs.json", {"generated": today(), "orgs": orgs})
     print(f"trial-sourced org candidates: {len(orgs)}; with >=1 disease: {sum(1 for o in orgs.values() if o['diseases'])}")
 

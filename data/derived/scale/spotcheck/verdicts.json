@@ -1,14 +1,151 @@
 {
-  "method": "30 random links per source (seed 7, pipeline/scale/spotcheck.py), each judged by reading the quoted source field/title/conditions: is the link true as labelled?",
-  "trials_name": {"n": 30, "correct": 27, "errors": {
-      "7": "ATM-mutated breast cancer trial matched 'Ataxia Telangiectasia' inside 'Ataxia Telangiectasia Mutated Gene Mutation' (fixed: gene-context rule)",
-      "18": "Malouf syndrome synonym 'Najjar syndrome' matched inside 'Crigler-Najjar Syndrome' (fixed: hyphen/eponym rule)",
-      "28": "Adult Refsum 'Refsum disease' matched inside 'Infantile Refsum's Disease' (fixed: longest span wins)"},
-    "note": "judged on the first build; the three error patterns were then fixed and the file rebuilt"},
-  "trials_gene_first_build": {"n": 30, "correct": 13, "note": "loose symbol matching (somatic cancer studies, acronyms such as HBB=Helping Babies Breathe, NHS=Natural History Study, drug codes DCC-3116, anti-LRP4, SNP studies). Rules rewritten (gene-context requirement, acronym detector, no oncology studies)."},
-  "trials_gene": {"n": 30, "correct": 27, "errors": {
-      "3": "APOA2 nutrigenomics (BMI) study, not AApoAII amyloidosis",
-      "9": "'CD40 Ligand Deficiency' read as CD40 (it is CD40LG)",
-      "28": "somatic MAP2K1 vascular-malformation trial credited to cardiofaciocutaneous syndrome"},
-    "note": "precision judged at GENE level (study is about a germline disorder of that gene); the specific disease of a multi-disease gene is often a sibling phenotype, so the UI must label these 'mentions <GENE>'"}
+ "method": "30 random links per source (seed 7, pipeline/scale/spotcheck.py), each judged by reading the quoted source field/title/conditions: is the link true as labelled?",
+ "trials_gene_first_build": {
+  "n": 30,
+  "correct": 13,
+  "note": "loose symbol matching (somatic cancer studies, acronyms such as HBB=Helping Babies Breathe, NHS=Natural History Study, drug codes DCC-3116, anti-LRP4, SNP studies). Rules rewritten (gene-context requirement, acronym detector, no oncology studies)."
+ },
+ "trials_gene": {
+  "n": 30,
+  "correct": 27,
+  "errors": {
+   "3": "APOA2 nutrigenomics (BMI) study, not AApoAII amyloidosis",
+   "9": "'CD40 Ligand Deficiency' read as CD40 (it is CD40LG)",
+   "28": "somatic MAP2K1 vascular-malformation trial credited to cardiofaciocutaneous syndrome"
+  },
+  "note": "precision judged at GENE level (study is about a germline disorder of that gene); the specific disease of a multi-disease gene is often a sibling phenotype, so the UI must label these 'mentions <GENE>'"
+ },
+ "org_globalgenes": {
+  "n": 30,
+  "correct": 27,
+  "errors": {
+   "4": "SCN2A group credited (gene) to the many-gene umbrella 'Autosomal dominant non-syndromic intellectual disability'",
+   "11": "'DMD kids' (Duchenne) credited via the DMD gene to the X-linked ID umbrella",
+   "14": "CTNNB1 Foundation credited via gene to 'Pilomatrixoma, somatic'"
+  },
+  "fix_applied": "gene links never go to somatic, cancer-named or >=10-gene umbrella entities"
+ },
+ "org_nord": {
+  "n": 30,
+  "correct": 27,
+  "errors": {
+   "2": "'The AIP BIPOC Network' - AIP is an acronym here, not the AIP gene",
+   "20": "'MECP2 Duplication Foundation' credited to MECP2 point-mutation encephalopathy",
+   "27": "NIH research section listed by NORD is not a patient organisation"
+  },
+  "fix_applied": "duplication/deletion orgs only credited to duplication/deletion entities; NIH/university/hospital/lab names excluded",
+  "note": "NORD's ODB also lists broad bodies (American Heart Association -> Tangier disease, Movement Disorder Society). These are correct relative to the directory and counted as correct, but they are not disease-specific groups."
+ },
+ "org_eurordis": {
+  "n": 30,
+  "correct": 28,
+  "errors": {
+   "8": "two members hosted on one umbrella domain were merged (Amis de ADNP France shown as 'Alliance Maladies Rares')",
+   "25": "EURORDIS item 'Congenital muscular dystrophy' mapped to the LMNA subtype through a sub-phrase synonym"
+  },
+  "fix_applied": "dedup by domain only for root URLs (domain + first path segment otherwise); synonyms that are a sub-phrase of the disease's own primary name are not used"
+ },
+ "org_geneticalliance_uk": {
+  "n": 30,
+  "correct": 26,
+  "errors": {
+   "2": "VHL UK/Ireland credited via gene to 'Renal cell carcinoma, nonpapillary'",
+   "20,29,30": "George Pantziarka TP53 Trust credited via TP53 to hepatocellular carcinoma, alveolar rhabdomyosarcoma, choroid plexus carcinoma"
+  },
+  "fix_applied": "gene links never go to cancer-named entities (Li-Fraumeni itself is kept)"
+ },
+ "asset_cords": {
+  "n": 30,
+  "correct": 29,
+  "errors": {
+   "18": "'HTRA1-related autosomal dominant cerebral small vessel disease' credited via HTRA1 to recessive CARASIL (sibling entity, true at gene level)"
+  }
+ },
+ "asset_iamrare": {
+  "n": 30,
+  "correct": 30,
+  "note": "population 34 links"
+ },
+ "asset_simons": {
+  "n": 30,
+  "correct_gene_level": 30,
+  "note": "Every item is a gene symbol line on the Simons list. All diseases of that gene are credited (rule list_item_gene). At disease level some are sibling phenotypes outside Simons' neurodevelopmental focus (e.g. CACNA1C -> Brugada 3 / long QT 8; SMARCA4 -> otosclerosis 12), so the UI must say 'studies <GENE>'."
+ },
+ "asset_citizen": {
+  "n": 30,
+  "correct_gene_level": 30,
+  "correct_disease_level_exact_items": "all exact-name items correct",
+  "note": "the same gene-level caveat as Simons applies (CACNA1A -> SCA6, SMC1A -> CdLS 2)"
+ },
+ "org_clinicaltrials.gov_intermediate": {
+  "n": 30,
+  "correct": 24,
+  "errors": {
+   "1": "Foundation Fighting Blindness (Usher 1F retina trial) credited via PCDH15 to non-syndromic deafness DFNB23",
+   "5,14": "CTNNB1 Foundation credited via CTNNB1 to Weyers acrofacial dysostosis and osteopathia striata (Orphanet germline GoF associations; true at gene level only)",
+   "15,18": "International Rett Syndrome Foundation credited via MECP2 to the XLID umbrella and to MECP2 duplication (Lubs) syndrome",
+   "19": "Cystic Fibrosis Foundation (CF trial) credited via CFTR to CBAVD"
+  },
+  "fix_applied": "gene-via trial links only when the org's own name contains the gene symbol, and never to somatic/cancer/umbrella entities",
+  "first_build": "before the focused-trial and relevance rules, one multi-condition registry linked single collaborators to ~228 diseases, and funders and professional bodies (e.g. 'Portuguese Football Federation') passed. Both were fixed before this sample."
+ },
+ "org_clinicaltrials.gov": {
+  "n": 30,
+  "correct": 29,
+  "population": 65,
+  "errors": {
+   "1": "borderline: VHL Alliance -> pheochromocytoma (true for VHL-associated pheo, but VHL Alliance is not a pheochromocytoma group)"
+  },
+  "note": "final rules: org name must share a distinctive token with the disease; gene-via links also need the trial's conditions to share a phenotype word with the disease. An intermediate sample (24/30) had CTNNB1 Foundation -> sibling phenotypes, ALS Association -> HD / semantic dementia via multi-condition trials, and a person's name used as an org label. All are fixed."
+ },
+ "trials_name_first_build": {
+  "n": 30,
+  "correct": 27,
+  "errors": {
+   "7": "ATM-mutated breast cancer trial matched 'Ataxia Telangiectasia' inside 'Ataxia Telangiectasia Mutated Gene Mutation' (fixed: gene-context rule)",
+   "18": "Malouf syndrome synonym 'Najjar syndrome' matched inside 'Crigler-Najjar Syndrome' (fixed: hyphen/eponym rule)",
+   "28": "Adult Refsum 'Refsum disease' matched inside 'Infantile Refsum's Disease' (fixed: longest span wins)"
+  },
+  "note": "judged on the first build; the three error patterns were then fixed and the file rebuilt"
+ },
+ "trials_name": {
+  "n": 30,
+  "correct": 29,
+  "seed": 11,
+  "population": 6141,
+  "sample_file": "trials_name_final.json",
+  "errors": {
+   "30": "'Esophagus Cancer' credited to the OMIM entry 'Esophageal cancer, somatic' (fixed afterwards: somatic cancer entries removed from the universe)"
+  },
+  "note": "post-fix sample. The first build (seed 7) was 27/30; its three error patterns (gene context, longest span, hyphen/eponym) were fixed before this sample"
+ },
+ "org_serp_first": {
+  "n": 30,
+  "correct": 20,
+  "errors": {
+   "1": "org name taken from a page title ('Primary progressive aphasia (PPA)')",
+   "3": "Foundation Medicine (company)",
+   "6": "ThinkGenetic (information portal)",
+   "9": "ERN-RITA (clinical network)",
+   "17": "Journal of Lipid Research",
+   "18": "PDQ health-library page",
+   "24": "American Gastroenterological Association (professional)",
+   "25": "'HADH Administration' acronym collision",
+   "27": "journal article page",
+   "30": "'Community Impact at LPL' acronym collision"
+  },
+  "fix_applied": "stricter domain/title filters (companies, journals, portals, ERNs, professional bodies, labs), gene hits need a gene context, org name from og:site_name or an org-word title segment, else the domain"
+ },
+ "org_serp": {
+  "n": 30,
+  "correct": 27,
+  "population": 131,
+  "errors": {
+   "12": "JACC abstract page",
+   "24": "nemours.org (hospital)",
+   "25": "Ludwig Cancer Research (research institute; KIF1B news)"
+  },
+  "fix_applied": "post-filter in build_orgs drops these domain types (journals, hospitals, research institutes)",
+  "note": "SCA27b Ataxia Foundation -> SCA27A is a gene-level (FGF14) link and was counted correct"
+ }
 }
