@@ -11,6 +11,8 @@
 #                       opportunities,counterexamples}.json
 #         data/derived/global/{index,meta}.json, data/derived/global/neighbours/<0..63>.json
 #         data/derived/global/mechanism/<0..63>.json, data/derived/global/clusters.json
+#         data/derived/global/{dismech,dismech_evidence}/<0..63>.json, dismech_index.json, index_extra.json,
+#         dismech_atlas_links.json (+ the `dismech` section of meta.json)
 #         data/raw/downloads/ (gitignored): mondo-base.obo, g2p_all.csv, clingen_*.csv/.tsv, Reactome files,
 #         and the intermediates global_entries.json / global_vectors.npz (downloaded once; --refresh re-fetches)
 #         data/curated/{modality,hypotheses}.json
@@ -72,6 +74,20 @@ else
 fi
 # When a family lands in data/curated/family_*.json, only this is needed (stdlib, < 1 s):
 #   python3 pipeline/derive/atlas_flags.py
+
+echo "== 8/8 DisMech (Monarch Initiative, BSD-3-Clause): curated mechanism pathographs + verbatim evidence"
+DMR="$DL/dismech"
+if [ ! -d "$DMR/kb/disorders" ]; then
+  git clone --depth 1 --quiet https://github.com/monarch-initiative/dismech "$DMR"   # ~1 GB checkout
+elif [ -n "$REFRESH" ]; then
+  git -C "$DMR" pull --depth 1 --quiet --ff-only || echo "   (dismech pull failed; using the pinned clone)"
+fi
+echo "   dismech commit $(git -C "$DMR" rev-parse HEAD)"
+if command -v uv >/dev/null 2>&1; then
+  uv run --quiet --with pyyaml python3 dismech.py
+else
+  python3 dismech.py   # needs pyyaml
+fi
 
 cd ../..
 echo

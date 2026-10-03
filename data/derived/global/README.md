@@ -415,3 +415,202 @@ page.
    - the caveat banner, `meta.caveat`, every time.
 3. **Never** draw these as graph edges and never give them a confidence score. They are
    lookups, not evidence.
+
+## DisMech layer: `dismech/`, `dismech_evidence/`, `dismech_index.json`, `index_extra.json`, `dismech_atlas_links.json`
+
+This layer is **independently curated** mechanism knowledge from
+[DisMech](https://dismech.monarchinitiative.org), the Disorder Mechanisms Knowledge Base of the Monarch
+Initiative (GitHub `monarch-initiative/dismech`, **BSD-3-Clause**). It is the only part of this folder
+that carries curated evidence quotes. It is purely **additive**: `index.json`, `neighbours/` and
+`mechanism/` are untouched. Built by `pipeline/derive/dismech.py`
+(`uv run --with pyyaml python3 pipeline/derive/dismech.py`, about 15 s), step 8/8 of `run.sh`, from a
+shallow clone in `data/raw/downloads/dismech` pinned at commit
+`332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb` (recorded in `meta.dismech.commit`).
+
+**Attribution (show wherever DisMech content appears):**
+> Mechanism pathograph from DisMech, the Disorder Mechanisms Knowledge Base of the Monarch Initiative
+> (https://dismech.monarchinitiative.org), BSD-3-Clause. Curated independently of this atlas; evidence
+> snippets are quoted verbatim from DisMech.
+
+The same text is in `meta.dismech.attribution_text` and in every shard's `attribution`. The BSD-3 licence text ships alongside these files as `DISMECH_LICENSE.txt`. Each record
+also links its source file on GitHub at the pinned commit (`attribution.file_url`) and its DisMech page
+(`attribution.page_url`).
+
+| File | Size | Load |
+|---|---|---|
+| `dismech_index.json` | 0.22 MB | once, with `index.json`: flags "has curated mechanism" in search |
+| `index_extra.json` | 0.11 MB | once, concatenated to `index.json` rows: 789 DisMech diseases not in `index.json` |
+| `dismech/<bucket>.json` | 64 shards, 30.6 MB total (6.4 MB gzip), max 1.07 MB, median 0.43 MB | lazily: the pathograph of one disease |
+| `dismech_evidence/<bucket>.json` | 64 shards, 90.9 MB total (22 MB gzip), max 3.1 MB, median 1.2 MB | lazily, only when a reader opens the evidence |
+| `dismech_atlas_links.json` | 63 KB | once, on the 45 deep-atlas disease pages |
+
+**Bucketing is the same `bucket(id) = djb2(id) % 64` as `neighbours/`**, keyed on the MONDO id
+(e.g. `MONDO:0012812` STXBP1 encephalopathy → bucket 58). Both shard sets share it, so one id gives one
+file in each.
+
+Counts (`meta.dismech.counts`): 3,290 DisMech YAML files → **3,238 records under 3,217 MONDO ids**
+(14 MONDO ids carry 2+ DisMech entries, e.g. `MONDO:0014590` has both `SNAP25_Encephalopathy` and
+`Congenital_Myasthenic_Syndrome_18`; 52 files have no MONDO term and are listed in
+`meta.dismech.no_mondo_files`). 52,680 steps, 22,650 of them mechanism (pathophysiology) steps, and 52,548
+causal edges. **143,102 evidence items are carried, holding 143,089 snippets, all re-checked verbatim
+against the source YAML**: SUPPORT 141,197, REFUTE 1,590, NO_EVIDENCE 315. The DisMech corpus holds 227,012
+evidence items in all. The rest sit in sections this layer does not carry (see Caveats).
+
+### `dismech/<bucket>.json`: the pathograph
+
+```json
+{"bucket": 58,
+ "attribution": {"source": "DisMech (Monarch Initiative)", "license": "BSD-3-Clause", "commit": "332cbfdc…", "text": "…"},
+ "t": {"GO:0099504": "synaptic vesicle cycle", "CL:0000540": "neuron", "HP:0200134": "Epileptic encephalopathy", …},
+ "d": {"MONDO:0012812": [ {
+   "file": "STXBP1_Encephalopathy.yaml", "name": "STXBP1 Encephalopathy",
+   "mondo": "MONDO:0012812", "mondo_label": "developmental and epileptic encephalopathy, 4", "joined_by": "disease_term",
+   "category": "Mendelian", "description": "…", "synonyms": […], "parents": ["Neurodevelopmental Disorder", "Epileptic Encephalopathy"],
+   "inheritance": [{"name": "Autosomal Dominant (De Novo)", "hp": "HP:0000006"}],
+   "steps": [
+     {"i": 0, "label": "STXBP1", "sec": "genetic", "type": "gene", "type_basis": "section", "terms": [["HGNC:11444", "gene_term"]]},
+     {"i": 1, "label": "STXBP1 Haploinsufficiency and Munc18-1 Deficiency", "sec": "pathophysiology", "type": "cellular",
+      "type_basis": "inferred:cell_types", "role": "trigger", "conforms_to": "synaptic_vesicle_cycle#…",
+      "terms": [["GO:0099504", "biological_processes", "ABNORMAL"], ["CL:0000540", "cell_types"], ["UBERON:0000955", "locations"]],
+      "ev": [3, 0, 0]}, …],
+   "edges": [{"s": 0, "t": 1, "link": "contributes_to", "inferred": "gene symbol in root node name (ours, not DisMech)"},
+             {"s": 1, "t": 2, "link": "DIRECT"},
+             {"s": 1, "t": 3, "link": "INDIRECT_KNOWN_INTERMEDIATES", "intermediate": ["Impaired SNARE-mediated synaptic vesicle fusion."]}, …],
+   "chains": [[0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 7], …], "n_paths": 8, "cyclic": false,
+   "genes": [{"symbol": "STXBP1", "name": "STXBP1", "hgnc": "HGNC:11444", "association": "Loss-of-Function Mutations",
+              "variant_origin": "GERMLINE", "inheritance": ["Autosomal Dominant (De Novo)"], "contributes": true,
+              "linked_to_mechanism": "name_match", "ev": [2, 0, 0]}],
+   "treatments": [{"name": "Antiseizure Medication", "modality": "SMALL_MOLECULE", "action": {"id": "NCIT:C15986", "label": "Pharmacotherapy"},
+                   "agents": [{"id": "CHEBI:6437", "label": "levetiracetam"}, …], "targets": […], "ev": [1, 0, 0]}],
+   "hypotheses": [],
+   "open_questions": [{"kind": "CONTROVERSY", "status": "OPEN", "prompt": "Is STXBP1 encephalopathy a pure loss-of-dose …", "attaches_to": […], "ev": [2, 0, 0]}],
+   "unlinked_phenotypes": [["Epileptic Spasms", "HP:0011097"], ["Tonic Seizures", "HP:0032792"], …],
+   "counts": {"steps": 10, "mechanism_steps": 5, "edges": 10, "evidence": 24, "refute": 0, "no_evidence": 0, "genes": 1, "treatments": 3},
+   "attribution": {"file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc…/kb/disorders/STXBP1_Encephalopathy.yaml",
+                   "page_url": "https://dismech.monarchinitiative.org/pages/disorders/STXBP1_Encephalopathy.html"}} ]}}
+```
+
+`d[id]` is always a **list**: one record per DisMech file anchored to that MONDO id.
+
+| key | meaning |
+|---|---|
+| `t` | Shard-local ontology labels (GO, CL, UBERON, HP, CHEBI, HGNC, ECTO…). `steps[].terms` holds `[id, slot, modifier?]`; look the label up here. Links: GO/CL/UBERON/HP via OLS or Monarch, `https://monarchinitiative.org/<id>`. |
+| `steps[]` | All pathograph nodes, in **topological order** (Kahn's algorithm; ties broken by type, gene → molecular → cellular → tissue → organism → phenotype, then file order). `i` is the position. |
+| `steps[].sec` | Which DisMech section the node comes from: `genetic`, `environmental`, `pathophysiology` (the mechanism steps), `phenotypes`. |
+| `steps[].type` | `gene`, `environmental`, `molecular`, `cellular`, `tissue`, `organism`, `phenotype`, or `unspecified`. |
+| `steps[].type_basis` | `scale` = DisMech's own `biological_scale` (14,493 steps); `section` = from the section (gene, environment, phenotype); `inferred:<slot>` = ours, from which ontology slots the node fills (gene descriptor on a root node → gene; molecular_functions/chemical_entities → molecular; cell_types → cellular; locations → tissue; 5,523 steps); `none` → `unspecified` (2,634). |
+| `steps[].role`, `conforms_to`, `mechanism_confidence` | DisMech's own fields, verbatim. `conforms_to` names a shared DisMech mechanism module (`module#Node`). |
+| `steps[].ev` | `[evidence items, refutes, no_evidence]` for the node. The items themselves are in `dismech_evidence/`. |
+| `edges[]` | `s` → `t` step indices. `link` is DisMech's `causal_link_type` (`DIRECT`, `INDIRECT_KNOWN_INTERMEDIATES`, `INDIRECT_UNKNOWN_INTERMEDIATES`, `UNKNOWN`), an environmental effect (`TRIGGERS`, `EXACERBATES`…; `predicate: "influences"`), a phenotype `sequela`, or `contributes_to` for gene → mechanism. |
+| `edges[].inferred` | Present only on gene → mechanism edges **we** added (407): a contributing gene that DisMech's own rule leaves unlinked is joined to a *root* pathophysiology node whose name contains the gene symbol as a word ("STXBP1 Haploinsufficiency …", "SCN1A Gene Mutation"). Draw them dashed. The other 5,429 gene edges follow DisMech's `graph.py` rule (shared gene descriptor). |
+| `chains[]` | Up to 12 root → sink paths as step-index lists, longest first. `n_paths` is the total count (capped at 5,000). `cyclic` marks the 63 records whose graph has a cycle (the extra nodes are appended after the topological part). |
+| `genes[]` | DisMech's `genetic` section. `contributes` is false for MODIFIER/BIOMARKER/PROTECTIVE/DISPUTED/UNKNOWN genes (DisMech's own rule). `linked_to_mechanism`: `"dismech"`, `"name_match"` (ours, see above) or `false`. |
+| `treatments[]` | `modality` (DisMech `therapeutic_modality`), `action` (NCIT clinical action), `agents` (CHEBI/NCIT drugs), `regimen`, and `targets` (`target_mechanisms`; `step` is the step index when the target is a node). |
+| `hypotheses[]`, `open_questions[]` | DisMech `mechanistic_hypotheses` (CANONICAL/EMERGING…) and `discussions` (KNOWLEDGE_GAP, CONTROVERSY, HUMAN_MODEL_MISMATCH…). Contested mechanisms live here, e.g. STXBP1's haploinsufficiency-versus-dominant-negative controversy. |
+| `unlinked_phenotypes` | Phenotypes that no causal edge reaches, as `[name, HP id]`. DisMech leaves about half of its phenotypes unconnected. |
+
+### `dismech_evidence/<bucket>.json`: verbatim evidence and long prose
+
+```json
+{"bucket": 58, "attribution": {…},
+ "refs": {"PMID:18469812": ["De novo mutations in the gene encoding STXBP1 (MUNC18-1) cause early infantile epileptic encephalopathy.",
+                            "https://pubmed.ncbi.nlm.nih.gov/18469812/"], …},
+ "d": {"MONDO:0012812": [ {"file": "STXBP1_Encephalopathy.yaml",
+   "x": {"steps/1": {"description": "De novo heterozygous loss-of-function variants …",
+                     "evidence": [{"ref": "PMID:18469812", "supports": "SUPPORT", "source": "HUMAN_CLINICAL",
+                                   "snippet": "These findings suggest that haploinsufficiency of STXBP1 causes EIEE.",
+                                   "explanation": "Identifies haploinsufficiency as the disease mechanism, the trigger modeled by this node."}, …]},
+         "edges/2": {"description": "…"}, "genes/0": {"notes": "…", "evidence": […]},
+         "treatments/0": {"description": "…", "evidence": […]}, "open_questions/0": {"rationale": "…", "evidence": […]}, …}} ]}}
+```
+
+- `d[id]` is a list **parallel** to `dismech/<b>.json`'s `d[id]`, matched on `file`.
+- `x` is keyed by the path of the object in the core record: `steps/<i>`, `edges/<k>`, `genes/<k>`,
+  `treatments/<k>`, `treatments/<k>/targets/<j>`, `hypotheses/<k>`, `open_questions/<k>`.
+- Each entry holds the object's `evidence` and its long text (`description`, `rationale`, `notes`).
+
+Evidence item fields:
+
+| field | meaning |
+|---|---|
+| `ref` | DisMech reference, e.g. `PMID:…`, `ORPHA:…`, `DOI:…`, `CGGV:…`, `clinicaltrials:NCT…`, `url:https://…` |
+| `supports` | `SUPPORT`, `REFUTE` or `NO_EVIDENCE` (DisMech removed `PARTIAL` in its issue #7439) |
+| `snippet` | Exact quote from the source, **byte-identical to the parsed DisMech YAML**. Never edit it. |
+| `explanation` | DisMech curator's explanation, verbatim |
+| `source` | `HUMAN_CLINICAL`, `MODEL_ORGANISM`, `IN_VITRO`, `COMPUTATIONAL`, `OTHER` (the cited study's type) |
+| `directness`, `quote_role` | DisMech's optional axes: `INDIRECT` evidence, or a `BACKGROUND` quote |
+| `flag` | For the UI. `refute` (1,590): show as **counter-evidence**. `no_evidence` (315): the reference does not bear on the claim. `indirect` (5,934): DisMech's replacement for the old `PARTIAL`, i.e. supports the claim only through an inference step. |
+
+The URL is `refs[ref][1]`, built from the reference prefix: PubMed, Orphanet, doi.org, ClinicalTrials.gov,
+ClinGen validity/dosage, GEO, Europe PMC preprints, WHO ICTRP, NCIt EVS, CIViC and MetaboLights.
+`url:` refs use their own URL. Only 4 `STRCHIVE:` refs have no URL. `refs[ref][0]` is DisMech's
+`reference_title`.
+
+### `dismech_index.json`: search flag
+
+```json
+{"f": ["id","name","mech_steps","steps","evidence","refute","entries","in_index"],
+ "rows": [["MONDO:0012812","STXBP1 Encephalopathy",5,10,24,0,1,true], …]}
+```
+
+One row per MONDO id (3,217), with counts summed over its entries. A search hit whose id is in this
+file gets a "curated mechanism (DisMech)" badge. `in_index` is false for the 789 ids that live in
+`index_extra.json`.
+
+### `index_extra.json`: DisMech diseases missing from `index.json`
+
+This file holds 789 DisMech MONDO ids that `index.json` does not have, mostly common, infectious,
+toxic and oncologic diseases outside the HPO/gene rare-disease pool. It uses **the same row format and
+`f` as `index.json`**, so search can concatenate the rows:
+
+- `name` is the MONDO label from DisMech;
+- `syn` holds up to 6 DisMech synonyms and names;
+- `omim` and `orpha` come from the MONDO equivalentTo xrefs;
+- `genes` are DisMech's contributing genes, with **`gsrc = 3`** (new: "genes from DisMech's curated
+  `genetic` section", which can include risk genes for complex diseases);
+- `n = 0` and `atlas = 0`.
+
+These rows have no `neighbours/` or `mechanism/` entry. Their page shows the DisMech pathograph and the
+links out. `index.json` itself is not rewritten.
+
+### `dismech_atlas_links.json`: DisMech next to the deep atlas
+
+A DisMech record is linked to an atlas `disease:<GENE>` umbrella when its MONDO id equals one of the
+umbrella's MONDO xrefs, or one of its `attrs.subtypes[].MONDO` ids. Umbrellas come from
+`data/graph.json` and `data/curated/family_*.json`. An obsolete xref is followed to its MONDO
+`replaced_by`, which is how `MONDO:0011794` (obsolete) reaches DisMech's Dravet syndrome
+`MONDO:0100135`.
+
+The result is 72 links, covering 32 of 45 umbrellas. Each link has a `kind`:
+
+- `single_gene` (36): DisMech's only contributing gene is the umbrella gene;
+- `multi_gene_lists_gene` (16): e.g. Dravet, which lists 11 genes with SCN1A first;
+- `group_gene_not_listed` (20): a clinical group our node lists as a subtype (Lennox-Gastaut, infantile
+  spasms…) whose DisMech entry does not name the gene. **Hide these by default.**
+
+`gene_only` (16) is a separate list of leads, not matches. Each is a non-somatic DisMech disorder,
+with at most 3 contributing genes, that names the umbrella gene but matches none of its MONDO ids. Each
+is a candidate missing xref on our node: CDKL5 deficiency disorder `MONDO:0100039`, GLUT1 deficiency
+syndrome `MONDO:0000188`, Gaucher disease `MONDO:0018150`, Niemann-Pick C `MONDO:0018982`, MLD
+`MONDO:0018868`, and others.
+
+On a disease page, show the DisMech pathograph as a second, independently curated view headed
+**"DisMech mechanism"**. Never merge its steps into our graph edges, and always show the attribution.
+
+### Caveats
+
+- **Scope of carried evidence.** The layer carries the evidence on the pathograph: steps, causal edges,
+  genes, treatments and their targets, hypotheses and discussions. Evidence on unlinked phenotypes,
+  diagnosis, prevalence, inheritance, biochemistry, clinical trials, datasets, animal models,
+  progression and differentials (83,910 items) stays in DisMech and is reachable through `file_url`.
+- **Verbatim, not re-verified.** Snippets are copied unchanged and checked only against DisMech's YAML.
+  Whether each quote appears in the cited paper is DisMech's validation (`linkml-reference-validator`),
+  not ours.
+- **Dangling targets.** 509 `downstream` targets name no node in their own file. These are DisMech
+  curation defects, counted and dropped, never guessed.
+- **Type is partly ours.** Where DisMech gives no `biological_scale`, `type` is inferred and marked
+  `inferred:*`. 2,634 steps stay `unspecified`.
+- **The MONDO anchor can be broad or reused.** Some DisMech entries anchor to a grouping term (e.g.
+  `SLC6A1-Related_Disorder` on "epilepsy with myoclonic atonic seizures"). 14 ids hold 2+ entries.
+- **Pinned commit.** The clone is a snapshot at the commit recorded in `meta.dismech.commit`.
+  `run.sh --refresh` pulls the latest.

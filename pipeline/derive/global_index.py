@@ -561,7 +561,7 @@ def main():
         "files": {"index.json": index_size, "neighbours_total": sum(sizes), "neighbours_max_shard": max(sizes)},
     }
     old = read_json(OUT / "meta.json") if (OUT / "meta.json").exists() else {}
-    for k in ("mechanism", "atlas_flags"):          # written by mechanism_index.py / atlas_flags.py
+    for k in ("mechanism", "atlas_flags", "dismech"):  # written by mechanism_index.py / atlas_flags.py / dismech.py
         if k in old:
             meta[k] = old[k]
     write_json(OUT / "meta.json", meta)
