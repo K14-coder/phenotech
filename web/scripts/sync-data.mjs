@@ -58,6 +58,30 @@ if (nDerived || nCurated) console.log(`[sync-data] copied ${nDerived} derived an
 // dismech_evidence/ (87 MB of full DisMech evidence) stays out of the deploy; the few snippets the pages
 // show are distilled into public/data/derived/web/dismech_snippets/ below
 const GLOBAL_EXCLUDE = new Set(["dismech_evidence"]);
+// every file (FASTA/VCF examples are not JSON); JSON is still validated
+const copyTreeAll = (from, to) => {
+  if (!existsSync(from)) return 0;
+  mkdirSync(to, { recursive: true });
+  let n = 0;
+  for (const ent of readdirSync(from, { withFileTypes: true })) {
+    const s = join(from, ent.name);
+    const d = join(to, ent.name);
+    if (ent.isDirectory()) n += copyTreeAll(s, d);
+    else if (!ent.name.startsWith(".")) {
+      if (ent.name.endsWith(".json")) {
+        try {
+          JSON.parse(readFileSync(s, "utf8"));
+        } catch {
+          console.warn(`[sync-data] skipping ${ent.name}: not valid JSON`);
+          continue;
+        }
+      }
+      copyFileSync(s, d);
+      n++;
+    }
+  }
+  return n;
+};
 const copyTree = (from, to) => {
   const out = { files: 0, bytes: 0, skipped: 0 };
   if (!existsSync(from)) return out;
@@ -236,6 +260,15 @@ const writeShards = (dir, entries) => {
 // population layer (prevalence, readiness, channels; produced by another agent) and a list of the
 // optional products that exist, so pages never probe for missing files (each probe logs a 404)
 {
+  // reference CDS per deep gene and synthetic example FASTA/VCF files for /sequence
+  const sq = copyTreeAll(join(dataRoot, "derived", "sequences"), join(webRoot, "public", "data", "derived", "sequences"));
+  if (sq) console.log(`[sync-data] copied ${sq} sequence file(s)`);
+  const exDir = join(webRoot, "public", "data", "derived", "sequences", "examples");
+  mkdirSync(join(webRoot, "public", "data", "derived", "web"), { recursive: true });
+  writeFileSync(
+    join(webRoot, "public", "data", "derived", "web", "sequence_examples.json"),
+    JSON.stringify({ files: existsSync(exDir) ? readdirSync(exDir).filter((f) => /\.(fasta|fa|vcf|vcf\.gz)$/i.test(f)).sort() : [] }, null, 2) + "\n",
+  );
   const p = copyTree(join(dataRoot, "derived", "population"), join(webRoot, "public", "data", "derived", "population"));
   // prevalence_orpha.json (5.7 MB) is distilled into web/scale shards above; pages never load it
   try {
@@ -252,6 +285,9 @@ const writeShards = (dir, entries) => {
     dismech: existsSync(join(webRoot, "public", "data", "derived", "global", "dismech", "0.json")),
     dismech_snippets: existsSync(join(webRoot, "public", "data", "derived", "web", "dismech_snippets", "0.json")),
     mechanism: existsSync(join(webRoot, "public", "data", "derived", "global", "mechanism", "0.json")),
+    groups: existsSync(join(webRoot, "public", "data", "derived", "global", "groups.json")),
+    sequences: list(join(webRoot, "public", "data", "derived", "sequences")).map((f) => f.replace(/\.json$/, "")),
+    variant_positions: existsSync(join(webRoot, "public", "data", "derived", "variant_positions.json")),
   };
   mkdirSync(join(webRoot, "public", "data", "derived", "web"), { recursive: true });
   writeFileSync(join(webRoot, "public", "data", "derived", "web", "available.json"), JSON.stringify(available, null, 2) + "\n");

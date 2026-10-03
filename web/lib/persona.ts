@@ -1,40 +1,16 @@
 "use client";
 
-// "Viewing as" profile (docs/persona-spec.md). Devon (newly diagnosed) is the default. Stored in
+// "Viewing as" mode (docs/persona-spec.md): Simple (families) is the default. Stored in
 // localStorage, overridable with ?as=family|leader|researcher|biotech (ids are stable).
 import { useSyncExternalStore } from "react";
 
 export type Persona = "family" | "leader" | "researcher" | "biotech";
 
 export const PERSONAS: { id: Persona; name: string; short: string; label: string; hint: string }[] = [
-  {
-    id: "family",
-    name: "Devon",
-    short: "new to this",
-    label: "Devon (new to this)",
-    hint: "Just received a diagnosis. Plain words: what it means, who to contact, what to do this week.",
-  },
-  {
-    id: "leader",
-    name: "Maria",
-    short: "patient-group leader",
-    label: "Maria (patient-group leader)",
-    hint: "Runs a patient group. Neighbouring communities, reusable assets, partners and a sourced proposal.",
-  },
-  {
-    id: "researcher",
-    name: "Dr. Osei",
-    short: "researcher",
-    label: "Dr. Osei (researcher)",
-    hint: "Researcher or clinician. Mechanism and evidence, patient population, trial readiness and how to reach patients.",
-  },
-  {
-    id: "biotech",
-    name: "Priya",
-    short: "biotech scout",
-    label: "Priya (biotech scout)",
-    hint: "Biotech or pharma. Which diseases fit an approach, unmet need, trial readiness and population size.",
-  },
+  { id: "family", name: "Simple", short: "Plain language for families", label: "Simple", hint: "Plain language for families" },
+  { id: "leader", name: "Detailed", short: "For patient-group leaders: assets, partners, proposals", label: "Detailed", hint: "For patient-group leaders: assets, partners, proposals" },
+  { id: "researcher", name: "Research", short: "Mechanisms, populations, trial readiness", label: "Research", hint: "Mechanisms, populations, trial readiness" },
+  { id: "biotech", name: "Industry", short: "Therapy approaches and unmet need", label: "Industry", hint: "Therapy approaches and unmet need" },
 ];
 
 const KEY = "atlas.persona";

@@ -35,7 +35,7 @@ function Home({ idx, search }: { idx: GraphIndex; search: Searcher }) {
   const persona = usePersona();
   const router = useRouter();
 
-  // Priya lands on therapeutic approaches, Dr. Osei on the cohort view: once per visit, so the Search
+  // Industry lands on therapeutic approaches, Research on the cohort view: once per visit, so the Search
   // link still reaches this page afterwards
   useEffect(() => {
     if (qParam || (persona !== "biotech" && persona !== "researcher")) return;
@@ -113,7 +113,7 @@ function Home({ idx, search }: { idx: GraphIndex; search: Searcher }) {
           onClick={() => start("maria")}
           className="rounded-md border border-line px-3.5 py-2 text-sm font-medium text-ink transition-colors hover:border-accent-500"
         >
-          Follow Maria (VAMP2 patient group)
+          Follow a patient group (VAMP2)
         </button>
         <button
           type="button"
@@ -218,6 +218,13 @@ function DevonHome({
           Everything here links to its source.
         </li>
       </ul>
+      <p className="mt-6 text-[16px] text-ink-2">
+        Have a DNA sequence file from your test?{" "}
+        <Link href="/sequence" className="font-medium text-accent-700 underline underline-offset-4">
+          Check it here
+        </Link>
+        . It never leaves your device.
+      </p>
       <p className="mt-8 text-sm leading-relaxed text-ink-3">
         This is information, not medical advice. Your child’s doctor or genetic counsellor is the right person for decisions.
       </p>

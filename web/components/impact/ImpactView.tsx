@@ -148,7 +148,7 @@ function ImpactPage({ idx }: { idx: GraphIndex }) {
       <p className="mt-14 border-t border-line pt-5 text-sm text-ink-2">
         See the route in practice:{" "}
         <button type="button" onClick={() => start("maria")} className="font-medium text-accent-700 hover:underline">
-          follow Maria’s VAMP2 journey →
+          follow a patient group’s VAMP2 journey →
         </button>{" "}
         <span className="text-ink-3">· or read </span>
         <Link href="/method" className="text-accent-700 hover:underline">

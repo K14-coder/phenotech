@@ -39,6 +39,10 @@ export interface DevonModel {
   sources: SourceLink[];
   related: Contact[];
   contributeHref: string;
+  /** the type the family picked on the guided start page */
+  chosenType?: string | null;
+  /** a gene the in-browser sequence check covers (the 45 deep genes) */
+  sequenceGene?: string | null;
   /** loading flags for optional layers, so the page can say "loading" rather than "none" */
   loading?: boolean;
 }
@@ -126,6 +130,11 @@ export function DevonPage({ m, learnMore }: { m: DevonModel; learnMore?: React.R
       <header>
         <p className="text-sm text-ink-3">Your diagnosis</p>
         <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink sm:text-[32px]">{m.name}</h1>
+        {m.chosenType && (
+          <p className="mt-2 text-[15px] text-ink-2">
+            You told us: <b className="font-medium text-ink">{m.chosenType}</b>. This page covers all its types; ask your doctor which parts apply to yours.
+          </p>
+        )}
         <div className="mt-4">
           <SafetyNote />
         </div>
@@ -185,6 +194,16 @@ export function DevonPage({ m, learnMore }: { m: DevonModel; learnMore?: React.R
       <DevonSection id="this-week" title="Things you can do this week">
         <Checklist items={week} />
       </DevonSection>
+
+      {m.sequenceGene && (
+        <p className="rounded-xl border border-line px-4 py-3.5 text-[16px] text-ink-2">
+          Have a DNA sequence or VCF file from the test?{" "}
+          <Link href={`/sequence?gene=${encodeURIComponent(m.sequenceGene)}`} className="font-medium text-accent-700 underline underline-offset-4">
+            Check the exact change
+          </Link>{" "}
+          and print it for your doctor. It never leaves your device.
+        </p>
+      )}
 
       <DevonSection id="questions" title="Questions to bring to your doctor">
         <DoctorQuestions name={m.name} questions={m.questions} sources={m.sources} />

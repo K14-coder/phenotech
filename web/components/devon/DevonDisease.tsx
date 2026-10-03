@@ -4,6 +4,7 @@
 // symptoms, groups), population/channels.json (organisational contacts, registries, recruiting trials)
 // and population/prevalence.json (estimated people). Template sentences, real data, nothing invented.
 import { useMemo } from "react";
+import { useSearchParams } from "next/navigation";
 import { type GraphIndex } from "@/lib/graph";
 import { explain } from "@/lib/glossary";
 import { closestDiseases, communitiesFor, diseaseContext, relatedOrgsFor } from "@/lib/insights";
@@ -33,7 +34,8 @@ export function DevonDisease({ idx, node, learnMore }: { idx: GraphIndex; node: 
     () => buildModel(idx, node, channels?.data ?? null, prevalence?.data ?? null, channels?.status === "loading" || prevalence?.status === "loading"),
     [idx, node, channels, prevalence],
   );
-  return <DevonPage m={m} learnMore={learnMore} />;
+  const chosen = useSearchParams().get("type");
+  return <DevonPage m={{ ...m, chosenType: chosen }} learnMore={learnMore} />;
 }
 
 function edgeBetween(idx: GraphIndex, source: string, type: string, target: string): AtlasEdge | undefined {
@@ -240,6 +242,7 @@ function buildModel(idx: GraphIndex, node: AtlasNode, ch: ChannelsFile | null, p
     questions: questions.slice(0, 5),
     sources,
     related,
+    sequenceGene: gene?.label ?? null,
     contributeHref: `/contribute?disease=${encodeURIComponent(id.replace(/^disease:/, ""))}`,
     loading,
   };

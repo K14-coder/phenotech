@@ -5,8 +5,11 @@ import { useRouter } from "next/navigation";
 import { useAtlas } from "../GraphProvider";
 import { NodeTypeIcon } from "../NodeTypeIcon";
 import { clustersOf, clusterSlot, neighbors, nodeHref, type GraphIndex } from "@/lib/graph";
-import { GLOBAL_INDEX_KEY, ensureGlobalIndex, rowHref, searchGlobal, type GlobalHit, type GlobalIndex, type GlobalRow } from "@/lib/global";
-import { useResourceValue } from "@/lib/resource";
+import { headOf, loadGroups, type GroupsFile } from "@/lib/groups";
+import { usePersona } from "@/lib/persona";
+import { capFirst } from "@/lib/text";
+import { GLOBAL_INDEX_KEY, ensureGlobalIndex, mappedAtlasId, normalizeTerm, rowHref, searchGlobal, type GlobalHit, type GlobalIndex, type GlobalRow } from "@/lib/global";
+import { ensure, useResourceValue } from "@/lib/resource";
 import { MATCH_KIND_LABEL, type SearchHit } from "@/lib/search";
 import { clusterColor } from "@/lib/style";
 import { TYPE_LABEL } from "@/lib/text";
@@ -99,15 +102,40 @@ export function SearchBox({
     const ordered = globalFirst ? [globalGroup, atlasGroup] : [atlasGroup, globalGroup];
     return ordered.filter((g) => g.options.length);
   }, [hits, gi, idx, q, globalAllowed]);
-  const options = groups.flatMap((g) => g.options);
+  const allOptions = groups.flatMap((g) => g.options);
+
+  // Simple mode: ONE clear answer (the general disease), then a guided start page; "See all matches" opens the list
+  const persona = usePersona();
+  const [showAll, setShowAll] = useState(false);
+  const groupsRes = useResourceValue<GroupsFile | null>("global:groups");
+  const guidedOn = persona === "family" && !onPick && !showAll;
+  const guided = useMemo((): { id: string; label: string; via?: string } | null => {
+    if (!guidedOn || !idx || q.trim().length < 2) return null;
+    const disease = hits.find((h) => h.node.type === "disease" && h.score <= 0.1);
+    if (disease) return { id: disease.node.id, label: disease.node.label, via: disease.kind !== "label" ? disease.matched : undefined };
+    const gene = hits.find((h) => h.node.type === "gene" && h.score <= 0.05);
+    const caused = gene ? neighbors(idx, gene.node.id, { relations: ["causes"], direction: "out" })[0] : undefined;
+    if (caused) {
+      const d = idx.nodeById.get(caused.other)!;
+      return { id: d.id, label: d.label };
+    }
+    const top = gi ? searchGlobal(gi, q, 1)[0] : undefined;
+    if (!top) return null;
+    const head = headOf(gi!, top.row, groupsRes?.data);
+    const mapped = mappedAtlasId(head, idx);
+    if (mapped) return { id: mapped, label: idx.nodeById.get(mapped)!.label, via: top.matched };
+    return { id: head.id, label: capFirst(head.name), via: top.kind !== "name" || head.id !== top.row.id ? top.matched : undefined };
+  }, [guidedOn, idx, q, hits, gi, groupsRes]);
+  const options = guided ? [] : allOptions;
 
   // a pasted report line ("STXBP1 R388X", "c.1162C>T", "NM_...(GENE):c...") gets a top "Look up this variant" option
   const variantOption = variant !== "field" && looksLikeVariant(q);
   const offset = variantOption ? 1 : 0;
-  const total = offset + options.length;
+  const total = offset + (guided ? 1 : options.length);
   const active = Math.min(rawActive, Math.max(total - 1, 0));
   const startGlobal = () => {
     if (globalAllowed) ensureGlobalIndex();
+    if (persona === "family") ensure("global:groups", loadGroups);
   };
 
   // Home's big search box: fetch the index when the browser is idle, so the first keystroke finds everything
@@ -168,6 +196,7 @@ export function SearchBox({
 
   const pickAt = (i: number) => {
     if (variantOption && i === 0) return pickVariant();
+    if (guided) return pickGuided();
     const o = options[i - offset];
     if (o?.kind === "atlas") pick(o.hit);
     else if (o?.kind === "global") pickGlobal(o.hit);
@@ -183,6 +212,14 @@ export function SearchBox({
     }
     inputRef.current?.blur();
     router.push(rowHref(hit.row, idx));
+  };
+
+  const pickGuided = () => {
+    if (!guided) return;
+    setOpen(false);
+    setQ("");
+    inputRef.current?.blur();
+    router.push(`/start?d=${encodeURIComponent(guided.id)}`);
   };
 
   const pick = (hit: SearchHit | undefined) => {
@@ -253,6 +290,7 @@ export function SearchBox({
             setQ(e.target.value);
             setActive(0);
             setOpen(true);
+            setShowAll(false);
             startGlobal();
           }}
           onFocus={() => {
@@ -297,7 +335,40 @@ export function SearchBox({
                   <p className="truncate text-xs text-ink-3">“{q.trim()}” · find it in ClinVar and see what it points to</p>
                 </li>
               )}
-              {groups.map((g, gi2) => {
+              {guided && (
+                <>
+                  <li
+                    id={`${listId}-opt-${offset}`}
+                    role="option"
+                    aria-selected={active === offset}
+                    onMouseEnter={() => setActive(offset)}
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      pickGuided();
+                    }}
+                    className={`cursor-pointer px-4 py-3.5 ${active === offset ? "bg-subtle" : ""}`}
+                  >
+                    <p className="text-[17px] font-semibold text-ink">{guided.label}</p>
+                    <p className="mt-0.5 text-sm text-ink-3">
+                      {guided.via && normalizeTerm(guided.via) !== normalizeTerm(guided.label) ? `Also called ${guided.via}. ` : ""}
+                      Tap to continue
+                    </p>
+                  </li>
+                  <li role="presentation" className="border-t border-line-2 px-4 py-2">
+                    <button
+                      type="button"
+                      onMouseDown={(e) => {
+                        e.preventDefault();
+                        setShowAll(true);
+                      }}
+                      className="text-sm text-accent-700 hover:underline"
+                    >
+                      Not it? See all matches
+                    </button>
+                  </li>
+                </>
+              )}
+              {!guided && groups.map((g, gi2) => {
                 const start = offset + groups.slice(0, gi2).reduce((n, x) => n + x.options.length, 0);
                 const label = g.kind === "global" ? "Other rare diseases (basic data)" : groups.length > 1 ? "In the atlas (mapped in depth)" : null;
                 return (

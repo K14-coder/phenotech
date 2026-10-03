@@ -673,3 +673,34 @@ The DisMech chain sits on the detailed page.
 - **`/d/` pages:**
   - The mechanism layer: G2P and ClinGen records, Reactome pathways, the mechanism family and its members.
   - The DisMech chain, only where DisMech has a record. It loads only when opened and carries attribution.
+
+---
+
+## View names, guided search, sequence and VCF check
+
+No live AI calls were made in this round.
+
+- **View names:** Simple (default), Detailed, Research and Industry, each with a one-line description. Persona names are gone from the switch, the first-visit chooser, the tours ("Follow a patient group", "Follow a family with no patient group"), Home and Impact. /method now has "One atlas, four views". Ids and `?as=` are unchanged.
+- **Guided search (Simple only):**
+  - The search box shows one result: the general disease. That is an in-depth disease when the atlas has a strong match; otherwise the global row's head from `data/derived/global/groups.json`, falling back to a name-stem heuristic in `lib/groups.ts` behind the same interface. "Not it? See all matches" opens the normal list.
+  - Picking it opens `/start?d=<id>`:
+    - a reassurance;
+    - "Do you know which type?" with large options and plain distinctions;
+    - "I'm not sure, show me the general information";
+    - a collapsed "Similar names that are different conditions".
+  - It then goes to the plain diagnosis page, which repeats the type that was chosen.
+- **/sequence:** FASTA or VCF (.vcf, .vcf.gz via DecompressionStream), compared in the browser. The page says so prominently.
+  - **FASTA:** banded global alignment against the MANE CDS (`data/derived/sequences/<GENE>.json`), with HGVS c. (3'-shifted indels, dup detection) and p., and a consequence class with a splice-region flag.
+  - **VCF:**
+    - Streams line by line and detects GRCh37 or GRCh38 from ##reference or ##contig, with a manual override.
+    - Maps changes in the 45 genes through the exon table, both strands, including intronic c.N±k. Checked against ClinVar HGVS: 543 of 543 substitutions agree.
+    - Looks up `variant_positions.json` (exact substitution keys and SPDI indels).
+    - Gives a count summary.
+  - **Shared by both:**
+    - ClinVar lookups through `lib/variant.ts` (`variants.json`).
+    - A one-page "Print for your doctor" with the disclaimer.
+    - An opt-in NCBI BLAST POST form; the sequence is never put in a URL.
+    - Synthetic examples.
+    - A kind message, linking to the report-line lookup, for genes outside the 45.
+- **Linked from:** Simple Home and the Simple diagnosis pages of the 45 deep genes.
+- **Sync:** `data/derived/sequences/**` is copied. `web/sequence_examples.json` and the availability flags for groups, sequences and variant positions are written.
