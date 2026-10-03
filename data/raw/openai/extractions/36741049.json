@@ -1,0 +1,165 @@
+{
+ "pmid": "36741049",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:38:15.627Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0cdfca62ac29b824016ac14b64282087d29fc321351f4328de",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0cdfca62ac29b824016ac14b6437a487d2a81077ae2fc44b06": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 411,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 411,
+     "output_tokens": 0
+    },
+    "rs_0cdfca62ac29b824016ac14b67648c87d2929a9fdb037b798d": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 177
+    },
+    "msg_0cdfca62ac29b824016ac14b6efb9487d2868b3c63bee68b9d": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 937
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 937
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1494,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1114,
+  "output_tokens_details": {
+   "reasoning_tokens": 177
+  },
+  "total_tokens": 2608
+ },
+ "latency_ms": 52611,
+ "input_sha1": "a7f7c832848cbf3e",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/36741049.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"hGAT-1\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"myoclonic-atonic and other generalized epilepsies\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Mutations in the human γ-aminobutyric acid (GABA) transporter 1 (hGAT-1) can instigate myoclonic-atonic and other generalized epilepsies in the afflicted individuals.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"hGAT-1 disease variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"reduced or completely abolished GABA uptake activity\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"We systematically examined fifteen hGAT-1 disease variants, all of which dramatically reduced or completely abolished GABA uptake activity.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"hGAT-1 loss-of-function variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"protein misfolding and/or impaired trafficking machinery\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Many of these loss-of-function variants were absent from their regular site of action at the cell surface, due to protein misfolding and/or impaired trafficking machinery (as verified by confocal microscopy and de-glycosylation experiments).\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"hGAT-1 A288V\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"folding-deficient\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"We here focused on a folding-deficient A288V variant.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"hGAT-1 A288V\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"ER-retention\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"In flies, A288V reiterated its impeded expression pattern, closely mimicking the ER-retention demonstrated in transfected HEK293 cells.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"hGAT-1 A288V\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"ER-retention\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"In flies, A288V reiterated its impeded expression pattern, closely mimicking the ER-retention demonstrated in transfected HEK293 cells.\",\n      \"study_type\": \"animal_model\",\n      \"species\": \"fly\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"pharmacochaperoning approach\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"targets\",\n      \"object_mention\": \"protein folding deficits\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Our data grant crucial new insights into: (i) the molecular basis of epilepsy in patients harboring hGAT-1 mutations, and (ii) a proof-of-principle that protein folding deficits in disease-associated hGAT-1 variants can be corrected using the pharmacochaperoning approach.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "hGAT-1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "myoclonic-atonic and other generalized epilepsies",
+   "object_type": "disease",
+   "quote": "Mutations in the human γ-aminobutyric acid (GABA) transporter 1 (hGAT-1) can instigate myoclonic-atonic and other generalized epilepsies in the afflicted individuals.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hGAT-1 disease variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "reduced or completely abolished GABA uptake activity",
+   "object_type": "mechanism",
+   "quote": "We systematically examined fifteen hGAT-1 disease variants, all of which dramatically reduced or completely abolished GABA uptake activity.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hGAT-1 loss-of-function variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "protein misfolding and/or impaired trafficking machinery",
+   "object_type": "mechanism",
+   "quote": "Many of these loss-of-function variants were absent from their regular site of action at the cell surface, due to protein misfolding and/or impaired trafficking machinery (as verified by confocal microscopy and de-glycosylation experiments).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hGAT-1 A288V",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "folding-deficient",
+   "object_type": "mechanism",
+   "quote": "We here focused on a folding-deficient A288V variant.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hGAT-1 A288V",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "ER-retention",
+   "object_type": "mechanism",
+   "quote": "In flies, A288V reiterated its impeded expression pattern, closely mimicking the ER-retention demonstrated in transfected HEK293 cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hGAT-1 A288V",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "ER-retention",
+   "object_type": "mechanism",
+   "quote": "In flies, A288V reiterated its impeded expression pattern, closely mimicking the ER-retention demonstrated in transfected HEK293 cells.",
+   "study_type": "animal_model",
+   "species": "fly",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pharmacochaperoning approach",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "protein folding deficits",
+   "object_type": "mechanism",
+   "quote": "Our data grant crucial new insights into: (i) the molecular basis of epilepsy in patients harboring hGAT-1 mutations, and (ii) a proof-of-principle that protein folding deficits in disease-associated hGAT-1 variants can be corrected using the pharmacochaperoning approach.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "pmid": "41438914",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:41:19.558Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0b011eafe3f5a13c016ac14c3891e487d28897636ec2d6c953",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0b011eafe3f5a13c016ac14c389d5c87d2bc211d379a2fd957": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 302,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 302,
+     "output_tokens": 0
+    },
+    "rs_0b011eafe3f5a13c016ac14c39cfd487d2bc3844e6bb5d70c0": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 110
+    },
+    "msg_0b011eafe3f5a13c016ac14c3eb34087d2a93ab56130a5666e": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 430
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 430
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1385,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 540,
+  "output_tokens_details": {
+   "reasoning_tokens": 110
+  },
+  "total_tokens": 1925
+ },
+ "latency_ms": 24527,
+ "input_sha1": "f9afd44e11ac8cb3",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/41438914.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SYT1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"Baker-Gordon syndrome (BAGOS)\",\"object_type\":\"disease\",\"quote\":\"Baker-Gordon syndrome (BAGOS) is an autosomal dominant neurodevelopmental disorder caused by de novo heterozygous missense mutations in SYT1.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"BAGOS\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"dominant-negative effect\",\"object_type\":\"mechanism\",\"quote\":\"The precise pathogenic mechanism of BAGOS is still unclear, with preliminary data favoring a dominant-negative effect, although a previous case presenting a reciprocal translocation disrupting SYT1 supports haploinsufficiency as a possible mechanism.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"BAGOS\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"haploinsufficiency\",\"object_type\":\"mechanism\",\"quote\":\"This is the second BAGOS case reported in the literature caused by SYT1 disruption, supporting that reduced amounts of functional SYT1, either by haploinsufficiency or dominant-negative effect, is responsible for SYT1-associated neurodevelopmental syndrome.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"reciprocal translocation disrupting SYT1\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"haploinsufficiency\",\"object_type\":\"mechanism\",\"quote\":\"The precise pathogenic mechanism of BAGOS is still unclear, with preliminary data favoring a dominant-negative effect, although a previous case presenting a reciprocal translocation disrupting SYT1 supports haploinsufficiency as a possible mechanism.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SYT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Baker-Gordon syndrome (BAGOS)",
+   "object_type": "disease",
+   "quote": "Baker-Gordon syndrome (BAGOS) is an autosomal dominant neurodevelopmental disorder caused by de novo heterozygous missense mutations in SYT1.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "BAGOS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "dominant-negative effect",
+   "object_type": "mechanism",
+   "quote": "The precise pathogenic mechanism of BAGOS is still unclear, with preliminary data favoring a dominant-negative effect, although a previous case presenting a reciprocal translocation disrupting SYT1 supports haploinsufficiency as a possible mechanism.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "BAGOS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "This is the second BAGOS case reported in the literature caused by SYT1 disruption, supporting that reduced amounts of functional SYT1, either by haploinsufficiency or dominant-negative effect, is responsible for SYT1-associated neurodevelopmental syndrome.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "reciprocal translocation disrupting SYT1",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "The precise pathogenic mechanism of BAGOS is still unclear, with preliminary data favoring a dominant-negative effect, although a previous case presenting a reciprocal translocation disrupting SYT1 supports haploinsufficiency as a possible mechanism.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

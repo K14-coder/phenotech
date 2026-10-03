@@ -1,0 +1,171 @@
+{
+ "pmid": "41385967",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:46:28.168Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0b9f370de7b95afe016ac14d54028887d284bfd2c80bf38d99",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0b9f370de7b95afe016ac14d540b7487d299b0204a8929d89e": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 452,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 452,
+     "output_tokens": 0
+    },
+    "msg_0b9f370de7b95afe016ac14d55e1a087d2a2a6e3b8c5f88529": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 1024
+      }
+     ],
+     "input_tokens": 2,
+     "output_tokens": 1024
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1535,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1024,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 2559
+ },
+ "latency_ms": 49281,
+ "input_sha1": "cb4a37b34f13a930",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/SLC6A1.efetch.xml",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"Developmental and epileptic encephalopathies (DEEs)\",\"object_type\":\"disease\",\"quote\":\"Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Developmental and epileptic encephalopathies (DEEs)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"seizures\",\"object_type\":\"phenotype\",\"quote\":\"Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Developmental and epileptic encephalopathies (DEEs)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"cognitive impairment\",\"object_type\":\"phenotype\",\"quote\":\"Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Developmental and epileptic encephalopathies (DEEs)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Developmental and epileptic encephalopathies (DEEs)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"motor difficulties\",\"object_type\":\"phenotype\",\"quote\":\"Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Developmental and epileptic encephalopathies (DEEs)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"social deficits\",\"object_type\":\"phenotype\",\"quote\":\"Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-phenylbutyrate (PBA)\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"GAT-1 function\",\"object_type\":\"mechanism\",\"quote\":\"We previously showed that 4-phenylbutyrate (PBA), known as a chemical chaperone and histone deacetylase inhibitor, restores GAT-1 function and reduces seizures in both mouse models and humans with SLC6A1 variants.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"PBA\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"DEE\",\"object_type\":\"disease\",\"quote\":\"Here, we tested whether PBA can improve neurobehavioral deficits in the Slc6a1+/S295L knock-in mouse model of DEE besides seizure mitigation.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Developmental and epileptic encephalopathies (DEEs)",
+   "object_type": "disease",
+   "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "seizures",
+   "object_type": "phenotype",
+   "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive impairment",
+   "object_type": "phenotype",
+   "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "motor difficulties",
+   "object_type": "phenotype",
+   "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "social deficits",
+   "object_type": "phenotype",
+   "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-phenylbutyrate (PBA)",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GAT-1 function",
+   "object_type": "mechanism",
+   "quote": "We previously showed that 4-phenylbutyrate (PBA), known as a chemical chaperone and histone deacetylase inhibitor, restores GAT-1 function and reduces seizures in both mouse models and humans with SLC6A1 variants.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "DEE",
+   "object_type": "disease",
+   "quote": "Here, we tested whether PBA can improve neurobehavioral deficits in the Slc6a1+/S295L knock-in mouse model of DEE besides seizure mitigation.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,1056 @@
+{
+ "pmid": "30266908",
+ "entries": {
+  "e8db136ec8a707e1": {
+   "mention": "epilepsies",
+   "type": "disease",
+   "candidates": [
+    "disease:STX1B",
+    "disease:STXBP1",
+    "disease:SLC6A1",
+    "disease:CPLX1",
+    "disease:NSF",
+    "disease:UNC13A",
+    "disease:SNAP25",
+    "disease:SYT1",
+    "disease:SYT2",
+    "disease:VAMP2"
+   ],
+   "node_id": "disease:STXBP1",
+   "match": "instance",
+   "justification": "The sentence ties these epilepsies to mutations in Munc18-1, the STXBP1 protein.",
+   "raw_node_id": "disease:STXBP1",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z"
+  },
+  "12888e37fd95e80f": {
+   "mention": "destabilization",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:dominant-negative",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "same",
+   "justification": "Destabilization of the mutant protein directly denotes protein destabilization.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z"
+  },
+  "ac8d31880927fb80": {
+   "mention": "aggregation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:dominant-negative",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "Mutant protein aggregation is a specific manifestation covered by the destabilization/misfolding effect.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z"
+  },
+  "c9a59922e4b7bbc9": {
+   "mention": "depleting functional Munc18-1 levels beyond hemizygous levels",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:synaptic-vesicle-priming",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative"
+   ],
+   "node_id": "mech:dominant-negative",
+   "match": "instance",
+   "justification": "Mutant aggregates sequester wild-type protein, reducing function beyond loss of one allele.",
+   "raw_node_id": "mech:dominant-negative",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z"
+  },
+  "7898d3ecf725667c": {
+   "mention": "4-phenylbutyrate",
+   "type": "therapy",
+   "candidates": [
+    "therapy:4-phenylbutyrate",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:3-4-diaminopyridine",
+    "therapy:amifampridine",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aav9-slc6a1",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:cap-002",
+    "therapy:fenfluramine"
+   ],
+   "node_id": "therapy:4-phenylbutyrate",
+   "match": "same",
+   "justification": "4-Phenylbutyrate is explicitly named in this therapy node.",
+   "raw_node_id": "therapy:4-phenylbutyrate",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z"
+  },
+  "4a24a890dffd0c93": {
+   "mention": "varied encephalopathies",
+   "type": "disease",
+   "candidates": [
+    "disease:STXBP1",
+    "disease:CPLX1",
+    "disease:NSF",
+    "disease:SNAP25",
+    "disease:STX1B",
+    "disease:VAMP2",
+    "disease:UNC13A",
+    "disease:STX1A",
+    "disease:SYT1",
+    "disease:SYT2"
+   ],
+   "node_id": "disease:STXBP1",
+   "match": "instance",
+   "justification": "The encephalopathies are contextually tied to the Munc18-1 mutations whose deficits are rescued.",
+   "raw_node_id": "disease:STXBP1",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z"
+  },
+  "62cd30085891f0c0": {
+   "mention": "sorbitol",
+   "type": "therapy",
+   "candidates": [
+    "therapy:4-phenylbutyrate",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:3-4-diaminopyridine",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aav9-slc6a1",
+    "therapy:amifampridine",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:cap-002",
+    "therapy:fenfluramine"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No candidate represents sorbitol; sharing chemical-chaperone activity does not establish identity.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z"
+  },
+  "e0d12876475b63f2": {
+   "mention": "trehalose",
+   "type": "therapy",
+   "candidates": [
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aav9-slc6a1",
+    "therapy:amifampridine",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:cap-002",
+    "therapy:fenfluramine"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No candidate represents trehalose; it is distinct from the listed therapies.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:49:09.030Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_05c86a3a6cd97a01016ac14e1526c487d2bd3006b48b6ea816": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 7026,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 7026,
+       "output_tokens": 0
+      },
+      "msg_05c86a3a6cd97a01016ac14e175b1487d2988c450fa9284885": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 2,
+         "output_tokens": 348
+        }
+       ],
+       "input_tokens": 2,
+       "output_tokens": 348
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 7370,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 348,
+    "output_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "total_tokens": 7718
+   },
+   "request_payload": {
+    "title": "Mechanism-based rescue of Munc18-1 dysfunction in varied encephalopathies by chemical chaperones.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "epilepsies",
+      "declared_type": "disease",
+      "sentence": "Heterozygous de novo mutations in the neuronal protein Munc18-1 are linked to epilepsies, intellectual disability, movement disorders, and neurodegeneration.",
+      "candidates": [
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:NSF",
+        "type": "disease",
+        "label": "NSF-related developmental and epileptic encephalopathy",
+        "synonyms": [
+         "DEE96"
+        ],
+        "summary": "A very rare early-infantile epileptic encephalopathy reported with de novo variants in NSF, the enzyme that recycles the SNARE machinery after each fusion event"
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       },
+       {
+        "id": "disease:SNAP25",
+        "type": "disease",
+        "label": "SNAP25-related disorders",
+        "synonyms": [
+         "CMS18",
+         "congenital myasthenic syndrome 18",
+         "SNAP25-DEE",
+         "DEE in SNAP25",
+         "SNAP25 Developmental and Epileptic Encephalopathy (SNAP25-DEE)",
+         "SNAP25 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SNAP25",
+         "congenital myasthenic syndrome type 18"
+        ],
+        "summary": "Changes in SNAP25 cause early-onset epilepsy with developmental delay; one reported variant instead causes a presynaptic congenital myasthenic syndrome with fat"
+       },
+       {
+        "id": "disease:SYT1",
+        "type": "disease",
+        "label": "SYT1-related disorders (Baker-Gordon syndrome)",
+        "synonyms": [
+         "Baker-Gordon syndrome",
+         "BAGOS",
+         "SYT1-associated neurodevelopmental disorder"
+        ],
+        "summary": "A developmental disorder caused by changes in SYT1, the calcium sensor that times neurotransmitter release. Features include low muscle tone, unusual eye moveme"
+       },
+       {
+        "id": "disease:SYT2",
+        "type": "disease",
+        "label": "SYT2-related presynaptic congenital myasthenic syndromes",
+        "synonyms": [
+         "CMS7A",
+         "CMS7B",
+         "congenital myasthenic syndrome 7",
+         "Lambert-Eaton-like syndrome (SYT2)",
+         "CMS7",
+         "SYT2 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SYT2",
+         "congenital myasthenic syndrome type 7"
+        ],
+        "summary": "Changes in SYT2 weaken the signal from nerve to muscle. Children and adults have fatigable weakness and reduced reflexes; several patients improved on 3,4-diami"
+       },
+       {
+        "id": "disease:VAMP2",
+        "type": "disease",
+        "label": "VAMP2-related disorders",
+        "synonyms": [
+         "NEDHAHM",
+         "synaptobrevin-2-related disorder"
+        ],
+        "summary": "Changes in VAMP2 (synaptobrevin-2) cause a neurodevelopmental disorder with low muscle tone from birth, intellectual disability and autistic features, often wit"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "destabilization",
+      "declared_type": "mechanism",
+      "sentence": "We find that at least five disease-linked missense mutations of Munc18-1 result in destabilization and aggregation of the mutant protein.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "aggregation",
+      "declared_type": "mechanism",
+      "sentence": "We find that at least five disease-linked missense mutations of Munc18-1 result in destabilization and aggregation of the mutant protein.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "depleting functional Munc18-1 levels beyond hemizygous levels",
+      "declared_type": "mechanism",
+      "sentence": "Aggregates of mutant Munc18-1 incorporate wild-type Munc18-1, depleting functional Munc18-1 levels beyond hemizygous levels.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "4-phenylbutyrate",
+      "declared_type": "therapy",
+      "sentence": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.",
+      "candidates": [
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:amifampridine",
+        "type": "therapy",
+        "label": "Amifampridine (3,4-diaminopyridine phosphate)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine phosphate"
+        ]
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aav9-slc6a1",
+        "type": "therapy",
+        "label": "AAV9.SLC6A1 gene therapy"
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:cap-002",
+        "type": "therapy",
+        "label": "CAP-002 (STXBP1 AAV gene therapy, Capsida)"
+       },
+       {
+        "id": "therapy:fenfluramine",
+        "type": "therapy",
+        "label": "Fenfluramine"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "varied encephalopathies",
+      "declared_type": "disease",
+      "sentence": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.",
+      "candidates": [
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:NSF",
+        "type": "disease",
+        "label": "NSF-related developmental and epileptic encephalopathy",
+        "synonyms": [
+         "DEE96"
+        ],
+        "summary": "A very rare early-infantile epileptic encephalopathy reported with de novo variants in NSF, the enzyme that recycles the SNARE machinery after each fusion event"
+       },
+       {
+        "id": "disease:SNAP25",
+        "type": "disease",
+        "label": "SNAP25-related disorders",
+        "synonyms": [
+         "CMS18",
+         "congenital myasthenic syndrome 18",
+         "SNAP25-DEE",
+         "DEE in SNAP25",
+         "SNAP25 Developmental and Epileptic Encephalopathy (SNAP25-DEE)",
+         "SNAP25 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SNAP25",
+         "congenital myasthenic syndrome type 18"
+        ],
+        "summary": "Changes in SNAP25 cause early-onset epilepsy with developmental delay; one reported variant instead causes a presynaptic congenital myasthenic syndrome with fat"
+       },
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:VAMP2",
+        "type": "disease",
+        "label": "VAMP2-related disorders",
+        "synonyms": [
+         "NEDHAHM",
+         "synaptobrevin-2-related disorder"
+        ],
+        "summary": "Changes in VAMP2 (synaptobrevin-2) cause a neurodevelopmental disorder with low muscle tone from birth, intellectual disability and autistic features, often wit"
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       },
+       {
+        "id": "disease:STX1A",
+        "type": "disease",
+        "label": "STX1A-related neurodevelopmental disorder",
+        "synonyms": [
+         "syntaxin-1A-related neurodevelopmental disorder"
+        ],
+        "summary": "A recently described disorder with intellectual disability, autism and epilepsy, reported in a small number of individuals with STX1A variants."
+       },
+       {
+        "id": "disease:SYT1",
+        "type": "disease",
+        "label": "SYT1-related disorders (Baker-Gordon syndrome)",
+        "synonyms": [
+         "Baker-Gordon syndrome",
+         "BAGOS",
+         "SYT1-associated neurodevelopmental disorder"
+        ],
+        "summary": "A developmental disorder caused by changes in SYT1, the calcium sensor that times neurotransmitter release. Features include low muscle tone, unusual eye moveme"
+       },
+       {
+        "id": "disease:SYT2",
+        "type": "disease",
+        "label": "SYT2-related presynaptic congenital myasthenic syndromes",
+        "synonyms": [
+         "CMS7A",
+         "CMS7B",
+         "congenital myasthenic syndrome 7",
+         "Lambert-Eaton-like syndrome (SYT2)",
+         "CMS7",
+         "SYT2 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SYT2",
+         "congenital myasthenic syndrome type 7"
+        ],
+        "summary": "Changes in SYT2 weaken the signal from nerve to muscle. Children and adults have fatigable weakness and reduced reflexes; several patients improved on 3,4-diami"
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "sorbitol",
+      "declared_type": "therapy",
+      "sentence": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.",
+      "candidates": [
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aav9-slc6a1",
+        "type": "therapy",
+        "label": "AAV9.SLC6A1 gene therapy"
+       },
+       {
+        "id": "therapy:amifampridine",
+        "type": "therapy",
+        "label": "Amifampridine (3,4-diaminopyridine phosphate)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine phosphate"
+        ]
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:cap-002",
+        "type": "therapy",
+        "label": "CAP-002 (STXBP1 AAV gene therapy, Capsida)"
+       },
+       {
+        "id": "therapy:fenfluramine",
+        "type": "therapy",
+        "label": "Fenfluramine"
+       }
+      ]
+     },
+     {
+      "mention_id": "m8",
+      "mention": "trehalose",
+      "declared_type": "therapy",
+      "sentence": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.",
+      "candidates": [
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aav9-slc6a1",
+        "type": "therapy",
+        "label": "AAV9.SLC6A1 gene therapy"
+       },
+       {
+        "id": "therapy:amifampridine",
+        "type": "therapy",
+        "label": "Amifampridine (3,4-diaminopyridine phosphate)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine phosphate"
+        ]
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:cap-002",
+        "type": "therapy",
+        "label": "CAP-002 (STXBP1 AAV gene therapy, Capsida)"
+       },
+       {
+        "id": "therapy:fenfluramine",
+        "type": "therapy",
+        "label": "Fenfluramine"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"disease:STXBP1\",\"match\":\"instance\",\"justification\":\"The sentence ties these epilepsies to mutations in Munc18-1, the STXBP1 protein.\"},{\"mention_id\":\"m2\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"same\",\"justification\":\"Destabilization of the mutant protein directly denotes protein destabilization.\"},{\"mention_id\":\"m3\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"Mutant protein aggregation is a specific manifestation covered by the destabilization/misfolding effect.\"},{\"mention_id\":\"m4\",\"node_id\":\"mech:dominant-negative\",\"match\":\"instance\",\"justification\":\"Mutant aggregates sequester wild-type protein, reducing function beyond loss of one allele.\"},{\"mention_id\":\"m5\",\"node_id\":\"therapy:4-phenylbutyrate\",\"match\":\"same\",\"justification\":\"4-Phenylbutyrate is explicitly named in this therapy node.\"},{\"mention_id\":\"m6\",\"node_id\":\"disease:STXBP1\",\"match\":\"instance\",\"justification\":\"The encephalopathies are contextually tied to the Munc18-1 mutations whose deficits are rescued.\"},{\"mention_id\":\"m7\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No candidate represents sorbitol; sharing chemical-chaperone activity does not establish identity.\"},{\"mention_id\":\"m8\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No candidate represents trehalose; it is distinct from the listed therapies.\"}]}"
+  }
+ ]
+}

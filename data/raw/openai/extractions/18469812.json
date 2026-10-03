@@ -1,0 +1,129 @@
+{
+ "pmid": "18469812",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:22:19.067Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_033071de55309695016ac147c0d69487d29d2d389294e2f046",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_033071de55309695016ac147c0de2487d2bb1cf0f1563cf7ef": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 255,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 255,
+     "output_tokens": 0
+    },
+    "rs_033071de55309695016ac147c2e9e087d28ef2cae303ecef9c": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 87
+    },
+    "msg_033071de55309695016ac147c693b487d2a572090eccb1053b": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 514
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 514
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1338,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 601,
+  "output_tokens_details": {
+   "reasoning_tokens": 87
+  },
+  "total_tokens": 1939
+ },
+ "latency_ms": 28609,
+ "input_sha1": "803b1b26f33f8a17",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/18469812.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"STXBP1 (MUNC18-1)\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"early infantile epileptic encephalopathy\",\n      \"object_type\": \"disease\",\n      \"quote\": \"De novo mutations in the gene encoding STXBP1 (MUNC18-1) cause early infantile epileptic encephalopathy.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"participates_in\",\n      \"object_mention\": \"synaptic vesicle release\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"STXBP1 (also known as MUNC18-1) is an evolutionally conserved neuronal Sec1/Munc-18 (SM) protein that is essential in synaptic vesicle release in several species.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1 missense mutations\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"thermolabile\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Circular dichroism melting experiments revealed that a mutant form of the protein was significantly thermolabile compared to wild type.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"in_vitro\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"EIEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"driven_by\",\n      \"object_mention\": \"haploinsufficiency of STXBP1\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"These findings suggest that haploinsufficiency of STXBP1 causes EIEE.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "STXBP1 (MUNC18-1)",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "early infantile epileptic encephalopathy",
+   "object_type": "disease",
+   "quote": "De novo mutations in the gene encoding STXBP1 (MUNC18-1) cause early infantile epileptic encephalopathy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "synaptic vesicle release",
+   "object_type": "mechanism",
+   "quote": "STXBP1 (also known as MUNC18-1) is an evolutionally conserved neuronal Sec1/Munc-18 (SM) protein that is essential in synaptic vesicle release in several species.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 missense mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "thermolabile",
+   "object_type": "mechanism",
+   "quote": "Circular dichroism melting experiments revealed that a mutant form of the protein was significantly thermolabile compared to wild type.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "EIEE",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "haploinsufficiency of STXBP1",
+   "object_type": "mechanism",
+   "quote": "These findings suggest that haploinsufficiency of STXBP1 causes EIEE.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

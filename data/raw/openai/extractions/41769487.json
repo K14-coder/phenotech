@@ -1,0 +1,249 @@
+{
+ "pmid": "41769487",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:50:05.270Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0c76d5da2c4a7abd016ac14e0f76d487d29ec45d5d55d27d5f",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0c76d5da2c4a7abd016ac14e0f81d887d28dd4d50b807a5b6e": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 426,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 426,
+     "output_tokens": 0
+    },
+    "rs_0c76d5da2c4a7abd016ac14e12e22487d2a0501eae416e580f": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 67
+    },
+    "msg_0c76d5da2c4a7abd016ac14e16a38887d2b1b4f98db7dcb9ab": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1791
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1791
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1509,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1858,
+  "output_tokens_details": {
+   "reasoning_tokens": 67
+  },
+  "total_tokens": 3367
+ },
+ "latency_ms": 79026,
+ "input_sha1": "ec3464b2c17ae3d7",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/NSF.efetch.xml",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"SNAP25\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"DEEs\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Heterozygous missense or loss-of-function variants in synaptosomal-associated protein 25 (SNAP25), a core component of the presynaptic soluble N-ethylmaleimide-sensitive factor attachment protein receptor (SNARE) complex, have been implicated in a spectrum of DEEs with variable neurological features.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"Developmental and epileptic encephalopathies (DEEs)\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"early-onset seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Developmental and epileptic encephalopathies (DEEs) of infancy and childhood are characterized by early-onset seizures and developmental impairment.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"Developmental and epileptic encephalopathies (DEEs)\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"developmental impairment\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Developmental and epileptic encephalopathies (DEEs) of infancy and childhood are characterized by early-onset seizures and developmental impairment.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"afebrile seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"The patient presented at 32 months with afebrile seizures since seven months of age, with frequent seizure clusters and status epilepticus.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"frequent seizure clusters\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"The patient presented at 32 months with afebrile seizures since seven months of age, with frequent seizure clusters and status epilepticus.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"status epilepticus\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"The patient presented at 32 months with afebrile seizures since seven months of age, with frequent seizure clusters and status epilepticus.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"moderate global developmental delay\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"He exhibited a moderate global developmental delay and recurrent, transient episodes of gait ataxia triggered by febrile illnesses, lasting up to one week and resolving without residual deficits.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"febrile illness-triggered episodic ataxia\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"This case broadens the genotypic and phenotypic spectrum of SNAP25-related DEE, highlighting febrile illness-triggered episodic ataxia as a previously unreported manifestation.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"mild microcephaly\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"clumsy gait\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"persistent ataxia\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": true\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"weakness between febrile episodes\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": true\n    },\n    {\n      \"subject_mention\": \"SNAP25-related DEE\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"bilateral frontal paroxysmal activity\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Brain magnetic resonance imaging (MRI) was normal, and the electroencephalogram (EEG) showed bilateral frontal paroxysmal activity.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"levetiracetam monotherapy\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"developed_for\",\n      \"object_mention\": \"SNAP25-related DEE\",\n      \"object_type\": \"disease\",\n      \"quote\": \"The patient achieved complete seizure control under levetiracetam monotherapy and continues to show moderate global developmental delay.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "SNAP25",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "DEEs",
+   "object_type": "disease",
+   "quote": "Heterozygous missense or loss-of-function variants in synaptosomal-associated protein 25 (SNAP25), a core component of the presynaptic soluble N-ethylmaleimide-sensitive factor attachment protein receptor (SNARE) complex, have been implicated in a spectrum of DEEs with variable neurological features.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "early-onset seizures",
+   "object_type": "phenotype",
+   "quote": "Developmental and epileptic encephalopathies (DEEs) of infancy and childhood are characterized by early-onset seizures and developmental impairment.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental impairment",
+   "object_type": "phenotype",
+   "quote": "Developmental and epileptic encephalopathies (DEEs) of infancy and childhood are characterized by early-onset seizures and developmental impairment.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "afebrile seizures",
+   "object_type": "phenotype",
+   "quote": "The patient presented at 32 months with afebrile seizures since seven months of age, with frequent seizure clusters and status epilepticus.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "frequent seizure clusters",
+   "object_type": "phenotype",
+   "quote": "The patient presented at 32 months with afebrile seizures since seven months of age, with frequent seizure clusters and status epilepticus.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "status epilepticus",
+   "object_type": "phenotype",
+   "quote": "The patient presented at 32 months with afebrile seizures since seven months of age, with frequent seizure clusters and status epilepticus.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "moderate global developmental delay",
+   "object_type": "phenotype",
+   "quote": "He exhibited a moderate global developmental delay and recurrent, transient episodes of gait ataxia triggered by febrile illnesses, lasting up to one week and resolving without residual deficits.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "febrile illness-triggered episodic ataxia",
+   "object_type": "phenotype",
+   "quote": "This case broadens the genotypic and phenotypic spectrum of SNAP25-related DEE, highlighting febrile illness-triggered episodic ataxia as a previously unreported manifestation.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "mild microcephaly",
+   "object_type": "phenotype",
+   "quote": "Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "clumsy gait",
+   "object_type": "phenotype",
+   "quote": "Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "persistent ataxia",
+   "object_type": "phenotype",
+   "quote": "Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "weakness between febrile episodes",
+   "object_type": "phenotype",
+   "quote": "Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "SNAP25-related DEE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "bilateral frontal paroxysmal activity",
+   "object_type": "phenotype",
+   "quote": "Brain magnetic resonance imaging (MRI) was normal, and the electroencephalogram (EEG) showed bilateral frontal paroxysmal activity.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "levetiracetam monotherapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SNAP25-related DEE",
+   "object_type": "disease",
+   "quote": "The patient achieved complete seizure control under levetiracetam monotherapy and continues to show moderate global developmental delay.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

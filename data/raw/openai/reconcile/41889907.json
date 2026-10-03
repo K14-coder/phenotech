@@ -1,0 +1,632 @@
+{
+ "pmid": "41889907",
+ "entries": {
+  "83bc35fd9fe716bc": {
+   "mention": "Synaptotagmin (SYT)",
+   "type": "gene",
+   "candidates": [
+    "gene:SYT1",
+    "gene:SYT2",
+    "gene:VAMP2",
+    "gene:CPLX1",
+    "gene:SNAP25",
+    "gene:STX1A",
+    "gene:STX1B",
+    "gene:STXBP1",
+    "gene:UNC13A",
+    "gene:NSF"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "The mention denotes the synaptotagmin family, not specifically SYT1 or SYT2.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:04.146Z"
+  },
+  "768b606f628dd97b": {
+   "mention": "SV fusion",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-fusion",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:protein-destabilization",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly"
+   ],
+   "node_id": "mech:synaptic-vesicle-fusion",
+   "match": "same",
+   "justification": "SV fusion abbreviates synaptic vesicle fusion in this synaptic context.",
+   "raw_node_id": "mech:synaptic-vesicle-fusion",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:04.146Z"
+  },
+  "feaba62336e64b9d": {
+   "mention": "SYT mutations in the C2B Ca2+ binding pocket",
+   "type": "variant_group",
+   "candidates": [
+    "vg:SYT1:whole-gene-deletion",
+    "vg:SYT1:contiguous-gene-deletion",
+    "vg:SYT2:contiguous-gene-deletion",
+    "vg:SYT1:truncating",
+    "vg:SYT2:truncating",
+    "vg:SYT1:missense",
+    "vg:SYT2:missense",
+    "vg:SYT1:splice",
+    "vg:SYT2:splice",
+    "vg:SLC6A1:whole-gene-deletion"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "The pocket mutations are not assigned to a specific SYT gene or variant class in the supplied context.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:04.146Z"
+  },
+  "74aad95d579f6fbb": {
+   "mention": "SYT mutations outside of the C2B Ca2+ binding pocket",
+   "type": "variant_group",
+   "candidates": [
+    "vg:SYT1:whole-gene-deletion",
+    "vg:SYT1:contiguous-gene-deletion",
+    "vg:SYT2:contiguous-gene-deletion",
+    "vg:SYT1:truncating",
+    "vg:SYT2:truncating",
+    "vg:SYT1:missense",
+    "vg:SYT2:missense",
+    "vg:SYT1:splice",
+    "vg:SYT2:splice",
+    "vg:SLC6A1:whole-gene-deletion"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "The mutations outside the pocket do not uniquely identify any gene-specific variant class.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:04.146Z"
+  },
+  "51c9956ec02429f1": {
+   "mention": "degradation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:dominant-negative",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "Mutation-induced protein degradation describes a specific manifestation of protein destabilization.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:04.146Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:04.146Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_00e8285b301f8d71016ac15031d57887d28bd08c8ae73b2957": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 3917,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 3917,
+       "output_tokens": 0
+      },
+      "msg_00e8285b301f8d71016ac1503411ec87d28c8d29a5737bd02d": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 2,
+         "output_tokens": 208
+        }
+       ],
+       "input_tokens": 2,
+       "output_tokens": 208
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 4261,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 208,
+    "output_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "total_tokens": 4469
+   },
+   "request_payload": {
+    "title": "Disease-causing mutations in Synaptotagmin can act via dominant-negative, gain-of-function or haploinsufficient mechanisms.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Synaptotagmin (SYT)",
+      "declared_type": "gene",
+      "sentence": "Members of the Synaptotagmin (SYT) family of synaptic vesicle (SV) proteins contain two Ca2+ binding C2 domains (C2A and C2B) that regulate the timing and probability of SV fusion.",
+      "candidates": [
+       {
+        "id": "gene:SYT1",
+        "type": "gene",
+        "label": "SYT1",
+        "synonyms": [
+         "synaptotagmin-1",
+         "Syt1",
+         "P65",
+         "SYT",
+         "SVP65",
+         "Synaptotagmin-1",
+         "Synaptotagmin I",
+         "SytI"
+        ],
+        "summary": "Calcium sensor that participates in triggering neurotransmitter release at the synapse (By similarity). May have a regulatory role in the membrane interactions "
+       },
+       {
+        "id": "gene:SYT2",
+        "type": "gene",
+        "label": "SYT2",
+        "synonyms": [
+         "synaptotagmin-2",
+         "Synaptotagmin-2",
+         "Synaptotagmin II",
+         "SytII"
+        ],
+        "summary": "Exhibits calcium-dependent phospholipid and inositol polyphosphate binding properties (By similarity). May have a regulatory role in the membrane interactions d"
+       },
+       {
+        "id": "gene:VAMP2",
+        "type": "gene",
+        "label": "VAMP2",
+        "synonyms": [
+         "synaptobrevin-2",
+         "VAMP-2",
+         "SYB2",
+         "Vesicle-associated membrane protein 2",
+         "Synaptobrevin-2"
+        ],
+        "summary": "SNAREs (soluble N-ethylmaleimide-sensitive factor-attachment protein receptors) are essential proteins for intracellular membrane fusion. SNAREs localized on op"
+       },
+       {
+        "id": "gene:CPLX1",
+        "type": "gene",
+        "label": "CPLX1",
+        "synonyms": [
+         "complexin-1",
+         "CPX-I",
+         "Complexin-1",
+         "Complexin I",
+         "CPX I",
+         "Synaphin-2"
+        ],
+        "summary": "Positively regulates a late step in exocytosis of various cytoplasmic vesicles, such as synaptic vesicles and other secretory vesicles (PubMed:21785414). Organi"
+       },
+       {
+        "id": "gene:SNAP25",
+        "type": "gene",
+        "label": "SNAP25",
+        "synonyms": [
+         "SNAP-25",
+         "synaptosomal-associated protein 25",
+         "RIC-4",
+         "RIC4",
+         "SEC9",
+         "bA416N4.2",
+         "dJ1068F16.2",
+         "SNAP"
+        ],
+        "summary": "t-SNARE involved in the molecular regulation of neurotransmitter release. May play an important role in the synaptic function of specific neuronal systems. Asso"
+       },
+       {
+        "id": "gene:STX1A",
+        "type": "gene",
+        "label": "STX1A",
+        "synonyms": [
+         "syntaxin-1A",
+         "HPC-1",
+         "p35-1",
+         "STX1",
+         "Syntaxin-1A",
+         "Neuron-specific antigen HPC-1"
+        ],
+        "summary": "Plays an essential role in hormone and neurotransmitter calcium-dependent exocytosis and endocytosis (PubMed:26635000). Part of the SNARE (Soluble NSF Attachmen"
+       },
+       {
+        "id": "gene:STX1B",
+        "type": "gene",
+        "label": "STX1B",
+        "synonyms": [
+         "syntaxin-1B",
+         "STX1B1",
+         "STX1B2",
+         "Syntaxin-1B",
+         "Syntaxin-1B1",
+         "Syntaxin-1B2"
+        ],
+        "summary": "Potentially involved in docking of synaptic vesicles at presynaptic active zones. May mediate Ca(2+)-regulation of exocytosis acrosomal reaction in sperm (By si"
+       },
+       {
+        "id": "gene:STXBP1",
+        "type": "gene",
+        "label": "STXBP1",
+        "synonyms": [
+         "Munc18-1",
+         "Munc18a",
+         "nSec1",
+         "rbSec1",
+         "hUNC18",
+         "MUNC18-1",
+         "UNC18",
+         "Syntaxin-binding protein 1"
+        ],
+        "summary": "Participates in the regulation of synaptic vesicle docking and fusion through interaction with GTP-binding proteins (By similarity). Essential for neurotransmis"
+       },
+       {
+        "id": "gene:UNC13A",
+        "type": "gene",
+        "label": "UNC13A",
+        "synonyms": [
+         "Munc13-1",
+         "KIAA1032",
+         "Protein unc-13 homolog A"
+        ],
+        "summary": "Plays a role in vesicle maturation during exocytosis as a target of the diacylglycerol second messenger pathway. Involved in neurotransmitter release by acting "
+       },
+       {
+        "id": "gene:NSF",
+        "type": "gene",
+        "label": "NSF",
+        "synonyms": [
+         "N-ethylmaleimide-sensitive factor",
+         "vesicle-fusing ATPase",
+         "SKD2",
+         "SEC18",
+         "Vesicle-fusing ATPase",
+         "N-ethylmaleimide-sensitive fusion protein",
+         "NEM-sensitive fusion protein",
+         "Vesicular-fusion protein NSF"
+        ],
+        "summary": "Required for vesicle-mediated transport. Catalyzes the fusion of transport vesicles within the Golgi cisternae. Is also required for transport from the endoplas"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "SV fusion",
+      "declared_type": "mechanism",
+      "sentence": "Members of the Synaptotagmin (SYT) family of synaptic vesicle (SV) proteins contain two Ca2+ binding C2 domains (C2A and C2B) that regulate the timing and probability of SV fusion.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "SYT mutations in the C2B Ca2+ binding pocket",
+      "declared_type": "variant_group",
+      "sentence": "Mutations in the C2B Ca2+ binding pocket were the most severe and acted in a dominant-negative manner to decrease evoked release.",
+      "candidates": [
+       {
+        "id": "vg:SYT1:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "SYT1: Single-gene deletions / duplications",
+        "summary": "1 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group."
+       },
+       {
+        "id": "vg:SYT1:contiguous-gene-deletion",
+        "type": "variant_group",
+        "label": "SYT1: Larger deletions spanning this gene and its neighbours",
+        "summary": "13 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group. These are copy-number changes covering more than one gene, so the share of"
+       },
+       {
+        "id": "vg:SYT2:contiguous-gene-deletion",
+        "type": "variant_group",
+        "label": "SYT2: Larger deletions spanning this gene and its neighbours",
+        "summary": "16 of 33 pathogenic or likely-pathogenic ClinVar records for SYT2 fall in this group. These are copy-number changes covering more than one gene, so the share of"
+       },
+       {
+        "id": "vg:SYT1:truncating",
+        "type": "variant_group",
+        "label": "SYT1: Truncating variants (nonsense, frameshift, start-lost)",
+        "summary": "1 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group."
+       },
+       {
+        "id": "vg:SYT2:truncating",
+        "type": "variant_group",
+        "label": "SYT2: Truncating variants (nonsense, frameshift, start-lost)",
+        "summary": "7 of 33 pathogenic or likely-pathogenic ClinVar records for SYT2 fall in this group."
+       },
+       {
+        "id": "vg:SYT1:missense",
+        "type": "variant_group",
+        "label": "SYT1: Missense variants (single amino-acid changes)",
+        "summary": "20 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group."
+       },
+       {
+        "id": "vg:SYT2:missense",
+        "type": "variant_group",
+        "label": "SYT2: Missense variants (single amino-acid changes)",
+        "summary": "5 of 33 pathogenic or likely-pathogenic ClinVar records for SYT2 fall in this group."
+       },
+       {
+        "id": "vg:SYT1:splice",
+        "type": "variant_group",
+        "label": "SYT1: Splice-site variants",
+        "summary": "1 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group."
+       },
+       {
+        "id": "vg:SYT2:splice",
+        "type": "variant_group",
+        "label": "SYT2: Splice-site variants",
+        "summary": "3 of 33 pathogenic or likely-pathogenic ClinVar records for SYT2 fall in this group."
+       },
+       {
+        "id": "vg:SLC6A1:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "SLC6A1: Single-gene deletions / duplications",
+        "summary": "9 of 243 pathogenic or likely-pathogenic ClinVar records for SLC6A1 fall in this group."
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "SYT mutations outside of the C2B Ca2+ binding pocket",
+      "declared_type": "variant_group",
+      "sentence": "Several mutations outside of this region acted through a gain-of-function mechanism to enhance neurotransmitter release, while others caused the protein to undergo degradation.",
+      "candidates": [
+       {
+        "id": "vg:SYT1:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "SYT1: Single-gene deletions / duplications",
+        "summary": "1 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group."
+       },
+       {
+        "id": "vg:SYT1:contiguous-gene-deletion",
+        "type": "variant_group",
+        "label": "SYT1: Larger deletions spanning this gene and its neighbours",
+        "summary": "13 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group. These are copy-number changes covering more than one gene, so the share of"
+       },
+       {
+        "id": "vg:SYT2:contiguous-gene-deletion",
+        "type": "variant_group",
+        "label": "SYT2: Larger deletions spanning this gene and its neighbours",
+        "summary": "16 of 33 pathogenic or likely-pathogenic ClinVar records for SYT2 fall in this group. These are copy-number changes covering more than one gene, so the share of"
+       },
+       {
+        "id": "vg:SYT1:truncating",
+        "type": "variant_group",
+        "label": "SYT1: Truncating variants (nonsense, frameshift, start-lost)",
+        "summary": "1 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group."
+       },
+       {
+        "id": "vg:SYT2:truncating",
+        "type": "variant_group",
+        "label": "SYT2: Truncating variants (nonsense, frameshift, start-lost)",
+        "summary": "7 of 33 pathogenic or likely-pathogenic ClinVar records for SYT2 fall in this group."
+       },
+       {
+        "id": "vg:SYT1:missense",
+        "type": "variant_group",
+        "label": "SYT1: Missense variants (single amino-acid changes)",
+        "summary": "20 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group."
+       },
+       {
+        "id": "vg:SYT2:missense",
+        "type": "variant_group",
+        "label": "SYT2: Missense variants (single amino-acid changes)",
+        "summary": "5 of 33 pathogenic or likely-pathogenic ClinVar records for SYT2 fall in this group."
+       },
+       {
+        "id": "vg:SYT1:splice",
+        "type": "variant_group",
+        "label": "SYT1: Splice-site variants",
+        "summary": "1 of 39 pathogenic or likely-pathogenic ClinVar records for SYT1 fall in this group."
+       },
+       {
+        "id": "vg:SYT2:splice",
+        "type": "variant_group",
+        "label": "SYT2: Splice-site variants",
+        "summary": "3 of 33 pathogenic or likely-pathogenic ClinVar records for SYT2 fall in this group."
+       },
+       {
+        "id": "vg:SLC6A1:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "SLC6A1: Single-gene deletions / duplications",
+        "summary": "9 of 243 pathogenic or likely-pathogenic ClinVar records for SLC6A1 fall in this group."
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "degradation",
+      "declared_type": "mechanism",
+      "sentence": "Several mutations outside of this region acted through a gain-of-function mechanism to enhance neurotransmitter release, while others caused the protein to undergo degradation.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"The mention denotes the synaptotagmin family, not specifically SYT1 or SYT2.\"},{\"mention_id\":\"m2\",\"node_id\":\"mech:synaptic-vesicle-fusion\",\"match\":\"same\",\"justification\":\"SV fusion abbreviates synaptic vesicle fusion in this synaptic context.\"},{\"mention_id\":\"m3\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"The pocket mutations are not assigned to a specific SYT gene or variant class in the supplied context.\"},{\"mention_id\":\"m4\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"The mutations outside the pocket do not uniquely identify any gene-specific variant class.\"},{\"mention_id\":\"m5\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"Mutation-induced protein degradation describes a specific manifestation of protein destabilization.\"}]}"
+  }
+ ]
+}

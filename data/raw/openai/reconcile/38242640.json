@@ -1,0 +1,687 @@
+{
+ "pmid": "38242640",
+ "entries": {
+  "5562871da8030e05": {
+   "mention": "severe epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010864",
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0032792"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "instance",
+   "justification": "Severe epilepsy describes a recurrent, severe seizure phenotype.",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:44.347Z"
+  },
+  "84d73831537eb9d2": {
+   "mention": "developmental delay",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0001249"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "Developmental delay is used here as the general clinical term for global developmental delay.",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:44.347Z"
+  },
+  "8180b6f2a9e0bdd3": {
+   "mention": "Doc2A and Doc2B aggregation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:dominant-negative",
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "Doc2A/B instability and aggregation describe a specific protein-destabilization mechanism.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:44.347Z"
+  },
+  "0b9eae04e58ed4f3": {
+   "mention": "overexpression of Doc2A/B",
+   "type": "therapy",
+   "candidates": [
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:unc13a-splice-switching-aso",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav9-slc6a1",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:amifampridine",
+    "therapy:cap-002"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "None of the candidates represents increasing Doc2A/B expression.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:44.347Z"
+  },
+  "7a978802249409fb": {
+   "mention": "synaptic dysfunction in heterozygous knockout neurons",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-priming",
+    "mech:synaptic-vesicle-fusion",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:ca-triggered-exocytosis",
+    "mech:protein-destabilization",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:haploinsufficiency",
+   "match": "instance",
+   "justification": "Synaptic dysfunction after loss of one STXBP1 copy describes insufficient function from the remaining copy.",
+   "raw_node_id": "mech:haploinsufficiency",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:44.347Z"
+  },
+  "9bee2b8cffe8db00": {
+   "mention": "synaptic dysfunction in heterozygous knockout neurons expressing G544D Munc18-1",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-priming",
+    "mech:synaptic-vesicle-fusion",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:ca-triggered-exocytosis",
+    "mech:protein-destabilization",
+    "mech:dominant-negative",
+    "mech:haploinsufficiency",
+    "mech:gaba-reuptake",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Dysfunction and failed rescue in G544D-expressing neurons do not establish any specific candidate mechanism.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:44.347Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:44.347Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_0f29745ef22481c9016ac14fdebb8887d29819e86bffa9413e": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 4031,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 4031,
+       "output_tokens": 0
+      },
+      "rs_0f29745ef22481c9016ac14fe099bc87d2be1e0b968079a03c": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 34
+      },
+      "msg_0f29745ef22481c9016ac14fe246dc87d2ba51e8fe07409761": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 256
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 256
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 4375,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 290,
+    "output_tokens_details": {
+     "reasoning_tokens": 34
+    },
+    "total_tokens": 4665
+   },
+   "request_payload": {
+    "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "severe epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "developmental delay",
+      "declared_type": "phenotype",
+      "sentence": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "Doc2A and Doc2B aggregation",
+      "declared_type": "mechanism",
+      "sentence": "Using biochemical and cell biological readouts on mouse brains, cultured mouse neurons and heterologous cells, we found that the synaptic Munc18-1 interactors Doc2A and Doc2B are unstable in the absence of Munc18-1 and aggregate in the presence of disease-causing Munc18-1 mutants.",
+      "candidates": [
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "overexpression of Doc2A/B",
+      "declared_type": "therapy",
+      "sentence": "We also demonstrated that overexpression of Doc2A/B partially rescues synaptic dysfunction in heterozygous knockout neurons but not heterozygous knockout neurons expressing G544D Munc18-1.",
+      "candidates": [
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav9-slc6a1",
+        "type": "therapy",
+        "label": "AAV9.SLC6A1 gene therapy"
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:amifampridine",
+        "type": "therapy",
+        "label": "Amifampridine (3,4-diaminopyridine phosphate)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine phosphate"
+        ]
+       },
+       {
+        "id": "therapy:cap-002",
+        "type": "therapy",
+        "label": "CAP-002 (STXBP1 AAV gene therapy, Capsida)"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "synaptic dysfunction in heterozygous knockout neurons",
+      "declared_type": "mechanism",
+      "sentence": "We also demonstrated that overexpression of Doc2A/B partially rescues synaptic dysfunction in heterozygous knockout neurons but not heterozygous knockout neurons expressing G544D Munc18-1.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "synaptic dysfunction in heterozygous knockout neurons expressing G544D Munc18-1",
+      "declared_type": "mechanism",
+      "sentence": "We also demonstrated that overexpression of Doc2A/B partially rescues synaptic dysfunction in heterozygous knockout neurons but not heterozygous knockout neurons expressing G544D Munc18-1.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"instance\",\"justification\":\"Severe epilepsy describes a recurrent, severe seizure phenotype.\"},{\"mention_id\":\"m2\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"Developmental delay is used here as the general clinical term for global developmental delay.\"},{\"mention_id\":\"m3\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"Doc2A/B instability and aggregation describe a specific protein-destabilization mechanism.\"},{\"mention_id\":\"m4\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"None of the candidates represents increasing Doc2A/B expression.\"},{\"mention_id\":\"m5\",\"node_id\":\"mech:haploinsufficiency\",\"match\":\"instance\",\"justification\":\"Synaptic dysfunction after loss of one STXBP1 copy describes insufficient function from the remaining copy.\"},{\"mention_id\":\"m6\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Dysfunction and failed rescue in G544D-expressing neurons do not establish any specific candidate mechanism.\"}]}"
+  }
+ ]
+}

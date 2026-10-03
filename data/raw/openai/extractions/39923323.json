@@ -1,0 +1,213 @@
+{
+ "pmid": "39923323",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:40:36.789Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0995b90065d7b3a1016ac14be98b4487d287fb3033664d5d68",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0995b90065d7b3a1016ac14be9d1f887d2a6c2228694f14f51": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 500,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 500,
+     "output_tokens": 0
+    },
+    "rs_0995b90065d7b3a1016ac14beba82887d2bed59343f2526c4f": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 94
+    },
+    "msg_0995b90065d7b3a1016ac14befb60c87d29b731eb7fa3da05d": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1191
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1191
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1583,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1285,
+  "output_tokens_details": {
+   "reasoning_tokens": 94
+  },
+  "total_tokens": 2868
+ },
+ "latency_ms": 61361,
+ "input_sha1": "67444731456d6441",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/39923323.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"epileptic syndromes\",\"object_type\":\"disease\",\"quote\":\"Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"SLC6A11\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"epileptic syndromes\",\"object_type\":\"disease\",\"quote\":\"Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"SLC6A1 deletions\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"Haploinsufficient\",\"object_type\":\"mechanism\",\"quote\":\"Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A11 deletions\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"Haploinsufficient\",\"object_type\":\"mechanism\",\"quote\":\"Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Ravicti\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"treatment-resistant epilepsy\",\"object_type\":\"disease\",\"quote\":\"Our previous work on SLC6A1 missense mutations prompted a clinical trial for Ravicti (NCT04937062), a glycerol formulation of 4-phenylbutyrate (PBA), for treatment-resistant epilepsy.\",\"study_type\":\"clinical_trial\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"3p- syndrome\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"Haploinsufficiency of SLC6A1 and SLC6A11\",\"object_type\":\"mechanism\",\"quote\":\"Haploinsufficiency of SLC6A1 and SLC6A11 contributes to the epileptic phenotypes observed in 3p- syndrome, marking this as the first study to biochemically characterize the functional impact of these deletions.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"3p- syndrome\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"epileptic phenotypes\",\"object_type\":\"phenotype\",\"quote\":\"Haploinsufficiency of SLC6A1 and SLC6A11 contributes to the epileptic phenotypes observed in 3p- syndrome, marking this as the first study to biochemically characterize the functional impact of these deletions.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-Phenylbutyrate\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"GABA uptake\",\"object_type\":\"mechanism\",\"quote\":\"4-Phenylbutyrate restored GABA uptake, mitigated seizures in SLC6A1 and SLC6A11 microdeletions/3p- syndrome: From cellular models to human patients.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"PBA\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"3p- syndrome\",\"object_type\":\"disease\",\"quote\":\"Treatment with PBA may provide therapeutic benefits, particularly for addressing seizures and motor deficits, though further exploration of PBA's long-term effects in patients with 3p- syndrome is warranted.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"3p- syndrome\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"seizures\",\"object_type\":\"phenotype\",\"quote\":\"Treatment with PBA may provide therapeutic benefits, particularly for addressing seizures and motor deficits, though further exploration of PBA's long-term effects in patients with 3p- syndrome is warranted.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"3p- syndrome\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"motor deficits\",\"object_type\":\"phenotype\",\"quote\":\"Treatment with PBA may provide therapeutic benefits, particularly for addressing seizures and motor deficits, though further exploration of PBA's long-term effects in patients with 3p- syndrome is warranted.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epileptic syndromes",
+   "object_type": "disease",
+   "quote": "Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epileptic syndromes",
+   "object_type": "disease",
+   "quote": "Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 deletions",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "Haploinsufficient",
+   "object_type": "mechanism",
+   "quote": "Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A11 deletions",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "Haploinsufficient",
+   "object_type": "mechanism",
+   "quote": "Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Ravicti",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "treatment-resistant epilepsy",
+   "object_type": "disease",
+   "quote": "Our previous work on SLC6A1 missense mutations prompted a clinical trial for Ravicti (NCT04937062), a glycerol formulation of 4-phenylbutyrate (PBA), for treatment-resistant epilepsy.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "3p- syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Haploinsufficiency of SLC6A1 and SLC6A11",
+   "object_type": "mechanism",
+   "quote": "Haploinsufficiency of SLC6A1 and SLC6A11 contributes to the epileptic phenotypes observed in 3p- syndrome, marking this as the first study to biochemically characterize the functional impact of these deletions.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "3p- syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epileptic phenotypes",
+   "object_type": "phenotype",
+   "quote": "Haploinsufficiency of SLC6A1 and SLC6A11 contributes to the epileptic phenotypes observed in 3p- syndrome, marking this as the first study to biochemically characterize the functional impact of these deletions.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-Phenylbutyrate",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GABA uptake",
+   "object_type": "mechanism",
+   "quote": "4-Phenylbutyrate restored GABA uptake, mitigated seizures in SLC6A1 and SLC6A11 microdeletions/3p- syndrome: From cellular models to human patients.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "3p- syndrome",
+   "object_type": "disease",
+   "quote": "Treatment with PBA may provide therapeutic benefits, particularly for addressing seizures and motor deficits, though further exploration of PBA's long-term effects in patients with 3p- syndrome is warranted.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "3p- syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "seizures",
+   "object_type": "phenotype",
+   "quote": "Treatment with PBA may provide therapeutic benefits, particularly for addressing seizures and motor deficits, though further exploration of PBA's long-term effects in patients with 3p- syndrome is warranted.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "3p- syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "motor deficits",
+   "object_type": "phenotype",
+   "quote": "Treatment with PBA may provide therapeutic benefits, particularly for addressing seizures and motor deficits, though further exploration of PBA's long-term effects in patients with 3p- syndrome is warranted.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

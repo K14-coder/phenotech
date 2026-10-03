@@ -1,0 +1,177 @@
+{
+ "pmid": "26519543",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:25:16.917Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0ffb34bbd9537636016ac1485e61c487d28ebd5ed08de7e91a",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0ffb34bbd9537636016ac1485e6a1487d28820e709af9b592d": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 292,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 292,
+     "output_tokens": 0
+    },
+    "rs_0ffb34bbd9537636016ac148626b5087d2b9c4990e61b6f3fd": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 100
+    },
+    "msg_0ffb34bbd9537636016ac14867ec9087d2bb68ccca0ca899cf": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 951
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 951
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1375,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1051,
+  "output_tokens_details": {
+   "reasoning_tokens": 100
+  },
+  "total_tokens": 2426
+ },
+ "latency_ms": 47827,
+ "input_sha1": "527e3c631f35b618",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/26519543.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SYT2\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"complex presynaptic congenital myasthenic syndrome\",\"object_type\":\"disease\",\"quote\":\"CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"complex presynaptic congenital myasthenic syndrome\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"motor neuropathy\",\"object_type\":\"phenotype\",\"quote\":\"CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"complex presynaptic congenital myasthenic syndrome\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"lower limb wasting\",\"object_type\":\"phenotype\",\"quote\":\"CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"complex presynaptic congenital myasthenic syndrome\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"foot deformities\",\"object_type\":\"phenotype\",\"quote\":\"CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"complex presynaptic congenital myasthenic syndrome\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"reflex potentiation following exercise\",\"object_type\":\"phenotype\",\"quote\":\"CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"complex presynaptic congenital myasthenic syndrome\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"uniquely prolonged period of posttetanic potentiation\",\"object_type\":\"phenotype\",\"quote\":\"CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT2\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"fatigable ocular and lower limb weakness\",\"object_type\":\"phenotype\",\"quote\":\"OBJECTIVES: To describe the clinical and electrophysiologic features of synaptotagmin II (SYT2) mutations, a novel neuromuscular syndrome characterized by foot deformities and fatigable ocular and lower limb weakness, and the response to modulators of acetylcholine release.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"3,4-diaminopyridine\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"neuromuscular transmission\",\"object_type\":\"mechanism\",\"quote\":\"Treatment with 3,4-diaminopyridine produced both a clinical benefit and an improvement in neuromuscular transmission.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SYT2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "complex presynaptic congenital myasthenic syndrome",
+   "object_type": "disease",
+   "quote": "CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "complex presynaptic congenital myasthenic syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "motor neuropathy",
+   "object_type": "phenotype",
+   "quote": "CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "complex presynaptic congenital myasthenic syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "lower limb wasting",
+   "object_type": "phenotype",
+   "quote": "CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "complex presynaptic congenital myasthenic syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "foot deformities",
+   "object_type": "phenotype",
+   "quote": "CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "complex presynaptic congenital myasthenic syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "reflex potentiation following exercise",
+   "object_type": "phenotype",
+   "quote": "CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "complex presynaptic congenital myasthenic syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "uniquely prolonged period of posttetanic potentiation",
+   "object_type": "phenotype",
+   "quote": "CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT2",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "fatigable ocular and lower limb weakness",
+   "object_type": "phenotype",
+   "quote": "OBJECTIVES: To describe the clinical and electrophysiologic features of synaptotagmin II (SYT2) mutations, a novel neuromuscular syndrome characterized by foot deformities and fatigable ocular and lower limb weakness, and the response to modulators of acetylcholine release.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "3,4-diaminopyridine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "neuromuscular transmission",
+   "object_type": "mechanism",
+   "quote": "Treatment with 3,4-diaminopyridine produced both a clinical benefit and an improvement in neuromuscular transmission.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

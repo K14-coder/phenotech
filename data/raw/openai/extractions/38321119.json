@@ -1,0 +1,141 @@
+{
+ "pmid": "38321119",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:38:42.888Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0f459576df26906e016ac14b98c5ec87d2a92ce76b1ae85095",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0f459576df26906e016ac14b98cc1087d2844e03ad9e5e0a30": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 444,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 444,
+     "output_tokens": 0
+    },
+    "rs_0f459576df26906e016ac14b9af3d887d2be0a7b22fb701b95": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 78
+    },
+    "msg_0f459576df26906e016ac14b9eb22c87d2a6c093bb490855e9": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 519
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 519
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1527,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 597,
+  "output_tokens_details": {
+   "reasoning_tokens": 78
+  },
+  "total_tokens": 2124
+ },
+ "latency_ms": 27258,
+ "input_sha1": "a33353893f17e8ac",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/38321119.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"Synaptotagmin-1 (Syt1)\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"action potential-induced synchronous neurotransmitter release\",\"object_type\":\"mechanism\",\"quote\":\"Synaptotagmin-1 (Syt1) is a presynaptic calcium sensor with two calcium binding domains, C2A and C2B, that triggers action potential-induced synchronous neurotransmitter release, while suppressing asynchronous and spontaneous release.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Synaptotagmin-1 (Syt1)\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"suppressing asynchronous and spontaneous release\",\"object_type\":\"mechanism\",\"quote\":\"Synaptotagmin-1 (Syt1) is a presynaptic calcium sensor with two calcium binding domains, C2A and C2B, that triggers action potential-induced synchronous neurotransmitter release, while suppressing asynchronous and spontaneous release.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"We identified a de novo missense mutation (P401L) in the C2B domain in a patient with developmental delay and autistic symptoms.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"autistic symptoms\",\"object_type\":\"phenotype\",\"quote\":\"We identified a de novo missense mutation (P401L) in the C2B domain in a patient with developmental delay and autistic symptoms.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Syt1PL\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"dominant-negative\",\"object_type\":\"mechanism\",\"quote\":\"Syt1PL acts in a dominant-negative manner supporting a causative role for the mutation in the heterozygous patient.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "Synaptotagmin-1 (Syt1)",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "action potential-induced synchronous neurotransmitter release",
+   "object_type": "mechanism",
+   "quote": "Synaptotagmin-1 (Syt1) is a presynaptic calcium sensor with two calcium binding domains, C2A and C2B, that triggers action potential-induced synchronous neurotransmitter release, while suppressing asynchronous and spontaneous release.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Synaptotagmin-1 (Syt1)",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "suppressing asynchronous and spontaneous release",
+   "object_type": "mechanism",
+   "quote": "Synaptotagmin-1 (Syt1) is a presynaptic calcium sensor with two calcium binding domains, C2A and C2B, that triggers action potential-induced synchronous neurotransmitter release, while suppressing asynchronous and spontaneous release.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "We identified a de novo missense mutation (P401L) in the C2B domain in a patient with developmental delay and autistic symptoms.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autistic symptoms",
+   "object_type": "phenotype",
+   "quote": "We identified a de novo missense mutation (P401L) in the C2B domain in a patient with developmental delay and autistic symptoms.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Syt1PL",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dominant-negative",
+   "object_type": "mechanism",
+   "quote": "Syt1PL acts in a dominant-negative manner supporting a causative role for the mutation in the heterozygous patient.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

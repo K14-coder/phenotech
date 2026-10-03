@@ -1,0 +1,129 @@
+{
+ "pmid": "26280581",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:24:58.146Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0a0bdd787d0fad6f016ac1485c8abc87d28eb23ab4a90847ef",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0a0bdd787d0fad6f016ac1485c935887d2a8948d90a8a76d44": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 294,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 294,
+     "output_tokens": 0
+    },
+    "rs_0a0bdd787d0fad6f016ac1485df3ac87d2af12c7dc7c6fd837": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 102
+    },
+    "msg_0a0bdd787d0fad6f016ac14862415c87d2bc1195b1343a3ba9": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 585
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 585
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1377,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 687,
+  "output_tokens_details": {
+   "reasoning_tokens": 102
+  },
+  "total_tokens": 2064
+ },
+ "latency_ms": 30770,
+ "input_sha1": "c904c86e768efbbb",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/26280581.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"STXBP1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"infantile early epileptic encephalopathy (Ohtahara syndrome)\",\"object_type\":\"disease\",\"quote\":\"Heterozygous mutations in the syntaxin-binding protein 1 (STXBP1) gene, which encodes Munc18-1, a core component of the presynaptic membrane-fusion machinery, cause infantile early epileptic encephalopathy (Ohtahara syndrome), but it is unclear how a partial loss of Munc18-1 produces this severe clinical presentation.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"presynaptic membrane-fusion\",\"object_type\":\"mechanism\",\"quote\":\"Heterozygous mutations in the syntaxin-binding protein 1 (STXBP1) gene, which encodes Munc18-1, a core component of the presynaptic membrane-fusion machinery, cause infantile early epileptic encephalopathy (Ohtahara syndrome), but it is unclear how a partial loss of Munc18-1 produces this severe clinical presentation.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"neurotransmitter release\",\"object_type\":\"mechanism\",\"quote\":\"Thus, our results confirm that using engineered human embryonic stem (ES) cells is a viable approach to studying disease-associated mutations in human neurons on a controlled genetic background, demonstrate that partial STXBP1 loss of function robustly impairs neurotransmitter release in human neurons, and suggest that heterozygous STXBP1 mutations cause early epileptic encephalopathy specifically through a presynaptic impairment.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"early epileptic encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"presynaptic impairment\",\"object_type\":\"mechanism\",\"quote\":\"Thus, our results confirm that using engineered human embryonic stem (ES) cells is a viable approach to studying disease-associated mutations in human neurons on a controlled genetic background, demonstrate that partial STXBP1 loss of function robustly impairs neurotransmitter release in human neurons, and suggest that heterozygous STXBP1 mutations cause early epileptic encephalopathy specifically through a presynaptic impairment.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"suggested\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "infantile early epileptic encephalopathy (Ohtahara syndrome)",
+   "object_type": "disease",
+   "quote": "Heterozygous mutations in the syntaxin-binding protein 1 (STXBP1) gene, which encodes Munc18-1, a core component of the presynaptic membrane-fusion machinery, cause infantile early epileptic encephalopathy (Ohtahara syndrome), but it is unclear how a partial loss of Munc18-1 produces this severe clinical presentation.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "presynaptic membrane-fusion",
+   "object_type": "mechanism",
+   "quote": "Heterozygous mutations in the syntaxin-binding protein 1 (STXBP1) gene, which encodes Munc18-1, a core component of the presynaptic membrane-fusion machinery, cause infantile early epileptic encephalopathy (Ohtahara syndrome), but it is unclear how a partial loss of Munc18-1 produces this severe clinical presentation.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "neurotransmitter release",
+   "object_type": "mechanism",
+   "quote": "Thus, our results confirm that using engineered human embryonic stem (ES) cells is a viable approach to studying disease-associated mutations in human neurons on a controlled genetic background, demonstrate that partial STXBP1 loss of function robustly impairs neurotransmitter release in human neurons, and suggest that heterozygous STXBP1 mutations cause early epileptic encephalopathy specifically through a presynaptic impairment.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "early epileptic encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "presynaptic impairment",
+   "object_type": "mechanism",
+   "quote": "Thus, our results confirm that using engineered human embryonic stem (ES) cells is a viable approach to studying disease-associated mutations in human neurons on a controlled genetic background, demonstrate that partial STXBP1 loss of function robustly impairs neurotransmitter release in human neurons, and suggest that heterozygous STXBP1 mutations cause early epileptic encephalopathy specifically through a presynaptic impairment.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

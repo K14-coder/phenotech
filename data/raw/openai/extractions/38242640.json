@@ -1,0 +1,201 @@
+{
+ "pmid": "38242640",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:38:42.785Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0424d009a91d27ad016ac14b79e92c87d2bf38ca32b6ddf235",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0424d009a91d27ad016ac14b79f81087d2bd67d7cdd35ed42f": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 410,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 410,
+     "output_tokens": 0
+    },
+    "rs_0424d009a91d27ad016ac14b7c047487d2a60e7ccc832c7412": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 152
+    },
+    "msg_0424d009a91d27ad016ac14b82428c87d2b40c02f2b2bba9d9": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1215
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1215
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1493,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1367,
+  "output_tokens_details": {
+   "reasoning_tokens": 152
+  },
+  "total_tokens": 2860
+ },
+ "latency_ms": 59057,
+ "input_sha1": "1f3c5b5fd818fc19",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/38242640.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"Munc18-1/STXBP1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"STXBP1 encephalopathies\",\"object_type\":\"disease\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1 encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"severe epilepsy\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1 encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"intellectual disability\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1 encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1 encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"ataxia\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1 encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"tremor\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1 encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"haploinsufficiency\",\"object_type\":\"mechanism\",\"quote\":\"Although haploinsufficiency is the prevailing disease mechanism, it remains unclear how the reduction in Munc18-1 levels causes synaptic dysfunction in disease as well as how haploinsufficiency alone can account for the significant heterogeneity among patients in terms of the presence, onset and severity of different symptoms.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"disease-causing Munc18-1 mutants\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"Doc2A and Doc2B aggregation\",\"object_type\":\"mechanism\",\"quote\":\"Using biochemical and cell biological readouts on mouse brains, cultured mouse neurons and heterologous cells, we found that the synaptic Munc18-1 interactors Doc2A and Doc2B are unstable in the absence of Munc18-1 and aggregate in the presence of disease-causing Munc18-1 mutants.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"overexpression of Doc2A/B\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"synaptic dysfunction in heterozygous knockout neurons\",\"object_type\":\"mechanism\",\"quote\":\"We also demonstrated that overexpression of Doc2A/B partially rescues synaptic dysfunction in heterozygous knockout neurons but not heterozygous knockout neurons expressing G544D Munc18-1.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"overexpression of Doc2A/B\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"synaptic dysfunction in heterozygous knockout neurons expressing G544D Munc18-1\",\"object_type\":\"mechanism\",\"quote\":\"We also demonstrated that overexpression of Doc2A/B partially rescues synaptic dysfunction in heterozygous knockout neurons but not heterozygous knockout neurons expressing G544D Munc18-1.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":true}]}",
+ "claims": [
+  {
+   "subject_mention": "Munc18-1/STXBP1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "STXBP1 encephalopathies",
+   "object_type": "disease",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe epilepsy",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intellectual disability",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "ataxia",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "tremor",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 encephalopathies",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "Although haploinsufficiency is the prevailing disease mechanism, it remains unclear how the reduction in Munc18-1 levels causes synaptic dysfunction in disease as well as how haploinsufficiency alone can account for the significant heterogeneity among patients in terms of the presence, onset and severity of different symptoms.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "disease-causing Munc18-1 mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "Doc2A and Doc2B aggregation",
+   "object_type": "mechanism",
+   "quote": "Using biochemical and cell biological readouts on mouse brains, cultured mouse neurons and heterologous cells, we found that the synaptic Munc18-1 interactors Doc2A and Doc2B are unstable in the absence of Munc18-1 and aggregate in the presence of disease-causing Munc18-1 mutants.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "overexpression of Doc2A/B",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "synaptic dysfunction in heterozygous knockout neurons",
+   "object_type": "mechanism",
+   "quote": "We also demonstrated that overexpression of Doc2A/B partially rescues synaptic dysfunction in heterozygous knockout neurons but not heterozygous knockout neurons expressing G544D Munc18-1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "overexpression of Doc2A/B",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "synaptic dysfunction in heterozygous knockout neurons expressing G544D Munc18-1",
+   "object_type": "mechanism",
+   "quote": "We also demonstrated that overexpression of Doc2A/B partially rescues synaptic dysfunction in heterozygous knockout neurons but not heterozygous knockout neurons expressing G544D Munc18-1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  }
+ ]
+}

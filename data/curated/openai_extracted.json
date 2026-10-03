@@ -1,0 +1,2842 @@
+{
+ "nodes": [
+  {
+   "id": "gene:SNAP25",
+   "type": "gene",
+   "label": "SNAP25",
+   "synonyms": [
+    "SNAP25B"
+   ]
+  },
+  {
+   "id": "mech:ca-triggered-exocytosis",
+   "type": "mechanism",
+   "label": "Ca2+-triggered neurotransmitter exocytosis",
+   "synonyms": [
+    "Ca(2+)-triggered exocytosis",
+    "activity-dependent neurotransmitter release"
+   ]
+  },
+  {
+   "id": "mech:gaba-reuptake",
+   "type": "mechanism",
+   "label": "GABA reuptake",
+   "synonyms": [
+    "γ-amino butyric acid uptake",
+    "GABA uptake"
+   ]
+  },
+  {
+   "id": "mech:gain-of-function",
+   "type": "mechanism",
+   "label": "Gain of function (the protein does too much)",
+   "synonyms": [
+    "gain of pathological function"
+   ]
+  },
+  {
+   "id": "mech:protein-destabilization",
+   "type": "mechanism",
+   "label": "Protein destabilization / misfolding",
+   "synonyms": [
+    "impaired protein stability",
+    "folding-deficient",
+    "protein folding deficits"
+   ]
+  },
+  {
+   "id": "mech:snare-complex-assembly",
+   "type": "mechanism",
+   "label": "SNARE complex assembly",
+   "synonyms": [
+    "SNARE complex formation"
+   ]
+  },
+  {
+   "id": "mech:synaptic-vesicle-fusion",
+   "type": "mechanism",
+   "label": "Synaptic vesicle fusion with the active zone membrane",
+   "synonyms": [
+    "synaptic vesicle release",
+    "exocytotic release of neurotransmitters",
+    "presynaptic membrane-fusion",
+    "fusion of synaptic vesicles",
+    "vesicular exocytosis",
+    "synaptic vesicle fusion",
+    "vesicle release",
+    "SV fusion"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0000729",
+   "type": "phenotype",
+   "label": "Autistic behavior",
+   "synonyms": [
+    "autistic features",
+    "autism",
+    "autistic tendencies",
+    "autism spectrum disorder",
+    "autistic symptoms"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0001250",
+   "type": "phenotype",
+   "label": "Seizure",
+   "synonyms": [
+    "epileptic seizures"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0001263",
+   "type": "phenotype",
+   "label": "Global developmental delay",
+   "synonyms": [
+    "developmental delay",
+    "developmental delays"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0002187",
+   "type": "phenotype",
+   "label": "Profound intellectual disability",
+   "synonyms": [
+    "profound cognitive impairment"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0002353",
+   "type": "phenotype",
+   "label": "EEG abnormality",
+   "synonyms": [
+    "EEG disturbance",
+    "electroencephalography abnormalities"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0003473",
+   "type": "phenotype",
+   "label": "Fatigable weakness",
+   "synonyms": [
+    "muscle fatigue"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0007359",
+   "type": "phenotype",
+   "label": "Focal-onset seizure",
+   "synonyms": [
+    "focal epilepsy"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0011170",
+   "type": "phenotype",
+   "label": "Generalized myoclonic-atonic seizure",
+   "synonyms": [
+    "myoclonic-atonic seizures"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0100660",
+   "type": "phenotype",
+   "label": "Dyskinesia",
+   "synonyms": [
+    "dyskinetic movements",
+    "hyperkinetic movements"
+   ]
+  },
+  {
+   "id": "phenotype:HP:0100704",
+   "type": "phenotype",
+   "label": "Cerebral visual impairment",
+   "synonyms": [
+    "central visual impairment",
+    "cortical visual impairment"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "id": "disease:CPLX1|has_phenotype|phenotype:HP:0001263",
+   "source": "disease:CPLX1",
+   "target": "phenotype:HP:0001263",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2017 case series (PMID:28422131) reports that global developmental delay is seen in people with CPLX1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:28422131",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28422131/",
+     "title": "Variants in CPLX1 in two families with autosomal-recessive severe infantile myoclonic epilepsy and ID.",
+     "year": 2017,
+     "quote": "All displayed marked developmental delay and migrating myoclonic epilepsy, and one showed a cerebellar cleft in addition.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "28422131#2"
+    ]
+   }
+  },
+  {
+   "id": "disease:CPLX1|has_phenotype|phenotype:HP:0032794",
+   "source": "disease:CPLX1",
+   "target": "phenotype:HP:0032794",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2017 case series (PMID:28422131) reports that myoclonic seizure is seen in people with CPLX1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:28422131",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28422131/",
+     "title": "Variants in CPLX1 in two families with autosomal-recessive severe infantile myoclonic epilepsy and ID.",
+     "year": 2017,
+     "quote": "All displayed marked developmental delay and migrating myoclonic epilepsy, and one showed a cerebellar cleft in addition.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "28422131#3"
+    ]
+   }
+  },
+  {
+   "id": "disease:SLC6A1|driven_by|mech:gaba-reuptake",
+   "source": "disease:SLC6A1",
+   "target": "mech:gaba-reuptake",
+   "type": "driven_by",
+   "label": "driven by",
+   "explanation": "A 2019 functional study (PMID:31176687) reports that SLC6A1-related disorders involve gaba reuptake. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:31176687",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31176687/",
+     "title": "A missense mutation in SLC6A1 associated with Lennox-Gastaut syndrome impairs GABA transporter 1 protein trafficking and function.",
+     "year": 2019,
+     "quote": "The mutation also caused reduced GABA uptake in addition to reduced protein expression, leading to reduced GABA clearance, and altered GABAergic signaling in the brain.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "cell"
+    ],
+    "claim_ids": [
+     "31176687#5"
+    ]
+   }
+  },
+  {
+   "id": "disease:SLC6A1|has_phenotype|phenotype:HP:0000750",
+   "source": "disease:SLC6A1",
+   "target": "phenotype:HP:0000750",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2022 cohort study (PMID:34006619) reports that delayed speech and language development is seen in people with SLC6A1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:34006619",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34006619/",
+     "title": "Neurodevelopmental phenotypes associated with pathogenic variants in SLC6A1.",
+     "year": 2022,
+     "quote": "The phenotype of individuals with pathogenic variants in SLC6A1 includes hypotonia, intellectual disability/developmental delay, language disorder/speech delay, autism spectrum disorder, sleep issues and seizures.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "34006619#3"
+    ]
+   }
+  },
+  {
+   "id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001250",
+   "source": "disease:SLC6A1",
+   "target": "phenotype:HP:0001250",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "5 papers (PMID:31176687, PMID:34006619, PMID:38781976, PMID:41385967, PMID:41893060) reports that seizure is seen in people with SLC6A1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:31176687",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31176687/",
+     "title": "A missense mutation in SLC6A1 associated with Lennox-Gastaut syndrome impairs GABA transporter 1 protein trafficking and function.",
+     "year": 2019,
+     "quote": "We identified a novel missense mutation in a patient with Lennox-Gastaut syndrome (LGS) characterized by severe seizures and developmental delay.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:34006619",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34006619/",
+     "title": "Neurodevelopmental phenotypes associated with pathogenic variants in SLC6A1.",
+     "year": 2022,
+     "quote": "The phenotype of individuals with pathogenic variants in SLC6A1 includes hypotonia, intellectual disability/developmental delay, language disorder/speech delay, autism spectrum disorder, sleep issues and seizures.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:38781976",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38781976/",
+     "title": "Haploinsufficiency underlies the neurodevelopmental consequences of SLC6A1 variants.",
+     "year": 2024,
+     "quote": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41385967",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41385967/",
+     "title": "4-Phenylbutyrate rescues neurobehavioral phenotypes in SLC6A1-related encephalopathy.",
+     "year": 2026,
+     "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41893060",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41893060/",
+     "title": "Delta Power in SLC6A1-Related Neurodevelopmental Disorder: Operationalizing Quantitative EEG Metrics for Biomarker Development.",
+     "year": 2026,
+     "quote": "INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "31176687#1",
+     "34006619#6",
+     "38781976#0",
+     "41385967#1",
+     "41893060#1"
+    ]
+   }
+  },
+  {
+   "id": "disease:SNAP25|has_phenotype|phenotype:HP:0001249",
+   "source": "disease:SNAP25",
+   "target": "phenotype:HP:0001249",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2021 cohort study (PMID:33299146) reports that intellectual disability is seen in people with SNAP25-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:33299146",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33299146/",
+     "title": "De novo variants in SNAP25 cause an early-onset developmental and epileptic encephalopathy.",
+     "year": 2021,
+     "quote": "Intellectual disability and early-onset epilepsy were identified as the core symptoms of SNAP25-DEE, with recurrent findings of movement disorders, cerebral visual impairment, and brain atrophy.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "33299146#1"
+    ]
+   }
+  },
+  {
+   "id": "disease:SNAP25|has_phenotype|phenotype:HP:0001250",
+   "source": "disease:SNAP25",
+   "target": "phenotype:HP:0001250",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2026 case report (PMID:41769487) reports that seizure is seen in people with SNAP25-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41769487",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41769487/",
+     "title": "Episodic Ataxia Associated With Synaptosomal-Associated Protein 25 (SNAP25) Variant: Beyond Epilepsy and Developmental Delay.",
+     "year": 2026,
+     "quote": "The patient presented at 32 months with afebrile seizures since seven months of age, with frequent seizure clusters and status epilepticus.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41769487#3",
+     "41769487#4"
+    ]
+   }
+  },
+  {
+   "id": "disease:SNAP25|has_phenotype|phenotype:HP:0100704",
+   "source": "disease:SNAP25",
+   "target": "phenotype:HP:0100704",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2021 cohort study (PMID:33299146) reports that cerebral visual impairment is seen in people with SNAP25-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:33299146",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33299146/",
+     "title": "De novo variants in SNAP25 cause an early-onset developmental and epileptic encephalopathy.",
+     "year": 2021,
+     "quote": "Intellectual disability and early-onset epilepsy were identified as the core symptoms of SNAP25-DEE, with recurrent findings of movement disorders, cerebral visual impairment, and brain atrophy.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "33299146#4"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1A|driven_by|mech:snare-complex-assembly",
+   "source": "disease:STX1A",
+   "target": "mech:snare-complex-assembly",
+   "type": "driven_by",
+   "label": "driven by",
+   "explanation": "A 2023 case series (PMID:36564538) proposes that STX1A-related neurodevelopmental disorder involve snare complex assembly. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.35,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:36564538",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36564538/",
+     "title": "Heterozygous and homozygous variants in STX1A cause a neurodevelopmental disorder with or without epilepsy.",
+     "year": 2023,
+     "quote": "We hypothesize the two phenotypic courses of affected individuals to be dependent on two different pathogenic mechanisms: (1) a weakened inhibitory STX1A-STXBP1 interaction due to missense variants results in an STX1A-related developmental epileptic encephalopathy and (2) a hampered SNARE complex formation due to inframe deletions causes an STX1A-related intellectual disability and autism phenotype.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "speculative",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "36564538#5"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1A|has_phenotype|phenotype:HP:0000729",
+   "source": "disease:STX1A",
+   "target": "phenotype:HP:0000729",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2023 case series (PMID:36564538) reports that autistic behavior is seen in people with STX1A-related neurodevelopmental disorder. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:36564538",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36564538/",
+     "title": "Heterozygous and homozygous variants in STX1A cause a neurodevelopmental disorder with or without epilepsy.",
+     "year": 2023,
+     "quote": "We assembled eight individuals harboring ultra rare variants in STX1A who present with a spectrum of intellectual disability, autism and epilepsy.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "36564538#2"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1A|has_phenotype|phenotype:HP:0001249",
+   "source": "disease:STX1A",
+   "target": "phenotype:HP:0001249",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2023 case series (PMID:36564538) reports that intellectual disability is seen in people with STX1A-related neurodevelopmental disorder. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:36564538",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36564538/",
+     "title": "Heterozygous and homozygous variants in STX1A cause a neurodevelopmental disorder with or without epilepsy.",
+     "year": 2023,
+     "quote": "We assembled eight individuals harboring ultra rare variants in STX1A who present with a spectrum of intellectual disability, autism and epilepsy.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "36564538#1"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1B|driven_by|mech:haploinsufficiency",
+   "source": "disease:STX1B",
+   "target": "mech:haploinsufficiency",
+   "type": "driven_by",
+   "label": "driven by",
+   "explanation": "2 papers (PMID:26818399, PMID:27648472) suggests that STX1B-related epilepsies involve haploinsufficiency (one working copy is not enough). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.45,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:26818399",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26818399/",
+     "title": "Haploinsufficiency of the STX1B gene is associated with myoclonic astatic epilepsy.",
+     "year": 2016,
+     "quote": "Haploinsufficiency of the STX1B gene is associated with myoclonic astatic epilepsy.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:27648472",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27648472/",
+     "title": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.",
+     "year": 2016,
+     "quote": "Inactivation of syntaxin 1B likely accounts for the patient's cortical hyperexcitability because mutations of syntaxin 1B cause febrile seizures with or without epilepsy, haploinsufficiency of the STX1B is associated with myoclonic astatic epilepsy, and antisense knockdown of stx1b in zebrafish larvae elicits epileptiform discharges.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "suggested",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "26818399#2",
+     "27648472#5"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1B|has_phenotype|phenotype:HP:0001249",
+   "source": "disease:STX1B",
+   "target": "phenotype:HP:0001249",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2016 case report (PMID:26818399) reports that intellectual disability is seen in people with STX1B-related epilepsies. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:26818399",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26818399/",
+     "title": "Haploinsufficiency of the STX1B gene is associated with myoclonic astatic epilepsy.",
+     "year": 2016,
+     "quote": "We describe an 18-year-old male patient with myoclonic astatic epilepsy (MAE), moderate to severe intellectual disability, behavioural problems, several dysmorphisms and a 1.2-Mb de novo deletion on chromosome 16p11.2.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "26818399#5"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1B|has_phenotype|phenotype:HP:0001250",
+   "source": "disease:STX1B",
+   "target": "phenotype:HP:0001250",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2019 cohort study (PMID:30737342) reports that seizure is seen in people with STX1B-related epilepsies. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30737342",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30737342/",
+     "title": "Clinical spectrum of STX1B-related epileptic disorders.",
+     "year": 2019,
+     "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "30737342#2",
+     "30737342#10"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1B|has_phenotype|phenotype:HP:0002197",
+   "source": "disease:STX1B",
+   "target": "phenotype:HP:0002197",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2019 cohort study (PMID:30737342) reports that generalized-onset seizure is seen in people with STX1B-related epilepsies. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30737342",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30737342/",
+     "title": "Clinical spectrum of STX1B-related epileptic disorders.",
+     "year": 2019,
+     "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "30737342#7"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1B|has_phenotype|phenotype:HP:0007359",
+   "source": "disease:STX1B",
+   "target": "phenotype:HP:0007359",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "2 papers (PMID:30737342, PMID:33677401) reports that focal-onset seizure is seen in people with STX1B-related epilepsies. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30737342",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30737342/",
+     "title": "Clinical spectrum of STX1B-related epileptic disorders.",
+     "year": 2019,
+     "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:33677401",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33677401/",
+     "title": "Delineation of epileptic and neurodevelopmental phenotypes associated with variants in STX1B.",
+     "year": 2021,
+     "quote": "All patients displayed epileptic phenotypes, including epileptiform discharges on electroencephalography (without apparent seizures), developmental and epileptic encephalopathy and focal epilepsy.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "30737342#13",
+     "33677401#3"
+    ]
+   }
+  },
+  {
+   "id": "disease:STX1B|has_phenotype|phenotype:HP:0200134",
+   "source": "disease:STX1B",
+   "target": "phenotype:HP:0200134",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2021 case series (PMID:33677401) reports that epileptic encephalopathy is seen in people with STX1B-related epilepsies. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:33677401",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33677401/",
+     "title": "Delineation of epileptic and neurodevelopmental phenotypes associated with variants in STX1B.",
+     "year": 2021,
+     "quote": "All patients displayed epileptic phenotypes, including epileptiform discharges on electroencephalography (without apparent seizures), developmental and epileptic encephalopathy and focal epilepsy.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "33677401#2"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|driven_by|mech:loss-of-function",
+   "source": "disease:STXBP1",
+   "target": "mech:loss-of-function",
+   "type": "driven_by",
+   "label": "driven by",
+   "explanation": "A 2026 animal-model study (PMID:41883162) reports that STXBP1-related disorders involve loss of function. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41883162",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41883162/",
+     "title": "Identification of a therapeutic threshold for AAV-STXBP1 gene therapy in a rodent model of STXBP1 developmental and epileptic encephalopathy.",
+     "year": 2026,
+     "quote": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) is a debilitating genetic epilepsy disorder caused by heterozygous loss-of-function mutations in the STXBP1 gene.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41883162#1",
+     "41883162#2"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|driven_by|mech:synaptic-vesicle-fusion",
+   "source": "disease:STXBP1",
+   "target": "mech:synaptic-vesicle-fusion",
+   "type": "driven_by",
+   "label": "driven by",
+   "explanation": "A 2026 animal-model study (PMID:41714804) reports that STXBP1-related disorders involve synaptic vesicle fusion with the active zone membrane. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41714804",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41714804/",
+     "title": "Crotonylation of STXBP1 exacerbates seizure susceptibility by impairing GABAergic synaptic transmission.",
+     "year": 2026,
+     "quote": "In Stxbp1K98Q knock-in mice, the upregulation of STXBP1 K98cr reduces the binding with syntaxin-1B(STX1B), leading to a decreased assembly of soluble NSF attachment protein receptors (SNAREs) in presynaptic active zone and subsequent inhibition vesicle release, thereby promoting epilepsy formation.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "mouse"
+    ],
+    "claim_ids": [
+     "41714804#2"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|has_phenotype|phenotype:HP:0000729",
+   "source": "disease:STXBP1",
+   "target": "phenotype:HP:0000729",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2018 functional study (PMID:29538625) reports that autistic behavior is seen in people with STXBP1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:29538625",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29538625/",
+     "title": "Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy.",
+     "year": 2018,
+     "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "29538625#4"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|has_phenotype|phenotype:HP:0001249",
+   "source": "disease:STXBP1",
+   "target": "phenotype:HP:0001249",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "6 papers (PMID:29538625, PMID:31855252, PMID:33332765, PMID:38242640, PMID:42182245, PMID:42268630) reports that intellectual disability is seen in people with STXBP1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:29538625",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29538625/",
+     "title": "Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy.",
+     "year": 2018,
+     "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:31855252",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31855252/",
+     "title": "Homozygous STXBP1 variant causes encephalopathy and gain-of-function in synaptic transmission.",
+     "year": 2020,
+     "quote": "Heterozygous mutations in the STXBP1 gene encoding the presynaptic protein MUNC18-1 cause STXBP1 encephalopathy, characterized by developmental delay, intellectual disability and epilepsy.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:33332765",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33332765/",
+     "title": "Targeted stabilization of Munc18-1 function via pharmacological chaperones.",
+     "year": 2021,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:38242640",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38242640/",
+     "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
+     "year": 2024,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:42182245",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42182245/",
+     "title": "Virtual screening and zebrafish phenotype-based evaluation argues against repurposing 4-phenylbutyrate for STXBP1-related disorders.",
+     "year": 2026,
+     "quote": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+     "kind": "publication",
+     "study_type": "review",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:42268630",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42268630/",
+     "title": "Virtual Screening and Zebrafish Phenotype-Based Evaluation Argues Against Repurposing 4-Phenylbutyrate for STXBP1-Related Disorders.",
+     "year": 2026,
+     "quote": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+     "kind": "publication",
+     "study_type": "review",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "29538625#3",
+     "31855252#2",
+     "33332765#1",
+     "38242640#2",
+     "42182245#1",
+     "42268630#1"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|has_phenotype|phenotype:HP:0001250",
+   "source": "disease:STXBP1",
+   "target": "phenotype:HP:0001250",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "3 papers (PMID:35190816, PMID:38242640, PMID:42182245) reports that seizure is seen in people with STXBP1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:35190816",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35190816/",
+     "title": "Assessing the landscape of STXBP1-related disorders in 534 individuals.",
+     "year": 2022,
+     "quote": "The overall phenotypic landscape in STXBP1-related disorders is characterized by neurodevelopmental abnormalities in 95% and seizures in 89% of individuals, including focal-onset seizures as the most common seizure type (47%).",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:38242640",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38242640/",
+     "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
+     "year": 2024,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:42182245",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42182245/",
+     "title": "Virtual screening and zebrafish phenotype-based evaluation argues against repurposing 4-phenylbutyrate for STXBP1-related disorders.",
+     "year": 2026,
+     "quote": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+     "kind": "publication",
+     "study_type": "review",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "35190816#2",
+     "35190816#4",
+     "35190816#5",
+     "38242640#1",
+     "42182245#0"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|has_phenotype|phenotype:HP:0001251",
+   "source": "disease:STXBP1",
+   "target": "phenotype:HP:0001251",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "2 papers (PMID:33332765, PMID:38242640) reports that ataxia is seen in people with STXBP1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:33332765",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33332765/",
+     "title": "Targeted stabilization of Munc18-1 function via pharmacological chaperones.",
+     "year": 2021,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:38242640",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38242640/",
+     "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
+     "year": 2024,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "33332765#3",
+     "38242640#4"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|has_phenotype|phenotype:HP:0001263",
+   "source": "disease:STXBP1",
+   "target": "phenotype:HP:0001263",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "5 papers (PMID:29538625, PMID:31855252, PMID:33332765, PMID:38242640, PMID:42182245) reports that global developmental delay is seen in people with STXBP1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:29538625",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29538625/",
+     "title": "Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy.",
+     "year": 2018,
+     "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:31855252",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31855252/",
+     "title": "Homozygous STXBP1 variant causes encephalopathy and gain-of-function in synaptic transmission.",
+     "year": 2020,
+     "quote": "Heterozygous mutations in the STXBP1 gene encoding the presynaptic protein MUNC18-1 cause STXBP1 encephalopathy, characterized by developmental delay, intellectual disability and epilepsy.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:33332765",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33332765/",
+     "title": "Targeted stabilization of Munc18-1 function via pharmacological chaperones.",
+     "year": 2021,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:38242640",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38242640/",
+     "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
+     "year": 2024,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:42182245",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42182245/",
+     "title": "Virtual screening and zebrafish phenotype-based evaluation argues against repurposing 4-phenylbutyrate for STXBP1-related disorders.",
+     "year": 2026,
+     "quote": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+     "kind": "publication",
+     "study_type": "review",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "29538625#2",
+     "31855252#1",
+     "33332765#2",
+     "38242640#3",
+     "42182245#2"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|has_phenotype|phenotype:HP:0001337",
+   "source": "disease:STXBP1",
+   "target": "phenotype:HP:0001337",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "2 papers (PMID:33332765, PMID:38242640) reports that tremor is seen in people with STXBP1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:33332765",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33332765/",
+     "title": "Targeted stabilization of Munc18-1 function via pharmacological chaperones.",
+     "year": 2021,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:38242640",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38242640/",
+     "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
+     "year": 2024,
+     "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "33332765#4",
+     "38242640#5"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|has_phenotype|phenotype:HP:0007359",
+   "source": "disease:STXBP1",
+   "target": "phenotype:HP:0007359",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2022 cohort study (PMID:35190816) reports that focal-onset seizure is seen in people with STXBP1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:35190816",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35190816/",
+     "title": "Assessing the landscape of STXBP1-related disorders in 534 individuals.",
+     "year": 2022,
+     "quote": "The overall phenotypic landscape in STXBP1-related disorders is characterized by neurodevelopmental abnormalities in 95% and seizures in 89% of individuals, including focal-onset seizures as the most common seizure type (47%).",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "35190816#3"
+    ]
+   }
+  },
+  {
+   "id": "disease:STXBP1|has_phenotype|phenotype:HP:0100704",
+   "source": "disease:STXBP1",
+   "target": "phenotype:HP:0100704",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2026 cohort study (PMID:40767165) reports that cerebral visual impairment is seen in people with STXBP1-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:40767165",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40767165/",
+     "title": "Cortical Visual Impairment Across a Range of Neurodevelopmental Disorders: Clinical Characterization, Diagnostic Tool Evaluation, and Association with Developmental Outcomes.",
+     "year": 2026,
+     "quote": "A retrospective chart review of 85 patients found cortical visual impairment in 44%, most commonly in 8p (54%) and STXBP1 (50%); no cases were seen in SLC6A1.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "40767165#1"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|driven_by|mech:ca-triggered-exocytosis",
+   "source": "disease:SYT1",
+   "target": "mech:ca-triggered-exocytosis",
+   "type": "driven_by",
+   "label": "driven by",
+   "explanation": "A 2024 functional study (PMID:39481209) suggests that SYT1-related disorders (Baker-Gordon syndrome) involve ca2+-triggered neurotransmitter exocytosis. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.45,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:39481209",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39481209/",
+     "title": "Correlation between evoked neurotransmitter release and adaptive functions in SYT1-associated neurodevelopmental disorder.",
+     "year": 2024,
+     "quote": "Together, this suggests that there is a genotype-function-phenotype relationship in SYT1-associated neurodevelopmental disorder, centring impaired evoked neurotransmitter release as a common pathogenic driver.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "suggested",
+    "species": [
+     "cell"
+    ],
+    "claim_ids": [
+     "39481209#9"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0000729",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0000729",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2024 case report (PMID:38321119) reports that autistic behavior is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:38321119",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38321119/",
+     "title": "A de novo missense mutation in synaptotagmin-1 associated with neurodevelopmental disorder desynchronizes neurotransmitter release.",
+     "year": 2024,
+     "quote": "We identified a de novo missense mutation (P401L) in the C2B domain in a patient with developmental delay and autistic symptoms.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "38321119#3"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0001249",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0001249",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2024 case series (PMID:39481209) reports that intellectual disability is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:39481209",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39481209/",
+     "title": "Correlation between evoked neurotransmitter release and adaptive functions in SYT1-associated neurodevelopmental disorder.",
+     "year": 2024,
+     "quote": "Pathogenic missense variants in the essential synaptic vesicle protein synaptotagmin-1 (SYT1) cause a neurodevelopmental disorder characterised by motor delay and intellectual disability, hyperkinetic movement disorder, episodic agitation, and visual impairments.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "39481209#2"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0001252",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0001252",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "3 papers (PMID:30107533, PMID:41332143, PMID:41756855) reports that hypotonia is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30107533",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30107533/",
+     "title": "SYT1-associated neurodevelopmental disorder: a case series.",
+     "year": 2018,
+     "quote": "Phenotypic features include infantile hypotonia, congenital ophthalmic abnormalities, childhood-onset hyperkinetic movement disorders, motor stereotypies, and developmental delay varying in severity from moderate to profound.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41332143",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41332143/",
+     "title": "Age-Related Characteristics of SYT1-Associated Neurodevelopmental Disorder.",
+     "year": 2026,
+     "quote": "Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41756855",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41756855/",
+     "title": "Regulation of spontaneous neurotransmission and homeostatic synaptic plasticity by synaptotagmin-1 disease variants at the SNARE primary interface.",
+     "year": 2026,
+     "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "30107533#2",
+     "41332143#0",
+     "41756855#3"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0001263",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0001263",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "3 papers (PMID:30107533, PMID:38321119, PMID:41756855) reports that global developmental delay is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30107533",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30107533/",
+     "title": "SYT1-associated neurodevelopmental disorder: a case series.",
+     "year": 2018,
+     "quote": "Phenotypic features include infantile hypotonia, congenital ophthalmic abnormalities, childhood-onset hyperkinetic movement disorders, motor stereotypies, and developmental delay varying in severity from moderate to profound.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:38321119",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38321119/",
+     "title": "A de novo missense mutation in synaptotagmin-1 associated with neurodevelopmental disorder desynchronizes neurotransmitter release.",
+     "year": 2024,
+     "quote": "We identified a de novo missense mutation (P401L) in the C2B domain in a patient with developmental delay and autistic symptoms.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41756855",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41756855/",
+     "title": "Regulation of spontaneous neurotransmission and homeostatic synaptic plasticity by synaptotagmin-1 disease variants at the SNARE primary interface.",
+     "year": 2026,
+     "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "30107533#6",
+     "38321119#2",
+     "41756855#1"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0001344",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0001344",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2026 functional study (PMID:41756855) reports that absent speech is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41756855",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41756855/",
+     "title": "Regulation of spontaneous neurotransmission and homeostatic synaptic plasticity by synaptotagmin-1 disease variants at the SNARE primary interface.",
+     "year": 2026,
+     "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41756855#5"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0002187",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0002187",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2015 case report (PMID:25705886) reports that profound intellectual disability is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25705886",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25705886/",
+     "title": "Identification of a human synaptotagmin-1 mutation that perturbs synaptic vesicle cycling.",
+     "year": 2015,
+     "quote": "The individual harboring this variant presented with an early onset dyskinetic movement disorder, severe motor delay, and profound cognitive impairment.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "25705886#5"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0002353",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0002353",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "3 papers (PMID:30107533, PMID:41332143, PMID:41756855) reports that eeg abnormality is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30107533",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30107533/",
+     "title": "SYT1-associated neurodevelopmental disorder: a case series.",
+     "year": 2018,
+     "quote": "Structural MRI is unremarkable but EEG disturbance is universal, characterized by intermittent low frequency high amplitude oscillations.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41332143",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41332143/",
+     "title": "Age-Related Characteristics of SYT1-Associated Neurodevelopmental Disorder.",
+     "year": 2026,
+     "quote": "MRI abnormalities were identified in 45% of individuals, while EEG abnormalities were present in 93%.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41756855",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41756855/",
+     "title": "Regulation of spontaneous neurotransmission and homeostatic synaptic plasticity by synaptotagmin-1 disease variants at the SNARE primary interface.",
+     "year": 2026,
+     "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "30107533#11",
+     "41332143#6",
+     "41332143#7",
+     "41332143#8",
+     "41756855#6"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0011203",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0011203",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "2 papers (PMID:25705886, PMID:30107533) reports that eeg with abnormally slow frequencies is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25705886",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25705886/",
+     "title": "Identification of a human synaptotagmin-1 mutation that perturbs synaptic vesicle cycling.",
+     "year": 2015,
+     "quote": "Structural MRI was normal, but EEG showed extensive neurophysiological disturbances that included the unusual features of low-frequency oscillatory bursts and enhanced paired-pulse depression of visual evoked potentials.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:30107533",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30107533/",
+     "title": "SYT1-associated neurodevelopmental disorder: a case series.",
+     "year": 2018,
+     "quote": "Structural MRI is unremarkable but EEG disturbance is universal, characterized by intermittent low frequency high amplitude oscillations.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "25705886#6",
+     "30107533#12"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT1|has_phenotype|phenotype:HP:0100716",
+   "source": "disease:SYT1",
+   "target": "phenotype:HP:0100716",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2026 cohort study (PMID:41332143) reports that self-injurious behavior is seen in people with SYT1-related disorders (Baker-Gordon syndrome). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41332143",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41332143/",
+     "title": "Age-Related Characteristics of SYT1-Associated Neurodevelopmental Disorder.",
+     "year": 2026,
+     "quote": "Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41332143#3"
+    ]
+   }
+  },
+  {
+   "id": "disease:SYT2|has_phenotype|phenotype:HP:0003473",
+   "source": "disease:SYT2",
+   "target": "phenotype:HP:0003473",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "2 papers (PMID:26519543, PMID:32250532) reports that fatigable weakness is seen in people with SYT2-related presynaptic congenital myasthenic syndromes. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:26519543",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26519543/",
+     "title": "Electrophysiologic features of SYT2 mutations causing a treatable neuromuscular syndrome.",
+     "year": 2015,
+     "quote": "OBJECTIVES: To describe the clinical and electrophysiologic features of synaptotagmin II (SYT2) mutations, a novel neuromuscular syndrome characterized by foot deformities and fatigable ocular and lower limb weakness, and the response to modulators of acetylcholine release.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:32250532",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32250532/",
+     "title": "Recessive congenital myasthenic syndrome caused by a homozygous mutation in SYT2 altering a highly conserved C-terminal amino acid sequence.",
+     "year": 2020,
+     "quote": "3,4 diaminopyridine and pyridostigmine were effective to ameliorate muscle fatigue, but albuterol was ineffective.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "26519543#6",
+     "32250532#8"
+    ]
+   }
+  },
+  {
+   "id": "disease:UNC13A|has_phenotype|phenotype:HP:0001249",
+   "source": "disease:UNC13A",
+   "target": "phenotype:HP:0001249",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2025 case series (PMID:41125872) reports that intellectual disability is seen in people with UNC13A-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41125872",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41125872/",
+     "title": "Pathogenic UNC13A variants cause a neurodevelopmental syndrome by impairing synaptic function.",
+     "year": 2025,
+     "quote": "The syndrome presents with variable degrees of developmental delay and intellectual disability, seizures of different types, tremor and dyskinetic movements and, in some cases, death in early childhood.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41125872#5"
+    ]
+   }
+  },
+  {
+   "id": "disease:UNC13A|has_phenotype|phenotype:HP:0001250",
+   "source": "disease:UNC13A",
+   "target": "phenotype:HP:0001250",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2025 case series (PMID:41125872) reports that seizure is seen in people with UNC13A-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41125872",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41125872/",
+     "title": "Pathogenic UNC13A variants cause a neurodevelopmental syndrome by impairing synaptic function.",
+     "year": 2025,
+     "quote": "The syndrome presents with variable degrees of developmental delay and intellectual disability, seizures of different types, tremor and dyskinetic movements and, in some cases, death in early childhood.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41125872#6"
+    ]
+   }
+  },
+  {
+   "id": "disease:UNC13A|has_phenotype|phenotype:HP:0001263",
+   "source": "disease:UNC13A",
+   "target": "phenotype:HP:0001263",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2025 case series (PMID:41125872) reports that global developmental delay is seen in people with UNC13A-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41125872",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41125872/",
+     "title": "Pathogenic UNC13A variants cause a neurodevelopmental syndrome by impairing synaptic function.",
+     "year": 2025,
+     "quote": "The syndrome presents with variable degrees of developmental delay and intellectual disability, seizures of different types, tremor and dyskinetic movements and, in some cases, death in early childhood.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41125872#4"
+    ]
+   }
+  },
+  {
+   "id": "disease:UNC13A|has_phenotype|phenotype:HP:0001337",
+   "source": "disease:UNC13A",
+   "target": "phenotype:HP:0001337",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2025 case series (PMID:41125872) reports that tremor is seen in people with UNC13A-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41125872",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41125872/",
+     "title": "Pathogenic UNC13A variants cause a neurodevelopmental syndrome by impairing synaptic function.",
+     "year": 2025,
+     "quote": "The syndrome presents with variable degrees of developmental delay and intellectual disability, seizures of different types, tremor and dyskinetic movements and, in some cases, death in early childhood.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41125872#7"
+    ]
+   }
+  },
+  {
+   "id": "disease:UNC13A|has_phenotype|phenotype:HP:0100660",
+   "source": "disease:UNC13A",
+   "target": "phenotype:HP:0100660",
+   "type": "has_phenotype",
+   "label": "has feature",
+   "explanation": "A 2025 case series (PMID:41125872) reports that dyskinesia is seen in people with UNC13A-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:41125872",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41125872/",
+     "title": "Pathogenic UNC13A variants cause a neurodevelopmental syndrome by impairing synaptic function.",
+     "year": 2025,
+     "quote": "The syndrome presents with variable degrees of developmental delay and intellectual disability, seizures of different types, tremor and dyskinetic movements and, in some cases, death in early childhood.",
+     "kind": "publication",
+     "study_type": "case_series",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "41125872#8"
+    ]
+   }
+  },
+  {
+   "id": "gene:STX1A|participates_in|mech:synaptic-vesicle-fusion",
+   "source": "gene:STX1A",
+   "target": "mech:synaptic-vesicle-fusion",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "A 2019 functional study (PMID:30929742) reports that the STX1A protein takes part in synaptic vesicle fusion with the active zone membrane. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30929742",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30929742/",
+     "title": "Mutations in the Neuronal Vesicular SNARE VAMP2 Affect Synaptic Membrane Fusion and Impair Human Neurodevelopment.",
+     "year": 2019,
+     "quote": "Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [],
+    "claim_ids": [
+     "30929742#1"
+    ]
+   }
+  },
+  {
+   "id": "gene:SYT2|participates_in|mech:ca-triggered-exocytosis",
+   "source": "gene:SYT2",
+   "target": "mech:ca-triggered-exocytosis",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "A 2014 functional study (PMID:25192047) reports that the SYT2 protein takes part in ca2+-triggered neurotransmitter exocytosis. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25192047",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25192047/",
+     "title": "Synaptotagmin 2 mutations cause an autosomal-dominant form of lambert-eaton myasthenic syndrome and nonprogressive motor neuropathy.",
+     "year": 2014,
+     "quote": "Synaptotagmin 2 is a synaptic vesicle protein that functions as a calcium sensor for neurotransmission but has not been previously associated with human disease.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [],
+    "claim_ids": [
+     "25192047#0",
+     "25192047#3"
+    ]
+   }
+  },
+  {
+   "id": "gene:VAMP2|participates_in|mech:ca-triggered-exocytosis",
+   "source": "gene:VAMP2",
+   "target": "mech:ca-triggered-exocytosis",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "A 2019 functional study (PMID:30929742) reports that the VAMP2 protein takes part in ca2+-triggered neurotransmitter exocytosis. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30929742",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30929742/",
+     "title": "Mutations in the Neuronal Vesicular SNARE VAMP2 Affect Synaptic Membrane Fusion and Impair Human Neurodevelopment.",
+     "year": 2019,
+     "quote": "VAMP2 is essential for vesicular exocytosis and activity-dependent neurotransmitter release.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [],
+    "claim_ids": [
+     "30929742#4"
+    ]
+   }
+  },
+  {
+   "id": "gene:VAMP2|participates_in|mech:synaptic-vesicle-fusion",
+   "source": "gene:VAMP2",
+   "target": "mech:synaptic-vesicle-fusion",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "A 2019 functional study (PMID:30929742) reports that the VAMP2 protein takes part in synaptic vesicle fusion with the active zone membrane. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30929742",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30929742/",
+     "title": "Mutations in the Neuronal Vesicular SNARE VAMP2 Affect Synaptic Membrane Fusion and Impair Human Neurodevelopment.",
+     "year": 2019,
+     "quote": "Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [],
+    "claim_ids": [
+     "30929742#0",
+     "30929742#3"
+    ]
+   }
+  },
+  {
+   "id": "therapy:3-4-diaminopyridine|developed_for|disease:VAMP2",
+   "source": "therapy:3-4-diaminopyridine",
+   "target": "disease:VAMP2",
+   "type": "developed_for",
+   "label": "developed for",
+   "explanation": "A 2020 case report (PMID:32906212) reports that 3,4-Diaminopyridine (amifampridine) was developed, tested or used for VAMP2-related disorders. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:32906212",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32906212/",
+     "title": "Overcoming presynaptic effects of VAMP2 mutations with 4-aminopyridine treatment.",
+     "year": 2020,
+     "quote": "For one patient, a cognitively impaired adolescent with a de novo stop-gain VAMP2 mutation, we tested a potential treatment strategy, enhancing neurotransmission by prolonging action potentials with the aminopyridine family of potassium channel blockers, 4-aminopyridine and 3,4-diaminopyridine, in vitro and in vivo.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "32906212#7"
+    ]
+   }
+  },
+  {
+   "id": "therapy:4-phenylbutyrate|targets|mech:gaba-reuptake",
+   "source": "therapy:4-phenylbutyrate",
+   "target": "mech:gaba-reuptake",
+   "type": "targets",
+   "label": "targets",
+   "explanation": "4 papers (PMID:35911425, PMID:39923323, PMID:41385967, PMID:41648160) reports that 4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone) acts on gaba reuptake. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:35911425",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35911425/",
+     "title": "4-Phenylbutyrate restored γ-aminobutyric acid uptake and reduced seizures in SLC6A1 patient variant-bearing cell and mouse models.",
+     "year": 2022,
+     "quote": "4-Phenylbutyrate increased γ-amino butyric acid uptake in both mouse and human astrocytes and neurons bearing the variants.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:39923323",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39923323/",
+     "title": "4-Phenylbutyrate restored GABA uptake, mitigated seizures in SLC6A1 and SLC6A11 microdeletions/3p- syndrome: From cellular models to human patients.",
+     "year": 2025,
+     "quote": "4-Phenylbutyrate restored GABA uptake, mitigated seizures in SLC6A1 and SLC6A11 microdeletions/3p- syndrome: From cellular models to human patients.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41385967",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41385967/",
+     "title": "4-Phenylbutyrate rescues neurobehavioral phenotypes in SLC6A1-related encephalopathy.",
+     "year": 2026,
+     "quote": "We previously showed that 4-phenylbutyrate (PBA), known as a chemical chaperone and histone deacetylase inhibitor, restores GAT-1 function and reduces seizures in both mouse models and humans with SLC6A1 variants.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41648160",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41648160/",
+     "title": "Accumulation of Extracellular GABA, Impaired GABAergic Neurotransmission and 4-Phenylbutyrate Rescue in Mice of SLC6A1 Variant-Mediated Disorders.",
+     "year": 2026,
+     "quote": "Here, we show this mouse exhibits accumulation of extracellular GABA, impaired neurotransmission, and reduced GABA uptake; and demonstrate that 4-phenylbutyrate rescues these abnormalities.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "cell",
+     "mouse"
+    ],
+    "claim_ids": [
+     "35911425#4",
+     "39923323#7",
+     "41385967#6",
+     "41648160#4"
+    ]
+   }
+  },
+  {
+   "id": "vg:SLC6A1:missense|has_effect|mech:loss-of-function",
+   "source": "vg:SLC6A1:missense",
+   "target": "mech:loss-of-function",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "4 papers (PMID:25865495, PMID:38781976, PMID:41174879, PMID:42650175) reports that SLC6A1 missense variants lead to loss of function. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25865495",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25865495/",
+     "title": "Mutations in the GABA Transporter SLC6A1 Cause Epilepsy with Myoclonic-Atonic Seizures.",
+     "year": 2015,
+     "quote": "We describe two truncations and four missense alterations, all of which most likely lead to loss of function of GAT-1 and thus reduced GABA re-uptake from the synapse.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:38781976",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38781976/",
+     "title": "Haploinsufficiency underlies the neurodevelopmental consequences of SLC6A1 variants.",
+     "year": 2024,
+     "quote": "Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:41174879",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41174879/",
+     "title": "Resolving SLC6A1 variable expressivity with deep clinical phenotyping and Drosophila models.",
+     "year": 2026,
+     "quote": "We conclude that the p.A334S variant is a hypomorphic allele and begin to elucidate the underlying variability in SLC6A1-NDD.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:42650175",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42650175/",
+     "title": "4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation: A Dual Therapy to Rescue SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy.",
+     "year": 2026,
+     "quote": "CONCLUSIONS: GAT-1 p.Ala305Val is a trafficking-impaired, loss-of-function variant whose dysfunction is amenable to two convergent therapeutic axes: pharmacologic correction of folding and trafficking, and augmentation of functional transporter expression.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "human",
+     "fly",
+     "cell"
+    ],
+    "claim_ids": [
+     "25865495#3",
+     "38781976#5",
+     "42650175#16",
+     "41174879#3"
+    ]
+   }
+  },
+  {
+   "id": "vg:SLC6A1:truncating|has_effect|mech:loss-of-function",
+   "source": "vg:SLC6A1:truncating",
+   "target": "mech:loss-of-function",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "A 2015 cohort study (PMID:25865495) suggests that SLC6A1 truncating variants lead to loss of function. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.45,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25865495",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25865495/",
+     "title": "Mutations in the GABA Transporter SLC6A1 Cause Epilepsy with Myoclonic-Atonic Seizures.",
+     "year": 2015,
+     "quote": "We describe two truncations and four missense alterations, all of which most likely lead to loss of function of GAT-1 and thus reduced GABA re-uptake from the synapse.",
+     "kind": "publication",
+     "study_type": "cohort",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "suggested",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "25865495#2"
+    ]
+   }
+  },
+  {
+   "id": "vg:SNAP25:missense|has_effect|mech:loss-of-function",
+   "source": "vg:SNAP25:missense",
+   "target": "mech:loss-of-function",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "A 2014 functional study (PMID:25381298) reports that SNAP25 missense variants lead to loss of function. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25381298",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25381298/",
+     "title": "Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.",
+     "year": 2014,
+     "quote": "CONCLUSION: Ile67Asn variant in SNAP25B is pathogenic because it inhibits synaptic vesicle exocytosis.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [],
+    "claim_ids": [
+     "25381298#5"
+    ]
+   }
+  },
+  {
+   "id": "vg:STX1B:missense|has_effect|mech:gain-of-function",
+   "source": "vg:STX1B:missense",
+   "target": "mech:gain-of-function",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "2 papers (PMID:32572454, PMID:42673765) reports that STX1B missense variants lead to gain of function (the protein does too much). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:32572454",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32572454/",
+     "title": "Epilepsy-causing STX1B mutations translate altered protein functions into distinct phenotypes in mouse neurons.",
+     "year": 2020,
+     "quote": "The mutation STX1BV216E, also causing epileptic encephalopathies, only slightly diminishes Munc18-1 and Munc13 interactions, but leads to enhanced fusogenicity and increased vesicular release probability, also in STX1-null neurons.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:42673765",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42673765/",
+     "title": "STX1B variant-specific synaptic dysfunction is associated with network hyperexcitability in human iPSC-derived neurons.",
+     "year": 2026,
+     "quote": "G226R exhibited both gain- and loss-of-function characteristics, with increased miniature excitatory postsynaptic current frequency in networks but not in autapses, and synaptic failure during sustained high-frequency stimulation.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "mouse",
+     "cell"
+    ],
+    "claim_ids": [
+     "32572454#8",
+     "42673765#3"
+    ]
+   }
+  },
+  {
+   "id": "vg:STX1B:missense|has_effect|mech:loss-of-function",
+   "source": "vg:STX1B:missense",
+   "target": "mech:loss-of-function",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "A 2026 functional study (PMID:42673765) reports that STX1B missense variants lead to loss of function. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:42673765",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42673765/",
+     "title": "STX1B variant-specific synaptic dysfunction is associated with network hyperexcitability in human iPSC-derived neurons.",
+     "year": 2026,
+     "quote": "G226R exhibited both gain- and loss-of-function characteristics, with increased miniature excitatory postsynaptic current frequency in networks but not in autapses, and synaptic failure during sustained high-frequency stimulation.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "cell"
+    ],
+    "claim_ids": [
+     "42673765#4"
+    ]
+   }
+  },
+  {
+   "id": "vg:STXBP1:missense|has_effect|mech:gain-of-function",
+   "source": "vg:STXBP1:missense",
+   "target": "mech:gain-of-function",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "A 2020 functional study (PMID:31855252) reports that STXBP1 missense variants lead to gain of function (the protein does too much). Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:31855252",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31855252/",
+     "title": "Homozygous STXBP1 variant causes encephalopathy and gain-of-function in synaptic transmission.",
+     "year": 2020,
+     "quote": "Hence, the homozygous L446F mutation causes a gain-of-function phenotype regarding release probability and synaptic transmission while having less impact on protein levels than previously reported (heterozygous) mutations.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "cell"
+    ],
+    "claim_ids": [
+     "31855252#6"
+    ]
+   }
+  },
+  {
+   "id": "vg:STXBP1:missense|has_effect|mech:loss-of-function",
+   "source": "vg:STXBP1:missense",
+   "target": "mech:loss-of-function",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "A 2014 functional study (PMID:25284778) reports that STXBP1 missense variants lead to loss of function. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "experimental",
+   "status": "unverified",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25284778",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25284778/",
+     "title": "Increased polyubiquitination and proteasomal degradation of a Munc18-1 disease-linked mutant causes temperature-sensitive defect in exocytosis.",
+     "year": 2014,
+     "quote": "The C180Y disease-causing mutation greatly potentiates this degradative pathway, rendering Munc18-1 unable to facilitate neuroexocytosis, a phenotype that is reversed at a permissive temperature.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "established",
+    "species": [
+     "cell"
+    ],
+    "claim_ids": [
+     "25284778#5"
+    ]
+   }
+  },
+  {
+   "id": "vg:UNC13A:truncating|has_effect|mech:loss-of-function",
+   "source": "vg:UNC13A:truncating",
+   "target": "mech:loss-of-function",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "A 2016 case report (PMID:27648472) suggests that UNC13A truncating variants lead to loss of function. Found by automated extraction with OpenAI; not yet reviewed by a person.",
+   "evidence_level": "observational",
+   "status": "unverified",
+   "confidence": 0.45,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:27648472",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27648472/",
+     "title": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.",
+     "year": 2016,
+     "quote": "We therefore attribute our patient's microcephaly to the truncating homozygous Munc13-1 mutation that consigns syntaxin 1B to a permanently closed nonfunctional state akin to a knockout.",
+     "kind": "publication",
+     "study_type": "case_report",
+     "supports": true,
+     "extracted_by": "openai:gpt-6-astra",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ],
+   "attrs": {
+    "extraction": "openai",
+    "needs_review": true,
+    "certainty": "suggested",
+    "species": [
+     "human"
+    ],
+    "claim_ids": [
+     "27648472#7"
+    ]
+   }
+  }
+ ],
+ "clusters": [],
+ "gaps": []
+}

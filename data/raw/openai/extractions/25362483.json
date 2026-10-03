@@ -1,0 +1,153 @@
+{
+ "pmid": "25362483",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:23:19.260Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0da4dda7392e56b8016ac147f0044c87d2b915ad039daeac28",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0da4dda7392e56b8016ac147f00bcc87d2be7d9fd4c3dc9a21": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 273,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 273,
+     "output_tokens": 0
+    },
+    "rs_0da4dda7392e56b8016ac147f2029c87d2a3d10bcb4d86f13b": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 169
+    },
+    "msg_0da4dda7392e56b8016ac147f884c087d2814fea1ece1a81de": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 768
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 768
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1356,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 937,
+  "output_tokens_details": {
+   "reasoning_tokens": 169
+  },
+  "total_tokens": 2293
+ },
+ "latency_ms": 40986,
+ "input_sha1": "31905dfd9b1a4024",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/25362483.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"STX1B\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"fever-associated epilepsy syndromes\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Mutations in STX1B, encoding a presynaptic protein, cause fever-associated epilepsy syndromes.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SCN1A\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"febrile seizures with or without epilepsy\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Recurrent mutations in three main genes (SCN1A, SCN1B and GABRG2) have been identified that cause febrile seizures with or without epilepsy.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SCN1B\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"febrile seizures with or without epilepsy\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Recurrent mutations in three main genes (SCN1A, SCN1B and GABRG2) have been identified that cause febrile seizures with or without epilepsy.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"GABRG2\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"febrile seizures with or without epilepsy\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Recurrent mutations in three main genes (SCN1A, SCN1B and GABRG2) have been identified that cause febrile seizures with or without epilepsy.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"febrile seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Here we report the identification of mutations in STX1B, encoding syntaxin-1B, that are associated with both febrile seizures and epilepsy.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"epilepsy\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Here we report the identification of mutations in STX1B, encoding syntaxin-1B, that are associated with both febrile seizures and epilepsy.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "STX1B",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "fever-associated epilepsy syndromes",
+   "object_type": "disease",
+   "quote": "Mutations in STX1B, encoding a presynaptic protein, cause fever-associated epilepsy syndromes.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN1A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "febrile seizures with or without epilepsy",
+   "object_type": "disease",
+   "quote": "Recurrent mutations in three main genes (SCN1A, SCN1B and GABRG2) have been identified that cause febrile seizures with or without epilepsy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN1B",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "febrile seizures with or without epilepsy",
+   "object_type": "disease",
+   "quote": "Recurrent mutations in three main genes (SCN1A, SCN1B and GABRG2) have been identified that cause febrile seizures with or without epilepsy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GABRG2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "febrile seizures with or without epilepsy",
+   "object_type": "disease",
+   "quote": "Recurrent mutations in three main genes (SCN1A, SCN1B and GABRG2) have been identified that cause febrile seizures with or without epilepsy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "febrile seizures",
+   "object_type": "phenotype",
+   "quote": "Here we report the identification of mutations in STX1B, encoding syntaxin-1B, that are associated with both febrile seizures and epilepsy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epilepsy",
+   "object_type": "phenotype",
+   "quote": "Here we report the identification of mutations in STX1B, encoding syntaxin-1B, that are associated with both febrile seizures and epilepsy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

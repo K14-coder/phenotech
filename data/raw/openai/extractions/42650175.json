@@ -1,0 +1,297 @@
+{
+ "pmid": "42650175",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:43:36.588Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0595d748022745ee016ac14c8386a087d280cac79e81cc6c71",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0595d748022745ee016ac14c838d1087d29c8b2e98066e06df": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 639,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 639,
+     "output_tokens": 0
+    },
+    "rs_0595d748022745ee016ac14c8524e487d2b39962d3412e215b": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 67
+    },
+    "msg_0595d748022745ee016ac14c8804c887d286bd6a442d303429": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 2014
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 2014
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1722,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 2081,
+  "output_tokens_details": {
+   "reasoning_tokens": 67
+  },
+  "total_tokens": 3803
+ },
+ "latency_ms": 87194,
+ "input_sha1": "fbeaf14e11604421",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/42650175.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"developmental and epileptic encephalopathies (DEEs)\",\"object_type\":\"disease\",\"quote\":\"BACKGROUND: Pathogenic variants in SLC6A1, which encodes the γ-aminobutyric acid (GABA) transporter GAT-1, cause developmental and epileptic encephalopathies (DEEs) through reduced GABA uptake, impaired transporter trafficking, and functional haploinsufficiency.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"developmental and epileptic encephalopathies (DEEs)\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"reduced GABA uptake\",\"object_type\":\"mechanism\",\"quote\":\"BACKGROUND: Pathogenic variants in SLC6A1, which encodes the γ-aminobutyric acid (GABA) transporter GAT-1, cause developmental and epileptic encephalopathies (DEEs) through reduced GABA uptake, impaired transporter trafficking, and functional haploinsufficiency.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"developmental and epileptic encephalopathies (DEEs)\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"impaired transporter trafficking\",\"object_type\":\"mechanism\",\"quote\":\"BACKGROUND: Pathogenic variants in SLC6A1, which encodes the γ-aminobutyric acid (GABA) transporter GAT-1, cause developmental and epileptic encephalopathies (DEEs) through reduced GABA uptake, impaired transporter trafficking, and functional haploinsufficiency.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"developmental and epileptic encephalopathies (DEEs)\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"functional haploinsufficiency\",\"object_type\":\"mechanism\",\"quote\":\"BACKGROUND: Pathogenic variants in SLC6A1, which encodes the γ-aminobutyric acid (GABA) transporter GAT-1, cause developmental and epileptic encephalopathies (DEEs) through reduced GABA uptake, impaired transporter trafficking, and functional haploinsufficiency.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-phenylbutyrate (PBA)\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"misfolded GABAergic proteins\",\"object_type\":\"mechanism\",\"quote\":\"4-phenylbutyrate (PBA) is a clinically available small molecule with chemical-chaperone and histone-deacetylase-inhibitor activities that can rescue misfolded GABAergic proteins, but variant-level rescue data are needed to guide precision treatment.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"myoclonic-atonic epilepsy\",\"object_type\":\"phenotype\",\"quote\":\"METHODS: We report a novel de novo missense mutation p.Ala305Val in GAT-1 encoding SLC6A1, in a patient with myoclonic-atonic epilepsy and a developmental and epileptic encephalopathy phenotype.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental and epileptic encephalopathy phenotype\",\"object_type\":\"phenotype\",\"quote\":\"METHODS: We report a novel de novo missense mutation p.Ala305Val in GAT-1 encoding SLC6A1, in a patient with myoclonic-atonic epilepsy and a developmental and epileptic encephalopathy phenotype.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"GAT-1 p.Ala305Val\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"destabilization\",\"object_type\":\"mechanism\",\"quote\":\"RESULTS: AI-based stability predictors uniformly indicated destabilization of GAT-1 p.Ala305Val and GAT-1 p.Ala305Thr.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"GAT-1 p.Ala305Thr\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"destabilization\",\"object_type\":\"mechanism\",\"quote\":\"RESULTS: AI-based stability predictors uniformly indicated destabilization of GAT-1 p.Ala305Val and GAT-1 p.Ala305Thr.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"GAT-1 p.Ala305Val\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"reduced 3H GABA uptake\",\"object_type\":\"mechanism\",\"quote\":\"GAT-1 p.Ala305Val reduced 3H GABA uptake across HEK293Ts, astrocytes, and neurons.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"GAT-1 p.Ala305Val\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"ER retention\",\"object_type\":\"mechanism\",\"quote\":\"The mutant transporter accumulated within the endoplasmic reticulum (ER), with ER colocalization rising from approximately 30% in wildtype to ~80% in GAT-1 p.Ala305Val; PBA reduced ER retention to approximately ~40% and restored total GAT-1 fluorescence toward wildtype levels.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"PBA\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"ER retention\",\"object_type\":\"mechanism\",\"quote\":\"The mutant transporter accumulated within the endoplasmic reticulum (ER), with ER colocalization rising from approximately 30% in wildtype to ~80% in GAT-1 p.Ala305Val; PBA reduced ER retention to approximately ~40% and restored total GAT-1 fluorescence toward wildtype levels.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"PBA\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"GABA uptake\",\"object_type\":\"mechanism\",\"quote\":\"Pharmacochaperones (PBA, TUDCA) restored GABA uptake for the mutant transporters.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"TUDCA\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"GABA uptake\",\"object_type\":\"mechanism\",\"quote\":\"Pharmacochaperones (PBA, TUDCA) restored GABA uptake for the mutant transporters.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Wildtype GAT-1 gene augmentation\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"GABA uptake\",\"object_type\":\"mechanism\",\"quote\":\"Wildtype GAT-1 gene augmentation improved GABA uptake in the heterozygous condition but combined PBA plus wildtype allele augmentation produced rescue greater than either intervention alone in the available dose-response ranges.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"combined PBA plus wildtype allele augmentation\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"GABA uptake\",\"object_type\":\"mechanism\",\"quote\":\"Wildtype GAT-1 gene augmentation improved GABA uptake in the heterozygous condition but combined PBA plus wildtype allele augmentation produced rescue greater than either intervention alone in the available dose-response ranges.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"GAT-1 p.Ala305Val\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"loss-of-function\",\"object_type\":\"mechanism\",\"quote\":\"CONCLUSIONS: GAT-1 p.Ala305Val is a trafficking-impaired, loss-of-function variant whose dysfunction is amenable to two convergent therapeutic axes: pharmacologic correction of folding and trafficking, and augmentation of functional transporter expression.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy\",\"object_type\":\"disease\",\"quote\":\"4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation: A Dual Therapy to Rescue SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "developmental and epileptic encephalopathies (DEEs)",
+   "object_type": "disease",
+   "quote": "BACKGROUND: Pathogenic variants in SLC6A1, which encodes the γ-aminobutyric acid (GABA) transporter GAT-1, cause developmental and epileptic encephalopathies (DEEs) through reduced GABA uptake, impaired transporter trafficking, and functional haploinsufficiency.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "reduced GABA uptake",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Pathogenic variants in SLC6A1, which encodes the γ-aminobutyric acid (GABA) transporter GAT-1, cause developmental and epileptic encephalopathies (DEEs) through reduced GABA uptake, impaired transporter trafficking, and functional haploinsufficiency.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "impaired transporter trafficking",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Pathogenic variants in SLC6A1, which encodes the γ-aminobutyric acid (GABA) transporter GAT-1, cause developmental and epileptic encephalopathies (DEEs) through reduced GABA uptake, impaired transporter trafficking, and functional haploinsufficiency.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "developmental and epileptic encephalopathies (DEEs)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "functional haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Pathogenic variants in SLC6A1, which encodes the γ-aminobutyric acid (GABA) transporter GAT-1, cause developmental and epileptic encephalopathies (DEEs) through reduced GABA uptake, impaired transporter trafficking, and functional haploinsufficiency.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-phenylbutyrate (PBA)",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "misfolded GABAergic proteins",
+   "object_type": "mechanism",
+   "quote": "4-phenylbutyrate (PBA) is a clinically available small molecule with chemical-chaperone and histone-deacetylase-inhibitor activities that can rescue misfolded GABAergic proteins, but variant-level rescue data are needed to guide precision treatment.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "myoclonic-atonic epilepsy",
+   "object_type": "phenotype",
+   "quote": "METHODS: We report a novel de novo missense mutation p.Ala305Val in GAT-1 encoding SLC6A1, in a patient with myoclonic-atonic epilepsy and a developmental and epileptic encephalopathy phenotype.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental and epileptic encephalopathy phenotype",
+   "object_type": "phenotype",
+   "quote": "METHODS: We report a novel de novo missense mutation p.Ala305Val in GAT-1 encoding SLC6A1, in a patient with myoclonic-atonic epilepsy and a developmental and epileptic encephalopathy phenotype.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GAT-1 p.Ala305Val",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "destabilization",
+   "object_type": "mechanism",
+   "quote": "RESULTS: AI-based stability predictors uniformly indicated destabilization of GAT-1 p.Ala305Val and GAT-1 p.Ala305Thr.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "GAT-1 p.Ala305Thr",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "destabilization",
+   "object_type": "mechanism",
+   "quote": "RESULTS: AI-based stability predictors uniformly indicated destabilization of GAT-1 p.Ala305Val and GAT-1 p.Ala305Thr.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "GAT-1 p.Ala305Val",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "reduced 3H GABA uptake",
+   "object_type": "mechanism",
+   "quote": "GAT-1 p.Ala305Val reduced 3H GABA uptake across HEK293Ts, astrocytes, and neurons.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GAT-1 p.Ala305Val",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "ER retention",
+   "object_type": "mechanism",
+   "quote": "The mutant transporter accumulated within the endoplasmic reticulum (ER), with ER colocalization rising from approximately 30% in wildtype to ~80% in GAT-1 p.Ala305Val; PBA reduced ER retention to approximately ~40% and restored total GAT-1 fluorescence toward wildtype levels.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "ER retention",
+   "object_type": "mechanism",
+   "quote": "The mutant transporter accumulated within the endoplasmic reticulum (ER), with ER colocalization rising from approximately 30% in wildtype to ~80% in GAT-1 p.Ala305Val; PBA reduced ER retention to approximately ~40% and restored total GAT-1 fluorescence toward wildtype levels.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GABA uptake",
+   "object_type": "mechanism",
+   "quote": "Pharmacochaperones (PBA, TUDCA) restored GABA uptake for the mutant transporters.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TUDCA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GABA uptake",
+   "object_type": "mechanism",
+   "quote": "Pharmacochaperones (PBA, TUDCA) restored GABA uptake for the mutant transporters.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Wildtype GAT-1 gene augmentation",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GABA uptake",
+   "object_type": "mechanism",
+   "quote": "Wildtype GAT-1 gene augmentation improved GABA uptake in the heterozygous condition but combined PBA plus wildtype allele augmentation produced rescue greater than either intervention alone in the available dose-response ranges.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "combined PBA plus wildtype allele augmentation",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GABA uptake",
+   "object_type": "mechanism",
+   "quote": "Wildtype GAT-1 gene augmentation improved GABA uptake in the heterozygous condition but combined PBA plus wildtype allele augmentation produced rescue greater than either intervention alone in the available dose-response ranges.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GAT-1 p.Ala305Val",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "CONCLUSIONS: GAT-1 p.Ala305Val is a trafficking-impaired, loss-of-function variant whose dysfunction is amenable to two convergent therapeutic axes: pharmacologic correction of folding and trafficking, and augmentation of functional transporter expression.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy",
+   "object_type": "disease",
+   "quote": "4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation: A Dual Therapy to Rescue SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

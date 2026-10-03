@@ -1,0 +1,153 @@
+{
+ "pmid": "34037996",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:35:55.013Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_08b8777d2be061a7016ac14ae5f21487d2b213a8fddaf64b5c",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_08b8777d2be061a7016ac14ae5f9cc87d28efe3c68f7be26c6": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 312,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 312,
+     "output_tokens": 0
+    },
+    "rs_08b8777d2be061a7016ac14ae73f3087d28738e7fceee8c772": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 111
+    },
+    "msg_08b8777d2be061a7016ac14aec079487d2b32d331fbc2377a7": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 782
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 782
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1395,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 893,
+  "output_tokens_details": {
+   "reasoning_tokens": 111
+  },
+  "total_tokens": 2288
+ },
+ "latency_ms": 38319,
+ "input_sha1": "1d4d66f7b2f8b36a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/34037996.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"SYT2\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"congenital myasthenic syndrome (CMS)\",\n      \"object_type\": \"disease\",\n      \"quote\": \"INTRODUCTION/AIMS: We studied a patient with a congenital myasthenic syndrome (CMS) caused by a dominant mutation in the synaptotagmin 2 gene (SYT2) and compared the clinical features of this patient with those of a previously described patient with a recessive mutation in the same gene.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"CMS\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"muscle weakness\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"RESULTS: Both patients presented with muscle weakness and bulbar deficits, which were worse in the recessive form.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"CMS\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"bulbar deficits\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"RESULTS: Both patients presented with muscle weakness and bulbar deficits, which were worse in the recessive form.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"CMS\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"presynaptic failure\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"EDX studies showed presynaptic failure, which was more prominent in the recessive form.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"dominant form of CMS\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"driven_by\",\n      \"object_mention\": \"dominant-negative effect\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"The pathogenesis of the dominant form likely involves a dominant-negative effect due to disruption of the dual function of synaptotagmin as a Ca2+ -sensor and modulator of synaptic vesicle exocytosis.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"human\",\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SYT2 dominant mutation\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"dominant-negative effect\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"The pathogenesis of the dominant form likely involves a dominant-negative effect due to disruption of the dual function of synaptotagmin as a Ca2+ -sensor and modulator of synaptic vesicle exocytosis.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"human\",\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "SYT2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "congenital myasthenic syndrome (CMS)",
+   "object_type": "disease",
+   "quote": "INTRODUCTION/AIMS: We studied a patient with a congenital myasthenic syndrome (CMS) caused by a dominant mutation in the synaptotagmin 2 gene (SYT2) and compared the clinical features of this patient with those of a previously described patient with a recessive mutation in the same gene.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CMS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "muscle weakness",
+   "object_type": "phenotype",
+   "quote": "RESULTS: Both patients presented with muscle weakness and bulbar deficits, which were worse in the recessive form.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CMS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "bulbar deficits",
+   "object_type": "phenotype",
+   "quote": "RESULTS: Both patients presented with muscle weakness and bulbar deficits, which were worse in the recessive form.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CMS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "presynaptic failure",
+   "object_type": "phenotype",
+   "quote": "EDX studies showed presynaptic failure, which was more prominent in the recessive form.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "dominant form of CMS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "dominant-negative effect",
+   "object_type": "mechanism",
+   "quote": "The pathogenesis of the dominant form likely involves a dominant-negative effect due to disruption of the dual function of synaptotagmin as a Ca2+ -sensor and modulator of synaptic vesicle exocytosis.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT2 dominant mutation",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dominant-negative effect",
+   "object_type": "mechanism",
+   "quote": "The pathogenesis of the dominant form likely involves a dominant-negative effect due to disruption of the dual function of synaptotagmin as a Ca2+ -sensor and modulator of synaptic vesicle exocytosis.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

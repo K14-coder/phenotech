@@ -1,0 +1,189 @@
+{
+ "pmid": "27597756",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:26:01.564Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_02b7ae59fcd4256a016ac1488e082487d292d5159a1652ae2a",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_02b7ae59fcd4256a016ac1488e104c87d28f13ed086133dfe2": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 343,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 343,
+     "output_tokens": 0
+    },
+    "rs_02b7ae59fcd4256a016ac14890303887d2b0a6d43df48a6a2e": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 56
+    },
+    "msg_02b7ae59fcd4256a016ac1489299a487d2a00aab7bb89290de": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 978
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 978
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1426,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1034,
+  "output_tokens_details": {
+   "reasoning_tokens": 56
+  },
+  "total_tokens": 2460
+ },
+ "latency_ms": 44646,
+ "input_sha1": "87fc0ce3e29be240",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/27597756.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"neurotransmitter release\",\"object_type\":\"mechanism\",\"quote\":\"Munc18-1 is a key component of the exocytic machinery that controls neurotransmitter release.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"infantile epileptic encephalopathy (EIEE)\",\"object_type\":\"disease\",\"quote\":\"Munc18-1 heterozygous mutations cause developmental defects and epileptic phenotypes, including infantile epileptic encephalopathy (EIEE), suggestive of a gain of pathological function.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1 heterozygous mutations\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"gain of pathological function\",\"object_type\":\"mechanism\",\"quote\":\"Munc18-1 heterozygous mutations cause developmental defects and epileptic phenotypes, including infantile epileptic encephalopathy (EIEE), suggestive of a gain of pathological function.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"Munc18-1 EIEE-causing mutants\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"large polymers that coaggregate wild-type Munc18-1\",\"object_type\":\"mechanism\",\"quote\":\"Here, we used single-molecule analysis, gene-edited cells, and neurons to demonstrate that Munc18-1 EIEE-causing mutants form large polymers that coaggregate wild-type Munc18-1 in vitro and in cells.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1 EIEE mutants\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"Lewy body-like structures that contain α-synuclein (α-Syn)\",\"object_type\":\"mechanism\",\"quote\":\"Surprisingly, Munc18-1 EIEE mutants also form Lewy body-like structures that contain α-synuclein (α-Syn).\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1 EIEE mutants\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"coaggregate α-Syn\",\"object_type\":\"mechanism\",\"quote\":\"We reveal that Munc18-1 binds α-Syn, and its EIEE mutants coaggregate α-Syn.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"chaperone activity\",\"object_type\":\"mechanism\",\"quote\":\"Likewise, removal of endogenous Munc18-1 increases the aggregative propensity of α-Syn(WT) and that of the Parkinson's disease-causing α-Syn(A30P) mutant, an effect rescued by Munc18-1(WT) expression, indicative of chaperone activity.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"α-Syn\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"Parkinson's disease\",\"object_type\":\"disease\",\"quote\":\"Likewise, removal of endogenous Munc18-1 increases the aggregative propensity of α-Syn(WT) and that of the Parkinson's disease-causing α-Syn(A30P) mutant, an effect rescued by Munc18-1(WT) expression, indicative of chaperone activity.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1 mutations\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"pathogenic gain of function\",\"object_type\":\"mechanism\",\"quote\":\"Munc18-1 mutations and haploinsufficiency may therefore trigger a pathogenic gain of function through both the corruption of native Munc18-1 and a perturbed chaperone activity for α-Syn leading to aggregation-induced neurodegeneration.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"suggested\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "neurotransmitter release",
+   "object_type": "mechanism",
+   "quote": "Munc18-1 is a key component of the exocytic machinery that controls neurotransmitter release.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "infantile epileptic encephalopathy (EIEE)",
+   "object_type": "disease",
+   "quote": "Munc18-1 heterozygous mutations cause developmental defects and epileptic phenotypes, including infantile epileptic encephalopathy (EIEE), suggestive of a gain of pathological function.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1 heterozygous mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of pathological function",
+   "object_type": "mechanism",
+   "quote": "Munc18-1 heterozygous mutations cause developmental defects and epileptic phenotypes, including infantile epileptic encephalopathy (EIEE), suggestive of a gain of pathological function.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1 EIEE-causing mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "large polymers that coaggregate wild-type Munc18-1",
+   "object_type": "mechanism",
+   "quote": "Here, we used single-molecule analysis, gene-edited cells, and neurons to demonstrate that Munc18-1 EIEE-causing mutants form large polymers that coaggregate wild-type Munc18-1 in vitro and in cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1 EIEE mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "Lewy body-like structures that contain α-synuclein (α-Syn)",
+   "object_type": "mechanism",
+   "quote": "Surprisingly, Munc18-1 EIEE mutants also form Lewy body-like structures that contain α-synuclein (α-Syn).",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1 EIEE mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "coaggregate α-Syn",
+   "object_type": "mechanism",
+   "quote": "We reveal that Munc18-1 binds α-Syn, and its EIEE mutants coaggregate α-Syn.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "chaperone activity",
+   "object_type": "mechanism",
+   "quote": "Likewise, removal of endogenous Munc18-1 increases the aggregative propensity of α-Syn(WT) and that of the Parkinson's disease-causing α-Syn(A30P) mutant, an effect rescued by Munc18-1(WT) expression, indicative of chaperone activity.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "α-Syn",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Parkinson's disease",
+   "object_type": "disease",
+   "quote": "Likewise, removal of endogenous Munc18-1 increases the aggregative propensity of α-Syn(WT) and that of the Parkinson's disease-causing α-Syn(A30P) mutant, an effect rescued by Munc18-1(WT) expression, indicative of chaperone activity.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "pathogenic gain of function",
+   "object_type": "mechanism",
+   "quote": "Munc18-1 mutations and haploinsufficiency may therefore trigger a pathogenic gain of function through both the corruption of native Munc18-1 and a perturbed chaperone activity for α-Syn leading to aggregation-induced neurodegeneration.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

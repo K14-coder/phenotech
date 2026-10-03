@@ -1,0 +1,2727 @@
+{
+  "PTPN11": {
+    "query": "PTPN11[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 215,
+    "n_docs": 215,
+    "n_classified_PLP": 215,
+    "by_consequence": {
+      "missense": 137,
+      "frameshift": 23,
+      "nonsense": 17,
+      "splice": 10,
+      "inframe_indel": 10,
+      "cnv_multigene": 9,
+      "intragenic_deletion_or_duplication": 5,
+      "other_or_unannotated": 2,
+      "intronic_or_splice_region": 1,
+      "synonymous": 1
+    },
+    "examples": {
+      "missense": [
+        {
+          "title": "NM_002834.5(PTPN11):c.1381G>A (p.Ala461Thr)",
+          "accession": "VCV000013342",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13342/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1391G>C (p.Gly464Ala)",
+          "accession": "VCV000013343",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13343/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1403C>T (p.Thr468Met)",
+          "accession": "VCV000013331",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome with multiple lentigines"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13331/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1510A>G (p.Met504Val)",
+          "accession": "VCV000040562",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40562/"
+        }
+      ],
+      "splice": [
+        {
+          "title": "NM_002834.5(PTPN11):c.1224+1G>A",
+          "accession": "VCV004849715",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "LEOPARD syndrome 1",
+            "Noonan syndrome 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4849715/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.138-2A>G",
+          "accession": "VCV002581816",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2581816/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1380-2A>G",
+          "accession": "VCV004918675",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "PTPN11-related disorder"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4918675/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1447+1G>A",
+          "accession": "VCV002707218",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2707218/"
+        }
+      ],
+      "frameshift": [
+        {
+          "title": "NM_002834.5(PTPN11):c.265_269del (p.Lys89fs)",
+          "accession": "VCV000981580",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "PTPN11-related disorder",
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/981580/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1070del (p.Thr357fs)",
+          "accession": "VCV001679347",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Metachondromatosis"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1679347/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1147dup (p.Met383fs)",
+          "accession": "VCV000963962",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/963962/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.123_129del (p.Thr42fs)",
+          "accession": "VCV004918655",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "PTPN11-related disorder"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4918655/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 12p13.33-q24.33(chr12:1-133851895)x3",
+          "accession": "VCV000268075",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/268075/"
+        },
+        {
+          "title": "GRCh37/hg19 12q23.1-24.33(chr12:99532287-133777902)x3",
+          "accession": "VCV004682809",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4682809/"
+        },
+        {
+          "title": "GRCh38/hg38 12q24.11-24.33(chr12:111176932-133275309)x3",
+          "accession": "VCV004890963",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4890963/"
+        },
+        {
+          "title": "GRCh38/hg38 12q24.13(chr12:112303430-112676526)x3",
+          "accession": "VCV000059818",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/59818/"
+        }
+      ],
+      "inframe_indel": [
+        {
+          "title": "NM_002834.5(PTPN11):c.179_181del (p.Gly60del)",
+          "accession": "VCV000013346",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Noonan syndrome 1",
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13346/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.762ACA[4] (p.Gln257dup)",
+          "accession": "VCV000040519",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40519/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1546_1547insCTATCTATA (p.Tyr515_Met516insThrIleTyr)",
+          "accession": "VCV001708482",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Metachondromatosis"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1708482/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.155_163del (p.Thr52_Ile54del)",
+          "accession": "VCV004855276",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4855276/"
+        }
+      ],
+      "nonsense": [
+        {
+          "title": "NM_002834.5(PTPN11):c.1051C>T (p.Arg351Ter)",
+          "accession": "VCV000372552",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "PTPN11-related disorder",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/372552/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.661del (p.Arg220_Ile221insTer)",
+          "accession": "VCV000044611",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Metachondromatosis",
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/44611/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.691C>T (p.Arg231Ter)",
+          "accession": "VCV001367799",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Juvenile myelomonocytic leukemia",
+            "LEOPARD syndrome 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1367799/"
+        },
+        {
+          "title": "NM_002834.5(PTPN11):c.1075G>T (p.Glu359Ter)",
+          "accession": "VCV001072028",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1072028/"
+        }
+      ],
+      "intronic_or_splice_region": [
+        {
+          "title": "NM_002834.5(PTPN11):c.934-59T>A",
+          "accession": "VCV003780504",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome with multiple lentigines"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3780504/"
+        }
+      ],
+      "intragenic_deletion_or_duplication": [
+        {
+          "title": "NC_000012.11:g.(?_112856916)_(112856949_?)del",
+          "accession": "VCV003244344",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3244344/"
+        },
+        {
+          "title": "NC_000012.11:g.(?_112909300)_(112915437_?)del",
+          "accession": "VCV002424548",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2424548/"
+        },
+        {
+          "title": "NC_000012.11:g.(?_112910728)_(112910864_?)del",
+          "accession": "VCV001370287",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1370287/"
+        },
+        {
+          "title": "NC_000012.11:g.(?_112915449)_(112915825_?)del",
+          "accession": "VCV001070485",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1070485/"
+        }
+      ],
+      "synonymous": [
+        {
+          "title": "NM_002834.5(PTPN11):c.489C>T (p.Gly163=)",
+          "accession": "VCV000940702",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/940702/"
+        }
+      ],
+      "other_or_unannotated": [
+        {
+          "title": "NC_000012.12:g.112450397_112450398delinsCT",
+          "accession": "VCV000044604",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Noonan syndrome",
+            "Noonan syndrome 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/44604/"
+        },
+        {
+          "title": "NC_000012.12:g.112459655_112474339delinsCA",
+          "accession": "VCV000031555",
+          "classification": "Pathogenic",
+          "review_status": "no assertion criteria provided",
+          "traits": [
+            "Metachondromatosis"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/31555/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=PTPN11%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "SOS1": {
+    "query": "SOS1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 92,
+    "n_docs": 92,
+    "n_classified_PLP": 92,
+    "by_consequence": {
+      "missense": 68,
+      "cnv_multigene": 19,
+      "inframe_indel": 4,
+      "other_or_unannotated": 1
+    },
+    "examples": {
+      "inframe_indel": [
+        {
+          "title": "NM_005633.4(SOS1):c.1290_1294delinsGGGAATATTCAGAAGAATATTGA (p.Asp430_Trp432delinsGluGlyIlePheArgArgIleLeuArg)",
+          "accession": "VCV003774493",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome 4"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3774493/"
+        },
+        {
+          "title": "NM_005633.4(SOS1):c.1653_1655del (p.Arg552del)",
+          "accession": "VCV000801667",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/801667/"
+        },
+        {
+          "title": "NM_005633.4(SOS1):c.1667_1687del (p.Val556_Lys563delinsGlu)",
+          "accession": "VCV004954708",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "SOS1-related disorder"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4954708/"
+        },
+        {
+          "title": "NM_005633.4(SOS1):c.1708_1713del (p.Pro570_Ser571del)",
+          "accession": "VCV000981571",
+          "classification": "Likely pathogenic",
+          "review_status": "no assertion criteria provided",
+          "traits": [
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/981571/"
+        }
+      ],
+      "missense": [
+        {
+          "title": "NM_005633.4(SOS1):c.1642A>C (p.Ser548Arg)",
+          "accession": "VCV000040678",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40678/"
+        },
+        {
+          "title": "NM_005633.4(SOS1):c.1654A>G (p.Arg552Gly)",
+          "accession": "VCV000012871",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12871/"
+        },
+        {
+          "title": "NM_005633.4(SOS1):c.1654A>T (p.Arg552Trp)",
+          "accession": "VCV000372656",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome and Noonan-related syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/372656/"
+        },
+        {
+          "title": "NM_005633.4(SOS1):c.1655G>A (p.Arg552Lys)",
+          "accession": "VCV000040683",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40683/"
+        }
+      ],
+      "other_or_unannotated": [
+        {
+          "title": "SOS1, 4-BP INS, 3265TAAC",
+          "accession": "VCV003370396",
+          "classification": "Pathogenic",
+          "review_status": "no assertion criteria provided",
+          "traits": [
+            "Fibromatosis, gingival, 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3370396/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 2p23.1-21(chr2:30814984-42798684)x1",
+          "accession": "VCV003062647",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3062647/"
+        },
+        {
+          "title": "GRCh37/hg19 2p23.2-21(chr2:29899368-42441440)x1",
+          "accession": "VCV001527803",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1527803/"
+        },
+        {
+          "title": "GRCh37/hg19 2p23.3-16.1(chr2:27861707-60790985)x3",
+          "accession": "VCV000402127",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/402127/"
+        },
+        {
+          "title": "GRCh37/hg19 2p23.3-21(chr2:24881528-43460021)x3",
+          "accession": "VCV001176757",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1176757/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=SOS1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "RAF1": {
+    "query": "RAF1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 80,
+    "n_docs": 80,
+    "n_classified_PLP": 80,
+    "by_consequence": {
+      "missense": 55,
+      "cnv_multigene": 24,
+      "intragenic_deletion_or_duplication": 1
+    },
+    "examples": {
+      "missense": [
+        {
+          "title": "NM_002880.4(RAF1):c.1082G>C (p.Gly361Ala)",
+          "accession": "VCV000040613",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40613/"
+        },
+        {
+          "title": "NM_002880.4(RAF1):c.1472C>T (p.Thr491Ile)",
+          "accession": "VCV000021342",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/21342/"
+        },
+        {
+          "title": "NM_002880.4(RAF1):c.1837C>G (p.Leu613Val)",
+          "accession": "VCV000013960",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13960/"
+        },
+        {
+          "title": "NM_002880.4(RAF1):c.768G>T (p.Arg256Ser)",
+          "accession": "VCV000040599",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40599/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 3p26.3-14.3(chr3:2263690-55016039)x3",
+          "accession": "VCV004682581",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4682581/"
+        },
+        {
+          "title": "GRCh37/hg19 3p26.3-22.2(chr3:61891-36710181)x3",
+          "accession": "VCV001526968",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1526968/"
+        },
+        {
+          "title": "GRCh37/hg19 3p26.3-22.3(chr3:60000-34461438)x3",
+          "accession": "VCV003242334",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3242334/"
+        },
+        {
+          "title": "GRCh37/hg19 3p26.3-22.3(chr3:61891-33946644)x3",
+          "accession": "VCV003062708",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3062708/"
+        }
+      ],
+      "intragenic_deletion_or_duplication": [
+        {
+          "title": "NM_002880.4(RAF1):c.784_786dup (p.Asn262_Val263insAsn)",
+          "accession": "VCV003338001",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome 5"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3338001/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=RAF1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "BRAF": {
+    "query": "BRAF[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 180,
+    "n_docs": 180,
+    "n_classified_PLP": 180,
+    "by_consequence": {
+      "missense": 120,
+      "cnv_multigene": 49,
+      "inframe_indel": 9,
+      "nonsense": 1,
+      "splice": 1
+    },
+    "examples": {
+      "missense": [
+        {
+          "title": "NM_004333.6(BRAF):c.1391G>A (p.Gly464Glu)",
+          "accession": "VCV000013964",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13964/"
+        },
+        {
+          "title": "NM_004333.6(BRAF):c.1406G>A (p.Gly469Glu)",
+          "accession": "VCV000013974",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13974/"
+        },
+        {
+          "title": "NM_004333.6(BRAF):c.1454T>C (p.Leu485Ser)",
+          "accession": "VCV000040370",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40370/"
+        },
+        {
+          "title": "NM_004333.6(BRAF):c.1455G>C (p.Leu485Phe)",
+          "accession": "VCV000013975",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13975/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 7q21.12-36.3(chr7:88192865-159128556)x3",
+          "accession": "VCV004884743",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Partial duplication of the long arm of chromosome 7"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4884743/"
+        },
+        {
+          "title": "GRCh37/hg19 7q31.1-36.3(chr7:109251060-159119707)x3",
+          "accession": "VCV000815017",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/815017/"
+        },
+        {
+          "title": "GRCh37/hg19 7q31.32-36.1(chr7:122190535-149944340)x1",
+          "accession": "VCV003391897",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3391897/"
+        },
+        {
+          "title": "GRCh37/hg19 7q32.1-36.3(chr7:128312450-159119220)",
+          "accession": "VCV000625550",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/625550/"
+        }
+      ],
+      "inframe_indel": [
+        {
+          "title": "NM_004333.6(BRAF):c.1794_1796dup (p.Thr599dup)",
+          "accession": "VCV000162793",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neoplasm of the large intestine",
+            "Non-small cell lung carcinoma",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/162793/"
+        },
+        {
+          "title": "NM_004333.6(BRAF):c.1388_1408dup (p.Ile463_Gly469dup)",
+          "accession": "VCV000599445",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/599445/"
+        },
+        {
+          "title": "NM_004333.6(BRAF):c.1475_1477del (p.Pro492del)",
+          "accession": "VCV000976167",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Cardiofaciocutaneous syndrome 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/976167/"
+        },
+        {
+          "title": "NM_004333.6(BRAF):c.1505_1507dup (p.Val502dup)",
+          "accession": "VCV000575127",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/575127/"
+        }
+      ],
+      "nonsense": [
+        {
+          "title": "NM_004333.6(BRAF):c.1906C>T (p.Gln636Ter)",
+          "accession": "VCV000690297",
+          "classification": "Pathogenic",
+          "review_status": "no assertion criteria provided",
+          "traits": [
+            "Cerebral arteriovenous malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/690297/"
+        }
+      ],
+      "splice": [
+        {
+          "title": "NM_004333.6(BRAF):c.2128-4_2129del",
+          "accession": "VCV000430737",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Hypertrophic cardiomyopathy 4"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/430737/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=BRAF%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "KRAS": {
+    "query": "KRAS[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 141,
+    "n_docs": 141,
+    "n_classified_PLP": 141,
+    "by_consequence": {
+      "missense": 85,
+      "cnv_multigene": 38,
+      "inframe_indel": 12,
+      "intragenic_deletion_or_duplication": 3,
+      "utr": 1,
+      "nonsense": 1,
+      "synonymous": 1
+    },
+    "examples": {
+      "intragenic_deletion_or_duplication": [
+        {
+          "title": "NM_004985.5(KRAS):c.127_228dup (p.Glu76_Gly77insGlnValValIleAspGlyGluThrCysLeuLeuAspIleLeuAspThrAlaGlyGlnGluGluTyrSerAlaMetArgAspGlnTyrMetArgThrGlyGlu)",
+          "accession": "VCV004974578",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4974578/"
+        },
+        {
+          "title": "NM_004985.5(KRAS):c.183_215dup (p.Tyr71_Met72insIleGluGluTyrSerAlaMetArgAspGlnTyr)",
+          "accession": "VCV003774511",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3774511/"
+        },
+        {
+          "title": "NM_004985.5(KRAS):c.187_207dup (p.Asp69_Gln70insGluTyrSerAlaMetArgAsp)",
+          "accession": "VCV003774507",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3774507/"
+        }
+      ],
+      "missense": [
+        {
+          "title": "NM_004985.5(KRAS):c.101C>T (p.Pro34Leu)",
+          "accession": "VCV000040454",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40454/"
+        },
+        {
+          "title": "NM_004985.5(KRAS):c.173C>T (p.Thr58Ile)",
+          "accession": "VCV000012588",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12588/"
+        },
+        {
+          "title": "NM_004985.5(KRAS):c.178G>C (p.Gly60Arg)",
+          "accession": "VCV000012586",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Cardio-facio-cutaneous syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12586/"
+        },
+        {
+          "title": "NM_004985.5(KRAS):c.40G>A (p.Val14Ile)",
+          "accession": "VCV000012589",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12589/"
+        }
+      ],
+      "inframe_indel": [
+        {
+          "title": "NM_004985.5(KRAS):c.166_216dup (p.Met72_Arg73insLeuAspThrAlaGlyGlnGluGluTyrSerAlaMetArgAspGlnTyrMet)",
+          "accession": "VCV004279981",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4279981/"
+        },
+        {
+          "title": "NM_004985.5(KRAS):c.173_214dup (p.Thr58_Tyr71dup)",
+          "accession": "VCV001691380",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1691380/"
+        },
+        {
+          "title": "NM_004985.5(KRAS):c.178_198dup (p.Ala66_Met67insGlyGlnGluGluTyrSerAla)",
+          "accession": "VCV002672092",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2672092/"
+        },
+        {
+          "title": "NM_004985.5(KRAS):c.189_190delinsCCAGTACATGAGGG (p.Glu63_Tyr64delinsAspGlnTyrMetArgAsp)",
+          "accession": "VCV004974569",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4974569/"
+        }
+      ],
+      "utr": [
+        {
+          "title": "NM_004985.5(KRAS):c.458ATG[1] (p.Asp154del)",
+          "accession": "VCV004850885",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Fetal anomalies with a likely genetic cause"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4850885/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 12p12.3-11.23(chr12:17884992-26704895)x3",
+          "accession": "VCV001527688",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1527688/"
+        },
+        {
+          "title": "GRCh37/hg19 12p13.2-11.1(chr12:10155706-34051988)x3",
+          "accession": "VCV003391852",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3391852/"
+        },
+        {
+          "title": "GRCh37/hg19 12p13.33-11.1(chr12:148034-34178799)x4",
+          "accession": "VCV000253582",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253582/"
+        },
+        {
+          "title": "GRCh37/hg19 12p13.33-11.1(chr12:173786-34835641)x3",
+          "accession": "VCV003063250",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3063250/"
+        }
+      ],
+      "nonsense": [
+        {
+          "title": "NM_004985.5(KRAS):c.445A>T (p.Arg149Ter)",
+          "accession": "VCV001327505",
+          "classification": "Likely pathogenic",
+          "review_status": "no assertion criteria provided",
+          "traits": [
+            "Thyroid cancer, nonmedullary, 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1327505/"
+        }
+      ],
+      "synonymous": [
+        {
+          "title": "NM_004985.5(KRAS):c.39C>A (p.Gly13=)",
+          "accession": "VCV000163769",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Non-small cell lung carcinoma"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/163769/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=KRAS%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "HRAS": {
+    "query": "HRAS[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 81,
+    "n_docs": 81,
+    "n_classified_PLP": 81,
+    "by_consequence": {
+      "cnv_multigene": 40,
+      "missense": 34,
+      "utr": 3,
+      "intronic_or_splice_region": 2,
+      "inframe_indel": 2
+    },
+    "examples": {
+      "intronic_or_splice_region": [
+        {
+          "title": "NM_005343.4(HRAS):c.208_209insGGTGGGCCATGCGGGACC (p.Asp69_Gln70insArgTrpAlaMetArgAsp)",
+          "accession": "VCV004974570",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Cerebral arteriovenous malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4974570/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.217_218insCGGCCAGCGCCATGCGGGACCAGTACATGC (p.Met72_Arg73insProAlaSerAlaMetArgAspGlnTyrMet)",
+          "accession": "VCV004279988",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4279988/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "NM_005343.4(HRAS):c.187_207dup (p.Glu63_Asp69dup)",
+          "accession": "VCV000120223",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Costello syndrome",
+            "HRAS-related disorders"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/120223/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.191_217dup (p.Met72_Arg73insHisSerAlaMetArgAspGlnTyrMet)",
+          "accession": "VCV001691375",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Vascular malformation",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1691375/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.197_217dup (p.Met72_Arg73insProMetArgAspGlnTyrMet)",
+          "accession": "VCV003340437",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "HRAS-related disorder",
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3340437/"
+        },
+        {
+          "title": "NM_176795.5(HRAS):c.488_497del (p.Leu163fs)",
+          "accession": "VCV001321186",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Costello syndrome",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1321186/"
+        }
+      ],
+      "missense": [
+        {
+          "title": "NM_005343.4(HRAS):c.173C>T (p.Thr58Ile)",
+          "accession": "VCV000012610",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12610/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.175G>A (p.Ala59Thr)",
+          "accession": "VCV000040435",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40435/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.34G>A (p.Gly12Ser)",
+          "accession": "VCV000012602",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Costello syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12602/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.350A>G (p.Lys117Arg)",
+          "accession": "VCV000012605",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12605/"
+        }
+      ],
+      "inframe_indel": [
+        {
+          "title": "NM_005343.4(HRAS):c.174_179delinsATCTGGATACAT (p.Ala59_Gly60delinsSerGlyTyrIle)",
+          "accession": "VCV004279978",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Intramuscular hemangioma"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4279978/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.172_177delinsGTCCTGGATGTT (p.Thr58_Ala59delinsValLeuAspVal)",
+          "accession": "VCV000690298",
+          "classification": "Pathogenic",
+          "review_status": "no assertion criteria provided",
+          "traits": [
+            "Arteriovenous malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/690298/"
+        }
+      ],
+      "utr": [
+        {
+          "title": "NM_005343.4(HRAS):c.208_209insGGTGGTACAGCGCCATGCGGGACC (p.Asp69_Gln70insArgTrpTyrSerAlaMetArgAsp)",
+          "accession": "VCV003774510",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Arteriovenous malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3774510/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.215_216insCTCCAGCGCCATGCGGGACCAGTACAT (p.Tyr71_Met72insIleSerSerAlaMetArgAspGlnTyr)",
+          "accession": "VCV003238637",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3238637/"
+        },
+        {
+          "title": "NM_005343.4(HRAS):c.216_217insAACAGCGCCATGCGGGACCAGTACATG (p.Met72_Arg73insAsnSerAlaMetArgAspGlnTyrMet)",
+          "accession": "VCV003774498",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3774498/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=HRAS%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "NF1": {
+    "query": "NF1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 5978,
+    "n_docs": 5978,
+    "n_classified_PLP": 5978,
+    "by_consequence": {
+      "frameshift": 2985,
+      "nonsense": 1099,
+      "splice": 717,
+      "missense": 466,
+      "intragenic_deletion_or_duplication": 206,
+      "intronic_or_splice_region": 192,
+      "cnv_multigene": 175,
+      "inframe_indel": 77,
+      "other_or_unannotated": 38,
+      "synonymous": 13,
+      "cnv_single_gene": 6,
+      "utr": 4
+    },
+    "examples": {
+      "frameshift": [
+        {
+          "title": "NM_001042492.3(NF1):c.1019_1020del (p.Ser340fs)",
+          "accession": "VCV000547579",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "NF1-related disorder"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/547579/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1020dup (p.Val341fs)",
+          "accession": "VCV000545745",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Café-au-lait macules with pulmonary stenosis",
+            "Juvenile myelomonocytic leukemia",
+            "Neurofibromatosis, familial spinal"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/545745/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1021_1022del (p.Val341fs)",
+          "accession": "VCV000996374",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/996374/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1023_1024insGACA (p.Ile342fs)",
+          "accession": "VCV001456162",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1456162/"
+        }
+      ],
+      "splice": [
+        {
+          "title": "NM_000267.3(NF1):c.2252delG",
+          "accession": "VCV000647570",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/647570/"
+        },
+        {
+          "title": "NM_000267.3(NF1):c.5206delG",
+          "accession": "VCV000503953",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/503953/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1062+1G>A",
+          "accession": "VCV000660278",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Juvenile myelomonocytic leukemia",
+            "NF1-related disorder",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/660278/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1062+1G>C",
+          "accession": "VCV004528340",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4528340/"
+        }
+      ],
+      "nonsense": [
+        {
+          "title": "NM_001042492.3(NF1):c.1007G>A (p.Trp336Ter)",
+          "accession": "VCV000945440",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/945440/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1008G>A (p.Trp336Ter)",
+          "accession": "VCV001207499",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1207499/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1039C>T (p.Gln347Ter)",
+          "accession": "VCV000431975",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/431975/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1094C>G (p.Ser365Ter)",
+          "accession": "VCV000439995",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "NF1-related disorder",
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/439995/"
+        }
+      ],
+      "intronic_or_splice_region": [
+        {
+          "title": "NM_001042492.3(NF1):c.1062+3A>G",
+          "accession": "VCV000381606",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Juvenile myelomonocytic leukemia"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/381606/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1062+3A>T",
+          "accession": "VCV002629320",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2629320/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1063-13G>A",
+          "accession": "VCV000428940",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/428940/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1185+5G>C",
+          "accession": "VCV000654452",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/654452/"
+        }
+      ],
+      "missense": [
+        {
+          "title": "NM_001042492.3(NF1):c.1013A>G (p.Asp338Gly)",
+          "accession": "VCV000068297",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/68297/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1061A>G (p.Lys354Arg)",
+          "accession": "VCV000431576",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/431576/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1062G>C (p.Lys354Asn)",
+          "accession": "VCV000586168",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/586168/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1062G>T (p.Lys354Asn)",
+          "accession": "VCV001511188",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1511188/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "NM_001042492.3(NF1):c.24dup (p.Trp9fs)",
+          "accession": "VCV003372695",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3372695/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.28dup (p.Val10fs)",
+          "accession": "VCV003404660",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3404660/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.60+2del",
+          "accession": "VCV000428980",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/428980/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.9del (p.His4fs)",
+          "accession": "VCV001072626",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1072626/"
+        }
+      ],
+      "inframe_indel": [
+        {
+          "title": "NM_001042492.3(NF1):c.1652TTC[1] (p.Leu552del)",
+          "accession": "VCV001513189",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1513189/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1805_1807del (p.Glu602_Ile603delinsVal)",
+          "accession": "VCV002576865",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2576865/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.2970_2972del (p.Met992del)",
+          "accession": "VCV000000363",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Café-au-lait macules with pulmonary stenosis",
+            "Hereditary cancer-predisposing syndrome",
+            "Juvenile myelomonocytic leukemia"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/363/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.3639_3641del (p.Met1215del)",
+          "accession": "VCV000404465",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/404465/"
+        }
+      ],
+      "other_or_unannotated": [
+        {
+          "title": "NM_000267.3(NF1):c.206_207delGA",
+          "accession": "VCV000404525",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/404525/"
+        },
+        {
+          "title": "NC_000017.11:g.31201048_31201049insTTTTTTTTTTTTTTTTTTTTNNNNNNNNNNCCTCGTGATCCGCCCGCCTCGGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCACCGCGCCCGGCCTAGAACCTGCTTTTT",
+          "accession": "VCV002747758",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2747758/"
+        },
+        {
+          "title": "NC_000017.11:g.31221839_31221853A[6]TTCAGGCTCGGCCGGGCGCGGTGGCTCACGCCTGTAATCCCNNNNNNNNNNAAAAAAAAAAAAAAAAAAAAAAAAAATTCAGGCTC[1]",
+          "accession": "VCV002851247",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2851247/"
+        },
+        {
+          "title": "NC_000017.11:g.31225094GCAG[1]",
+          "accession": "VCV001427168",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1427168/"
+        }
+      ],
+      "intragenic_deletion_or_duplication": [
+        {
+          "title": "NM_000267.3(NF1):c.4111delG",
+          "accession": "VCV002818366",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2818366/"
+        },
+        {
+          "title": "NM_000267.3(NF1):c.4516del",
+          "accession": "VCV000943771",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/943771/"
+        },
+        {
+          "title": "NM_000267.3(NF1):c.6085del",
+          "accession": "VCV001810581",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1810581/"
+        },
+        {
+          "title": "NC_000017.10:g.(?_29386946)_(29560072_?)del",
+          "accession": "VCV003242902",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3242902/"
+        }
+      ],
+      "synonymous": [
+        {
+          "title": "NM_001042492.3(NF1):c.1062G>A (p.Lys354=)",
+          "accession": "VCV000428998",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/428998/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1185G>A (p.Lys395=)",
+          "accession": "VCV000581467",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/581467/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.1845G>A (p.Lys615=)",
+          "accession": "VCV000578879",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "NF1-related disorder"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/578879/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.2325G>A (p.Glu775=)",
+          "accession": "VCV000485955",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/485955/"
+        }
+      ],
+      "utr": [
+        {
+          "title": "NM_001042492.3(NF1):c.-272G>C",
+          "accession": "VCV001379698",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Neurofibromatosis, type 1",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1379698/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.-273A>C",
+          "accession": "VCV003780883",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "NF1-related disorder",
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3780883/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.*481A>G",
+          "accession": "VCV003780882",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3780882/"
+        },
+        {
+          "title": "NM_001042492.3(NF1):c.-273A>G",
+          "accession": "VCV001404731",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Neurofibromatosis, type 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1404731/"
+        }
+      ],
+      "cnv_single_gene": [
+        {
+          "title": "GRCh37/hg19 17q11.2(chr17:29422328-29422387)x1",
+          "accession": "VCV001176369",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1176369/"
+        },
+        {
+          "title": "GRCh37/hg19 17q11.2(chr17:29490394-29509683)x3",
+          "accession": "VCV002648505",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2648505/"
+        },
+        {
+          "title": "GRCh37/hg19 17q11.2(chr17:29576002-29576137)x3",
+          "accession": "VCV003027403",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3027403/"
+        },
+        {
+          "title": "GRCh37/hg19 17q11.2(chr17:29679275-29679432)x1",
+          "accession": "VCV001013391",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1013391/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=NF1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "MAP2K1": {
+    "query": "MAP2K1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 68,
+    "n_docs": 68,
+    "n_classified_PLP": 68,
+    "by_consequence": {
+      "missense": 48,
+      "inframe_indel": 10,
+      "cnv_multigene": 9,
+      "intragenic_deletion_or_duplication": 1
+    },
+    "examples": {
+      "intragenic_deletion_or_duplication": [
+        {
+          "title": "NM_002755.4(MAP2K1):c.307_312del (p.Ile103_Lys104del)",
+          "accession": "VCV004974572",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Cerebral arteriovenous malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4974572/"
+        }
+      ],
+      "missense": [
+        {
+          "title": "NM_002755.4(MAP2K1):c.124C>T (p.Leu42Phe)",
+          "accession": "VCV000044587",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/44587/"
+        },
+        {
+          "title": "NM_002755.4(MAP2K1):c.125T>G (p.Leu42Arg)",
+          "accession": "VCV001723651",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1723651/"
+        },
+        {
+          "title": "NM_002755.4(MAP2K1):c.158T>C (p.Phe53Ser)",
+          "accession": "VCV000013350",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13350/"
+        },
+        {
+          "title": "NM_002755.4(MAP2K1):c.169A>C (p.Lys57Gln)",
+          "accession": "VCV000040779",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40779/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 15q22.1-26.3(chr15:59297293-102480888)x3",
+          "accession": "VCV000369835",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/369835/"
+        },
+        {
+          "title": "GRCh37/hg19 15q22.31-26.3(chr15:64637227-102509910)x3",
+          "accession": "VCV000253516",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253516/"
+        },
+        {
+          "title": "Single allele",
+          "accession": "VCV004891001",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Angelman syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4891001/"
+        },
+        {
+          "title": "Single allele",
+          "accession": "VCV000560049",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/560049/"
+        }
+      ],
+      "inframe_indel": [
+        {
+          "title": "NM_002755.4(MAP2K1):c.173_187del (p.Gln58_Glu62del)",
+          "accession": "VCV001691383",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Parkes Weber syndrome",
+            "Vascular malformation"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1691383/"
+        },
+        {
+          "title": "NM_002755.4(MAP2K1):c.175_177del (p.Lys59del)",
+          "accession": "VCV000222074",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "RASopathy",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/222074/"
+        },
+        {
+          "title": "NM_002755.4(MAP2K1):c.306_311del (p.Ile103_Lys104del)",
+          "accession": "VCV002672096",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Vascular malformation",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2672096/"
+        },
+        {
+          "title": "NM_002755.4(MAP2K1):c.147_149dup (p.Leu50_Glu51insLeu)",
+          "accession": "VCV003256896",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Cardiofaciocutaneous syndrome 3"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3256896/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=MAP2K1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "SHOC2": {
+    "query": "SHOC2[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 32,
+    "n_docs": 32,
+    "n_classified_PLP": 32,
+    "by_consequence": {
+      "cnv_multigene": 25,
+      "missense": 7
+    },
+    "examples": {
+      "missense": [
+        {
+          "title": "NM_007373.4(SHOC2):c.4A>G (p.Ser2Gly)",
+          "accession": "VCV000006821",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "Noonan syndrome-like disorder with loose anagen hair 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/6821/"
+        },
+        {
+          "title": "NM_007373.4(SHOC2):c.519G>A (p.Met173Ile)",
+          "accession": "VCV000181528",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/181528/"
+        },
+        {
+          "title": "NM_007373.4(SHOC2):c.519G>C (p.Met173Ile)",
+          "accession": "VCV002850800",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "RASopathy",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2850800/"
+        },
+        {
+          "title": "NM_007373.4(SHOC2):c.157G>A (p.Gly53Arg)",
+          "accession": "VCV001339314",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome-like disorder with loose anagen hair 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1339314/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 10q23.33-26.3(chr10:95078198-135427143)x3",
+          "accession": "VCV003063164",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3063164/"
+        },
+        {
+          "title": "GRCh37/hg19 10q24.1-26.3(chr10:98097365-130931432)x3",
+          "accession": "VCV004851108",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4851108/"
+        },
+        {
+          "title": "GRCh37/hg19 10q24.32-25.3(chr10:104030479-115410590)x1",
+          "accession": "VCV001527599",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1527599/"
+        },
+        {
+          "title": "GRCh37/hg19 10q24.32-26.3(chr10:103288313-135512075)x3",
+          "accession": "VCV000253479",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253479/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=SHOC2%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "CBL": {
+    "query": "CBL[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 69,
+    "n_docs": 69,
+    "n_classified_PLP": 69,
+    "by_consequence": {
+      "cnv_multigene": 31,
+      "missense": 18,
+      "splice": 11,
+      "inframe_indel": 6,
+      "nonsense": 2,
+      "other_or_unannotated": 1
+    },
+    "examples": {
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 11q23.3(chr11:115215434-120559928)x3",
+          "accession": "VCV000253520",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253520/"
+        },
+        {
+          "title": "GRCh37/hg19 11q23.3-24.2(chr11:115887338-126148523)x3",
+          "accession": "VCV004682793",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4682793/"
+        },
+        {
+          "title": "GRCh37/hg19 11q23.3-25(chr11:116681007-134938470)x3",
+          "accession": "VCV000563884",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/563884/"
+        },
+        {
+          "title": "GRCh37/hg19 11q23.3-25(chr11:116683755-134937416)x3",
+          "accession": "VCV003148862",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3148862/"
+        }
+      ],
+      "splice": [
+        {
+          "title": "NM_005188.4(CBL):c.1096-1G>C",
+          "accession": "VCV000045196",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "CBL-related disorder",
+            "Inborn genetic diseases",
+            "Juvenile myelomonocytic leukemia"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/45196/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1096-1G>T",
+          "accession": "VCV000180815",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "CBL-related disorder",
+            "Cardiovascular phenotype",
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/180815/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1096-2A>T",
+          "accession": "VCV000689750",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "CBL-related disorder"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/689750/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1096-4_1096-1del",
+          "accession": "VCV000045197",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "CBL-related disorder",
+            "RASopathy",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/45197/"
+        }
+      ],
+      "inframe_indel": [
+        {
+          "title": "NM_005188.4(CBL):c.1099_1101del (p.Gln367del)",
+          "accession": "VCV000523667",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "CBL-related disorder",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/523667/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1076_1087del (p.Asp359_Lys362del)",
+          "accession": "VCV000040404",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40404/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1090_1092del (p.Thr364del)",
+          "accession": "VCV004880201",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "CBL-related disorder"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4880201/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1103_1108del (p.Tyr368_Glu369del)",
+          "accession": "VCV001712083",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1712083/"
+        }
+      ],
+      "missense": [
+        {
+          "title": "NM_005188.4(CBL):c.1100A>C (p.Gln367Pro)",
+          "accession": "VCV000013807",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "CBL-related disorder",
+            "Inborn genetic diseases",
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13807/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1100A>G (p.Gln367Arg)",
+          "accession": "VCV001053208",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "RASopathy",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1053208/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1111T>A (p.Tyr371Asn)",
+          "accession": "VCV000180827",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "CBL-related disorder",
+            "Neurodevelopmental disorder",
+            "Noonan syndrome 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/180827/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.1111T>C (p.Tyr371His)",
+          "accession": "VCV000013811",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "CBL-related disorder",
+            "Cardiovascular phenotype",
+            "Juvenile myelomonocytic leukemia"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13811/"
+        }
+      ],
+      "nonsense": [
+        {
+          "title": "NM_005188.4(CBL):c.1516C>T (p.Arg506Ter)",
+          "accession": "VCV001334208",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome and Noonan-related syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1334208/"
+        },
+        {
+          "title": "NM_005188.4(CBL):c.306T>G (p.Tyr102Ter)",
+          "accession": "VCV000040401",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40401/"
+        }
+      ],
+      "other_or_unannotated": [
+        {
+          "title": "NM_005188.2:c.1227+2_1227+3delTACinsAAG",
+          "accession": "VCV000180826",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/180826/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=CBL%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "RIT1": {
+    "query": "RIT1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 54,
+    "n_docs": 54,
+    "n_classified_PLP": 54,
+    "by_consequence": {
+      "missense": 36,
+      "cnv_multigene": 17,
+      "nonsense": 1
+    },
+    "examples": {
+      "missense": [
+        {
+          "title": "NM_006912.6(RIT1):c.268A>G (p.Met90Val)",
+          "accession": "VCV000561681",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/561681/"
+        },
+        {
+          "title": "NM_006912.6(RIT1):c.104G>C (p.Ser35Thr)",
+          "accession": "VCV000183401",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Noonan syndrome",
+            "Noonan syndrome 8",
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/183401/"
+        },
+        {
+          "title": "NM_006912.6(RIT1):c.170C>G (p.Ala57Gly)",
+          "accession": "VCV000060506",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Noonan syndrome",
+            "Noonan syndrome 1"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/60506/"
+        },
+        {
+          "title": "NM_006912.6(RIT1):c.229G>A (p.Ala77Thr)",
+          "accession": "VCV000183403",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Noonan syndrome",
+            "Noonan syndrome 1",
+            "Noonan syndrome 8"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/183403/"
+        }
+      ],
+      "cnv_multigene": [
+        {
+          "title": "GRCh37/hg19 1q12-23.1(chr1:142535935-157648813)x3",
+          "accession": "VCV002580317",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Chromosome 1q21.1 duplication syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2580317/"
+        },
+        {
+          "title": "GRCh37/hg19 1q21.1-23.1(chr1:144368497-158992086)x3",
+          "accession": "VCV003062988",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3062988/"
+        },
+        {
+          "title": "GRCh37/hg19 1q21.1-23.1(chr1:146577511-157155587)x3",
+          "accession": "VCV003063532",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not specified"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3063532/"
+        },
+        {
+          "title": "GRCh37/hg19 1q21.1-44(chr1:143932350-249224684)x3",
+          "accession": "VCV004682508",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4682508/"
+        }
+      ],
+      "nonsense": [
+        {
+          "title": "NM_006912.6(RIT1):c.280G>T (p.Glu94Ter)",
+          "accession": "VCV001065464",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Non-immune hydrops fetalis"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1065464/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=RIT1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  },
+  "LZTR1": {
+    "query": "LZTR1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+    "esearch_count": 1182,
+    "n_docs": 1182,
+    "n_classified_PLP": 1182,
+    "by_consequence": {
+      "frameshift": 388,
+      "cnv_multigene": 382,
+      "nonsense": 204,
+      "splice": 148,
+      "missense": 36,
+      "intragenic_deletion_or_duplication": 11,
+      "intronic_or_splice_region": 11,
+      "inframe_indel": 2
+    },
+    "examples": {
+      "cnv_multigene": [
+        {
+          "title": "NM_006767.4(LZTR1):c.27dup (p.Gln10fs)",
+          "accession": "VCV000372684",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/372684/"
+        },
+        {
+          "title": "GRCh38/hg38 22q11.21(chr22:18178957-21086225)x1",
+          "accession": "VCV000160843",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/160843/"
+        },
+        {
+          "title": "GRCh38/hg38 22q11.21(chr22:18339130-21086225)x1",
+          "accession": "VCV000160891",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/160891/"
+        },
+        {
+          "title": "GRCh38/hg38 22q11.21(chr22:18339130-21151128)x1",
+          "accession": "VCV000160849",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "See cases"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/160849/"
+        }
+      ],
+      "frameshift": [
+        {
+          "title": "NM_006767.4(LZTR1):c.1030del (p.Ser344fs)",
+          "accession": "VCV000523986",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/523986/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.1003del (p.Ala335fs)",
+          "accession": "VCV001392630",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Noonan syndrome 2",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1392630/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.1005_1012del (p.Glu336fs)",
+          "accession": "VCV000452306",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "LZTR1-related schwannomatosis"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/452306/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.1019_1022del (p.Arg340fs)",
+          "accession": "VCV001453837",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1453837/"
+        }
+      ],
+      "splice": [
+        {
+          "title": "NM_006767.4(LZTR1):c.1149+1G>A",
+          "accession": "VCV000451722",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/451722/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.1149+1G>T",
+          "accession": "VCV002078744",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2078744/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.263+1G>A",
+          "accession": "VCV001066305",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1066305/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.993+1G>A",
+          "accession": "VCV000973830",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/973830/"
+        }
+      ],
+      "missense": [
+        {
+          "title": "NM_006767.4(LZTR1):c.1234C>T (p.Arg412Cys)",
+          "accession": "VCV000373089",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/373089/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.742G>A (p.Gly248Arg)",
+          "accession": "VCV000209088",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/209088/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.842C>T (p.Pro281Leu)",
+          "accession": "VCV000561683",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/561683/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.848G>A (p.Arg283Gln)",
+          "accession": "VCV000561716",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/561716/"
+        }
+      ],
+      "nonsense": [
+        {
+          "title": "NM_006767.4(LZTR1):c.1084C>T (p.Arg362Ter)",
+          "accession": "VCV000289969",
+          "classification": "Likely pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/289969/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.2178C>A (p.Tyr726Ter)",
+          "accession": "VCV000522799",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/522799/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.1033G>T (p.Glu345Ter)",
+          "accession": "VCV001454586",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "LZTR1-related schwannomatosis",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1454586/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.1048del (p.Thr349_Leu350insTer)",
+          "accession": "VCV001776094",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "LZTR1-related schwannomatosis"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1776094/"
+        }
+      ],
+      "intragenic_deletion_or_duplication": [
+        {
+          "title": "NM_006767.4(LZTR1):c.404del",
+          "accession": "VCV001034315",
+          "classification": "Pathogenic/Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "LZTR1-related schwannomatosis"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1034315/"
+        },
+        {
+          "title": "NC_000022.10:g.(?_21335906)_(21346541_?)del",
+          "accession": "VCV001456233",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1456233/"
+        },
+        {
+          "title": "NC_000022.10:g.(?_21336585)_(21353322_?)del",
+          "accession": "VCV003629816",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Schwannomatosis"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3629816/"
+        },
+        {
+          "title": "NC_000022.10:g.(?_21336586)_(21353321_?)del",
+          "accession": "VCV003377780",
+          "classification": "Pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome 10"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3377780/"
+        }
+      ],
+      "inframe_indel": [
+        {
+          "title": "NM_006767.4(LZTR1):c.2353_2360delinsTG (p.Ala785_Asp787delinsCys)",
+          "accession": "VCV003238233",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3238233/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.438GAA[1] (p.Lys147del)",
+          "accession": "VCV004531818",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Noonan syndrome 10"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4531818/"
+        }
+      ],
+      "intronic_or_splice_region": [
+        {
+          "title": "NM_006767.4(LZTR1):c.1943-256C>T",
+          "accession": "VCV000522800",
+          "classification": "Pathogenic",
+          "review_status": "reviewed by expert panel",
+          "traits": [
+            "RASopathy"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/522800/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.1943-276G>A",
+          "accession": "VCV002447749",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome",
+            "not provided"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2447749/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.2220-17C>A",
+          "accession": "VCV000599029",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, multiple submitters, no conflicts",
+          "traits": [
+            "LZTR1-related schwannomatosis",
+            "Noonan syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/599029/"
+        },
+        {
+          "title": "NM_006767.4(LZTR1):c.1942+343C>T",
+          "accession": "VCV002447755",
+          "classification": "Likely pathogenic",
+          "review_status": "criteria provided, single submitter",
+          "traits": [
+            "Cardiovascular phenotype",
+            "Hereditary cancer-predisposing syndrome"
+          ],
+          "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2447755/"
+        }
+      ]
+    },
+    "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=LZTR1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+  }
+}

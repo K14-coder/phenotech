@@ -1,0 +1,195 @@
+{
+ "pmid": "41332143",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:45:38.886Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_030b598879acd89d016ac14d2d12a487d2ab1ada0e210a7568",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_030b598879acd89d016ac14d2d1de887d29d563e408046205c": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 352,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 352,
+     "output_tokens": 0
+    },
+    "msg_030b598879acd89d016ac14d2efb7c87d28cb5fc2c777b35b9": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 896
+      }
+     ],
+     "input_tokens": 2,
+     "output_tokens": 896
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1435,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 896,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 2331
+ },
+ "latency_ms": 39232,
+ "input_sha1": "b848a1d2f7d921b0",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/SYT1.efetch.xml",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"resolution of hypotonia\",\"object_type\":\"phenotype\",\"quote\":\"Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"worsening of movement disorders\",\"object_type\":\"phenotype\",\"quote\":\"Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"sleep difficulties\",\"object_type\":\"phenotype\",\"quote\":\"Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"self-injurious behaviors\",\"object_type\":\"phenotype\",\"quote\":\"Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"Social-communicative impairments\",\"object_type\":\"phenotype\",\"quote\":\"Social-communicative impairments were prominent, with evidence of progression with age.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"MRI abnormalities\",\"object_type\":\"phenotype\",\"quote\":\"MRI abnormalities were identified in 45% of individuals, while EEG abnormalities were present in 93%.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"EEG abnormalities\",\"object_type\":\"phenotype\",\"quote\":\"MRI abnormalities were identified in 45% of individuals, while EEG abnormalities were present in 93%.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"Epileptiform activity\",\"object_type\":\"phenotype\",\"quote\":\"Epileptiform activity frequently co-occurred with movement disorders, while irregular sleep EEG coincided with sleep difficulties and respiratory problems.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"irregular sleep EEG\",\"object_type\":\"phenotype\",\"quote\":\"Epileptiform activity frequently co-occurred with movement disorders, while irregular sleep EEG coincided with sleep difficulties and respiratory problems.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1-associated neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"respiratory problems\",\"object_type\":\"phenotype\",\"quote\":\"Epileptiform activity frequently co-occurred with movement disorders, while irregular sleep EEG coincided with sleep difficulties and respiratory problems.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "resolution of hypotonia",
+   "object_type": "phenotype",
+   "quote": "Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "worsening of movement disorders",
+   "object_type": "phenotype",
+   "quote": "Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "sleep difficulties",
+   "object_type": "phenotype",
+   "quote": "Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "self-injurious behaviors",
+   "object_type": "phenotype",
+   "quote": "Qualitative age-related clinical trends included the resolution of hypotonia and worsening of movement disorders, sleep difficulties, and self-injurious behaviors.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "Social-communicative impairments",
+   "object_type": "phenotype",
+   "quote": "Social-communicative impairments were prominent, with evidence of progression with age.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "MRI abnormalities",
+   "object_type": "phenotype",
+   "quote": "MRI abnormalities were identified in 45% of individuals, while EEG abnormalities were present in 93%.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "EEG abnormalities",
+   "object_type": "phenotype",
+   "quote": "MRI abnormalities were identified in 45% of individuals, while EEG abnormalities were present in 93%.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "Epileptiform activity",
+   "object_type": "phenotype",
+   "quote": "Epileptiform activity frequently co-occurred with movement disorders, while irregular sleep EEG coincided with sleep difficulties and respiratory problems.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "irregular sleep EEG",
+   "object_type": "phenotype",
+   "quote": "Epileptiform activity frequently co-occurred with movement disorders, while irregular sleep EEG coincided with sleep difficulties and respiratory problems.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1-associated neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "respiratory problems",
+   "object_type": "phenotype",
+   "quote": "Epileptiform activity frequently co-occurred with movement disorders, while irregular sleep EEG coincided with sleep difficulties and respiratory problems.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

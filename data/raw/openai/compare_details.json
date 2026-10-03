@@ -1,0 +1,4733 @@
+{
+ "generated_at": "2026-10-03T19:04:03.594Z",
+ "model": "gpt-6-astra",
+ "claim_stats": {
+  "verified": 587,
+  "reconciled": 291,
+  "compared": 290,
+  "dropped": {
+   "multi-gene deletion: no mechanism edge by design": 1
+  }
+ },
+ "decisions": [
+  {
+   "edge_id": "disease:NSF|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "31675180",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "31675180#2",
+    "quote": "Our findings suggest that the two pathogenic variants exert a dominant negative effect."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "38781976",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "38781976#4",
+    "quote": "Haploinsufficiency underlies the neurodevelopmental consequences of SLC6A1 variants."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "41174879",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41174879#1",
+    "quote": "SLC6A1 haploinsufficiency has been confirmed as the predominant pathway of SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD); however, the molecular mechanism underlying the variable clinical presentation remains unclear."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "25865495",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "25865495#2",
+    "quote": "We describe two truncations and four missense alterations, all of which most likely lead to loss of function of GAT-1 and thus reduced GABA re-uptake from the synapse."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "34028503",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "34028503#1",
+    "quote": "We found that a partial or complete loss-of-function represents a common disease mechanism, although the extent of GABA uptake reduction is variable."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "35911425",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "35911425#0",
+    "quote": "Based on functional assays of solute carrier Family 6 Member 1 variants, we conclude that partial or complete loss of γ-amino butyric acid uptake due to reduced membrane γ-amino butyric acid transporter 1 trafficking is the primary aetiology."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "36741049",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "36741049#1",
+    "quote": "We systematically examined fifteen hGAT-1 disease variants, all of which dramatically reduced or completely abolished GABA uptake activity."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "38781976",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "38781976#5",
+    "quote": "Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "41174879",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "41174879#2",
+    "quote": "We confirm phenotypes in flies expressing SLC6A1 variants consistent with a partial loss-of-function mechanism."
+   },
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "42650175",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "42650175#16",
+    "quote": "CONCLUSIONS: GAT-1 p.Ala305Val is a trafficking-impaired, loss-of-function variant whose dysfunction is amenable to two convergent therapeutic axes: pharmacologic correction of folding and trafficking, and augmentation of functional transporter expression."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "31176687",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "31176687#6",
+    "quote": "This mutation caused instability of the mutant transporter protein, which resulted in reduced cell surface and total protein levels."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "34028503",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "34028503#3",
+    "quote": "Although the extent of reduction of the total protein, surface protein, and the GABA uptake level of the variant transporters is variable, the loss of GABA uptake function and endoplasmic reticulum retention is consistent across induced pluripotent stem cell-derived cell types, including astrocytes and neurons, for the surveyed variants."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 4,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "36741049",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "36741049#2",
+    "quote": "Many of these loss-of-function variants were absent from their regular site of action at the cell surface, due to protein misfolding and/or impaired trafficking machinery (as verified by confocal microscopy and de-glycosylation experiments)."
+   },
+   "curated_polarity": [
+    1,
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 4,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0000729",
+   "edge_type": "has_phenotype",
+   "pmid": "34006619",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "34006619#4",
+    "quote": "The phenotype of individuals with pathogenic variants in SLC6A1 includes hypotonia, intellectual disability/developmental delay, language disorder/speech delay, autism spectrum disorder, sleep issues and seizures."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0000729",
+   "edge_type": "has_phenotype",
+   "pmid": "34028503",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "34028503#8",
+    "quote": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0000729",
+   "edge_type": "has_phenotype",
+   "pmid": "38781976",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "38781976#2",
+    "quote": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0000729",
+   "edge_type": "has_phenotype",
+   "pmid": "41174879",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41174879#7",
+    "quote": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001249",
+   "edge_type": "has_phenotype",
+   "pmid": "34028503",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "34028503#9",
+    "quote": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001252",
+   "edge_type": "has_phenotype",
+   "pmid": "34006619",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "34006619#1",
+    "quote": "The phenotype of individuals with pathogenic variants in SLC6A1 includes hypotonia, intellectual disability/developmental delay, language disorder/speech delay, autism spectrum disorder, sleep issues and seizures."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "31176687",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "31176687#2",
+    "quote": "We identified a novel missense mutation in a patient with Lennox-Gastaut syndrome (LGS) characterized by severe seizures and developmental delay."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "38781976",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "38781976#1",
+    "quote": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "41174879",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41174879#4",
+    "quote": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "41385967",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41385967#3",
+    "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "41893060",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41893060#2",
+    "quote": "INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0011170",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25865495#4",
+    "quote": "In this study, targeted resequencing of 644 individuals with epileptic encephalopathies led to the identification of six SLC6A1 mutations in seven individuals, all of whom have epilepsy with myoclonic-atonic seizures (MAE)."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SNAP25|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "41579375",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "41579375#2",
+    "quote": "I192N is strongly dominant negative in the presence of wild-type SNAP-25, leading to impaired survival and reduced synaptic release."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SNAP25|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "25381298",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "25381298#5",
+    "quote": "CONCLUSION: Ile67Asn variant in SNAP25B is pathogenic because it inhibits synaptic vesicle exocytosis."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001251",
+   "edge_type": "has_phenotype",
+   "pmid": "41769487",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41769487#7",
+    "quote": "This case broadens the genotypic and phenotypic spectrum of SNAP25-related DEE, highlighting febrile illness-triggered episodic ataxia as a previously unreported manifestation."
+   },
+   "mixed": true,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "41769487",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41769487#6",
+    "quote": "He exhibited a moderate global developmental delay and recurrent, transient episodes of gait ataxia triggered by febrile illnesses, lasting up to one week and resolving without residual deficits."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001288",
+   "edge_type": "has_phenotype",
+   "pmid": "41769487",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41769487#9",
+    "quote": "Neurological examination revealed mild microcephaly and a clumsy gait without persistent ataxia or weakness between febrile episodes."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "32572454",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "32572454#8",
+    "quote": "The mutation STX1BV216E, also causing epileptic encephalopathies, only slightly diminishes Munc18-1 and Munc13 interactions, but leads to enhanced fusogenicity and increased vesicular release probability, also in STX1-null neurons."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "42673765",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "42673765#3",
+    "quote": "G226R exhibited both gain- and loss-of-function characteristics, with increased miniature excitatory postsynaptic current frequency in networks but not in autapses, and synaptic failure during sustained high-frequency stimulation."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "30737342",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "30737342#1",
+    "quote": "More often, we found loss-of-function mutations in benign syndromes, whereas missense variants in the SNARE motif of syntaxin-1B were associated with more severe phenotypes."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "32572454",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "opposite_effect",
+    "pol": -1,
+    "claim_id": "32572454#8",
+    "quote": "The mutation STX1BV216E, also causing epileptic encephalopathies, only slightly diminishes Munc18-1 and Munc13 interactions, but leads to enhanced fusogenicity and increased vesicular release probability, also in STX1-null neurons."
+   },
+   "curated_polarity": [
+    1,
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 2
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "33677401",
+   "case": "a",
+   "agrees": false,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "33677401#0",
+    "quote": "RESULTS: We identified four unrelated individuals with pathogenic or likely pathogenic variants in STX1B (one missense and three loss-of-function variants)."
+   },
+   "curated_polarity": [
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "42673765",
+   "case": "a",
+   "agrees": false,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "42673765#4",
+    "quote": "G226R exhibited both gain- and loss-of-function characteristics, with increased miniature excitatory postsynaptic current frequency in networks but not in autapses, and synaptic failure during sustained high-frequency stimulation."
+   },
+   "curated_polarity": [
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "33677401",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "33677401#4",
+    "quote": "Three of the four patients had developmental delay."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0002373",
+   "edge_type": "has_phenotype",
+   "pmid": "25362483",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25362483#4",
+    "quote": "Here we report the identification of mutations in STX1B, encoding syntaxin-1B, that are associated with both febrile seizures and epilepsy."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0002373",
+   "edge_type": "has_phenotype",
+   "pmid": "30737342",
+   "case": "d",
+   "agrees": false,
+   "pick": {
+    "via": "direct",
+    "pol": -1,
+    "claim_id": "30737342#8",
+    "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0002373",
+   "edge_type": "has_phenotype",
+   "pmid": "33677401",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "33677401#5",
+    "quote": "Febrile seizures occurred in two individuals."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "27597756",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "27597756#3",
+    "quote": "Here, we used single-molecule analysis, gene-edited cells, and neurons to demonstrate that Munc18-1 EIEE-causing mutants form large polymers that coaggregate wild-type Munc18-1 in vitro and in cells."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 3,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "30266908",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "30266908#3",
+    "quote": "Aggregates of mutant Munc18-1 incorporate wild-type Munc18-1, depleting functional Munc18-1 levels beyond hemizygous levels."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "32643187",
+   "case": "a",
+   "agrees": false,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32643187#3",
+    "quote": "The molecular disease mechanisms underlying STXBP1-linked disorders are yet to be fully understood, but both haploinsufficiency and dominant-negative mechanisms have been proposed."
+   },
+   "curated_polarity": [
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "33332765",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "33332765#7",
+    "quote": "Munc18-1 is essential for neurotransmitter release, and mutations in Munc18-1 have been shown to cause neuronal dysfunction via aggregation and co-aggregation of the wild-type protein, reducing functional Munc18-1 levels well below hemizygous levels."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "27597756",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "27597756#2",
+    "quote": "Munc18-1 heterozygous mutations cause developmental defects and epileptic phenotypes, including infantile epileptic encephalopathy (EIEE), suggestive of a gain of pathological function."
+   },
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "31855252",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "31855252#6",
+    "quote": "Hence, the homozygous L446F mutation causes a gain-of-function phenotype regarding release probability and synaptic transmission while having less impact on protein levels than previously reported (heterozygous) mutations."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 3,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "18469812",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "18469812#3",
+    "quote": "These findings suggest that haploinsufficiency of STXBP1 causes EIEE."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "29538625",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "29538625#7",
+    "quote": "Together, these cellular studies suggest that impaired protein stability and STXBP1 haploinsufficiency explain STXBP1-encephalopathy and that, therefore, Stxbp1+/- mice provide a valid mouse model."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "32643187",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32643187#2",
+    "quote": "The molecular disease mechanisms underlying STXBP1-linked disorders are yet to be fully understood, but both haploinsufficiency and dominant-negative mechanisms have been proposed."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "38242640",
+   "case": "a",
+   "agrees": false,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "38242640#6",
+    "quote": "Although haploinsufficiency is the prevailing disease mechanism, it remains unclear how the reduction in Munc18-1 levels causes synaptic dysfunction in disease as well as how haploinsufficiency alone can account for the significant heterogeneity among patients in terms of the presence, onset and severity of different symptoms."
+   },
+   "curated_polarity": [
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "18469812",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "18469812#2",
+    "quote": "Circular dichroism melting experiments revealed that a mutant form of the protein was significantly thermolabile compared to wild type."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "25284778",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "25284778#2",
+    "quote": "Using neurosecretory cells deficient in Munc18, we show that a disease-linked mutation, C180Y, renders the protein unstable at 37°C."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "27597756",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "27597756#4",
+    "quote": "Surprisingly, Munc18-1 EIEE mutants also form Lewy body-like structures that contain α-synuclein (α-Syn)."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "29538625",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "29538625#6",
+    "quote": "Together, these cellular studies suggest that impaired protein stability and STXBP1 haploinsufficiency explain STXBP1-encephalopathy and that, therefore, Stxbp1+/- mice provide a valid mouse model."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "30266908",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "30266908#1",
+    "quote": "We find that at least five disease-linked missense mutations of Munc18-1 result in destabilization and aggregation of the mutant protein."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "31855252",
+   "case": "a",
+   "agrees": false,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "31855252#4",
+    "quote": "Impaired mutant protein stability leading to reduced synaptic transmission is considered the main underlying pathogenetic mechanism."
+   },
+   "curated_polarity": [
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 3,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "33332765",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "33332765#6",
+    "quote": "Munc18-1 is essential for neurotransmitter release, and mutations in Munc18-1 have been shown to cause neuronal dysfunction via aggregation and co-aggregation of the wild-type protein, reducing functional Munc18-1 levels well below hemizygous levels."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "38242640",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "38242640#7",
+    "quote": "Using biochemical and cell biological readouts on mouse brains, cultured mouse neurons and heterologous cells, we found that the synaptic Munc18-1 interactors Doc2A and Doc2B are unstable in the absence of Munc18-1 and aggregate in the presence of disease-causing Munc18-1 mutants."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "25705886",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "25705886#2",
+    "quote": "Together, the clinical features, electrophysiological phenotype, and in vitro neuronal phenotype associated with this dominant negative SYT1 mutation highlight presynaptic mechanisms that mediate human motor control and cognitive development."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "32362337",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "32362337#2",
+    "quote": "Synaptic transmission was impaired in neurons expressing mutant variants, which demonstrated potent, graded dominant-negative effects."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "38321119",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "38321119#4",
+    "quote": "Syt1PL acts in a dominant-negative manner supporting a causative role for the mutation in the heterozygous patient."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "39481209",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "39481209#7",
+    "quote": "We show that recently identified variants within the facilitatory C2A domain of the protein (L159R, T196K, E209K, E219Q), as well as additional variants in the C2B domain (M303V, S309P, Y365C, G369D), share an underlying pathogenic mechanism, causing a graded and variant-dependent dominant-negative impairment in exocytosis."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "41438914",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41438914#1",
+    "quote": "The precise pathogenic mechanism of BAGOS is still unclear, with preliminary data favoring a dominant-negative effect, although a previous case presenting a reciprocal translocation disrupting SYT1 supports haploinsufficiency as a possible mechanism."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "41475766",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "41475766#2",
+    "quote": "However, overexpression of BAGOS SYT1 mutants in either WT mouse neurons or hiPSC-derived human neurons, a condition closer to the heterozygotic genotype of patients, revealed a dominant-negative effect of the mutant proteins."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "38321119",
+   "case": "a",
+   "agrees": false,
+   "pick": {
+    "via": "opposite_effect",
+    "pol": -1,
+    "claim_id": "38321119#4",
+    "quote": "Syt1PL acts in a dominant-negative manner supporting a causative role for the mutation in the heterozygous patient."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 2
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "41438914",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41438914#2",
+    "quote": "This is the second BAGOS case reported in the literature caused by SYT1 disruption, supporting that reduced amounts of functional SYT1, either by haploinsufficiency or dominant-negative effect, is responsible for SYT1-associated neurodevelopmental syndrome."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT1|has_phenotype|phenotype:HP:0100660",
+   "edge_type": "has_phenotype",
+   "pmid": "25705886",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25705886#3",
+    "quote": "The individual harboring this variant presented with an early onset dyskinetic movement disorder, severe motor delay, and profound cognitive impairment."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT1|has_phenotype|phenotype:HP:0100660",
+   "edge_type": "has_phenotype",
+   "pmid": "41756855",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41756855#7",
+    "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT2|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "32776697",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "32776697#4",
+    "quote": "These variants are thought to have a dominant-negative effect on synaptic vesicle exocytosis, although the precise pathomechanism remains to be elucidated."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:SYT2|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "34037996",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "34037996#4",
+    "quote": "The pathogenesis of the dominant form likely involves a dominant-negative effect due to disruption of the dual function of synaptotagmin as a Ca2+ -sensor and modulator of synaptic vesicle exocytosis."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT2|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "32776697",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "32776697#1",
+    "quote": "Biallelic loss of function variants in SYT2 cause a treatable congenital onset presynaptic myasthenic syndrome."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001252",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32776697#7",
+    "quote": "Here we report seven patients of five families, with biallelic loss of function variants in SYT2, clinically manifesting with a remarkably consistent phenotype of severe congenital onset hypotonia and weakness, with variable degrees of respiratory involvement."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001284",
+   "edge_type": "has_phenotype",
+   "pmid": "32250532",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32250532#4",
+    "quote": "The affected 2-year-old girl had profound weakness and areflexia with moderate bulbar deficit."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0025680",
+   "edge_type": "has_phenotype",
+   "pmid": "26519543",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "26519543#5",
+    "quote": "CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0025680",
+   "edge_type": "has_phenotype",
+   "pmid": "32250532",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32250532#7",
+    "quote": "Repetitive nerve stimulation revealed an extreme reduction of compound muscle action potential amplitudes at rest, with a striking facilitation followed by a progressive decline at fast stimulation rates."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0033383",
+   "edge_type": "has_phenotype",
+   "pmid": "32250532",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32250532#6",
+    "quote": "Repetitive nerve stimulation revealed an extreme reduction of compound muscle action potential amplitudes at rest, with a striking facilitation followed by a progressive decline at fast stimulation rates."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:UNC13A|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "28192369",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "implied",
+    "pol": 1,
+    "claim_id": "28192369#1",
+    "quote": "Electrophysiological studies in murine neuronal cultures and functional analyses in Caenorhabditis elegans revealed that the UNC13A variant causes a distinct dominant gain of function that is characterized by increased fusion propensity of synaptic vesicles, which leads to increased initial synaptic vesicle release probability and abnormal short-term synaptic plasticity."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 1
+  },
+  {
+   "edge_id": "disease:UNC13A|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "41125872",
+   "case": "a",
+   "agrees": false,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "41125872#2",
+    "quote": "Using assays with expression of UNC13A variants in mouse hippocampal neurons and in Caenorhabditis elegans, we identify three mechanisms of pathogenicity, including reduction in synaptic strength caused by reduced UNC13A protein expression, increased neurotransmission caused by UNC13A gain-of-function and impaired regulation of neurotransmission by second messenger signalling."
+   },
+   "curated_polarity": [
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:UNC13A|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "27648472",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "27648472#3",
+    "quote": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:UNC13A|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "36737245",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "lifted",
+    "pol": 1,
+    "claim_id": "36737245#2",
+    "quote": "In the absence of functional TDP-43, risk variants in UNC13A lead to the inclusion of a cryptic exon in UNC13A messenger RNA, subsequently leading to nonsense mediated decay, with loss of functional protein."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0000729",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30929742#8",
+    "quote": "Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0000729",
+   "edge_type": "has_phenotype",
+   "pmid": "32906212",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32906212#2",
+    "quote": "Clinical and genetic features of five unrelated patients with de novo pathogenic variants in the synaptic vesicle-associated membrane protein 2 (VAMP2) reveal common features of global developmental delay, autistic tendencies, behavioral disturbances, and a higher propensity to develop epilepsy."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0001249",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30929742#7",
+    "quote": "Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "32906212",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32906212#1",
+    "quote": "Clinical and genetic features of five unrelated patients with de novo pathogenic variants in the synaptic vesicle-associated membrane protein 2 (VAMP2) reveal common features of global developmental delay, autistic tendencies, behavioral disturbances, and a higher propensity to develop epilepsy."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0002353",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30929742#12",
+    "quote": "Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0008936",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30929742#6",
+    "quote": "Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0100704",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30929742#9",
+    "quote": "Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:CPLX1|causes|disease:CPLX1",
+   "edge_type": "causes",
+   "pmid": "28422131",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "28422131#0",
+    "quote": "Variants in CPLX1 in two families with autosomal-recessive severe infantile myoclonic epilepsy and ID."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:NSF|causes|disease:NSF",
+   "edge_type": "causes",
+   "pmid": "31675180",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "31675180#0",
+    "quote": "De novo heterozygous mutations in the NSF gene cause early infantile epileptic encephalopathy."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "25865495",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25865495#0",
+    "quote": "Mutations in the GABA Transporter SLC6A1 Cause Epilepsy with Myoclonic-Atonic Seizures."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "31176687",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "31176687#0",
+    "quote": "Mutations in SLC6A1 have been associated mainly with myoclonic atonic epilepsy (MAE) and intellectual disability."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "36741049",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "36741049#0",
+    "quote": "Mutations in the human γ-aminobutyric acid (GABA) transporter 1 (hGAT-1) can instigate myoclonic-atonic and other generalized epilepsies in the afflicted individuals."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "39923323",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "39923323#0",
+    "quote": "Haploinsufficient deletions of GABA transporter 1 (GAT-1)- encoding SLC6A1, and GABA transporter 3 (GAT-3)-encoding SLC6A11 are implicated in epileptic syndromes."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "41174879",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41174879#0",
+    "quote": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "41385967",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41385967#0",
+    "quote": "Developmental and epileptic encephalopathies (DEEs) caused by pathogenic variants in SLC6A1, encoding γ-aminobutyric acid (GABA) transporter 1 (GAT-1), present with seizures and severe comorbidities including cognitive impairment, developmental delay, motor difficulties, and social deficits."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "41648160",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41648160#0",
+    "quote": "Mutations in SLC6A1 encoding GABA transporter 1 are a leading monogenic cause of developmental and epileptic encephalopathies, severe neurodevelopmental disorders lacking effective treatments."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "41893060",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41893060#0",
+    "quote": "INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays."
+   },
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|participates_in|mech:gaba-reuptake",
+   "edge_type": "participates_in",
+   "pmid": "25865495",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25865495#1",
+    "quote": "GAT-1, encoded by SLC6A1, is one of the major gamma-aminobutyric acid (GABA) transporters in the brain and is responsible for re-uptake of GABA from the synapse."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|participates_in|mech:gaba-reuptake",
+   "edge_type": "participates_in",
+   "pmid": "34006619",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "34006619#0",
+    "quote": "GAT-1 maintains neurotransmitter homeostasis by removing excess GABA from the synaptic cleft."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SLC6A1|participates_in|mech:gaba-reuptake",
+   "edge_type": "participates_in",
+   "pmid": "34028503",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "34028503#0",
+    "quote": "Its encoded GABA transporter 1 (GAT-1) is responsible for the reuptake of GABA into presynaptic neurons and glia, thereby modulating neurotransmission."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|causes|disease:SNAP25",
+   "edge_type": "causes",
+   "pmid": "25003006",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25003006#0",
+    "quote": "We suggest that SNAP25 mutations in humans are a novel genetic cause of intellectual disability and epilepsy."
+   },
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|causes|disease:SNAP25",
+   "edge_type": "causes",
+   "pmid": "33147442",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "33147442#3",
+    "quote": "Recent studies have reported several mutations in the gene encoding SNAP25 as a causative factor for developmental and epileptic encephalopathies of infancy and childhood with diverse clinical manifestations."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|causes|disease:SNAP25",
+   "edge_type": "causes",
+   "pmid": "33299146",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "33299146#0",
+    "quote": "De novo variants in SNAP25 cause an early-onset developmental and epileptic encephalopathy."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|causes|disease:SNAP25",
+   "edge_type": "causes",
+   "pmid": "40181518",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "40181518#5",
+    "quote": "Here, we generated CRISPR/Cas9-engineered human-induced pluripotent stem-cell (hiPSC) lines carrying the pathogenic variant I67N in the SNAREopathy gene SNAP25."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|causes|disease:SNAP25",
+   "edge_type": "causes",
+   "pmid": "41769487",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41769487#0",
+    "quote": "Heterozygous missense or loss-of-function variants in synaptosomal-associated protein 25 (SNAP25), a core component of the presynaptic soluble N-ethylmaleimide-sensitive factor attachment protein receptor (SNARE) complex, have been implicated in a spectrum of DEEs with variable neurological features."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|participates_in|mech:ca-triggered-exocytosis",
+   "edge_type": "participates_in",
+   "pmid": "25381298",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25381298#3",
+    "quote": "Ca(2+)-triggered exocytosis is initiated when synaptobrevin attached to synaptic vesicles (v-SNARE) assembles with SNAP25B and syntaxin anchored in the presynaptic membrane (t-SNAREs) into an α-helical coiled-coil held together by hydrophobic interactions."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "25003006",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25003006#2",
+    "quote": "SNAP25 is part of the soluble N-ethylmaleimide-sensitive factor attachment protein receptor (SNARE) protein complex which is involved in exocytotic release of neurotransmitters."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "25381298",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25381298#0",
+    "quote": "Exome sequencing identified a dominant de novo variant, p.Ile67Asn, in SNAP25B, a SNARE protein essential for exocytosis of synaptic vesicles from nerve terminals and of dense-core vesicles from endocrine cells."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "30929742",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30929742#2",
+    "quote": "Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SNAP25|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "32916768",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32916768#2",
+    "quote": "In this review, we focus on disorders of synaptic vesicle fusion caused either by toxic insult to the presynapse or alterations to genes encoding the key proteins that control and regulate fusion: the SNARE proteins (synaptobrevin, syntaxin-1 and SNAP-25), Munc18, Munc13, synaptotagmin, complexin, CSPα, α-synuclein, PRRT2 and tomosyn."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STX1A|causes|disease:STX1A",
+   "edge_type": "causes",
+   "pmid": "36564538",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "36564538#0",
+    "quote": "Heterozygous and homozygous variants in STX1A cause a neurodevelopmental disorder with or without epilepsy."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STX1B|causes|disease:STX1B",
+   "edge_type": "causes",
+   "pmid": "25362483",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25362483#0",
+    "quote": "Mutations in STX1B, encoding a presynaptic protein, cause fever-associated epilepsy syndromes."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STX1B|causes|disease:STX1B",
+   "edge_type": "causes",
+   "pmid": "26818399",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "26818399#0",
+    "quote": "Our observation of a STX1B deletion in a third patient with MAE therefore supports that STX1B gene variants or deletions can be involved in the aetiology of MAE."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STX1B|causes|disease:STX1B",
+   "edge_type": "causes",
+   "pmid": "27648472",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "27648472#4",
+    "quote": "Inactivation of syntaxin 1B likely accounts for the patient's cortical hyperexcitability because mutations of syntaxin 1B cause febrile seizures with or without epilepsy, haploinsufficiency of the STX1B is associated with myoclonic astatic epilepsy, and antisense knockdown of stx1b in zebrafish larvae elicits epileptiform discharges."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STX1B|causes|disease:STX1B",
+   "edge_type": "causes",
+   "pmid": "30737342",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30737342#0",
+    "quote": "Variants in STX1B are protean and contribute to many different epilepsy phenotypes, similar to SCN1A, the most important gene associated with fever-associated epilepsies."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STX1B|causes|disease:STX1B",
+   "edge_type": "causes",
+   "pmid": "32572454",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32572454#3",
+    "quote": "Epilepsy-causing STX1B mutations translate altered protein functions into distinct phenotypes in mouse neurons."
+   },
+   "mixed": false,
+   "n_claims": 3,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STX1B|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "32572454",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32572454#0",
+    "quote": "Syntaxin 1B (STX1B) is a core component of the N-ethylmaleimide-sensitive factor attachment protein receptor (SNARE) complex that is critical for the exocytosis of synaptic vesicles in the presynapse."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "18469812",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "18469812#0",
+    "quote": "De novo mutations in the gene encoding STXBP1 (MUNC18-1) cause early infantile epileptic encephalopathy."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "25284778",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25284778#1",
+    "quote": "Recently, mutations in Munc18-1 leading to the development of early infantile epileptic encephalopathy have been discovered."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "26280581",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "26280581#0",
+    "quote": "Heterozygous mutations in the syntaxin-binding protein 1 (STXBP1) gene, which encodes Munc18-1, a core component of the presynaptic membrane-fusion machinery, cause infantile early epileptic encephalopathy (Ohtahara syndrome), but it is unclear how a partial loss of Munc18-1 produces this severe clinical presentation."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "27597756",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "27597756#1",
+    "quote": "Munc18-1 heterozygous mutations cause developmental defects and epileptic phenotypes, including infantile epileptic encephalopathy (EIEE), suggestive of a gain of pathological function."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "29538625",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "29538625#0",
+    "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "30266908",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30266908#0",
+    "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 are linked to epilepsies, intellectual disability, movement disorders, and neurodegeneration."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "31855252",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "31855252#0",
+    "quote": "Heterozygous mutations in the STXBP1 gene encoding the presynaptic protein MUNC18-1 cause STXBP1 encephalopathy, characterized by developmental delay, intellectual disability and epilepsy."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "32643187",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32643187#0",
+    "quote": "Mutations in Munc18-1/STXBP1 (syntaxin-binding protein 1) are linked to various severe early epileptic encephalopathies and neurodevelopmental disorders."
+   },
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "33332765",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "33332765#0",
+    "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "35190816",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "35190816#0",
+    "quote": "Disease-causing variants in STXBP1 are among the most common genetic causes of neurodevelopmental disorders."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "38242640",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "38242640#0",
+    "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1/STXBP1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia and tremor, summarized as STXBP1 encephalopathies."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "41883162",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41883162#0",
+    "quote": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) is a debilitating genetic epilepsy disorder caused by heterozygous loss-of-function mutations in the STXBP1 gene."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|participates_in|mech:snare-complex-assembly",
+   "edge_type": "participates_in",
+   "pmid": "41714804",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41714804#0",
+    "quote": "In Stxbp1K98Q knock-in mice, the upregulation of STXBP1 K98cr reduces the binding with syntaxin-1B(STX1B), leading to a decreased assembly of soluble NSF attachment protein receptors (SNAREs) in presynaptic active zone and subsequent inhibition vesicle release, thereby promoting epilepsy formation."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "18469812",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "18469812#1",
+    "quote": "STXBP1 (also known as MUNC18-1) is an evolutionally conserved neuronal Sec1/Munc-18 (SM) protein that is essential in synaptic vesicle release in several species."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "26280581",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "26280581#1",
+    "quote": "Heterozygous mutations in the syntaxin-binding protein 1 (STXBP1) gene, which encodes Munc18-1, a core component of the presynaptic membrane-fusion machinery, cause infantile early epileptic encephalopathy (Ohtahara syndrome), but it is unclear how a partial loss of Munc18-1 produces this severe clinical presentation."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "32572454",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32572454#1",
+    "quote": "SNARE-mediated vesicle fusion is assisted by Munc18-1, which recruits STX1B in the auto-inhibited conformation, while Munc13 catalyses the fast and efficient pairing of helices during SNARE complex formation."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:STXBP1|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "41714804",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41714804#1",
+    "quote": "In Stxbp1K98Q knock-in mice, the upregulation of STXBP1 K98cr reduces the binding with syntaxin-1B(STX1B), leading to a decreased assembly of soluble NSF attachment protein receptors (SNAREs) in presynaptic active zone and subsequent inhibition vesicle release, thereby promoting epilepsy formation."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|causes|disease:SYT1",
+   "edge_type": "causes",
+   "pmid": "32362337",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32362337#1",
+    "quote": "Heterozygous missense mutations in syt1 have recently been associated with a severe but heterogeneous developmental syndrome, termed syt1-associated neurodevelopmental disorder."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|causes|disease:SYT1",
+   "edge_type": "causes",
+   "pmid": "39481209",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "39481209#0",
+    "quote": "Pathogenic missense variants in the essential synaptic vesicle protein synaptotagmin-1 (SYT1) cause a neurodevelopmental disorder characterised by motor delay and intellectual disability, hyperkinetic movement disorder, episodic agitation, and visual impairments."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|causes|disease:SYT1",
+   "edge_type": "causes",
+   "pmid": "41475766",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41475766#0",
+    "quote": "Baker-Gordon syndrome (BAGOS) is a neurodevelopmental disorder (NDD) linked to a series of de novo mutations in the synaptic vesicle protein, Synaptotagmin-1 (SYT1)."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|causes|disease:SYT1",
+   "edge_type": "causes",
+   "pmid": "41756855",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41756855#0",
+    "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|participates_in|mech:ca-triggered-exocytosis",
+   "edge_type": "participates_in",
+   "pmid": "30107533",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30107533#0",
+    "quote": "Synaptotagmin 1 (SYT1) is a critical mediator of fast, synchronous, calcium-dependent neurotransmitter release and also modulates synaptic vesicle endocytosis."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|participates_in|mech:ca-triggered-exocytosis",
+   "edge_type": "participates_in",
+   "pmid": "32362337",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32362337#0",
+    "quote": "At neuronal synapses, synaptotagmin-1 (syt1) acts as a Ca2+ sensor that synchronizes neurotransmitter release with Ca2+ influx during action potential firing."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|participates_in|mech:ca-triggered-exocytosis",
+   "edge_type": "participates_in",
+   "pmid": "38321119",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "38321119#0",
+    "quote": "Synaptotagmin-1 (Syt1) is a presynaptic calcium sensor with two calcium binding domains, C2A and C2B, that triggers action potential-induced synchronous neurotransmitter release, while suppressing asynchronous and spontaneous release."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|participates_in|mech:ca-triggered-exocytosis",
+   "edge_type": "participates_in",
+   "pmid": "39481209",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "39481209#6",
+    "quote": "SYT1 is the presynaptic calcium sensor that triggers synchronous neurotransmitter release."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "32738165",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32738165#6",
+    "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24)."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT1|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "41756855",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41756855#8",
+    "quote": "We identify key residues, localized to the primary interface between syt1 and SNAP-25, responsible for this shift in syt1 function in synaptic vesicle release."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT2|causes|disease:SYT2",
+   "edge_type": "causes",
+   "pmid": "25192047",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25192047#1",
+    "quote": "Synaptotagmin 2 mutations cause an autosomal-dominant form of lambert-eaton myasthenic syndrome and nonprogressive motor neuropathy."
+   },
+   "mixed": false,
+   "n_claims": 3,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT2|causes|disease:SYT2",
+   "edge_type": "causes",
+   "pmid": "26519543",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "26519543#0",
+    "quote": "CONCLUSION: SYT2 mutations cause a novel and potentially treatable complex presynaptic congenital myasthenic syndrome characterized by motor neuropathy causing lower limb wasting and foot deformities, with reflex potentiation following exercise and a uniquely prolonged period of posttetanic potentiation."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT2|causes|disease:SYT2",
+   "edge_type": "causes",
+   "pmid": "32250532",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32250532#0",
+    "quote": "We report here a consanguineous patient with a severe recessive form of presynaptic CMS and denervation atrophy caused by the homozygous mutation c.1191delG, p.Arg397Serfs*37 in SYT2."
+   },
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT2|causes|disease:SYT2",
+   "edge_type": "causes",
+   "pmid": "32776697",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32776697#0",
+    "quote": "Biallelic loss of function variants in SYT2 cause a treatable congenital onset presynaptic myasthenic syndrome."
+   },
+   "mixed": false,
+   "n_claims": 3,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT2|causes|disease:SYT2",
+   "edge_type": "causes",
+   "pmid": "34037996",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "34037996#0",
+    "quote": "INTRODUCTION/AIMS: We studied a patient with a congenital myasthenic syndrome (CMS) caused by a dominant mutation in the synaptotagmin 2 gene (SYT2) and compared the clinical features of this patient with those of a previously described patient with a recessive mutation in the same gene."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:SYT2|participates_in|mech:synaptic-vesicle-fusion",
+   "edge_type": "participates_in",
+   "pmid": "32250532",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32250532#12",
+    "quote": "Thus, this report describes a recessive form of synaptotagmin 2-CMS and highlights the importance of the synaptotagmin C-terminal on synaptic vesicle fusion and exocytosis."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:UNC13A|causes|disease:UNC13A",
+   "edge_type": "causes",
+   "pmid": "27648472",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "27648472#1",
+    "quote": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:UNC13A|causes|disease:UNC13A",
+   "edge_type": "causes",
+   "pmid": "28192369",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "28192369#0",
+    "quote": "Synaptic UNC13A protein variant causes increased neurotransmission and dyskinetic movement disorder."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:UNC13A|causes|disease:UNC13A",
+   "edge_type": "causes",
+   "pmid": "41125872",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41125872#0",
+    "quote": "Here we describe a neurodevelopmental syndrome caused by germline coding or splice-site variants in UNC13A."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:UNC13A|participates_in|mech:synaptic-vesicle-priming",
+   "edge_type": "participates_in",
+   "pmid": "36737245",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "36737245#1",
+    "quote": "UNC13A is expressed in neuronal tissue and is involved in maintaining synaptic active zones, by enabling the priming and docking of synaptic vesicles."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:VAMP2|causes|disease:VAMP2",
+   "edge_type": "causes",
+   "pmid": "30929742",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30929742#5",
+    "quote": "The genetic synaptopathy caused by VAMP2 de novo mutations highlights the key roles of this gene in human brain development and function."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "gene:VAMP2|causes|disease:VAMP2",
+   "edge_type": "causes",
+   "pmid": "32906212",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32906212#0",
+    "quote": "Clinical and genetic features of five unrelated patients with de novo pathogenic variants in the synaptic vesicle-associated membrane protein 2 (VAMP2) reveal common features of global developmental delay, autistic tendencies, behavioral disturbances, and a higher propensity to develop epilepsy."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+   "edge_type": "developed_for",
+   "pmid": "32250532",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32250532#9",
+    "quote": "3,4 diaminopyridine and pyridostigmine were effective to ameliorate muscle fatigue, but albuterol was ineffective."
+   },
+   "curated_polarity": [
+    1,
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "35911425",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "35911425#3",
+    "quote": "4-Phenylbutyrate restored γ-aminobutyric acid uptake and reduced seizures in SLC6A1 patient variant-bearing cell and mouse models."
+   },
+   "curated_polarity": [
+    1,
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "39923323",
+   "case": "a",
+   "agrees": false,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "39923323#4",
+    "quote": "Our previous work on SLC6A1 missense mutations prompted a clinical trial for Ravicti (NCT04937062), a glycerol formulation of 4-phenylbutyrate (PBA), for treatment-resistant epilepsy."
+   },
+   "curated_polarity": [
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "41385967",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41385967#7",
+    "quote": "Here, we tested whether PBA can improve neurobehavioral deficits in the Slc6a1+/S295L knock-in mouse model of DEE besides seizure mitigation."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "41648160",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41648160#1",
+    "quote": "Accumulation of Extracellular GABA, Impaired GABAergic Neurotransmission and 4-Phenylbutyrate Rescue in Mice of SLC6A1 Variant-Mediated Disorders."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "42157447",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "42157447#12",
+    "quote": "PBA acts as a pharmacochaperone, not an HDAC inhibitor, to restore GAT-1 function and reduce seizure burden in the diseased mice, supporting pharmacochaperoning as the major mechanism for rescuing SLC6A1-related disorders."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "30266908",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30266908#4",
+    "quote": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "41883162",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41883162#4",
+    "quote": "Identification of a therapeutic threshold for AAV-STXBP1 gene therapy in a rodent model of STXBP1 developmental and epileptic encephalopathy."
+   },
+   "curated_polarity": [
+    1,
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2",
+   "edge_type": "developed_for",
+   "pmid": "32250532",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32250532#10",
+    "quote": "3,4 diaminopyridine and pyridostigmine were effective to ameliorate muscle fatigue, but albuterol was ineffective."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2",
+   "edge_type": "developed_for",
+   "pmid": "32906212",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32906212#6",
+    "quote": "For one patient, a cognitively impaired adolescent with a de novo stop-gain VAMP2 mutation, we tested a potential treatment strategy, enhancing neurotransmission by prolonging action potentials with the aminopyridine family of potassium channel blockers, 4-aminopyridine and 3,4-diaminopyridine, in vitro and in vivo."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "32906212",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32906212#10",
+    "quote": "Aminopyridine treatment increases the rate and extent of exocytosis and total synaptic charge transfer and desynchronizes GABA release."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "33332765",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "33332765#11",
+    "quote": "Here, we identify two pharmacological chaperones via structure-based drug design, that bind to wild-type and mutant Munc18-1, and revert Munc18-1 aggregation and neuronal dysfunction in vitro and in vivo, providing the first targeted treatment strategy for these severe pediatric encephalopathies."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "therapy:munc18-1-pharmacological-chaperone|targets|mech:protein-destabilization",
+   "edge_type": "targets",
+   "pmid": "33332765",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "33332765#9",
+    "quote": "Here, we identify two pharmacological chaperones via structure-based drug design, that bind to wild-type and mutant Munc18-1, and revert Munc18-1 aggregation and neuronal dysfunction in vitro and in vivo, providing the first targeted treatment strategy for these severe pediatric encephalopathies."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:SLC6A1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "31176687",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "31176687#6",
+    "quote": "This mutation caused instability of the mutant transporter protein, which resulted in reduced cell surface and total protein levels."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:SLC6A1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "36741049",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "36741049#3",
+    "quote": "We here focused on a folding-deficient A288V variant."
+   },
+   "curated_polarity": [
+    1,
+    -1
+   ],
+   "mixed": false,
+   "n_claims": 3,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:SNAP25:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "41579375",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "41579375#2",
+    "quote": "I192N is strongly dominant negative in the presence of wild-type SNAP-25, leading to impaired survival and reduced synaptic release."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "31855252",
+   "case": "d",
+   "agrees": false,
+   "pick": {
+    "via": "opposite_effect",
+    "pol": -1,
+    "claim_id": "31855252#6",
+    "quote": "Hence, the homozygous L446F mutation causes a gain-of-function phenotype regarding release probability and synaptic transmission while having less impact on protein levels than previously reported (heterozygous) mutations."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 2
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "18469812",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "18469812#2",
+    "quote": "Circular dichroism melting experiments revealed that a mutant form of the protein was significantly thermolabile compared to wild type."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "25284778",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25284778#2",
+    "quote": "Using neurosecretory cells deficient in Munc18, we show that a disease-linked mutation, C180Y, renders the protein unstable at 37°C."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "30266908",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "30266908#1",
+    "quote": "We find that at least five disease-linked missense mutations of Munc18-1 result in destabilization and aggregation of the mutant protein."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "31855252",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "31855252#5",
+    "quote": "In Munc18-1 null mouse neurons, protein stability of the disease variant (L446F) is less dramatically affected than previously observed for heterozygous disease mutants."
+   },
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:SYT1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "25705886",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "25705886#2",
+    "quote": "Together, the clinical features, electrophysiological phenotype, and in vitro neuronal phenotype associated with this dominant negative SYT1 mutation highlight presynaptic mechanisms that mediate human motor control and cognitive development."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:SYT1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "39481209",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "39481209#7",
+    "quote": "We show that recently identified variants within the facilitatory C2A domain of the protein (L159R, T196K, E209K, E219Q), as well as additional variants in the C2B domain (M303V, S309P, Y365C, G369D), share an underlying pathogenic mechanism, causing a graded and variant-dependent dominant-negative impairment in exocytosis."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 2,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:SYT2:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "32776697",
+   "case": "b",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "32776697#4",
+    "quote": "These variants are thought to have a dominant-negative effect on synaptic vesicle exocytosis, although the precise pathomechanism remains to be elucidated."
+   },
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  },
+  {
+   "edge_id": "vg:UNC13A:missense|has_effect|mech:gain-of-function",
+   "edge_type": "has_effect",
+   "pmid": "28192369",
+   "case": "a",
+   "agrees": true,
+   "pick": {
+    "via": "direct",
+    "pol": 1,
+    "claim_id": "28192369#1",
+    "quote": "Electrophysiological studies in murine neuronal cultures and functional analyses in Caenorhabditis elegans revealed that the UNC13A variant causes a distinct dominant gain of function that is characterized by increased fusion propensity of synaptic vesicles, which leads to increased initial synaptic vesicle release probability and abnormal short-term synaptic plasticity."
+   },
+   "curated_polarity": [
+    1
+   ],
+   "mixed": false,
+   "n_claims": 1,
+   "tier": 0
+  }
+ ],
+ "candidates": [
+  "disease:CPLX1|has_phenotype|phenotype:HP:0001263",
+  "disease:CPLX1|has_phenotype|phenotype:HP:0032794",
+  "disease:SLC6A1|driven_by|mech:gaba-reuptake",
+  "disease:SLC6A1|has_phenotype|phenotype:HP:0000750",
+  "disease:SLC6A1|has_phenotype|phenotype:HP:0001250",
+  "disease:SNAP25|has_phenotype|phenotype:HP:0001249",
+  "disease:SNAP25|has_phenotype|phenotype:HP:0001250",
+  "disease:SNAP25|has_phenotype|phenotype:HP:0100704",
+  "disease:STX1A|driven_by|mech:snare-complex-assembly",
+  "disease:STX1A|has_phenotype|phenotype:HP:0000729",
+  "disease:STX1A|has_phenotype|phenotype:HP:0001249",
+  "disease:STX1B|driven_by|mech:haploinsufficiency",
+  "disease:STX1B|has_phenotype|phenotype:HP:0001249",
+  "disease:STX1B|has_phenotype|phenotype:HP:0001250",
+  "disease:STX1B|has_phenotype|phenotype:HP:0002197",
+  "disease:STX1B|has_phenotype|phenotype:HP:0007359",
+  "disease:STX1B|has_phenotype|phenotype:HP:0200134",
+  "disease:STXBP1|driven_by|mech:loss-of-function",
+  "disease:STXBP1|driven_by|mech:synaptic-vesicle-fusion",
+  "disease:STXBP1|has_phenotype|phenotype:HP:0000729",
+  "disease:STXBP1|has_phenotype|phenotype:HP:0001249",
+  "disease:STXBP1|has_phenotype|phenotype:HP:0001250",
+  "disease:STXBP1|has_phenotype|phenotype:HP:0001251",
+  "disease:STXBP1|has_phenotype|phenotype:HP:0001263",
+  "disease:STXBP1|has_phenotype|phenotype:HP:0001337",
+  "disease:STXBP1|has_phenotype|phenotype:HP:0007359",
+  "disease:STXBP1|has_phenotype|phenotype:HP:0100704",
+  "disease:SYT1|driven_by|mech:ca-triggered-exocytosis",
+  "disease:SYT1|has_phenotype|phenotype:HP:0000729",
+  "disease:SYT1|has_phenotype|phenotype:HP:0001249",
+  "disease:SYT1|has_phenotype|phenotype:HP:0001252",
+  "disease:SYT1|has_phenotype|phenotype:HP:0001263",
+  "disease:SYT1|has_phenotype|phenotype:HP:0001344",
+  "disease:SYT1|has_phenotype|phenotype:HP:0002187",
+  "disease:SYT1|has_phenotype|phenotype:HP:0002353",
+  "disease:SYT1|has_phenotype|phenotype:HP:0011203",
+  "disease:SYT1|has_phenotype|phenotype:HP:0100716",
+  "disease:SYT2|has_phenotype|phenotype:HP:0003473",
+  "disease:UNC13A|has_phenotype|phenotype:HP:0001249",
+  "disease:UNC13A|has_phenotype|phenotype:HP:0001250",
+  "disease:UNC13A|has_phenotype|phenotype:HP:0001263",
+  "disease:UNC13A|has_phenotype|phenotype:HP:0001337",
+  "disease:UNC13A|has_phenotype|phenotype:HP:0100660",
+  "gene:STX1A|participates_in|mech:synaptic-vesicle-fusion",
+  "gene:SYT2|participates_in|mech:ca-triggered-exocytosis",
+  "gene:VAMP2|participates_in|mech:ca-triggered-exocytosis",
+  "gene:VAMP2|participates_in|mech:synaptic-vesicle-fusion",
+  "therapy:3-4-diaminopyridine|developed_for|disease:VAMP2",
+  "therapy:4-phenylbutyrate|targets|mech:gaba-reuptake",
+  "vg:SLC6A1:missense|has_effect|mech:loss-of-function",
+  "vg:SLC6A1:truncating|has_effect|mech:loss-of-function",
+  "vg:SNAP25:missense|has_effect|mech:loss-of-function",
+  "vg:STX1B:missense|has_effect|mech:gain-of-function",
+  "vg:STX1B:missense|has_effect|mech:loss-of-function",
+  "vg:STXBP1:missense|has_effect|mech:gain-of-function",
+  "vg:STXBP1:missense|has_effect|mech:loss-of-function",
+  "vg:UNC13A:truncating|has_effect|mech:loss-of-function"
+ ],
+ "negative_no_edge": [
+  {
+   "edge_id": "disease:SYT1|has_phenotype|phenotype:HP:0001250",
+   "claim_id": "30107533#9",
+   "quote": "Absence of epileptic seizures and normal orbitofrontal head circumference are important negative features."
+  },
+  {
+   "edge_id": "vg:SLC6A1:missense|has_effect|mech:dominant-negative",
+   "claim_id": "38781976#6",
+   "quote": "Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects."
+  },
+  {
+   "edge_id": "vg:SLC6A1:missense|has_effect|mech:gain-of-function",
+   "claim_id": "38781976#7",
+   "quote": "Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects."
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0100704",
+   "claim_id": "40767165#2",
+   "quote": "A retrospective chart review of 85 patients found cortical visual impairment in 44%, most commonly in 8p (54%) and STXBP1 (50%); no cases were seen in SLC6A1."
+  }
+ ],
+ "curated_pairs_for_processed_pmids": [
+  {
+   "edge_id": "disease:CPLX1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "28422131",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0000316",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0000414",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0000486",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0000574",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0001344",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0001845",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0002069",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0002123",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0002197",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0002421",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0002540",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0002553",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0010818",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0011097",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0011198",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0011968",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0031936",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0033258",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0100021",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:CPLX1|has_phenotype|phenotype:HP:0200134",
+   "edge_type": "has_phenotype",
+   "pmid": "28422131",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "31675180",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0001518",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0001789",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0002187",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0002643",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0010851",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0011097",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0011451",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0032792",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:NSF|has_phenotype|phenotype:HP:0200134",
+   "edge_type": "has_phenotype",
+   "pmid": "31675180",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "25865495",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "34028503",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "31176687",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "36741049",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0000729",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001249",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001251",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001252",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0001337",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0002121",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0002188",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0002650",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0007018",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0010819",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0011170",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0025097",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SLC6A1|has_phenotype|phenotype:HP:0032794",
+   "edge_type": "has_phenotype",
+   "pmid": "25865495",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "41579375",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SNAP25|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "33147442",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SNAP25|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "40181518",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0000508",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001251",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001260",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001284",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001288",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0001558",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0002465",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0002643",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0003473",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0006380",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0010529",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SNAP25|has_phenotype|phenotype:HP:0031936",
+   "edge_type": "has_phenotype",
+   "pmid": "25381298",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STX1A|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "36564538",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "32572454",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "42673765",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "30737342",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "26818399",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "32572454",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "33677401",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STX1B|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "42673765",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0000750",
+   "edge_type": "has_phenotype",
+   "pmid": "25362483",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0002069",
+   "edge_type": "has_phenotype",
+   "pmid": "25362483",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0002121",
+   "edge_type": "has_phenotype",
+   "pmid": "25362483",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0002373",
+   "edge_type": "has_phenotype",
+   "pmid": "25362483",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0002384",
+   "edge_type": "has_phenotype",
+   "pmid": "25362483",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0010819",
+   "edge_type": "has_phenotype",
+   "pmid": "25362483",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STX1B|has_phenotype|phenotype:HP:0032792",
+   "edge_type": "has_phenotype",
+   "pmid": "25362483",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "27597756",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "29538625",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "32643187",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "31855252",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "18469812",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "26280581",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "29538625",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "38242640",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "29538625",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "30266908",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "25284778",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "31855252",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:STXBP1|has_phenotype|phenotype:HP:0002187",
+   "edge_type": "has_phenotype",
+   "pmid": "18469812",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STXBP1|has_phenotype|phenotype:HP:0002188",
+   "edge_type": "has_phenotype",
+   "pmid": "18469812",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STXBP1|has_phenotype|phenotype:HP:0010851",
+   "edge_type": "has_phenotype",
+   "pmid": "18469812",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STXBP1|has_phenotype|phenotype:HP:0011097",
+   "edge_type": "has_phenotype",
+   "pmid": "18469812",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:STXBP1|has_phenotype|phenotype:HP:0200134",
+   "edge_type": "has_phenotype",
+   "pmid": "18469812",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "25705886",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "32362337",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "39481209",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "38321119",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "41438914",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SYT1|driven_by|mech:haploinsufficiency",
+   "edge_type": "driven_by",
+   "pmid": "38321119",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SYT1|has_phenotype|phenotype:HP:0011445",
+   "edge_type": "has_phenotype",
+   "pmid": "30107533",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT1|has_phenotype|phenotype:HP:0031936",
+   "edge_type": "has_phenotype",
+   "pmid": "30107533",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|driven_by|mech:dominant-negative",
+   "edge_type": "driven_by",
+   "pmid": "34037996",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SYT2|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "32776697",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0000514",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001252",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001260",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001284",
+   "edge_type": "has_phenotype",
+   "pmid": "25192047",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001284",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001308",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001558",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001612",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001621",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001682",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0001718",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0003403",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0006380",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0006466",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0007941",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0025680",
+   "edge_type": "has_phenotype",
+   "pmid": "25192047",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0032341",
+   "edge_type": "has_phenotype",
+   "pmid": "32776697",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:SYT2|has_phenotype|phenotype:HP:0033383",
+   "edge_type": "has_phenotype",
+   "pmid": "25192047",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "28192369",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:UNC13A|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "41125872",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:UNC13A|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "27648472",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0000817",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0001788",
+   "edge_type": "has_phenotype",
+   "pmid": "27648472",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0002187",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0002938",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0003554",
+   "edge_type": "has_phenotype",
+   "pmid": "27648472",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0005278",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0005946",
+   "edge_type": "has_phenotype",
+   "pmid": "27648472",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0006915",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0007334",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0010841",
+   "edge_type": "has_phenotype",
+   "pmid": "27648472",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0011099",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0011171",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0011293",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0011451",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0033383",
+   "edge_type": "has_phenotype",
+   "pmid": "27648472",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0040160",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:UNC13A|has_phenotype|phenotype:HP:0200134",
+   "edge_type": "has_phenotype",
+   "pmid": "41125872",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|driven_by|mech:gain-of-function",
+   "edge_type": "driven_by",
+   "pmid": "41166419",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:VAMP2|driven_by|mech:loss-of-function",
+   "edge_type": "driven_by",
+   "pmid": "30929742",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:VAMP2|driven_by|mech:protein-destabilization",
+   "edge_type": "driven_by",
+   "pmid": "41166419",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0000729",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0001249",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0001263",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0001332",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0002072",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0002079",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0002353",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0002540",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0007359",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0008936",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0012171",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0032660",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0100704",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "disease:VAMP2|has_phenotype|phenotype:HP:0100716",
+   "edge_type": "has_phenotype",
+   "pmid": "30929742",
+   "source": "HPO"
+  },
+  {
+   "edge_id": "gene:CPLX1|causes|disease:CPLX1",
+   "edge_type": "causes",
+   "pmid": "28422131",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "gene:SLC6A1|causes|disease:SLC6A1",
+   "edge_type": "causes",
+   "pmid": "25865495",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "gene:STX1A|causes|disease:STX1A",
+   "edge_type": "causes",
+   "pmid": "36564538",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "gene:STX1B|causes|disease:STX1B",
+   "edge_type": "causes",
+   "pmid": "30737342",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "gene:STXBP1|causes|disease:STXBP1",
+   "edge_type": "causes",
+   "pmid": "18469812",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "gene:SYT1|causes|disease:SYT1",
+   "edge_type": "causes",
+   "pmid": "25705886",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "gene:SYT2|causes|disease:SYT2",
+   "edge_type": "causes",
+   "pmid": "34037996",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "gene:UNC13A|causes|disease:UNC13A",
+   "edge_type": "causes",
+   "pmid": "27648472",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "gene:VAMP2|causes|disease:VAMP2",
+   "edge_type": "causes",
+   "pmid": "30929742",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+   "edge_type": "developed_for",
+   "pmid": "26519543",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+   "edge_type": "developed_for",
+   "pmid": "32250532",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "26519543",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "32250532",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "35911425",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "42157447",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "33332765",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "39923323",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "30266908",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "35911425",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "42157447",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "33332765",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "39923323",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+   "edge_type": "targets",
+   "pmid": "30266908",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+   "edge_type": "targets",
+   "pmid": "35911425",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+   "edge_type": "targets",
+   "pmid": "42157447",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+   "edge_type": "targets",
+   "pmid": "33332765",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+   "edge_type": "targets",
+   "pmid": "39923323",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+   "edge_type": "targets",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1",
+   "edge_type": "developed_for",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aav-slc6a1-gene-replacement|targets|mech:gaba-reuptake",
+   "edge_type": "targets",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+   "edge_type": "targets",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "41883162",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+   "edge_type": "targets",
+   "pmid": "41883162",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2",
+   "edge_type": "developed_for",
+   "pmid": "32776697",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2",
+   "edge_type": "developed_for",
+   "pmid": "32250532",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "32776697",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "32250532",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25",
+   "edge_type": "developed_for",
+   "pmid": "40181518",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25",
+   "edge_type": "developed_for",
+   "pmid": "41166419",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1",
+   "edge_type": "developed_for",
+   "pmid": "32906212",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1",
+   "edge_type": "developed_for",
+   "pmid": "32362337",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1",
+   "edge_type": "developed_for",
+   "pmid": "40181518",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1",
+   "edge_type": "developed_for",
+   "pmid": "41166419",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2",
+   "edge_type": "developed_for",
+   "pmid": "32906212",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2",
+   "edge_type": "developed_for",
+   "pmid": "40181518",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2",
+   "edge_type": "developed_for",
+   "pmid": "41166419",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "32906212",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "32362337",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "40181518",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+   "edge_type": "targets",
+   "pmid": "41166419",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1",
+   "edge_type": "developed_for",
+   "pmid": "33332765",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:munc18-1-pharmacological-chaperone|targets|mech:protein-destabilization",
+   "edge_type": "targets",
+   "pmid": "33332765",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A",
+   "edge_type": "developed_for",
+   "pmid": "38979232",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "therapy:unc13a-splice-switching-aso|targets|mech:synaptic-vesicle-priming",
+   "edge_type": "targets",
+   "pmid": "38979232",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:NSF:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "31675180",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SLC6A1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "34028503",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SLC6A1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "31176687",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SLC6A1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "36741049",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SLC6A1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SLC6A1:splice|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SLC6A1:truncating|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SLC6A1:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "38781976",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SNAP25:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "41579375",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SNAP25:missense|has_effect|mech:gain-of-function",
+   "edge_type": "has_effect",
+   "pmid": "33147442",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "27597756",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "29538625",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "32643187",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "29538625",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "30266908",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "25284778",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:splice|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "18469812",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:splice|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "26280581",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:splice|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "29538625",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:splice|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "38242640",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:truncating|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "18469812",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:truncating|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "26280581",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:truncating|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "29538625",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:truncating|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "38242640",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "18469812",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "26280581",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "29538625",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:STXBP1:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+   "edge_type": "has_effect",
+   "pmid": "38242640",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SYT1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "25705886",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SYT1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "32362337",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SYT1:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "39481209",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:SYT2:missense|has_effect|mech:dominant-negative",
+   "edge_type": "has_effect",
+   "pmid": "34037996",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:UNC13A:missense|has_effect|mech:gain-of-function",
+   "edge_type": "has_effect",
+   "pmid": "28192369",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:UNC13A:missense|has_effect|mech:gain-of-function",
+   "edge_type": "has_effect",
+   "pmid": "41125872",
+   "source": "PubMed"
+  },
+  {
+   "edge_id": "vg:VAMP2:missense|has_effect|mech:protein-destabilization",
+   "edge_type": "has_effect",
+   "pmid": "41166419",
+   "source": "PubMed"
+  }
+ ]
+}

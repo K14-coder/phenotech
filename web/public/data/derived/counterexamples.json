@@ -1,0 +1,598 @@
+{
+ "about": "The places where the clean story breaks. Each item names edges that exist in data/graph.json, so a reader can open the evidence. Written for families first: the plain_language line should be readable by a parent, and the why_it_matters line says what it changes.",
+ "meta": {
+  "generated": "2026-10-03",
+  "graph": "2026-10-03T19:12:52+00:00",
+  "n_items": 10,
+  "code": "pipeline/derive/counterexamples.py",
+  "integrity": "the build fails if any edge_id is absent from the graph"
+ },
+ "items": [
+  {
+   "id": "cx:snap25-opposite-direction-variants",
+   "title": "One gene, two opposite problems: SNAP25 I67N and V48F (and the minority reports the atlas keeps)",
+   "plain_language": "In SNAP25, one change makes the nerve ending release too little, and a different change makes it release too much at rest. A drug that pushes release harder could help the first child and hurt the second.",
+   "why_it_matters": "It breaks the idea that a gene has one mechanism and therefore one therapy. The atlas carries loss-of-function and gain-of-function edges for the same disease, and the aminopyridine edge is marked contested for exactly this reason. A family's specific variant, not the gene name, decides the direction. The same pattern is flagged for SYT1, where the haploinsufficiency and gain-of-function edges are kept as minority mechanisms rather than dropped - minority readings are where the next correction usually comes from.",
+   "edge_ids": [
+    "disease:SNAP25|driven_by|mech:loss-of-function",
+    "disease:SNAP25|driven_by|mech:gain-of-function",
+    "vg:SNAP25:missense|has_effect|mech:gain-of-function",
+    "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25",
+    "disease:SYT1|driven_by|mech:haploinsufficiency",
+    "disease:SYT1|driven_by|mech:gain-of-function"
+   ],
+   "edges": [
+    {
+     "id": "disease:SNAP25|driven_by|mech:loss-of-function",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.5,
+     "n_counter_evidence": 1
+    },
+    {
+     "id": "disease:SNAP25|driven_by|mech:gain-of-function",
+     "type": "driven_by",
+     "status": "supported",
+     "evidence_level": "experimental",
+     "confidence": 0.6,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SNAP25:missense|has_effect|mech:gain-of-function",
+     "type": "has_effect",
+     "status": "supported",
+     "evidence_level": "experimental",
+     "confidence": 0.6,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25",
+     "type": "developed_for",
+     "status": "contested",
+     "evidence_level": "clinical",
+     "confidence": 0.6,
+     "n_counter_evidence": 2
+    },
+    {
+     "id": "disease:SYT1|driven_by|mech:haploinsufficiency",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.5,
+     "n_counter_evidence": 1
+    },
+    {
+     "id": "disease:SYT1|driven_by|mech:gain-of-function",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.5,
+     "n_counter_evidence": 0
+    }
+   ]
+  },
+  {
+   "id": "cx:stx1b-both-directions",
+   "title": "STX1B variants point both ways, and one does both at once",
+   "plain_language": "For STX1B, one change leaves fewer vesicles ready to go, another makes fusion easier, and in patient-derived neurons a third change does both at the same time.",
+   "why_it_matters": "Both the loss-of-function and the gain-of-function edge for STX1B are contested in the graph (the loss-of-function edge carries 3 contradicting items). Any plan that treats 'STX1B epilepsy' as one entity is treating at least two.",
+   "edge_ids": [
+    "disease:STX1B|driven_by|mech:loss-of-function",
+    "disease:STX1B|driven_by|mech:gain-of-function",
+    "vg:STX1B:truncating|has_effect|mech:haploinsufficiency"
+   ],
+   "edges": [
+    {
+     "id": "disease:STX1B|driven_by|mech:loss-of-function",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.7,
+     "n_counter_evidence": 3
+    },
+    {
+     "id": "disease:STX1B|driven_by|mech:gain-of-function",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.5,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:STX1B:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    }
+   ]
+  },
+  {
+   "id": "cx:stxbp1-aav-trial-terminated",
+   "title": "The first STXBP1 gene-therapy trial was stopped",
+   "plain_language": "A gene therapy for STXBP1 reached children in a clinical trial, and that trial was terminated because a stopping rule was met. The same sponsor's natural-history study was withdrawn before anyone enrolled.",
+   "why_it_matters": "The graph shows gene replacement for STXBP1 as contested, not as a live option, and the preclinical paper says plainly that no human evidence defines how much protein is enough. Hope in a knowledge graph has to carry its counter-evidence, or families read a terminated programme as an available treatment.",
+   "edge_ids": [
+    "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+    "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+    "study:NCT05462054|studies|disease:STXBP1",
+    "study:NCT06983158|studies|disease:STXBP1",
+    "study:NCT06983158|tests|therapy:aav-stxbp1-gene-replacement"
+   ],
+   "edges": [
+    {
+     "id": "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+     "type": "developed_for",
+     "status": "contested",
+     "evidence_level": "clinical",
+     "confidence": 0.85,
+     "n_counter_evidence": 2
+    },
+    {
+     "id": "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "type": "targets",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.8,
+     "n_counter_evidence": 2
+    },
+    {
+     "id": "study:NCT05462054|studies|disease:STXBP1",
+     "type": "studies",
+     "status": "supported",
+     "evidence_level": "curated",
+     "confidence": 0.9,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "study:NCT06983158|studies|disease:STXBP1",
+     "type": "studies",
+     "status": "supported",
+     "evidence_level": "curated",
+     "confidence": 0.9,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "study:NCT06983158|tests|therapy:aav-stxbp1-gene-replacement",
+     "type": "tests",
+     "status": "supported",
+     "evidence_level": "clinical",
+     "confidence": 0.9,
+     "n_counter_evidence": 0
+    }
+   ]
+  },
+  {
+   "id": "cx:stxbp1-mechanism-unsettled",
+   "title": "Nobody agrees what STXBP1 variants actually do",
+   "plain_language": "For the best-studied gene in this group, experts still disagree: does the faulty protein simply go missing, or does it actively jam the healthy copy? Different experiments say different things.",
+   "why_it_matters": "The answer decides whether adding a healthy gene copy can work at all. All three STXBP1 mechanism edges are contested (haploinsufficiency 0.7, destabilization 0.7, dominant-negative 0.5), and the cluster that groups 'the altered protein jams the machine' deliberately includes STXBP1 as a contested member.",
+   "edge_ids": [
+    "disease:STXBP1|driven_by|mech:haploinsufficiency",
+    "disease:STXBP1|driven_by|mech:protein-destabilization",
+    "disease:STXBP1|driven_by|mech:dominant-negative",
+    "vg:STXBP1:missense|has_effect|mech:dominant-negative",
+    "disease:STXBP1|driven_by|mech:gain-of-function"
+   ],
+   "edges": [
+    {
+     "id": "disease:STXBP1|driven_by|mech:haploinsufficiency",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.7,
+     "n_counter_evidence": 1
+    },
+    {
+     "id": "disease:STXBP1|driven_by|mech:protein-destabilization",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.7,
+     "n_counter_evidence": 1
+    },
+    {
+     "id": "disease:STXBP1|driven_by|mech:dominant-negative",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.5,
+     "n_counter_evidence": 2
+    },
+    {
+     "id": "vg:STXBP1:missense|has_effect|mech:dominant-negative",
+     "type": "has_effect",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.6,
+     "n_counter_evidence": 3
+    },
+    {
+     "id": "disease:STXBP1|driven_by|mech:gain-of-function",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.5,
+     "n_counter_evidence": 0
+    }
+   ]
+  },
+  {
+   "id": "cx:bridge-contested",
+   "title": "The headline bridge between STXBP1 and SLC6A1 is contested",
+   "plain_language": "One trial already enrols children with either an STXBP1 or an SLC6A1 change, on the idea that both make an unstable protein that a chaperone drug could rescue. The two proteins are unstable in different ways, and the drug may partly work by helping the healthy copy rather than fixing the faulty one.",
+   "why_it_matters": "This is the most interesting edge in the atlas and it carries 9 contradicting items. If the shared mechanism is really two different stories joined by one convenient drug, the cross-gene trial design is weaker than it looks - and that is a question for a biochemist, not a graph.",
+   "edge_ids": [
+    "disease:STXBP1|shares_mechanism|disease:SLC6A1",
+    "disease:SLC6A1|driven_by|mech:protein-destabilization",
+    "vg:SLC6A1:missense|has_effect|mech:protein-destabilization",
+    "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+    "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1"
+   ],
+   "edges": [
+    {
+     "id": "disease:STXBP1|shares_mechanism|disease:SLC6A1",
+     "type": "shares_mechanism",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.6,
+     "n_counter_evidence": 9
+    },
+    {
+     "id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
+     "type": "driven_by",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.7,
+     "n_counter_evidence": 2
+    },
+    {
+     "id": "vg:SLC6A1:missense|has_effect|mech:protein-destabilization",
+     "type": "has_effect",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.8,
+     "n_counter_evidence": 2
+    },
+    {
+     "id": "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+     "type": "targets",
+     "status": "contested",
+     "evidence_level": "experimental",
+     "confidence": 0.8,
+     "n_counter_evidence": 4
+    },
+    {
+     "id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+     "type": "developed_for",
+     "status": "contested",
+     "evidence_level": "clinical",
+     "confidence": 0.8,
+     "n_counter_evidence": 4
+    }
+   ]
+  },
+  {
+   "id": "cx:nsf-model-organism-only",
+   "title": "NSF sits in the 'jammed machine' cluster on the strength of a fly eye",
+   "plain_language": "NSF is placed next to the other genes because two changes looked like they blocked the machinery. That conclusion comes from an experiment in fruit-fly eyes, from a single report, and has never been repeated in nerve cells.",
+   "why_it_matters": "Cluster membership is an inference, not a measurement. The gene-to-disease edge itself has confidence 0.5, and the phenotype similarity metric nevertheless makes NSF the closest match to UNC13A in the whole slice - so a weak mechanism claim and a strong phenotype signal disagree.",
+   "edge_ids": [
+    "disease:NSF|driven_by|mech:dominant-negative",
+    "vg:NSF:missense|has_effect|mech:dominant-negative",
+    "gene:NSF|causes|disease:NSF",
+    "disease:UNC13A|similar_phenotype|disease:NSF"
+   ],
+   "edges": [
+    {
+     "id": "disease:NSF|driven_by|mech:dominant-negative",
+     "type": "driven_by",
+     "status": "supported",
+     "evidence_level": "experimental",
+     "confidence": 0.6,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:NSF:missense|has_effect|mech:dominant-negative",
+     "type": "has_effect",
+     "status": "supported",
+     "evidence_level": "experimental",
+     "confidence": 0.6,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "gene:NSF|causes|disease:NSF",
+     "type": "causes",
+     "status": "supported",
+     "evidence_level": "clinical",
+     "confidence": 0.5,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "disease:UNC13A|similar_phenotype|disease:NSF",
+     "type": "similar_phenotype",
+     "status": "supported",
+     "evidence_level": "inferred",
+     "confidence": 0.48,
+     "n_counter_evidence": 0
+    }
+   ]
+  },
+  {
+   "id": "cx:unc13a-too-big-for-aav",
+   "title": "UNC13A does not fit in the standard gene-therapy virus (5112 bp)",
+   "plain_language": "The usual gene-therapy virus can only carry a gene of a certain size. The UNC13A instruction is too long to fit, so the standard 'deliver a healthy copy' approach is not available for this gene, however well it might match the biology.",
+   "why_it_matters": "A physical constraint beats a mechanism argument. Every other gene in the slice fits; UNC13A is the one where the family-facing answer has to be different. The only UNC13A-directed molecule in the atlas is an oligonucleotide developed for ALS, not for the Mendelian disorder.",
+   "edge_ids": [
+    "gene:UNC13A|causes|disease:UNC13A",
+    "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A",
+    "therapy:unc13a-splice-switching-aso|targets|mech:synaptic-vesicle-priming",
+    "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency"
+   ],
+   "edges": [
+    {
+     "id": "gene:UNC13A|causes|disease:UNC13A",
+     "type": "causes",
+     "status": "supported",
+     "evidence_level": "clinical",
+     "confidence": 0.92,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A",
+     "type": "developed_for",
+     "status": "supported",
+     "evidence_level": "experimental",
+     "confidence": 0.6,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "therapy:unc13a-splice-switching-aso|targets|mech:synaptic-vesicle-priming",
+     "type": "targets",
+     "status": "supported",
+     "evidence_level": "experimental",
+     "confidence": 0.6,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    }
+   ]
+  },
+  {
+   "id": "cx:cplx1-counts-are-not-about-cplx1",
+   "title": "153 of CPLX1's 155 pathogenic records are deletions of several genes at once",
+   "plain_language": "A database search for CPLX1 returns many 'pathogenic' results, but almost all of them are large deletions that remove CPLX1 together with many neighbouring genes. They say little about CPLX1 itself.",
+   "why_it_matters": "Counting records would make CPLX1 look well understood. The atlas gives the multi-gene group a variant_in edge but deliberately no mechanism edge, and the one CPLX1 mechanism edge that exists rests on two truncating records and an inferred effect (confidence 0.45). STX1A has the same problem: 155 of 161 records are Williams-region copy-number changes.",
+   "edge_ids": [
+    "vg:CPLX1:contiguous-gene-deletion|variant_in|gene:CPLX1",
+    "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency",
+    "vg:STX1A:contiguous-gene-deletion|variant_in|gene:STX1A",
+    "gene:STX1A|causes|disease:STX1A"
+   ],
+   "edges": [
+    {
+     "id": "vg:CPLX1:contiguous-gene-deletion|variant_in|gene:CPLX1",
+     "type": "variant_in",
+     "status": "supported",
+     "evidence_level": "curated",
+     "confidence": 0.9,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:STX1A:contiguous-gene-deletion|variant_in|gene:STX1A",
+     "type": "variant_in",
+     "status": "supported",
+     "evidence_level": "curated",
+     "confidence": 0.9,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "gene:STX1A|causes|disease:STX1A",
+     "type": "causes",
+     "status": "supported",
+     "evidence_level": "clinical",
+     "confidence": 0.92,
+     "n_counter_evidence": 0
+    }
+   ]
+  },
+  {
+   "id": "cx:looking-alike-is-not-sharing-a-cause",
+   "title": "The pair with the strongest symptom match shares no distinctive feature",
+   "plain_language": "Two conditions can score as very similar because they share common things like seizures, low muscle tone and developmental delay. Sharing those does not mean they share a cause.",
+   "why_it_matters": "Phenotype similarity is computed, not observed: 1 of the slice's similarity edges have an empty list of shared DISTINCTIVE features, so the match is carried entirely by broad terms. The edges are kept with low confidence and the explanation names which shared features are broad, which is the only honest way to show them.",
+   "edge_ids": [
+    "disease:STXBP1|similar_phenotype|disease:VAMP2",
+    "disease:STXBP1|similar_phenotype|disease:SLC6A1"
+   ],
+   "edges": [
+    {
+     "id": "disease:STXBP1|similar_phenotype|disease:VAMP2",
+     "type": "similar_phenotype",
+     "status": "supported",
+     "evidence_level": "inferred",
+     "confidence": 0.46,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "disease:STXBP1|similar_phenotype|disease:SLC6A1",
+     "type": "similar_phenotype",
+     "status": "supported",
+     "evidence_level": "inferred",
+     "confidence": 0.46,
+     "n_counter_evidence": 0
+    }
+   ]
+  },
+  {
+   "id": "cx:truncating-to-haploinsufficiency-is-assumed",
+   "title": "16 'broken copy means missing protein' edges are assumptions, not experiments",
+   "plain_language": "When a change clearly breaks the gene, the atlas assumes the result is 'not enough protein'. For most genes here, no experiment has checked that in a human nerve cell.",
+   "why_it_matters": "These edges are labelled inferred and unverified with confidence 0.45 on purpose. They are the quiet majority of the mechanism layer, and anything built on top of them - including the modality screen and the hypotheses - inherits that weakness.",
+   "edge_ids": [
+    "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency",
+    "vg:SNAP25:splice|has_effect|mech:haploinsufficiency",
+    "vg:SNAP25:truncating|has_effect|mech:haploinsufficiency",
+    "vg:STX1A:splice|has_effect|mech:haploinsufficiency",
+    "vg:STX1B:splice|has_effect|mech:haploinsufficiency",
+    "vg:STX1B:truncating|has_effect|mech:haploinsufficiency",
+    "vg:STX1B:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:SYT1:splice|has_effect|mech:haploinsufficiency",
+    "vg:SYT1:truncating|has_effect|mech:haploinsufficiency",
+    "vg:SYT1:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:SYT2:splice|has_effect|mech:haploinsufficiency",
+    "vg:SYT2:truncating|has_effect|mech:haploinsufficiency",
+    "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency",
+    "vg:UNC13A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:VAMP2:splice|has_effect|mech:haploinsufficiency",
+    "vg:VAMP2:truncating|has_effect|mech:haploinsufficiency"
+   ],
+   "edges": [
+    {
+     "id": "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SNAP25:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SNAP25:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:STX1A:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:STX1B:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:STX1B:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:STX1B:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SYT1:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SYT1:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SYT1:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SYT2:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SYT2:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:UNC13A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:VAMP2:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:VAMP2:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    }
+   ]
+  }
+ ]
+}

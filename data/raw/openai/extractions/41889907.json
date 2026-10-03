@@ -1,0 +1,141 @@
+{
+ "pmid": "41889907",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:50:31.459Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_09d4decc91d8e42f016ac14e5e746c87d2a292f4b8f1e4a454",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_09d4decc91d8e42f016ac14e5e7cf887d29c8b59d08c4d3c15": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 384,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 384,
+     "output_tokens": 0
+    },
+    "rs_09d4decc91d8e42f016ac14e5ff48887d2bce68f63e2d67b8e": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 56
+    },
+    "msg_09d4decc91d8e42f016ac14e62538087d2bba566201db239e2": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 529
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 529
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1467,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 585,
+  "output_tokens_details": {
+   "reasoning_tokens": 56
+  },
+  "total_tokens": 2052
+ },
+ "latency_ms": 26188,
+ "input_sha1": "405c38eb17989617",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/SYT1.efetch.xml",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"Synaptotagmin (SYT)\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"SV fusion\",\"object_type\":\"mechanism\",\"quote\":\"Members of the Synaptotagmin (SYT) family of synaptic vesicle (SV) proteins contain two Ca2+ binding C2 domains (C2A and C2B) that regulate the timing and probability of SV fusion.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT mutations in the C2B Ca2+ binding pocket\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"dominant-negative\",\"object_type\":\"mechanism\",\"quote\":\"Mutations in the C2B Ca2+ binding pocket were the most severe and acted in a dominant-negative manner to decrease evoked release.\",\"study_type\":\"animal_model\",\"species\":\"fly\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT mutations outside of the C2B Ca2+ binding pocket\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"gain-of-function\",\"object_type\":\"mechanism\",\"quote\":\"Several mutations outside of this region acted through a gain-of-function mechanism to enhance neurotransmitter release, while others caused the protein to undergo degradation.\",\"study_type\":\"animal_model\",\"species\":\"fly\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT mutations outside of the C2B Ca2+ binding pocket\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"degradation\",\"object_type\":\"mechanism\",\"quote\":\"Several mutations outside of this region acted through a gain-of-function mechanism to enhance neurotransmitter release, while others caused the protein to undergo degradation.\",\"study_type\":\"animal_model\",\"species\":\"fly\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT mutations outside of the C2B Ca2+ binding pocket\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"haploinsufficiency\",\"object_type\":\"mechanism\",\"quote\":\"These data indicate C2B Ca2+ binding pocket mutations act dominantly to poison the fusion machinery and block release sites, while mutations outside of this region cause haploinsufficiency or gain-of-function effects with milder effects on synaptic output and behavioral phenotypes.\",\"study_type\":\"animal_model\",\"species\":\"fly\",\"certainty\":\"suggested\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "Synaptotagmin (SYT)",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "SV fusion",
+   "object_type": "mechanism",
+   "quote": "Members of the Synaptotagmin (SYT) family of synaptic vesicle (SV) proteins contain two Ca2+ binding C2 domains (C2A and C2B) that regulate the timing and probability of SV fusion.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT mutations in the C2B Ca2+ binding pocket",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dominant-negative",
+   "object_type": "mechanism",
+   "quote": "Mutations in the C2B Ca2+ binding pocket were the most severe and acted in a dominant-negative manner to decrease evoked release.",
+   "study_type": "animal_model",
+   "species": "fly",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT mutations outside of the C2B Ca2+ binding pocket",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "Several mutations outside of this region acted through a gain-of-function mechanism to enhance neurotransmitter release, while others caused the protein to undergo degradation.",
+   "study_type": "animal_model",
+   "species": "fly",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT mutations outside of the C2B Ca2+ binding pocket",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "degradation",
+   "object_type": "mechanism",
+   "quote": "Several mutations outside of this region acted through a gain-of-function mechanism to enhance neurotransmitter release, while others caused the protein to undergo degradation.",
+   "study_type": "animal_model",
+   "species": "fly",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT mutations outside of the C2B Ca2+ binding pocket",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "These data indicate C2B Ca2+ binding pocket mutations act dominantly to poison the fusion machinery and block release sites, while mutations outside of this region cause haploinsufficiency or gain-of-function effects with milder effects on synaptic output and behavioral phenotypes.",
+   "study_type": "animal_model",
+   "species": "fly",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

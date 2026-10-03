@@ -1,0 +1,364 @@
+{
+ "pmid": "25865495",
+ "entries": {
+  "3e6bbeb7174cfbc4": {
+   "mention": "re-uptake of GABA from the synapse",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gaba-reuptake",
+    "mech:gain-of-function",
+    "mech:synaptic-vesicle-fusion",
+    "mech:loss-of-function",
+    "mech:synaptic-vesicle-priming",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:haploinsufficiency",
+    "mech:protein-destabilization",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:gaba-reuptake",
+   "match": "same",
+   "justification": "Re-uptake of GABA from the synapse names the GABA reuptake process.",
+   "raw_node_id": "mech:gaba-reuptake",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:46:17.349Z"
+  },
+  "69fe8a5c2ad1de56": {
+   "mention": "myoclonic-atonic seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011170",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0002123",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0002069",
+    "phenotype:HP:0010818",
+    "phenotype:HP:0007334",
+    "phenotype:HP:0007359"
+   ],
+   "node_id": "phenotype:HP:0011170",
+   "match": "same",
+   "justification": "Myoclonic-atonic seizures is an equivalent clinical term for generalized myoclonic-atonic seizures.",
+   "raw_node_id": "phenotype:HP:0011170",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:46:17.350Z"
+  },
+  "de4f336bb962cc91": {
+   "mention": "spontaneous spike-wave discharges",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0011194",
+    "phenotype:HP:0011196",
+    "phenotype:HP:0011293",
+    "phenotype:HP:0002643",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0000414",
+    "phenotype:HP:0001288",
+    "phenotype:HP:0008138"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Spike-wave discharges are not specified as generalized, multifocal, or focal, so no candidate is an unambiguous match.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:46:17.350Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:46:17.350Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_07e6772c2f86429b016ac14d70e70087d2ae07601438af27a0": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 1636,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 1636,
+       "output_tokens": 0
+      },
+      "rs_07e6772c2f86429b016ac14d72989887d2a76e3467a0be2a2b": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 15
+      },
+      "msg_07e6772c2f86429b016ac14d7369a487d292771f57cbec88c9": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 152
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 152
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 1980,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 167,
+    "output_tokens_details": {
+     "reasoning_tokens": 15
+    },
+    "total_tokens": 2147
+   },
+   "request_payload": {
+    "title": "Mutations in the GABA Transporter SLC6A1 Cause Epilepsy with Myoclonic-Atonic Seizures.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "re-uptake of GABA from the synapse",
+      "declared_type": "mechanism",
+      "sentence": "GAT-1, encoded by SLC6A1, is one of the major gamma-aminobutyric acid (GABA) transporters in the brain and is responsible for re-uptake of GABA from the synapse.",
+      "candidates": [
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "myoclonic-atonic seizures",
+      "declared_type": "phenotype",
+      "sentence": "In this study, targeted resequencing of 644 individuals with epileptic encephalopathies led to the identification of six SLC6A1 mutations in seven individuals, all of whom have epilepsy with myoclonic-atonic seizures (MAE).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011170",
+        "type": "phenotype",
+        "label": "Generalized myoclonic-atonic seizure",
+        "note": "HPO HP:0011170"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0002123",
+        "type": "phenotype",
+        "label": "Generalized myoclonic seizure",
+        "note": "HPO HP:0002123"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0002069",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure",
+        "note": "HPO HP:0002069"
+       },
+       {
+        "id": "phenotype:HP:0010818",
+        "type": "phenotype",
+        "label": "Generalized tonic seizure",
+        "note": "HPO HP:0010818"
+       },
+       {
+        "id": "phenotype:HP:0007334",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure with focal onset",
+        "note": "HPO HP:0007334"
+       },
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "spontaneous spike-wave discharges",
+      "declared_type": "phenotype",
+      "sentence": "These individuals share many of the electrophysiological properties of Gat1-deficient mice, including spontaneous spike-wave discharges.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0011194",
+        "type": "phenotype",
+        "label": "EEG with series of focal spikes",
+        "note": "HPO HP:0011194"
+       },
+       {
+        "id": "phenotype:HP:0011196",
+        "type": "phenotype",
+        "label": "EEG with focal sharp waves",
+        "note": "HPO HP:0011196"
+       },
+       {
+        "id": "phenotype:HP:0011293",
+        "type": "phenotype",
+        "label": "EEG with central sharp waves",
+        "note": "HPO HP:0011293"
+       },
+       {
+        "id": "phenotype:HP:0002643",
+        "type": "phenotype",
+        "label": "Neonatal respiratory distress",
+        "note": "HPO HP:0002643"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0000414",
+        "type": "phenotype",
+        "label": "Bulbous nose",
+        "note": "HPO HP:0000414"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       },
+       {
+        "id": "phenotype:HP:0008138",
+        "type": "phenotype",
+        "label": "Equinus calcaneus",
+        "note": "HPO HP:0008138"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"mech:gaba-reuptake\",\"match\":\"same\",\"justification\":\"Re-uptake of GABA from the synapse names the GABA reuptake process.\"},{\"mention_id\":\"m2\",\"node_id\":\"phenotype:HP:0011170\",\"match\":\"same\",\"justification\":\"Myoclonic-atonic seizures is an equivalent clinical term for generalized myoclonic-atonic seizures.\"},{\"mention_id\":\"m3\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Spike-wave discharges are not specified as generalized, multifocal, or focal, so no candidate is an unambiguous match.\"}]}"
+  }
+ ]
+}

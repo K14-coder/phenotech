@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Low ink, high signal. Neutral grays, one restrained accent (ink blue), colour carries meaning only. */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-ink: #16181d;
+  --color-ink-2: #3f4550;
+  --color-ink-3: #5f6672;
+  --color-ink-4: #a3a9b3;
+  --color-line: #e5e7eb;
+  --color-line-2: #eff1f3;
+  --color-subtle: #f7f8f9;
+
+  --color-accent-50: #f3f7fb;
+  --color-accent-100: #e4edf6;
+  --color-accent-200: #c7d8ea;
+  --color-accent-500: #3e6ea5;
+  --color-accent-700: #1f5a96;
+  --color-accent-900: #153e67;
+
+  --color-warn-bg: #fdf6e7;
+  --color-warn-line: #e6c27c;
+  --color-warn-ink: #7f520f;
+
+  --color-ok: #2a7a4b;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Visible, consistent focus states */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent-700);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-accent-200);
+}
+
+/* Glossary tooltip */
+.term {
+  position: relative;
+  text-decoration: underline dotted var(--color-ink-4);
+  text-underline-offset: 3px;
+  cursor: help;
+}
+.term .term-tip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 60;
+  width: max-content;
+  max-width: 280px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--color-ink);
+  color: #fff;
+  font-size: 12.5px;
+  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+.term:hover .term-tip,
+.term:focus-visible .term-tip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Thin scrollbars inside panels */
+.panel-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}

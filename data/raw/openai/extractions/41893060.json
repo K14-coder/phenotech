@@ -1,0 +1,135 @@
+{
+ "pmid": "41893060",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:50:57.832Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_09bcad8b9c7132c2016ac14e7891fc87d2b199cb4020aeaa52",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_09bcad8b9c7132c2016ac14e789a8487d28e68af6bcbc9e4ac": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 493,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 493,
+     "output_tokens": 0
+    },
+    "msg_09bcad8b9c7132c2016ac14e7a7f7487d2be71401ad5a22e35": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 590
+      }
+     ],
+     "input_tokens": 2,
+     "output_tokens": 590
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1576,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 590,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 2166
+ },
+ "latency_ms": 26371,
+ "input_sha1": "8f370a13ec5d6a3c",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/SLC6A1.efetch.xml",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD)\",\"object_type\":\"disease\",\"quote\":\"INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"early-onset seizures\",\"object_type\":\"phenotype\",\"quote\":\"INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delays\",\"object_type\":\"phenotype\",\"quote\":\"INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"early-onset epilepsy\",\"object_type\":\"disease\",\"quote\":\"Despite the growing recognition of SLC6A1 as a major cause of early-onset epilepsy, the electrophysiological changes associated with the disorder remain inadequately characterized.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1-NDD\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"significantly elevated delta power\",\"object_type\":\"phenotype\",\"quote\":\"RESULTS: Patients with SLC6A1-NDD exhibited significantly elevated delta power (19.4 ± 4.1) compared to controls (14.2 ± 3.0; p < 0.001).\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD)",
+   "object_type": "disease",
+   "quote": "INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "early-onset seizures",
+   "object_type": "phenotype",
+   "quote": "INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delays",
+   "object_type": "phenotype",
+   "quote": "INTRODUCTION: SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD) is an epileptic encephalopathy linked to mutations in the SLC6A1 gene and is characterized by early-onset seizures and developmental delays.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "early-onset epilepsy",
+   "object_type": "disease",
+   "quote": "Despite the growing recognition of SLC6A1 as a major cause of early-onset epilepsy, the electrophysiological changes associated with the disorder remain inadequately characterized.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1-NDD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "significantly elevated delta power",
+   "object_type": "phenotype",
+   "quote": "RESULTS: Patients with SLC6A1-NDD exhibited significantly elevated delta power (19.4 ± 4.1) compared to controls (14.2 ± 3.0; p < 0.001).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

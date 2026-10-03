@@ -1,0 +1,177 @@
+{
+ "pmid": "38781976",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:39:35.425Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0a6be2280d408c49016ac14bb42c4c87d28f5693c1bce9442e",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0a6be2280d408c49016ac14bb436a887d2847c63374308a76a": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 376,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 376,
+     "output_tokens": 0
+    },
+    "rs_0a6be2280d408c49016ac14bb5f5f887d2b733556578afa4f6": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 203
+    },
+    "msg_0a6be2280d408c49016ac14bbe467c87d2964cce6f76f5f10e": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1032
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1032
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1459,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1235,
+  "output_tokens_details": {
+   "reasoning_tokens": 203
+  },
+  "total_tokens": 2694
+ },
+ "latency_ms": 52638,
+ "input_sha1": "fbd5eec1e4352162",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/38781976.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"developmental delay\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"autism\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 de novo variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"haploinsufficiency\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"De novo variants consistently resulted in a decrease in GABA uptake, in keeping with haploinsufficiency underlying all neurodevelopmental phenotypes.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"neurodevelopmental consequences of SLC6A1 variants\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"driven_by\",\n      \"object_mention\": \"Haploinsufficiency\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Haploinsufficiency underlies the neurodevelopmental consequences of SLC6A1 variants.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 recurrent de novo missense variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"moderate loss-of-function effects\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 recurrent de novo missense variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"dominant-negative\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": true\n    },\n    {\n      \"subject_mention\": \"SLC6A1 recurrent de novo missense variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"gain-of-function effects\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": true\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "seizures",
+   "object_type": "phenotype",
+   "quote": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autism",
+   "object_type": "phenotype",
+   "quote": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 de novo variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "De novo variants consistently resulted in a decrease in GABA uptake, in keeping with haploinsufficiency underlying all neurodevelopmental phenotypes.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurodevelopmental consequences of SLC6A1 variants",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "Haploinsufficiency underlies the neurodevelopmental consequences of SLC6A1 variants.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 recurrent de novo missense variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "moderate loss-of-function effects",
+   "object_type": "mechanism",
+   "quote": "Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 recurrent de novo missense variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dominant-negative",
+   "object_type": "mechanism",
+   "quote": "Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "SLC6A1 recurrent de novo missense variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function effects",
+   "object_type": "mechanism",
+   "quote": "Surprisingly, recurrent de novo missense variants showed moderate loss-of-function effects that reduced GABA uptake with no evidence for dominant-negative or gain-of-function effects.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": true
+  }
+ ]
+}

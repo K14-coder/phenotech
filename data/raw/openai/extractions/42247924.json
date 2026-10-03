@@ -1,0 +1,213 @@
+{
+ "pmid": "42247924",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:53:07.836Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0324bf22d88d8849016ac14ed3f22487d29d2c5c22993ddaaa",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0324bf22d88d8849016ac14ed4032487d2a244c63aee687395": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 447,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 447,
+     "output_tokens": 0
+    },
+    "rs_0324bf22d88d8849016ac14ed67bdc87d285a113825856a108": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 28
+    },
+    "msg_0324bf22d88d8849016ac14ed7e25c87d2aeb7d7d608627908": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1402
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1402
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1530,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1430,
+  "output_tokens_details": {
+   "reasoning_tokens": 28
+  },
+  "total_tokens": 2960
+ },
+ "latency_ms": 65226,
+ "input_sha1": "b8fe3457b62c420a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/STXBP1.efetch.xml",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"STXBP1\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"neurodevelopmental disorders\",\n      \"object_type\": \"disease\",\n      \"quote\": \"STXBP1 mutations are a leading genetic cause of neurodevelopmental disorders.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"developmental delay without seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Of these, 24 had developmental and epileptic encephalopathy (DEE), while 4 (Patients 11, 13, 23, and 27) had developmental delay without seizures.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"focal to bilateral tonic-clonic seizures (FBTCS)\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"The most common seizures were focal to bilateral tonic-clonic seizures (FBTCS), generalized tonic-clonic seizures (GTCS), and epileptic spasms (ES).\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"generalized tonic-clonic seizures (GTCS)\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"The most common seizures were focal to bilateral tonic-clonic seizures (FBTCS), generalized tonic-clonic seizures (GTCS), and epileptic spasms (ES).\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"epileptic spasms (ES)\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"The most common seizures were focal to bilateral tonic-clonic seizures (FBTCS), generalized tonic-clonic seizures (GTCS), and epileptic spasms (ES).\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"developmental delays\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Among the cohort of 28 patients, 27 individuals (96.4%) exhibited developmental delays.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"severely impaired intellectual functioning\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Of these, 14 patients demonstrated severely impaired intellectual functioning.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"drug-resistant epilepsy\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Seizure control was achieved in 14 patients and seven patients have had drug-resistant epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"sudden unexpected death in epilepsy (SUDEP)\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Regrettably, 3 patients succumbed to sudden unexpected death in epilepsy (SUDEP).\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE)\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"drug-responsive seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"The severity of phenotypes in patients with STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) varied from drug-responsive seizures to refractory epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE)\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"refractory epilepsy\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"The severity of phenotypes in patients with STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) varied from drug-responsive seizures to refractory epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "neurodevelopmental disorders",
+   "object_type": "disease",
+   "quote": "STXBP1 mutations are a leading genetic cause of neurodevelopmental disorders.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay without seizures",
+   "object_type": "phenotype",
+   "quote": "Of these, 24 had developmental and epileptic encephalopathy (DEE), while 4 (Patients 11, 13, 23, and 27) had developmental delay without seizures.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "focal to bilateral tonic-clonic seizures (FBTCS)",
+   "object_type": "phenotype",
+   "quote": "The most common seizures were focal to bilateral tonic-clonic seizures (FBTCS), generalized tonic-clonic seizures (GTCS), and epileptic spasms (ES).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "generalized tonic-clonic seizures (GTCS)",
+   "object_type": "phenotype",
+   "quote": "The most common seizures were focal to bilateral tonic-clonic seizures (FBTCS), generalized tonic-clonic seizures (GTCS), and epileptic spasms (ES).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epileptic spasms (ES)",
+   "object_type": "phenotype",
+   "quote": "The most common seizures were focal to bilateral tonic-clonic seizures (FBTCS), generalized tonic-clonic seizures (GTCS), and epileptic spasms (ES).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delays",
+   "object_type": "phenotype",
+   "quote": "Among the cohort of 28 patients, 27 individuals (96.4%) exhibited developmental delays.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severely impaired intellectual functioning",
+   "object_type": "phenotype",
+   "quote": "Of these, 14 patients demonstrated severely impaired intellectual functioning.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "drug-resistant epilepsy",
+   "object_type": "phenotype",
+   "quote": "Seizure control was achieved in 14 patients and seven patients have had drug-resistant epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "sudden unexpected death in epilepsy (SUDEP)",
+   "object_type": "phenotype",
+   "quote": "Regrettably, 3 patients succumbed to sudden unexpected death in epilepsy (SUDEP).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "drug-responsive seizures",
+   "object_type": "phenotype",
+   "quote": "The severity of phenotypes in patients with STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) varied from drug-responsive seizures to refractory epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "refractory epilepsy",
+   "object_type": "phenotype",
+   "quote": "The severity of phenotypes in patients with STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) varied from drug-responsive seizures to refractory epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

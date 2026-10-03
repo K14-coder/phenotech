@@ -1,0 +1,546 @@
+{
+ "pmid": "41174879",
+ "entries": {
+  "f3bf501b09671c71": {
+   "mention": "hypomorphic allele",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-priming",
+    "mech:synaptic-vesicle-fusion",
+    "mech:gaba-reuptake",
+    "mech:dominant-negative",
+    "mech:ca-triggered-exocytosis",
+    "mech:gain-of-function",
+    "mech:haploinsufficiency",
+    "mech:loss-of-function",
+    "mech:protein-destabilization",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:loss-of-function",
+   "match": "instance",
+   "justification": "A hypomorphic allele causes a partial loss of function.",
+   "raw_node_id": "mech:loss-of-function",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:52.533Z"
+  },
+  "84d73831537eb9d2": {
+   "mention": "developmental delay",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0001249"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "Developmental delay is an alternative term for global developmental delay in this clinical context.",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:52.533Z"
+  },
+  "b9c788adbc22753f": {
+   "mention": "epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0100021",
+    "phenotype:HP:0012469",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0011445"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "None of the candidates denotes epilepsy generally; they describe specific manifestations or complications.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:52.533Z"
+  },
+  "e9e43ce5eb734f4d": {
+   "mention": "motor dysfunction",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011153",
+    "phenotype:HP:0002121",
+    "phenotype:HP:0001332",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0001260",
+    "phenotype:HP:0100660",
+    "phenotype:HP:0006808",
+    "phenotype:HP:0001518",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0004879"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Motor dysfunction is broader than the specific movement abnormalities among the candidates.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:52.533Z"
+  },
+  "0e95228020aaef1f": {
+   "mention": "autism spectrum disorder",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0007018",
+    "phenotype:HP:0000729",
+    "phenotype:HP:0000319",
+    "phenotype:HP:0001249",
+    "phenotype:HP:0002465",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0000316",
+    "phenotype:HP:0001344",
+    "phenotype:HP:0002187",
+    "phenotype:HP:0010841"
+   ],
+   "node_id": "phenotype:HP:0000729",
+   "match": "same",
+   "justification": "Autism spectrum disorder corresponds to the HPO autistic behavior phenotype.",
+   "raw_node_id": "phenotype:HP:0000729",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:52.533Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:52.533Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_0bf92f7d4e4f511f016ac14fae2fcc87d2b62f436bbd2c817c": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 2397,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 2397,
+       "output_tokens": 0
+      },
+      "rs_0bf92f7d4e4f511f016ac14fafc67487d2942727235e51f9a0": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 19
+      },
+      "msg_0bf92f7d4e4f511f016ac14fb0be7887d2888dc8b1c2aab51d": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 198
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 198
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 2741,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 217,
+    "output_tokens_details": {
+     "reasoning_tokens": 19
+    },
+    "total_tokens": 2958
+   },
+   "request_payload": {
+    "title": "Resolving SLC6A1 variable expressivity with deep clinical phenotyping and Drosophila models.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "hypomorphic allele",
+      "declared_type": "mechanism",
+      "sentence": "We conclude that the p.A334S variant is a hypomorphic allele and begin to elucidate the underlying variability in SLC6A1-NDD.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "developmental delay",
+      "declared_type": "phenotype",
+      "sentence": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0100021",
+        "type": "phenotype",
+        "label": "Cerebral palsy",
+        "note": "HPO HP:0100021"
+       },
+       {
+        "id": "phenotype:HP:0012469",
+        "type": "phenotype",
+        "label": "Infantile spasms",
+        "note": "HPO HP:0012469"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0011445",
+        "type": "phenotype",
+        "label": "Athetoid cerebral palsy",
+        "note": "HPO HP:0011445"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "motor dysfunction",
+      "declared_type": "phenotype",
+      "sentence": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0002121",
+        "type": "phenotype",
+        "label": "Generalized non-motor (absence) seizure",
+        "note": "HPO HP:0002121"
+       },
+       {
+        "id": "phenotype:HP:0001332",
+        "type": "phenotype",
+        "label": "Dystonia",
+        "note": "HPO HP:0001332"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0001260",
+        "type": "phenotype",
+        "label": "Dysarthria",
+        "note": "HPO HP:0001260"
+       },
+       {
+        "id": "phenotype:HP:0100660",
+        "type": "phenotype",
+        "label": "Dyskinesia",
+        "note": "HPO HP:0100660"
+       },
+       {
+        "id": "phenotype:HP:0006808",
+        "type": "phenotype",
+        "label": "Cerebral hypomyelination",
+        "note": "HPO HP:0006808"
+       },
+       {
+        "id": "phenotype:HP:0001518",
+        "type": "phenotype",
+        "label": "Small for gestational age",
+        "note": "HPO HP:0001518"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0004879",
+        "type": "phenotype",
+        "label": "Intermittent hyperventilation",
+        "note": "HPO HP:0004879"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "autism spectrum disorder",
+      "declared_type": "phenotype",
+      "sentence": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0000729",
+        "type": "phenotype",
+        "label": "Autistic behavior",
+        "note": "HPO HP:0000729"
+       },
+       {
+        "id": "phenotype:HP:0000319",
+        "type": "phenotype",
+        "label": "Smooth philtrum",
+        "note": "HPO HP:0000319"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       },
+       {
+        "id": "phenotype:HP:0002465",
+        "type": "phenotype",
+        "label": "Poor speech",
+        "note": "HPO HP:0002465"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0000316",
+        "type": "phenotype",
+        "label": "Hypertelorism",
+        "note": "HPO HP:0000316"
+       },
+       {
+        "id": "phenotype:HP:0001344",
+        "type": "phenotype",
+        "label": "Absent speech",
+        "note": "HPO HP:0001344"
+       },
+       {
+        "id": "phenotype:HP:0002187",
+        "type": "phenotype",
+        "label": "Profound intellectual disability",
+        "note": "HPO HP:0002187"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"mech:loss-of-function\",\"match\":\"instance\",\"justification\":\"A hypomorphic allele causes a partial loss of function.\"},{\"mention_id\":\"m2\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"Developmental delay is an alternative term for global developmental delay in this clinical context.\"},{\"mention_id\":\"m3\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"None of the candidates denotes epilepsy generally; they describe specific manifestations or complications.\"},{\"mention_id\":\"m4\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Motor dysfunction is broader than the specific movement abnormalities among the candidates.\"},{\"mention_id\":\"m5\",\"node_id\":\"phenotype:HP:0000729\",\"match\":\"same\",\"justification\":\"Autism spectrum disorder corresponds to the HPO autistic behavior phenotype.\"}]}"
+  }
+ ]
+}

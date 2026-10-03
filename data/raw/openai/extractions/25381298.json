@@ -1,0 +1,201 @@
+{
+ "pmid": "25381298",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:23:53.108Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0e71d20d3193ff7d016ac147f96de487d2b946c8b02b9285de",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0e71d20d3193ff7d016ac147f975e487d2bb24f43222eb1d9b": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 430,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 430,
+     "output_tokens": 0
+    },
+    "rs_0e71d20d3193ff7d016ac147fb109887d2b21163be235be245": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 153
+    },
+    "msg_0e71d20d3193ff7d016ac1480210e487d298203a35f45f3023": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1395
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1395
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1513,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1548,
+  "output_tokens_details": {
+   "reasoning_tokens": 153
+  },
+  "total_tokens": 3061
+ },
+ "latency_ms": 64859,
+ "input_sha1": "3a1a1f9812a7f915",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/25381298.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"SNAP25B\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"participates_in\",\n      \"object_mention\": \"exocytosis of synaptic vesicles from nerve terminals\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Exome sequencing identified a dominant de novo variant, p.Ile67Asn, in SNAP25B, a SNARE protein essential for exocytosis of synaptic vesicles from nerve terminals and of dense-core vesicles from endocrine cells.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25B\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"participates_in\",\n      \"object_mention\": \"exocytosis of dense-core vesicles from endocrine cells\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Exome sequencing identified a dominant de novo variant, p.Ile67Asn, in SNAP25B, a SNARE protein essential for exocytosis of synaptic vesicles from nerve terminals and of dense-core vesicles from endocrine cells.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"synaptobrevin\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"participates_in\",\n      \"object_mention\": \"Ca(2+)-triggered exocytosis\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Ca(2+)-triggered exocytosis is initiated when synaptobrevin attached to synaptic vesicles (v-SNARE) assembles with SNAP25B and syntaxin anchored in the presynaptic membrane (t-SNAREs) into an α-helical coiled-coil held together by hydrophobic interactions.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25B\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"participates_in\",\n      \"object_mention\": \"Ca(2+)-triggered exocytosis\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Ca(2+)-triggered exocytosis is initiated when synaptobrevin attached to synaptic vesicles (v-SNARE) assembles with SNAP25B and syntaxin anchored in the presynaptic membrane (t-SNAREs) into an α-helical coiled-coil held together by hydrophobic interactions.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"syntaxin\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"participates_in\",\n      \"object_mention\": \"Ca(2+)-triggered exocytosis\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Ca(2+)-triggered exocytosis is initiated when synaptobrevin attached to synaptic vesicles (v-SNARE) assembles with SNAP25B and syntaxin anchored in the presynaptic membrane (t-SNAREs) into an α-helical coiled-coil held together by hydrophobic interactions.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"Ile67Asn variant in SNAP25B\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"inhibits synaptic vesicle exocytosis\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"CONCLUSION: Ile67Asn variant in SNAP25B is pathogenic because it inhibits synaptic vesicle exocytosis.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25B\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"myasthenia\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25B\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"cortical hyperexcitability\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25B\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"ataxia\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SNAP25B\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"intellectual disability\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.\",\n      \"study_type\": \"case_report\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "SNAP25B",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "exocytosis of synaptic vesicles from nerve terminals",
+   "object_type": "mechanism",
+   "quote": "Exome sequencing identified a dominant de novo variant, p.Ile67Asn, in SNAP25B, a SNARE protein essential for exocytosis of synaptic vesicles from nerve terminals and of dense-core vesicles from endocrine cells.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25B",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "exocytosis of dense-core vesicles from endocrine cells",
+   "object_type": "mechanism",
+   "quote": "Exome sequencing identified a dominant de novo variant, p.Ile67Asn, in SNAP25B, a SNARE protein essential for exocytosis of synaptic vesicles from nerve terminals and of dense-core vesicles from endocrine cells.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "synaptobrevin",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "Ca(2+)-triggered exocytosis",
+   "object_type": "mechanism",
+   "quote": "Ca(2+)-triggered exocytosis is initiated when synaptobrevin attached to synaptic vesicles (v-SNARE) assembles with SNAP25B and syntaxin anchored in the presynaptic membrane (t-SNAREs) into an α-helical coiled-coil held together by hydrophobic interactions.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25B",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "Ca(2+)-triggered exocytosis",
+   "object_type": "mechanism",
+   "quote": "Ca(2+)-triggered exocytosis is initiated when synaptobrevin attached to synaptic vesicles (v-SNARE) assembles with SNAP25B and syntaxin anchored in the presynaptic membrane (t-SNAREs) into an α-helical coiled-coil held together by hydrophobic interactions.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "syntaxin",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "Ca(2+)-triggered exocytosis",
+   "object_type": "mechanism",
+   "quote": "Ca(2+)-triggered exocytosis is initiated when synaptobrevin attached to synaptic vesicles (v-SNARE) assembles with SNAP25B and syntaxin anchored in the presynaptic membrane (t-SNAREs) into an α-helical coiled-coil held together by hydrophobic interactions.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Ile67Asn variant in SNAP25B",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "inhibits synaptic vesicle exocytosis",
+   "object_type": "mechanism",
+   "quote": "CONCLUSION: Ile67Asn variant in SNAP25B is pathogenic because it inhibits synaptic vesicle exocytosis.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25B",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "myasthenia",
+   "object_type": "phenotype",
+   "quote": "Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25B",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cortical hyperexcitability",
+   "object_type": "phenotype",
+   "quote": "Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25B",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "ataxia",
+   "object_type": "phenotype",
+   "quote": "Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25B",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intellectual disability",
+   "object_type": "phenotype",
+   "quote": "Mutant SNAP25B causes myasthenia, cortical hyperexcitability, ataxia, and intellectual disability.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,237 @@
+{
+ "pmid": "30929742",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:28:39.210Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0be8ca812df126b2016ac1491b481887d290ee03874214224f",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0be8ca812df126b2016ac1491b508c87d2bb855da394781c79": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 297,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 297,
+     "output_tokens": 0
+    },
+    "rs_0be8ca812df126b2016ac1491d3de087d2ad7be3514124c839": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 133
+    },
+    "msg_0be8ca812df126b2016ac149232d2487d282c28166c42343f1": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1282
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1282
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1380,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1415,
+  "output_tokens_details": {
+   "reasoning_tokens": 133
+  },
+  "total_tokens": 2795
+ },
+ "latency_ms": 61156,
+ "input_sha1": "159b1e2333db12ea",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/30929742.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"VAMP2\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"fusion of synaptic vesicles\",\"object_type\":\"mechanism\",\"quote\":\"Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"syntaxin-1A\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"fusion of synaptic vesicles\",\"object_type\":\"mechanism\",\"quote\":\"Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SNAP25\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"fusion of synaptic vesicles\",\"object_type\":\"mechanism\",\"quote\":\"Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"VAMP2\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"vesicular exocytosis\",\"object_type\":\"mechanism\",\"quote\":\"VAMP2 is essential for vesicular exocytosis and activity-dependent neurotransmitter release.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"VAMP2\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"activity-dependent neurotransmitter release\",\"object_type\":\"mechanism\",\"quote\":\"VAMP2 is essential for vesicular exocytosis and activity-dependent neurotransmitter release.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"VAMP2\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"genetic synaptopathy\",\"object_type\":\"disease\",\"quote\":\"The genetic synaptopathy caused by VAMP2 de novo mutations highlights the key roles of this gene in human brain development and function.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"axial hypotonia\",\"object_type\":\"phenotype\",\"quote\":\"Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"intellectual disability\",\"object_type\":\"phenotype\",\"quote\":\"Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"autistic features\",\"object_type\":\"phenotype\",\"quote\":\"Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"central visual impairment\",\"object_type\":\"phenotype\",\"quote\":\"Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"hyperkinetic movement disorder\",\"object_type\":\"phenotype\",\"quote\":\"Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"epilepsy\",\"object_type\":\"phenotype\",\"quote\":\"Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"electroencephalography abnormalities\",\"object_type\":\"phenotype\",\"quote\":\"Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "VAMP2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "fusion of synaptic vesicles",
+   "object_type": "mechanism",
+   "quote": "Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "syntaxin-1A",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "fusion of synaptic vesicles",
+   "object_type": "mechanism",
+   "quote": "Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "fusion of synaptic vesicles",
+   "object_type": "mechanism",
+   "quote": "Together with its partners syntaxin-1A and synaptosomal-associated protein 25 (SNAP25), VAMP2 mediates fusion of synaptic vesicles to release neurotransmitters.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "VAMP2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "vesicular exocytosis",
+   "object_type": "mechanism",
+   "quote": "VAMP2 is essential for vesicular exocytosis and activity-dependent neurotransmitter release.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "VAMP2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "activity-dependent neurotransmitter release",
+   "object_type": "mechanism",
+   "quote": "VAMP2 is essential for vesicular exocytosis and activity-dependent neurotransmitter release.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "VAMP2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "genetic synaptopathy",
+   "object_type": "disease",
+   "quote": "The genetic synaptopathy caused by VAMP2 de novo mutations highlights the key roles of this gene in human brain development and function.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "axial hypotonia",
+   "object_type": "phenotype",
+   "quote": "Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intellectual disability",
+   "object_type": "phenotype",
+   "quote": "Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autistic features",
+   "object_type": "phenotype",
+   "quote": "Here, we report five heterozygous de novo mutations in VAMP2 in unrelated individuals presenting with a neurodevelopmental disorder characterized by axial hypotonia (which had been present since birth), intellectual disability, and autistic features.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "central visual impairment",
+   "object_type": "phenotype",
+   "quote": "Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hyperkinetic movement disorder",
+   "object_type": "phenotype",
+   "quote": "Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epilepsy",
+   "object_type": "phenotype",
+   "quote": "Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "electroencephalography abnormalities",
+   "object_type": "phenotype",
+   "quote": "Affected individuals carrying de novo non-synonymous variants involving the C-terminal region presented a more severe phenotype with additional neurological features, including central visual impairment, hyperkinetic movement disorder, and epilepsy or electroencephalography abnormalities.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

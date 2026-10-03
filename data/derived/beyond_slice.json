@@ -1,0 +1,2463 @@
+{
+ "label": "phenotype similarity only; mechanism not assessed",
+ "meta": {
+  "generated": "2026-10-03",
+  "hpoa_version": "2026-09-02",
+  "hpo_version": "hp/releases/2026-09-01",
+  "n_hpo_diseases": 12867,
+  "n_compared": 10495,
+  "n_excluded_as_slice": 25,
+  "method": "Resnik best-match-average over direct annotations; IC over all phenotype.hpoa diseases (aspect P, NOT rows dropped, is_a propagation); percentile = share of all compared non-slice diseases scoring lower; shared terms = most informative common ancestors of the best matches (distinctive = IC >= 4.0).",
+  "excluded_rule": "slice profile entities, and any disease whose genes_to_disease.txt genes include a slice gene (e.g. multi-gene CMS or GEFS+ groupings); diseases with fewer than 5 direct phenotype terms (Resnik BMA over-rewards tiny profiles); QTL and susceptibility loci",
+  "code": "pipeline/derive/beyond_slice.py (imports pipeline/biology/hpo.py parsers)"
+ },
+ "diseases": {
+  "disease:STXBP1": {
+   "profile_entities": [
+    "OMIM:612164",
+    "ORPHA:599373"
+   ],
+   "n_profile_terms": 46,
+   "background": {
+    "p50": 0.631,
+    "p99": 2.243,
+    "max": 3.165
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:615473",
+     "name": "Developmental and epileptic encephalopathy 17",
+     "genes": [
+      "GNAO1"
+     ],
+     "score": 3.165,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010818",
+       "name": "Generalized tonic seizure",
+       "ic": 5.42,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011153",
+       "name": "Focal motor seizure",
+       "ic": 4.8,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:617929",
+     "name": "Epileptic encephalopathy, early infantile, 60",
+     "genes": [],
+     "score": 2.976,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:618396",
+     "name": "Epileptic encephalopathy, early infantile, 74",
+     "genes": [
+      "GABRG2"
+     ],
+     "score": 2.934,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001266",
+       "name": "Choreoathetosis",
+       "ic": 4.5,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621500",
+     "name": "Epilepsy, idiopathic generalized 20",
+     "genes": [
+      "ZFHX3"
+     ],
+     "score": 2.9,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0007334",
+       "name": "Bilateral tonic-clonic seizure with focal onset",
+       "ic": 5.35,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011185",
+       "name": "EEG with focal epileptiform discharges",
+       "ic": 4.78,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002384",
+       "name": "Focal impaired awareness seizure",
+       "ic": 4.47,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:615006",
+     "name": "Developmental and epileptic encephalopathy 15",
+     "genes": [
+      "ST3GAL3"
+     ],
+     "score": 2.864,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011153",
+       "name": "Focal motor seizure",
+       "ic": 4.8,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:619913",
+     "name": "Developmental and epileptic encephalopathy 103",
+     "genes": [
+      "KCNC2"
+     ],
+     "score": 2.859,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:618141",
+     "name": "Epileptic encephalopathy, early infantile, 67",
+     "genes": [
+      "CUX2"
+     ],
+     "score": 2.835,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011153",
+       "name": "Focal motor seizure",
+       "ic": 4.8,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:616056",
+     "name": "Developmental and epileptic encephalopathy 26",
+     "genes": [
+      "KCNB1"
+     ],
+     "score": 2.828,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0007334",
+       "name": "Bilateral tonic-clonic seizure with focal onset",
+       "ic": 5.35,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:SYT1": {
+   "profile_entities": [
+    "OMIM:618218",
+    "ORPHA:522077"
+   ],
+   "n_profile_terms": 70,
+   "background": {
+    "p50": 1.038,
+    "p99": 1.871,
+    "max": 2.303
+   },
+   "neighbors": [
+    {
+     "id": "ORPHA:505652",
+     "name": "CDKL5-deficiency disorder",
+     "genes": [
+      "CDKL5"
+     ],
+     "score": 2.303,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002883",
+       "name": "Hyperventilation",
+       "ic": 6.03,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011185",
+       "name": "EEG with focal epileptiform discharges",
+       "ic": 4.78,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0000817",
+       "name": "Reduced eye contact",
+       "ic": 4.69,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621304",
+     "name": "Developmental and epileptic encephalopathy 119",
+     "genes": [
+      "RNU2-2"
+     ],
+     "score": 2.279,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0004879",
+       "name": "Intermittent hyperventilation",
+       "ic": 7.52,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002883",
+       "name": "Hyperventilation",
+       "ic": 6.03,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0008081",
+       "name": "Pes valgus",
+       "ic": 5.34,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:615829",
+     "name": "Xia-Gibbs syndrome",
+     "genes": [
+      "AHDC1"
+     ],
+     "score": 2.27,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0011228",
+       "name": "Horizontal eyebrow",
+       "ic": 6.06,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0007874",
+       "name": "Almond-shaped palpebral fissure",
+       "ic": 5.59,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001601",
+       "name": "Laryngomalacia",
+       "ic": 4.77,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:619950",
+     "name": "Tessadori-van Haaften neurodevelopmental syndrome 3",
+     "genes": [
+      "H4C5"
+     ],
+     "score": 2.256,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0011228",
+       "name": "Horizontal eyebrow",
+       "ic": 6.06,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0008081",
+       "name": "Pes valgus",
+       "ic": 5.34,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0000742",
+       "name": "Self-mutilation",
+       "ic": 5.3,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621122",
+     "name": "Paul-Chao neurodevelopmental syndrome",
+     "genes": [
+      "PPFIA3"
+     ],
+     "score": 2.255,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0100248",
+       "name": "Hemiballismus",
+       "ic": 7.38,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0005274",
+       "name": "Prominent nasal tip",
+       "ic": 5.72,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0007874",
+       "name": "Almond-shaped palpebral fissure",
+       "ic": 5.59,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621220",
+     "name": "Guillouet-Gordon syndrome",
+     "genes": [
+      "MED16"
+     ],
+     "score": 2.211,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0011193",
+       "name": "EEG with focal spikes",
+       "ic": 6.33,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0000349",
+       "name": "Widow's peak",
+       "ic": 5.94,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002871",
+       "name": "Central apnea",
+       "ic": 5.94,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:620851",
+     "name": "ReNU syndrome",
+     "genes": [
+      "RNU4-2"
+     ],
+     "score": 2.195,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0012169",
+       "name": "Self-biting",
+       "ic": 6.63,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011228",
+       "name": "Horizontal eyebrow",
+       "ic": 6.06,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002871",
+       "name": "Central apnea",
+       "ic": 5.94,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:163681",
+     "name": "CNTNAP2-related developmental and epileptic encephalopathy",
+     "genes": [
+      "CNTNAP2"
+     ],
+     "score": 2.172,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0004879",
+       "name": "Intermittent hyperventilation",
+       "ic": 7.52,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011193",
+       "name": "EEG with focal spikes",
+       "ic": 6.33,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002883",
+       "name": "Hyperventilation",
+       "ic": 6.03,
+       "specificity": "distinctive"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:SNAP25": {
+   "profile_entities": [
+    "OMIM:616330"
+   ],
+   "n_profile_terms": 13,
+   "background": {
+    "p50": 0.698,
+    "p99": 1.617,
+    "max": 2.097
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:618198",
+     "name": "Myasthenic syndrome, congenital, 24, presynaptic",
+     "genes": [
+      "MYO9A"
+     ],
+     "score": 2.097,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0006380",
+       "name": "Knee flexion contracture",
+       "ic": 4.67,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001558",
+       "name": "Decreased fetal movement",
+       "ic": 4.03,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0031936",
+       "name": "Delayed ability to walk",
+       "ic": 3.52,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:616321",
+     "name": "Myasthenic syndrome, congenital, 3A, slow-channel",
+     "genes": [
+      "CHRND"
+     ],
+     "score": 1.99,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0003398",
+       "name": "Abnormal synaptic transmission at the neuromuscular junction",
+       "ic": 5.07,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002194",
+       "name": "Delayed gross motor development",
+       "ic": 3.08,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0002093",
+       "name": "Respiratory insufficiency",
+       "ic": 2.76,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:70",
+     "name": "Proximal spinal muscular atrophy",
+     "genes": [],
+     "score": 1.957,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0006380",
+       "name": "Knee flexion contracture",
+       "ic": 4.67,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002643",
+       "name": "Neonatal respiratory distress",
+       "ic": 4.33,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001558",
+       "name": "Decreased fetal movement",
+       "ic": 4.03,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:300158",
+     "name": "Arthrogryposis, congenital, lower limb, X-linked",
+     "genes": [],
+     "score": 1.947,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0006380",
+       "name": "Knee flexion contracture",
+       "ic": 4.67,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0005750",
+       "name": "Lower-limb joint contracture",
+       "ic": 3.79,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0034392",
+       "name": "Joint contracture",
+       "ic": 2.31,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:610687",
+     "name": "Nemaline myopathy 7, autosomal recessive",
+     "genes": [
+      "CFL2"
+     ],
+     "score": 1.914,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0034671",
+       "name": "Knee contracture",
+       "ic": 4.5,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0031936",
+       "name": "Delayed ability to walk",
+       "ic": 3.52,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0001284",
+       "name": "Areflexia",
+       "ic": 3.34,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:171439",
+     "name": "Childhood-onset nemaline myopathy",
+     "genes": [
+      "ACTA1",
+      "KBTBD13",
+      "KLHL41",
+      "MYPN",
+      "NEB",
+      "TPM2",
+      "TPM3"
+     ],
+     "score": 1.903,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0003473",
+       "name": "Fatigable weakness",
+       "ic": 5.11,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001558",
+       "name": "Decreased fetal movement",
+       "ic": 4.03,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001284",
+       "name": "Areflexia",
+       "ic": 3.34,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:620727",
+     "name": "Ullrich congenital muscular dystrophy 1B",
+     "genes": [
+      "COL6A2"
+     ],
+     "score": 1.896,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0034671",
+       "name": "Knee contracture",
+       "ic": 4.5,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001558",
+       "name": "Decreased fetal movement",
+       "ic": 4.03,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0005750",
+       "name": "Lower-limb joint contracture",
+       "ic": 3.79,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621511",
+     "name": "Lethal congenital contracture syndrome 12",
+     "genes": [
+      "DST"
+     ],
+     "score": 1.889,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0034671",
+       "name": "Knee contracture",
+       "ic": 4.5,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001558",
+       "name": "Decreased fetal movement",
+       "ic": 4.03,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0005750",
+       "name": "Lower-limb joint contracture",
+       "ic": 3.79,
+       "specificity": "intermediate"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:VAMP2": {
+   "profile_entities": [
+    "OMIM:618760"
+   ],
+   "n_profile_terms": 15,
+   "background": {
+    "p50": 0.643,
+    "p99": 1.815,
+    "max": 2.409
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:619150",
+     "name": "Intellectual developmental disorder with paroxysmal dyskinesia or seizures",
+     "genes": [
+      "PDE2A"
+     ],
+     "score": 2.409,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0032658",
+       "name": "Status epilepticus with prominent motor symptoms",
+       "ic": 6.1,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002072",
+       "name": "Chorea",
+       "ic": 3.77,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0000733",
+       "name": "Motor stereotypy",
+       "ic": 3.64,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:614254",
+     "name": "Neurodevelopmental disorder with or without hyperkinetic movements and seizures, autosomal dominant",
+     "genes": [
+      "GRIN1"
+     ],
+     "score": 2.384,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:5200009",
+       "name": "Midline hand movements",
+       "ic": 5.85,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0100704",
+       "name": "Cerebral visual impairment",
+       "ic": 4.17,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0100716",
+       "name": "Self-injurious behavior",
+       "ic": 3.94,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:618917",
+     "name": "Neurodevelopmental disorder with language impairment and behavioral abnormalities",
+     "genes": [
+      "GRIA2"
+     ],
+     "score": 2.34,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:5200009",
+       "name": "Midline hand movements",
+       "ic": 5.85,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0100716",
+       "name": "Self-injurious behavior",
+       "ic": 3.94,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0002072",
+       "name": "Chorea",
+       "ic": 3.77,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:1929",
+     "name": "Rasmussen syndrome",
+     "genes": [],
+     "score": 2.316,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0032660",
+       "name": "Convulsive status epilepticus",
+       "ic": 7.16,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032658",
+       "name": "Status epilepticus with prominent motor symptoms",
+       "ic": 6.1,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0007359",
+       "name": "Focal-onset seizure",
+       "ic": 3.43,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:619317",
+     "name": "Developmental and epileptic encephalopathy 6B, non-Dravet",
+     "genes": [
+      "SCN1A"
+     ],
+     "score": 2.231,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002133",
+       "name": "Status epilepticus",
+       "ic": 4.07,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002072",
+       "name": "Chorea",
+       "ic": 3.77,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0000733",
+       "name": "Motor stereotypy",
+       "ic": 3.64,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:208447",
+     "name": "Bilateral generalized polymicrogyria",
+     "genes": [
+      "GRIN1"
+     ],
+     "score": 2.209,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0100704",
+       "name": "Cerebral visual impairment",
+       "ic": 4.17,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002133",
+       "name": "Status epilepticus",
+       "ic": 4.07,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0100716",
+       "name": "Self-injurious behavior",
+       "ic": 3.94,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:619580",
+     "name": "Neurodevelopmental disorder with impaired language and ataxia and with or without seizures",
+     "genes": [
+      "GRIK2"
+     ],
+     "score": 2.203,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:5200018",
+       "name": "Stereotypic upper-extremity movements",
+       "ic": 5.12,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0100704",
+       "name": "Cerebral visual impairment",
+       "ic": 4.17,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002072",
+       "name": "Chorea",
+       "ic": 3.77,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:561854",
+     "name": "FOXG1 syndrome",
+     "genes": [],
+     "score": 2.169,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:5200009",
+       "name": "Midline hand movements",
+       "ic": 5.85,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002133",
+       "name": "Status epilepticus",
+       "ic": 4.07,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002072",
+       "name": "Chorea",
+       "ic": 3.77,
+       "specificity": "intermediate"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:STX1B": {
+   "profile_entities": [
+    "OMIM:616172"
+   ],
+   "n_profile_terms": 8,
+   "background": {
+    "p50": 0.397,
+    "p99": 2.036,
+    "max": 3.557
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:604403",
+     "name": "Generalized epilepsy with febrile seizures plus, type 2",
+     "genes": [
+      "SCN1A"
+     ],
+     "score": 3.557,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002373",
+       "name": "Febrile seizure (within the age range of 3 months to 6 years)",
+       "ic": 4.28,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:613863",
+     "name": "Generalized epilepsy with febrile seizures plus, type 7",
+     "genes": [],
+     "score": 3.534,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002373",
+       "name": "Febrile seizure (within the age range of 3 months to 6 years)",
+       "ic": 4.28,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:613060",
+     "name": "Epilepsy, idiopathic generalized, 10",
+     "genes": [
+      "GABRD"
+     ],
+     "score": 3.255,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002373",
+       "name": "Febrile seizure (within the age range of 3 months to 6 years)",
+       "ic": 4.28,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011146",
+       "name": "Dialeptic seizure",
+       "ic": 3.72,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:608096",
+     "name": "Epilepsy, familial temporal lobe, 2",
+     "genes": [],
+     "score": 3.196,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002384",
+       "name": "Focal impaired awareness seizure",
+       "ic": 4.47,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002373",
+       "name": "Febrile seizure (within the age range of 3 months to 6 years)",
+       "ic": 4.28,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011146",
+       "name": "Dialeptic seizure",
+       "ic": 3.72,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:600512",
+     "name": "Epilepsy, familial temporal lobe, 1",
+     "genes": [
+      "LGI1",
+      "MICAL1",
+      "RELN"
+     ],
+     "score": 3.182,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002384",
+       "name": "Focal impaired awareness seizure",
+       "ic": 4.47,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0033259",
+       "name": "Non-motor seizure",
+       "ic": 3.98,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0007359",
+       "name": "Focal-onset seizure",
+       "ic": 3.43,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:620465",
+     "name": "Epilepsy, early-onset, 3, with or without developmental delay",
+     "genes": [
+      "ATP6V0C"
+     ],
+     "score": 3.149,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002384",
+       "name": "Focal impaired awareness seizure",
+       "ic": 4.47,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:616461",
+     "name": "Epilepsy, familial temporal lobe, 8",
+     "genes": [
+      "GAL"
+     ],
+     "score": 3.046,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002384",
+       "name": "Focal impaired awareness seizure",
+       "ic": 4.47,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0033259",
+       "name": "Non-motor seizure",
+       "ic": 3.98,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0007359",
+       "name": "Focal-onset seizure",
+       "ic": 3.43,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:615697",
+     "name": "Epilepsy, familial temporal lobe, 6",
+     "genes": [],
+     "score": 2.927,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002384",
+       "name": "Focal impaired awareness seizure",
+       "ic": 4.47,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002373",
+       "name": "Febrile seizure (within the age range of 3 months to 6 years)",
+       "ic": 4.28,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011146",
+       "name": "Dialeptic seizure",
+       "ic": 3.72,
+       "specificity": "intermediate"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:SYT2": {
+   "profile_entities": [
+    "OMIM:616040",
+    "OMIM:619461"
+   ],
+   "n_profile_terms": 44,
+   "background": {
+    "p50": 1.008,
+    "p99": 2.233,
+    "max": 2.629
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:619519",
+     "name": "Charcot-Marie-Tooth disease, axonal, type 2FF",
+     "genes": [
+      "CADM3"
+     ],
+     "score": 2.629,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0033383",
+       "name": "Decreased compound muscle action potential amplitude",
+       "ic": 6.37,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0030179",
+       "name": "Abnormal peripheral action potential amplitude",
+       "ic": 5.55,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001611",
+       "name": "Hypernasal speech",
+       "ic": 4.8,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:605726",
+     "name": "Spinal muscular atrophy, distal, autosomal recessive, 2",
+     "genes": [
+      "SIGMAR1"
+     ],
+     "score": 2.626,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0033383",
+       "name": "Decreased compound muscle action potential amplitude",
+       "ic": 6.37,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0030179",
+       "name": "Abnormal peripheral action potential amplitude",
+       "ic": 5.55,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001765",
+       "name": "Hammertoe",
+       "ic": 5.11,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:98911",
+     "name": "Distal myotilinopathy",
+     "genes": [
+      "MYOT"
+     ],
+     "score": 2.62,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0001611",
+       "name": "Hypernasal speech",
+       "ic": 4.8,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0004347",
+       "name": "Weakness of muscles of respiration",
+       "ic": 4.67,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0009027",
+       "name": "Foot dorsiflexor weakness",
+       "ic": 4.63,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:99948",
+     "name": "Charcot-Marie-Tooth disease type 4A",
+     "genes": [
+      "GDAP1"
+     ],
+     "score": 2.575,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0001765",
+       "name": "Hammertoe",
+       "ic": 5.11,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0030878",
+       "name": "Abnormality on pulmonary function testing",
+       "ic": 4.25,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002936",
+       "name": "Distal sensory impairment",
+       "ic": 4.17,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621094",
+     "name": "Neuronopathy, distal hereditary motor, autosomal dominant 15",
+     "genes": [
+      "BAG3"
+     ],
+     "score": 2.572,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0033383",
+       "name": "Decreased compound muscle action potential amplitude",
+       "ic": 6.37,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0030179",
+       "name": "Abnormal peripheral action potential amplitude",
+       "ic": 5.55,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0009027",
+       "name": "Foot dorsiflexor weakness",
+       "ic": 4.63,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:612954",
+     "name": "Myopathy, myofibrillar, 6",
+     "genes": [
+      "BAG3"
+     ],
+     "score": 2.558,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0032341",
+       "name": "Reduced forced vital capacity",
+       "ic": 5.85,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0003388",
+       "name": "Easy fatigability",
+       "ic": 5.04,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001611",
+       "name": "Hypernasal speech",
+       "ic": 4.8,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:271150",
+     "name": "Spinal muscular atrophy, type IV",
+     "genes": [
+      "SMN1"
+     ],
+     "score": 2.553,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0001308",
+       "name": "Tongue fasciculations",
+       "ic": 5.51,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0007126",
+       "name": "Proximal amyotrophy",
+       "ic": 5.2,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002515",
+       "name": "Waddling gait",
+       "ic": 4.47,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:613287",
+     "name": "Charcot-Marie-Tooth disease, axonal, type 2N",
+     "genes": [
+      "AARS1"
+     ],
+     "score": 2.526,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0001765",
+       "name": "Hammertoe",
+       "ic": 5.11,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0009027",
+       "name": "Foot dorsiflexor weakness",
+       "ic": 4.63,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002936",
+       "name": "Distal sensory impairment",
+       "ic": 4.17,
+       "specificity": "distinctive"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:CPLX1": {
+   "profile_entities": [
+    "OMIM:617976"
+   ],
+   "n_profile_terms": 32,
+   "background": {
+    "p50": 0.946,
+    "p99": 1.861,
+    "max": 2.253
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:614558",
+     "name": "Epileptic encephalopathy, early infantile, 13",
+     "genes": [
+      "SCN8A"
+     ],
+     "score": 2.253,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0033258",
+       "name": "Sudden unexpected death in epilepsy",
+       "ic": 7.06,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:617929",
+     "name": "Epileptic encephalopathy, early infantile, 60",
+     "genes": [],
+     "score": 2.207,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0100021",
+       "name": "Cerebral palsy",
+       "ic": 4.09,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:619964",
+     "name": "Developmental delay, impaired speech, and behavioral abnormalities, with or without seizures",
+     "genes": [
+      "ARFGEF1"
+     ],
+     "score": 2.196,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011097",
+       "name": "Epileptic spasm",
+       "ic": 4.04,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011198",
+       "name": "EEG with generalized epileptiform discharges",
+       "ic": 3.84,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621533",
+     "name": "Neurodevelopmental disorder with seizures and impaired intellectual and language development",
+     "genes": [
+      "JKAMP"
+     ],
+     "score": 2.154,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0033258",
+       "name": "Sudden unexpected death in epilepsy",
+       "ic": 7.06,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0000574",
+       "name": "Thick eyebrow",
+       "ic": 4.02,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032677",
+       "name": "Generalized-onset motor seizure",
+       "ic": 3.98,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621304",
+     "name": "Developmental and epileptic encephalopathy 119",
+     "genes": [
+      "RNU2-2"
+     ],
+     "score": 2.141,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010818",
+       "name": "Generalized tonic seizure",
+       "ic": 5.42,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002123",
+       "name": "Generalized myoclonic seizure",
+       "ic": 4.53,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621608",
+     "name": "Developmental and epileptic encephalopathy 122",
+     "genes": [
+      "MDGA2"
+     ],
+     "score": 2.139,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011097",
+       "name": "Epileptic spasm",
+       "ic": 4.04,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032677",
+       "name": "Generalized-onset motor seizure",
+       "ic": 3.98,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:620987",
+     "name": "Neurodegeneration, infantile-onset, with optic atrophy and brain abnormalities",
+     "genes": [
+      "BORCS8"
+     ],
+     "score": 2.135,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010818",
+       "name": "Generalized tonic seizure",
+       "ic": 5.42,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0001845",
+       "name": "Overlapping toe",
+       "ic": 4.75,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0000574",
+       "name": "Thick eyebrow",
+       "ic": 4.02,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:619913",
+     "name": "Developmental and epileptic encephalopathy 103",
+     "genes": [
+      "KCNC2"
+     ],
+     "score": 2.135,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002421",
+       "name": "Poor head control",
+       "ic": 4.29,
+       "specificity": "distinctive"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:UNC13A": {
+   "profile_entities": [
+    "OMIM:621455",
+    "OMIM:621456",
+    "OMIM:621457"
+   ],
+   "n_profile_terms": 140,
+   "background": {
+    "p50": 1.326,
+    "p99": 2.096,
+    "max": 2.762
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:621500",
+     "name": "Epilepsy, idiopathic generalized 20",
+     "genes": [
+      "ZFHX3"
+     ],
+     "score": 2.762,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0033718",
+       "name": "EEG with central epileptiform discharges",
+       "ic": 7.85,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011171",
+       "name": "Simple febrile seizure",
+       "ic": 6.42,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0007334",
+       "name": "Bilateral tonic-clonic seizure with focal onset",
+       "ic": 5.35,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621304",
+     "name": "Developmental and epileptic encephalopathy 119",
+     "genes": [
+      "RNU2-2"
+     ],
+     "score": 2.559,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0025116",
+       "name": "Fetal distress",
+       "ic": 5.51,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0007334",
+       "name": "Bilateral tonic-clonic seizure with focal onset",
+       "ic": 5.35,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0034295",
+       "name": "Reduced cerebral white matter volume",
+       "ic": 5.24,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621354",
+     "name": "Neurodevelopmental disorder with growth impairment, quadriparesis, and poor or absent speech",
+     "genes": [
+      "INPP4A"
+     ],
+     "score": 2.516,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0006915",
+       "name": "Inability to walk by childhood/adolescence",
+       "ic": 7.16,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0025190",
+       "name": "Bilateral tonic-clonic seizure with generalized onset",
+       "ic": 5.34,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621475",
+     "name": "Developmental and epileptic encephalopathy 121",
+     "genes": [
+      "LGI1"
+     ],
+     "score": 2.474,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0006915",
+       "name": "Inability to walk by childhood/adolescence",
+       "ic": 7.16,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010841",
+       "name": "Multifocal epileptiform discharges",
+       "ic": 5.55,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0007334",
+       "name": "Bilateral tonic-clonic seizure with focal onset",
+       "ic": 5.35,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:300868",
+     "name": "Multiple congenital anomalies-hypotonia-seizures syndrome 2",
+     "genes": [
+      "PIGA"
+     ],
+     "score": 2.437,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0025116",
+       "name": "Fetal distress",
+       "ic": 5.51,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011951",
+       "name": "Aspiration pneumonia",
+       "ic": 5.14,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:615829",
+     "name": "Xia-Gibbs syndrome",
+     "genes": [
+      "AHDC1"
+     ],
+     "score": 2.427,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0000289",
+       "name": "Broad philtrum",
+       "ic": 5.75,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0004887",
+       "name": "Respiratory failure requiring assisted ventilation",
+       "ic": 5.47,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0006970",
+       "name": "Periventricular leukomalacia",
+       "ic": 5.46,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:615697",
+     "name": "Epilepsy, familial temporal lobe, 6",
+     "genes": [],
+     "score": 2.407,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0007334",
+       "name": "Bilateral tonic-clonic seizure with focal onset",
+       "ic": 5.35,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002384",
+       "name": "Focal impaired awareness seizure",
+       "ic": 4.47,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002373",
+       "name": "Febrile seizure (within the age range of 3 months to 6 years)",
+       "ic": 4.28,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621295",
+     "name": "Cerebral arteriopathy, autosomal recessive, with subcortical infarcts and leukoencephalopathy 1",
+     "genes": [
+      "NOTCH3"
+     ],
+     "score": 2.382,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0011171",
+       "name": "Simple febrile seizure",
+       "ic": 6.42,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0000748",
+       "name": "Inappropriate laughter",
+       "ic": 5.8,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0034295",
+       "name": "Reduced cerebral white matter volume",
+       "ic": 5.24,
+       "specificity": "distinctive"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:STX1A": {
+   "profile_entities": [],
+   "neighbors": [],
+   "note": "No HPO-annotated OMIM/Orphanet entity for this gene (see gap:stx1a-mendelian-validity), so no profile to compare."
+  },
+  "disease:NSF": {
+   "profile_entities": [
+    "OMIM:619340"
+   ],
+   "n_profile_terms": 9,
+   "background": {
+    "p50": 0.656,
+    "p99": 1.766,
+    "max": 2.694
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:617929",
+     "name": "Epileptic encephalopathy, early infantile, 60",
+     "genes": [],
+     "score": 2.694,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:251280",
+     "name": "Microcephaly, seizures, spasticity, and brain calcifications",
+     "genes": [
+      "PCDH12"
+     ],
+     "score": 2.505,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0011451",
+       "name": "Primary microcephaly",
+       "ic": 4.62,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:615006",
+     "name": "Developmental and epileptic encephalopathy 15",
+     "genes": [
+      "ST3GAL3"
+     ],
+     "score": 2.414,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:3006",
+     "name": "Pyridoxine-dependent-developmental and epileptic encephalopathy",
+     "genes": [
+      "ALDH7A1",
+      "PLPBP"
+     ],
+     "score": 2.4,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002643",
+       "name": "Neonatal respiratory distress",
+       "ic": 4.33,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011097",
+       "name": "Epileptic spasm",
+       "ic": 4.04,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:614558",
+     "name": "Epileptic encephalopathy, early infantile, 13",
+     "genes": [
+      "SCN8A"
+     ],
+     "score": 2.387,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:300868",
+     "name": "Multiple congenital anomalies-hypotonia-seizures syndrome 2",
+     "genes": [
+      "PIGA"
+     ],
+     "score": 2.36,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:95232",
+     "name": "Lissencephaly due to LIS1 mutation",
+     "genes": [
+      "PAFAH1B1"
+     ],
+     "score": 2.345,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0200134",
+       "name": "Epileptic encephalopathy",
+       "ic": 4.56,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032792",
+       "name": "Tonic seizure",
+       "ic": 4.36,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621354",
+     "name": "Neurodevelopmental disorder with growth impairment, quadriparesis, and poor or absent speech",
+     "genes": [
+      "INPP4A"
+     ],
+     "score": 2.344,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010851",
+       "name": "EEG with burst suppression",
+       "ic": 5.44,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0011451",
+       "name": "Primary microcephaly",
+       "ic": 4.62,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002187",
+       "name": "Profound intellectual disability",
+       "ic": 4.57,
+       "specificity": "distinctive"
+      }
+     ]
+    }
+   ]
+  },
+  "disease:SLC6A1": {
+   "profile_entities": [
+    "OMIM:616421"
+   ],
+   "n_profile_terms": 14,
+   "background": {
+    "p50": 0.628,
+    "p99": 1.84,
+    "max": 2.641
+   },
+   "neighbors": [
+    {
+     "id": "OMIM:618587",
+     "name": "Intellectual developmental disorder 60 with seizures",
+     "genes": [
+      "AP2M1"
+     ],
+     "score": 2.641,
+     "percentile": 0.9999,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0011170",
+       "name": "Generalized myoclonic-atonic seizure",
+       "ic": 7.38,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:619913",
+     "name": "Developmental and epileptic encephalopathy 103",
+     "genes": [
+      "KCNC2"
+     ],
+     "score": 2.497,
+     "percentile": 0.9998,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0025097",
+       "name": "Eyelid myoclonus",
+       "ic": 7.16,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:620681",
+     "name": "Myoclonic epilepsy of Lafora 2",
+     "genes": [
+      "NHLRC1"
+     ],
+     "score": 2.448,
+     "percentile": 0.9997,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032794",
+       "name": "Myoclonic seizure",
+       "ic": 3.78,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:618396",
+     "name": "Epileptic encephalopathy, early infantile, 74",
+     "genes": [
+      "GABRG2"
+     ],
+     "score": 2.391,
+     "percentile": 0.9996,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002188",
+       "name": "Delayed CNS myelination",
+       "ic": 3.94,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:620755",
+     "name": "Generalized epilepsy with febrile seizures plus, type 12",
+     "genes": [
+      "SLC32A1"
+     ],
+     "score": 2.38,
+     "percentile": 0.9995,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0011170",
+       "name": "Generalized myoclonic-atonic seizure",
+       "ic": 7.38,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032677",
+       "name": "Generalized-onset motor seizure",
+       "ic": 3.98,
+       "specificity": "intermediate"
+      },
+      {
+       "hpo": "HP:0002197",
+       "name": "Generalized-onset seizure",
+       "ic": 3.34,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "ORPHA:2590",
+     "name": "Spinal muscular atrophy-progressive myoclonic epilepsy syndrome",
+     "genes": [
+      "ASAH1"
+     ],
+     "score": 2.369,
+     "percentile": 0.9994,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0025097",
+       "name": "Eyelid myoclonus",
+       "ic": 7.16,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:620145",
+     "name": "Developmental and epileptic encephalopathy 109",
+     "genes": [
+      "FZR1"
+     ],
+     "score": 2.335,
+     "percentile": 0.9993,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002188",
+       "name": "Delayed CNS myelination",
+       "ic": 3.94,
+       "specificity": "intermediate"
+      }
+     ]
+    },
+    {
+     "id": "OMIM:621468",
+     "name": "Developmental and epileptic encephalopathy 120",
+     "genes": [
+      "BAIAP2"
+     ],
+     "score": 2.322,
+     "percentile": 0.9992,
+     "top_shared_terms": [
+      {
+       "hpo": "HP:0010819",
+       "name": "Atonic seizure",
+       "ic": 4.96,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0002121",
+       "name": "Generalized non-motor (absence) seizure",
+       "ic": 4.11,
+       "specificity": "distinctive"
+      },
+      {
+       "hpo": "HP:0032677",
+       "name": "Generalized-onset motor seizure",
+       "ic": 3.98,
+       "specificity": "intermediate"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

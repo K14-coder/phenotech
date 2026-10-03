@@ -1,0 +1,781 @@
+{
+ "pmid": "35190816",
+ "entries": {
+  "13b8870afaa5e061": {
+   "mention": "neurodevelopmental disorders",
+   "type": "disease",
+   "candidates": [
+    "disease:STX1A",
+    "disease:SYT1",
+    "disease:STXBP1",
+    "disease:UNC13A",
+    "disease:VAMP2",
+    "disease:CPLX1",
+    "disease:SLC6A1",
+    "disease:SNAP25",
+    "disease:NSF",
+    "disease:SYT2"
+   ],
+   "node_id": "disease:STXBP1",
+   "match": "instance",
+   "justification": "The sentence ties the neurodevelopmental disorders specifically to disease-causing STXBP1 variants.",
+   "raw_node_id": "disease:STXBP1",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:24.536Z"
+  },
+  "c1d287e792aa172e": {
+   "mention": "neurodevelopmental abnormalities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0002353",
+    "phenotype:HP:0011203",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0040296",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0011968",
+    "phenotype:HP:0001518",
+    "phenotype:HP:0100704"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Neurodevelopmental abnormalities are broader than global developmental delay or any other listed phenotype.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:24.536Z"
+  },
+  "360a1dd5a21def38": {
+   "mention": "seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001250",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0007359",
+    "phenotype:HP:0011153",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0002197",
+    "phenotype:HP:0010818",
+    "phenotype:HP:0002123"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "same",
+   "justification": "“Seizures” is the plural equivalent of the HPO term Seizure.",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:24.536Z"
+  },
+  "af0ed5e4de997944": {
+   "mention": "focal-onset seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0007359",
+    "phenotype:HP:0002197",
+    "phenotype:HP:0011153",
+    "phenotype:HP:0007334",
+    "phenotype:HP:0002384",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0011171"
+   ],
+   "node_id": "phenotype:HP:0007359",
+   "match": "same",
+   "justification": "Exact equivalent of the HPO term Focal-onset seizure.",
+   "raw_node_id": "phenotype:HP:0007359",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:24.536Z"
+  },
+  "f2d79c25c8bf870f": {
+   "mention": "seizure onset in the first year of life",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002373",
+    "phenotype:HP:0007359",
+    "phenotype:HP:0002197",
+    "phenotype:HP:0007334",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0011153"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "instance",
+   "justification": "Seizures beginning in the first year of life are an age-defined description of Seizure.",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:24.536Z"
+  },
+  "9c671de99df07405": {
+   "mention": "neonatal seizure onset",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0007359",
+    "phenotype:HP:0002197",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0007334",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0011153",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0002643"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "instance",
+   "justification": "Neonatal-onset seizures are an age-defined subtype of Seizure.",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:24.536Z"
+  },
+  "33f9b7b06eaf76f1": {
+   "mention": "West syndrome",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010851",
+    "phenotype:HP:0001612",
+    "phenotype:HP:0001621",
+    "phenotype:HP:0025247",
+    "phenotype:HP:0001344",
+    "phenotype:HP:0001789",
+    "phenotype:HP:0003473",
+    "phenotype:HP:0007359",
+    "phenotype:HP:0001518",
+    "phenotype:HP:0002197"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No candidate denotes West syndrome; listed seizure types and EEG findings are not equivalent to the syndrome.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:24.536Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:24.536Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_0984d8dfdf835f03016ac14f8e9edc87d2848c437eeed611d3": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 3615,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 3615,
+       "output_tokens": 0
+      },
+      "msg_0984d8dfdf835f03016ac14f90b3bc87d2a7780915e4f944e0": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 2,
+         "output_tokens": 303
+        }
+       ],
+       "input_tokens": 2,
+       "output_tokens": 303
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 3959,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 303,
+    "output_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "total_tokens": 4262
+   },
+   "request_payload": {
+    "title": "Assessing the landscape of STXBP1-related disorders in 534 individuals.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "neurodevelopmental disorders",
+      "declared_type": "disease",
+      "sentence": "Disease-causing variants in STXBP1 are among the most common genetic causes of neurodevelopmental disorders.",
+      "candidates": [
+       {
+        "id": "disease:STX1A",
+        "type": "disease",
+        "label": "STX1A-related neurodevelopmental disorder",
+        "synonyms": [
+         "syntaxin-1A-related neurodevelopmental disorder"
+        ],
+        "summary": "A recently described disorder with intellectual disability, autism and epilepsy, reported in a small number of individuals with STX1A variants."
+       },
+       {
+        "id": "disease:SYT1",
+        "type": "disease",
+        "label": "SYT1-related disorders (Baker-Gordon syndrome)",
+        "synonyms": [
+         "Baker-Gordon syndrome",
+         "BAGOS",
+         "SYT1-associated neurodevelopmental disorder"
+        ],
+        "summary": "A developmental disorder caused by changes in SYT1, the calcium sensor that times neurotransmitter release. Features include low muscle tone, unusual eye moveme"
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       },
+       {
+        "id": "disease:VAMP2",
+        "type": "disease",
+        "label": "VAMP2-related disorders",
+        "synonyms": [
+         "NEDHAHM",
+         "synaptobrevin-2-related disorder"
+        ],
+        "summary": "Changes in VAMP2 (synaptobrevin-2) cause a neurodevelopmental disorder with low muscle tone from birth, intellectual disability and autistic features, often wit"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SNAP25",
+        "type": "disease",
+        "label": "SNAP25-related disorders",
+        "synonyms": [
+         "CMS18",
+         "congenital myasthenic syndrome 18",
+         "SNAP25-DEE",
+         "DEE in SNAP25",
+         "SNAP25 Developmental and Epileptic Encephalopathy (SNAP25-DEE)",
+         "SNAP25 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SNAP25",
+         "congenital myasthenic syndrome type 18"
+        ],
+        "summary": "Changes in SNAP25 cause early-onset epilepsy with developmental delay; one reported variant instead causes a presynaptic congenital myasthenic syndrome with fat"
+       },
+       {
+        "id": "disease:NSF",
+        "type": "disease",
+        "label": "NSF-related developmental and epileptic encephalopathy",
+        "synonyms": [
+         "DEE96"
+        ],
+        "summary": "A very rare early-infantile epileptic encephalopathy reported with de novo variants in NSF, the enzyme that recycles the SNARE machinery after each fusion event"
+       },
+       {
+        "id": "disease:SYT2",
+        "type": "disease",
+        "label": "SYT2-related presynaptic congenital myasthenic syndromes",
+        "synonyms": [
+         "CMS7A",
+         "CMS7B",
+         "congenital myasthenic syndrome 7",
+         "Lambert-Eaton-like syndrome (SYT2)",
+         "CMS7",
+         "SYT2 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SYT2",
+         "congenital myasthenic syndrome type 7"
+        ],
+        "summary": "Changes in SYT2 weaken the signal from nerve to muscle. Children and adults have fatigable weakness and reduced reflexes; several patients improved on 3,4-diami"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "neurodevelopmental abnormalities",
+      "declared_type": "phenotype",
+      "sentence": "The overall phenotypic landscape in STXBP1-related disorders is characterized by neurodevelopmental abnormalities in 95% and seizures in 89% of individuals, including focal-onset seizures as the most common seizure type (47%).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0002353",
+        "type": "phenotype",
+        "label": "EEG abnormality",
+        "note": "HPO HP:0002353"
+       },
+       {
+        "id": "phenotype:HP:0011203",
+        "type": "phenotype",
+        "label": "EEG with abnormally slow frequencies",
+        "note": "HPO HP:0011203"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0040296",
+        "type": "phenotype",
+        "label": "Abnormal location of the eyebrow",
+        "note": "HPO HP:0040296"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0011968",
+        "type": "phenotype",
+        "label": "Feeding difficulties",
+        "note": "HPO HP:0011968"
+       },
+       {
+        "id": "phenotype:HP:0001518",
+        "type": "phenotype",
+        "label": "Small for gestational age",
+        "note": "HPO HP:0001518"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "seizures",
+      "declared_type": "phenotype",
+      "sentence": "The overall phenotypic landscape in STXBP1-related disorders is characterized by neurodevelopmental abnormalities in 95% and seizures in 89% of individuals, including focal-onset seizures as the most common seizure type (47%).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       },
+       {
+        "id": "phenotype:HP:0010818",
+        "type": "phenotype",
+        "label": "Generalized tonic seizure",
+        "note": "HPO HP:0010818"
+       },
+       {
+        "id": "phenotype:HP:0002123",
+        "type": "phenotype",
+        "label": "Generalized myoclonic seizure",
+        "note": "HPO HP:0002123"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "focal-onset seizures",
+      "declared_type": "phenotype",
+      "sentence": "The overall phenotypic landscape in STXBP1-related disorders is characterized by neurodevelopmental abnormalities in 95% and seizures in 89% of individuals, including focal-onset seizures as the most common seizure type (47%).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0007334",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure with focal onset",
+        "note": "HPO HP:0007334"
+       },
+       {
+        "id": "phenotype:HP:0002384",
+        "type": "phenotype",
+        "label": "Focal impaired awareness seizure",
+        "note": "HPO HP:0002384"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "seizure onset in the first year of life",
+      "declared_type": "phenotype",
+      "sentence": "More than 88% of individuals with STXBP1-related disorders have seizure onset in the first year of life, including neonatal seizure onset in 47%.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002373",
+        "type": "phenotype",
+        "label": "Febrile seizure (within the age range of 3 months to 6 years)",
+        "note": "HPO HP:0002373"
+       },
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       },
+       {
+        "id": "phenotype:HP:0007334",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure with focal onset",
+        "note": "HPO HP:0007334"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "neonatal seizure onset",
+      "declared_type": "phenotype",
+      "sentence": "More than 88% of individuals with STXBP1-related disorders have seizure onset in the first year of life, including neonatal seizure onset in 47%.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0007334",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure with focal onset",
+        "note": "HPO HP:0007334"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0002643",
+        "type": "phenotype",
+        "label": "Neonatal respiratory distress",
+        "note": "HPO HP:0002643"
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "West syndrome",
+      "declared_type": "phenotype",
+      "sentence": "Individuals with protein-truncating variants and deletions in STXBP1 (n = 261) were almost twice as likely to present with West syndrome and were more phenotypically similar than expected by chance.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010851",
+        "type": "phenotype",
+        "label": "EEG with burst suppression",
+        "note": "HPO HP:0010851"
+       },
+       {
+        "id": "phenotype:HP:0001612",
+        "type": "phenotype",
+        "label": "Weak cry",
+        "note": "HPO HP:0001612"
+       },
+       {
+        "id": "phenotype:HP:0001621",
+        "type": "phenotype",
+        "label": "Weak voice",
+        "note": "HPO HP:0001621"
+       },
+       {
+        "id": "phenotype:HP:0025247",
+        "type": "phenotype",
+        "label": "Dermoid cyst",
+        "note": "HPO HP:0025247"
+       },
+       {
+        "id": "phenotype:HP:0001344",
+        "type": "phenotype",
+        "label": "Absent speech",
+        "note": "HPO HP:0001344"
+       },
+       {
+        "id": "phenotype:HP:0001789",
+        "type": "phenotype",
+        "label": "Hydrops fetalis",
+        "note": "HPO HP:0001789"
+       },
+       {
+        "id": "phenotype:HP:0003473",
+        "type": "phenotype",
+        "label": "Fatigable weakness",
+        "note": "HPO HP:0003473"
+       },
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       },
+       {
+        "id": "phenotype:HP:0001518",
+        "type": "phenotype",
+        "label": "Small for gestational age",
+        "note": "HPO HP:0001518"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"disease:STXBP1\",\"match\":\"instance\",\"justification\":\"The sentence ties the neurodevelopmental disorders specifically to disease-causing STXBP1 variants.\"},{\"mention_id\":\"m2\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Neurodevelopmental abnormalities are broader than global developmental delay or any other listed phenotype.\"},{\"mention_id\":\"m3\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"same\",\"justification\":\"“Seizures” is the plural equivalent of the HPO term Seizure.\"},{\"mention_id\":\"m4\",\"node_id\":\"phenotype:HP:0007359\",\"match\":\"same\",\"justification\":\"Exact equivalent of the HPO term Focal-onset seizure.\"},{\"mention_id\":\"m5\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"instance\",\"justification\":\"Seizures beginning in the first year of life are an age-defined description of Seizure.\"},{\"mention_id\":\"m6\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"instance\",\"justification\":\"Neonatal-onset seizures are an age-defined subtype of Seizure.\"},{\"mention_id\":\"m7\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No candidate denotes West syndrome; listed seizure types and EEG findings are not equivalent to the syndrome.\"}]}"
+  }
+ ]
+}

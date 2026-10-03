@@ -1,0 +1,37 @@
+node_modules/
+.next/
+out/
+.vercel/
+.env
+.env.*
+!.env.example
+.secrets/
+__pycache__/
+.venv/
+.DS_Store
+data/raw/downloads/
+
+# Not ours to redistribute / local tooling
+challenge ai atlas.pdf
+.claude/
+
+# Raw API caches are large and can be re-fetched by the pipelines.
+# Only the stored abstracts used for quote verification, the OpenAI extraction caches and
+# contributed pages are kept, so literature quotes can be re-verified offline.
+data/raw/**/clinvar/
+data/raw/**/ctgov/
+data/raw/**/clinicaltrials/
+data/raw/**/web/
+data/raw/**/community/
+data/raw/community/
+data/raw/scale/
+data/raw/brightdata/
+data/raw/**/monarch/
+data/raw/**/uniprot/
+data/raw/**/opentargets/
+data/raw/**/quickgo/
+data/raw/**/reporter/
+data/raw/**/hgnc/
+data/raw/**/ensembl/
+data/raw/**/ols4/
+data/raw/**/orphadata/

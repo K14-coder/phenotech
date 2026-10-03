@@ -1,0 +1,177 @@
+{
+ "pmid": "41174879",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:44:59.652Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_05d149173f3c906a016ac14d055d0887d2af764cb237d8358c",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_05d149173f3c906a016ac14d056ac487d2abc99c22f53d9fe5": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 323,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 323,
+     "output_tokens": 0
+    },
+    "rs_05d149173f3c906a016ac14d08674887d2997aa4dda142aa6f": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 64
+    },
+    "msg_05d149173f3c906a016ac14d0b284887d2a588ea7a52559e77": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 813
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 813
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1406,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 877,
+  "output_tokens_details": {
+   "reasoning_tokens": 64
+  },
+  "total_tokens": 2283
+ },
+ "latency_ms": 39365,
+ "input_sha1": "c707e94764025b14",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/SLC6A1.efetch.xml",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"SLC6A1-related neurodevelopmental disorder\",\"object_type\":\"disease\",\"quote\":\"Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1-related neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"SLC6A1 haploinsufficiency\",\"object_type\":\"mechanism\",\"quote\":\"SLC6A1 haploinsufficiency has been confirmed as the predominant pathway of SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD); however, the molecular mechanism underlying the variable clinical presentation remains unclear.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1 variants\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"partial loss-of-function mechanism\",\"object_type\":\"mechanism\",\"quote\":\"We confirm phenotypes in flies expressing SLC6A1 variants consistent with a partial loss-of-function mechanism.\",\"study_type\":\"animal_model\",\"species\":\"fly\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"SLC6A1 p.A334S variant\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"hypomorphic allele\",\"object_type\":\"mechanism\",\"quote\":\"We conclude that the p.A334S variant is a hypomorphic allele and begin to elucidate the underlying variability in SLC6A1-NDD.\",\"study_type\":\"animal_model\",\"species\":\"fly\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1-related neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1-related neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"epilepsy\",\"object_type\":\"phenotype\",\"quote\":\"Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1-related neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"motor dysfunction\",\"object_type\":\"phenotype\",\"quote\":\"Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1-related neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"autism spectrum disorder\",\"object_type\":\"phenotype\",\"quote\":\"Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "SLC6A1-related neurodevelopmental disorder",
+   "object_type": "disease",
+   "quote": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1-related neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "SLC6A1 haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "SLC6A1 haploinsufficiency has been confirmed as the predominant pathway of SLC6A1-related neurodevelopmental disorder (SLC6A1-NDD); however, the molecular mechanism underlying the variable clinical presentation remains unclear.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "partial loss-of-function mechanism",
+   "object_type": "mechanism",
+   "quote": "We confirm phenotypes in flies expressing SLC6A1 variants consistent with a partial loss-of-function mechanism.",
+   "study_type": "animal_model",
+   "species": "fly",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 p.A334S variant",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "hypomorphic allele",
+   "object_type": "mechanism",
+   "quote": "We conclude that the p.A334S variant is a hypomorphic allele and begin to elucidate the underlying variability in SLC6A1-NDD.",
+   "study_type": "animal_model",
+   "species": "fly",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1-related neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1-related neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epilepsy",
+   "object_type": "phenotype",
+   "quote": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1-related neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "motor dysfunction",
+   "object_type": "phenotype",
+   "quote": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1-related neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autism spectrum disorder",
+   "object_type": "phenotype",
+   "quote": "Variants in SLC6A1 result in a rare neurodevelopmental disorder characterized by a variable clinical presentation of symptoms including developmental delay, epilepsy, motor dysfunction, and autism spectrum disorder.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

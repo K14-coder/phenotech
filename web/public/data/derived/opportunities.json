@@ -1,0 +1,4484 @@
+{
+ "about": "Node-free companion to data/curated/hypotheses.json: assay and model transfer opportunities, the candidates the search REJECTED and why, approach-level (not product-level) transfers, and near-misses that one curated edge away would become candidates. Nothing here is a graph node or edge, so it cannot be mistaken for a finding.",
+ "meta": {
+  "generated": "2026-10-03",
+  "code": "pipeline/derive/hypotheses.py",
+  "hypotheses_emitted": 5,
+  "hypotheses_file": "data/curated/hypotheses.json",
+  "chain_kinds": {
+   "driven_by": "disease -> mechanism edge (strongest)",
+   "variant_group": "gene -> variant group -> effect mechanism",
+   "pathway": "gene participates in the process (weakest: says nothing about direction)"
+  }
+ },
+ "model_and_assay_transfer": {
+  "rule": "two diseases are linked to the same EFFECT mechanism, one has a model/assay/biobank/outcome-measure asset in the graph and the other has none",
+  "n_pairs": 41,
+  "strongest_pairs_both_driven_by": [
+   {
+    "shared_mechanism": "mech:dominant-negative",
+    "shared_mechanism_label": "Dominant-negative effect (the altered protein blocks the good one)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:NSF",
+    "lacks_model_label": "NSF-related developmental and epileptic encephalopathy",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:NSF": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:dominant-negative"
+     ],
+     "disease:NSF": [
+      "disease:NSF|driven_by|mech:dominant-negative"
+     ]
+    },
+    "gap_ids": [
+     "gap:NSF:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:dominant-negative",
+    "shared_mechanism_label": "Dominant-negative effect (the altered protein blocks the good one)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SNAP25": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:dominant-negative"
+     ],
+     "disease:SNAP25": [
+      "disease:SNAP25|driven_by|mech:dominant-negative"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:dominant-negative",
+    "shared_mechanism_label": "Dominant-negative effect (the altered protein blocks the good one)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT1",
+    "lacks_model_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:dominant-negative"
+     ],
+     "disease:SYT1": [
+      "disease:SYT1|driven_by|mech:dominant-negative"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:dominant-negative",
+    "shared_mechanism_label": "Dominant-negative effect (the altered protein blocks the good one)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT2",
+    "lacks_model_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:dominant-negative"
+     ],
+     "disease:SYT2": [
+      "disease:SYT2|driven_by|mech:dominant-negative"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SNAP25": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:SNAP25": [
+      "disease:SNAP25|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT1",
+    "lacks_model_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:SYT1": [
+      "disease:SYT1|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:UNC13A",
+    "lacks_model_label": "UNC13A-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:UNC13A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:UNC13A": [
+      "disease:UNC13A|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:UNC13A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:SYT1",
+    "lacks_model_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:SYT1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:SYT1": [
+      "disease:SYT1|driven_by|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT1",
+    "lacks_model_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:SYT1": [
+      "disease:SYT1|driven_by|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:CPLX1",
+    "lacks_model_label": "CPLX1-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:CPLX1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:CPLX1": [
+      "disease:CPLX1|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:CPLX1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:SNAP25": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:SNAP25": [
+      "disease:SNAP25|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:STX1A",
+    "lacks_model_label": "STX1A-related neurodevelopmental disorder",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:STX1A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:STX1A": [
+      "disease:STX1A|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:SYT2",
+    "lacks_model_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:SYT2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:SYT2": [
+      "disease:SYT2|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:UNC13A",
+    "lacks_model_label": "UNC13A-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:UNC13A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:UNC13A": [
+      "disease:UNC13A|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:UNC13A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:CPLX1",
+    "lacks_model_label": "CPLX1-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:CPLX1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:CPLX1": [
+      "disease:CPLX1|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:CPLX1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SNAP25": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:SNAP25": [
+      "disease:SNAP25|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1A",
+    "lacks_model_label": "STX1A-related neurodevelopmental disorder",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:STX1A": [
+      "disease:STX1A|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT2",
+    "lacks_model_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:SYT2": [
+      "disease:SYT2|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:UNC13A",
+    "lacks_model_label": "UNC13A-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:UNC13A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:UNC13A": [
+      "disease:UNC13A|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:UNC13A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:protein-destabilization",
+    "shared_mechanism_label": "Protein destabilization / misfolding",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:protein-destabilization"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:protein-destabilization"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:protein-destabilization",
+    "shared_mechanism_label": "Protein destabilization / misfolding",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:protein-destabilization"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:protein-destabilization"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   }
+  ],
+  "all_pairs": [
+   {
+    "shared_mechanism": "mech:dominant-negative",
+    "shared_mechanism_label": "Dominant-negative effect (the altered protein blocks the good one)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:NSF",
+    "lacks_model_label": "NSF-related developmental and epileptic encephalopathy",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:NSF": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:dominant-negative"
+     ],
+     "disease:NSF": [
+      "disease:NSF|driven_by|mech:dominant-negative"
+     ]
+    },
+    "gap_ids": [
+     "gap:NSF:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:dominant-negative",
+    "shared_mechanism_label": "Dominant-negative effect (the altered protein blocks the good one)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SNAP25": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:dominant-negative"
+     ],
+     "disease:SNAP25": [
+      "disease:SNAP25|driven_by|mech:dominant-negative"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:dominant-negative",
+    "shared_mechanism_label": "Dominant-negative effect (the altered protein blocks the good one)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT1",
+    "lacks_model_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:dominant-negative"
+     ],
+     "disease:SYT1": [
+      "disease:SYT1|driven_by|mech:dominant-negative"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:dominant-negative",
+    "shared_mechanism_label": "Dominant-negative effect (the altered protein blocks the good one)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT2",
+    "lacks_model_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:dominant-negative"
+     ],
+     "disease:SYT2": [
+      "disease:SYT2|driven_by|mech:dominant-negative"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SNAP25": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:SNAP25": [
+      "disease:SNAP25|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT1",
+    "lacks_model_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:SYT1": [
+      "disease:SYT1|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:UNC13A",
+    "lacks_model_label": "UNC13A-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:UNC13A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:UNC13A": [
+      "disease:UNC13A|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:UNC13A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:gain-of-function",
+    "shared_mechanism_label": "Gain of function (the protein does too much)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:gain-of-function"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:gain-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:CPLX1",
+    "lacks_model_label": "CPLX1-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:CPLX1": "variant_group"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:CPLX1": [
+      "gene:CPLX1|causes|disease:CPLX1",
+      "vg:CPLX1:truncating|variant_in|gene:CPLX1",
+      "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:CPLX1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:SNAP25": "variant_group"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:SNAP25": [
+      "gene:SNAP25|causes|disease:SNAP25",
+      "vg:SNAP25:splice|variant_in|gene:SNAP25",
+      "vg:SNAP25:splice|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:STX1A",
+    "lacks_model_label": "STX1A-related neurodevelopmental disorder",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:STX1A": "variant_group"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:STX1A": [
+      "gene:STX1A|causes|disease:STX1A",
+      "vg:STX1A:splice|variant_in|gene:STX1A",
+      "vg:STX1A:splice|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:SYT1",
+    "lacks_model_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:SYT1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:SYT1": [
+      "disease:SYT1|driven_by|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:SYT2",
+    "lacks_model_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:SYT2": "variant_group"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:SYT2": [
+      "gene:SYT2|causes|disease:SYT2",
+      "vg:SYT2:splice|variant_in|gene:SYT2",
+      "vg:SYT2:splice|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:UNC13A",
+    "lacks_model_label": "UNC13A-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:UNC13A": "variant_group"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:UNC13A": [
+      "gene:UNC13A|causes|disease:UNC13A",
+      "vg:UNC13A:truncating|variant_in|gene:UNC13A",
+      "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:UNC13A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:VAMP2": "variant_group"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:VAMP2": [
+      "gene:VAMP2|causes|disease:VAMP2",
+      "vg:VAMP2:splice|variant_in|gene:VAMP2",
+      "vg:VAMP2:splice|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:CPLX1",
+    "lacks_model_label": "CPLX1-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:CPLX1": "variant_group"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:CPLX1": [
+      "gene:CPLX1|causes|disease:CPLX1",
+      "vg:CPLX1:truncating|variant_in|gene:CPLX1",
+      "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:CPLX1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SNAP25": "variant_group"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:SNAP25": [
+      "gene:SNAP25|causes|disease:SNAP25",
+      "vg:SNAP25:splice|variant_in|gene:SNAP25",
+      "vg:SNAP25:splice|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1A",
+    "lacks_model_label": "STX1A-related neurodevelopmental disorder",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1A": "variant_group"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:STX1A": [
+      "gene:STX1A|causes|disease:STX1A",
+      "vg:STX1A:splice|variant_in|gene:STX1A",
+      "vg:STX1A:splice|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT1",
+    "lacks_model_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:SYT1": [
+      "disease:SYT1|driven_by|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT2",
+    "lacks_model_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT2": "variant_group"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:SYT2": [
+      "gene:SYT2|causes|disease:SYT2",
+      "vg:SYT2:splice|variant_in|gene:SYT2",
+      "vg:SYT2:splice|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:UNC13A",
+    "lacks_model_label": "UNC13A-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:UNC13A": "variant_group"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:UNC13A": [
+      "gene:UNC13A|causes|disease:UNC13A",
+      "vg:UNC13A:truncating|variant_in|gene:UNC13A",
+      "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:UNC13A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:haploinsufficiency",
+    "shared_mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:VAMP2": "variant_group"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:haploinsufficiency"
+     ],
+     "disease:VAMP2": [
+      "gene:VAMP2|causes|disease:VAMP2",
+      "vg:VAMP2:splice|variant_in|gene:VAMP2",
+      "vg:VAMP2:splice|has_effect|mech:haploinsufficiency"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:CPLX1",
+    "lacks_model_label": "CPLX1-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:CPLX1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:CPLX1": [
+      "disease:CPLX1|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:CPLX1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:SNAP25": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:SNAP25": [
+      "disease:SNAP25|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:STX1A",
+    "lacks_model_label": "STX1A-related neurodevelopmental disorder",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:STX1A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:STX1A": [
+      "disease:STX1A|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:SYT2",
+    "lacks_model_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:SYT2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:SYT2": [
+      "disease:SYT2|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:UNC13A",
+    "lacks_model_label": "UNC13A-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:UNC13A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:UNC13A": [
+      "disease:UNC13A|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:UNC13A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:loss-of-function"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:CPLX1",
+    "lacks_model_label": "CPLX1-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:CPLX1": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:CPLX1": [
+      "disease:CPLX1|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:CPLX1:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SNAP25",
+    "lacks_model_label": "SNAP25-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SNAP25": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:SNAP25": [
+      "disease:SNAP25|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SNAP25:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1A",
+    "lacks_model_label": "STX1A-related neurodevelopmental disorder",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:STX1A": [
+      "disease:STX1A|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:STX1B",
+    "lacks_model_label": "STX1B-related epilepsies",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:STX1B": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:STX1B": [
+      "disease:STX1B|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:STX1B:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:SYT2",
+    "lacks_model_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:SYT2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:SYT2": [
+      "disease:SYT2|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:SYT2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:UNC13A",
+    "lacks_model_label": "UNC13A-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:UNC13A": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:UNC13A": [
+      "disease:UNC13A|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:UNC13A:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:loss-of-function",
+    "shared_mechanism_label": "Loss of function",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:loss-of-function"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:loss-of-function"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:protein-destabilization",
+    "shared_mechanism_label": "Protein destabilization / misfolding",
+    "has_model": "disease:SLC6A1",
+    "has_model_label": "SLC6A1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:SLC6A1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:SLC6A1": [
+      "disease:SLC6A1|driven_by|mech:protein-destabilization"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:protein-destabilization"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   },
+   {
+    "shared_mechanism": "mech:protein-destabilization",
+    "shared_mechanism_label": "Protein destabilization / misfolding",
+    "has_model": "disease:STXBP1",
+    "has_model_label": "STXBP1-related disorders",
+    "assets": [
+     {
+      "asset": "asset:combinedbrain-biorepository",
+      "label": "COMBINEDBrain Biorepository",
+      "kind": "biobank",
+      "edge_id": "asset:combinedbrain-biorepository|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-floxed-null-mouse-innoser",
+      "label": "Floxed-null Stxbp1 mouse (InnoSer CRO)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-floxed-null-mouse-innoser|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "label": "Stxbp1 haploinsufficient mouse models (Xue lab, Baylor / Texas Children's)",
+      "kind": "animal_model",
+      "edge_id": "asset:stxbp1-haploinsufficient-mice-xue-lab|covers|disease:STXBP1"
+     },
+     {
+      "asset": "asset:stxbp1-s-comb-consortium",
+      "label": "S-COMB: STXBP1 Clinical Outcome Measures & Biomarker Consortium",
+      "kind": "outcome_measure",
+      "edge_id": "asset:stxbp1-s-comb-consortium|covers|disease:STXBP1"
+     }
+    ],
+    "lacks_model": "disease:VAMP2",
+    "lacks_model_label": "VAMP2-related disorders",
+    "chain_kinds": {
+     "disease:STXBP1": "driven_by",
+     "disease:VAMP2": "driven_by"
+    },
+    "chain_edges": {
+     "disease:STXBP1": [
+      "disease:STXBP1|driven_by|mech:protein-destabilization"
+     ],
+     "disease:VAMP2": [
+      "disease:VAMP2|driven_by|mech:protein-destabilization"
+     ]
+    },
+    "gap_ids": [
+     "gap:VAMP2:models"
+    ]
+   }
+  ]
+ },
+ "computed_candidates_rejected_on_review": {
+  "rule": "the chain passes the graph search but a human read of the mechanism rejects it; these are NOT emitted as hypotheses",
+  "items": [
+   {
+    "therapy": "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy_class": "class:ache-inhibitors",
+    "therapy_label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:SYT1",
+    "disease_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+     "disease:SYT1|driven_by|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.45
+    ],
+    "chain_contested": [],
+    "review_rejection": "Tissue is wrong and the chain is pathway-only: SYT2, not SYT1, is the neuromuscular-junction isoform, and no neuromuscular transmission defect is reported in SYT1-related disorder. Kept visible as the worked example of a computed candidate that a clinician should reject.",
+    "curated_detail": {
+     "title": "Cholinesterase inhibitors for SYT1-related disorder",
+     "caveats": [
+      [
+       "tissue mismatch",
+       "SYT1-related disorder is central (hypotonia, movement disorder, developmental delay) with no reported neuromuscular-junction failure, while this drug class acts at the neuromuscular junction. SYT2, not SYT1, is the junction isoform.",
+       []
+      ],
+      [
+       "mechanism mismatch",
+       "SYT1 variants act as dominant negatives on the calcium sensor; prolonging acetylcholine in the cleft does not address that.",
+       [
+        [
+         "PMID:32362337",
+         "potent, graded dominant-negative effects",
+         "functional_study",
+         true
+        ]
+       ]
+      ]
+     ],
+     "test": {
+      "what_to_test": "Nothing in a patient. The first step is to ask whether SYT1 patients have any measurable neuromuscular transmission defect at all; if they do not, this candidate should be removed rather than tested.",
+      "existing_assay_or_model": [
+       "asset:bagos-natural-history-study",
+       "asset:bagos-registry"
+      ],
+      "existing_assay_note": "The Baker-Gordon natural history study is the place where such a measurement would already be collectable.",
+      "what_result_would_change_the_plan": "No decrement on repetitive nerve stimulation in a SYT1 cohort retires this hypothesis - which is a useful result, because it also tells the atlas that the shared-pathway chain is too loose."
+     },
+     "weakest_link": "the chain is purely pathway-level and the tissue is wrong; this is included as the example of a computed candidate that a clinician should reject."
+    }
+   }
+  ]
+ },
+ "therapy_equivalence_classes": [
+  {
+   "id": "class:aminopyridines",
+   "label": "Aminopyridine potassium-channel blockers (3,4-DAP / amifampridine / 4-AP)",
+   "members": [
+    "therapy:3-4-diaminopyridine",
+    "therapy:amifampridine",
+    "therapy:aminopyridine-presynaptic-boost"
+   ],
+   "why": "3,4-diaminopyridine and amifampridine phosphate are the same active molecule, and the atlas's 'aminopyridine presynaptic boost' node is the same class including 4-aminopyridine.",
+   "members_present": [
+    "therapy:3-4-diaminopyridine",
+    "therapy:aminopyridine-presynaptic-boost"
+   ],
+   "members_absent": [
+    "therapy:amifampridine"
+   ]
+  },
+  {
+   "id": "class:aav-stxbp1",
+   "label": "AAV STXBP1 gene supplementation (incl. CAP-002)",
+   "members": [
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:cap-002"
+   ],
+   "why": "CAP-002 is the clinical product of the AAV STXBP1 supplementation approach.",
+   "members_present": [
+    "therapy:aav-stxbp1-gene-replacement"
+   ],
+   "members_absent": [
+    "therapy:cap-002"
+   ]
+  },
+  {
+   "id": "class:aav-slc6a1",
+   "label": "AAV9 SLC6A1 gene replacement",
+   "members": [
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav9-slc6a1"
+   ],
+   "why": "Two nodes for the same intrathecal AAV9.SLC6A1 product (NCT07173153).",
+   "members_present": [
+    "therapy:aav-slc6a1-gene-replacement"
+   ],
+   "members_absent": [
+    "therapy:aav9-slc6a1"
+   ]
+  }
+ ],
+ "rejected_candidates": {
+  "rule": "the therapy class is already developed for, or already tested in, this disease",
+  "items": [
+   {
+    "therapy": "therapy:3-4-diaminopyridine",
+    "therapy_class": "class:aminopyridines",
+    "therapy_label": "3,4-Diaminopyridine (amifampridine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:SYT1",
+    "disease_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+     "disease:SYT1|driven_by|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1"
+    ],
+    "also_tested_in_studies": [],
+    "study_eligibility_notes": []
+   },
+   {
+    "therapy": "therapy:3-4-diaminopyridine",
+    "therapy_class": "class:aminopyridines",
+    "therapy_label": "3,4-Diaminopyridine (amifampridine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:SNAP25",
+    "disease_label": "SNAP25-related disorders",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+     "gene:SNAP25|causes|disease:SNAP25",
+     "gene:SNAP25|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.5,
+     0.6
+    ],
+    "chain_contested": [
+     "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT02562066"
+    ],
+    "study_eligibility_notes": [
+     "Genetically confirmed CMS of several types, explicitly including SYT2 and SNAP25B deficiency."
+    ]
+   },
+   {
+    "therapy": "therapy:3-4-diaminopyridine",
+    "therapy_class": "class:aminopyridines",
+    "therapy_label": "3,4-Diaminopyridine (amifampridine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:SYT2",
+    "disease_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+     "gene:SYT2|causes|disease:SYT2",
+     "gene:SYT2|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.5
+    ],
+    "chain_contested": [
+     "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:3-4-diaminopyridine|developed_for|disease:SYT2"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT02562066"
+    ],
+    "study_eligibility_notes": [
+     "Genetically confirmed CMS of several types, explicitly including SYT2 and SNAP25B deficiency."
+    ]
+   },
+   {
+    "therapy": "therapy:3-4-diaminopyridine",
+    "therapy_class": "class:aminopyridines",
+    "therapy_label": "3,4-Diaminopyridine (amifampridine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:VAMP2",
+    "disease_label": "VAMP2-related disorders",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+     "gene:VAMP2|causes|disease:VAMP2",
+     "gene:VAMP2|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.5
+    ],
+    "chain_contested": [
+     "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2"
+    ],
+    "also_tested_in_studies": [],
+    "study_eligibility_notes": []
+   },
+   {
+    "therapy": "therapy:4-phenylbutyrate",
+    "therapy_class": "class:4-pba",
+    "therapy_label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+    "modality": "chaperone",
+    "disease": "disease:SLC6A1",
+    "disease_label": "SLC6A1-related disorders",
+    "mechanism": "mech:gaba-reuptake",
+    "mechanism_label": "GABA reuptake",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:4-phenylbutyrate|targets|mech:gaba-reuptake",
+     "disease:SLC6A1|driven_by|mech:gaba-reuptake"
+    ],
+    "chain_confidences": [
+     0.5,
+     0.5
+    ],
+    "chain_contested": [],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT04937062",
+     "study:NCT07847918"
+    ],
+    "study_eligibility_notes": [
+     "Single protocol with a shared STXBP1/SLC6A1 arm: (likely) pathogenic STXBP1 or SLC6A1 variant.",
+     "Fully remote (site-less) phenylbutyrate feasibility trial; requires a (likely) pathogenic SLC6A1 variant."
+    ]
+   },
+   {
+    "therapy": "therapy:4-phenylbutyrate",
+    "therapy_class": "class:4-pba",
+    "therapy_label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+    "modality": "chaperone",
+    "disease": "disease:SLC6A1",
+    "disease_label": "SLC6A1-related disorders",
+    "mechanism": "mech:protein-destabilization",
+    "mechanism_label": "Protein destabilization / misfolding",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+     "disease:SLC6A1|driven_by|mech:protein-destabilization"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.7
+    ],
+    "chain_contested": [
+     "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+     "disease:SLC6A1|driven_by|mech:protein-destabilization"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT04937062",
+     "study:NCT07847918"
+    ],
+    "study_eligibility_notes": [
+     "Single protocol with a shared STXBP1/SLC6A1 arm: (likely) pathogenic STXBP1 or SLC6A1 variant.",
+     "Fully remote (site-less) phenylbutyrate feasibility trial; requires a (likely) pathogenic SLC6A1 variant."
+    ]
+   },
+   {
+    "therapy": "therapy:4-phenylbutyrate",
+    "therapy_class": "class:4-pba",
+    "therapy_label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+    "modality": "chaperone",
+    "disease": "disease:STXBP1",
+    "disease_label": "STXBP1-related disorders",
+    "mechanism": "mech:protein-destabilization",
+    "mechanism_label": "Protein destabilization / misfolding",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+     "disease:STXBP1|driven_by|mech:protein-destabilization"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.7
+    ],
+    "chain_contested": [
+     "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+     "disease:STXBP1|driven_by|mech:protein-destabilization"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:4-phenylbutyrate|developed_for|disease:STXBP1"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT04937062"
+    ],
+    "study_eligibility_notes": [
+     "Single protocol with a shared STXBP1/SLC6A1 arm: (likely) pathogenic STXBP1 or SLC6A1 variant."
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:SLC6A1",
+    "disease_label": "SLC6A1-related disorders",
+    "mechanism": "mech:gaba-reuptake",
+    "mechanism_label": "GABA reuptake",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:gaba-reuptake",
+     "disease:SLC6A1|driven_by|mech:gaba-reuptake"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.5
+    ],
+    "chain_contested": [],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT07173153"
+    ],
+    "study_eligibility_notes": [
+     "Single-patient (n=1) AAV9 gene therapy; requires SLC6A1 S295L."
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:SLC6A1",
+    "disease_label": "SLC6A1-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.6
+    ],
+    "chain_contested": [],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT07173153"
+    ],
+    "study_eligibility_notes": [
+     "Single-patient (n=1) AAV9 gene therapy; requires SLC6A1 S295L."
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:STXBP1",
+    "disease_label": "STXBP1-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:STXBP1|driven_by|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.7
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:STXBP1|driven_by|mech:haploinsufficiency"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT06983158"
+    ],
+    "study_eligibility_notes": [
+     "Requires a (likely) pathogenic STXBP1 variant; age 18 months to <8 years."
+    ]
+   },
+   {
+    "therapy": "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy_class": "class:ache-inhibitors",
+    "therapy_label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:SYT2",
+    "disease_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+     "gene:SYT2|causes|disease:SYT2",
+     "gene:SYT2|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.5
+    ],
+    "chain_contested": [],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2"
+    ],
+    "also_tested_in_studies": [],
+    "study_eligibility_notes": []
+   },
+   {
+    "therapy": "therapy:aminopyridine-presynaptic-boost",
+    "therapy_class": "class:aminopyridines",
+    "therapy_label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+    "modality": "repurposed_drug",
+    "disease": "disease:SYT1",
+    "disease_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+     "disease:SYT1|driven_by|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1"
+    ],
+    "also_tested_in_studies": [],
+    "study_eligibility_notes": []
+   },
+   {
+    "therapy": "therapy:aminopyridine-presynaptic-boost",
+    "therapy_class": "class:aminopyridines",
+    "therapy_label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+    "modality": "repurposed_drug",
+    "disease": "disease:SNAP25",
+    "disease_label": "SNAP25-related disorders",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+     "gene:SNAP25|causes|disease:SNAP25",
+     "gene:SNAP25|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.5,
+     0.6
+    ],
+    "chain_contested": [
+     "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT02562066"
+    ],
+    "study_eligibility_notes": [
+     "Genetically confirmed CMS of several types, explicitly including SYT2 and SNAP25B deficiency."
+    ]
+   },
+   {
+    "therapy": "therapy:aminopyridine-presynaptic-boost",
+    "therapy_class": "class:aminopyridines",
+    "therapy_label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+    "modality": "repurposed_drug",
+    "disease": "disease:SYT2",
+    "disease_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+     "gene:SYT2|causes|disease:SYT2",
+     "gene:SYT2|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.5
+    ],
+    "chain_contested": [
+     "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:3-4-diaminopyridine|developed_for|disease:SYT2"
+    ],
+    "also_tested_in_studies": [
+     "study:NCT02562066"
+    ],
+    "study_eligibility_notes": [
+     "Genetically confirmed CMS of several types, explicitly including SYT2 and SNAP25B deficiency."
+    ]
+   },
+   {
+    "therapy": "therapy:aminopyridine-presynaptic-boost",
+    "therapy_class": "class:aminopyridines",
+    "therapy_label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+    "modality": "repurposed_drug",
+    "disease": "disease:VAMP2",
+    "disease_label": "VAMP2-related disorders",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+     "gene:VAMP2|causes|disease:VAMP2",
+     "gene:VAMP2|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.5
+    ],
+    "chain_contested": [
+     "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2"
+    ],
+    "also_tested_in_studies": [],
+    "study_eligibility_notes": []
+   },
+   {
+    "therapy": "therapy:munc18-1-pharmacological-chaperone",
+    "therapy_class": "class:munc18-chaperone",
+    "therapy_label": "Structure-based pharmacological chaperones for Munc18-1",
+    "modality": "small_molecule",
+    "disease": "disease:STXBP1",
+    "disease_label": "STXBP1-related disorders",
+    "mechanism": "mech:protein-destabilization",
+    "mechanism_label": "Protein destabilization / misfolding",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:munc18-1-pharmacological-chaperone|targets|mech:protein-destabilization",
+     "disease:STXBP1|driven_by|mech:protein-destabilization"
+    ],
+    "chain_confidences": [
+     0.6,
+     0.7
+    ],
+    "chain_contested": [
+     "disease:STXBP1|driven_by|mech:protein-destabilization"
+    ],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1"
+    ],
+    "also_tested_in_studies": [],
+    "study_eligibility_notes": []
+   },
+   {
+    "therapy": "therapy:unc13a-splice-switching-aso",
+    "therapy_class": "class:unc13a-aso",
+    "therapy_label": "UNC13A cryptic-exon splice-switching ASO",
+    "modality": "aso",
+    "disease": "disease:UNC13A",
+    "disease_label": "UNC13A-related disorders",
+    "mechanism": "mech:synaptic-vesicle-priming",
+    "mechanism_label": "Synaptic vesicle priming",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:unc13a-splice-switching-aso|targets|mech:synaptic-vesicle-priming",
+     "gene:UNC13A|causes|disease:UNC13A",
+     "gene:UNC13A|participates_in|mech:synaptic-vesicle-priming"
+    ],
+    "chain_confidences": [
+     0.6,
+     0.92,
+     0.8
+    ],
+    "chain_contested": [],
+    "reason": "already developed_for (same therapy class)",
+    "evidence_edge": [
+     "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A"
+    ],
+    "also_tested_in_studies": [],
+    "study_eligibility_notes": []
+   }
+  ]
+ },
+ "approach_transfer_not_product": {
+  "rule": "the mechanism matches but the product is built against one gene or one protein, so only the approach transfers; no candidate_for edge is emitted",
+  "items": [
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:STX1B",
+    "disease_label": "STX1B-related epilepsies",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:STX1B|driven_by|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.45
+    ],
+    "chain_contested": [],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:STXBP1",
+    "disease_label": "STXBP1-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:STXBP1|driven_by|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.7
+    ],
+    "chain_contested": [
+     "disease:STXBP1|driven_by|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:SYT1",
+    "disease_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:SYT1|driven_by|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.5
+    ],
+    "chain_contested": [
+     "disease:SYT1|driven_by|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:CPLX1",
+    "disease_label": "CPLX1-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:CPLX1|causes|disease:CPLX1",
+     "vg:CPLX1:truncating|variant_in|gene:CPLX1",
+     "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:SNAP25",
+    "disease_label": "SNAP25-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:SNAP25|causes|disease:SNAP25",
+     "vg:SNAP25:splice|variant_in|gene:SNAP25",
+     "vg:SNAP25:splice|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.5,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:STX1A",
+    "disease_label": "STX1A-related neurodevelopmental disorder",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:STX1A|causes|disease:STX1A",
+     "vg:STX1A:splice|variant_in|gene:STX1A",
+     "vg:STX1A:splice|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:SYT2",
+    "disease_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:SYT2|causes|disease:SYT2",
+     "vg:SYT2:splice|variant_in|gene:SYT2",
+     "vg:SYT2:splice|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:UNC13A",
+    "disease_label": "UNC13A-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:UNC13A|causes|disease:UNC13A",
+     "vg:UNC13A:truncating|variant_in|gene:UNC13A",
+     "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-slc6a1-gene-replacement",
+    "therapy_class": "class:aav-slc6a1",
+    "therapy_label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+    "modality": "gene_replacement",
+    "disease": "disease:VAMP2",
+    "disease_label": "VAMP2-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-slc6a1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:VAMP2|causes|disease:VAMP2",
+     "vg:VAMP2:splice|variant_in|gene:VAMP2",
+     "vg:VAMP2:splice|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "SLC6A1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:SLC6A1",
+    "disease_label": "SLC6A1-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:SLC6A1|driven_by|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.6
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:STX1B",
+    "disease_label": "STX1B-related epilepsies",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:STX1B|driven_by|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:SYT1",
+    "disease_label": "SYT1-related disorders (Baker-Gordon syndrome)",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:SYT1|driven_by|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.5
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "disease:SYT1|driven_by|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:CPLX1",
+    "disease_label": "CPLX1-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:CPLX1|causes|disease:CPLX1",
+     "vg:CPLX1:truncating|variant_in|gene:CPLX1",
+     "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:SNAP25",
+    "disease_label": "SNAP25-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:SNAP25|causes|disease:SNAP25",
+     "vg:SNAP25:splice|variant_in|gene:SNAP25",
+     "vg:SNAP25:splice|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.5,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:STX1A",
+    "disease_label": "STX1A-related neurodevelopmental disorder",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:STX1A|causes|disease:STX1A",
+     "vg:STX1A:splice|variant_in|gene:STX1A",
+     "vg:STX1A:splice|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:SYT2",
+    "disease_label": "SYT2-related presynaptic congenital myasthenic syndromes",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:SYT2|causes|disease:SYT2",
+     "vg:SYT2:splice|variant_in|gene:SYT2",
+     "vg:SYT2:splice|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:UNC13A",
+    "disease_label": "UNC13A-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:UNC13A|causes|disease:UNC13A",
+     "vg:UNC13A:truncating|variant_in|gene:UNC13A",
+     "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:aav-stxbp1-gene-replacement",
+    "therapy_class": "class:aav-stxbp1",
+    "therapy_label": "AAV STXBP1 gene supplementation",
+    "modality": "gene_replacement",
+    "disease": "disease:VAMP2",
+    "disease_label": "VAMP2-related disorders",
+    "mechanism": "mech:haploinsufficiency",
+    "mechanism_label": "Haploinsufficiency (one working copy is not enough)",
+    "chain_kind": "variant_group",
+    "chain_edges": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency",
+     "gene:VAMP2|causes|disease:VAMP2",
+     "vg:VAMP2:splice|variant_in|gene:VAMP2",
+     "vg:VAMP2:splice|has_effect|mech:haploinsufficiency"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.9,
+     0.45
+    ],
+    "chain_contested": [
+     "therapy:aav-stxbp1-gene-replacement|targets|mech:haploinsufficiency"
+    ],
+    "reason": "an AAV vector carries one gene's cDNA, so the product cannot treat another gene; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:munc18-1-pharmacological-chaperone",
+    "therapy_class": "class:munc18-chaperone",
+    "therapy_label": "Structure-based pharmacological chaperones for Munc18-1",
+    "modality": "small_molecule",
+    "disease": "disease:SLC6A1",
+    "disease_label": "SLC6A1-related disorders",
+    "mechanism": "mech:protein-destabilization",
+    "mechanism_label": "Protein destabilization / misfolding",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:munc18-1-pharmacological-chaperone|targets|mech:protein-destabilization",
+     "disease:SLC6A1|driven_by|mech:protein-destabilization"
+    ],
+    "chain_confidences": [
+     0.6,
+     0.7
+    ],
+    "chain_contested": [
+     "disease:SLC6A1|driven_by|mech:protein-destabilization"
+    ],
+    "reason": "designed against this protein's structure, so the molecule does not transfer to another protein; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:munc18-1-pharmacological-chaperone",
+    "therapy_class": "class:munc18-chaperone",
+    "therapy_label": "Structure-based pharmacological chaperones for Munc18-1",
+    "modality": "small_molecule",
+    "disease": "disease:VAMP2",
+    "disease_label": "VAMP2-related disorders",
+    "mechanism": "mech:protein-destabilization",
+    "mechanism_label": "Protein destabilization / misfolding",
+    "chain_kind": "driven_by",
+    "chain_edges": [
+     "therapy:munc18-1-pharmacological-chaperone|targets|mech:protein-destabilization",
+     "disease:VAMP2|driven_by|mech:protein-destabilization"
+    ],
+    "chain_confidences": [
+     0.6,
+     0.5
+    ],
+    "chain_contested": [
+     "disease:VAMP2|driven_by|mech:protein-destabilization"
+    ],
+    "reason": "designed against this protein's structure, so the molecule does not transfer to another protein; only the approach transfers",
+    "target_genes": [
+     "STXBP1"
+    ]
+   },
+   {
+    "therapy": "therapy:unc13a-splice-switching-aso",
+    "therapy_class": "class:unc13a-aso",
+    "therapy_label": "UNC13A cryptic-exon splice-switching ASO",
+    "modality": "aso",
+    "disease": "disease:SNAP25",
+    "disease_label": "SNAP25-related disorders",
+    "mechanism": "mech:synaptic-vesicle-priming",
+    "mechanism_label": "Synaptic vesicle priming",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:unc13a-splice-switching-aso|targets|mech:synaptic-vesicle-priming",
+     "gene:SNAP25|causes|disease:SNAP25",
+     "gene:SNAP25|participates_in|mech:synaptic-vesicle-priming"
+    ],
+    "chain_confidences": [
+     0.6,
+     0.5,
+     0.8
+    ],
+    "chain_contested": [],
+    "reason": "an oligonucleotide is designed against one gene's sequence; only the approach transfers",
+    "target_genes": [
+     "UNC13A"
+    ]
+   },
+   {
+    "therapy": "therapy:unc13a-splice-switching-aso",
+    "therapy_class": "class:unc13a-aso",
+    "therapy_label": "UNC13A cryptic-exon splice-switching ASO",
+    "modality": "aso",
+    "disease": "disease:STX1A",
+    "disease_label": "STX1A-related neurodevelopmental disorder",
+    "mechanism": "mech:synaptic-vesicle-priming",
+    "mechanism_label": "Synaptic vesicle priming",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:unc13a-splice-switching-aso|targets|mech:synaptic-vesicle-priming",
+     "gene:STX1A|causes|disease:STX1A",
+     "gene:STX1A|participates_in|mech:synaptic-vesicle-priming"
+    ],
+    "chain_confidences": [
+     0.6,
+     0.92,
+     0.6
+    ],
+    "chain_contested": [],
+    "reason": "an oligonucleotide is designed against one gene's sequence; only the approach transfers",
+    "target_genes": [
+     "UNC13A"
+    ]
+   },
+   {
+    "therapy": "therapy:unc13a-splice-switching-aso",
+    "therapy_class": "class:unc13a-aso",
+    "therapy_label": "UNC13A cryptic-exon splice-switching ASO",
+    "modality": "aso",
+    "disease": "disease:STX1B",
+    "disease_label": "STX1B-related epilepsies",
+    "mechanism": "mech:synaptic-vesicle-priming",
+    "mechanism_label": "Synaptic vesicle priming",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:unc13a-splice-switching-aso|targets|mech:synaptic-vesicle-priming",
+     "gene:STX1B|causes|disease:STX1B",
+     "gene:STX1B|participates_in|mech:synaptic-vesicle-priming"
+    ],
+    "chain_confidences": [
+     0.6,
+     0.92,
+     0.7
+    ],
+    "chain_contested": [],
+    "reason": "an oligonucleotide is designed against one gene's sequence; only the approach transfers",
+    "target_genes": [
+     "UNC13A"
+    ]
+   },
+   {
+    "therapy": "therapy:unc13a-splice-switching-aso",
+    "therapy_class": "class:unc13a-aso",
+    "therapy_label": "UNC13A cryptic-exon splice-switching ASO",
+    "modality": "aso",
+    "disease": "disease:STXBP1",
+    "disease_label": "STXBP1-related disorders",
+    "mechanism": "mech:synaptic-vesicle-priming",
+    "mechanism_label": "Synaptic vesicle priming",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:unc13a-splice-switching-aso|targets|mech:synaptic-vesicle-priming",
+     "gene:STXBP1|causes|disease:STXBP1",
+     "gene:STXBP1|participates_in|mech:synaptic-vesicle-priming"
+    ],
+    "chain_confidences": [
+     0.6,
+     0.92,
+     0.7
+    ],
+    "chain_contested": [],
+    "reason": "an oligonucleotide is designed against one gene's sequence; only the approach transfers",
+    "target_genes": [
+     "UNC13A"
+    ]
+   }
+  ]
+ },
+ "ranked_candidates_without_a_curated_test_plan": {
+  "note": "these passed the graph search but were not promoted to hypotheses (top 6 only, quality over count)",
+  "items": [
+   {
+    "therapy": "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy_class": "class:ache-inhibitors",
+    "therapy_label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:STXBP1",
+    "disease_label": "STXBP1-related disorders",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+     "gene:STXBP1|causes|disease:STXBP1",
+     "gene:STXBP1|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.8
+    ],
+    "chain_contested": []
+   },
+   {
+    "therapy": "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy_class": "class:ache-inhibitors",
+    "therapy_label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:STX1B",
+    "disease_label": "STX1B-related epilepsies",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+     "gene:STX1B|causes|disease:STX1B",
+     "gene:STX1B|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.6
+    ],
+    "chain_contested": []
+   },
+   {
+    "therapy": "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy_class": "class:ache-inhibitors",
+    "therapy_label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:VAMP2",
+    "disease_label": "VAMP2-related disorders",
+    "mechanism": "mech:ca-triggered-exocytosis",
+    "mechanism_label": "Ca2+-triggered neurotransmitter exocytosis",
+    "chain_kind": "pathway",
+    "chain_edges": [
+     "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+     "gene:VAMP2|causes|disease:VAMP2",
+     "gene:VAMP2|participates_in|mech:ca-triggered-exocytosis"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.92,
+     0.5
+    ],
+    "chain_contested": []
+   },
+   {
+    "therapy": "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy_class": "class:ache-inhibitors",
+    "therapy_label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+    "modality": "repurposed_drug",
+    "disease": "disease:UNC13A",
+    "disease_label": "UNC13A-related disorders",
+    "mechanism": "cluster:presynaptic-nmj-treatable",
+    "mechanism_label": "Presynaptic neuromuscular-junction failure (drug-responsive)",
+    "chain_kind": "cluster",
+    "cluster": "cluster:presynaptic-nmj-treatable",
+    "chain_edges": [
+     "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+     "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2",
+     "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+     "disease:UNC13A|driven_by|mech:loss-of-function"
+    ],
+    "chain_confidences": [
+     0.8,
+     0.8,
+     0.8,
+     0.6
+    ],
+    "chain_contested": []
+   }
+  ]
+ },
+ "near_misses_one_edge_away": [
+  {
+   "what": "4-phenylbutyrate for the STX1B InDel class",
+   "why_not_a_candidate": "the graph has no has_effect edge from any STX1B variant group to mech:protein-destabilization, so no chain exists",
+   "what_would_create_it": "curating the published finding that the STX1B K45/RMCIE,L46M InDel yields an unfolded protein as a has_effect edge to protein destabilization",
+   "citation": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:32572454",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32572454/",
+     "title": "Epilepsy-causing STX1B mutations translate altered protein functions into distinct phenotypes in mouse neurons.",
+     "year": 2020,
+     "quote": "An insertion/deletion (K45/RMCIE, L46M) mutation (STX1BInDel), causing mild epilepsy and located in the early helical Habc domain, leads to an unfolded protein unable to sustain neurotransmission.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ]
+  },
+  {
+   "what": "transcript upregulation (TANGO-style ASO or CRISPRa) for any haploinsufficient disease here",
+   "why_not_a_candidate": "no therapy node of this modality exists in the graph, so the search cannot produce an edge; the modality screen covers it instead",
+   "what_would_create_it": "a therapy node for a specific upregulation product with a targets edge to mech:haploinsufficiency",
+   "citation": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:32848094",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32848094/",
+     "title": "Antisense oligonucleotides increase Scn1a expression and reduce seizures and SUDEP incidence in a mouse model of Dravet syndrome.",
+     "year": 2020,
+     "quote": "Here, we used Targeted Augmentation of Nuclear Gene Output (TANGO) technology, which modulates naturally occurring, nonproductive splicing events to increase target gene and protein expression and ameliorate disease phenotype in a mouse model.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:40963013",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40963013/",
+     "title": "CRISPR activation for SCN2A-related neurodevelopmental disorders.",
+     "year": 2025,
+     "quote": "Here, using SCN2A haploinsufficiency as a proof-of-concept, we show that upregulation of the existing functional gene copy through CRISPR activation (CRISPRa) can rescue neurological-associated phenotypes in Scn2a haploinsufficient mice.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ]
+  },
+  {
+   "what": "the UNC13A cryptic-exon ASO as an UNC13A upregulator",
+   "why_not_a_candidate": "it is a gene-specific product and its developed_for edge already points at disease:UNC13A, so there is no transfer to compute",
+   "what_would_create_it": "evidence that the TDP-43-dependent cryptic exon is used in Mendelian UNC13A patients at all",
+   "citation": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:38979232",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38979232/",
+     "title": "Loss of TDP-43 induces synaptic dysfunction that is rescued by UNC13A splice-switching ASOs.",
+     "year": 2024,
+     "quote": "Antisense oligonucleotides targeting the UNC13A cryptic exon robustly rescue UNC13A protein levels and restore normal synaptic function, providing a potential new therapeutic approach for ALS and other TDP-43-related disorders.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-03"
+    }
+   ]
+  }
+ ]
+}

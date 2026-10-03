@@ -1,0 +1,343 @@
+{
+ "pmid": "31675180",
+ "entries": {
+  "00e301ef87da5303": {
+   "mention": "early infantile epileptic encephalopathy",
+   "type": "disease",
+   "candidates": [
+    "disease:STXBP1",
+    "disease:CPLX1",
+    "disease:NSF",
+    "disease:SNAP25",
+    "disease:SLC6A1",
+    "disease:SYT1",
+    "disease:STX1B",
+    "disease:SYT2",
+    "disease:UNC13A",
+    "disease:VAMP2"
+   ],
+   "node_id": "disease:NSF",
+   "match": "instance",
+   "justification": "The sentence explicitly identifies this early infantile epileptic encephalopathy as an NSF-caused clinical form.",
+   "raw_node_id": "disease:NSF",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:50:22.188Z"
+  },
+  "fb11f7670fe1dff6": {
+   "mention": "intracellular vesicle transport",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-priming",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:gain-of-function",
+    "mech:haploinsufficiency",
+    "mech:loss-of-function",
+    "mech:protein-destabilization",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Intracellular vesicle transport is broader than the candidate processes, and none denotes vesicle transport generally.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:50:22.188Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:50:22.188Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_037c00dd9e703c81016ac14e68f50487d29665487f9ee7f69f": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 1971,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 1971,
+       "output_tokens": 0
+      },
+      "msg_037c00dd9e703c81016ac14e6a877c87d2aced34b93f1ccc72": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 2,
+         "output_tokens": 97
+        }
+       ],
+       "input_tokens": 2,
+       "output_tokens": 97
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 2315,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 97,
+    "output_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "total_tokens": 2412
+   },
+   "request_payload": {
+    "title": "De novo NSF mutations cause early infantile epileptic encephalopathy.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "early infantile epileptic encephalopathy",
+      "declared_type": "disease",
+      "sentence": "De novo heterozygous mutations in the NSF gene cause early infantile epileptic encephalopathy.",
+      "candidates": [
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:NSF",
+        "type": "disease",
+        "label": "NSF-related developmental and epileptic encephalopathy",
+        "synonyms": [
+         "DEE96"
+        ],
+        "summary": "A very rare early-infantile epileptic encephalopathy reported with de novo variants in NSF, the enzyme that recycles the SNARE machinery after each fusion event"
+       },
+       {
+        "id": "disease:SNAP25",
+        "type": "disease",
+        "label": "SNAP25-related disorders",
+        "synonyms": [
+         "CMS18",
+         "congenital myasthenic syndrome 18",
+         "SNAP25-DEE",
+         "DEE in SNAP25",
+         "SNAP25 Developmental and Epileptic Encephalopathy (SNAP25-DEE)",
+         "SNAP25 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SNAP25",
+         "congenital myasthenic syndrome type 18"
+        ],
+        "summary": "Changes in SNAP25 cause early-onset epilepsy with developmental delay; one reported variant instead causes a presynaptic congenital myasthenic syndrome with fat"
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SYT1",
+        "type": "disease",
+        "label": "SYT1-related disorders (Baker-Gordon syndrome)",
+        "synonyms": [
+         "Baker-Gordon syndrome",
+         "BAGOS",
+         "SYT1-associated neurodevelopmental disorder"
+        ],
+        "summary": "A developmental disorder caused by changes in SYT1, the calcium sensor that times neurotransmitter release. Features include low muscle tone, unusual eye moveme"
+       },
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:SYT2",
+        "type": "disease",
+        "label": "SYT2-related presynaptic congenital myasthenic syndromes",
+        "synonyms": [
+         "CMS7A",
+         "CMS7B",
+         "congenital myasthenic syndrome 7",
+         "Lambert-Eaton-like syndrome (SYT2)",
+         "CMS7",
+         "SYT2 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SYT2",
+         "congenital myasthenic syndrome type 7"
+        ],
+        "summary": "Changes in SYT2 weaken the signal from nerve to muscle. Children and adults have fatigable weakness and reduced reflexes; several patients improved on 3,4-diami"
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       },
+       {
+        "id": "disease:VAMP2",
+        "type": "disease",
+        "label": "VAMP2-related disorders",
+        "synonyms": [
+         "NEDHAHM",
+         "synaptobrevin-2-related disorder"
+        ],
+        "summary": "Changes in VAMP2 (synaptobrevin-2) cause a neurodevelopmental disorder with low muscle tone from birth, intellectual disability and autistic features, often wit"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "intracellular vesicle transport",
+      "declared_type": "mechanism",
+      "sentence": "N-ethylmaleimide-sensitive factor (NSF) plays a critical role in intracellular vesicle transport, which is essential for neurotransmitter release.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"disease:NSF\",\"match\":\"instance\",\"justification\":\"The sentence explicitly identifies this early infantile epileptic encephalopathy as an NSF-caused clinical form.\"},{\"mention_id\":\"m2\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Intracellular vesicle transport is broader than the candidate processes, and none denotes vesicle transport generally.\"}]}"
+  }
+ ]
+}

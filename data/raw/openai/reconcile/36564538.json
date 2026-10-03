@@ -1,0 +1,625 @@
+{
+ "pmid": "36564538",
+ "entries": {
+  "60daad507977b963": {
+   "mention": "neurodevelopmental disorder with or without epilepsy",
+   "type": "disease",
+   "candidates": [
+    "disease:STX1A",
+    "disease:UNC13A",
+    "disease:VAMP2",
+    "disease:STXBP1",
+    "disease:SYT1",
+    "disease:SLC6A1",
+    "disease:STX1B",
+    "disease:CPLX1",
+    "disease:NSF",
+    "disease:SNAP25"
+   ],
+   "node_id": "disease:STX1A",
+   "match": "same",
+   "justification": "The sentence explicitly identifies the STX1A-related neurodevelopmental disorder, including its variable epilepsy presentation.",
+   "raw_node_id": "disease:STX1A",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:55.275Z"
+  },
+  "34c4d56fd7e14565": {
+   "mention": "autism",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000729",
+    "phenotype:HP:0000316",
+    "phenotype:HP:0000486",
+    "phenotype:HP:0100248",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0000244",
+    "phenotype:HP:0000319",
+    "phenotype:HP:0000348",
+    "phenotype:HP:0000414",
+    "phenotype:HP:0000508"
+   ],
+   "node_id": "phenotype:HP:0000729",
+   "match": "same",
+   "justification": "Autism is an equivalent phenotype designation for the HPO term Autistic behavior.",
+   "raw_node_id": "phenotype:HP:0000729",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:55.275Z"
+  },
+  "b9c788adbc22753f": {
+   "mention": "epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0100021",
+    "phenotype:HP:0012469",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0011445"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Epilepsy is broader than the specific seizure phenotypes and complications offered as candidates.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:55.275Z"
+  },
+  "2ea9a0bc206a2677": {
+   "mention": "weakened inhibitory STX1A-STXBP1 interaction",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No candidate denotes weakened STX1A–STXBP1 inhibitory binding; a gain-of-function effect would require inference.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:55.275Z"
+  },
+  "1d693fc6f72b04a6": {
+   "mention": "hampered SNARE complex formation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly",
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:dominant-negative",
+    "mech:ca-triggered-exocytosis",
+    "mech:haploinsufficiency",
+    "mech:synaptic-vesicle-fusion",
+    "mech:gaba-reuptake"
+   ],
+   "node_id": "mech:snare-complex-assembly",
+   "match": "instance",
+   "justification": "Hampered SNARE complex formation specifically describes impaired SNARE complex assembly.",
+   "raw_node_id": "mech:snare-complex-assembly",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:55.275Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:55:55.275Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_0728f4862419d547016ac14fac51c087d2a79e705856f83cfc": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 3564,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 3564,
+       "output_tokens": 0
+      },
+      "rs_0728f4862419d547016ac14fae081887d285bc7e8c826321a8": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 21
+      },
+      "msg_0728f4862419d547016ac14faf11d887d2a3783a02837a0520": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 225
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 225
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 3908,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 246,
+    "output_tokens_details": {
+     "reasoning_tokens": 21
+    },
+    "total_tokens": 4154
+   },
+   "request_payload": {
+    "title": "Heterozygous and homozygous variants in STX1A cause a neurodevelopmental disorder with or without epilepsy.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "neurodevelopmental disorder with or without epilepsy",
+      "declared_type": "disease",
+      "sentence": "Heterozygous and homozygous variants in STX1A cause a neurodevelopmental disorder with or without epilepsy.",
+      "candidates": [
+       {
+        "id": "disease:STX1A",
+        "type": "disease",
+        "label": "STX1A-related neurodevelopmental disorder",
+        "synonyms": [
+         "syntaxin-1A-related neurodevelopmental disorder"
+        ],
+        "summary": "A recently described disorder with intellectual disability, autism and epilepsy, reported in a small number of individuals with STX1A variants."
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       },
+       {
+        "id": "disease:VAMP2",
+        "type": "disease",
+        "label": "VAMP2-related disorders",
+        "synonyms": [
+         "NEDHAHM",
+         "synaptobrevin-2-related disorder"
+        ],
+        "summary": "Changes in VAMP2 (synaptobrevin-2) cause a neurodevelopmental disorder with low muscle tone from birth, intellectual disability and autistic features, often wit"
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:SYT1",
+        "type": "disease",
+        "label": "SYT1-related disorders (Baker-Gordon syndrome)",
+        "synonyms": [
+         "Baker-Gordon syndrome",
+         "BAGOS",
+         "SYT1-associated neurodevelopmental disorder"
+        ],
+        "summary": "A developmental disorder caused by changes in SYT1, the calcium sensor that times neurotransmitter release. Features include low muscle tone, unusual eye moveme"
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:NSF",
+        "type": "disease",
+        "label": "NSF-related developmental and epileptic encephalopathy",
+        "synonyms": [
+         "DEE96"
+        ],
+        "summary": "A very rare early-infantile epileptic encephalopathy reported with de novo variants in NSF, the enzyme that recycles the SNARE machinery after each fusion event"
+       },
+       {
+        "id": "disease:SNAP25",
+        "type": "disease",
+        "label": "SNAP25-related disorders",
+        "synonyms": [
+         "CMS18",
+         "congenital myasthenic syndrome 18",
+         "SNAP25-DEE",
+         "DEE in SNAP25",
+         "SNAP25 Developmental and Epileptic Encephalopathy (SNAP25-DEE)",
+         "SNAP25 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SNAP25",
+         "congenital myasthenic syndrome type 18"
+        ],
+        "summary": "Changes in SNAP25 cause early-onset epilepsy with developmental delay; one reported variant instead causes a presynaptic congenital myasthenic syndrome with fat"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "autism",
+      "declared_type": "phenotype",
+      "sentence": "We assembled eight individuals harboring ultra rare variants in STX1A who present with a spectrum of intellectual disability, autism and epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000729",
+        "type": "phenotype",
+        "label": "Autistic behavior",
+        "note": "HPO HP:0000729"
+       },
+       {
+        "id": "phenotype:HP:0000316",
+        "type": "phenotype",
+        "label": "Hypertelorism",
+        "note": "HPO HP:0000316"
+       },
+       {
+        "id": "phenotype:HP:0000486",
+        "type": "phenotype",
+        "label": "Strabismus",
+        "note": "HPO HP:0000486"
+       },
+       {
+        "id": "phenotype:HP:0100248",
+        "type": "phenotype",
+        "label": "Hemiballismus",
+        "note": "HPO HP:0100248"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0000244",
+        "type": "phenotype",
+        "label": "Brachyturricephaly",
+        "note": "HPO HP:0000244"
+       },
+       {
+        "id": "phenotype:HP:0000319",
+        "type": "phenotype",
+        "label": "Smooth philtrum",
+        "note": "HPO HP:0000319"
+       },
+       {
+        "id": "phenotype:HP:0000348",
+        "type": "phenotype",
+        "label": "High forehead",
+        "note": "HPO HP:0000348"
+       },
+       {
+        "id": "phenotype:HP:0000414",
+        "type": "phenotype",
+        "label": "Bulbous nose",
+        "note": "HPO HP:0000414"
+       },
+       {
+        "id": "phenotype:HP:0000508",
+        "type": "phenotype",
+        "label": "Ptosis",
+        "note": "HPO HP:0000508"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "We assembled eight individuals harboring ultra rare variants in STX1A who present with a spectrum of intellectual disability, autism and epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0100021",
+        "type": "phenotype",
+        "label": "Cerebral palsy",
+        "note": "HPO HP:0100021"
+       },
+       {
+        "id": "phenotype:HP:0012469",
+        "type": "phenotype",
+        "label": "Infantile spasms",
+        "note": "HPO HP:0012469"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0011445",
+        "type": "phenotype",
+        "label": "Athetoid cerebral palsy",
+        "note": "HPO HP:0011445"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "weakened inhibitory STX1A-STXBP1 interaction",
+      "declared_type": "mechanism",
+      "sentence": "We hypothesize the two phenotypic courses of affected individuals to be dependent on two different pathogenic mechanisms: (1) a weakened inhibitory STX1A-STXBP1 interaction due to missense variants results in an STX1A-related developmental epileptic encephalopathy and (2) a hampered SNARE complex formation due to inframe deletions causes an STX1A-related intellectual disability and autism phenotype.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "hampered SNARE complex formation",
+      "declared_type": "mechanism",
+      "sentence": "We hypothesize the two phenotypic courses of affected individuals to be dependent on two different pathogenic mechanisms: (1) a weakened inhibitory STX1A-STXBP1 interaction due to missense variants results in an STX1A-related developmental epileptic encephalopathy and (2) a hampered SNARE complex formation due to inframe deletions causes an STX1A-related intellectual disability and autism phenotype.",
+      "candidates": [
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"disease:STX1A\",\"match\":\"same\",\"justification\":\"The sentence explicitly identifies the STX1A-related neurodevelopmental disorder, including its variable epilepsy presentation.\"},{\"mention_id\":\"m2\",\"node_id\":\"phenotype:HP:0000729\",\"match\":\"same\",\"justification\":\"Autism is an equivalent phenotype designation for the HPO term Autistic behavior.\"},{\"mention_id\":\"m3\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Epilepsy is broader than the specific seizure phenotypes and complications offered as candidates.\"},{\"mention_id\":\"m4\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No candidate denotes weakened STX1A–STXBP1 inhibitory binding; a gain-of-function effect would require inference.\"},{\"mention_id\":\"m5\",\"node_id\":\"mech:snare-complex-assembly\",\"match\":\"instance\",\"justification\":\"Hampered SNARE complex formation specifically describes impaired SNARE complex assembly.\"}]}"
+  }
+ ]
+}

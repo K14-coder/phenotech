@@ -1,0 +1,53 @@
+GO:0007265 'Ras protein signal transduction' obsolete=False
+GO:0000165 'MAPK cascade' obsolete=False
+GO:0046580 'negative regulation of Ras protein signal transduction' obsolete=False
+GO:0046579 'positive regulation of Ras protein signal transduction' obsolete=False
+  PTPN11  -- ras-protein-signal-transduction: none
+  PTPN11  -> mapk-cascade                           codes=['IBA', 'IMP'] conf=0.9
+  PTPN11  -- negative-regulation-of-ras-signaling: none
+  PTPN11  -- positive-regulation-of-ras-signaling: none
+  SOS1    -> ras-protein-signal-transduction        codes=['IBA', 'IDA', 'IEA', 'TAS'] conf=0.9
+  SOS1    -- mapk-cascade: none
+  SOS1    -- negative-regulation-of-ras-signaling: none
+  SOS1    -- positive-regulation-of-ras-signaling: none
+  RAF1    -- ras-protein-signal-transduction: none
+  RAF1    -> mapk-cascade                           codes=['IBA', 'IDA', 'IEA', 'NAS'] conf=0.9
+  RAF1    -- negative-regulation-of-ras-signaling: none
+  RAF1    -- positive-regulation-of-ras-signaling: none
+  BRAF    -- ras-protein-signal-transduction: none
+  BRAF    -> mapk-cascade                           codes=['IBA', 'IDA'] conf=0.9
+  BRAF    -- negative-regulation-of-ras-signaling: none
+  BRAF    -- positive-regulation-of-ras-signaling: none
+  KRAS    -> ras-protein-signal-transduction        codes=['IBA', 'IDA', 'IEA', 'NAS'] conf=0.9
+  KRAS    -> mapk-cascade                           codes=['IEA', 'NAS', 'TAS'] conf=0.8
+  KRAS    -- negative-regulation-of-ras-signaling: none
+  KRAS    -> positive-regulation-of-ras-signaling   codes=['NAS'] conf=0.8
+  HRAS    -> ras-protein-signal-transduction        codes=['IBA', 'IDA', 'IEA', 'NAS'] conf=0.9
+  HRAS    -> mapk-cascade                           codes=['IDA', 'IEA', 'TAS'] conf=0.9
+  HRAS    -- negative-regulation-of-ras-signaling: none
+  HRAS    -> positive-regulation-of-ras-signaling   codes=['NAS'] conf=0.8
+  NF1     -> ras-protein-signal-transduction        codes=['ISS'] conf=0.7
+  NF1     -> mapk-cascade                           codes=['IMP', 'ISS'] conf=0.9
+  NF1     -- negative-regulation-of-ras-signaling: none
+  NF1     -- positive-regulation-of-ras-signaling: none
+  MAP2K1  -- ras-protein-signal-transduction: none
+  MAP2K1  -> mapk-cascade                           codes=['IBA', 'IEA', 'IMP', 'TAS'] conf=0.9
+  MAP2K1  -- negative-regulation-of-ras-signaling: none
+  MAP2K1  -- positive-regulation-of-ras-signaling: none
+  SHOC2   -> ras-protein-signal-transduction        codes=['IBA', 'IMP', 'NAS'] conf=0.9
+  SHOC2   -> mapk-cascade                           codes=['IDA'] conf=0.9
+  SHOC2   -- negative-regulation-of-ras-signaling: none
+  SHOC2   -> positive-regulation-of-ras-signaling   codes=['IBA', 'IMP', 'NAS'] conf=0.9
+  CBL     -- ras-protein-signal-transduction: none
+  CBL     -- mapk-cascade: none
+  CBL     -- negative-regulation-of-ras-signaling: none
+  CBL     -- positive-regulation-of-ras-signaling: none
+  RIT1    -- ras-protein-signal-transduction: none
+  RIT1    -- mapk-cascade: none
+  RIT1    -- negative-regulation-of-ras-signaling: none
+  RIT1    -- positive-regulation-of-ras-signaling: none
+  LZTR1   -> ras-protein-signal-transduction        codes=['IBA', 'IDA', 'IEA'] conf=0.9
+  LZTR1   -- mapk-cascade: none
+  LZTR1   -> negative-regulation-of-ras-signaling   codes=['IBA', 'IDA', 'IEA'] conf=0.9
+  LZTR1   -- positive-regulation-of-ras-signaling: none
+process mechanisms=4 participates_in=18

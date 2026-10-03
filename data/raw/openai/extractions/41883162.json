@@ -1,0 +1,135 @@
+{
+ "pmid": "41883162",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:42:09.393Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0ed58b156333e2be016ac14c6905e887d2a2ec723c5aa8d853",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0ed58b156333e2be016ac14c69142887d2b1e9528f78f647c9": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 348,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 348,
+     "output_tokens": 0
+    },
+    "msg_0ed58b156333e2be016ac14c6b0e3887d2a1da4a7c34367fb1": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 564
+      }
+     ],
+     "input_tokens": 2,
+     "output_tokens": 564
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1431,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 564,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 1995
+ },
+ "latency_ms": 25560,
+ "input_sha1": "b090c2d7c4a029d5",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/41883162.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"STXBP1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE)\",\"object_type\":\"disease\",\"quote\":\"STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) is a debilitating genetic epilepsy disorder caused by heterozygous loss-of-function mutations in the STXBP1 gene.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1 heterozygous loss-of-function mutations\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"loss-of-function\",\"object_type\":\"mechanism\",\"quote\":\"STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) is a debilitating genetic epilepsy disorder caused by heterozygous loss-of-function mutations in the STXBP1 gene.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE)\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"loss-of-function\",\"object_type\":\"mechanism\",\"quote\":\"STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) is a debilitating genetic epilepsy disorder caused by heterozygous loss-of-function mutations in the STXBP1 gene.\",\"study_type\":\"animal_model\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Gene supplementation therapy using adeno-associated virus (AAV) technology\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"functional STXBP1 expression in the central nervous system\",\"object_type\":\"mechanism\",\"quote\":\"Gene supplementation therapy using adeno-associated virus (AAV) technology is an attractive approach to restore functional STXBP1 expression in the central nervous system and improve STXBP1-DEE symptoms.\",\"study_type\":\"animal_model\",\"species\":null,\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"AAV-STXBP1 gene therapy\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"STXBP1 developmental and epileptic encephalopathy\",\"object_type\":\"disease\",\"quote\":\"Identification of a therapeutic threshold for AAV-STXBP1 gene therapy in a rodent model of STXBP1 developmental and epileptic encephalopathy.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE)",
+   "object_type": "disease",
+   "quote": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) is a debilitating genetic epilepsy disorder caused by heterozygous loss-of-function mutations in the STXBP1 gene.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 heterozygous loss-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) is a debilitating genetic epilepsy disorder caused by heterozygous loss-of-function mutations in the STXBP1 gene.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "STXBP1-related developmental and epileptic encephalopathy (STXBP1-DEE) is a debilitating genetic epilepsy disorder caused by heterozygous loss-of-function mutations in the STXBP1 gene.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gene supplementation therapy using adeno-associated virus (AAV) technology",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "functional STXBP1 expression in the central nervous system",
+   "object_type": "mechanism",
+   "quote": "Gene supplementation therapy using adeno-associated virus (AAV) technology is an attractive approach to restore functional STXBP1 expression in the central nervous system and improve STXBP1-DEE symptoms.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "AAV-STXBP1 gene therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "STXBP1 developmental and epileptic encephalopathy",
+   "object_type": "disease",
+   "quote": "Identification of a therapeutic threshold for AAV-STXBP1 gene therapy in a rodent model of STXBP1 developmental and epileptic encephalopathy.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

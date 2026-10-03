@@ -1,0 +1,309 @@
+{
+ "pmid": "32738165",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:32:47.399Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_052d4ce2eb942c50016ac149dfead887d2a8546ef156d85313",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_052d4ce2eb942c50016ac149dff3c887d2b3ad1edfd7c942e9": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 300,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 300,
+     "output_tokens": 0
+    },
+    "rs_052d4ce2eb942c50016ac149e1feb887d29a7a0e60d27c83c5": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 85
+    },
+    "msg_052d4ce2eb942c50016ac149e579d887d29f2246995e8d271e": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 2592
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 2592
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1383,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 2677,
+  "output_tokens_details": {
+   "reasoning_tokens": 85
+  },
+  "total_tokens": 4060
+ },
+ "latency_ms": 112759,
+ "input_sha1": "08340c6028f11cb2",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/32738165.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"KIF1A\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"vesicle trafficking\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"GDI1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"vesicle trafficking\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"TRIO\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"clustering\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"NRXN1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"clustering\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYN1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"clustering\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"docking and priming\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SYT1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"fusion\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"PRRT2\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"fusion\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"DNM1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"re-uptake\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"AP1S2\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"re-uptake\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"TBC1D24\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"re-uptake\",\"object_type\":\"mechanism\",\"quote\":\"Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).\",\"study_type\":\"review\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SVC disorders\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"movement disorders\",\"object_type\":\"phenotype\",\"quote\":\"We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SVC disorders\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"epilepsies\",\"object_type\":\"phenotype\",\"quote\":\"We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SVC disorders\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SVC disorders\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"intellectual disabilities\",\"object_type\":\"phenotype\",\"quote\":\"We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SVC disorders\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"cerebral visual impairment\",\"object_type\":\"phenotype\",\"quote\":\"We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SVC disorders\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"autism\",\"object_type\":\"phenotype\",\"quote\":\"We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SVC disorders\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"ADHD\",\"object_type\":\"phenotype\",\"quote\":\"We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SVC disorders\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"psychiatric symptoms\",\"object_type\":\"phenotype\",\"quote\":\"We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "KIF1A",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "vesicle trafficking",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GDI1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "vesicle trafficking",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TRIO",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "clustering",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NRXN1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "clustering",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYN1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "clustering",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "docking and priming",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYT1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "fusion",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PRRT2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "fusion",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "DNM1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "re-uptake",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AP1S2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "re-uptake",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TBC1D24",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "re-uptake",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants in each SVC disorder gene lead to disturbance of at least one SVC subprocess, namely vesicle trafficking (e.g. KIF1A and GDI1), clustering (e.g. TRIO, NRXN1 and SYN1), docking and priming (e.g. STXBP1), fusion (e.g. SYT1 and PRRT2) or re-uptake (e.g. DNM1, AP1S2 and TBC1D24).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SVC disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "movement disorders",
+   "object_type": "phenotype",
+   "quote": "We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SVC disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epilepsies",
+   "object_type": "phenotype",
+   "quote": "We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SVC disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SVC disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intellectual disabilities",
+   "object_type": "phenotype",
+   "quote": "We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SVC disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cerebral visual impairment",
+   "object_type": "phenotype",
+   "quote": "We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SVC disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autism",
+   "object_type": "phenotype",
+   "quote": "We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SVC disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "ADHD",
+   "object_type": "phenotype",
+   "quote": "We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SVC disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "psychiatric symptoms",
+   "object_type": "phenotype",
+   "quote": "We observe that SVC disorders share a common set of neurological symptoms (movement disorders, epilepsies), cognitive impairments (developmental delay, intellectual disabilities, cerebral visual impairment) and mental health difficulties (autism, ADHD, psychiatric symptoms).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

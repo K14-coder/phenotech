@@ -1,0 +1,165 @@
+{
+ "pmid": "30266908",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:27:38.054Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_04e4ee18a7260a78016ac148f2709087d2946cd681cfeb441f",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_04e4ee18a7260a78016ac148f2805487d2b52527185f1f28d8": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 271,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 271,
+     "output_tokens": 0
+    },
+    "rs_04e4ee18a7260a78016ac148f4601c87d28ddc4827327cbe98": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 180
+    },
+    "msg_04e4ee18a7260a78016ac148fbc8a887d28661dccf128542e9": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 759
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 759
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1354,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 939,
+  "output_tokens_details": {
+   "reasoning_tokens": 180
+  },
+  "total_tokens": 2293
+ },
+ "latency_ms": 40763,
+ "input_sha1": "ca38ff60e27c6ab2",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/30266908.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"epilepsies\",\"object_type\":\"disease\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1 are linked to epilepsies, intellectual disability, movement disorders, and neurodegeneration.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"Munc18-1 disease-linked missense mutations\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"destabilization\",\"object_type\":\"mechanism\",\"quote\":\"We find that at least five disease-linked missense mutations of Munc18-1 result in destabilization and aggregation of the mutant protein.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1 disease-linked missense mutations\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"aggregation\",\"object_type\":\"mechanism\",\"quote\":\"We find that at least five disease-linked missense mutations of Munc18-1 result in destabilization and aggregation of the mutant protein.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"mutant Munc18-1\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"depleting functional Munc18-1 levels beyond hemizygous levels\",\"object_type\":\"mechanism\",\"quote\":\"Aggregates of mutant Munc18-1 incorporate wild-type Munc18-1, depleting functional Munc18-1 levels beyond hemizygous levels.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-phenylbutyrate\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"varied encephalopathies\",\"object_type\":\"disease\",\"quote\":\"We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"sorbitol\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"varied encephalopathies\",\"object_type\":\"disease\",\"quote\":\"We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"trehalose\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"varied encephalopathies\",\"object_type\":\"disease\",\"quote\":\"We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epilepsies",
+   "object_type": "disease",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 are linked to epilepsies, intellectual disability, movement disorders, and neurodegeneration.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1 disease-linked missense mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "destabilization",
+   "object_type": "mechanism",
+   "quote": "We find that at least five disease-linked missense mutations of Munc18-1 result in destabilization and aggregation of the mutant protein.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1 disease-linked missense mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "aggregation",
+   "object_type": "mechanism",
+   "quote": "We find that at least five disease-linked missense mutations of Munc18-1 result in destabilization and aggregation of the mutant protein.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "mutant Munc18-1",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "depleting functional Munc18-1 levels beyond hemizygous levels",
+   "object_type": "mechanism",
+   "quote": "Aggregates of mutant Munc18-1 incorporate wild-type Munc18-1, depleting functional Munc18-1 levels beyond hemizygous levels.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-phenylbutyrate",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "varied encephalopathies",
+   "object_type": "disease",
+   "quote": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "sorbitol",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "varied encephalopathies",
+   "object_type": "disease",
+   "quote": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "trehalose",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "varied encephalopathies",
+   "object_type": "disease",
+   "quote": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "pmid": "27648472",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:26:27.262Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0dc2653b88441b21016ac148a72b3087d2861ef740035b03f8",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0dc2653b88441b21016ac148a737e887d2a36d56ea7b12dcce": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 410,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 410,
+     "output_tokens": 0
+    },
+    "rs_0dc2653b88441b21016ac148a88c4887d2a6bb0f21ca79f0dc": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 194
+    },
+    "msg_0dc2653b88441b21016ac148b086c487d2a6a020a8354a742f": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 871
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 871
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1493,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1065,
+  "output_tokens_details": {
+   "reasoning_tokens": 194
+  },
+  "total_tokens": 2558
+ },
+ "latency_ms": 45274,
+ "input_sha1": "b438998cd844a35b",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/27648472.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"MUNC13-1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"microcephaly\",\"object_type\":\"disease\",\"quote\":\"Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"MUNC13-1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"fatal myasthenia\",\"object_type\":\"disease\",\"quote\":\"Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"microcephaly\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"Loss of MUNC13-1 function\",\"object_type\":\"mechanism\",\"quote\":\"Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"fatal myasthenia\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"Loss of MUNC13-1 function\",\"object_type\":\"mechanism\",\"quote\":\"Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"syntaxin 1B\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"febrile seizures with or without epilepsy\",\"object_type\":\"disease\",\"quote\":\"Inactivation of syntaxin 1B likely accounts for the patient's cortical hyperexcitability because mutations of syntaxin 1B cause febrile seizures with or without epilepsy, haploinsufficiency of the STX1B is associated with myoclonic astatic epilepsy, and antisense knockdown of stx1b in zebrafish larvae elicits epileptiform discharges.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"myoclonic astatic epilepsy\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"haploinsufficiency of the STX1B\",\"object_type\":\"mechanism\",\"quote\":\"Inactivation of syntaxin 1B likely accounts for the patient's cortical hyperexcitability because mutations of syntaxin 1B cause febrile seizures with or without epilepsy, haploinsufficiency of the STX1B is associated with myoclonic astatic epilepsy, and antisense knockdown of stx1b in zebrafish larvae elicits epileptiform discharges.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"syntaxin 1B\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"maintenance of developing and mature neurons\",\"object_type\":\"mechanism\",\"quote\":\"A very recent publication also shows that syntaxin 1B has a separate obligatory role for maintenance of developing and mature neurons and illustrates impaired brain development in syntaxin 1A/1B double knockout mice.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"truncating homozygous Munc13-1 mutation\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"syntaxin 1B to a permanently closed nonfunctional state akin to a knockout\",\"object_type\":\"mechanism\",\"quote\":\"We therefore attribute our patient's microcephaly to the truncating homozygous Munc13-1 mutation that consigns syntaxin 1B to a permanently closed nonfunctional state akin to a knockout.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "MUNC13-1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "microcephaly",
+   "object_type": "disease",
+   "quote": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MUNC13-1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "fatal myasthenia",
+   "object_type": "disease",
+   "quote": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "microcephaly",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Loss of MUNC13-1 function",
+   "object_type": "mechanism",
+   "quote": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "fatal myasthenia",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Loss of MUNC13-1 function",
+   "object_type": "mechanism",
+   "quote": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "syntaxin 1B",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "febrile seizures with or without epilepsy",
+   "object_type": "disease",
+   "quote": "Inactivation of syntaxin 1B likely accounts for the patient's cortical hyperexcitability because mutations of syntaxin 1B cause febrile seizures with or without epilepsy, haploinsufficiency of the STX1B is associated with myoclonic astatic epilepsy, and antisense knockdown of stx1b in zebrafish larvae elicits epileptiform discharges.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "myoclonic astatic epilepsy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "haploinsufficiency of the STX1B",
+   "object_type": "mechanism",
+   "quote": "Inactivation of syntaxin 1B likely accounts for the patient's cortical hyperexcitability because mutations of syntaxin 1B cause febrile seizures with or without epilepsy, haploinsufficiency of the STX1B is associated with myoclonic astatic epilepsy, and antisense knockdown of stx1b in zebrafish larvae elicits epileptiform discharges.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "syntaxin 1B",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "maintenance of developing and mature neurons",
+   "object_type": "mechanism",
+   "quote": "A very recent publication also shows that syntaxin 1B has a separate obligatory role for maintenance of developing and mature neurons and illustrates impaired brain development in syntaxin 1A/1B double knockout mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "truncating homozygous Munc13-1 mutation",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "syntaxin 1B to a permanently closed nonfunctional state akin to a knockout",
+   "object_type": "mechanism",
+   "quote": "We therefore attribute our patient's microcephaly to the truncating homozygous Munc13-1 mutation that consigns syntaxin 1B to a permanently closed nonfunctional state akin to a knockout.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

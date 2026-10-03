@@ -1,0 +1,285 @@
+{
+ "pmid": "29538625",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:21:23.161Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0b7d4027cffd3f0c016ac14755415c87d28cb53917f7fb579f",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0b7d4027cffd3f0c016ac147554b2c87d2afde3dc10a113ec5": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 453,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 453,
+     "output_tokens": 0
+    },
+    "rs_0b7d4027cffd3f0c016ac147573a2087d2ab58ce877cd77c8e": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 36
+    },
+    "msg_0b7d4027cffd3f0c016ac14758e5bc87d28c13ab68db7eb76d": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1859
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1859
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 823,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1520,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1895,
+  "output_tokens_details": {
+   "reasoning_tokens": 36
+  },
+  "total_tokens": 3415
+ },
+ "latency_ms": 81149,
+ "input_sha1": "01a6f5c74e904dc1",
+ "instructions_sha1": "4fd266fab16ff674",
+ "source": "data/raw/biology/pubmed/29538625.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"STXBP1/Munc18-1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"early infantile epileptic encephalopathies\",\"object_type\":\"disease\",\"quote\":\"De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"early infantile epileptic encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"infantile epilepsy\",\"object_type\":\"phenotype\",\"quote\":\"De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"early infantile epileptic encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"early infantile epileptic encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"intellectual disability\",\"object_type\":\"phenotype\",\"quote\":\"De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"early infantile epileptic encephalopathies\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"autistic features\",\"object_type\":\"phenotype\",\"quote\":\"De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1 disease variants\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"severely decreased protein levels\",\"object_type\":\"mechanism\",\"quote\":\"All disease variants had severely decreased protein levels.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"impaired protein stability\",\"object_type\":\"mechanism\",\"quote\":\"Together, these cellular studies suggest that impaired protein stability and STXBP1 haploinsufficiency explain STXBP1-encephalopathy and that, therefore, Stxbp1+/- mice provide a valid mouse model.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"STXBP1 haploinsufficiency\",\"object_type\":\"mechanism\",\"quote\":\"Together, these cellular studies suggest that impaired protein stability and STXBP1 haploinsufficiency explain STXBP1-encephalopathy and that, therefore, Stxbp1+/- mice provide a valid mouse model.\",\"study_type\":\"functional_study\",\"species\":\"cell\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"imbalanced excitation in neocortex\",\"object_type\":\"mechanism\",\"quote\":\"Taken together, these data demonstrate the construct, face and predictive validity of Stxbp1+/- mice and point to protein instability, haploinsufficiency and imbalanced excitation in neocortex, as the underlying mechanism of STXBP1-encephalopathy.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"human STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"abnormal EEG activity\",\"object_type\":\"phenotype\",\"quote\":\"We characterized the cellular deficits for an allelic series of seven STXBP1 mutations and developed four mouse models that recapitulate the abnormal EEG activity and cognitive aspects of human STXBP1-encephalopathy.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"myoclonic jerks\",\"object_type\":\"phenotype\",\"quote\":\"Simultaneous video and EEG recordings revealed that Stxbp1+/- mice with different genomic backgrounds recapitulate the seizure/spasm phenotype observed in humans, characterized by myoclonic jerks and spike-wave discharges that were suppressed by the antiepileptic drug levetiracetam.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"spike-wave discharges\",\"object_type\":\"phenotype\",\"quote\":\"Simultaneous video and EEG recordings revealed that Stxbp1+/- mice with different genomic backgrounds recapitulate the seizure/spasm phenotype observed in humans, characterized by myoclonic jerks and spike-wave discharges that were suppressed by the antiepileptic drug levetiracetam.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"levetiracetam\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"STXBP1-encephalopathy\",\"object_type\":\"disease\",\"quote\":\"Simultaneous video and EEG recordings revealed that Stxbp1+/- mice with different genomic backgrounds recapitulate the seizure/spasm phenotype observed in humans, characterized by myoclonic jerks and spike-wave discharges that were suppressed by the antiepileptic drug levetiracetam.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"impaired cognitive performance\",\"object_type\":\"phenotype\",\"quote\":\"Stxbp1+/- mice showed impaired cognitive performance, hyperactivity and anxiety-like behaviour, without altered social behaviour.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"hyperactivity\",\"object_type\":\"phenotype\",\"quote\":\"Stxbp1+/- mice showed impaired cognitive performance, hyperactivity and anxiety-like behaviour, without altered social behaviour.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"anxiety-like behaviour\",\"object_type\":\"phenotype\",\"quote\":\"Stxbp1+/- mice showed impaired cognitive performance, hyperactivity and anxiety-like behaviour, without altered social behaviour.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1-encephalopathy\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"altered social behaviour\",\"object_type\":\"phenotype\",\"quote\":\"Stxbp1+/- mice showed impaired cognitive performance, hyperactivity and anxiety-like behaviour, without altered social behaviour.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":true}]}",
+ "claims": [
+  {
+   "subject_mention": "STXBP1/Munc18-1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "early infantile epileptic encephalopathies",
+   "object_type": "disease",
+   "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "early infantile epileptic encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "infantile epilepsy",
+   "object_type": "phenotype",
+   "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "early infantile epileptic encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "early infantile epileptic encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intellectual disability",
+   "object_type": "phenotype",
+   "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "early infantile epileptic encephalopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autistic features",
+   "object_type": "phenotype",
+   "quote": "De novo heterozygous mutations in STXBP1/Munc18-1 cause early infantile epileptic encephalopathies (EIEE4, OMIM #612164) characterized by infantile epilepsy, developmental delay, intellectual disability, and can include autistic features.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1 disease variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "severely decreased protein levels",
+   "object_type": "mechanism",
+   "quote": "All disease variants had severely decreased protein levels.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "impaired protein stability",
+   "object_type": "mechanism",
+   "quote": "Together, these cellular studies suggest that impaired protein stability and STXBP1 haploinsufficiency explain STXBP1-encephalopathy and that, therefore, Stxbp1+/- mice provide a valid mouse model.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "STXBP1 haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "Together, these cellular studies suggest that impaired protein stability and STXBP1 haploinsufficiency explain STXBP1-encephalopathy and that, therefore, Stxbp1+/- mice provide a valid mouse model.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "imbalanced excitation in neocortex",
+   "object_type": "mechanism",
+   "quote": "Taken together, these data demonstrate the construct, face and predictive validity of Stxbp1+/- mice and point to protein instability, haploinsufficiency and imbalanced excitation in neocortex, as the underlying mechanism of STXBP1-encephalopathy.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "human STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "abnormal EEG activity",
+   "object_type": "phenotype",
+   "quote": "We characterized the cellular deficits for an allelic series of seven STXBP1 mutations and developed four mouse models that recapitulate the abnormal EEG activity and cognitive aspects of human STXBP1-encephalopathy.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "myoclonic jerks",
+   "object_type": "phenotype",
+   "quote": "Simultaneous video and EEG recordings revealed that Stxbp1+/- mice with different genomic backgrounds recapitulate the seizure/spasm phenotype observed in humans, characterized by myoclonic jerks and spike-wave discharges that were suppressed by the antiepileptic drug levetiracetam.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "spike-wave discharges",
+   "object_type": "phenotype",
+   "quote": "Simultaneous video and EEG recordings revealed that Stxbp1+/- mice with different genomic backgrounds recapitulate the seizure/spasm phenotype observed in humans, characterized by myoclonic jerks and spike-wave discharges that were suppressed by the antiepileptic drug levetiracetam.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "levetiracetam",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "STXBP1-encephalopathy",
+   "object_type": "disease",
+   "quote": "Simultaneous video and EEG recordings revealed that Stxbp1+/- mice with different genomic backgrounds recapitulate the seizure/spasm phenotype observed in humans, characterized by myoclonic jerks and spike-wave discharges that were suppressed by the antiepileptic drug levetiracetam.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "impaired cognitive performance",
+   "object_type": "phenotype",
+   "quote": "Stxbp1+/- mice showed impaired cognitive performance, hyperactivity and anxiety-like behaviour, without altered social behaviour.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hyperactivity",
+   "object_type": "phenotype",
+   "quote": "Stxbp1+/- mice showed impaired cognitive performance, hyperactivity and anxiety-like behaviour, without altered social behaviour.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "anxiety-like behaviour",
+   "object_type": "phenotype",
+   "quote": "Stxbp1+/- mice showed impaired cognitive performance, hyperactivity and anxiety-like behaviour, without altered social behaviour.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1-encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "altered social behaviour",
+   "object_type": "phenotype",
+   "quote": "Stxbp1+/- mice showed impaired cognitive performance, hyperactivity and anxiety-like behaviour, without altered social behaviour.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": true
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "pmid": "34028503",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:36:08.692Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0178c15b27b9b4ff016ac14ad9420887d2b0824bd9d733fc3c",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0178c15b27b9b4ff016ac14ad94c2887d285f389906f4e40af": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 572,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 572,
+     "output_tokens": 0
+    },
+    "rs_0178c15b27b9b4ff016ac14adb613087d2b916fe4d7a13e041": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 99
+    },
+    "msg_0178c15b27b9b4ff016ac14adfc9d087d2b213edc3f5fbac14": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1429
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1429
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1655,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1528,
+  "output_tokens_details": {
+   "reasoning_tokens": 99
+  },
+  "total_tokens": 3183
+ },
+ "latency_ms": 65330,
+ "input_sha1": "c41fdf1fb5a555a5",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/34028503.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"GAT-1\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"participates_in\",\n      \"object_mention\": \"reuptake of GABA into presynaptic neurons and glia\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Its encoded GABA transporter 1 (GAT-1) is responsible for the reuptake of GABA into presynaptic neurons and glia, thereby modulating neurotransmission.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"partial or complete loss-of-function\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"We found that a partial or complete loss-of-function represents a common disease mechanism, although the extent of GABA uptake reduction is variable.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"protein misfolding\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"The reduced GABA uptake appears to be due to reduced cell surface expression of the variant transporter caused by variant protein misfolding, endoplasmic reticulum retention, and subsequent degradation.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"endoplasmic reticulum retention\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Although the extent of reduction of the total protein, surface protein, and the GABA uptake level of the variant transporters is variable, the loss of GABA uptake function and endoplasmic reticulum retention is consistent across induced pluripotent stem cell-derived cell types, including astrocytes and neurons, for the surveyed variants.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"degradation\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"The reduced GABA uptake appears to be due to reduced cell surface expression of the variant transporter caused by variant protein misfolding, endoplasmic reticulum retention, and subsequent degradation.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 variant-mediated disorders\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"driven_by\",\n      \"object_mention\": \"impaired transporter protein trafficking and surface expression\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Together, our study suggests that impaired transporter protein trafficking and surface expression are the major disease-associated mechanisms associated with pathogenic SLC6A1 variants.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"myoclonic atonic epilepsy\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"childhood absence epilepsy\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"autism\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"intellectual disability\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.\",\n      \"study_type\": \"case_series\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "GAT-1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "reuptake of GABA into presynaptic neurons and glia",
+   "object_type": "mechanism",
+   "quote": "Its encoded GABA transporter 1 (GAT-1) is responsible for the reuptake of GABA into presynaptic neurons and glia, thereby modulating neurotransmission.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "partial or complete loss-of-function",
+   "object_type": "mechanism",
+   "quote": "We found that a partial or complete loss-of-function represents a common disease mechanism, although the extent of GABA uptake reduction is variable.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "protein misfolding",
+   "object_type": "mechanism",
+   "quote": "The reduced GABA uptake appears to be due to reduced cell surface expression of the variant transporter caused by variant protein misfolding, endoplasmic reticulum retention, and subsequent degradation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "endoplasmic reticulum retention",
+   "object_type": "mechanism",
+   "quote": "Although the extent of reduction of the total protein, surface protein, and the GABA uptake level of the variant transporters is variable, the loss of GABA uptake function and endoplasmic reticulum retention is consistent across induced pluripotent stem cell-derived cell types, including astrocytes and neurons, for the surveyed variants.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "degradation",
+   "object_type": "mechanism",
+   "quote": "The reduced GABA uptake appears to be due to reduced cell surface expression of the variant transporter caused by variant protein misfolding, endoplasmic reticulum retention, and subsequent degradation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 variant-mediated disorders",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "impaired transporter protein trafficking and surface expression",
+   "object_type": "mechanism",
+   "quote": "Together, our study suggests that impaired transporter protein trafficking and surface expression are the major disease-associated mechanisms associated with pathogenic SLC6A1 variants.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "myoclonic atonic epilepsy",
+   "object_type": "phenotype",
+   "quote": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "childhood absence epilepsy",
+   "object_type": "phenotype",
+   "quote": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autism",
+   "object_type": "phenotype",
+   "quote": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intellectual disability",
+   "object_type": "phenotype",
+   "quote": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

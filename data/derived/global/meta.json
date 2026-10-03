@@ -1,0 +1,970 @@
+{
+ "generated": "2026-10-03",
+ "caveat": "phenotype similarity only; no evidence curation; mechanism not assessed",
+ "far_text": "No phenotype overlap with any of the 11 mapped diseases reaches the calibrated threshold: different mechanism family, most likely (phenotype similarity only; mechanism not assessed).",
+ "sources": {
+  "MONDO": {
+   "file": "mondo-base.obo",
+   "version": "mondo/releases/2026-09-01/mondo-base.owl",
+   "url": "https://github.com/monarch-initiative/mondo/releases"
+  },
+  "HPO_annotations": {
+   "file": "phenotype.hpoa",
+   "version": "2026-09-02",
+   "url": "https://github.com/obophenotype/human-phenotype-ontology/releases"
+  },
+  "HPO_ontology": {
+   "file": "hp.obo",
+   "version": "hp/releases/2026-09-01"
+  },
+  "genes": {
+   "file": "genes_to_disease.txt",
+   "url": "https://hpo.jax.org/data/annotations"
+  }
+ },
+ "counts": {
+  "index_entries": 11456,
+  "mondo_entries": 11334,
+  "unmapped_native_ids": 122,
+  "dropped_no_name": 316,
+  "with_hpo_annotations": 10690,
+  "with_gene": 8145,
+  "with_neighbours": 8787,
+  "neighbour_pool": 8696,
+  "in_atlas": 14,
+  "raw_ids_merged": 14824,
+  "raw_id_mapping": {
+   "equivalentTo": 14380,
+   "unmapped": 438,
+   "exact_name": 4,
+   "obsolete_replaced_by": 2
+  },
+  "hpo_terms_in_vectors": 12563
+ },
+ "method": {
+  "identity": "OMIM and ORPHA ids merged through MONDO xrefs with source=MONDO:equivalentTo; ids MONDO does not map keep their native id",
+  "ic": "pipeline/biology/hpo.py: -ln(n annotated incl. descendants / N) over all phenotype.hpoa entries (N=12867), aspect P, NOT rows dropped",
+  "similarity": "IC-weighted cosine over ancestor-propagated HPO profiles (w_t = IC(t))",
+  "neighbours": "diseases with >= 5 annotated terms; QTL/susceptibility loci never listed as neighbours; percentile within the query disease's own row",
+  "distinctive_ic": 4.0,
+  "merge": "a disease merged from several sources (OMIM + ORPHA) is the centroid of its sources' normalised vectors, so no single source's annotation style dominates",
+  "atlas_threshold": {
+   "rule": "'near' an atlas disease = cosine >= 0.2454, the lowest cosine among the atlas's own curated similar_phenotype pairs; 'far' = near to none of the 10 profiled atlas diseases (STX1A has no HPO profile)",
+   "calibration": {
+    "in_family_pairs": [
+     {
+      "edge": "disease:SNAP25|similar_phenotype|disease:SYT2",
+      "cosine": 0.2454
+     },
+     {
+      "edge": "disease:UNC13A|similar_phenotype|disease:NSF",
+      "cosine": 0.2501
+     },
+     {
+      "edge": "disease:STXBP1|similar_phenotype|disease:VAMP2",
+      "cosine": 0.2549
+     },
+     {
+      "edge": "disease:STXBP1|similar_phenotype|disease:STX1B",
+      "cosine": 0.2725
+     },
+     {
+      "edge": "disease:SYT1|similar_phenotype|disease:UNC13A",
+      "cosine": 0.2835
+     },
+     {
+      "edge": "disease:STX1B|similar_phenotype|disease:SLC6A1",
+      "cosine": 0.3098
+     },
+     {
+      "edge": "disease:CPLX1|similar_phenotype|disease:UNC13A",
+      "cosine": 0.311
+     },
+     {
+      "edge": "disease:STXBP1|similar_phenotype|disease:SLC6A1",
+      "cosine": 0.331
+     },
+     {
+      "edge": "disease:STXBP1|similar_phenotype|disease:NSF",
+      "cosine": 0.3576
+     },
+     {
+      "edge": "disease:STXBP1|similar_phenotype|disease:UNC13A",
+      "cosine": 0.3959
+     },
+     {
+      "edge": "disease:STXBP1|similar_phenotype|disease:CPLX1",
+      "cosine": 0.4306
+     }
+    ],
+    "chosen_threshold": 0.2454,
+    "chosen_rule": "minimum cosine among the atlas's curated similar_phenotype pairs",
+    "share_of_comparable_non_slice_diseases_near_any": 0.0884,
+    "alternatives_considered": {
+     "median_in_family_0.3098": 0.0336,
+     "per_umbrella_p99": 0.0602
+    }
+   }
+  }
+ },
+ "hash": {
+  "function": "djb2, h = (h * 33 + charCode) mod 2^32, seed 5381, over the id string",
+  "buckets": 64,
+  "file": "neighbours/<bucket>.json, bucket = djb2(id) % 64",
+  "test_vectors": [
+   {
+    "id": "MONDO:0007739",
+    "djb2": 2020644582,
+    "bucket": 38
+   },
+   {
+    "id": "MONDO:0009061",
+    "djb2": 2020708924,
+    "bucket": 60
+   },
+   {
+    "id": "MONDO:0010679",
+    "djb2": 2021577987,
+    "bucket": 3
+   }
+  ]
+ },
+ "url_templates": {
+  "OMIM": "https://omim.org/entry/{omim}",
+  "Orphanet": "https://www.orpha.net/en/disease/detail/{orpha}",
+  "MONDO_Monarch": "https://monarchinitiative.org/{mondo}",
+  "ClinicalTrials_condition_search": "https://clinicaltrials.gov/search?cond={name_urlencoded}",
+  "NORD_site_search": "https://rarediseases.org/?s={name_urlencoded}",
+  "GeneReviews_search": "https://www.ncbi.nlm.nih.gov/books/NBK1116/?term={name_urlencoded}",
+  "HPO_term": "https://hpo.jax.org/browse/term/{hpo}"
+ },
+ "sanity_checks": {
+  "MONDO:0007739": {
+   "name": "Huntington disease",
+   "far_from_atlas": true,
+   "top10": [
+    [
+     "MONDO:0011671",
+     "Huntington disease-like 2",
+     0.5567
+    ],
+    [
+     "MONDO:0011299",
+     "Huntington disease-like 1",
+     0.549
+    ],
+    [
+     "MONDO:0016621",
+     "juvenile Huntington disease",
+     0.4889
+    ],
+    [
+     "MONDO:0011781",
+     "spinocerebellar ataxia type 17",
+     0.4706
+    ],
+    [
+     "MONDO:0007403",
+     "inherited Creutzfeldt-Jakob disease",
+     0.4593
+    ],
+    [
+     "MONDO:0014147",
+     "neuronal ceroid lipofuscinosis 13",
+     0.4591
+    ],
+    [
+     "MONDO:0032526",
+     "spinocerebellar ataxia 48",
+     0.4353
+    ],
+    [
+     "MONDO:0008199",
+     "late-onset Parkinson disease",
+     0.4295
+    ],
+    [
+     "MONDO:0800027",
+     "leukoencephalopathy, diffuse hereditary, with spheroids 1",
+     0.4283
+    ],
+    [
+     "MONDO:0011613",
+     "autosomal recessive early-onset Parkinson disease 6",
+     0.4239
+    ]
+   ],
+   "expected_neighbour_ranks": {
+    "MONDO:0011671": {
+     "name": "Huntington disease-like 2",
+     "genes": [
+      "JPH3"
+     ],
+     "rank": 1
+    },
+    "MONDO:0011299": {
+     "name": "Huntington disease-like 1",
+     "genes": [
+      "PRNP"
+     ],
+     "rank": 2
+    },
+    "MONDO:0011781": {
+     "name": "spinocerebellar ataxia type 17",
+     "genes": [
+      "TBP"
+     ],
+     "rank": 4
+    },
+    "MONDO:0007435": {
+     "name": "dentatorubral-pallidoluysian atrophy",
+     "genes": [
+      "ATN1"
+     ],
+     "rank": 100
+    }
+   }
+  },
+  "MONDO:0009061": {
+   "name": "cystic fibrosis",
+   "far_from_atlas": true,
+   "top10": [
+    [
+     "MONDO:0975835",
+     "bronchiectasis and nasal polyposis",
+     0.3469
+    ],
+    [
+     "MONDO:0013087",
+     "bronchiectasis with or without elevated sweat chloride 2",
+     0.311
+    ],
+    [
+     "MONDO:0032872",
+     "ciliary dyskinesia, primary, 42",
+     0.3063
+    ],
+    [
+     "MONDO:0013700",
+     "pancreatic triacylglycerol lipase deficiency",
+     0.2989
+    ],
+    [
+     "MONDO:0032914",
+     "ciliary dyskinesia, primary, 44",
+     0.295
+    ],
+    [
+     "MONDO:0971006",
+     "MHC class I deficiency 1",
+     0.2846
+    ],
+    [
+     "OMIM:300455",
+     "Retinitis pigmentosa, X-linked, and sinorespiratory infections, withor without deafness",
+     0.2794
+    ],
+    [
+     "MONDO:0030332",
+     "ciliary dyskinesia, primary, 46",
+     0.2777
+    ],
+    [
+     "MONDO:0009309",
+     "granulomatous disease, chronic, autosomal recessive, cytochrome b-positive, type 1",
+     0.2747
+    ],
+    [
+     "MONDO:0010220",
+     "Young syndrome",
+     0.2711
+    ]
+   ],
+   "expected_neighbour_ranks": {
+    "MONDO:0013087": {
+     "name": "bronchiectasis with or without elevated sweat chloride 2",
+     "genes": [
+      "SCNN1A"
+     ],
+     "rank": 2
+    },
+    "MONDO:0032872": {
+     "name": "ciliary dyskinesia, primary, 42",
+     "genes": [
+      "MCIDAS"
+     ],
+     "rank": 3
+    },
+    "MONDO:0010220": {
+     "name": "Young syndrome",
+     "genes": [
+      "CFAP221"
+     ],
+     "rank": 10
+    }
+   }
+  },
+  "MONDO:0010679": {
+   "name": "Duchenne muscular dystrophy",
+   "far_from_atlas": true,
+   "top10": [
+    [
+     "MONDO:0029135",
+     "muscular dystrophy-dystroglycanopathy (limb-girdle), type C, 8",
+     0.6727
+    ],
+    [
+     "MONDO:0011787",
+     "autosomal recessive limb-girdle muscular dystrophy type 2I",
+     0.6078
+    ],
+    [
+     "MONDO:0011968",
+     "autosomal recessive limb-girdle muscular dystrophy type 2D",
+     0.6049
+    ],
+    [
+     "MONDO:0012248",
+     "autosomal recessive limb-girdle muscular dystrophy type 2K",
+     0.5882
+    ],
+    [
+     "MONDO:0013161",
+     "autosomal recessive limb-girdle muscular dystrophy type 2O",
+     0.5635
+    ],
+    [
+     "MONDO:0011423",
+     "autosomal recessive limb-girdle muscular dystrophy type 2E",
+     0.5529
+    ],
+    [
+     "MONDO:0013390",
+     "autosomal recessive limb-girdle muscular dystrophy type 2Q",
+     0.5328
+    ],
+    [
+     "MONDO:0013297",
+     "autosomal dominant limb-girdle muscular dystrophy type 1H",
+     0.5307
+    ],
+    [
+     "MONDO:0009677",
+     "autosomal recessive limb-girdle muscular dystrophy type 2C",
+     0.5225
+    ],
+    [
+     "MONDO:0012704",
+     "dilated cardiomyopathy 1X",
+     0.5045
+    ]
+   ],
+   "expected_neighbour_ranks": {
+    "MONDO:0010311": {
+     "name": "Becker muscular dystrophy",
+     "genes": [
+      "DMD"
+     ],
+     "rank": 18
+    },
+    "MONDO:0011968": {
+     "name": "autosomal recessive limb-girdle muscular dystrophy type 2D",
+     "genes": [
+      "SGCA"
+     ],
+     "rank": 3
+    },
+    "MONDO:0011787": {
+     "name": "autosomal recessive limb-girdle muscular dystrophy type 2I",
+     "genes": [
+      "FKRP"
+     ],
+     "rank": 2
+    }
+   }
+  },
+  "MONDO:0100135": {
+   "name": "Dravet syndrome",
+   "far_from_atlas": false,
+   "top10": [
+    [
+     "MONDO:0018214",
+     "generalized epilepsy with febrile seizures plus",
+     0.4871
+    ],
+    [
+     "ORPHA:714652",
+     "PCDH19 clustering epilepsy",
+     0.3978
+    ],
+    [
+     "MONDO:0100079",
+     "developmental and epileptic encephalopathy, 6A",
+     0.3926
+    ],
+    [
+     "MONDO:0014150",
+     "developmental and epileptic encephalopathy 94",
+     0.3861
+    ],
+    [
+     "MONDO:0011461",
+     "generalized epilepsy with febrile seizures plus, type 2",
+     0.3729
+    ],
+    [
+     "MONDO:0013801",
+     "developmental and epileptic encephalopathy, 13",
+     0.371
+    ],
+    [
+     "MONDO:0033365",
+     "developmental and epileptic encephalopathy, 56",
+     0.3682
+    ],
+    [
+     "MONDO:0009696",
+     "juvenile myoclonic epilepsy",
+     0.3438
+    ],
+    [
+     "MONDO:0033361",
+     "developmental and epileptic encephalopathy, 52",
+     0.3301
+    ],
+    [
+     "MONDO:0100566",
+     "myoclonic epilepsy in infancy",
+     0.3231
+    ]
+   ],
+   "expected_neighbour_ranks": {
+    "MONDO:0100079": {
+     "name": "developmental and epileptic encephalopathy, 6A",
+     "genes": [
+      "SCN1A"
+     ],
+     "rank": 3
+    },
+    "MONDO:0011461": {
+     "name": "generalized epilepsy with febrile seizures plus, type 2",
+     "genes": [
+      "SCN1A"
+     ],
+     "rank": 5
+    },
+    "MONDO:0033361": {
+     "name": "developmental and epileptic encephalopathy, 52",
+     "genes": [
+      "SCN1B"
+     ],
+     "rank": 9
+    }
+   }
+  }
+ },
+ "files": {
+  "index.json": 1619261,
+  "neighbours_total": 15019294,
+  "neighbours_max_shard": 451161
+ },
+ "atlas_flags": {
+  "generated": "2026-10-03",
+  "family_files": [],
+  "family_umbrellas": [],
+  "rows_flagged_total": 14,
+  "rows_added_from_families": 0,
+  "rule": "MONDO xref/subtype match, or OMIM/ORPHA match on a single-gene row, or single-gene OMIM-Mendelian row for the umbrella's gene; multi-gene groups never flagged"
+ },
+ "mechanism": {
+  "generated": "2026-10-03",
+  "counts": {
+   "diseases_with_mechanism_class": 2648,
+   "diseases_with_any_mechanism_record": 3469,
+   "diseases_with_clingen_validity": 2260,
+   "diseases_with_pathway": 6027,
+   "clustered_diseases": 5465,
+   "clusters": 323,
+   "clusters_by_size": {
+    "5-80": 239,
+    "<5": 84
+   },
+   "diseases_in_5_to_80_clusters": 5298,
+   "genes_with_mid_level_pathway": 3989,
+   "join_stats": {
+    "g2p_joined_by_MONDO": 3117,
+    "g2p_joined_by_OMIM": 198,
+    "g2p_unjoined": 355,
+    "g2p_joined_by_gene": 178,
+    "g2p_refuted_skipped": 3,
+    "clingen_validity_joined": 2973,
+    "clingen_validity_unjoined": 722,
+    "clingen_hi_joined": 427,
+    "clingen_hi_unjoined": 8
+   },
+   "class_counts": {
+    "mech:loss-of-function": 2088,
+    "mech:haploinsufficiency": 695,
+    "mech:dominant-negative": 107,
+    "mech:gain-of-function": 172
+   }
+  },
+  "sources": {
+   "G2P": {
+    "file": "g2p_all.csv",
+    "url": "https://www.ebi.ac.uk/gene2phenotype/api/panel/all/download/",
+    "retrieved": "2026-10-03",
+    "records": 3851
+   },
+   "ClinGen_validity": {
+    "file": "clingen_gene_validity.csv",
+    "file_created": "2026-10-03"
+   },
+   "ClinGen_dosage": {
+    "files": [
+     "clingen_gene_dosage.csv",
+     "ClinGen_gene_curation_list_GRCh38.tsv"
+    ],
+    "file_created": "2026-10-03"
+   },
+   "Reactome": {
+    "files": [
+     "NCBI2Reactome.txt",
+     "ReactomePathways.txt",
+     "ReactomePathwaysRelation.txt"
+    ],
+    "url": "https://reactome.org/download/current/",
+    "retrieved": "2026-10-03"
+   }
+  },
+  "rules": {
+   "class_mapping": {
+    "G2P 'loss of function'": "mech:loss-of-function",
+    "G2P 'dominant negative'": "mech:dominant-negative",
+    "G2P 'gain of function'": "mech:gain-of-function",
+    "G2P 'undetermined' / 'undetermined non-loss-of-function'": "no class (label kept)",
+    "ClinGen HI score 3 or 2": "mech:haploinsufficiency (dominant entries of that gene, or the curated HI disease)",
+    "G2P disputed": "label kept, no class",
+    "G2P refuted": "skipped"
+   },
+   "join": "MONDO id, else a unique OMIM number, else the only single-gene entry for that gene",
+   "pathway_level": "each gene's lowest-level Reactome pathways rolled up to their depth-3 ancestor (top level = 0); a shallower leaf at depth >= 2 is kept as is; anything with > 400 genes is dropped as too broad; up to 5 shown per gene, most-annotated first",
+   "graph": "nodes = genes of single-gene diseases with >= 1 mid-level pathway; edge only if they share a pathway; weight = 0.75 x IDF-weighted pathway Jaccard (IDF over all Reactome human genes) + 0.25 x phenotype cosine of the genes' disease centroids; 15 nearest neighbours per gene, symmetrised; diseases inherit their gene's cluster",
+   "community_detection": "Leiden (RBConfiguration, resolution 1.0, seed 20261003); communities holding > 80 diseases re-split on their own subgraph at doubled resolution (up to 6 rounds)",
+   "mechanism_neighbours": "same cluster AND >= 1 shared pathway AND >= 1 shared mechanism class",
+   "url_templates": {
+    "G2P": "https://www.ebi.ac.uk/gene2phenotype/lgd/{g2p_id}",
+    "Reactome": "https://reactome.org/content/detail/{id}"
+   }
+  },
+  "sanity_checks": {
+   "lysosomal_storage": {
+    "genes": [
+     "GBA1",
+     "GLA",
+     "HEXA",
+     "HEXB",
+     "GALC",
+     "ARSA",
+     "ASAH1",
+     "SMPD1",
+     "NPC1",
+     "NPC2",
+     "GAA",
+     "IDUA",
+     "IDS",
+     "SGSH",
+     "NAGLU",
+     "HGSNAT",
+     "GNS",
+     "GALNS",
+     "GLB1",
+     "ARSB",
+     "GUSB",
+     "NEU1",
+     "CTSA",
+     "GNPTAB",
+     "MAN2B1",
+     "MANBA",
+     "AGA",
+     "FUCA1",
+     "NAGA",
+     "LIPA",
+     "PSAP",
+     "GM2A",
+     "SUMF1",
+     "CLN3",
+     "PPT1",
+     "TPP1",
+     "CTSD",
+     "LAMP2"
+    ],
+    "diseases": 93,
+    "clustered": 83,
+    "clusters": [
+     {
+      "cluster_id": "MC0042",
+      "label": "Mucopolysaccharidoses · loss of function · dysostosis multiplex",
+      "size": 33,
+      "members_from_set": [
+       "ARSB: mucopolysaccharidosis type 6, slowly progressing",
+       "ARSB: mucopolysaccharidosis type 6, rapidly progressing",
+       "ARSB: mucopolysaccharidosis type 6",
+       "GALNS: mucopolysaccharidosis type 4A",
+       "GLB1: GM1 gangliosidosis type 1",
+       "GLB1: GM1 gangliosidosis type 3",
+       "GLB1: GM1 gangliosidosis type 2",
+       "GLB1: mucopolysaccharidosis type 4B",
+       "GNS: mucopolysaccharidosis type 3D",
+       "GUSB: mucopolysaccharidosis type 7",
+       "HGSNAT: retinitis pigmentosa 73",
+       "HGSNAT: mucopolysaccharidosis type 3C",
+       "IDS: mucopolysaccharidosis type 2, attenuated form",
+       "IDS: mucopolysaccharidosis type 2",
+       "IDS: mucopolysaccharidosis type 2, severe form",
+       "IDUA: Scheie syndrome",
+       "IDUA: Hurler syndrome",
+       "IDUA: Hurler-Scheie syndrome",
+       "NAGLU: Charcot-Marie-Tooth disease axonal type 2V",
+       "NAGLU: mucopolysaccharidosis type 3B",
+       "SGSH: mucopolysaccharidosis type 3A"
+      ]
+     },
+     {
+      "cluster_id": "MC0062",
+      "label": "Glycosphingolipid metabolism · loss of function · mental deterioration",
+      "size": 28,
+      "members_from_set": [
+       "ARSA: metachromatic leukodystrophy, juvenile form",
+       "ASAH1: Farber lipogranulomatosis",
+       "ASAH1: spinal muscular atrophy-progressive myoclonic epilepsy syndrome",
+       "GALC: adult Krabbe disease",
+       "GALC: Krabbe disease",
+       "GALC: late-infantile/juvenile Krabbe disease",
+       "GBA1: Gaucher disease perinatal lethal",
+       "GBA1: Gaucher disease type III",
+       "GBA1: Gaucher disease type II",
+       "GBA1: Gaucher disease-ophthalmoplegia-cardiovascular calcification syndrome",
+       "GBA1: Gaucher disease type I",
+       "GLA: Fabry disease",
+       "GM2A: Tay-Sachs disease AB variant",
+       "SMPD1: Niemann-Pick disease type B",
+       "SMPD1: Niemann-Pick disease type A",
+       "SMPD1: chronic neurovisceral acid sphingomyelinase deficiency",
+       "SUMF1: mucosulfatidosis"
+      ]
+     },
+     {
+      "cluster_id": null,
+      "label": null,
+      "size": null,
+      "members_from_set": [
+       "AGA: aspartylglucosaminuria",
+       "CLN3: retinitis pigmentosa 101",
+       "CLN3: protracted juvenile neuronal ceroid lipofuscinosis 3",
+       "CLN3: neuronal ceroid lipofuscinosis 3",
+       "CLN3: juvenile neuronal ceroid lipofuscinosis 3",
+       "GNPTAB: mucolipidosis type III, alpha/beta",
+       "GNPTAB: mucolipidosis type II",
+       "NAGA: alpha-N-acetylgalactosaminidase deficiency type 2",
+       "NAGA: alpha-N-acetylgalactosaminidase deficiency type 3",
+       "NAGA: alpha-N-acetylgalactosaminidase deficiency type 1"
+      ]
+     },
+     {
+      "cluster_id": "MC0018",
+      "label": "Diseases associated with glycosaminoglycan metabolism · loss of function · broad long bones",
+      "size": 47,
+      "members_from_set": [
+       "HEXA: Tay-Sachs disease, b variant, juvenile form",
+       "HEXA: Tay-Sachs disease, b variant, infantile form",
+       "HEXA: Tay-Sachs disease",
+       "HEXA: Tay-Sachs disease, B variant, adult form",
+       "HEXB: Sandhoff disease",
+       "HEXB: Sandhoff disease, adult form",
+       "HEXB: Sandhoff disease, infantile form",
+       "HEXB: Sandhoff disease, juvenile form"
+      ]
+     },
+     {
+      "cluster_id": "MC0070",
+      "label": "Diseases associated with N-glycosylation of proteins · loss of function · type i transferrin isoform profile",
+      "size": 27,
+      "members_from_set": [
+       "CTSA: galactosialidosis",
+       "CTSA: cathepsin a-related arteriopathy-strokes-leukoencephalopathy",
+       "CTSA: brain small vessel disease 6 with leukoencephalopathy",
+       "NEU1: sialidosis type 2",
+       "NEU1: juvenile sialidosis type 2",
+       "NEU1: congenital sialidosis type 2",
+       "NEU1: sialidosis type 1"
+      ]
+     },
+     {
+      "cluster_id": "MC0106",
+      "label": "Fatty acyl-CoA biosynthesis · loss of function · abnormal enzyme concentration or activity",
+      "size": 21,
+      "members_from_set": [
+       "PPT1: infantile neuronal ceroid lipofuscinosis 1",
+       "PPT1: neuronal ceroid lipofuscinosis 1",
+       "PPT1: juvenile neuronal ceroid lipofuscinosis 1",
+       "PPT1: late infantile neuronal ceroid lipofuscinosis 1",
+       "PPT1: adult neuronal ceroid lipofuscinosis 1"
+      ]
+     },
+     {
+      "cluster_id": "MC0157",
+      "label": "IRE1alpha activates chaperones · loss of function · abnormal glucose homeostasis",
+      "size": 14,
+      "members_from_set": [
+       "TPP1: neuronal ceroid lipofuscinosis 2",
+       "TPP1: juvenile neuronal ceroid lipofuscinosis 2",
+       "TPP1: autosomal recessive spinocerebellar ataxia 7",
+       "TPP1: infantile neuronal ceroid lipofuscinosis 2",
+       "TPP1: late infantile neuronal ceroid lipofuscinosis 2"
+      ]
+     },
+     {
+      "cluster_id": "MC0054",
+      "label": "Kinesins · loss of function · peripheral neuropathy",
+      "size": 30,
+      "members_from_set": [
+       "CTSD: congenital neuronal ceroid lipofuscinosis 10",
+       "CTSD: late infantile neuronal ceroid lipofuscinosis 10",
+       "CTSD: neuronal ceroid lipofuscinosis 10",
+       "CTSD: juvenile neuronal ceroid lipofuscinosis 10"
+      ]
+     },
+     {
+      "cluster_id": "MC0059",
+      "label": "G alpha (i) signalling events · loss of function",
+      "size": 28,
+      "members_from_set": [
+       "PSAP: Gaucher disease due to saposin C deficiency",
+       "PSAP: metachromatic leukodystrophy due to saposin B deficiency",
+       "PSAP: Krabbe disease due to saposin A deficiency",
+       "PSAP: combined PSAP deficiency"
+      ]
+     },
+     {
+      "cluster_id": "MC0168",
+      "label": "LDL clearance · loss of function · atherosclerosis",
+      "size": 12,
+      "members_from_set": [
+       "LIPA: Wolman disease",
+       "LIPA: cholesteryl ester storage disease",
+       "NPC1: Niemann-Pick disease, type C1",
+       "NPC2: Niemann-Pick disease, type C2"
+      ]
+     },
+     {
+      "cluster_id": "MC0222",
+      "label": "Lysosomal oligosaccharide catabolism · loss of function · oligosacchariduria",
+      "size": 6,
+      "members_from_set": [
+       "MAN2B1: alpha-mannosidosis",
+       "MAN2B1: alpha-mannosidosis, adult form",
+       "MAN2B1: alpha-mannosidosis, infantile form",
+       "MANBA: beta-mannosidosis"
+      ]
+     },
+     {
+      "cluster_id": "MC0006",
+      "label": "Glycogen storage diseases · loss of function · abnormal enzyme concentration or activity",
+      "size": 71,
+      "members_from_set": [
+       "GAA: glycogen storage disease due to acid maltase deficiency, late-onset",
+       "GAA: glycogen storage disease due to acid maltase deficiency, infantile onset"
+      ]
+     },
+     {
+      "cluster_id": "MC0045",
+      "label": "Platelet degranulation · loss of function · abnormal circulating protein concentration",
+      "size": 32,
+      "members_from_set": [
+       "LAMP2: Danon disease"
+      ]
+     },
+     {
+      "cluster_id": "MC0115",
+      "label": "COPII-mediated vesicle transport · loss of function",
+      "size": 19,
+      "members_from_set": [
+       "FUCA1: fucosidosis"
+      ]
+     }
+    ]
+   },
+   "rasopathies": {
+    "genes": [
+     "PTPN11",
+     "SOS1",
+     "RAF1",
+     "KRAS",
+     "HRAS",
+     "BRAF",
+     "MAP2K1"
+    ],
+    "diseases": 24,
+    "clustered": 24,
+    "clusters": [
+     {
+      "cluster_id": "MC0019",
+      "label": "Signaling by RAF1 mutants · gain of function",
+      "size": 47,
+      "members_from_set": [
+       "BRAF: syringocystadenoma papilliferum",
+       "BRAF: pulmonary langerhans cell histiocytosis",
+       "BRAF: unifocal langerhans cell histiocytosis",
+       "BRAF: Noonan syndrome 7",
+       "BRAF: hairy cell leukemia",
+       "BRAF: multisystem langerhans cell histiocytosis",
+       "BRAF: LEOPARD syndrome 3",
+       "BRAF: single-system multifocal langerhans cell histiocytosis",
+       "MAP2K1: melorheostosis",
+       "MAP2K1: cardiofaciocutaneous syndrome 3",
+       "RAF1: dilated cardiomyopathy 1NN",
+       "RAF1: LEOPARD syndrome 2",
+       "RAF1: Noonan syndrome 5"
+      ]
+     },
+     {
+      "cluster_id": "MC0011",
+      "label": "Signaling by ERBB2 KD Mutants · gain of function · nevus",
+      "size": 53,
+      "members_from_set": [
+       "HRAS: wooly hair nevus",
+       "HRAS: Costello syndrome",
+       "HRAS: phakomatosis pigmentokeratotica",
+       "KRAS: arteriovenous malformations of the brain",
+       "KRAS: cardiofaciocutaneous syndrome 2",
+       "KRAS: Noonan syndrome 3",
+       "KRAS: Toriello-Lacassie-Droste syndrome",
+       "PTPN11: metachondromatosis",
+       "PTPN11: LEOPARD syndrome 1",
+       "SOS1: Noonan syndrome 4",
+       "SOS1: fibromatosis, gingival, 1"
+      ]
+     }
+    ]
+   },
+   "sodium_channel_epilepsies": {
+    "genes": [
+     "SCN1A",
+     "SCN2A",
+     "SCN8A",
+     "SCN1B",
+     "SCN3A"
+    ],
+    "diseases": 17,
+    "clustered": 17,
+    "clusters": [
+     {
+      "cluster_id": "MC0015",
+      "label": "Phase 0 - rapid depolarisation · haploinsufficiency · arrhythmia",
+      "size": 49,
+      "members_from_set": [
+       "SCN1A: developmental and epileptic encephalopathy 6B",
+       "SCN1A: developmental and epileptic encephalopathy, 6A",
+       "SCN1A: migraine, familial hemiplegic, 3",
+       "SCN1A: generalized epilepsy with febrile seizures plus, type 2",
+       "SCN1B: generalized epilepsy with febrile seizures plus, type 1",
+       "SCN1B: atrial fibrillation, familial, 13",
+       "SCN1B: Brugada syndrome 5",
+       "SCN1B: developmental and epileptic encephalopathy, 52",
+       "SCN2A: seizures, benign familial infantile, 3",
+       "SCN2A: episodic ataxia, type 9",
+       "SCN2A: developmental and epileptic encephalopathy, 11",
+       "SCN3A: developmental and epileptic encephalopathy, 62",
+       "SCN3A: epilepsy, familial focal, with variable foci 4",
+       "SCN8A: seizures, benign familial infantile, 5",
+       "SCN8A: developmental and epileptic encephalopathy, 13",
+       "SCN8A: myoclonus, familial, 2",
+       "SCN8A: cognitive impairment with or without cerebellar ataxia"
+      ]
+     }
+    ]
+   },
+   "snare_slice_11": {
+    "genes": [
+     "STXBP1",
+     "SYT1",
+     "SNAP25",
+     "VAMP2",
+     "STX1B",
+     "SYT2",
+     "CPLX1",
+     "UNC13A",
+     "STX1A",
+     "NSF",
+     "SLC6A1"
+    ],
+    "diseases": 14,
+    "clustered": 11,
+    "clusters": [
+     {
+      "cluster_id": "MC0117",
+      "label": "Glutamate Neurotransmitter Release Cycle · loss of function · inability to walk",
+      "size": 19,
+      "members_from_set": [
+       "CPLX1: developmental and epileptic encephalopathy, 63",
+       "SNAP25: congenital myasthenic syndrome 18",
+       "STXBP1: developmental and epileptic encephalopathy, 4",
+       "SYT1: infantile hypotonia-oculomotor anomalies-hyperkinetic movements-developmental delay syndrome",
+       "VAMP2: neurodevelopmental disorder with hypotonia and autistic features with or without hyperkinetic movements"
+      ]
+     },
+     {
+      "cluster_id": null,
+      "label": null,
+      "size": null,
+      "members_from_set": [
+       "UNC13A: neurodevelopmental disorder with speech delay, movement abnormalities, and seizures",
+       "UNC13A: neurodevelopmental disorder with hypotonia, epilepsy, and absent speech",
+       "UNC13A: intellectual developmental disorder with seizures and dysmorphic facies"
+      ]
+     },
+     {
+      "cluster_id": "MC0090",
+      "label": "Cargo recognition for clathrin-mediated endocytosis · loss of function · respiratory tract infection",
+      "size": 23,
+      "members_from_set": [
+       "SYT2: myasthenic syndrome, congenital, 7B, presynaptic, autosomal recessive",
+       "SYT2: Autosomal dominant congenital myasthenic syndrome due to defective synaptic vesicles exocytosis",
+       "SYT2: congenital myasthenic syndrome 7"
+      ]
+     },
+     {
+      "cluster_id": "MC0125",
+      "label": "Intra-Golgi traffic · loss of function · abnormal glycosylation",
+      "size": 18,
+      "members_from_set": [
+       "NSF: developmental and epileptic encephalopathy 96"
+      ]
+     },
+     {
+      "cluster_id": "MC0140",
+      "label": "SLC-mediated transport of neurotransmitters · loss of function · motor seizure",
+      "size": 15,
+      "members_from_set": [
+       "SLC6A1: epilepsy with myoclonic atonic seizures"
+      ]
+     },
+     {
+      "cluster_id": "MC0145",
+      "label": "Uptake and actions of bacterial toxins · loss of function · flexion contracture",
+      "size": 15,
+      "members_from_set": [
+       "STX1B: generalized epilepsy with febrile seizures plus, type 9"
+      ]
+     }
+    ]
+   }
+  },
+  "files": {
+   "mechanism_total": 5824247,
+   "mechanism_max_shard": 217794,
+   "clusters.json": 775774
+  }
+ }
+}

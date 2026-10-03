@@ -1,0 +1,249 @@
+{
+ "pmid": "30737342",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:29:32.098Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0791bd5964c3420b016ac1490d158887d28aab96ab6624f26c",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0791bd5964c3420b016ac1490d36a887d2989bf85c83aaa5e0": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 385,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 385,
+     "output_tokens": 0
+    },
+    "rs_0791bd5964c3420b016ac1491062a887d28a42aa0f038594eb": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 145
+    },
+    "msg_0791bd5964c3420b016ac14916964487d286319ae7126892db": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 2936
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 2936
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1468,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 3081,
+  "output_tokens_details": {
+   "reasoning_tokens": 145
+  },
+  "total_tokens": 4549
+ },
+ "latency_ms": 129558,
+ "input_sha1": "3d91fe46261c8000",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/30737342.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"STX1B\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"epilepsy phenotypes\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Variants in STX1B are protean and contribute to many different epilepsy phenotypes, similar to SCN1A, the most important gene associated with fever-associated epilepsies.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B loss-of-function mutations\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"loss-of-function\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"More often, we found loss-of-function mutations in benign syndromes, whereas missense variants in the SNARE motif of syntaxin-1B were associated with more severe phenotypes.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"febrile and afebrile seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"benign course\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"generally good drug response\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"normal development\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"permanent neurologic deficits\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": true\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"genetic generalized epilepsy\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"genetic generalized epilepsy\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"febrile seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": true\n    },\n    {\n      \"subject_mention\": \"genetic generalized epilepsy\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"cognitive deficits\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": true\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"intractable seizures\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"developmental regression after seizure onset\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"neuropsychiatric symptoms\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"STX1B-related epilepsies\",\n      \"subject_type\": \"disease\",\n      \"relation\": \"has_phenotype\",\n      \"object_mention\": \"focal epilepsy\",\n      \"object_type\": \"phenotype\",\n      \"quote\": \"We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.\",\n      \"study_type\": \"cohort\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "STX1B",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epilepsy phenotypes",
+   "object_type": "disease",
+   "quote": "Variants in STX1B are protean and contribute to many different epilepsy phenotypes, similar to SCN1A, the most important gene associated with fever-associated epilepsies.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B loss-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "More often, we found loss-of-function mutations in benign syndromes, whereas missense variants in the SNARE motif of syntaxin-1B were associated with more severe phenotypes.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "febrile and afebrile seizures",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "benign course",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "generally good drug response",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "normal development",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "permanent neurologic deficits",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "genetic generalized epilepsy",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "genetic generalized epilepsy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "febrile seizures",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "genetic generalized epilepsy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive deficits",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intractable seizures",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental regression after seizure onset",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "neuropsychiatric symptoms",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B-related epilepsies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "focal epilepsy",
+   "object_type": "phenotype",
+   "quote": "We discerned 4 different phenotypic groups across the newly identified and previously published patients (49 patients in 23 families): (1) 6 sporadic patients or families (31 affected individuals) with febrile and afebrile seizures with a benign course, generally good drug response, normal development, and without permanent neurologic deficits; (2) 2 patients with genetic generalized epilepsy without febrile seizures and cognitive deficits; (3) 13 patients or families with intractable seizures, developmental regression after seizure onset and additional neuropsychiatric symptoms; (4) 2 patients with focal epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

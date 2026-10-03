@@ -1,0 +1,465 @@
+{
+ "pmid": "38321119",
+ "entries": {
+  "3b7055b0fcec38f3": {
+   "mention": "action potential-induced synchronous neurotransmitter release",
+   "type": "mechanism",
+   "candidates": [
+    "mech:ca-triggered-exocytosis",
+    "mech:synaptic-vesicle-fusion",
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:dominant-negative",
+    "mech:synaptic-vesicle-priming",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:ca-triggered-exocytosis",
+   "match": "instance",
+   "justification": "Action potential-induced synchronous release is a specific form of calcium-triggered neurotransmitter exocytosis.",
+   "raw_node_id": "mech:ca-triggered-exocytosis",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:56.537Z"
+  },
+  "fe46ed05d5f31fa5": {
+   "mention": "suppressing asynchronous and spontaneous release",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-priming",
+    "mech:synaptic-vesicle-fusion",
+    "mech:protein-destabilization",
+    "mech:haploinsufficiency",
+    "mech:gaba-reuptake",
+    "mech:snare-complex-assembly",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:gain-of-function",
+    "mech:loss-of-function"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Suppression of asynchronous and spontaneous release is regulation of release, not any listed process or variant effect.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:56.537Z"
+  },
+  "84d73831537eb9d2": {
+   "mention": "developmental delay",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0001249"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "Developmental delay is an alternative term for the HPO global developmental delay phenotype.",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:56.537Z"
+  },
+  "3237b4058802a0a7": {
+   "mention": "autistic symptoms",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000729",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0011099",
+    "phenotype:HP:0005278",
+    "phenotype:HP:0006989",
+    "phenotype:HP:0001682",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0200134"
+   ],
+   "node_id": "phenotype:HP:0000729",
+   "match": "same",
+   "justification": "Autistic symptoms is an equivalent clinical description of autistic behavior.",
+   "raw_node_id": "phenotype:HP:0000729",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:56.537Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:56:56.537Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_03395c2726592599016ac14feefe9887d2a6e0ff69272f68be": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 2366,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 2366,
+       "output_tokens": 0
+      },
+      "rs_03395c2726592599016ac14ff13a0087d2889994d9f079ee4b": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 15
+      },
+      "msg_03395c2726592599016ac14ff1740087d2a8cad24afd52d7c4": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 181
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 181
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 2710,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 196,
+    "output_tokens_details": {
+     "reasoning_tokens": 15
+    },
+    "total_tokens": 2906
+   },
+   "request_payload": {
+    "title": "A de novo missense mutation in synaptotagmin-1 associated with neurodevelopmental disorder desynchronizes neurotransmitter release.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "action potential-induced synchronous neurotransmitter release",
+      "declared_type": "mechanism",
+      "sentence": "Synaptotagmin-1 (Syt1) is a presynaptic calcium sensor with two calcium binding domains, C2A and C2B, that triggers action potential-induced synchronous neurotransmitter release, while suppressing asynchronous and spontaneous release.",
+      "candidates": [
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "suppressing asynchronous and spontaneous release",
+      "declared_type": "mechanism",
+      "sentence": "Synaptotagmin-1 (Syt1) is a presynaptic calcium sensor with two calcium binding domains, C2A and C2B, that triggers action potential-induced synchronous neurotransmitter release, while suppressing asynchronous and spontaneous release.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "developmental delay",
+      "declared_type": "phenotype",
+      "sentence": "We identified a de novo missense mutation (P401L) in the C2B domain in a patient with developmental delay and autistic symptoms.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "autistic symptoms",
+      "declared_type": "phenotype",
+      "sentence": "We identified a de novo missense mutation (P401L) in the C2B domain in a patient with developmental delay and autistic symptoms.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000729",
+        "type": "phenotype",
+        "label": "Autistic behavior",
+        "note": "HPO HP:0000729"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0011099",
+        "type": "phenotype",
+        "label": "Spastic hemiparesis",
+        "note": "HPO HP:0011099"
+       },
+       {
+        "id": "phenotype:HP:0005278",
+        "type": "phenotype",
+        "label": "Hypoplastic nasal tip",
+        "note": "HPO HP:0005278"
+       },
+       {
+        "id": "phenotype:HP:0006989",
+        "type": "phenotype",
+        "label": "Dysplastic corpus callosum",
+        "note": "HPO HP:0006989"
+       },
+       {
+        "id": "phenotype:HP:0001682",
+        "type": "phenotype",
+        "label": "Subvalvular aortic stenosis",
+        "note": "HPO HP:0001682"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"mech:ca-triggered-exocytosis\",\"match\":\"instance\",\"justification\":\"Action potential-induced synchronous release is a specific form of calcium-triggered neurotransmitter exocytosis.\"},{\"mention_id\":\"m2\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Suppression of asynchronous and spontaneous release is regulation of release, not any listed process or variant effect.\"},{\"mention_id\":\"m3\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"Developmental delay is an alternative term for the HPO global developmental delay phenotype.\"},{\"mention_id\":\"m4\",\"node_id\":\"phenotype:HP:0000729\",\"match\":\"same\",\"justification\":\"Autistic symptoms is an equivalent clinical description of autistic behavior.\"}]}"
+  }
+ ]
+}

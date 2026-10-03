@@ -1,0 +1,758 @@
+{
+ "pmid": "34028503",
+ "entries": {
+  "0fb5bb73b0319113": {
+   "mention": "reuptake of GABA into presynaptic neurons and glia",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gaba-reuptake",
+    "mech:synaptic-vesicle-fusion",
+    "mech:synaptic-vesicle-priming",
+    "mech:ca-triggered-exocytosis",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:protein-destabilization",
+    "mech:dominant-negative",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:gaba-reuptake",
+   "match": "same",
+   "justification": "Describes GABA uptake by neurons and glia, the process defined by this node.",
+   "raw_node_id": "mech:gaba-reuptake",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:54:47.704Z"
+  },
+  "44ef41f36bf48a90": {
+   "mention": "endoplasmic reticulum retention",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:synaptic-vesicle-priming",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:dominant-negative",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "Endoplasmic reticulum retention is a specific form of intracellular variant-protein retention covered by this node.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:54:47.704Z"
+  },
+  "51c9956ec02429f1": {
+   "mention": "degradation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:dominant-negative",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "Refers specifically to degradation of misfolded variant transporter protein.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:54:47.704Z"
+  },
+  "1e6fc1e56fdcc764": {
+   "mention": "impaired transporter protein trafficking and surface expression",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:dominant-negative",
+    "mech:ca-triggered-exocytosis",
+    "mech:synaptic-vesicle-fusion",
+    "mech:haploinsufficiency",
+    "mech:synaptic-vesicle-priming",
+    "mech:loss-of-function",
+    "mech:gaba-reuptake",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "Describes failure of variant transporters to reach the cell surface through the misfolding and retention mechanism.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:54:47.704Z"
+  },
+  "aa3691bb71c732f9": {
+   "mention": "myoclonic atonic epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011170",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0002123",
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0025097",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0002069",
+    "phenotype:HP:0032792"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Myoclonic atonic epilepsy is an epilepsy syndrome, not the related myoclonic-atonic seizure type.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:54:47.704Z"
+  },
+  "20022403243a3d4a": {
+   "mention": "childhood absence epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0006915",
+    "phenotype:HP:0033258",
+    "phenotype:HP:0002121",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0001344",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0007105",
+    "phenotype:HP:0011198"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Childhood absence epilepsy is a syndrome, not an equivalent term for its characteristic absence seizure type.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:54:47.704Z"
+  },
+  "34c4d56fd7e14565": {
+   "mention": "autism",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000729",
+    "phenotype:HP:0000316",
+    "phenotype:HP:0000486",
+    "phenotype:HP:0100248",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0000244",
+    "phenotype:HP:0000319",
+    "phenotype:HP:0000348",
+    "phenotype:HP:0000414",
+    "phenotype:HP:0000508"
+   ],
+   "node_id": "phenotype:HP:0000729",
+   "match": "same",
+   "justification": "Autism is an alternative term represented by the HPO autistic behavior node.",
+   "raw_node_id": "phenotype:HP:0000729",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:54:47.704Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:54:47.704Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_0e19a3ed3daa64e2016ac14f66fd7c87d29eb1cb9b63971974": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 4355,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 4355,
+       "output_tokens": 0
+      },
+      "rs_0e19a3ed3daa64e2016ac14f687bd087d2afb10bda1e97754c": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 57
+      },
+      "msg_0e19a3ed3daa64e2016ac14f6b078c87d29e18465fe2c99281": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 312
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 312
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 4699,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 369,
+    "output_tokens_details": {
+     "reasoning_tokens": 57
+    },
+    "total_tokens": 5068
+   },
+   "request_payload": {
+    "title": "Common molecular mechanisms of SLC6A1 variant-mediated neurodevelopmental disorders in astrocytes and neurons.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "reuptake of GABA into presynaptic neurons and glia",
+      "declared_type": "mechanism",
+      "sentence": "Its encoded GABA transporter 1 (GAT-1) is responsible for the reuptake of GABA into presynaptic neurons and glia, thereby modulating neurotransmission.",
+      "candidates": [
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "endoplasmic reticulum retention",
+      "declared_type": "mechanism",
+      "sentence": "Although the extent of reduction of the total protein, surface protein, and the GABA uptake level of the variant transporters is variable, the loss of GABA uptake function and endoplasmic reticulum retention is consistent across induced pluripotent stem cell-derived cell types, including astrocytes and neurons, for the surveyed variants.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "degradation",
+      "declared_type": "mechanism",
+      "sentence": "The reduced GABA uptake appears to be due to reduced cell surface expression of the variant transporter caused by variant protein misfolding, endoplasmic reticulum retention, and subsequent degradation.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "impaired transporter protein trafficking and surface expression",
+      "declared_type": "mechanism",
+      "sentence": "Together, our study suggests that impaired transporter protein trafficking and surface expression are the major disease-associated mechanisms associated with pathogenic SLC6A1 variants.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "myoclonic atonic epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011170",
+        "type": "phenotype",
+        "label": "Generalized myoclonic-atonic seizure",
+        "note": "HPO HP:0011170"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0002123",
+        "type": "phenotype",
+        "label": "Generalized myoclonic seizure",
+        "note": "HPO HP:0002123"
+       },
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0025097",
+        "type": "phenotype",
+        "label": "Eyelid myoclonus",
+        "note": "HPO HP:0025097"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0002069",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure",
+        "note": "HPO HP:0002069"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "childhood absence epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0006915",
+        "type": "phenotype",
+        "label": "Inability to walk by childhood/adolescence",
+        "note": "HPO HP:0006915"
+       },
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0002121",
+        "type": "phenotype",
+        "label": "Generalized non-motor (absence) seizure",
+        "note": "HPO HP:0002121"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0001344",
+        "type": "phenotype",
+        "label": "Absent speech",
+        "note": "HPO HP:0001344"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0007105",
+        "type": "phenotype",
+        "label": "Infantile encephalopathy",
+        "note": "HPO HP:0007105"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "autism",
+      "declared_type": "phenotype",
+      "sentence": "Recently, many variants in SLC6A1 have been associated with a spectrum of epilepsy syndromes and neurodevelopmental disorders, including myoclonic atonic epilepsy, childhood absence epilepsy, autism, and intellectual disability, but the pathomechanisms associated with these phenotypes remain unclear.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000729",
+        "type": "phenotype",
+        "label": "Autistic behavior",
+        "note": "HPO HP:0000729"
+       },
+       {
+        "id": "phenotype:HP:0000316",
+        "type": "phenotype",
+        "label": "Hypertelorism",
+        "note": "HPO HP:0000316"
+       },
+       {
+        "id": "phenotype:HP:0000486",
+        "type": "phenotype",
+        "label": "Strabismus",
+        "note": "HPO HP:0000486"
+       },
+       {
+        "id": "phenotype:HP:0100248",
+        "type": "phenotype",
+        "label": "Hemiballismus",
+        "note": "HPO HP:0100248"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0000244",
+        "type": "phenotype",
+        "label": "Brachyturricephaly",
+        "note": "HPO HP:0000244"
+       },
+       {
+        "id": "phenotype:HP:0000319",
+        "type": "phenotype",
+        "label": "Smooth philtrum",
+        "note": "HPO HP:0000319"
+       },
+       {
+        "id": "phenotype:HP:0000348",
+        "type": "phenotype",
+        "label": "High forehead",
+        "note": "HPO HP:0000348"
+       },
+       {
+        "id": "phenotype:HP:0000414",
+        "type": "phenotype",
+        "label": "Bulbous nose",
+        "note": "HPO HP:0000414"
+       },
+       {
+        "id": "phenotype:HP:0000508",
+        "type": "phenotype",
+        "label": "Ptosis",
+        "note": "HPO HP:0000508"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"mech:gaba-reuptake\",\"match\":\"same\",\"justification\":\"Describes GABA uptake by neurons and glia, the process defined by this node.\"},{\"mention_id\":\"m2\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"Endoplasmic reticulum retention is a specific form of intracellular variant-protein retention covered by this node.\"},{\"mention_id\":\"m3\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"Refers specifically to degradation of misfolded variant transporter protein.\"},{\"mention_id\":\"m4\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"Describes failure of variant transporters to reach the cell surface through the misfolding and retention mechanism.\"},{\"mention_id\":\"m5\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Myoclonic atonic epilepsy is an epilepsy syndrome, not the related myoclonic-atonic seizure type.\"},{\"mention_id\":\"m6\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Childhood absence epilepsy is a syndrome, not an equivalent term for its characteristic absence seizure type.\"},{\"mention_id\":\"m7\",\"node_id\":\"phenotype:HP:0000729\",\"match\":\"same\",\"justification\":\"Autism is an alternative term represented by the HPO autistic behavior node.\"}]}"
+  }
+ ]
+}

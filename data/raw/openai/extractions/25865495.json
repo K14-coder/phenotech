@@ -1,0 +1,153 @@
+{
+ "pmid": "25865495",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:24:29.089Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0e2711341c68cdab016ac1483e713c87d29e284c3644a7bb19",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0e2711341c68cdab016ac1483e845c87d2b1d331eeac5c7efe": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 228,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 228,
+     "output_tokens": 0
+    },
+    "rs_0e2711341c68cdab016ac14840375087d2950da05bc57511db": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 89
+    },
+    "msg_0e2711341c68cdab016ac14843f41887d295a70104525af140": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 630
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 630
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1311,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 719,
+  "output_tokens_details": {
+   "reasoning_tokens": 89
+  },
+  "total_tokens": 2030
+ },
+ "latency_ms": 32113,
+ "input_sha1": "4fb9f860526becd8",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/25865495.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"Epilepsy with Myoclonic-Atonic Seizures\",\"object_type\":\"disease\",\"quote\":\"Mutations in the GABA Transporter SLC6A1 Cause Epilepsy with Myoclonic-Atonic Seizures.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"GAT-1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"re-uptake of GABA from the synapse\",\"object_type\":\"mechanism\",\"quote\":\"GAT-1, encoded by SLC6A1, is one of the major gamma-aminobutyric acid (GABA) transporters in the brain and is responsible for re-uptake of GABA from the synapse.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"SLC6A1 truncations\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"loss of function of GAT-1\",\"object_type\":\"mechanism\",\"quote\":\"We describe two truncations and four missense alterations, all of which most likely lead to loss of function of GAT-1 and thus reduced GABA re-uptake from the synapse.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"SLC6A1 missense alterations\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"loss of function of GAT-1\",\"object_type\":\"mechanism\",\"quote\":\"We describe two truncations and four missense alterations, all of which most likely lead to loss of function of GAT-1 and thus reduced GABA re-uptake from the synapse.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"SLC6A1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"myoclonic-atonic seizures\",\"object_type\":\"phenotype\",\"quote\":\"In this study, targeted resequencing of 644 individuals with epileptic encephalopathies led to the identification of six SLC6A1 mutations in seven individuals, all of whom have epilepsy with myoclonic-atonic seizures (MAE).\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"MAE\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"spontaneous spike-wave discharges\",\"object_type\":\"phenotype\",\"quote\":\"These individuals share many of the electrophysiological properties of Gat1-deficient mice, including spontaneous spike-wave discharges.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Epilepsy with Myoclonic-Atonic Seizures",
+   "object_type": "disease",
+   "quote": "Mutations in the GABA Transporter SLC6A1 Cause Epilepsy with Myoclonic-Atonic Seizures.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GAT-1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "re-uptake of GABA from the synapse",
+   "object_type": "mechanism",
+   "quote": "GAT-1, encoded by SLC6A1, is one of the major gamma-aminobutyric acid (GABA) transporters in the brain and is responsible for re-uptake of GABA from the synapse.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 truncations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function of GAT-1",
+   "object_type": "mechanism",
+   "quote": "We describe two truncations and four missense alterations, all of which most likely lead to loss of function of GAT-1 and thus reduced GABA re-uptake from the synapse.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 missense alterations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function of GAT-1",
+   "object_type": "mechanism",
+   "quote": "We describe two truncations and four missense alterations, all of which most likely lead to loss of function of GAT-1 and thus reduced GABA re-uptake from the synapse.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "myoclonic-atonic seizures",
+   "object_type": "phenotype",
+   "quote": "In this study, targeted resequencing of 644 individuals with epileptic encephalopathies led to the identification of six SLC6A1 mutations in seven individuals, all of whom have epilepsy with myoclonic-atonic seizures (MAE).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MAE",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "spontaneous spike-wave discharges",
+   "object_type": "phenotype",
+   "quote": "These individuals share many of the electrophysiological properties of Gat1-deficient mice, including spontaneous spike-wave discharges.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

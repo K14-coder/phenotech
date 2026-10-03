@@ -1,0 +1,354 @@
+{
+ "pmid": "38781976",
+ "entries": {
+  "360a1dd5a21def38": {
+   "mention": "seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001250",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0007359",
+    "phenotype:HP:0011153",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0002197",
+    "phenotype:HP:0010818",
+    "phenotype:HP:0002123"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "same",
+   "justification": "“Seizures” is the plural form of the HPO term Seizure.",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:57:06.807Z"
+  },
+  "84d73831537eb9d2": {
+   "mention": "developmental delay",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0001249"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "“Developmental delay” is a recognized synonym of Global developmental delay.",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:57:06.807Z"
+  },
+  "34c4d56fd7e14565": {
+   "mention": "autism",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000729",
+    "phenotype:HP:0000316",
+    "phenotype:HP:0000486",
+    "phenotype:HP:0100248",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0000244",
+    "phenotype:HP:0000319",
+    "phenotype:HP:0000348",
+    "phenotype:HP:0000414",
+    "phenotype:HP:0000508"
+   ],
+   "node_id": "phenotype:HP:0000729",
+   "match": "same",
+   "justification": "“Autism” is a recognized synonym of the HPO term Autistic behavior.",
+   "raw_node_id": "phenotype:HP:0000729",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:57:06.807Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:57:06.807Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_0b93960b392f1288016ac14ffab17087d29445bf2b36d16d58": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 1217,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 1217,
+       "output_tokens": 0
+      },
+      "rs_0b93960b392f1288016ac14ffc34d087d2b7b83fcd61329309": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 19
+      },
+      "msg_0b93960b392f1288016ac14ffd36b087d2a9a9af6e855d57b3": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 143
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 143
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 1561,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 162,
+    "output_tokens_details": {
+     "reasoning_tokens": 19
+    },
+    "total_tokens": 1723
+   },
+   "request_payload": {
+    "title": "Haploinsufficiency underlies the neurodevelopmental consequences of SLC6A1 variants.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "seizures",
+      "declared_type": "phenotype",
+      "sentence": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       },
+       {
+        "id": "phenotype:HP:0010818",
+        "type": "phenotype",
+        "label": "Generalized tonic seizure",
+        "note": "HPO HP:0010818"
+       },
+       {
+        "id": "phenotype:HP:0002123",
+        "type": "phenotype",
+        "label": "Generalized myoclonic seizure",
+        "note": "HPO HP:0002123"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "developmental delay",
+      "declared_type": "phenotype",
+      "sentence": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "autism",
+      "declared_type": "phenotype",
+      "sentence": "Heterozygous variants in SLC6A1, encoding the GAT-1 GABA transporter, are associated with seizures, developmental delay, and autism.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000729",
+        "type": "phenotype",
+        "label": "Autistic behavior",
+        "note": "HPO HP:0000729"
+       },
+       {
+        "id": "phenotype:HP:0000316",
+        "type": "phenotype",
+        "label": "Hypertelorism",
+        "note": "HPO HP:0000316"
+       },
+       {
+        "id": "phenotype:HP:0000486",
+        "type": "phenotype",
+        "label": "Strabismus",
+        "note": "HPO HP:0000486"
+       },
+       {
+        "id": "phenotype:HP:0100248",
+        "type": "phenotype",
+        "label": "Hemiballismus",
+        "note": "HPO HP:0100248"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0000244",
+        "type": "phenotype",
+        "label": "Brachyturricephaly",
+        "note": "HPO HP:0000244"
+       },
+       {
+        "id": "phenotype:HP:0000319",
+        "type": "phenotype",
+        "label": "Smooth philtrum",
+        "note": "HPO HP:0000319"
+       },
+       {
+        "id": "phenotype:HP:0000348",
+        "type": "phenotype",
+        "label": "High forehead",
+        "note": "HPO HP:0000348"
+       },
+       {
+        "id": "phenotype:HP:0000414",
+        "type": "phenotype",
+        "label": "Bulbous nose",
+        "note": "HPO HP:0000414"
+       },
+       {
+        "id": "phenotype:HP:0000508",
+        "type": "phenotype",
+        "label": "Ptosis",
+        "note": "HPO HP:0000508"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"same\",\"justification\":\"“Seizures” is the plural form of the HPO term Seizure.\"},{\"mention_id\":\"m2\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"“Developmental delay” is a recognized synonym of Global developmental delay.\"},{\"mention_id\":\"m3\",\"node_id\":\"phenotype:HP:0000729\",\"match\":\"same\",\"justification\":\"“Autism” is a recognized synonym of the HPO term Autistic behavior.\"}]}"
+  }
+ ]
+}

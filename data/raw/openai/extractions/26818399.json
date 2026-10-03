@@ -1,0 +1,177 @@
+{
+ "pmid": "26818399",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:25:41.987Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0002002a44ec92af016ac1487df28487d2a57037455168bae9",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0002002a44ec92af016ac1487e731887d2bb1f36ca905aee7c": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 309,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 309,
+     "output_tokens": 0
+    },
+    "rs_0002002a44ec92af016ac14881756c87d2ae75a051769827b4": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 41
+    },
+    "msg_0002002a44ec92af016ac14883a8cc87d29bc4071a206c2312": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 861
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 861
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1392,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 902,
+  "output_tokens_details": {
+   "reasoning_tokens": 41
+  },
+  "total_tokens": 2294
+ },
+ "latency_ms": 43838,
+ "input_sha1": "8beaeaf5f5122fec",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/26818399.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"STX1B\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"MAE\",\"object_type\":\"disease\",\"quote\":\"Our observation of a STX1B deletion in a third patient with MAE therefore supports that STX1B gene variants or deletions can be involved in the aetiology of MAE.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"STX1B deletion\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"haploinsufficiency of STX1B\",\"object_type\":\"mechanism\",\"quote\":\"This deletion results in haploinsufficiency of STX1B and other genes.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"myoclonic astatic epilepsy\",\"subject_type\":\"disease\",\"relation\":\"driven_by\",\"object_mention\":\"Haploinsufficiency of the STX1B gene\",\"object_type\":\"mechanism\",\"quote\":\"Haploinsufficiency of the STX1B gene is associated with myoclonic astatic epilepsy.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"STX1B\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"regulation of the synaptic transmission of neurotransmitters\",\"object_type\":\"mechanism\",\"quote\":\"Furthermore, STX1B encodes for syntaxin-1B, of which interaction with the protein encoded by the STXBP1 gene is essential for the regulation of the synaptic transmission of neurotransmitters.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"regulation of the synaptic transmission of neurotransmitters\",\"object_type\":\"mechanism\",\"quote\":\"Furthermore, STX1B encodes for syntaxin-1B, of which interaction with the protein encoded by the STXBP1 gene is essential for the regulation of the synaptic transmission of neurotransmitters.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"myoclonic astatic epilepsy (MAE)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"moderate to severe intellectual disability\",\"object_type\":\"phenotype\",\"quote\":\"We describe an 18-year-old male patient with myoclonic astatic epilepsy (MAE), moderate to severe intellectual disability, behavioural problems, several dysmorphisms and a 1.2-Mb de novo deletion on chromosome 16p11.2.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"myoclonic astatic epilepsy (MAE)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"behavioural problems\",\"object_type\":\"phenotype\",\"quote\":\"We describe an 18-year-old male patient with myoclonic astatic epilepsy (MAE), moderate to severe intellectual disability, behavioural problems, several dysmorphisms and a 1.2-Mb de novo deletion on chromosome 16p11.2.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"myoclonic astatic epilepsy (MAE)\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"several dysmorphisms\",\"object_type\":\"phenotype\",\"quote\":\"We describe an 18-year-old male patient with myoclonic astatic epilepsy (MAE), moderate to severe intellectual disability, behavioural problems, several dysmorphisms and a 1.2-Mb de novo deletion on chromosome 16p11.2.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "STX1B",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "MAE",
+   "object_type": "disease",
+   "quote": "Our observation of a STX1B deletion in a third patient with MAE therefore supports that STX1B gene variants or deletions can be involved in the aetiology of MAE.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B deletion",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "haploinsufficiency of STX1B",
+   "object_type": "mechanism",
+   "quote": "This deletion results in haploinsufficiency of STX1B and other genes.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "myoclonic astatic epilepsy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Haploinsufficiency of the STX1B gene",
+   "object_type": "mechanism",
+   "quote": "Haploinsufficiency of the STX1B gene is associated with myoclonic astatic epilepsy.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "STX1B",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "regulation of the synaptic transmission of neurotransmitters",
+   "object_type": "mechanism",
+   "quote": "Furthermore, STX1B encodes for syntaxin-1B, of which interaction with the protein encoded by the STXBP1 gene is essential for the regulation of the synaptic transmission of neurotransmitters.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "regulation of the synaptic transmission of neurotransmitters",
+   "object_type": "mechanism",
+   "quote": "Furthermore, STX1B encodes for syntaxin-1B, of which interaction with the protein encoded by the STXBP1 gene is essential for the regulation of the synaptic transmission of neurotransmitters.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "myoclonic astatic epilepsy (MAE)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "moderate to severe intellectual disability",
+   "object_type": "phenotype",
+   "quote": "We describe an 18-year-old male patient with myoclonic astatic epilepsy (MAE), moderate to severe intellectual disability, behavioural problems, several dysmorphisms and a 1.2-Mb de novo deletion on chromosome 16p11.2.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "myoclonic astatic epilepsy (MAE)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "behavioural problems",
+   "object_type": "phenotype",
+   "quote": "We describe an 18-year-old male patient with myoclonic astatic epilepsy (MAE), moderate to severe intellectual disability, behavioural problems, several dysmorphisms and a 1.2-Mb de novo deletion on chromosome 16p11.2.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "myoclonic astatic epilepsy (MAE)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "several dysmorphisms",
+   "object_type": "phenotype",
+   "quote": "We describe an 18-year-old male patient with myoclonic astatic epilepsy (MAE), moderate to severe intellectual disability, behavioural problems, several dysmorphisms and a 1.2-Mb de novo deletion on chromosome 16p11.2.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

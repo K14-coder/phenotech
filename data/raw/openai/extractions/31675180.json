@@ -1,0 +1,117 @@
+{
+ "pmid": "31675180",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:29:29.539Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_0c9a66d82c963759016ac1497b0bcc87d293ed3262429ed6d0",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_0c9a66d82c963759016ac1497b135887d29796d1531098f5df": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 159,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 159,
+     "output_tokens": 0
+    },
+    "rs_0c9a66d82c963759016ac1497cb67087d2baa363a473c316ac": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 52
+    },
+    "msg_0c9a66d82c963759016ac1497f1a5c87d29851a49d21b58ca3": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 262
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 262
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1242,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 314,
+  "output_tokens_details": {
+   "reasoning_tokens": 52
+  },
+  "total_tokens": 1556
+ },
+ "latency_ms": 15677,
+ "input_sha1": "df81c1ea40df49b6",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/31675180.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"NSF\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"early infantile epileptic encephalopathy\",\"object_type\":\"disease\",\"quote\":\"De novo heterozygous mutations in the NSF gene cause early infantile epileptic encephalopathy.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"N-ethylmaleimide-sensitive factor (NSF)\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"intracellular vesicle transport\",\"object_type\":\"mechanism\",\"quote\":\"N-ethylmaleimide-sensitive factor (NSF) plays a critical role in intracellular vesicle transport, which is essential for neurotransmitter release.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"NSF pathogenic variants\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"dominant negative effect\",\"object_type\":\"mechanism\",\"quote\":\"Our findings suggest that the two pathogenic variants exert a dominant negative effect.\",\"study_type\":\"animal_model\",\"species\":\"fly\",\"certainty\":\"suggested\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "NSF",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "early infantile epileptic encephalopathy",
+   "object_type": "disease",
+   "quote": "De novo heterozygous mutations in the NSF gene cause early infantile epileptic encephalopathy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "N-ethylmaleimide-sensitive factor (NSF)",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "intracellular vesicle transport",
+   "object_type": "mechanism",
+   "quote": "N-ethylmaleimide-sensitive factor (NSF) plays a critical role in intracellular vesicle transport, which is essential for neurotransmitter release.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NSF pathogenic variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dominant negative effect",
+   "object_type": "mechanism",
+   "quote": "Our findings suggest that the two pathogenic variants exert a dominant negative effect.",
+   "study_type": "animal_model",
+   "species": "fly",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

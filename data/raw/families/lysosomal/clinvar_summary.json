@@ -1,0 +1,3328 @@
+{
+ "GBA1": {
+  "query": "GBA1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 385,
+  "n_docs": 385,
+  "n_classified_PLP": 385,
+  "by_consequence": {
+   "missense": 194,
+   "cnv_multigene": 70,
+   "nonsense": 57,
+   "splice": 42,
+   "frameshift": 11,
+   "intronic_or_splice_region": 4,
+   "cnv_single_gene": 4,
+   "intragenic_deletion_or_duplication": 2,
+   "inframe_indel": 1
+  },
+  "examples": {
+   "missense": [
+    {
+     "title": "NM_000157.4(GBA1):c.1028A>G (p.Tyr343Cys)",
+     "accession": "VCV003239360",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3239360/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1049A>G (p.His350Arg)",
+     "accession": "VCV000004325",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4325/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1052G>C (p.Trp351Ser)",
+     "accession": "VCV000496080",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/496080/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1054T>C (p.Tyr352His)",
+     "accession": "VCV002581173",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2581173/"
+    }
+   ],
+   "cnv_multigene": [
+    {
+     "title": "NM_000157.4(GBA1):c.1029del (p.Lys342_Tyr343insTer)",
+     "accession": "VCV000496079",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/496079/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1265_1319del (p.Leu422fs)",
+     "accession": "VCV000193611",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/193611/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.203del (p.Pro68fs)",
+     "accession": "VCV001321450",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1321450/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.203dup (p.Thr69fs)",
+     "accession": "VCV000987870",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/987870/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000157.4(GBA1):c.115+1G>A",
+     "accession": "VCV000093445",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/93445/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1388+1G>A",
+     "accession": "VCV001322984",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1322984/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1505+2T>A",
+     "accession": "VCV001698566",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1698566/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.762-1G>C",
+     "accession": "VCV000633240",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/633240/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000157.4(GBA1):c.84dup (p.Leu29fs)",
+     "accession": "VCV000004302",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4302/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1172_1173del (p.Val391fs)",
+     "accession": "VCV004817687",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4817687/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1559_1560delinsCTC (p.Glu520fs)",
+     "accession": "VCV004817739",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4817739/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1588_1596delinsCAGTCGCCAGTGA (p.Thr530fs)",
+     "accession": "VCV004817742",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4817742/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000157.4(GBA1):c.108G>A (p.Trp36Ter)",
+     "accession": "VCV000974986",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/974986/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1165C>T (p.Gln389Ter)",
+     "accession": "VCV003769123",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3769123/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1192C>T (p.Arg398Ter)",
+     "accession": "VCV000004326",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4326/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1259G>A (p.Trp420Ter)",
+     "accession": "VCV000918141",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/918141/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000157.4(GBA1):c.1447_1466delinsTG (p.Leu483_Met489delinsTrp)",
+     "accession": "VCV004817725",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4817725/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000157.4(GBA1):c.-119_-116del",
+     "accession": "VCV004278983",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4278983/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.1389-3C>G",
+     "accession": "VCV004817722",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4817722/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.761+4A>G",
+     "accession": "VCV001675378",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1675378/"
+    },
+    {
+     "title": "NM_000157.4(GBA1):c.999+242C>A",
+     "accession": "VCV000689500",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/689500/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000001.10:g.(?_155204242)_(155209869_155210420)del",
+     "accession": "VCV004689252",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4689252/"
+    },
+    {
+     "title": "NC_000001.10:g.155183259_(155210558_155210826)del",
+     "accession": "VCV001804121",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1804121/"
+    }
+   ],
+   "cnv_single_gene": [
+    {
+     "title": "GRCh37/hg19 1q22(chr1:155188179-155209868)",
+     "accession": "VCV000813310",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/813310/"
+    },
+    {
+     "title": "GRCh37/hg19 1q22(chr1:155204786-155205102)x1",
+     "accession": "VCV002498454",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2498454/"
+    },
+    {
+     "title": "GRCh37/hg19 1q22(chr1:155204786-155205635)x1",
+     "accession": "VCV001711250",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1711250/"
+    },
+    {
+     "title": "GRCh37/hg19 1q22(chr1:155207925-155210903)x1",
+     "accession": "VCV002578609",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2578609/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=GBA1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "GAA": {
+  "query": "GAA[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 898,
+  "n_docs": 898,
+  "n_classified_PLP": 898,
+  "by_consequence": {
+   "frameshift": 316,
+   "missense": 253,
+   "nonsense": 137,
+   "splice": 116,
+   "intragenic_deletion_or_duplication": 25,
+   "cnv_multigene": 17,
+   "inframe_indel": 15,
+   "intronic_or_splice_region": 13,
+   "synonymous": 5,
+   "other_or_unannotated": 1
+  },
+  "examples": {
+   "nonsense": [
+    {
+     "title": "NM_000152.5(GAA):c.1062C>A (p.Tyr354Ter)",
+     "accession": "VCV000423925",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/423925/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1075G>T (p.Gly359Ter)",
+     "accession": "VCV000420101",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/420101/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1100G>A (p.Trp367Ter)",
+     "accession": "VCV000972773",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/972773/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1134C>G (p.Tyr378Ter)",
+     "accession": "VCV000595469",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/595469/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000152.5(GAA):c.1030_1031del (p.Gly344fs)",
+     "accession": "VCV000597147",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/597147/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1051del (p.Val351fs)",
+     "accession": "VCV000188841",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/188841/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1057del (p.Gln353fs)",
+     "accession": "VCV001327499",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1327499/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1099del (p.Trp367fs)",
+     "accession": "VCV000370810",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/370810/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000152.5(GAA):c.-32-1G>C",
+     "accession": "VCV000557429",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/557429/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1076-1G>C",
+     "accession": "VCV001353052",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1353052/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1326+1G>A",
+     "accession": "VCV000597944",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/597944/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1327-2A>G",
+     "accession": "VCV000972762",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/972762/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000152.5(GAA):c.1000G>A (p.Gly334Ser)",
+     "accession": "VCV000843318",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/843318/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1000G>T (p.Gly334Cys)",
+     "accession": "VCV000284864",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/284864/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1003G>A (p.Gly335Arg)",
+     "accession": "VCV000972790",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/972790/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1004G>A (p.Gly335Glu)",
+     "accession": "VCV000180142",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/180142/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000152.5(GAA):c.1317GAT[1] (p.Met440del)",
+     "accession": "VCV000526518",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/526518/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1408_1410del (p.Asn470del)",
+     "accession": "VCV000932895",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/932895/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1819_1836del (p.Gly607_His612del)",
+     "accession": "VCV003235260",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3235260/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1962_1964del (p.Glu656del)",
+     "accession": "VCV000932896",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/932896/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000152.5(GAA):c.-32-13T>G",
+     "accession": "VCV000004027",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4027/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.-32-3C>A",
+     "accession": "VCV000371622",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/371622/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1076-22T>G",
+     "accession": "VCV000370278",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/370278/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.1194+5G>A",
+     "accession": "VCV000930445",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/930445/"
+    }
+   ],
+   "cnv_multigene": [
+    {
+     "title": "NM_017950.4(CCDC40):c.3129del (p.Phe1044fs)",
+     "accession": "VCV000573257",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/573257/"
+    },
+    {
+     "title": "GRCh37/hg19 17q24.3-25.3(chr17:70161447-81041938)x3",
+     "accession": "VCV004279221",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4279221/"
+    },
+    {
+     "title": "GRCh37/hg19 17q25.1-25.3(chr17:73481509-81043199)x3",
+     "accession": "VCV001701331",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1701331/"
+    },
+    {
+     "title": "GRCh38/hg38 17q24.3-25.3(chr17:69209079-83086677)x3",
+     "accession": "VCV000058703",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/58703/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NM_000152.5(GAA):c.1291_1299del (p.Leu431_Gln433del)",
+     "accession": "VCV003583095",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3583095/"
+    },
+    {
+     "title": "NC_000017.10:g.(78082407_78082495)_(78087166_78090766)del",
+     "accession": "VCV001804653",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1804653/"
+    },
+    {
+     "title": "NC_000017.10:g.(78086511_78086674)_(78087166_78090766)del",
+     "accession": "VCV003895574",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3895574/"
+    },
+    {
+     "title": "NC_000017.10:g.(78091549_78091991)_(78092157_78092451)del",
+     "accession": "VCV002501046",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2501046/"
+    }
+   ],
+   "other_or_unannotated": [
+    {
+     "title": "NC_000017.11:g.80114186_80114187ins[80114172_80114186;NC_000020.11:g.2823027_2826302;AAA]",
+     "accession": "VCV001334911",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1334911/"
+    }
+   ],
+   "synonymous": [
+    {
+     "title": "NM_000152.5(GAA):c.2040G>A (p.Leu680=)",
+     "accession": "VCV000984800",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/984800/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.546G>A (p.Thr182=)",
+     "accession": "VCV000280955",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/280955/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.546G>C (p.Thr182=)",
+     "accession": "VCV000281056",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/281056/"
+    },
+    {
+     "title": "NM_000152.5(GAA):c.546G>T (p.Thr182=)",
+     "accession": "VCV000370637",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/370637/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=GAA%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "GLA": {
+  "query": "GLA[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 1352,
+  "n_docs": 1200,
+  "n_classified_PLP": 1200,
+  "by_consequence": {
+   "missense": 574,
+   "cnv_multigene": 421,
+   "nonsense": 110,
+   "splice": 39,
+   "frameshift": 33,
+   "intronic_or_splice_region": 13,
+   "inframe_indel": 6,
+   "other_or_unannotated": 3,
+   "stop_lost": 1
+  },
+  "examples": {
+   "cnv_multigene": [
+    {
+     "title": "GRCh38/hg38 Xp22.33-q28(chrX:10679-156022206)x3",
+     "accession": "VCV000160897",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/160897/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1021del (p.Glu341fs)",
+     "accession": "VCV004087038",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4087038/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1023del (p.Glu341fs)",
+     "accession": "VCV000291188",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/291188/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1037del (p.Gly346fs)",
+     "accession": "VCV000245896",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/245896/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000169.3(GLA):c.1018T>C (p.Trp340Arg)",
+     "accession": "VCV000546086",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/546086/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1021G>A (p.Glu341Lys)",
+     "accession": "VCV000222125",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/222125/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1042G>C (p.Ala348Pro)",
+     "accession": "VCV000684856",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/684856/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1045T>C (p.Trp349Arg)",
+     "accession": "VCV000928970",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/928970/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000169.3(GLA):c.1019G>A (p.Trp340Ter)",
+     "accession": "VCV002138660",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2138660/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1021G>T (p.Glu341Ter)",
+     "accession": "VCV000495689",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/495689/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1046G>A (p.Trp349Ter)",
+     "accession": "VCV000992222",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/992222/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1069C>T (p.Gln357Ter)",
+     "accession": "VCV000222136",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/222136/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000169.3(GLA):c.1102delinsTTATAC (p.Ala368fs)",
+     "accession": "VCV004087063",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4087063/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.361_364del (p.Ala121fs)",
+     "accession": "VCV000195027",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/195027/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.50_54del (p.Arg17fs)",
+     "accession": "VCV000222273",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/222273/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.622_623del (p.Met208fs)",
+     "accession": "VCV000423729",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/423729/"
+    }
+   ],
+   "stop_lost": [
+    {
+     "title": "NM_000169.3(GLA):c.1288T>C (p.Ter430Gln)",
+     "accession": "VCV004087248",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4087248/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000169.3(GLA):c.1000-1G>A",
+     "accession": "VCV000222111",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/222111/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1000-1G>C",
+     "accession": "VCV004087232",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4087232/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.194+1G>A",
+     "accession": "VCV002737320",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2737320/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.194+1G>T",
+     "accession": "VCV002106614",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2106614/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000169.3(GLA):c.697GAT[1] (p.Asp234del)",
+     "accession": "VCV001021971",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1021971/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1077TGG[1] (p.Gly361del)",
+     "accession": "VCV004087174",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4087174/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1160TCC[1] (p.Leu388del)",
+     "accession": "VCV004087194",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4087194/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.147_148insCCC (p.Arg49_Phe50insPro)",
+     "accession": "VCV004087089",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4087089/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NC_000023.11:g.101398856C>T",
+     "accession": "VCV000167139",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/167139/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1000-10G>A",
+     "accession": "VCV000222110",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/222110/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.1023A>C",
+     "accession": "VCV000167136",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/167136/"
+    },
+    {
+     "title": "NM_000169.3(GLA):c.639+5G>A",
+     "accession": "VCV000946661",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/946661/"
+    }
+   ],
+   "other_or_unannotated": [
+    {
+     "title": "NC_000023.11:g.101398823_101398824ins(300)",
+     "accession": "VCV000974834",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/974834/"
+    },
+    {
+     "title": "Single allele",
+     "accession": "VCV000870278",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/870278/"
+    },
+    {
+     "title": "NC_000023.10:g.36649710_136649711del100000002insG",
+     "accession": "VCV000545551",
+     "classification": "Pathogenic",
+     "review_status": "no assertion criteria provided",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/545551/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=GLA%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "HEXA": {
+  "query": "HEXA[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 366,
+  "n_docs": 366,
+  "n_classified_PLP": 366,
+  "by_consequence": {
+   "frameshift": 103,
+   "nonsense": 83,
+   "missense": 75,
+   "splice": 53,
+   "intragenic_deletion_or_duplication": 21,
+   "cnv_multigene": 17,
+   "intronic_or_splice_region": 7,
+   "inframe_indel": 5,
+   "synonymous": 2
+  },
+  "examples": {
+   "cnv_multigene": [
+    {
+     "title": "GRCh37/hg19 15q22.1-26.3(chr15:59297293-102480888)x3",
+     "accession": "VCV000369835",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/369835/"
+    },
+    {
+     "title": "GRCh37/hg19 15q22.31-26.3(chr15:64637227-102509910)x3",
+     "accession": "VCV000253516",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253516/"
+    },
+    {
+     "title": "GRCh37/hg19 15q22.33-26.1(chr15:67358491-91644328)x3",
+     "accession": "VCV002498630",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2498630/"
+    },
+    {
+     "title": "GRCh37/hg19 15q23(chr15:72662932-72670877)",
+     "accession": "VCV000830311",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/830311/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000520.6(HEXA):c.1031T>C (p.Phe344Ser)",
+     "accession": "VCV002910381",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2910381/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1171G>A (p.Val391Met)",
+     "accession": "VCV001067655",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1067655/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1260G>C (p.Trp420Cys)",
+     "accession": "VCV000003901",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3901/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1385A>T (p.Glu462Val)",
+     "accession": "VCV000218134",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/218134/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000520.6(HEXA):c.1002del (p.Ile335fs)",
+     "accession": "VCV003238759",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3238759/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1014del (p.Phe338fs)",
+     "accession": "VCV002712729",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2712729/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1043_1046del (p.Phe348fs)",
+     "accession": "VCV000370773",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/370773/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1088dup (p.Ser364fs)",
+     "accession": "VCV001934149",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1934149/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000520.6(HEXA):c.1073+1G>A",
+     "accession": "VCV000003920",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3920/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1330+1G>A",
+     "accession": "VCV000371490",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/371490/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1330+2T>C",
+     "accession": "VCV001390393",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1390393/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1421+1G>C",
+     "accession": "VCV000003890",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3890/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000520.6(HEXA):c.103C>T (p.Gln35Ter)",
+     "accession": "VCV000987865",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/987865/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1048C>T (p.Gln350Ter)",
+     "accession": "VCV003027136",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3027136/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1069C>T (p.Gln357Ter)",
+     "accession": "VCV002810898",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2810898/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1098T>A (p.Tyr366Ter)",
+     "accession": "VCV000983878",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/983878/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000015.10:g.(?_72345446)_(72346710_?)del",
+     "accession": "VCV000417379",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/417379/"
+    },
+    {
+     "title": "NC_000015.10:g.(?_72350508)_(72351244_?)del",
+     "accession": "VCV000831688",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/831688/"
+    },
+    {
+     "title": "NC_000015.10:g.(?_72374460)_(72375992_?)del",
+     "accession": "VCV000833123",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/833123/"
+    },
+    {
+     "title": "NC_000015.10:g.72647900_72648958del",
+     "accession": "VCV002690933",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2690933/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000520.6(HEXA):c.1074-7_1074-3del",
+     "accession": "VCV000554039",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/554039/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.459+24G>C",
+     "accession": "VCV002199227",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2199227/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.459+5G>A",
+     "accession": "VCV000374505",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/374505/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.806-7G>A",
+     "accession": "VCV000209160",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/209160/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000520.6(HEXA):c.1100_1111del (p.Gly367_Tyr370del)",
+     "accession": "VCV003775075",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3775075/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.912CTT[1] (p.Phe305del)",
+     "accession": "VCV000188812",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/188812/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1039_1056del (p.Asp347_Glu352del)",
+     "accession": "VCV002501085",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2501085/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.1217_1220delinsA (p.Leu406_Val407delinsHis)",
+     "accession": "VCV000965758",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/965758/"
+    }
+   ],
+   "synonymous": [
+    {
+     "title": "NM_000520.6(HEXA):c.1305C>T (p.Tyr435=)",
+     "accession": "VCV000100729",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/100729/"
+    },
+    {
+     "title": "NM_000520.6(HEXA):c.570G>A (p.Leu190=)",
+     "accession": "VCV002137732",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2137732/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=HEXA%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "NPC1": {
+  "query": "NPC1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 691,
+  "n_docs": 691,
+  "n_classified_PLP": 691,
+  "by_consequence": {
+   "frameshift": 234,
+   "missense": 207,
+   "nonsense": 99,
+   "splice": 79,
+   "cnv_multigene": 33,
+   "inframe_indel": 14,
+   "intragenic_deletion_or_duplication": 11,
+   "intronic_or_splice_region": 8,
+   "other_or_unannotated": 5,
+   "synonymous": 1
+  },
+  "examples": {
+   "missense": [
+    {
+     "title": "NM_000271.5(NPC1):c.1114C>T (p.Arg372Trp)",
+     "accession": "VCV001066746",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1066746/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1123A>G (p.Thr375Ala)",
+     "accession": "VCV001068516",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1068516/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1133T>C (p.Val378Ala)",
+     "accession": "VCV000002970",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2970/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1210C>T (p.Arg404Trp)",
+     "accession": "VCV000499939",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/499939/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000271.5(NPC1):c.1042C>T (p.Arg348Ter)",
+     "accession": "VCV001405310",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1405310/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1219C>T (p.Gln407Ter)",
+     "accession": "VCV000498154",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/498154/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1261C>T (p.Gln421Ter)",
+     "accession": "VCV000958381",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/958381/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1312C>T (p.Gln438Ter)",
+     "accession": "VCV000666979",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/666979/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000271.5(NPC1):c.1020_1021del (p.Arg341fs)",
+     "accession": "VCV000451826",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/451826/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1140_1141del (p.Trp381fs)",
+     "accession": "VCV000592188",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/592188/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1628del (p.Pro543fs)",
+     "accession": "VCV000556403",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/556403/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1849dup (p.Ser617fs)",
+     "accession": "VCV000847972",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/847972/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000271.5(NPC1):c.1757+1G>A",
+     "accession": "VCV002861221",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2861221/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1757_1757+1del",
+     "accession": "VCV002972884",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2972884/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.2130+1G>A",
+     "accession": "VCV000982131",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/982131/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.2245+1G>A",
+     "accession": "VCV002736706",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2736706/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000271.5(NPC1):c.1554-1009G>A",
+     "accession": "VCV000553804",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/553804/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.1947+5G>C",
+     "accession": "VCV000281945",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/281945/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.2604+5G>A",
+     "accession": "VCV001369770",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1369770/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.2373+7T>C",
+     "accession": "VCV004796748",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4796748/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000018.9:g.(21131692_21134721)_(21141492_21148786)dup",
+     "accession": "VCV001331460",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1331460/"
+    },
+    {
+     "title": "NC_000018.9:g.(21148787_21148962)del",
+     "accession": "VCV004880184",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4880184/"
+    },
+    {
+     "title": "NC_000018.9:g.(?_21115552)_(21120958_?)del",
+     "accession": "VCV003242770",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3242770/"
+    },
+    {
+     "title": "NC_000018.9:g.(?_21119346)_(21126312_?)del",
+     "accession": "VCV003242769",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3242769/"
+    }
+   ],
+   "other_or_unannotated": [
+    {
+     "title": "Multiple alleles",
+     "accession": "VCV004820056",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4820056/"
+    },
+    {
+     "title": "NC_000018.10:g.23543572_23543573insTTTTTTTTTTTTTTTTTTTTNNNNNNNNNNCCACCACCAGTGTTATTTGATTTATGGAATTTTGAAACCTCTTCGGGGCCCAAAGTGCTGGGATTACAGGCGTGAGCCACCGCGCCCGGCCACGTTCATCTCTCTT",
+     "accession": "VCV002707190",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2707190/"
+    },
+    {
+     "title": "NM_000271.4(NPC1):c.2134_2135del",
+     "accession": "VCV001705763",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1705763/"
+    },
+    {
+     "title": "NM_000271.4(NPC1):c.3249_3250del",
+     "accession": "VCV001705786",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1705786/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000271.5(NPC1):c.2279_2281del (p.Phe760del)",
+     "accession": "VCV002581553",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2581553/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.2746_2748del (p.Asn916del)",
+     "accession": "VCV004081752",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4081752/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.3154_3156del (p.Ile1052del)",
+     "accession": "VCV001705784",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1705784/"
+    },
+    {
+     "title": "NM_000271.5(NPC1):c.-5_16del (p.Met1_Leu6del)",
+     "accession": "VCV004713657",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4713657/"
+    }
+   ],
+   "cnv_multigene": [
+    {
+     "title": "GRCh38/hg38 18p11.32-q23(chr18:148963-80252149)x3",
+     "accession": "VCV000160810",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/160810/"
+    },
+    {
+     "title": "GRCh37/hg19 18p11.32-q23(chr18:136226-78014123)x3",
+     "accession": "VCV001526597",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1526597/"
+    },
+    {
+     "title": "GRCh37/hg19 18p11.32-q23(chr18:163323-78005236)x3",
+     "accession": "VCV000253424",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253424/"
+    },
+    {
+     "title": "GRCh37/hg19 18q11.1-23(chr18:18548019-77954165)x3",
+     "accession": "VCV000253620",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253620/"
+    }
+   ],
+   "synonymous": [
+    {
+     "title": "NM_000271.5(NPC1):c.[2727C>T;2793C>T]",
+     "accession": "VCV000867233",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/867233/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=NPC1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "SMPD1": {
+  "query": "SMPD1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 401,
+  "n_docs": 401,
+  "n_classified_PLP": 401,
+  "by_consequence": {
+   "missense": 143,
+   "frameshift": 137,
+   "nonsense": 61,
+   "cnv_multigene": 26,
+   "splice": 24,
+   "inframe_indel": 4,
+   "intronic_or_splice_region": 2,
+   "other_or_unannotated": 2,
+   "intragenic_deletion_or_duplication": 1,
+   "synonymous": 1
+  },
+  "examples": {
+   "cnv_multigene": [
+    {
+     "title": "NM_000543.5(SMPD1):c.39del (p.Arg14fs)",
+     "accession": "VCV001460100",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1460100/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.43del (p.Ser15fs)",
+     "accession": "VCV001386053",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1386053/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.56del (p.Gln19fs)",
+     "accession": "VCV000558404",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/558404/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.7del (p.Arg3fs)",
+     "accession": "VCV000553962",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/553962/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000543.5(SMPD1):c.106dup (p.Val36fs)",
+     "accession": "VCV000813473",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/813473/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.107_116delinsCGC (p.Val36fs)",
+     "accession": "VCV000813474",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/813474/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.10_11insTTGTGATGCT (p.Tyr4fs)",
+     "accession": "VCV002679041",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2679041/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1101del (p.Phe368fs)",
+     "accession": "VCV000992699",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/992699/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000543.5(SMPD1):c.1025G>A (p.Trp342Ter)",
+     "accession": "VCV000813479",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/813479/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1054G>T (p.Glu352Ter)",
+     "accession": "VCV000650777",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/650777/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1122C>G (p.Tyr374Ter)",
+     "accession": "VCV000857473",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/857473/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1252C>T (p.Arg418Ter)",
+     "accession": "VCV000813480",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/813480/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000543.5(SMPD1):c.1026G>C (p.Trp342Cys)",
+     "accession": "VCV000550557",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/550557/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1088T>G (p.Leu363Arg)",
+     "accession": "VCV001173970",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1173970/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1117C>T (p.Pro373Ser)",
+     "accession": "VCV000496822",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/496822/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1141T>C (p.Ser381Pro)",
+     "accession": "VCV002136988",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2136988/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000543.5(SMPD1):c.1091+1G>A",
+     "accession": "VCV000992698",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/992698/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1092-1G>C",
+     "accession": "VCV000093312",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/93312/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1263+1G>A",
+     "accession": "VCV001484329",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1484329/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1264-1G>A",
+     "accession": "VCV000379505",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/379505/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000543.5(SMPD1):c.1826GCC[1] (p.Arg610del)",
+     "accession": "VCV000198093",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/198093/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.734_739del (p.Tyr245_Gly247delinsCys)",
+     "accession": "VCV003248561",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3248561/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.894_902del (p.Thr300_Thr302del)",
+     "accession": "VCV000556649",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/556649/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.938_939delinsTGGTGGGCCAGCATGGT (p.Pro313delinsLeuValGlyGlnHisGly)",
+     "accession": "VCV001173987",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1173987/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000543.5(SMPD1):c.1341-21_1341-18del",
+     "accession": "VCV002679039",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2679039/"
+    },
+    {
+     "title": "NM_000543.5(SMPD1):c.1486+5G>A",
+     "accession": "VCV001013298",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1013298/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000011.9:g.(?_6404342)_(6413015_?)del",
+     "accession": "VCV002423273",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2423273/"
+    }
+   ],
+   "synonymous": [
+    {
+     "title": "NM_000543.5(SMPD1):c.1167T>G (p.Arg389=)",
+     "accession": "VCV001173974",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1173974/"
+    }
+   ],
+   "other_or_unannotated": [
+    {
+     "title": "NM_000543.5(SMPD1):c.911T>C (p.Leu304Pro)",
+     "accession": "VCV000002989",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2989/"
+    },
+    {
+     "title": "NM_000543.4:c.777_778ins8",
+     "accession": "VCV000371528",
+     "classification": "Likely pathogenic",
+     "review_status": "no assertion criteria provided",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/371528/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=SMPD1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "IDUA": {
+  "query": "IDUA[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 586,
+  "n_docs": 586,
+  "n_classified_PLP": 586,
+  "by_consequence": {
+   "cnv_multigene": 183,
+   "frameshift": 111,
+   "missense": 109,
+   "nonsense": 79,
+   "splice": 75,
+   "intronic_or_splice_region": 10,
+   "inframe_indel": 9,
+   "intragenic_deletion_or_duplication": 6,
+   "stop_lost": 4
+  },
+  "examples": {
+   "frameshift": [
+    {
+     "title": "NM_000203.5(IDUA):c.1026del (p.Tyr343fs)",
+     "accession": "VCV003544354",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3544354/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1082del (p.Ala361fs)",
+     "accession": "VCV003775045",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3775045/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1146dup (p.Arg383fs)",
+     "accession": "VCV004871855",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4871855/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1163del (p.Thr388fs)",
+     "accession": "VCV000828094",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/828094/"
+    }
+   ],
+   "cnv_multigene": [
+    {
+     "title": "NM_000203.5(IDUA):c.164dup (p.Leu56fs)",
+     "accession": "VCV000855487",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/855487/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.46_57del (p.Ser16_Ala19del)",
+     "accession": "VCV000092643",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/92643/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.65del (p.Pro22fs)",
+     "accession": "VCV000929238",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/929238/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.164del (p.Pro55fs)",
+     "accession": "VCV000167189",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/167189/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000203.5(IDUA):c.1029C>A (p.Tyr343Ter)",
+     "accession": "VCV000222997",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/222997/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1029C>G (p.Tyr343Ter)",
+     "accession": "VCV000550474",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/550474/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1198C>T (p.Gln400Ter)",
+     "accession": "VCV001683229",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1683229/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1205G>A (p.Trp402Ter)",
+     "accession": "VCV000011908",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/11908/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000203.5(IDUA):c.1037T>G (p.Leu346Arg)",
+     "accession": "VCV000011927",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/11927/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1044C>A (p.Asn348Lys)",
+     "accession": "VCV004817914",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4817914/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1045G>C (p.Asp349His)",
+     "accession": "VCV002585078",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2585078/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1046A>G (p.Asp349Gly)",
+     "accession": "VCV000950889",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/950889/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000203.5(IDUA):c.1190-1G>A",
+     "accession": "VCV001204494",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1204494/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1402+1G>A",
+     "accession": "VCV000555490",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/555490/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1402+1G>T",
+     "accession": "VCV001323099",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1323099/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1402+2T>G",
+     "accession": "VCV000553131",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/553131/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000203.5(IDUA):c.1190-10C>A",
+     "accession": "VCV000950888",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/950888/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.141GAG[1] (p.Arg48del)",
+     "accession": "VCV001518010",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1518010/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1650+5G>A",
+     "accession": "VCV000092634",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/92634/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1727+4C>T",
+     "accession": "VCV000554593",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/554593/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000004.11:g.(?_994390)_(998355_?)del",
+     "accession": "VCV001454674",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1454674/"
+    },
+    {
+     "title": "NC_000004.11:g.(?_995319)_(996126_?)del",
+     "accession": "VCV003246583",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3246583/"
+    },
+    {
+     "title": "NC_000004.11:g.(?_996510)_(998355_?)del",
+     "accession": "VCV001070716",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1070716/"
+    },
+    {
+     "title": "NC_000004.11:g.(?_997352)_(998539_?)del",
+     "accession": "VCV003246582",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3246582/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000203.5(IDUA):c.1045_1047del (p.Asp349del)",
+     "accession": "VCV000557885",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/557885/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1073_1093del (p.His358_Thr364del)",
+     "accession": "VCV000557260",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/557260/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1249_1275del (p.Thr417_His425del)",
+     "accession": "VCV000556156",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/556156/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.886_894dup (p.Tyr296_Asp298dup)",
+     "accession": "VCV000558316",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/558316/"
+    }
+   ],
+   "stop_lost": [
+    {
+     "title": "NM_000203.4(IDUA):c.1960T>G (p.Ter654Gly)",
+     "accession": "VCV000011920",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/11920/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1960T>C (p.Ter654Arg)",
+     "accession": "VCV000960079",
+     "classification": "Pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/960079/"
+    },
+    {
+     "title": "NM_000203.5(IDUA):c.1962A>T (p.Ter654Cys)",
+     "accession": "VCV000242721",
+     "classification": "Likely pathogenic",
+     "review_status": "reviewed by expert panel",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/242721/"
+    },
+    {
+     "title": "NM_000203.3(IDUA):c.[1225G>C;1962A>T]",
+     "accession": "VCV000011911",
+     "classification": "Pathogenic",
+     "review_status": "no assertion criteria provided",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/11911/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=IDUA%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "IDS": {
+  "query": "IDS[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 1006,
+  "n_docs": 806,
+  "n_classified_PLP": 806,
+  "by_consequence": {
+   "missense": 271,
+   "cnv_multigene": 197,
+   "frameshift": 142,
+   "nonsense": 99,
+   "splice": 60,
+   "inframe_indel": 17,
+   "intragenic_deletion_or_duplication": 9,
+   "intronic_or_splice_region": 7,
+   "synonymous": 4
+  },
+  "examples": {
+   "frameshift": [
+    {
+     "title": "NM_000202.8(IDS):c.1216_1217del (p.Leu406fs)",
+     "accession": "VCV001360889",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1360889/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1221del (p.Thr409fs)",
+     "accession": "VCV000988695",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/988695/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1269del (p.Val424fs)",
+     "accession": "VCV001723317",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1723317/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1269dup (p.Val424fs)",
+     "accession": "VCV003256006",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3256006/"
+    }
+   ],
+   "cnv_multigene": [
+    {
+     "title": "NM_000202.8(IDS):c.1053del (p.Phe351fs)",
+     "accession": "VCV003255955",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255955/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.474del (p.His159fs)",
+     "accession": "VCV000997037",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/997037/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.57del (p.Val20fs)",
+     "accession": "VCV000997092",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/997092/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.596_599del (p.Lys199fs)",
+     "accession": "VCV000968377",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/968377/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000202.8(IDS):c.1006+1G>A",
+     "accession": "VCV000997024",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/997024/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1006+1G>C",
+     "accession": "VCV002099265",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2099265/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1007-1G>A",
+     "accession": "VCV002737384",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2737384/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1007-2A>C",
+     "accession": "VCV001205723",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1205723/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000202.8(IDS):c.1034G>A (p.Trp345Ter)",
+     "accession": "VCV003255934",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255934/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1044C>G (p.Tyr348Ter)",
+     "accession": "VCV000633270",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/633270/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1106C>A (p.Ser369Ter)",
+     "accession": "VCV000569306",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/569306/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1123G>T (p.Glu375Ter)",
+     "accession": "VCV001455709",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1455709/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000023.10:g.(?_148564267)_(148586894_?)del",
+     "accession": "VCV000660140",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/660140/"
+    },
+    {
+     "title": "NC_000023.10:g.(?_148564277)_(148564769_?)del",
+     "accession": "VCV002422578",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2422578/"
+    },
+    {
+     "title": "NC_000023.10:g.(?_148564277)_(148586667_?)del",
+     "accession": "VCV002422576",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2422576/"
+    },
+    {
+     "title": "NC_000023.10:g.(?_148571835)_(148582578_?)del",
+     "accession": "VCV001068596",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1068596/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000202.8(IDS):c.1001A>G (p.Asp334Gly)",
+     "accession": "VCV000852812",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/852812/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1004A>G (p.His335Arg)",
+     "accession": "VCV002138748",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2138748/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1007G>A (p.Gly336Glu)",
+     "accession": "VCV002737383",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2737383/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1018G>C (p.Gly340Arg)",
+     "accession": "VCV001695321",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1695321/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000202.8(IDS):c.117TCT[1] (p.Leu41del)",
+     "accession": "VCV000988666",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/988666/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.285_287del (p.Arg96del)",
+     "accession": "VCV002440838",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2440838/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1181_1192del (p.Gly394_Met398delinsVal)",
+     "accession": "VCV003255978",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255978/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1197_1250dup (p.Leu416_Gln417insHisLeuValGluLeuValSerLeuPheProThrLeuAlaGlyLeuAlaGlyLeu)",
+     "accession": "VCV003255986",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255986/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000202.8(IDS):c.241-3C>G",
+     "accession": "VCV001324564",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1324564/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.418+3A>T",
+     "accession": "VCV003255712",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255712/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1006+5G>C",
+     "accession": "VCV003255906",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255906/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.104-3T>G",
+     "accession": "VCV003255746",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255746/"
+    }
+   ],
+   "synonymous": [
+    {
+     "title": "NM_000202.8(IDS):c.1122C>T (p.Gly374=)",
+     "accession": "VCV000010491",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/10491/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.708G>A (p.Lys236=)",
+     "accession": "VCV000638081",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/638081/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.1092T>A (p.Pro364=)",
+     "accession": "VCV003255963",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255963/"
+    },
+    {
+     "title": "NM_000202.8(IDS):c.879G>A (p.Gln293=)",
+     "accession": "VCV003255866",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3255866/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=IDS%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "CLN3": {
+  "query": "CLN3[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 328,
+  "n_docs": 328,
+  "n_classified_PLP": 328,
+  "by_consequence": {
+   "frameshift": 79,
+   "splice": 68,
+   "cnv_multigene": 65,
+   "nonsense": 44,
+   "intragenic_deletion_or_duplication": 33,
+   "missense": 26,
+   "intronic_or_splice_region": 6,
+   "cnv_single_gene": 6,
+   "utr": 1
+  },
+  "examples": {
+   "frameshift": [
+    {
+     "title": "NM_001042432.2(CLN3):c.1075del (p.Leu359fs)",
+     "accession": "VCV000975016",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/975016/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1115_1118dup (p.Val374fs)",
+     "accession": "VCV002012105",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2012105/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.18del (p.Ser7fs)",
+     "accession": "VCV002001596",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2001596/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.240del (p.Pro81fs)",
+     "accession": "VCV000265379",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/265379/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_001042432.2(CLN3):c.1056+1G>A",
+     "accession": "VCV002709003",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2709003/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1056+1G>T",
+     "accession": "VCV001466148",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1466148/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1197+1G>A",
+     "accession": "VCV001908122",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1908122/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1197+2T>A",
+     "accession": "VCV000813032",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/813032/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_001042432.2(CLN3):c.1000C>T (p.Arg334Cys)",
+     "accession": "VCV000056243",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/56243/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1001G>A (p.Arg334His)",
+     "accession": "VCV000056244",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/56244/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1213C>T (p.Arg405Trp)",
+     "accession": "VCV000418137",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/418137/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1247A>G (p.Asp416Gly)",
+     "accession": "VCV000056252",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/56252/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_001042432.2(CLN3):c.1056+3A>C",
+     "accession": "VCV000056247",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/56247/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.461-3C>G",
+     "accession": "VCV000422288",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/422288/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.838-3C>G",
+     "accession": "VCV002627624",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2627624/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.906+5G>A",
+     "accession": "VCV000056291",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/56291/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_001042432.2(CLN3):c.1054C>T (p.Gln352Ter)",
+     "accession": "VCV000056246",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/56246/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1059C>A (p.Cys353Ter)",
+     "accession": "VCV000370675",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/370675/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.105G>A (p.Trp35Ter)",
+     "accession": "VCV000056249",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/56249/"
+    },
+    {
+     "title": "NM_001042432.2(CLN3):c.1195G>T (p.Glu399Ter)",
+     "accession": "VCV000056250",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/56250/"
+    }
+   ],
+   "cnv_multigene": [
+    {
+     "title": "GRCh37/hg19 16p11.2(chr16:28353878-29478115)x3",
+     "accession": "VCV001330173",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1330173/"
+    },
+    {
+     "title": "GRCh37/hg19 16p11.2(chr16:28371467-29379768)x1",
+     "accession": "VCV003063422",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3063422/"
+    },
+    {
+     "title": "GRCh37/hg19 16p11.2(chr16:28466731-30321320)x1",
+     "accession": "VCV001807828",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1807828/"
+    },
+    {
+     "title": "GRCh37/hg19 16p11.2(chr16:28483659-29341550)x1",
+     "accession": "VCV001710520",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1710520/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000016.10:g.(28485964_28486930)del",
+     "accession": "VCV002431547",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2431547/"
+    },
+    {
+     "title": "NC_000016.10:g.(?_28475343)_(28484138_?)del",
+     "accession": "VCV000833507",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/833507/"
+    },
+    {
+     "title": "NC_000016.10:g.(?_28475343)_(28486650_?)del",
+     "accession": "VCV000833481",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/833481/"
+    },
+    {
+     "title": "NC_000016.10:g.(?_28477496)_(28491779_?)del",
+     "accession": "VCV000832292",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/832292/"
+    }
+   ],
+   "utr": [
+    {
+     "title": "NM_001042432.2(CLN3):c.181_183del (p.Asp61del)",
+     "accession": "VCV003580042",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3580042/"
+    }
+   ],
+   "cnv_single_gene": [
+    {
+     "title": "GRCh37/hg19 16p11.2(chr16:28497668-28497971)",
+     "accession": "VCV000813302",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/813302/"
+    },
+    {
+     "title": "GRCh37/hg19 16p11.2(chr16:28497668-28497971)x1",
+     "accession": "VCV000872058",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/872058/"
+    },
+    {
+     "title": "GRCh37/hg19 16p11.2(chr16:28497795-28498122)x1",
+     "accession": "VCV000253522",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253522/"
+    },
+    {
+     "title": "GRCh37/hg19 16p11.2(chr16:28497795-28498182)x1",
+     "accession": "VCV000253417",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253417/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=CLN3%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "TPP1": {
+  "query": "TPP1[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 243,
+  "n_docs": 243,
+  "n_classified_PLP": 243,
+  "by_consequence": {
+   "frameshift": 76,
+   "missense": 49,
+   "nonsense": 47,
+   "splice": 41,
+   "cnv_multigene": 18,
+   "intronic_or_splice_region": 4,
+   "inframe_indel": 4,
+   "intragenic_deletion_or_duplication": 2,
+   "synonymous": 1,
+   "cnv_single_gene": 1
+  },
+  "examples": {
+   "cnv_multigene": [
+    {
+     "title": "GRCh37/hg19 11p15.5-15.3(chr11:193146-12643136)",
+     "accession": "VCV000625559",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/625559/"
+    },
+    {
+     "title": "GRCh37/hg19 11p15.5-15.4(chr11:230615-8821443)x3",
+     "accession": "VCV002503522",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2503522/"
+    },
+    {
+     "title": "GRCh37/hg19 11p15.5-15.4(chr11:230616-8250724)x3",
+     "accession": "VCV001807629",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1807629/"
+    },
+    {
+     "title": "GRCh38/hg38 11p15.4(chr11:4793595-7562692)x1",
+     "accession": "VCV004974749",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4974749/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000391.4(TPP1):c.1087delinsTT (p.Ala363fs)",
+     "accession": "VCV000969357",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/969357/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1397_1408delinsGACACCGA (p.Val466fs)",
+     "accession": "VCV000967557",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/967557/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.146_155del (p.Leu49fs)",
+     "accession": "VCV002052460",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2052460/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1471del (p.His491fs)",
+     "accession": "VCV001449721",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1449721/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000391.4(TPP1):c.1075+2T>C",
+     "accession": "VCV000965399",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/965399/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1076-2A>G",
+     "accession": "VCV000552401",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/552401/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1076-2A>T",
+     "accession": "VCV000555109",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/555109/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1146-1G>A",
+     "accession": "VCV000429925",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/429925/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000391.4(TPP1):c.1012C>G (p.Gln338Glu)",
+     "accession": "VCV001805012",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1805012/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1015C>T (p.Arg339Trp)",
+     "accession": "VCV000207586",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/207586/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1027G>A (p.Glu343Lys)",
+     "accession": "VCV000068734",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/68734/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1048C>T (p.Arg350Trp)",
+     "accession": "VCV000552886",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/552886/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000391.4(TPP1):c.1259C>A (p.Ser420Ter)",
+     "accession": "VCV000370212",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/370212/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.130G>T (p.Glu44Ter)",
+     "accession": "VCV001701805",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1701805/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1379G>A (p.Trp460Ter)",
+     "accession": "VCV000189179",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/189179/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1525C>T (p.Gln509Ter)",
+     "accession": "VCV000551316",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/551316/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000391.4(TPP1):c.380+5G>A",
+     "accession": "VCV000599035",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/599035/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.89+5G>C",
+     "accession": "VCV000207599",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/207599/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1551+5G>C",
+     "accession": "VCV003337684",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3337684/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.1146-199G>A",
+     "accession": "VCV002691784",
+     "classification": "Pathogenic",
+     "review_status": "no assertion criteria provided",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2691784/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NM_000391.3(TPP1):c.90del",
+     "accession": "VCV002089504",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2089504/"
+    },
+    {
+     "title": "NC_000011.10:g.6615330del",
+     "accession": "VCV001416477",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1416477/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000391.4(TPP1):c.1333_1344dup (p.Ser445_Ala448dup)",
+     "accession": "VCV000488626",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/488626/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.175_195del (p.Glu59_Val65del)",
+     "accession": "VCV002028961",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2028961/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.177_194del (p.Arg60_Val65del)",
+     "accession": "VCV001416739",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1416739/"
+    },
+    {
+     "title": "NM_000391.4(TPP1):c.987_989del (p.Glu329del)",
+     "accession": "VCV001065450",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1065450/"
+    }
+   ],
+   "synonymous": [
+    {
+     "title": "NM_000391.4(TPP1):c.225A>G (p.Gln75=)",
+     "accession": "VCV000553222",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/553222/"
+    }
+   ],
+   "cnv_single_gene": [
+    {
+     "title": "GRCh37/hg19 11p15.4(chr11:6639647-6641899)x1",
+     "accession": "VCV000253548",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253548/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=TPP1%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "ARSA": {
+  "query": "ARSA[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 530,
+  "n_docs": 530,
+  "n_classified_PLP": 530,
+  "by_consequence": {
+   "missense": 191,
+   "cnv_multigene": 152,
+   "frameshift": 94,
+   "splice": 35,
+   "nonsense": 35,
+   "intragenic_deletion_or_duplication": 13,
+   "inframe_indel": 6,
+   "intronic_or_splice_region": 2,
+   "other_or_unannotated": 1,
+   "synonymous": 1
+  },
+  "examples": {
+   "cnv_multigene": [
+    {
+     "title": "GRCh38/hg38 22q13.31-13.33(chr22:47705262-50739836)x1",
+     "accession": "VCV000057193",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/57193/"
+    },
+    {
+     "title": "GRCh37/hg19 22q11.1-13.33(chr22:16054691-51237518)x3",
+     "accession": "VCV000253509",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253509/"
+    },
+    {
+     "title": "GRCh37/hg19 22q12.3-13.33(chr22:35728929-51220961)x3",
+     "accession": "VCV000253617",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253617/"
+    },
+    {
+     "title": "GRCh37/hg19 22q13.1-13.33(chr22:40425714-51220961)x3",
+     "accession": "VCV000253559",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/253559/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000487.6(ARSA):c.1010A>T (p.Asp337Val)",
+     "accession": "VCV000003080",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3080/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.109G>C (p.Asp37His)",
+     "accession": "VCV001524840",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1524840/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1114C>T (p.Arg372Trp)",
+     "accession": "VCV000003081",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3081/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1115G>A (p.Arg372Gln)",
+     "accession": "VCV000003082",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3082/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000487.6(ARSA):c.109_116del (p.Asp37fs)",
+     "accession": "VCV000555003",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/555003/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1129_1136dup (p.Tyr381fs)",
+     "accession": "VCV001675895",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1675895/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1282_1283dup (p.Leu429fs)",
+     "accession": "VCV001705732",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1705732/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1337del (p.Gly446fs)",
+     "accession": "VCV000493348",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/493348/"
+    }
+   ],
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000022.10:g.(?_51061181)_(51066581_?)del",
+     "accession": "VCV003366423",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3366423/"
+    },
+    {
+     "title": "NC_000022.10:g.(?_51062002)_(51064623_?)del",
+     "accession": "VCV003247071",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3247071/"
+    },
+    {
+     "title": "NC_000022.10:g.(?_51062794)_(51064004_?)del",
+     "accession": "VCV003247060",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3247060/"
+    },
+    {
+     "title": "NC_000022.10:g.(?_51063563)_(51066217_?)del",
+     "accession": "VCV001072391",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1072391/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000487.6(ARSA):c.1107+1G>A",
+     "accession": "VCV001453841",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1453841/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1107+1G>T",
+     "accession": "VCV001070652",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1070652/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1108-2A>G",
+     "accession": "VCV000093115",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/93115/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1210+1G>A",
+     "accession": "VCV000003058",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3058/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000487.6(ARSA):c.1264del (p.Ser421_Leu422insTer)",
+     "accession": "VCV000424522",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/424522/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1366C>T (p.Gln456Ter)",
+     "accession": "VCV000800502",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/800502/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1399C>T (p.Gln467Ter)",
+     "accession": "VCV001999902",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1999902/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1447G>T (p.Glu483Ter)",
+     "accession": "VCV000941799",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/941799/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000487.6(ARSA):c.1108-3C>G",
+     "accession": "VCV000552329",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/552329/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.1108-10_1108-9del",
+     "accession": "VCV004277602",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4277602/"
+    }
+   ],
+   "other_or_unannotated": [
+    {
+     "title": "NM_000487.6(ARSA):c.1124TCT[2] (p.Phe377del)",
+     "accession": "VCV003588130",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3588130/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000487.6(ARSA):c.1223_1231del (p.Ser408_Thr410del)",
+     "accession": "VCV000189170",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/189170/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.110_111insACTGGGCTGCTATGGGCA (p.Asp37delinsGluLeuGlyCysTyrGlyHis)",
+     "accession": "VCV002060302",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2060302/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.393_425del (p.Pro132_Gly142del)",
+     "accession": "VCV001476243",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1476243/"
+    },
+    {
+     "title": "NM_000487.6(ARSA):c.398_409del (p.Glu133_Leu137delinsVal)",
+     "accession": "VCV000557550",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/557550/"
+    }
+   ],
+   "synonymous": [
+    {
+     "title": "NM_000487.6(ARSA):c.1200C>T (p.Phe400=)",
+     "accession": "VCV000973789",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/973789/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=ARSA%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ },
+ "GALC": {
+  "query": "GALC[gene] AND (clinsig_pathogenic[prop] OR clinsig_likely_pathogenic[prop])",
+  "esearch_count": 436,
+  "n_docs": 436,
+  "n_classified_PLP": 436,
+  "by_consequence": {
+   "frameshift": 104,
+   "missense": 100,
+   "nonsense": 85,
+   "splice": 59,
+   "intragenic_deletion_or_duplication": 30,
+   "cnv_multigene": 28,
+   "cnv_single_gene": 20,
+   "intronic_or_splice_region": 5,
+   "inframe_indel": 3,
+   "stop_lost": 1,
+   "synonymous": 1
+  },
+  "examples": {
+   "intragenic_deletion_or_duplication": [
+    {
+     "title": "NC_000014.8:g.(88406326_88407738)_(88414223_88416188)del",
+     "accession": "VCV004537204",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4537204/"
+    },
+    {
+     "title": "NC_000014.8:g.(88407903_88411896)_(88416276_88417002)del",
+     "accession": "VCV003769093",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3769093/"
+    },
+    {
+     "title": "NC_000014.8:g.(?_88391503)_88423172del",
+     "accession": "VCV001073951",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1073951/"
+    },
+    {
+     "title": "NC_000014.8:g.(?_88391504)_88423173del",
+     "accession": "VCV001070140",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1070140/"
+    }
+   ],
+   "splice": [
+    {
+     "title": "NM_000153.4(GALC):c.1033+1G>A",
+     "accession": "VCV001067446",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1067446/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1034-1G>C",
+     "accession": "VCV002831456",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2831456/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1034-2A>G",
+     "accession": "VCV002137613",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2137613/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1161+2T>A",
+     "accession": "VCV002865236",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2865236/"
+    }
+   ],
+   "cnv_multigene": [
+    {
+     "title": "NM_000153.4(GALC):c.155del (p.Gly52fs)",
+     "accession": "VCV000418220",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/418220/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.176del (p.Gly59fs)",
+     "accession": "VCV001070767",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1070767/"
+    },
+    {
+     "title": "GRCh37/hg19 14q23.1-32.33(chr14:58894502-107227240)x3",
+     "accession": "VCV002684728",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2684728/"
+    },
+    {
+     "title": "GRCh37/hg19 14q24.3-32.33(chr14:75754230-107287505)x3",
+     "accession": "VCV004884754",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4884754/"
+    }
+   ],
+   "cnv_single_gene": [
+    {
+     "title": "GRCh37/hg19 14q31.3(chr14:88389539-88422569)x1",
+     "accession": "VCV004851177",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4851177/"
+    },
+    {
+     "title": "GRCh37/hg19 14q31.3(chr14:88391502-88423172)",
+     "accession": "VCV000830312",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/830312/"
+    },
+    {
+     "title": "GRCh37/hg19 14q31.3(chr14:88400251-88422569)x1",
+     "accession": "VCV003063314",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3063314/"
+    },
+    {
+     "title": "GRCh37/hg19 14q31.3(chr14:88400252-88422569)x1",
+     "accession": "VCV004075940",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4075940/"
+    }
+   ],
+   "nonsense": [
+    {
+     "title": "NM_000153.4(GALC):c.1127_1131delinsACTGAT (p.Gly376_Leu377delinsAspTer)",
+     "accession": "VCV003576845",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3576845/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1153G>T (p.Glu385Ter)",
+     "accession": "VCV000003818",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3818/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1270C>T (p.Gln424Ter)",
+     "accession": "VCV001425129",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1425129/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.129C>G (p.Tyr43Ter)",
+     "accession": "VCV000370855",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/370855/"
+    }
+   ],
+   "missense": [
+    {
+     "title": "NM_000153.4(GALC):c.1004A>G (p.Tyr335Cys)",
+     "accession": "VCV000651170",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/651170/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1186C>T (p.Arg396Trp)",
+     "accession": "VCV000456712",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/456712/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1468T>A (p.Tyr490Asn)",
+     "accession": "VCV000431995",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/431995/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1543G>A (p.Glu515Lys)",
+     "accession": "VCV000194322",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/194322/"
+    }
+   ],
+   "frameshift": [
+    {
+     "title": "NM_000153.4(GALC):c.1012del (p.Glu338fs)",
+     "accession": "VCV000370416",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/370416/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1021del (p.Val341fs)",
+     "accession": "VCV000371581",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/371581/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1075_1084del (p.Lys359fs)",
+     "accession": "VCV000449484",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/449484/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1083dup (p.Gly362fs)",
+     "accession": "VCV000988317",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/988317/"
+    }
+   ],
+   "intronic_or_splice_region": [
+    {
+     "title": "NM_000153.4(GALC):c.621+5G>A",
+     "accession": "VCV000550678",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/550678/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.1251+5G>C",
+     "accession": "VCV002194917",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2194917/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.264+3A>C",
+     "accession": "VCV001472649",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1472649/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.621+772G>C",
+     "accession": "VCV004526655",
+     "classification": "Likely pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4526655/"
+    }
+   ],
+   "inframe_indel": [
+    {
+     "title": "NM_000153.4(GALC):c.411_413del (p.Lys139del)",
+     "accession": "VCV000555281",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/555281/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.683_694delinsCTC (p.Asn228_Ser232delinsThrPro)",
+     "accession": "VCV001331457",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1331457/"
+    },
+    {
+     "title": "NM_000153.4(GALC):c.940_1005del (p.Tyr314_Tyr335del)",
+     "accession": "VCV002729504",
+     "classification": "Pathogenic",
+     "review_status": "criteria provided, single submitter",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2729504/"
+    }
+   ],
+   "stop_lost": [
+    {
+     "title": "NM_000153.4(GALC):c.2056T>C (p.Ter686Gln)",
+     "accession": "VCV001066870",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1066870/"
+    }
+   ],
+   "synonymous": [
+    {
+     "title": "NM_000153.4(GALC):c.195G>C (p.Gly65=)",
+     "accession": "VCV000280959",
+     "classification": "Pathogenic/Likely pathogenic",
+     "review_status": "criteria provided, multiple submitters, no conflicts",
+     "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/280959/"
+    }
+   ]
+  },
+  "clinvar_search_url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=GALC%5Bgene%5D+AND+(clinsig_pathogenic%5Bprop%5D+OR+clinsig_likely_pathogenic%5Bprop%5D)"
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "pmid": "32362337",
+ "entries": {
+  "26b172acf2d93516": {
+   "mention": "synchronizes neurotransmitter release with Ca2+ influx during action potential firing",
+   "type": "mechanism",
+   "candidates": [
+    "mech:ca-triggered-exocytosis",
+    "mech:synaptic-vesicle-fusion",
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:synaptic-vesicle-priming",
+    "mech:haploinsufficiency",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:snare-complex-disassembly"
+   ],
+   "node_id": "mech:ca-triggered-exocytosis",
+   "match": "instance",
+   "justification": "Describes synaptotagmin-1 coupling neurotransmitter exocytosis to action-potential-induced Ca2+ influx.",
+   "raw_node_id": "mech:ca-triggered-exocytosis",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:51:01.514Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:51:01.514Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_01909de3e357fde7016ac14e9136bc87d291bfd276febcabbe": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 792,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 792,
+       "output_tokens": 0
+      },
+      "msg_01909de3e357fde7016ac14e9303e887d2a161fa963ee9d6ed": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 2,
+         "output_tokens": 66
+        }
+       ],
+       "input_tokens": 2,
+       "output_tokens": 66
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 1136,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 66,
+    "output_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "total_tokens": 1202
+   },
+   "request_payload": {
+    "title": "Molecular Basis for Synaptotagmin-1-Associated Neurodevelopmental Disorder.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "synchronizes neurotransmitter release with Ca2+ influx during action potential firing",
+      "declared_type": "mechanism",
+      "sentence": "At neuronal synapses, synaptotagmin-1 (syt1) acts as a Ca2+ sensor that synchronizes neurotransmitter release with Ca2+ influx during action potential firing.",
+      "candidates": [
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"mech:ca-triggered-exocytosis\",\"match\":\"instance\",\"justification\":\"Describes synaptotagmin-1 coupling neurotransmitter exocytosis to action-potential-induced Ca2+ influx.\"}]}"
+  }
+ ]
+}

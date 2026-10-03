@@ -1,0 +1,4975 @@
+{
+ "status": "draft rule set; awaiting expert review",
+ "not_advice": "This is a transparent, rule-based screen of which therapeutic approach could fit which mechanism, written for a biotech scout and for patient-group leaders. It is NOT medical advice, NOT a recommendation for any individual, and NOT a claim that any approach will work. 'Good fit' means only that the published mechanism matches what the approach does. Treatment decisions belong to a patient's own clinicians.",
+ "meta": {
+  "generated": "2026-10-03",
+  "graph": "2026-10-03T19:12:52+00:00",
+  "fit_scale": {
+   "good": "the mechanism matches what the approach does, with at least one citation",
+   "conditional": "possible, but a named condition must be met first (variant class, dose, a missing target element, or counter-evidence)",
+   "poor": "the mechanism points the other way, or a hard constraint blocks it",
+   "not_assessed": "no rule applies; the mechanism profile is too thin"
+  },
+  "aggregation": "the WORST fit voted by any rule that fired, so one blocking rule is never averaged away",
+  "citations": "assessments carry citation_ids into the top-level `citations` map; each entry is a schema Evidence item whose quote was string-matched against the stored source",
+  "inputs": [
+   "data/graph.json driven_by / developed_for / studies edges and gene attrs",
+   "data/derived/variants.json ClinVar variant-class mix per gene",
+   "data/raw/derive/pubmed/<PMID>.json (every quote cut from the stored record)"
+  ],
+  "code": "pipeline/derive/modality.py",
+  "expert_review_checklist": "not yet attached; a rare-disease advisor's checklist may be added later and should record, per (disease, modality): agree/disagree with the fit, the missing condition, and anything the rule table gets backwards."
+ },
+ "citations": {
+  "PMID:42462387#556674": {
+   "source": "PubMed",
+   "ref": "PMID:42462387",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42462387/",
+   "title": "From synaptic dysfunction to targeted intervention: a comprehensive review of STXBP1 encephalopathy and precision therapeutic strategies.",
+   "year": 2026,
+   "quote": "Over 300 pathogenic variants have been identified, predominantly de novo heterozygous, with haploinsufficiency as the principal mechanism.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:41166419#723161": {
+   "source": "PubMed",
+   "ref": "PMID:41166419",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41166419/",
+   "title": "Synaptobrevin-2 disease variants reveal spatial constraints within the presynaptic active zone.",
+   "year": 2025,
+   "quote": "Taken together with the phenotypes of previously reported disease-causing SNARE variants, these findings reveal shared patterns of aberrant neurotransmission across different SNAREs, highlighting the necessity for a functional classification of SNAREopathies to develop therapeutic interventions.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:34378168#922399": {
+   "source": "PubMed",
+   "ref": "PMID:34378168",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34378168/",
+   "title": "Dravet Syndrome: Novel Approaches for the Most Common Genetic Epilepsy.",
+   "year": 2021,
+   "quote": "Several of these treatments may risk the exacerbation of gain-of-function variants and may not be reversible, therefore emphasizing the need for functional testing of new pathogenic variants.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:23340504#144473": {
+   "source": "PubMed",
+   "ref": "PMID:23340504",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23340504/",
+   "title": "Behavioral, neurochemical and morphological changes induced by the overexpression of munc18-1a in brain of mice: relevance to schizophrenia.",
+   "year": 2013,
+   "quote": "A transgenic mouse strain that overexpresses the protein isoform munc18-1a in the brain was characterized.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:41883162#374458": {
+   "source": "PubMed",
+   "ref": "PMID:41883162",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41883162/",
+   "title": "Identification of a therapeutic threshold for AAV-STXBP1 gene therapy in a rodent model of STXBP1 developmental and epileptic encephalopathy.",
+   "year": 2026,
+   "quote": "Currently, there is no clear clinical data or human evidence defining a therapeutic threshold of AAV-mediated STXBP1 expression.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03",
+   "supports": false
+  },
+  "PMID:41883162#284286": {
+   "source": "PubMed",
+   "ref": "PMID:41883162",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41883162/",
+   "title": "Identification of a therapeutic threshold for AAV-STXBP1 gene therapy in a rodent model of STXBP1 developmental and epileptic encephalopathy.",
+   "year": 2026,
+   "quote": "Our AAV-STXBP1 vectors dose dependently rescued disease-associated phenotypes, with ≥44% cortical neuronal transduction needed for phenotypic improvement, setting a potential therapeutic threshold.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:40349107#514460": {
+   "source": "PubMed",
+   "ref": "PMID:40349107",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40349107/",
+   "title": "Neuron-targeted gene therapy rescues multiple phenotypes of STXBP1-related disorders in mice and is well tolerated in nonhuman primates.",
+   "year": 2025,
+   "quote": "Bilateral intracerebroventricular (ICV) injection of these promoter candidates achieved robust neuronal expression of STXBP1 and rescued key behavioral phenotypes in Stxbp1+/- haploinsufficient mice.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:27597756#332442": {
+   "source": "PubMed",
+   "ref": "PMID:27597756",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27597756/",
+   "title": "Munc18-1 is a molecular chaperone for α-synuclein, controlling its self-replicating aggregation.",
+   "year": 2016,
+   "quote": "Here, we used single-molecule analysis, gene-edited cells, and neurons to demonstrate that Munc18-1 EIEE-causing mutants form large polymers that coaggregate wild-type Munc18-1 in vitro and in cells.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:29538625#961942": {
+   "source": "PubMed",
+   "ref": "PMID:29538625",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29538625/",
+   "title": "Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy.",
+   "year": 2018,
+   "quote": "Disease-causing STXBP1 variants supported synaptic transmission to a variable extent on a null background, but had no effect when overexpressed on a heterozygous background.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03",
+   "supports": false
+  },
+  "PMID:38617974#721064": {
+   "source": "PubMed",
+   "ref": "PMID:38617974",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38617974/",
+   "title": "Optimized allele-specific silencing of the dominant-negative COL6A1 G293R substitution causing collagen VI-related dystrophy.",
+   "year": 2024,
+   "quote": "Hence, allele-specific transcript inactivation is a valid therapeutic strategy, although selectively targeting a pathogenic single nucleotide variant is challenging.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:32848094#272300": {
+   "source": "PubMed",
+   "ref": "PMID:32848094",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32848094/",
+   "title": "Antisense oligonucleotides increase Scn1a expression and reduce seizures and SUDEP incidence in a mouse model of Dravet syndrome.",
+   "year": 2020,
+   "quote": "Here, we used Targeted Augmentation of Nuclear Gene Output (TANGO) technology, which modulates naturally occurring, nonproductive splicing events to increase target gene and protein expression and ameliorate disease phenotype in a mouse model.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:40963013#599803": {
+   "source": "PubMed",
+   "ref": "PMID:40963013",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40963013/",
+   "title": "CRISPR activation for SCN2A-related neurodevelopmental disorders.",
+   "year": 2025,
+   "quote": "Here, using SCN2A haploinsufficiency as a proof-of-concept, we show that upregulation of the existing functional gene copy through CRISPR activation (CRISPRa) can rescue neurological-associated phenotypes in Scn2a haploinsufficient mice.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:30545847#280994": {
+   "source": "PubMed",
+   "ref": "PMID:30545847",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30545847/",
+   "title": "CRISPR-mediated activation of a promoter or enhancer rescues obesity caused by haploinsufficiency.",
+   "year": 2019,
+   "quote": "Our results suggest that endogenous gene up-regulation could be a potential strategy to treat altered gene dosage diseases.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:27398791#708706": {
+   "source": "PubMed",
+   "ref": "PMID:27398791",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27398791/",
+   "title": "Translation efficiency of mRNAs is increased by antisense oligonucleotides targeting upstream open reading frames.",
+   "year": 2016,
+   "quote": "Here we used a class of modified ASOs that bind to mRNA sequences in upstream open reading frames (uORFs) to specifically increase the amounts of protein translated from a downstream primary ORF (pORF).",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:39759875#771050": {
+   "source": "PubMed",
+   "ref": "PMID:39759875",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39759875/",
+   "title": "uORF-targeting steric block antisense oligonucleotides do not reproducibly increase RNASEH1 expression.",
+   "year": 2025,
+   "quote": "No upregulation (of endogenous or reporter protein expression) was observed with any of the oligonucleotides tested at doses ranging from 25 to 300 nM.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03",
+   "supports": false
+  },
+  "PMID:31940970#398852": {
+   "source": "PubMed",
+   "ref": "PMID:31940970",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31940970/",
+   "title": "Pharmacological Chaperones: A Therapeutic Approach for Diseases Caused by Destabilizing Missense Mutations.",
+   "year": 2020,
+   "quote": "The hallmark of a pharmacological chaperone is its ability to bind a protein specifically and stabilize it.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:36205620#89067": {
+   "source": "PubMed",
+   "ref": "PMID:36205620",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36205620/",
+   "title": "The use of pharmacological chaperones in rare diseases caused by reduced protein stability.",
+   "year": 2022,
+   "quote": "Decreased protein stability is the most frequent mechanism associated with a congenital pathogenic missense mutation and it implies the destabilization of the folded conformation in favour of unfolded or misfolded states.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:33332765#544384": {
+   "source": "PubMed",
+   "ref": "PMID:33332765",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33332765/",
+   "title": "Targeted stabilization of Munc18-1 function via pharmacological chaperones.",
+   "year": 2021,
+   "quote": "No disease-modifying therapy exists to treat these disorders, and while chemical chaperones have been shown to alleviate neuronal dysfunction caused by missense mutations in Munc18-1, their required high concentrations and potential toxicity necessitate a Munc18-1-targeted therapy.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:35911425#917161": {
+   "source": "PubMed",
+   "ref": "PMID:35911425",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35911425/",
+   "title": "4-Phenylbutyrate restored γ-aminobutyric acid uptake and reduced seizures in SLC6A1 patient variant-bearing cell and mouse models.",
+   "year": 2022,
+   "quote": "Although the mechanisms of action for 4-phenylbutyrate are still unclear, with multiple possibly being involved, it is likely that 4-phenylbutyrate can facilitate the forward trafficking of the wildtype γ-amino butyric acid transporter 1 regardless of rescuing the mutant γ-amino butyric acid transporter 1, thus increasing γ-amino butyric acid uptake.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03",
+   "supports": false
+  },
+  "PMID:30266908#749175": {
+   "source": "PubMed",
+   "ref": "PMID:30266908",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30266908/",
+   "title": "Mechanism-based rescue of Munc18-1 dysfunction in varied encephalopathies by chemical chaperones.",
+   "year": 2018,
+   "quote": "We demonstrate that the three chemical chaperones 4-phenylbutyrate, sorbitol, and trehalose reverse the deficits caused by mutations in Munc18-1 in vitro and in vivo in multiple models, offering a novel strategy for the treatment of varied encephalopathies.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:38242640#961971": {
+   "source": "PubMed",
+   "ref": "PMID:38242640",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38242640/",
+   "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
+   "year": 2024,
+   "quote": "Using biochemical and cell biological readouts on mouse brains, cultured mouse neurons and heterologous cells, we found that the synaptic Munc18-1 interactors Doc2A and Doc2B are unstable in the absence of Munc18-1 and aggregate in the presence of disease-causing Munc18-1 mutants.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:32906212#581063": {
+   "source": "PubMed",
+   "ref": "PMID:32906212",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32906212/",
+   "title": "Overcoming presynaptic effects of VAMP2 mutations with 4-aminopyridine treatment.",
+   "year": 2020,
+   "quote": "The clinical response of the patient to 2 years of off-label aminopyridine treatment includes improved emotional and behavioral regulation by parental report, and objective improvement in standardized cognitive measures.",
+   "kind": "publication",
+   "study_type": "case_report",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:40181518#42053": {
+   "source": "PubMed",
+   "ref": "PMID:40181518",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40181518/",
+   "title": "SNAP25 variant I67N: synaptic phenotypes, drug response and proteome changes in human neurons.",
+   "year": 2025,
+   "quote": "The I67N variant phenotype could be ameliorated by the clinically approved K+-channel blocker 4-aminopyridine.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:40181518#506064": {
+   "source": "PubMed",
+   "ref": "PMID:40181518",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40181518/",
+   "title": "SNAP25 variant I67N: synaptic phenotypes, drug response and proteome changes in human neurons.",
+   "year": 2025,
+   "quote": "These phenotypes were distinct from those of human neurons differentiated from hiPSCs originating from a patient carrying the V48F variant, which displayed an increase in spontaneous release.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:22703551#342004": {
+   "source": "PubMed",
+   "ref": "PMID:22703551",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22703551/",
+   "title": "Clinical overview of the seizure risk of dalfampridine.",
+   "year": 2012,
+   "quote": "Its mechanism of action and narrow therapeutic range suggest the need to evaluate the seizure risk in treated MS patients.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:42041587#895103": {
+   "source": "PubMed",
+   "ref": "PMID:42041587",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42041587/",
+   "title": "Gene Editing Strategies for Neurological and Mental Disorders: Advances in Delivery, Methodology, and Clinical Translation.",
+   "year": 2026,
+   "quote": "The focus is on the benefits of gene editing in the central nervous system, where post-mitotic neurons allow lasting effects after a single treatment.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:40181540#595344": {
+   "source": "PubMed",
+   "ref": "PMID:40181540",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40181540/",
+   "title": "Current trends in gene therapy to treat inherited disorders of the brain.",
+   "year": 2025,
+   "quote": "Additionally, each inherited disorder has its own unique characteristics as to regions and cell types impacted and the temporal dynamics of that impact that are essential for the design of therapeutic design strategies.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:32362337#125790": {
+   "source": "PubMed",
+   "ref": "PMID:32362337",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32362337/",
+   "title": "Molecular Basis for Synaptotagmin-1-Associated Neurodevelopmental Disorder.",
+   "year": 2020,
+   "quote": "Synaptic transmission was impaired in neurons expressing mutant variants, which demonstrated potent, graded dominant-negative effects.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:38321119#154605": {
+   "source": "PubMed",
+   "ref": "PMID:38321119",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38321119/",
+   "title": "A de novo missense mutation in synaptotagmin-1 associated with neurodevelopmental disorder desynchronizes neurotransmitter release.",
+   "year": 2024,
+   "quote": "This is a novel cellular phenotype, distinct from what was previously found for other SYT1 disease variants, and points to a role for spontaneous and asynchronous release in SYT1-associated neurodevelopmental disorder.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:20002519#928282": {
+   "source": "PubMed",
+   "ref": "PMID:20002519",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20002519/",
+   "title": "AAV-mediated chronic over-expression of SNAP-25 in adult rat dorsal hippocampus impairs memory-associated synaptic plasticity.",
+   "year": 2010,
+   "quote": "Together these studies provide the first evidence that excess SNAP-25 activity, restricted to the adult period, is sufficient to mediate significant deficits in the memory formation process.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:34850743#796576": {
+   "source": "PubMed",
+   "ref": "PMID:34850743",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34850743/",
+   "title": "Antisense oligonucleotide therapy reduces seizures and extends life span in an SCN2A gain-of-function epilepsy model.",
+   "year": 2021,
+   "quote": "In these cases, targeted reduction in SCN2A expression could substantially improve clinical outcomes.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:19019305#583234": {
+   "source": "PubMed",
+   "ref": "PMID:19019305",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19019305/",
+   "title": "Therapeutic strategies in congenital myasthenic syndromes.",
+   "year": 2008,
+   "quote": "Therapeutic agents used in CMS depend on the underlying defect and include acetylcholinesterase inhibitor, 3,4-diaminopyridine, quinidine sulfate, fluoxetine, acetazolamide, and ephedrine.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:22911480#716991": {
+   "source": "PubMed",
+   "ref": "PMID:22911480",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22911480/",
+   "title": "Congenital myasthenic syndromes: current diagnostic and therapeutic approaches.",
+   "year": 2012,
+   "quote": "Most patients are eligible for drug therapy with esterase inhibitors, 3, 4-diaminopyridine, ephedrine, fluoxetine or quinidine, but the effect of these drugs differs depending on the underlying genetic defect.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:41579375#140664": {
+   "source": "PubMed",
+   "ref": "PMID:41579375",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41579375/",
+   "title": "SNAP-25 disease variants affect synaptic transmission by destabilizing SNARE complexes within a multimeric SNARE ring.",
+   "year": 2026,
+   "quote": "I192N is strongly dominant negative in the presence of wild-type SNAP-25, leading to impaired survival and reduced synaptic release.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:41166419#35907": {
+   "source": "PubMed",
+   "ref": "PMID:41166419",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41166419/",
+   "title": "Synaptobrevin-2 disease variants reveal spatial constraints within the presynaptic active zone.",
+   "year": 2025,
+   "quote": "Here, we investigated nine synaptobrevin-2 (VAMP2) disease-causing variants and uncovered their specific SNARE complex affinity, stability, and conformational deficits that drive dysregulated neurotransmission.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:29949059#445405": {
+   "source": "PubMed",
+   "ref": "PMID:29949059",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29949059/",
+   "title": "Oligomerisation of Synaptobrevin-2 Studied by Native Mass Spectrometry and Chemical Cross-Linking.",
+   "year": 2019,
+   "quote": "While Synaptobrevin-2 is part of a four-helix bundle in this SNARE complex, it is natively unstructured in the absence of lipids or other SNARE proteins.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:41166419#897632": {
+   "source": "PubMed",
+   "ref": "PMID:41166419",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41166419/",
+   "title": "Synaptobrevin-2 disease variants reveal spatial constraints within the presynaptic active zone.",
+   "year": 2025,
+   "quote": "The neurotransmission deficits we observed parallel the symptomatic heterogeneity of the patients, with some variants displaying a disproportionate augmentation of spontaneous neurotransmitter release.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03",
+   "supports": false
+  },
+  "PMID:32572454#787574": {
+   "source": "PubMed",
+   "ref": "PMID:32572454",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32572454/",
+   "title": "Epilepsy-causing STX1B mutations translate altered protein functions into distinct phenotypes in mouse neurons.",
+   "year": 2020,
+   "quote": "An insertion/deletion (K45/RMCIE, L46M) mutation (STX1BInDel), causing mild epilepsy and located in the early helical Habc domain, leads to an unfolded protein unable to sustain neurotransmission.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:42673765#37168": {
+   "source": "PubMed",
+   "ref": "PMID:42673765",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42673765/",
+   "title": "STX1B variant-specific synaptic dysfunction is associated with network hyperexcitability in human iPSC-derived neurons.",
+   "year": 2026,
+   "quote": "FINDINGS: G226R exhibited both gain- and loss-of-function characteristics, with increased miniature excitatory postsynaptic current frequency in networks but not in autapses, and synaptic failure during sustained high-frequency stimulation.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:41515912#687717": {
+   "source": "PubMed",
+   "ref": "PMID:41515912",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41515912/",
+   "title": "From Symptomatic Therapies to Disease-Modifying Approaches for Neuronal Sodium Channel Disorders.",
+   "year": 2025,
+   "quote": "Current treatments rely mainly on symptomatic polytherapy with antiseizure medications, with sodium channel blockers contraindicated in loss-of-function cases but beneficial in gain-of-function forms.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:26519543#372343": {
+   "source": "PubMed",
+   "ref": "PMID:26519543",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26519543/",
+   "title": "Electrophysiologic features of SYT2 mutations causing a treatable neuromuscular syndrome.",
+   "year": 2015,
+   "quote": "Treatment with 3,4-diaminopyridine produced both a clinical benefit and an improvement in neuromuscular transmission.",
+   "kind": "publication",
+   "study_type": "case_series",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:32250532#867170": {
+   "source": "PubMed",
+   "ref": "PMID:32250532",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32250532/",
+   "title": "Recessive congenital myasthenic syndrome caused by a homozygous mutation in SYT2 altering a highly conserved C-terminal amino acid sequence.",
+   "year": 2020,
+   "quote": "3,4 diaminopyridine and pyridostigmine were effective to ameliorate muscle fatigue, but albuterol was ineffective.",
+   "kind": "publication",
+   "study_type": "case_report",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:34904932#338843": {
+   "source": "PubMed",
+   "ref": "PMID:34904932",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34904932/",
+   "title": "Circumventing the packaging limit of AAV-mediated gene replacement therapy for neurological disorders.",
+   "year": 2022,
+   "quote": "For instance, the AAV packaging capacity is restricted to ~4.7 kb, making it a substantial challenge to deliver large gene products.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:34904932#367923": {
+   "source": "PubMed",
+   "ref": "PMID:34904932",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34904932/",
+   "title": "Circumventing the packaging limit of AAV-mediated gene replacement therapy for neurological disorders.",
+   "year": 2022,
+   "quote": "AREAS COVERED: In this review, we explore established and emerging strategies that circumvent the packaging limit of AAVs to make them effective vehicles for gene replacement therapy of monogenic disorders, with a particular focus on diseases affecting the nervous system.",
+   "kind": "publication",
+   "study_type": "review",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:38979232#453747": {
+   "source": "PubMed",
+   "ref": "PMID:38979232",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38979232/",
+   "title": "Loss of TDP-43 induces synaptic dysfunction that is rescued by UNC13A splice-switching ASOs.",
+   "year": 2024,
+   "quote": "Antisense oligonucleotides targeting the UNC13A cryptic exon robustly rescue UNC13A protein levels and restore normal synaptic function, providing a potential new therapeutic approach for ALS and other TDP-43-related disorders.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:27648472#215854": {
+   "source": "PubMed",
+   "ref": "PMID:27648472",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27648472/",
+   "title": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.",
+   "year": 2016,
+   "quote": "Exome sequencing identified a homozygous nonsense mutation in the N-terminal domain of MUNC13-1 (UNC13A) truncating the protein after 101 residues.",
+   "kind": "publication",
+   "study_type": "case_report",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:41125872#370907": {
+   "source": "PubMed",
+   "ref": "PMID:41125872",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41125872/",
+   "title": "Pathogenic UNC13A variants cause a neurodevelopmental syndrome by impairing synaptic function.",
+   "year": 2025,
+   "quote": "Using assays with expression of UNC13A variants in mouse hippocampal neurons and in Caenorhabditis elegans, we identify three mechanisms of pathogenicity, including reduction in synaptic strength caused by reduced UNC13A protein expression, increased neurotransmission caused by UNC13A gain-of-function and impaired regulation of neurotransmission by second messenger signalling.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:11742587#476826": {
+   "source": "PubMed",
+   "ref": "PMID:11742587",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11742587/",
+   "title": "Overexpression of gamma-aminobutyric acid transporter subtype I leads to cognitive deterioration in transgenic mice.",
+   "year": 2001,
+   "quote": "CONCLUSION: Overexpression of GAT1 in mice results in cognitive deterioration, indicating that the alteration in the expression of gamma-aminobutyric acid transporters is involved in the pathophysiological mechanism underlying some cognitive deficiencies.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:15106822#538628": {
+   "source": "PubMed",
+   "ref": "PMID:15106822",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15106822/",
+   "title": "Cognitive impairment in mice over-expressing gamma-aminobutyric acid transporter 1 (GAT1).",
+   "year": 2004,
+   "quote": "However, the impaired cognitive function of transgenic mice could be rescued after chronic administration of GAT1 selective inhibitor for 6 days.",
+   "kind": "publication",
+   "study_type": "animal_model",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:38781976#140788": {
+   "source": "PubMed",
+   "ref": "PMID:38781976",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38781976/",
+   "title": "Haploinsufficiency underlies the neurodevelopmental consequences of SLC6A1 variants.",
+   "year": 2024,
+   "quote": "Strategies to increase the expression of the wild-type SLC6A1 allele are likely to be beneficial across neurodevelopmental disorders, though the developmental stage and extent of required rescue remain unknown.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:42157447#316727": {
+   "source": "PubMed",
+   "ref": "PMID:42157447",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42157447/",
+   "title": "Unraveling 4-Phenylbutyrate's Therapeutic Role in SLC6A1 Disorders: Pharmacochaperoning Over HDAC Inhibition.",
+   "year": 2026,
+   "quote": "RESULTS: PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:34028503#715915": {
+   "source": "PubMed",
+   "ref": "PMID:34028503",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34028503/",
+   "title": "Common molecular mechanisms of SLC6A1 variant-mediated neurodevelopmental disorders in astrocytes and neurons.",
+   "year": 2021,
+   "quote": "The reduced GABA uptake appears to be due to reduced cell surface expression of the variant transporter caused by variant protein misfolding, endoplasmic reticulum retention, and subsequent degradation.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:38781976#972774": {
+   "source": "PubMed",
+   "ref": "PMID:38781976",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38781976/",
+   "title": "Haploinsufficiency underlies the neurodevelopmental consequences of SLC6A1 variants.",
+   "year": 2024,
+   "quote": "Surface localization was assessed for 86 variants; two-thirds of loss-of-function missense variants prevented GAT-1 from being present on the membrane while GAT-1 was on the surface but with reduced activity for the remaining third.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  },
+  "PMID:36741049#367542": {
+   "source": "PubMed",
+   "ref": "PMID:36741049",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36741049/",
+   "title": "Drosophila melanogaster as a model for unraveling unique molecular features of epilepsy elicited by human GABA transporter 1 variants.",
+   "year": 2022,
+   "quote": "A modest fraction of the mutants displayed correct targeting to the plasma membrane, but nonetheless rendered the mutated proteins devoid of GABA transport, possibly due to structural alterations in the GABA binding site/translocation pathway.",
+   "kind": "publication",
+   "study_type": "functional_study",
+   "extracted_by": "agent-curation",
+   "verified": true,
+   "retrieved": "2026-10-03"
+  }
+ },
+ "modalities": [
+  {
+   "id": "aav_gene_replacement",
+   "label": "AAV gene replacement",
+   "what_it_does": "A virus delivers an extra, working copy of the gene to neurons; the faulty copy stays.",
+   "best_case_mechanism": "haploinsufficiency / loss of function with no interfering mutant protein"
+  },
+  {
+   "id": "aso_sirna_knockdown",
+   "label": "ASO / siRNA knockdown (total or allele-specific)",
+   "what_it_does": "An oligonucleotide lowers the amount of the gene's RNA, either both copies or only the faulty one.",
+   "best_case_mechanism": "gain of function or dominant-negative, where less of the faulty product is better"
+  },
+  {
+   "id": "transcript_upregulation",
+   "label": "Transcript upregulation (TANGO/NMD- or uORF-targeting ASO, or CRISPRa)",
+   "what_it_does": "A drug makes the cell read the gene's own healthy copy more efficiently instead of adding a new copy.",
+   "best_case_mechanism": "haploinsufficiency with one intact allele and a targetable regulatory element"
+  },
+  {
+   "id": "chemical_chaperone",
+   "label": "Chemical / pharmacological chaperone",
+   "what_it_does": "A small molecule helps an unstable protein fold and reach its working place instead of being degraded.",
+   "best_case_mechanism": "protein destabilization / misfolding, where the mutant protein would work if it survived"
+  },
+  {
+   "id": "symptomatic_pathway_small_molecule",
+   "label": "Symptomatic small molecule acting on the pathway (e.g. 3,4-DAP, 4-AP, cholinesterase inhibitors)",
+   "what_it_does": "An existing drug pushes the weakened synapse to release more neurotransmitter per nerve impulse. It does not change the gene.",
+   "best_case_mechanism": "reduced evoked release, especially at the neuromuscular junction"
+  },
+  {
+   "id": "gene_editing",
+   "label": "Gene editing (base / prime editing, CRISPR repair)",
+   "what_it_does": "A tool rewrites the faulty DNA letter in the patient's own cells.",
+   "best_case_mechanism": "a recurrent, editable variant whose effect is dominant-negative or gain of function"
+  }
+ ],
+ "rules": [
+  {
+   "id": "R-AAV-1",
+   "modality": "aav_gene_replacement",
+   "condition": "the gene's CDS does not fit a standard AAV (>4.7 kb)",
+   "votes": "poor",
+   "reason": "The coding sequence is too large for one standard AAV genome, so a single-vector gene replacement is not available.",
+   "caveat": "Dual/split-vector and other strategies to exceed the limit exist, but add complexity and are not de-risked here.",
+   "citations": [
+    {
+     "ref": "PMID:34904932",
+     "supports": true
+    },
+    {
+     "ref": "PMID:34904932",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-AAV-2",
+   "modality": "aav_gene_replacement",
+   "condition": "haploinsufficiency or loss of function is a supported mechanism and the CDS fits AAV",
+   "votes": "good",
+   "reason": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV.",
+   "caveat": null,
+   "citations": [
+    {
+     "ref": "PMID:42462387",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-AAV-3",
+   "modality": "aav_gene_replacement",
+   "condition": "a dominant-negative effect is reported and is not flagged as a minority mechanism",
+   "votes": "conditional",
+   "reason": "If the mutant protein actively jams the machine, adding healthy copies may be diluted out by it, so supplementation alone may not be enough.",
+   "caveat": "Whether the dominant-negative reading holds for this gene is itself contested in the graph; see the driven_by edge.",
+   "citations": [
+    {
+     "ref": "PMID:41166419",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-AAV-4",
+   "modality": "aav_gene_replacement",
+   "condition": "a gain-of-function mechanism is reported for at least some variants",
+   "votes": "conditional",
+   "reason": "For variants that make the protein do too much, adding more of it is the wrong direction, so eligibility would have to be decided per variant.",
+   "caveat": "Gene supplementation is not reversible, which raises the cost of getting the variant's functional class wrong.",
+   "citations": [
+    {
+     "ref": "PMID:34378168",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-AAV-5",
+   "modality": "aav_gene_replacement",
+   "condition": "published overexpression data exist for this gene",
+   "votes": "conditional",
+   "reason": "Overexpression of this protein has measurable consequences in animals, so the dose window matters as much as the delivery.",
+   "caveat": "Dose-finding needs a biomarker of protein level; no human threshold is established for any gene in this slice.",
+   "citations": []
+  },
+  {
+   "id": "R-AAV-6",
+   "modality": "aav_gene_replacement",
+   "condition": "a gene-replacement trial for this disease was terminated or stopped",
+   "votes": "conditional",
+   "reason": "A first-in-human gene-replacement trial for this disease has already been stopped, which is counter-evidence a scout must read before planning another.",
+   "caveat": "A stopping rule being met is not public evidence about why; treat the reason as unknown.",
+   "citations": [
+    {
+     "ref": "PMID:41883162",
+     "supports": false
+    }
+   ]
+  },
+  {
+   "id": "R-KD-1",
+   "modality": "aso_sirna_knockdown",
+   "condition": "a gain-of-function mechanism is reported and is not flagged as a minority mechanism",
+   "votes": "good",
+   "reason": "When the faulty product does too much, lowering it is the matching direction, and ASO knockdown has done this in a gain-of-function epilepsy model.",
+   "caveat": "Benefit was shown in a different gene and species; nothing of the kind has been tried in this slice.",
+   "citations": [
+    {
+     "ref": "PMID:34850743",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-KD-1b",
+   "modality": "aso_sirna_knockdown",
+   "condition": "a gain-of-function mechanism is reported but only for a minority of variants",
+   "votes": "conditional",
+   "reason": "Only a minority of published variants in this gene act by gain of function, so knockdown would fit that subset and work against everyone else.",
+   "caveat": "Variant-level functional classification does not exist for this gene yet (gap:variant-level-mechanism-map).",
+   "citations": [
+    {
+     "ref": "PMID:41166419",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-KD-2",
+   "modality": "aso_sirna_knockdown",
+   "condition": "a dominant-negative effect is reported",
+   "votes": "conditional",
+   "reason": "Silencing only the faulty copy is the standard answer to a dominant-negative protein, and has been achieved for a dominant-negative substitution in another disease.",
+   "caveat": "Allele-specific targeting of a single-nucleotide change is hard and has to be built per variant.",
+   "citations": [
+    {
+     "ref": "PMID:38617974",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-KD-3",
+   "modality": "aso_sirna_knockdown",
+   "condition": "haploinsufficiency is a supported mechanism and no gain of function is reported",
+   "votes": "poor",
+   "reason": "The cell already makes too little of this protein, so lowering it further (total knockdown) works against the mechanism.",
+   "caveat": null,
+   "citations": [
+    {
+     "ref": "PMID:41515912",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-KD-4",
+   "modality": "aso_sirna_knockdown",
+   "condition": "ClinVar shows no residue with two or more distinct pathogenic alleles",
+   "votes": "conditional",
+   "reason": "No recurrent hotspot appears in the pathogenic records for this gene, so an allele-specific drug would be a one-family (n-of-1) design rather than a reusable one.",
+   "caveat": null,
+   "citations": []
+  },
+  {
+   "id": "R-UP-1",
+   "modality": "transcript_upregulation",
+   "condition": "haploinsufficiency is a supported mechanism",
+   "votes": "good",
+   "reason": "Making the intact copy produce more protein is the mechanism-matched approach to haploinsufficiency, and both ASO and CRISPRa versions have rescued haploinsufficient animals.",
+   "caveat": null,
+   "citations": [
+    {
+     "ref": "PMID:32848094",
+     "supports": true
+    },
+    {
+     "ref": "PMID:40963013",
+     "supports": true
+    },
+    {
+     "ref": "PMID:30545847",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-UP-2",
+   "modality": "transcript_upregulation",
+   "condition": "always: the approach needs a targetable element in THIS gene",
+   "votes": "conditional",
+   "reason": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established.",
+   "caveat": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug.",
+   "citations": [
+    {
+     "ref": "PMID:27398791",
+     "supports": true
+    },
+    {
+     "ref": "PMID:39759875",
+     "supports": false
+    }
+   ]
+  },
+  {
+   "id": "R-UP-3",
+   "modality": "transcript_upregulation",
+   "condition": "protein destabilization or a dominant-negative effect is reported",
+   "votes": "conditional",
+   "reason": "Upregulation that is not allele-specific raises the mutant transcript too, and for an aggregating or interfering protein more mutant may offset more wild type.",
+   "caveat": "A promoter- or splicing-level drug cannot currently distinguish the two alleles.",
+   "citations": [
+    {
+     "ref": "PMID:27597756",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-UP-4",
+   "modality": "transcript_upregulation",
+   "condition": "a gain-of-function mechanism is reported for some variants",
+   "votes": "conditional",
+   "reason": "For gain-of-function variants, raising expression is the wrong direction, so eligibility would be per variant.",
+   "caveat": null,
+   "citations": [
+    {
+     "ref": "PMID:34378168",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-CH-1",
+   "modality": "chemical_chaperone",
+   "condition": "protein destabilization / misfolding is a reported mechanism",
+   "votes": "good",
+   "reason": "A chaperone's whole purpose is to stabilise a protein that would work if it were not degraded, which is exactly what the destabilization evidence for this gene describes.",
+   "caveat": null,
+   "citations": [
+    {
+     "ref": "PMID:31940970",
+     "supports": true
+    },
+    {
+     "ref": "PMID:36205620",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-CH-2",
+   "modality": "chemical_chaperone",
+   "condition": "most pathogenic ClinVar records for this gene are null-like (truncating, splice or copy-number)",
+   "votes": "conditional",
+   "reason": "A chaperone can only act where there is a mutant protein to stabilise, and most pathogenic records for this gene remove the protein instead, so the approach reaches a minority of patients.",
+   "caveat": "The share below is a share of ClinVar records, not of patients; recurrent variants are counted once.",
+   "citations": []
+  },
+  {
+   "id": "R-CH-3",
+   "modality": "chemical_chaperone",
+   "condition": "no destabilization mechanism is reported for this gene",
+   "votes": "poor",
+   "reason": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone.",
+   "caveat": null,
+   "citations": []
+  },
+  {
+   "id": "R-CH-4",
+   "modality": "chemical_chaperone",
+   "condition": "always, when a chaperone is on the table",
+   "votes": "conditional",
+   "reason": "Generic chemical chaperones are not selective: for this class the required concentrations and possible toxicity are the stated reason to look for a targeted molecule instead.",
+   "caveat": "Whether the benefit comes from correcting the mutant or from helping the wild-type protein traffic is unresolved, which changes who could benefit.",
+   "citations": [
+    {
+     "ref": "PMID:33332765",
+     "supports": true
+    },
+    {
+     "ref": "PMID:35911425",
+     "supports": false
+    }
+   ]
+  },
+  {
+   "id": "R-SX-1",
+   "modality": "symptomatic_pathway_small_molecule",
+   "condition": "the disease has a neuromuscular-junction presentation (congenital myasthenic syndrome)",
+   "votes": "good",
+   "reason": "For presynaptic congenital myasthenic syndromes these drugs are the established symptomatic option, and the choice follows the genetic defect.",
+   "caveat": "Benefit is symptomatic: it does not change the course of the brain phenotype.",
+   "citations": [
+    {
+     "ref": "PMID:19019305",
+     "supports": true
+    },
+    {
+     "ref": "PMID:22911480",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-SX-2",
+   "modality": "symptomatic_pathway_small_molecule",
+   "condition": "release is reduced but the presentation is central (no NMJ phenotype)",
+   "votes": "conditional",
+   "reason": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does.",
+   "caveat": "Evidence in the central presentation is a case report and a cell model, not a trial.",
+   "citations": [
+    {
+     "ref": "PMID:32906212",
+     "supports": true
+    },
+    {
+     "ref": "PMID:40181518",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-SX-3",
+   "modality": "symptomatic_pathway_small_molecule",
+   "condition": "a gain-of-function or excess-spontaneous-release variant class exists in this gene",
+   "votes": "conditional",
+   "reason": "The same gene contains variants that increase release, and for those a release-boosting drug points the wrong way, so variant class has to be established first.",
+   "caveat": "Aminopyridines have a narrow therapeutic range and a dose-related seizure risk, which matters in a population that already has epilepsy.",
+   "citations": [
+    {
+     "ref": "PMID:40181518",
+     "supports": true
+    },
+    {
+     "ref": "PMID:22703551",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-SX-4",
+   "modality": "symptomatic_pathway_small_molecule",
+   "condition": "no drug of this class has been reported for this gene",
+   "votes": "conditional",
+   "reason": "The fit here comes from the shared pathway only; no report names this gene, so it rests on the family argument rather than on gene-specific evidence.",
+   "caveat": null,
+   "citations": [
+    {
+     "ref": "PMID:41166419",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-ED-1",
+   "modality": "gene_editing",
+   "condition": "always, for every gene in this slice",
+   "votes": "conditional",
+   "reason": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice.",
+   "caveat": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline.",
+   "citations": [
+    {
+     "ref": "PMID:42041587",
+     "supports": true
+    },
+    {
+     "ref": "PMID:40181540",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-ED-2",
+   "modality": "gene_editing",
+   "condition": "a dominant-negative or gain-of-function mechanism is reported",
+   "votes": "conditional",
+   "reason": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein.",
+   "caveat": null,
+   "citations": [
+    {
+     "ref": "PMID:38617974",
+     "supports": true
+    }
+   ]
+  },
+  {
+   "id": "R-VAL-1",
+   "modality": "*",
+   "condition": "the graph records a gene-disease validity or functional-evidence gap for this gene",
+   "votes": "conditional",
+   "reason": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled.",
+   "caveat": "This caps the fit; it is not evidence against the approach.",
+   "citations": []
+  },
+  {
+   "id": "R-ED-3",
+   "modality": "gene_editing",
+   "condition": "ClinVar shows no recurrent pathogenic residue in this gene",
+   "votes": "poor",
+   "reason": "Without a recurrent variant, each family needs its own editor, which no current development path supports for an ultra-rare disease.",
+   "caveat": null,
+   "citations": []
+  }
+ ],
+ "assessments": {
+  "disease:STXBP1": {
+   "gene": "STXBP1",
+   "label": "STXBP1-related disorders",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 1785,
+     "fits_4_7kb": true,
+     "protein_length_aa": 594
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 495,
+     "by_consequence": {
+      "nonsense": 63,
+      "frameshift": 110,
+      "splice": 98,
+      "missense": 134,
+      "inframe_indel": 11,
+      "cnv": 77,
+      "synonymous": 1,
+      "other": 1
+     },
+     "null_like_share": 0.547,
+     "recurrent_residues": [
+      "R406",
+      "G544",
+      "R551",
+      "C354",
+      "C552"
+     ],
+     "allele_specific_plausible": true
+    },
+    "minority_mechanisms": [
+     "mech:gain-of-function"
+    ],
+    "contested_mechanisms": [
+     "mech:dominant-negative",
+     "mech:gain-of-function",
+     "mech:haploinsufficiency",
+     "mech:protein-destabilization"
+    ],
+    "target_tissue": [
+     "CNS"
+    ],
+    "nmj_evidence": {
+     "subtypes": [],
+     "phenotypes": []
+    },
+    "overexpression_data": true,
+    "validity_gaps": [],
+    "existing_programmes": [
+     {
+      "therapy": "therapy:4-phenylbutyrate",
+      "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+      "modality": "chaperone",
+      "stage": "clinical",
+      "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+      "edge_status": "contested",
+      "trials": [
+       "NCT04937062",
+       "NCT07847918"
+      ],
+      "trial_status": [
+       "ACTIVE_NOT_RECRUITING",
+       "RECRUITING"
+      ],
+      "why_stopped": []
+     },
+     {
+      "therapy": "therapy:aav-stxbp1-gene-replacement",
+      "label": "AAV STXBP1 gene supplementation",
+      "modality": "gene_replacement",
+      "stage": "clinical",
+      "edge_id": "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+      "edge_status": "contested",
+      "trials": [
+       "NCT06983158"
+      ],
+      "trial_status": [
+       "TERMINATED"
+      ],
+      "why_stopped": [
+       "Stopping rule for study was met"
+      ]
+     },
+     {
+      "therapy": "therapy:munc18-1-pharmacological-chaperone",
+      "label": "Structure-based pharmacological chaperones for Munc18-1",
+      "modality": "small_molecule",
+      "stage": "preclinical",
+      "edge_id": "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1",
+      "edge_status": "supported",
+      "trials": [],
+      "trial_status": [],
+      "why_stopped": []
+     }
+    ],
+    "interventional_studies": [
+     {
+      "study": "study:NCT04937062",
+      "label": "Phenylbutyrate for Monogenetic Developmental and Epileptic Encephalopathy",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "edge_id": "study:NCT04937062|studies|disease:STXBP1"
+     },
+     {
+      "study": "study:NCT05232630",
+      "label": "Fenfluramine for the Treatment of Different Types of Developmental and Epileptic Encephalopathies: a Pilot Trial Exploring Epileptic and Non-epileptic Outcomes",
+      "status": "COMPLETED",
+      "edge_id": "study:NCT05232630|studies|disease:STXBP1"
+     },
+     {
+      "study": "study:NCT06983158",
+      "label": "A Clinical Trial of CAP-002 Gene Therapy in Pediatric Patients With Syntaxin-Binding Protein 1 (STXBP1) Encephalopathy",
+      "status": "TERMINATED",
+      "edge_id": "study:NCT06983158|studies|disease:STXBP1"
+     }
+    ],
+    "stopped_programmes": [
+     {
+      "therapy": "therapy:aav-stxbp1-gene-replacement",
+      "trials": [
+       "NCT06983158"
+      ],
+      "status": [
+       "TERMINATED"
+      ],
+      "why_stopped": [
+       "Stopping rule for study was met"
+      ]
+     }
+    ]
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-AAV-3",
+       "votes": "conditional",
+       "text": "If the mutant protein actively jams the machine, adding healthy copies may be diluted out by it, so supplementation alone may not be enough."
+      },
+      {
+       "rule": "R-AAV-4",
+       "votes": "conditional",
+       "text": "For variants that make the protein do too much, adding more of it is the wrong direction, so eligibility would have to be decided per variant."
+      },
+      {
+       "rule": "R-AAV-5",
+       "votes": "conditional",
+       "text": "Overexpression of this protein has measurable consequences in animals, so the dose window matters as much as the delivery."
+      },
+      {
+       "rule": "R-AAV-6",
+       "votes": "conditional",
+       "text": "A first-in-human gene-replacement trial for this disease has already been stopped, which is counter-evidence a scout must read before planning another."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "A preclinical programme defined a transduction threshold and a neuron-targeted vector rescued haploinsufficient mice and was tolerated in primates."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-3",
+       "text": "Whether the dominant-negative reading holds for this gene is itself contested in the graph; see the driven_by edge."
+      },
+      {
+       "rule": "R-AAV-4",
+       "text": "Gene supplementation is not reversible, which raises the cost of getting the variant's functional class wrong."
+      },
+      {
+       "rule": "R-AAV-5",
+       "text": "Dose-finding needs a biomarker of protein level; no human threshold is established for any gene in this slice."
+      },
+      {
+       "rule": "R-AAV-6",
+       "text": "A stopping rule being met is not public evidence about why; treat the reason as unknown."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "Whether the mechanism is pure haploinsufficiency is contested: mutant Munc18-1 can co-aggregate the wild-type protein, while an independent study found no mutant effect on a heterozygous background."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674",
+      "PMID:41166419#723161",
+      "PMID:34378168#922399",
+      "PMID:23340504#144473",
+      "PMID:41883162#374458",
+      "PMID:41883162#284286",
+      "PMID:40349107#514460",
+      "PMID:27597756#332442",
+      "PMID:29538625#961942"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STXBP1|driven_by|mech:dominant-negative",
+       "disease:STXBP1|driven_by|mech:gain-of-function",
+       "disease:STXBP1|driven_by|mech:haploinsufficiency",
+       "disease:STXBP1|driven_by|mech:loss-of-function",
+       "disease:STXBP1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+       "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+       "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1"
+      ]
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-AAV-3",
+      "R-AAV-4",
+      "R-AAV-5",
+      "R-AAV-6"
+     ],
+     "open_questions_for_expert": [
+      "Does the terminated CAP-002 trial change the dose or the eligibility assumptions, or neither? Nothing public says.",
+      "Is a CSF Munc18-1/syntaxin-1 assay good enough to dose to a protein target rather than a vector dose?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:dominant-negative, mech:gain-of-function, mech:haploinsufficiency, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-KD-1b",
+       "votes": "conditional",
+       "text": "Only a minority of published variants in this gene act by gain of function, so knockdown would fit that subset and work against everyone else."
+      },
+      {
+       "rule": "R-KD-2",
+       "votes": "conditional",
+       "text": "Silencing only the faulty copy is the standard answer to a dominant-negative protein, and has been achieved for a dominant-negative substitution in another disease."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-KD-1b",
+       "text": "Variant-level functional classification does not exist for this gene yet (gap:variant-level-mechanism-map)."
+      },
+      {
+       "rule": "R-KD-2",
+       "text": "Allele-specific targeting of a single-nucleotide change is hard and has to be built per variant."
+      }
+     ],
+     "citation_ids": [
+      "PMID:41166419#723161",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STXBP1|driven_by|mech:dominant-negative",
+       "disease:STXBP1|driven_by|mech:gain-of-function",
+       "disease:STXBP1|driven_by|mech:haploinsufficiency",
+       "disease:STXBP1|driven_by|mech:loss-of-function",
+       "disease:STXBP1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+       "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+       "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1"
+      ]
+     },
+     "rules_fired": [
+      "R-KD-1b",
+      "R-KD-2"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:dominant-negative, mech:gain-of-function, mech:haploinsufficiency, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-1",
+       "votes": "good",
+       "text": "Making the intact copy produce more protein is the mechanism-matched approach to haploinsufficiency, and both ASO and CRISPRa versions have rescued haploinsufficient animals."
+      },
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-3",
+       "votes": "conditional",
+       "text": "Upregulation that is not allele-specific raises the mutant transcript too, and for an aggregating or interfering protein more mutant may offset more wild type."
+      },
+      {
+       "rule": "R-UP-4",
+       "votes": "conditional",
+       "text": "For gain-of-function variants, raising expression is the wrong direction, so eligibility would be per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-UP-3",
+       "text": "A promoter- or splicing-level drug cannot currently distinguish the two alleles."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32848094#272300",
+      "PMID:40963013#599803",
+      "PMID:30545847#280994",
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:27597756#332442",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STXBP1|driven_by|mech:dominant-negative",
+       "disease:STXBP1|driven_by|mech:gain-of-function",
+       "disease:STXBP1|driven_by|mech:haploinsufficiency",
+       "disease:STXBP1|driven_by|mech:loss-of-function",
+       "disease:STXBP1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+       "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+       "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1"
+      ]
+     },
+     "rules_fired": [
+      "R-UP-1",
+      "R-UP-2",
+      "R-UP-3",
+      "R-UP-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:dominant-negative, mech:gain-of-function, mech:haploinsufficiency, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "chemical_chaperone": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-CH-1",
+       "votes": "good",
+       "text": "A chaperone's whole purpose is to stabilise a protein that would work if it were not degraded, which is exactly what the destabilization evidence for this gene describes."
+      },
+      {
+       "rule": "R-CH-2",
+       "votes": "conditional",
+       "text": "A chaperone can only act where there is a mutant protein to stabilise, and most pathogenic records for this gene remove the protein instead, so the approach reaches a minority of patients."
+      },
+      {
+       "rule": "R-CH-4",
+       "votes": "conditional",
+       "text": "Generic chemical chaperones are not selective: for this class the required concentrations and possible toxicity are the stated reason to look for a targeted molecule instead."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "Chemical chaperones reversed Munc18-1 deficits across several models, and a shared STXBP1/SLC6A1 phenylbutyrate protocol is already in the clinic."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-CH-2",
+       "text": "The share below is a share of ClinVar records, not of patients; recurrent variants are counted once."
+      },
+      {
+       "rule": "R-CH-4",
+       "text": "Whether the benefit comes from correcting the mutant or from helping the wild-type protein traffic is unresolved, which changes who could benefit."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "One rescue that works in pure haploinsufficiency failed for a variant that depletes a binding partner, so variant class may decide who responds."
+      }
+     ],
+     "citation_ids": [
+      "PMID:31940970#398852",
+      "PMID:36205620#89067",
+      "PMID:33332765#544384",
+      "PMID:35911425#917161",
+      "PMID:30266908#749175",
+      "PMID:38242640#961971"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STXBP1|driven_by|mech:dominant-negative",
+       "disease:STXBP1|driven_by|mech:gain-of-function",
+       "disease:STXBP1|driven_by|mech:haploinsufficiency",
+       "disease:STXBP1|driven_by|mech:loss-of-function",
+       "disease:STXBP1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+       "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+       "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1"
+      ]
+     },
+     "rules_fired": [
+      "R-CH-1",
+      "R-CH-2",
+      "R-CH-4"
+     ],
+     "open_questions_for_expert": [
+      "Which STXBP1 variants are folding-correctable, and can existing cohorts be re-analysed by variant class?",
+      "Do the structure-based Munc18-1 chaperones reach the brain at a tolerated dose?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:dominant-negative, mech:gain-of-function, mech:haploinsufficiency, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-2",
+       "votes": "conditional",
+       "text": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does."
+      },
+      {
+       "rule": "R-SX-3",
+       "votes": "conditional",
+       "text": "The same gene contains variants that increase release, and for those a release-boosting drug points the wrong way, so variant class has to be established first."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-2",
+       "text": "Evidence in the central presentation is a case report and a cell model, not a trial."
+      },
+      {
+       "rule": "R-SX-3",
+       "text": "Aminopyridines have a narrow therapeutic range and a dose-related seizure risk, which matters in a population that already has epilepsy."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32906212#581063",
+      "PMID:40181518#42053",
+      "PMID:40181518#506064",
+      "PMID:22703551#342004"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STXBP1|driven_by|mech:dominant-negative",
+       "disease:STXBP1|driven_by|mech:gain-of-function",
+       "disease:STXBP1|driven_by|mech:haploinsufficiency",
+       "disease:STXBP1|driven_by|mech:loss-of-function",
+       "disease:STXBP1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+       "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+       "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1"
+      ]
+     },
+     "rules_fired": [
+      "R-SX-2",
+      "R-SX-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:dominant-negative, mech:gain-of-function, mech:haploinsufficiency, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "gene_editing": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-ED-2",
+       "votes": "conditional",
+       "text": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STXBP1|driven_by|mech:dominant-negative",
+       "disease:STXBP1|driven_by|mech:gain-of-function",
+       "disease:STXBP1|driven_by|mech:haploinsufficiency",
+       "disease:STXBP1|driven_by|mech:loss-of-function",
+       "disease:STXBP1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:STXBP1",
+       "therapy:aav-stxbp1-gene-replacement|developed_for|disease:STXBP1",
+       "therapy:munc18-1-pharmacological-chaperone|developed_for|disease:STXBP1"
+      ]
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-ED-2"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:dominant-negative, mech:gain-of-function, mech:haploinsufficiency, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    }
+   }
+  },
+  "disease:SYT1": {
+   "gene": "SYT1",
+   "label": "SYT1-related disorders (Baker-Gordon syndrome)",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 1269,
+     "fits_4_7kb": true,
+     "protein_length_aa": 422
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 39,
+     "by_consequence": {
+      "nonsense": 1,
+      "splice": 1,
+      "missense": 20,
+      "inframe_indel": 3,
+      "cnv": 14
+     },
+     "null_like_share": 0.051,
+     "recurrent_residues": [
+      "D366",
+      "D304",
+      "D310"
+     ],
+     "allele_specific_plausible": true
+    },
+    "minority_mechanisms": [
+     "mech:gain-of-function",
+     "mech:haploinsufficiency"
+    ],
+    "contested_mechanisms": [
+     "mech:gain-of-function",
+     "mech:haploinsufficiency"
+    ],
+    "target_tissue": [
+     "CNS"
+    ],
+    "nmj_evidence": {
+     "subtypes": [],
+     "phenotypes": []
+    },
+    "overexpression_data": false,
+    "validity_gaps": [],
+    "existing_programmes": [
+     {
+      "therapy": "therapy:aminopyridine-presynaptic-boost",
+      "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+      "modality": "repurposed_drug",
+      "stage": "clinical",
+      "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1",
+      "edge_status": "contested",
+      "trials": [],
+      "trial_status": [],
+      "why_stopped": []
+     }
+    ],
+    "interventional_studies": [],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-AAV-3",
+       "votes": "conditional",
+       "text": "If the mutant protein actively jams the machine, adding healthy copies may be diluted out by it, so supplementation alone may not be enough."
+      },
+      {
+       "rule": "R-AAV-4",
+       "votes": "conditional",
+       "text": "For variants that make the protein do too much, adding more of it is the wrong direction, so eligibility would have to be decided per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-3",
+       "text": "Whether the dominant-negative reading holds for this gene is itself contested in the graph; see the driven_by edge."
+      },
+      {
+       "rule": "R-AAV-4",
+       "text": "Gene supplementation is not reversible, which raises the cost of getting the variant's functional class wrong."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674",
+      "PMID:41166419#723161",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT1|driven_by|mech:dominant-negative",
+       "disease:SYT1|driven_by|mech:gain-of-function",
+       "disease:SYT1|driven_by|mech:haploinsufficiency"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1"
+      ]
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-AAV-3",
+      "R-AAV-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:haploinsufficiency. Which reading is right changes the fit."
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-KD-1b",
+       "votes": "conditional",
+       "text": "Only a minority of published variants in this gene act by gain of function, so knockdown would fit that subset and work against everyone else."
+      },
+      {
+       "rule": "R-KD-2",
+       "votes": "conditional",
+       "text": "Silencing only the faulty copy is the standard answer to a dominant-negative protein, and has been achieved for a dominant-negative substitution in another disease."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "SYT1 variants show potent, graded dominant-negative effects, which is the clearest allele-specific knockdown rationale in the slice."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-KD-1b",
+       "text": "Variant-level functional classification does not exist for this gene yet (gap:variant-level-mechanism-map)."
+      },
+      {
+       "rule": "R-KD-2",
+       "text": "Allele-specific targeting of a single-nucleotide change is hard and has to be built per variant."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "One SYT1 variant instead increases spontaneous and asynchronous release, so a single gene-level strategy will not fit everyone."
+      }
+     ],
+     "citation_ids": [
+      "PMID:41166419#723161",
+      "PMID:38617974#721064",
+      "PMID:32362337#125790",
+      "PMID:38321119#154605"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT1|driven_by|mech:dominant-negative",
+       "disease:SYT1|driven_by|mech:gain-of-function",
+       "disease:SYT1|driven_by|mech:haploinsufficiency"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1"
+      ]
+     },
+     "rules_fired": [
+      "R-KD-1b",
+      "R-KD-2"
+     ],
+     "open_questions_for_expert": [
+      "Is residual wild-type SYT1 (plus SYT2) enough once the mutant allele is silenced, or does the cell need the lost copy back as well?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:haploinsufficiency. Which reading is right changes the fit."
+     ]
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-1",
+       "votes": "good",
+       "text": "Making the intact copy produce more protein is the mechanism-matched approach to haploinsufficiency, and both ASO and CRISPRa versions have rescued haploinsufficient animals."
+      },
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-3",
+       "votes": "conditional",
+       "text": "Upregulation that is not allele-specific raises the mutant transcript too, and for an aggregating or interfering protein more mutant may offset more wild type."
+      },
+      {
+       "rule": "R-UP-4",
+       "votes": "conditional",
+       "text": "For gain-of-function variants, raising expression is the wrong direction, so eligibility would be per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-UP-3",
+       "text": "A promoter- or splicing-level drug cannot currently distinguish the two alleles."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32848094#272300",
+      "PMID:40963013#599803",
+      "PMID:30545847#280994",
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:27597756#332442",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT1|driven_by|mech:dominant-negative",
+       "disease:SYT1|driven_by|mech:gain-of-function",
+       "disease:SYT1|driven_by|mech:haploinsufficiency"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1"
+      ]
+     },
+     "rules_fired": [
+      "R-UP-1",
+      "R-UP-2",
+      "R-UP-3",
+      "R-UP-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:haploinsufficiency. Which reading is right changes the fit."
+     ]
+    },
+    "chemical_chaperone": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-CH-3",
+       "votes": "poor",
+       "text": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone."
+      }
+     ],
+     "caveats": [],
+     "citation_ids": [],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT1|driven_by|mech:dominant-negative",
+       "disease:SYT1|driven_by|mech:gain-of-function",
+       "disease:SYT1|driven_by|mech:haploinsufficiency"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1"
+      ]
+     },
+     "rules_fired": [
+      "R-CH-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:haploinsufficiency. Which reading is right changes the fit."
+     ]
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-2",
+       "votes": "conditional",
+       "text": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does."
+      },
+      {
+       "rule": "R-SX-3",
+       "votes": "conditional",
+       "text": "The same gene contains variants that increase release, and for those a release-boosting drug points the wrong way, so variant class has to be established first."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-2",
+       "text": "Evidence in the central presentation is a case report and a cell model, not a trial."
+      },
+      {
+       "rule": "R-SX-3",
+       "text": "Aminopyridines have a narrow therapeutic range and a dose-related seizure risk, which matters in a population that already has epilepsy."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32906212#581063",
+      "PMID:40181518#42053",
+      "PMID:40181518#506064",
+      "PMID:22703551#342004"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT1|driven_by|mech:dominant-negative",
+       "disease:SYT1|driven_by|mech:gain-of-function",
+       "disease:SYT1|driven_by|mech:haploinsufficiency"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1"
+      ]
+     },
+     "rules_fired": [
+      "R-SX-2",
+      "R-SX-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:haploinsufficiency. Which reading is right changes the fit."
+     ]
+    },
+    "gene_editing": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-ED-2",
+       "votes": "conditional",
+       "text": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT1|driven_by|mech:dominant-negative",
+       "disease:SYT1|driven_by|mech:gain-of-function",
+       "disease:SYT1|driven_by|mech:haploinsufficiency"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SYT1"
+      ]
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-ED-2"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:haploinsufficiency. Which reading is right changes the fit."
+     ]
+    }
+   }
+  },
+  "disease:SNAP25": {
+   "gene": "SNAP25",
+   "label": "SNAP25-related disorders",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 621,
+     "fits_4_7kb": true,
+     "protein_length_aa": 206
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 59,
+     "by_consequence": {
+      "nonsense": 2,
+      "frameshift": 1,
+      "splice": 4,
+      "missense": 17,
+      "inframe_indel": 2,
+      "cnv": 33
+     },
+     "null_like_share": 0.119,
+     "recurrent_residues": [
+      "A199",
+      "D166",
+      "L57",
+      "V48"
+     ],
+     "allele_specific_plausible": true
+    },
+    "minority_mechanisms": [],
+    "contested_mechanisms": [
+     "mech:loss-of-function"
+    ],
+    "target_tissue": [
+     "CNS",
+     "neuromuscular junction"
+    ],
+    "nmj_evidence": {
+     "subtypes": [
+      "congenital myasthenic syndrome 18",
+      "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+     ],
+     "phenotypes": [
+      "Areflexia",
+      "Fatigable weakness"
+     ]
+    },
+    "overexpression_data": true,
+    "validity_gaps": [],
+    "existing_programmes": [
+     {
+      "therapy": "therapy:aminopyridine-presynaptic-boost",
+      "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+      "modality": "repurposed_drug",
+      "stage": "clinical",
+      "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25",
+      "edge_status": "contested",
+      "trials": [],
+      "trial_status": [],
+      "why_stopped": []
+     }
+    ],
+    "interventional_studies": [
+     {
+      "study": "study:NCT02562066",
+      "label": "Amifampridine Phosphate for the Treatment of Congenital Myasthenic Syndromes",
+      "status": "COMPLETED",
+      "edge_id": "study:NCT02562066|studies|disease:SNAP25"
+     }
+    ],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-AAV-3",
+       "votes": "conditional",
+       "text": "If the mutant protein actively jams the machine, adding healthy copies may be diluted out by it, so supplementation alone may not be enough."
+      },
+      {
+       "rule": "R-AAV-4",
+       "votes": "conditional",
+       "text": "For variants that make the protein do too much, adding more of it is the wrong direction, so eligibility would have to be decided per variant."
+      },
+      {
+       "rule": "R-AAV-5",
+       "votes": "conditional",
+       "text": "Overexpression of this protein has measurable consequences in animals, so the dose window matters as much as the delivery."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-3",
+       "text": "Whether the dominant-negative reading holds for this gene is itself contested in the graph; see the driven_by edge."
+      },
+      {
+       "rule": "R-AAV-4",
+       "text": "Gene supplementation is not reversible, which raises the cost of getting the variant's functional class wrong."
+      },
+      {
+       "rule": "R-AAV-5",
+       "text": "Dose-finding needs a biomarker of protein level; no human threshold is established for any gene in this slice."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674",
+      "PMID:41166419#723161",
+      "PMID:34378168#922399",
+      "PMID:20002519#928282"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SNAP25|driven_by|mech:dominant-negative",
+       "disease:SNAP25|driven_by|mech:gain-of-function",
+       "disease:SNAP25|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25"
+      ]
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-AAV-3",
+      "R-AAV-4",
+      "R-AAV-5"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-KD-1",
+       "votes": "good",
+       "text": "When the faulty product does too much, lowering it is the matching direction, and ASO knockdown has done this in a gain-of-function epilepsy model."
+      },
+      {
+       "rule": "R-KD-2",
+       "votes": "conditional",
+       "text": "Silencing only the faulty copy is the standard answer to a dominant-negative protein, and has been achieved for a dominant-negative substitution in another disease."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-KD-1",
+       "text": "Benefit was shown in a different gene and species; nothing of the kind has been tried in this slice."
+      },
+      {
+       "rule": "R-KD-2",
+       "text": "Allele-specific targeting of a single-nucleotide change is hard and has to be built per variant."
+      }
+     ],
+     "citation_ids": [
+      "PMID:34850743#796576",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SNAP25|driven_by|mech:dominant-negative",
+       "disease:SNAP25|driven_by|mech:gain-of-function",
+       "disease:SNAP25|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25"
+      ]
+     },
+     "rules_fired": [
+      "R-KD-1",
+      "R-KD-2"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-3",
+       "votes": "conditional",
+       "text": "Upregulation that is not allele-specific raises the mutant transcript too, and for an aggregating or interfering protein more mutant may offset more wild type."
+      },
+      {
+       "rule": "R-UP-4",
+       "votes": "conditional",
+       "text": "For gain-of-function variants, raising expression is the wrong direction, so eligibility would be per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-UP-3",
+       "text": "A promoter- or splicing-level drug cannot currently distinguish the two alleles."
+      }
+     ],
+     "citation_ids": [
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:27597756#332442",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SNAP25|driven_by|mech:dominant-negative",
+       "disease:SNAP25|driven_by|mech:gain-of-function",
+       "disease:SNAP25|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25"
+      ]
+     },
+     "rules_fired": [
+      "R-UP-2",
+      "R-UP-3",
+      "R-UP-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "chemical_chaperone": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-CH-3",
+       "votes": "poor",
+       "text": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone."
+      }
+     ],
+     "caveats": [],
+     "citation_ids": [],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SNAP25|driven_by|mech:dominant-negative",
+       "disease:SNAP25|driven_by|mech:gain-of-function",
+       "disease:SNAP25|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25"
+      ]
+     },
+     "rules_fired": [
+      "R-CH-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-1",
+       "votes": "good",
+       "text": "For presynaptic congenital myasthenic syndromes these drugs are the established symptomatic option, and the choice follows the genetic defect."
+      },
+      {
+       "rule": "R-SX-3",
+       "votes": "conditional",
+       "text": "The same gene contains variants that increase release, and for those a release-boosting drug points the wrong way, so variant class has to be established first."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "The completed amifampridine CMS trial lists SNAP25B deficiency in its eligibility criteria, so this is an existing programme and not a gap."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "In human neurons the I67N variant's phenotype was ameliorated by 4-aminopyridine."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-1",
+       "text": "Benefit is symptomatic: it does not change the course of the brain phenotype."
+      },
+      {
+       "rule": "R-SX-3",
+       "text": "Aminopyridines have a narrow therapeutic range and a dose-related seizure risk, which matters in a population that already has epilepsy."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "A second SNAP25 variant (V48F) increases spontaneous release in patient neurons, and one variant is strongly dominant-negative, so the gene label does not predict the direction."
+      }
+     ],
+     "citation_ids": [
+      "PMID:19019305#583234",
+      "PMID:22911480#716991",
+      "PMID:40181518#506064",
+      "PMID:22703551#342004",
+      "PMID:40181518#42053",
+      "PMID:41579375#140664"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SNAP25|driven_by|mech:dominant-negative",
+       "disease:SNAP25|driven_by|mech:gain-of-function",
+       "disease:SNAP25|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25"
+      ]
+     },
+     "rules_fired": [
+      "R-SX-1",
+      "R-SX-3"
+     ],
+     "open_questions_for_expert": [
+      "Do SNAP25-DEE patients without a myasthenic diagnosis have subclinical neuromuscular involvement (is repetitive nerve stimulation worth doing)?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "gene_editing": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-ED-2",
+       "votes": "conditional",
+       "text": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SNAP25|driven_by|mech:dominant-negative",
+       "disease:SNAP25|driven_by|mech:gain-of-function",
+       "disease:SNAP25|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25"
+      ]
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-ED-2"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    }
+   }
+  },
+  "disease:VAMP2": {
+   "gene": "VAMP2",
+   "label": "VAMP2-related disorders",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 351,
+     "fits_4_7kb": true,
+     "protein_length_aa": 116
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 35,
+     "by_consequence": {
+      "nonsense": 2,
+      "frameshift": 2,
+      "splice": 2,
+      "missense": 7,
+      "inframe_indel": 1,
+      "cnv": 20,
+      "other": 1
+     },
+     "null_like_share": 0.171,
+     "recurrent_residues": [
+      "R56"
+     ],
+     "allele_specific_plausible": true
+    },
+    "minority_mechanisms": [
+     "mech:gain-of-function"
+    ],
+    "contested_mechanisms": [
+     "mech:gain-of-function",
+     "mech:protein-destabilization"
+    ],
+    "target_tissue": [
+     "CNS"
+    ],
+    "nmj_evidence": {
+     "subtypes": [],
+     "phenotypes": []
+    },
+    "overexpression_data": false,
+    "validity_gaps": [],
+    "existing_programmes": [
+     {
+      "therapy": "therapy:aminopyridine-presynaptic-boost",
+      "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+      "modality": "repurposed_drug",
+      "stage": "clinical",
+      "edge_id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2",
+      "edge_status": "contested",
+      "trials": [],
+      "trial_status": [],
+      "why_stopped": []
+     }
+    ],
+    "interventional_studies": [],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-AAV-4",
+       "votes": "conditional",
+       "text": "For variants that make the protein do too much, adding more of it is the wrong direction, so eligibility would have to be decided per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-4",
+       "text": "Gene supplementation is not reversible, which raises the cost of getting the variant's functional class wrong."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:VAMP2|driven_by|mech:gain-of-function",
+       "disease:VAMP2|driven_by|mech:loss-of-function",
+       "disease:VAMP2|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2"
+      ]
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-AAV-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-KD-1b",
+       "votes": "conditional",
+       "text": "Only a minority of published variants in this gene act by gain of function, so knockdown would fit that subset and work against everyone else."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-KD-1b",
+       "text": "Variant-level functional classification does not exist for this gene yet (gap:variant-level-mechanism-map)."
+      }
+     ],
+     "citation_ids": [
+      "PMID:41166419#723161"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:VAMP2|driven_by|mech:gain-of-function",
+       "disease:VAMP2|driven_by|mech:loss-of-function",
+       "disease:VAMP2|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2"
+      ]
+     },
+     "rules_fired": [
+      "R-KD-1b"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-3",
+       "votes": "conditional",
+       "text": "Upregulation that is not allele-specific raises the mutant transcript too, and for an aggregating or interfering protein more mutant may offset more wild type."
+      },
+      {
+       "rule": "R-UP-4",
+       "votes": "conditional",
+       "text": "For gain-of-function variants, raising expression is the wrong direction, so eligibility would be per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-UP-3",
+       "text": "A promoter- or splicing-level drug cannot currently distinguish the two alleles."
+      }
+     ],
+     "citation_ids": [
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:27597756#332442",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:VAMP2|driven_by|mech:gain-of-function",
+       "disease:VAMP2|driven_by|mech:loss-of-function",
+       "disease:VAMP2|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2"
+      ]
+     },
+     "rules_fired": [
+      "R-UP-2",
+      "R-UP-3",
+      "R-UP-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "chemical_chaperone": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-CH-1",
+       "votes": "good",
+       "text": "A chaperone's whole purpose is to stabilise a protein that would work if it were not degraded, which is exactly what the destabilization evidence for this gene describes."
+      },
+      {
+       "rule": "R-CH-4",
+       "votes": "conditional",
+       "text": "Generic chemical chaperones are not selective: for this class the required concentrations and possible toxicity are the stated reason to look for a targeted molecule instead."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "Nine VAMP2 disease variants were characterised as having SNARE-complex affinity, stability and conformational defects, which is the stated handle for a stabiliser."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-CH-4",
+       "text": "Whether the benefit comes from correcting the mutant or from helping the wild-type protein traffic is unresolved, which changes who could benefit."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "Synaptobrevin-2 is natively unstructured outside the SNARE complex, so 'stability' here is not the folded-globular-protein case most chaperones were built for."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "Some VAMP2 variants increase spontaneous release instead of reducing fusion, and more of that protein is not obviously better."
+      }
+     ],
+     "citation_ids": [
+      "PMID:31940970#398852",
+      "PMID:36205620#89067",
+      "PMID:33332765#544384",
+      "PMID:35911425#917161",
+      "PMID:41166419#35907",
+      "PMID:29949059#445405",
+      "PMID:41166419#897632"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:VAMP2|driven_by|mech:gain-of-function",
+       "disease:VAMP2|driven_by|mech:loss-of-function",
+       "disease:VAMP2|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2"
+      ]
+     },
+     "rules_fired": [
+      "R-CH-1",
+      "R-CH-4"
+     ],
+     "open_questions_for_expert": [
+      "Does 4-phenylbutyrate change VAMP2 variant protein levels or SNARE-complex formation at all? No experiment reports this.",
+      "Is 'destabilization' in the VAMP2 paper the same cell-biological event as Munc18-1 aggregation or GAT-1 ER retention?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-2",
+       "votes": "conditional",
+       "text": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does."
+      },
+      {
+       "rule": "R-SX-3",
+       "votes": "conditional",
+       "text": "The same gene contains variants that increase release, and for those a release-boosting drug points the wrong way, so variant class has to be established first."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-2",
+       "text": "Evidence in the central presentation is a case report and a cell model, not a trial."
+      },
+      {
+       "rule": "R-SX-3",
+       "text": "Aminopyridines have a narrow therapeutic range and a dose-related seizure risk, which matters in a population that already has epilepsy."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32906212#581063",
+      "PMID:40181518#42053",
+      "PMID:40181518#506064",
+      "PMID:22703551#342004"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:VAMP2|driven_by|mech:gain-of-function",
+       "disease:VAMP2|driven_by|mech:loss-of-function",
+       "disease:VAMP2|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2"
+      ]
+     },
+     "rules_fired": [
+      "R-SX-2",
+      "R-SX-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "gene_editing": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-ED-2",
+       "votes": "conditional",
+       "text": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:VAMP2|driven_by|mech:gain-of-function",
+       "disease:VAMP2|driven_by|mech:loss-of-function",
+       "disease:VAMP2|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:aminopyridine-presynaptic-boost|developed_for|disease:VAMP2"
+      ]
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-ED-2"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    }
+   }
+  },
+  "disease:STX1B": {
+   "gene": "STX1B",
+   "label": "STX1B-related epilepsies",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 867,
+     "fits_4_7kb": true,
+     "protein_length_aa": 288
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 91,
+     "by_consequence": {
+      "nonsense": 14,
+      "frameshift": 18,
+      "splice": 26,
+      "missense": 11,
+      "inframe_indel": 2,
+      "cnv": 18,
+      "other": 2
+     },
+     "null_like_share": 0.637,
+     "recurrent_residues": [
+      "C144",
+      "S239"
+     ],
+     "allele_specific_plausible": true
+    },
+    "minority_mechanisms": [
+     "mech:gain-of-function"
+    ],
+    "contested_mechanisms": [
+     "mech:gain-of-function",
+     "mech:loss-of-function"
+    ],
+    "target_tissue": [
+     "CNS"
+    ],
+    "nmj_evidence": {
+     "subtypes": [],
+     "phenotypes": []
+    },
+    "overexpression_data": false,
+    "validity_gaps": [],
+    "existing_programmes": [],
+    "interventional_studies": [],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-AAV-4",
+       "votes": "conditional",
+       "text": "For variants that make the protein do too much, adding more of it is the wrong direction, so eligibility would have to be decided per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-4",
+       "text": "Gene supplementation is not reversible, which raises the cost of getting the variant's functional class wrong."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1B|driven_by|mech:gain-of-function",
+       "disease:STX1B|driven_by|mech:haploinsufficiency",
+       "disease:STX1B|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-AAV-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-KD-1b",
+       "votes": "conditional",
+       "text": "Only a minority of published variants in this gene act by gain of function, so knockdown would fit that subset and work against everyone else."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "Different STX1B variants point in opposite directions: one reduces the releasable pool, another increases fusogenicity, and patient neurons show one variant doing both."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-KD-1b",
+       "text": "Variant-level functional classification does not exist for this gene yet (gap:variant-level-mechanism-map)."
+      }
+     ],
+     "citation_ids": [
+      "PMID:41166419#723161",
+      "PMID:32572454#787574",
+      "PMID:42673765#37168"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1B|driven_by|mech:gain-of-function",
+       "disease:STX1B|driven_by|mech:haploinsufficiency",
+       "disease:STX1B|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-KD-1b"
+     ],
+     "open_questions_for_expert": [
+      "Can STX1B variants be sorted into release-up and release-down classes well enough to choose a direction of therapy?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-1",
+       "votes": "good",
+       "text": "Making the intact copy produce more protein is the mechanism-matched approach to haploinsufficiency, and both ASO and CRISPRa versions have rescued haploinsufficient animals."
+      },
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-4",
+       "votes": "conditional",
+       "text": "For gain-of-function variants, raising expression is the wrong direction, so eligibility would be per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32848094#272300",
+      "PMID:40963013#599803",
+      "PMID:30545847#280994",
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1B|driven_by|mech:gain-of-function",
+       "disease:STX1B|driven_by|mech:haploinsufficiency",
+       "disease:STX1B|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-UP-1",
+      "R-UP-2",
+      "R-UP-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "chemical_chaperone": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-CH-3",
+       "votes": "poor",
+       "text": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone."
+      }
+     ],
+     "caveats": [],
+     "citation_ids": [],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1B|driven_by|mech:gain-of-function",
+       "disease:STX1B|driven_by|mech:haploinsufficiency",
+       "disease:STX1B|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-CH-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-2",
+       "votes": "conditional",
+       "text": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does."
+      },
+      {
+       "rule": "R-SX-3",
+       "votes": "conditional",
+       "text": "The same gene contains variants that increase release, and for those a release-boosting drug points the wrong way, so variant class has to be established first."
+      },
+      {
+       "rule": "R-SX-4",
+       "votes": "conditional",
+       "text": "The fit here comes from the shared pathway only; no report names this gene, so it rests on the family argument rather than on gene-specific evidence."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-2",
+       "text": "Evidence in the central presentation is a case report and a cell model, not a trial."
+      },
+      {
+       "rule": "R-SX-3",
+       "text": "Aminopyridines have a narrow therapeutic range and a dose-related seizure risk, which matters in a population that already has epilepsy."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32906212#581063",
+      "PMID:40181518#42053",
+      "PMID:40181518#506064",
+      "PMID:22703551#342004",
+      "PMID:41166419#723161"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1B|driven_by|mech:gain-of-function",
+       "disease:STX1B|driven_by|mech:haploinsufficiency",
+       "disease:STX1B|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-SX-2",
+      "R-SX-3",
+      "R-SX-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "gene_editing": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-ED-2",
+       "votes": "conditional",
+       "text": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1B|driven_by|mech:gain-of-function",
+       "disease:STX1B|driven_by|mech:haploinsufficiency",
+       "disease:STX1B|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-ED-2"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function, mech:loss-of-function. Which reading is right changes the fit."
+     ]
+    }
+   }
+  },
+  "disease:SYT2": {
+   "gene": "SYT2",
+   "label": "SYT2-related presynaptic congenital myasthenic syndromes",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 1260,
+     "fits_4_7kb": true,
+     "protein_length_aa": 419
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 33,
+     "by_consequence": {
+      "nonsense": 2,
+      "frameshift": 5,
+      "splice": 3,
+      "missense": 5,
+      "inframe_indel": 2,
+      "cnv": 16
+     },
+     "null_like_share": 0.303,
+     "recurrent_residues": [],
+     "allele_specific_plausible": false
+    },
+    "minority_mechanisms": [],
+    "contested_mechanisms": [],
+    "target_tissue": [
+     "CNS",
+     "neuromuscular junction"
+    ],
+    "nmj_evidence": {
+     "subtypes": [
+      "congenital myasthenic syndrome 7",
+      "myasthenic syndrome, congenital, 7B, presynaptic, autosomal recessive",
+      "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis",
+      "Autosomal dominant congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+     ],
+     "phenotypes": [
+      "Areflexia",
+      "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+      "Fatigable weakness",
+      "Compound muscle action potential amplitude facilitation",
+      "Decreased compound muscle action potential amplitude"
+     ]
+    },
+    "overexpression_data": false,
+    "validity_gaps": [],
+    "existing_programmes": [
+     {
+      "therapy": "therapy:3-4-diaminopyridine",
+      "label": "3,4-Diaminopyridine (amifampridine)",
+      "modality": "repurposed_drug",
+      "stage": "clinical",
+      "edge_id": "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+      "edge_status": "contested",
+      "trials": [],
+      "trial_status": [],
+      "why_stopped": []
+     },
+     {
+      "therapy": "therapy:acetylcholinesterase-inhibitor-cms",
+      "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+      "modality": "repurposed_drug",
+      "stage": "clinical",
+      "edge_id": "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2",
+      "edge_status": "supported",
+      "trials": [],
+      "trial_status": [],
+      "why_stopped": []
+     }
+    ],
+    "interventional_studies": [
+     {
+      "study": "study:NCT02562066",
+      "label": "Amifampridine Phosphate for the Treatment of Congenital Myasthenic Syndromes",
+      "status": "COMPLETED",
+      "edge_id": "study:NCT02562066|studies|disease:SYT2"
+     }
+    ],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-AAV-3",
+       "votes": "conditional",
+       "text": "If the mutant protein actively jams the machine, adding healthy copies may be diluted out by it, so supplementation alone may not be enough."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-3",
+       "text": "Whether the dominant-negative reading holds for this gene is itself contested in the graph; see the driven_by edge."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674",
+      "PMID:41166419#723161"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT2|driven_by|mech:dominant-negative",
+       "disease:SYT2|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+       "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2"
+      ]
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-AAV-3"
+     ],
+     "open_questions_for_expert": []
+    },
+    "aso_sirna_knockdown": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-KD-2",
+       "votes": "conditional",
+       "text": "Silencing only the faulty copy is the standard answer to a dominant-negative protein, and has been achieved for a dominant-negative substitution in another disease."
+      },
+      {
+       "rule": "R-KD-3",
+       "votes": "poor",
+       "text": "The cell already makes too little of this protein, so lowering it further (total knockdown) works against the mechanism."
+      },
+      {
+       "rule": "R-KD-4",
+       "votes": "conditional",
+       "text": "No recurrent hotspot appears in the pathogenic records for this gene, so an allele-specific drug would be a one-family (n-of-1) design rather than a reusable one."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-KD-2",
+       "text": "Allele-specific targeting of a single-nucleotide change is hard and has to be built per variant."
+      }
+     ],
+     "citation_ids": [
+      "PMID:38617974#721064",
+      "PMID:41515912#687717"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT2|driven_by|mech:dominant-negative",
+       "disease:SYT2|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+       "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2"
+      ]
+     },
+     "rules_fired": [
+      "R-KD-2",
+      "R-KD-3",
+      "R-KD-4"
+     ],
+     "open_questions_for_expert": []
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-3",
+       "votes": "conditional",
+       "text": "Upregulation that is not allele-specific raises the mutant transcript too, and for an aggregating or interfering protein more mutant may offset more wild type."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-UP-3",
+       "text": "A promoter- or splicing-level drug cannot currently distinguish the two alleles."
+      }
+     ],
+     "citation_ids": [
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:27597756#332442"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT2|driven_by|mech:dominant-negative",
+       "disease:SYT2|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+       "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2"
+      ]
+     },
+     "rules_fired": [
+      "R-UP-2",
+      "R-UP-3"
+     ],
+     "open_questions_for_expert": []
+    },
+    "chemical_chaperone": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-CH-3",
+       "votes": "poor",
+       "text": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone."
+      }
+     ],
+     "caveats": [],
+     "citation_ids": [],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT2|driven_by|mech:dominant-negative",
+       "disease:SYT2|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+       "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2"
+      ]
+     },
+     "rules_fired": [
+      "R-CH-3"
+     ],
+     "open_questions_for_expert": []
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "good",
+     "reasons": [
+      {
+       "rule": "R-SX-1",
+       "votes": "good",
+       "text": "For presynaptic congenital myasthenic syndromes these drugs are the established symptomatic option, and the choice follows the genetic defect."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "good",
+       "text": "3,4-diaminopyridine gave both clinical benefit and better neuromuscular transmission in dominant SYT2 families, and helped a recessive patient."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-1",
+       "text": "Benefit is symptomatic: it does not change the course of the brain phenotype."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "In the same recessive patient albuterol did not help, so the class is not interchangeable."
+      }
+     ],
+     "citation_ids": [
+      "PMID:19019305#583234",
+      "PMID:22911480#716991",
+      "PMID:26519543#372343",
+      "PMID:32250532#867170"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT2|driven_by|mech:dominant-negative",
+       "disease:SYT2|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+       "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2"
+      ]
+     },
+     "rules_fired": [
+      "R-SX-1"
+     ],
+     "open_questions_for_expert": [
+      "Does the dominant (dominant-negative) form respond differently from the recessive (null) form?"
+     ]
+    },
+    "gene_editing": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-ED-2",
+       "votes": "conditional",
+       "text": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein."
+      },
+      {
+       "rule": "R-ED-3",
+       "votes": "poor",
+       "text": "Without a recurrent variant, each family needs its own editor, which no current development path supports for an ultra-rare disease."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SYT2|driven_by|mech:dominant-negative",
+       "disease:SYT2|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
+       "therapy:acetylcholinesterase-inhibitor-cms|developed_for|disease:SYT2"
+      ]
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-ED-2",
+      "R-ED-3"
+     ],
+     "open_questions_for_expert": []
+    }
+   }
+  },
+  "disease:CPLX1": {
+   "gene": "CPLX1",
+   "label": "CPLX1-related disorders",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 405,
+     "fits_4_7kb": true,
+     "protein_length_aa": 134
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 155,
+     "by_consequence": {
+      "nonsense": 2,
+      "frameshift": 1,
+      "cnv": 151,
+      "other": 1
+     },
+     "null_like_share": 0.019,
+     "recurrent_residues": [],
+     "allele_specific_plausible": false
+    },
+    "minority_mechanisms": [],
+    "contested_mechanisms": [],
+    "target_tissue": [
+     "CNS"
+    ],
+    "nmj_evidence": {
+     "subtypes": [],
+     "phenotypes": []
+    },
+    "overexpression_data": false,
+    "validity_gaps": [
+     "gap:cplx1-functional-evidence"
+    ],
+    "existing_programmes": [],
+    "interventional_studies": [],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:CPLX1|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "aso_sirna_knockdown": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-KD-3",
+       "votes": "poor",
+       "text": "The cell already makes too little of this protein, so lowering it further (total knockdown) works against the mechanism."
+      },
+      {
+       "rule": "R-KD-4",
+       "votes": "conditional",
+       "text": "No recurrent hotspot appears in the pathogenic records for this gene, so an allele-specific drug would be a one-family (n-of-1) design rather than a reusable one."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:41515912#687717"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:CPLX1|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-KD-3",
+      "R-KD-4",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:27398791#708706",
+      "PMID:39759875#771050"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:CPLX1|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-UP-2",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "chemical_chaperone": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-CH-3",
+       "votes": "poor",
+       "text": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:CPLX1|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-CH-3",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": [
+      "Complexin-1 is a fusion clamp, so would stabilising a clamp even be desirable? No functional study of patient variants exists."
+     ]
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-2",
+       "votes": "conditional",
+       "text": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does."
+      },
+      {
+       "rule": "R-SX-4",
+       "votes": "conditional",
+       "text": "The fit here comes from the shared pathway only; no report names this gene, so it rests on the family argument rather than on gene-specific evidence."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-2",
+       "text": "Evidence in the central presentation is a case report and a cell model, not a trial."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32906212#581063",
+      "PMID:40181518#42053",
+      "PMID:41166419#723161"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:CPLX1|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-SX-2",
+      "R-SX-4",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "gene_editing": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      },
+      {
+       "rule": "R-ED-3",
+       "votes": "poor",
+       "text": "Without a recurrent variant, each family needs its own editor, which no current development path supports for an ultra-rare disease."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:CPLX1|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-VAL-1",
+      "R-ED-3"
+     ],
+     "open_questions_for_expert": []
+    }
+   }
+  },
+  "disease:UNC13A": {
+   "gene": "UNC13A",
+   "label": "UNC13A-related disorders",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 5112,
+     "fits_4_7kb": false,
+     "protein_length_aa": 1703
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 21,
+     "by_consequence": {
+      "nonsense": 1,
+      "frameshift": 1,
+      "missense": 8,
+      "cnv": 11
+     },
+     "null_like_share": 0.095,
+     "recurrent_residues": [
+      "G808"
+     ],
+     "allele_specific_plausible": true
+    },
+    "minority_mechanisms": [],
+    "contested_mechanisms": [
+     "mech:gain-of-function"
+    ],
+    "target_tissue": [
+     "CNS",
+     "neuromuscular junction"
+    ],
+    "nmj_evidence": {
+     "subtypes": [
+      "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+     ],
+     "phenotypes": [
+      "Decreased compound muscle action potential amplitude"
+     ]
+    },
+    "overexpression_data": false,
+    "validity_gaps": [],
+    "existing_programmes": [
+     {
+      "therapy": "therapy:unc13a-splice-switching-aso",
+      "label": "UNC13A cryptic-exon splice-switching ASO",
+      "modality": "aso",
+      "stage": "preclinical",
+      "edge_id": "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A",
+      "edge_status": "supported",
+      "trials": [],
+      "trial_status": [],
+      "why_stopped": []
+     }
+    ],
+    "interventional_studies": [],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-AAV-1",
+       "votes": "poor",
+       "text": "The coding sequence is too large for one standard AAV genome, so a single-vector gene replacement is not available."
+      },
+      {
+       "rule": "R-AAV-4",
+       "votes": "conditional",
+       "text": "For variants that make the protein do too much, adding more of it is the wrong direction, so eligibility would have to be decided per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-1",
+       "text": "Dual/split-vector and other strategies to exceed the limit exist, but add complexity and are not de-risked here."
+      },
+      {
+       "rule": "R-AAV-4",
+       "text": "Gene supplementation is not reversible, which raises the cost of getting the variant's functional class wrong."
+      }
+     ],
+     "citation_ids": [
+      "PMID:34904932#338843",
+      "PMID:34904932#367923",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:UNC13A|driven_by|mech:gain-of-function",
+       "disease:UNC13A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A"
+      ]
+     },
+     "rules_fired": [
+      "R-AAV-1",
+      "R-AAV-4"
+     ],
+     "open_questions_for_expert": [
+      "Is the 5.1 kb CDS the real blocker for a Munc13-1 strategy, or is dose/regulation the bigger problem?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "good",
+     "reasons": [
+      {
+       "rule": "R-KD-1",
+       "votes": "good",
+       "text": "When the faulty product does too much, lowering it is the matching direction, and ASO knockdown has done this in a gain-of-function epilepsy model."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "good",
+       "text": "A splice-switching ASO that blocks the UNC13A cryptic exon restores the protein and synaptic function, so an UNC13A oligonucleotide already exists as a tool."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-KD-1",
+       "text": "Benefit was shown in a different gene and species; nothing of the kind has been tried in this slice."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "That ASO was built for TDP-43-related ALS, where the cryptic exon is the problem. It raises UNC13A rather than lowering it, and nothing connects it to the Mendelian UNC13A disorder."
+      }
+     ],
+     "citation_ids": [
+      "PMID:34850743#796576",
+      "PMID:38979232#453747"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:UNC13A|driven_by|mech:gain-of-function",
+       "disease:UNC13A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A"
+      ]
+     },
+     "rules_fired": [
+      "R-KD-1"
+     ],
+     "open_questions_for_expert": [
+      "Could the ALS cryptic-exon ASO be repurposed as an upregulator for UNC13A haploinsufficiency, and is the cryptic exon even used in these patients?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-4",
+       "votes": "conditional",
+       "text": "For gain-of-function variants, raising expression is the wrong direction, so eligibility would be per variant."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      }
+     ],
+     "citation_ids": [
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:34378168#922399"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:UNC13A|driven_by|mech:gain-of-function",
+       "disease:UNC13A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A"
+      ]
+     },
+     "rules_fired": [
+      "R-UP-2",
+      "R-UP-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "chemical_chaperone": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-CH-3",
+       "votes": "poor",
+       "text": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone."
+      }
+     ],
+     "caveats": [],
+     "citation_ids": [],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:UNC13A|driven_by|mech:gain-of-function",
+       "disease:UNC13A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A"
+      ]
+     },
+     "rules_fired": [
+      "R-CH-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-1",
+       "votes": "good",
+       "text": "For presynaptic congenital myasthenic syndromes these drugs are the established symptomatic option, and the choice follows the genetic defect."
+      },
+      {
+       "rule": "R-SX-3",
+       "votes": "conditional",
+       "text": "The same gene contains variants that increase release, and for those a release-boosting drug points the wrong way, so variant class has to be established first."
+      },
+      {
+       "rule": "R-SX-4",
+       "votes": "conditional",
+       "text": "The fit here comes from the shared pathway only; no report names this gene, so it rests on the family argument rather than on gene-specific evidence."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "The recessive truncating presentation is a presynaptic failure with a depleted readily releasable pool, which is the physiology these drugs act on; UNC13A is in the CMS registry's gene list."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-1",
+       "text": "Benefit is symptomatic: it does not change the course of the brain phenotype."
+      },
+      {
+       "rule": "R-SX-3",
+       "text": "Aminopyridines have a narrow therapeutic range and a dose-related seizure risk, which matters in a population that already has epilepsy."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "Three mechanisms coexist in this gene, including gain of function, so the variant class has to be settled before a release-boosting drug is considered."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "Unlike SNAP25 and SYT2, UNC13A is NOT named in the amifampridine trial's eligibility list, so there is no existing programme for it."
+      }
+     ],
+     "citation_ids": [
+      "PMID:19019305#583234",
+      "PMID:22911480#716991",
+      "PMID:40181518#506064",
+      "PMID:22703551#342004",
+      "PMID:41166419#723161",
+      "PMID:27648472#215854",
+      "PMID:41125872#370907"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:UNC13A|driven_by|mech:gain-of-function",
+       "disease:UNC13A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A"
+      ]
+     },
+     "rules_fired": [
+      "R-SX-1",
+      "R-SX-3",
+      "R-SX-4"
+     ],
+     "open_questions_for_expert": [
+      "Has any UNC13A patient been given 3,4-DAP, and was neuromuscular transmission measured before and after?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function. Which reading is right changes the fit."
+     ]
+    },
+    "gene_editing": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-ED-2",
+       "votes": "conditional",
+       "text": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:UNC13A|driven_by|mech:gain-of-function",
+       "disease:UNC13A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": [
+       "therapy:unc13a-splice-switching-aso|developed_for|disease:UNC13A"
+      ]
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-ED-2"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:gain-of-function. Which reading is right changes the fit."
+     ]
+    }
+   }
+  },
+  "disease:STX1A": {
+   "gene": "STX1A",
+   "label": "STX1A-related neurodevelopmental disorder",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 867,
+     "fits_4_7kb": true,
+     "protein_length_aa": 288
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 161,
+     "by_consequence": {
+      "splice": 2,
+      "missense": 3,
+      "inframe_indel": 1,
+      "cnv": 153,
+      "other": 2
+     },
+     "null_like_share": 0.012,
+     "recurrent_residues": [],
+     "allele_specific_plausible": false
+    },
+    "minority_mechanisms": [],
+    "contested_mechanisms": [],
+    "target_tissue": [
+     "CNS"
+    ],
+    "nmj_evidence": {
+     "subtypes": [],
+     "phenotypes": []
+    },
+    "overexpression_data": false,
+    "validity_gaps": [
+     "gap:stx1a-mendelian-validity"
+    ],
+    "existing_programmes": [],
+    "interventional_studies": [],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": [
+      "Is STX1A an established Mendelian disease gene at all (see gap:stx1a-mendelian-validity)? Modality screening is premature until that is settled."
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-KD-3",
+       "votes": "poor",
+       "text": "The cell already makes too little of this protein, so lowering it further (total knockdown) works against the mechanism."
+      },
+      {
+       "rule": "R-KD-4",
+       "votes": "conditional",
+       "text": "No recurrent hotspot appears in the pathogenic records for this gene, so an allele-specific drug would be a one-family (n-of-1) design rather than a reusable one."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:41515912#687717"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-KD-3",
+      "R-KD-4",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:27398791#708706",
+      "PMID:39759875#771050"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-UP-2",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "chemical_chaperone": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-CH-3",
+       "votes": "poor",
+       "text": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-CH-3",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-2",
+       "votes": "conditional",
+       "text": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does."
+      },
+      {
+       "rule": "R-SX-4",
+       "votes": "conditional",
+       "text": "The fit here comes from the shared pathway only; no report names this gene, so it rests on the family argument rather than on gene-specific evidence."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-2",
+       "text": "Evidence in the central presentation is a case report and a cell model, not a trial."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32906212#581063",
+      "PMID:40181518#42053",
+      "PMID:41166419#723161"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-SX-2",
+      "R-SX-4",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "gene_editing": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      },
+      {
+       "rule": "R-ED-3",
+       "votes": "poor",
+       "text": "Without a recurrent variant, each family needs its own editor, which no current development path supports for an ultra-rare disease."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:STX1A|driven_by|mech:loss-of-function"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-VAL-1",
+      "R-ED-3"
+     ],
+     "open_questions_for_expert": []
+    }
+   }
+  },
+  "disease:NSF": {
+   "gene": "NSF",
+   "label": "NSF-related developmental and epileptic encephalopathy",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 2235,
+     "fits_4_7kb": true,
+     "protein_length_aa": 744
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 18,
+     "by_consequence": {
+      "missense": 6,
+      "inframe_indel": 1,
+      "cnv": 11
+     },
+     "null_like_share": 0.0,
+     "recurrent_residues": [
+      "P563"
+     ],
+     "allele_specific_plausible": true
+    },
+    "minority_mechanisms": [],
+    "contested_mechanisms": [],
+    "target_tissue": [
+     "CNS"
+    ],
+    "nmj_evidence": {
+     "subtypes": [],
+     "phenotypes": []
+    },
+    "overexpression_data": false,
+    "validity_gaps": [
+     "gap:nsf-functional-evidence"
+    ],
+    "existing_programmes": [],
+    "interventional_studies": [],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-3",
+       "votes": "conditional",
+       "text": "If the mutant protein actively jams the machine, adding healthy copies may be diluted out by it, so supplementation alone may not be enough."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-3",
+       "text": "Whether the dominant-negative reading holds for this gene is itself contested in the graph; see the driven_by edge."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:41166419#723161"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:NSF|driven_by|mech:dominant-negative"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-AAV-3",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": [
+      "The only NSF mechanism evidence is a Drosophila eye assay; does the dominant-negative claim hold in neurons before any supplementation logic is applied?"
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-KD-2",
+       "votes": "conditional",
+       "text": "Silencing only the faulty copy is the standard answer to a dominant-negative protein, and has been achieved for a dominant-negative substitution in another disease."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-KD-2",
+       "text": "Allele-specific targeting of a single-nucleotide change is hard and has to be built per variant."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:NSF|driven_by|mech:dominant-negative"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-KD-2",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-3",
+       "votes": "conditional",
+       "text": "Upregulation that is not allele-specific raises the mutant transcript too, and for an aggregating or interfering protein more mutant may offset more wild type."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-UP-3",
+       "text": "A promoter- or splicing-level drug cannot currently distinguish the two alleles."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:27597756#332442"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:NSF|driven_by|mech:dominant-negative"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-UP-2",
+      "R-UP-3",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "chemical_chaperone": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-CH-3",
+       "votes": "poor",
+       "text": "Nothing in the atlas links this gene's disease to an unstable or misfolded protein, so there is no stated target for a chaperone."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:NSF|driven_by|mech:dominant-negative"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-CH-3",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-2",
+       "votes": "conditional",
+       "text": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does."
+      },
+      {
+       "rule": "R-SX-4",
+       "votes": "conditional",
+       "text": "The fit here comes from the shared pathway only; no report names this gene, so it rests on the family argument rather than on gene-specific evidence."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-2",
+       "text": "Evidence in the central presentation is a case report and a cell model, not a trial."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32906212#581063",
+      "PMID:40181518#42053",
+      "PMID:41166419#723161"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:NSF|driven_by|mech:dominant-negative"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-SX-2",
+      "R-SX-4",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    },
+    "gene_editing": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      },
+      {
+       "rule": "R-ED-2",
+       "votes": "conditional",
+       "text": "Correcting or disabling the faulty allele is the one approach that addresses an interfering protein without adding more protein."
+      },
+      {
+       "rule": "R-VAL-1",
+       "votes": "conditional",
+       "text": "The gene-disease link or the mechanism itself is flagged as a gap in the atlas, so no modality can score better than conditional until that is settled."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      },
+      {
+       "rule": "R-VAL-1",
+       "text": "This caps the fit; it is not evidence against the approach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344",
+      "PMID:38617974#721064"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:NSF|driven_by|mech:dominant-negative"
+      ],
+      "existing_programmes": []
+     },
+     "rules_fired": [
+      "R-ED-1",
+      "R-ED-2",
+      "R-VAL-1"
+     ],
+     "open_questions_for_expert": []
+    }
+   }
+  },
+  "disease:SLC6A1": {
+   "gene": "SLC6A1",
+   "label": "SLC6A1-related disorders",
+   "checks": {
+    "aav_packaging": {
+     "cds_length_bp": 1800,
+     "fits_4_7kb": true,
+     "protein_length_aa": 599
+    },
+    "variant_class_mix": {
+     "n_clinvar_plp": 243,
+     "by_consequence": {
+      "nonsense": 34,
+      "frameshift": 38,
+      "splice": 26,
+      "missense": 89,
+      "inframe_indel": 6,
+      "cnv": 49,
+      "other": 1
+     },
+     "null_like_share": 0.403,
+     "recurrent_residues": [
+      "G75",
+      "A357",
+      "A288",
+      "C164",
+      "D52"
+     ],
+     "allele_specific_plausible": true
+    },
+    "minority_mechanisms": [],
+    "contested_mechanisms": [
+     "mech:protein-destabilization"
+    ],
+    "target_tissue": [
+     "CNS"
+    ],
+    "nmj_evidence": {
+     "subtypes": [],
+     "phenotypes": []
+    },
+    "overexpression_data": true,
+    "validity_gaps": [],
+    "existing_programmes": [
+     {
+      "therapy": "therapy:4-phenylbutyrate",
+      "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+      "modality": "chaperone",
+      "stage": "clinical",
+      "edge_id": "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+      "edge_status": "contested",
+      "trials": [
+       "NCT04937062",
+       "NCT07847918"
+      ],
+      "trial_status": [
+       "ACTIVE_NOT_RECRUITING",
+       "RECRUITING"
+      ],
+      "why_stopped": []
+     },
+     {
+      "therapy": "therapy:aav-slc6a1-gene-replacement",
+      "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+      "modality": "gene_replacement",
+      "stage": "clinical",
+      "edge_id": "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1",
+      "edge_status": "supported",
+      "trials": [
+       "NCT07173153"
+      ],
+      "trial_status": [
+       "ENROLLING_BY_INVITATION"
+      ],
+      "why_stopped": []
+     }
+    ],
+    "interventional_studies": [
+     {
+      "study": "study:NCT04937062",
+      "label": "Phenylbutyrate for Monogenetic Developmental and Epileptic Encephalopathy",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "edge_id": "study:NCT04937062|studies|disease:SLC6A1"
+     },
+     {
+      "study": "study:NCT07173153",
+      "label": "Gene Therapy for SLC6A1 Neurodevelopmental Disorder",
+      "status": "ENROLLING_BY_INVITATION",
+      "edge_id": "study:NCT07173153|studies|disease:SLC6A1"
+     },
+     {
+      "study": "study:NCT07847918",
+      "label": "A Fully Remote Feasibility Trial of Phenylbutyrate for SLC6A1-Related Disorders",
+      "status": "RECRUITING",
+      "edge_id": "study:NCT07847918|studies|disease:SLC6A1"
+     }
+    ],
+    "stopped_programmes": []
+   },
+   "modalities": {
+    "aav_gene_replacement": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-AAV-2",
+       "votes": "good",
+       "text": "Too little working protein from one lost or non-functional copy is the mechanism gene supplementation is designed for, and the coding sequence fits one AAV."
+      },
+      {
+       "rule": "R-AAV-5",
+       "votes": "conditional",
+       "text": "Overexpression of this protein has measurable consequences in animals, so the dose window matters as much as the delivery."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "Raising wild-type SLC6A1 expression is the stated strategy for this gene, and a first-in-human intrathecal AAV9 trial is open (by invitation, n=1)."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-AAV-5",
+       "text": "Dose-finding needs a biomarker of protein level; no human threshold is established for any gene in this slice."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "Transporter dose cuts both ways: mice overexpressing GAT-1 show cognitive deterioration, reversible with a GAT-1 inhibitor."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42462387#556674",
+      "PMID:11742587#476826",
+      "PMID:15106822#538628",
+      "PMID:38781976#140788"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+       "disease:SLC6A1|driven_by|mech:loss-of-function",
+       "disease:SLC6A1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+       "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1"
+      ]
+     },
+     "rules_fired": [
+      "R-AAV-2",
+      "R-AAV-5"
+     ],
+     "open_questions_for_expert": [
+      "What is the acceptable upper bound on GAT-1 expression in a developing human brain?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "aso_sirna_knockdown": {
+     "fit": "poor",
+     "reasons": [
+      {
+       "rule": "R-KD-3",
+       "votes": "poor",
+       "text": "The cell already makes too little of this protein, so lowering it further (total knockdown) works against the mechanism."
+      }
+     ],
+     "caveats": [],
+     "citation_ids": [
+      "PMID:41515912#687717"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+       "disease:SLC6A1|driven_by|mech:loss-of-function",
+       "disease:SLC6A1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+       "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1"
+      ]
+     },
+     "rules_fired": [
+      "R-KD-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "transcript_upregulation": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-UP-1",
+       "votes": "good",
+       "text": "Making the intact copy produce more protein is the mechanism-matched approach to haploinsufficiency, and both ASO and CRISPRa versions have rescued haploinsufficient animals."
+      },
+      {
+       "rule": "R-UP-2",
+       "votes": "conditional",
+       "text": "Each of these drugs needs a specific handle in the gene itself: a non-productive splicing event, a uORF, or a workable promoter/enhancer. Whether one exists here is not established."
+      },
+      {
+       "rule": "R-UP-3",
+       "votes": "conditional",
+       "text": "Upregulation that is not allele-specific raises the mutant transcript too, and for an aggregating or interfering protein more mutant may offset more wild type."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-UP-2",
+       "text": "A uORF-blocking result has failed to reproduce in independent hands, so a candidate element is not a candidate drug."
+      },
+      {
+       "rule": "R-UP-3",
+       "text": "A promoter- or splicing-level drug cannot currently distinguish the two alleles."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32848094#272300",
+      "PMID:40963013#599803",
+      "PMID:30545847#280994",
+      "PMID:27398791#708706",
+      "PMID:39759875#771050",
+      "PMID:27597756#332442"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+       "disease:SLC6A1|driven_by|mech:loss-of-function",
+       "disease:SLC6A1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+       "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1"
+      ]
+     },
+     "rules_fired": [
+      "R-UP-1",
+      "R-UP-2",
+      "R-UP-3"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "chemical_chaperone": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-CH-1",
+       "votes": "good",
+       "text": "A chaperone's whole purpose is to stabilise a protein that would work if it were not degraded, which is exactly what the destabilization evidence for this gene describes."
+      },
+      {
+       "rule": "R-CH-4",
+       "votes": "conditional",
+       "text": "Generic chemical chaperones are not selective: for this class the required concentrations and possible toxicity are the stated reason to look for a targeted molecule instead."
+      },
+      {
+       "rule": "gene-specific",
+       "votes": "conditional",
+       "text": "Phenylbutyrate restored GABA uptake and surface expression across tested variants, and misfolding with ER retention is documented for this transporter."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-CH-4",
+       "text": "Whether the benefit comes from correcting the mutant or from helping the wild-type protein traffic is unresolved, which changes who could benefit."
+      },
+      {
+       "rule": "gene-specific",
+       "text": "About a third of loss-of-function missense variants do reach the cell surface and still fail to transport, and those are outside any chaperone's reach."
+      }
+     ],
+     "citation_ids": [
+      "PMID:31940970#398852",
+      "PMID:36205620#89067",
+      "PMID:33332765#544384",
+      "PMID:35911425#917161",
+      "PMID:42157447#316727",
+      "PMID:34028503#715915",
+      "PMID:38781976#972774",
+      "PMID:36741049#367542"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+       "disease:SLC6A1|driven_by|mech:loss-of-function",
+       "disease:SLC6A1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+       "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1"
+      ]
+     },
+     "rules_fired": [
+      "R-CH-1",
+      "R-CH-4"
+     ],
+     "open_questions_for_expert": [
+      "Can surface-expression assays be used prospectively to select who enters a chaperone trial?",
+      "The mechanism edges this screen rests on are contested in the graph: mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "symptomatic_pathway_small_molecule": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-SX-2",
+       "votes": "conditional",
+       "text": "Pushing more release could compensate a weakened synapse, and single-patient and human-neuron reports exist in this family, but no controlled trial does."
+      },
+      {
+       "rule": "R-SX-4",
+       "votes": "conditional",
+       "text": "The fit here comes from the shared pathway only; no report names this gene, so it rests on the family argument rather than on gene-specific evidence."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-SX-2",
+       "text": "Evidence in the central presentation is a case report and a cell model, not a trial."
+      }
+     ],
+     "citation_ids": [
+      "PMID:32906212#581063",
+      "PMID:40181518#42053",
+      "PMID:41166419#723161"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+       "disease:SLC6A1|driven_by|mech:loss-of-function",
+       "disease:SLC6A1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+       "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1"
+      ]
+     },
+     "rules_fired": [
+      "R-SX-2",
+      "R-SX-4"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    },
+    "gene_editing": {
+     "fit": "conditional",
+     "reasons": [
+      {
+       "rule": "R-ED-1",
+       "votes": "conditional",
+       "text": "Editing in the brain is attractive because neurons do not divide, so one correction could last, but no editing programme exists for any disease in this slice."
+      }
+     ],
+     "caveats": [
+      {
+       "rule": "R-ED-1",
+       "text": "Delivery, per-variant design and off-target assessment are all unsolved for these genes; treat this as a research direction, not a pipeline."
+      }
+     ],
+     "citation_ids": [
+      "PMID:42041587#895103",
+      "PMID:40181540#595344"
+     ],
+     "graph_edge_ids": {
+      "mechanism": [
+       "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+       "disease:SLC6A1|driven_by|mech:loss-of-function",
+       "disease:SLC6A1|driven_by|mech:protein-destabilization"
+      ],
+      "existing_programmes": [
+       "therapy:4-phenylbutyrate|developed_for|disease:SLC6A1",
+       "therapy:aav-slc6a1-gene-replacement|developed_for|disease:SLC6A1"
+      ]
+     },
+     "rules_fired": [
+      "R-ED-1"
+     ],
+     "open_questions_for_expert": [
+      "The mechanism edges this screen rests on are contested in the graph: mech:protein-destabilization. Which reading is right changes the fit."
+     ]
+    }
+   }
+  }
+ }
+}

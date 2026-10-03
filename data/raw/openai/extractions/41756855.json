@@ -1,0 +1,201 @@
+{
+ "pmid": "41756855",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:48:46.241Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_032412b57e9fc69b016ac14dd92abc87d2bba2bc1a600de2e8",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_032412b57e9fc69b016ac14dd9326887d29d68461507573dc2": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 328,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 328,
+     "output_tokens": 0
+    },
+    "rs_032412b57e9fc69b016ac14ddabde487d29b5f4ab110a45c13": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 96
+    },
+    "msg_032412b57e9fc69b016ac14ddecacc87d2b2da58605551dc19": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1190
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1190
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1411,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1286,
+  "output_tokens_details": {
+   "reasoning_tokens": 96
+  },
+  "total_tokens": 2697
+ },
+ "latency_ms": 54369,
+ "input_sha1": "fd4d468ff3cba3c2",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/SNAP25.efetch.xml",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"synaptotagmin-1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"rare neurodevelopmental disorder\",\"object_type\":\"disease\",\"quote\":\"De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"rare neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"global developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"rare neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"ophthalmic abnormalities\",\"object_type\":\"phenotype\",\"quote\":\"De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"rare neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"infantile hypotonia\",\"object_type\":\"phenotype\",\"quote\":\"De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"rare neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"facial dysmorphisms\",\"object_type\":\"phenotype\",\"quote\":\"De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"rare neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"absent speech\",\"object_type\":\"phenotype\",\"quote\":\"De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"rare neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"EEG abnormalities\",\"object_type\":\"phenotype\",\"quote\":\"De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"rare neurodevelopmental disorder\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"hyperkinetic movements\",\"object_type\":\"phenotype\",\"quote\":\"De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"syt1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"synaptic vesicle release\",\"object_type\":\"mechanism\",\"quote\":\"We identify key residues, localized to the primary interface between syt1 and SNAP-25, responsible for this shift in syt1 function in synaptic vesicle release.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"broad spectrum protein kinase inhibitor\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"spontaneous neurotransmission\",\"object_type\":\"mechanism\",\"quote\":\"A serine missense mutation creates a novel phosphorylation site as a broad spectrum protein kinase inhibitor rescues spontaneous neurotransmission.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "synaptotagmin-1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "rare neurodevelopmental disorder",
+   "object_type": "disease",
+   "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rare neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "global developmental delay",
+   "object_type": "phenotype",
+   "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rare neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "ophthalmic abnormalities",
+   "object_type": "phenotype",
+   "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rare neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "infantile hypotonia",
+   "object_type": "phenotype",
+   "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rare neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "facial dysmorphisms",
+   "object_type": "phenotype",
+   "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rare neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "absent speech",
+   "object_type": "phenotype",
+   "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rare neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "EEG abnormalities",
+   "object_type": "phenotype",
+   "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rare neurodevelopmental disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hyperkinetic movements",
+   "object_type": "phenotype",
+   "quote": "De novo mutations in synaptotagmin-1 (syt1) cause a rare neurodevelopmental disorder, manifesting in global developmental delay, ophthalmic abnormalities, infantile hypotonia, facial dysmorphisms, absent speech, EEG abnormalities, and hyperkinetic movements, ranging from moderate to severe.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "syt1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "synaptic vesicle release",
+   "object_type": "mechanism",
+   "quote": "We identify key residues, localized to the primary interface between syt1 and SNAP-25, responsible for this shift in syt1 function in synaptic vesicle release.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "broad spectrum protein kinase inhibitor",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "spontaneous neurotransmission",
+   "object_type": "mechanism",
+   "quote": "A serine missense mutation creates a novel phosphorylation site as a broad spectrum protein kinase inhibitor rescues spontaneous neurotransmission.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

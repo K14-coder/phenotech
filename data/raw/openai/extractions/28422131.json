@@ -1,0 +1,165 @@
+{
+ "pmid": "28422131",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:26:57.289Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_024f4f39f18bd4b1016ac148d12afc87d29aeffb50a47e4942",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_024f4f39f18bd4b1016ac148d13b6c87d28977e2d939c80ef5": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 294,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 294,
+     "output_tokens": 0
+    },
+    "rs_024f4f39f18bd4b1016ac148d31ce487d2b34c3b2dc73bb961": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 109
+    },
+    "msg_024f4f39f18bd4b1016ac148d7abd087d2b3b7d42f5feb2e25": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 641
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 641
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1377,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 750,
+  "output_tokens_details": {
+   "reasoning_tokens": 109
+  },
+  "total_tokens": 2127
+ },
+ "latency_ms": 33319,
+ "input_sha1": "4c4579f76798507b",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/28422131.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"CPLX1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"autosomal-recessive severe infantile myoclonic epilepsy and ID\",\"object_type\":\"disease\",\"quote\":\"Variants in CPLX1 in two families with autosomal-recessive severe infantile myoclonic epilepsy and ID.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"CPLX1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"ID\",\"object_type\":\"phenotype\",\"quote\":\"In the present study, we performed trio-based WES in 311 patients with unsolved ID and additional clinical features, and identified homozygous CPLX1 variants in three patients with ID from two unrelated families.\",\"study_type\":\"cohort\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"CPLX1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"marked developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"All displayed marked developmental delay and migrating myoclonic epilepsy, and one showed a cerebellar cleft in addition.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"CPLX1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"migrating myoclonic epilepsy\",\"object_type\":\"phenotype\",\"quote\":\"All displayed marked developmental delay and migrating myoclonic epilepsy, and one showed a cerebellar cleft in addition.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"CPLX1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"cerebellar cleft\",\"object_type\":\"phenotype\",\"quote\":\"All displayed marked developmental delay and migrating myoclonic epilepsy, and one showed a cerebellar cleft in addition.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"complexin 1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"neuronal synaptic regulation\",\"object_type\":\"mechanism\",\"quote\":\"The encoded protein, complexin 1, is crucially involved in neuronal synaptic regulation, and homozygous Cplx1 knockout mice have the earliest known onset of ataxia seen in a mouse model.\",\"study_type\":\"animal_model\",\"species\":\"mouse\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"CPLX1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"migrating epilepsy\",\"object_type\":\"disease\",\"quote\":\"Recently, a homozygous truncating variant in CPLX1 was suggested to be causative for migrating epilepsy and structural brain abnormalities.\",\"study_type\":\"case_series\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "CPLX1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autosomal-recessive severe infantile myoclonic epilepsy and ID",
+   "object_type": "disease",
+   "quote": "Variants in CPLX1 in two families with autosomal-recessive severe infantile myoclonic epilepsy and ID.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CPLX1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "ID",
+   "object_type": "phenotype",
+   "quote": "In the present study, we performed trio-based WES in 311 patients with unsolved ID and additional clinical features, and identified homozygous CPLX1 variants in three patients with ID from two unrelated families.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CPLX1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "marked developmental delay",
+   "object_type": "phenotype",
+   "quote": "All displayed marked developmental delay and migrating myoclonic epilepsy, and one showed a cerebellar cleft in addition.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CPLX1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "migrating myoclonic epilepsy",
+   "object_type": "phenotype",
+   "quote": "All displayed marked developmental delay and migrating myoclonic epilepsy, and one showed a cerebellar cleft in addition.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CPLX1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cerebellar cleft",
+   "object_type": "phenotype",
+   "quote": "All displayed marked developmental delay and migrating myoclonic epilepsy, and one showed a cerebellar cleft in addition.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "complexin 1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "neuronal synaptic regulation",
+   "object_type": "mechanism",
+   "quote": "The encoded protein, complexin 1, is crucially involved in neuronal synaptic regulation, and homozygous Cplx1 knockout mice have the earliest known onset of ataxia seen in a mouse model.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CPLX1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "migrating epilepsy",
+   "object_type": "disease",
+   "quote": "Recently, a homozygous truncating variant in CPLX1 was suggested to be causative for migrating epilepsy and structural brain abnormalities.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

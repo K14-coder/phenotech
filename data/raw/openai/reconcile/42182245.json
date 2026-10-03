@@ -1,0 +1,787 @@
+{
+ "pmid": "42182245",
+ "entries": {
+  "5562871da8030e05": {
+   "mention": "severe epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010864",
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0032792"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "instance",
+   "justification": "Severe epilepsy describes a recurrent, severe seizure phenotype.",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:29.445Z"
+  },
+  "84d73831537eb9d2": {
+   "mention": "developmental delay",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0001249"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "Developmental delay is an alternative term for this HPO developmental-delay phenotype.",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:29.445Z"
+  },
+  "f6769e2b5476b5af": {
+   "mention": "movement disorder",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001558",
+    "phenotype:HP:0007941",
+    "phenotype:HP:0000514",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0001288",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0001344",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001249",
+    "phenotype:HP:0001263"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No candidate represents movement disorder broadly; gait disturbance is only one possible manifestation.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:29.445Z"
+  },
+  "c576d7813f9f4723": {
+   "mention": "stabilize Munc18-1 protein levels",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:gain-of-function",
+    "mech:dominant-negative",
+    "mech:synaptic-vesicle-fusion",
+    "mech:loss-of-function",
+    "mech:synaptic-vesicle-priming",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Protein stabilization is not protein destabilization or any other listed mechanism.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:29.445Z"
+  },
+  "0d514d3ae48608f2": {
+   "mention": "stxbp1a",
+   "type": "disease",
+   "candidates": [
+    "disease:STXBP1",
+    "disease:STX1B",
+    "disease:STX1A",
+    "disease:CPLX1",
+    "disease:NSF",
+    "disease:SLC6A1",
+    "disease:SNAP25",
+    "disease:SYT1",
+    "disease:SYT2",
+    "disease:UNC13A"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "stxbp1a names a zebrafish ortholog used in a model, not the human STXBP1-related disorder itself.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:29.445Z"
+  },
+  "7fc4c64869ae7dc2": {
+   "mention": "stxbp1b",
+   "type": "disease",
+   "candidates": [
+    "disease:STXBP1",
+    "disease:STX1B",
+    "disease:STX1A",
+    "disease:CPLX1",
+    "disease:NSF",
+    "disease:SLC6A1",
+    "disease:SNAP25",
+    "disease:SYT1",
+    "disease:SYT2",
+    "disease:UNC13A"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "stxbp1b names a zebrafish ortholog used in a model, not the human STXBP1-related disorder itself.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:29.445Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:58:29.445Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_0ee44488dae7a83f016ac15047dd1487d29689985500840a57": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 4424,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 4424,
+       "output_tokens": 0
+      },
+      "rs_0ee44488dae7a83f016ac15049ee0487d2b73f5900eda1664d": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 33
+      },
+      "msg_0ee44488dae7a83f016ac1504b7b8487d299de4c0aa3ec737e": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 254
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 254
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 4768,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 287,
+    "output_tokens_details": {
+     "reasoning_tokens": 33
+    },
+    "total_tokens": 5055
+   },
+   "request_payload": {
+    "title": "Virtual screening and zebrafish phenotype-based evaluation argues against repurposing 4-phenylbutyrate for STXBP1-related disorders.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "severe epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "developmental delay",
+      "declared_type": "phenotype",
+      "sentence": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "movement disorder",
+      "declared_type": "phenotype",
+      "sentence": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0007941",
+        "type": "phenotype",
+        "label": "Limited extraocular movements",
+        "note": "HPO HP:0007941"
+       },
+       {
+        "id": "phenotype:HP:0000514",
+        "type": "phenotype",
+        "label": "Slow saccadic eye movements",
+        "note": "HPO HP:0000514"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0001344",
+        "type": "phenotype",
+        "label": "Absent speech",
+        "note": "HPO HP:0001344"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       },
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "stabilize Munc18-1 protein levels",
+      "declared_type": "mechanism",
+      "sentence": "Recent studies in Munc18-1 (STXBP1) C. elegans models demonstrate that 4-phenylbutyrate (4-PBA) or related pharmacological chaperones stabilize Munc18-1 protein levels and rescue locomotion deficits.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "stxbp1a",
+      "declared_type": "disease",
+      "sentence": "Here, we used a stxbp1a zebrafish model with a profound movement disorder to screen 4-PBA and alternative structural analogs identified using artificial intelligence (AI)-based screening.",
+      "candidates": [
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:STX1A",
+        "type": "disease",
+        "label": "STX1A-related neurodevelopmental disorder",
+        "synonyms": [
+         "syntaxin-1A-related neurodevelopmental disorder"
+        ],
+        "summary": "A recently described disorder with intellectual disability, autism and epilepsy, reported in a small number of individuals with STX1A variants."
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:NSF",
+        "type": "disease",
+        "label": "NSF-related developmental and epileptic encephalopathy",
+        "synonyms": [
+         "DEE96"
+        ],
+        "summary": "A very rare early-infantile epileptic encephalopathy reported with de novo variants in NSF, the enzyme that recycles the SNARE machinery after each fusion event"
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SNAP25",
+        "type": "disease",
+        "label": "SNAP25-related disorders",
+        "synonyms": [
+         "CMS18",
+         "congenital myasthenic syndrome 18",
+         "SNAP25-DEE",
+         "DEE in SNAP25",
+         "SNAP25 Developmental and Epileptic Encephalopathy (SNAP25-DEE)",
+         "SNAP25 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SNAP25",
+         "congenital myasthenic syndrome type 18"
+        ],
+        "summary": "Changes in SNAP25 cause early-onset epilepsy with developmental delay; one reported variant instead causes a presynaptic congenital myasthenic syndrome with fat"
+       },
+       {
+        "id": "disease:SYT1",
+        "type": "disease",
+        "label": "SYT1-related disorders (Baker-Gordon syndrome)",
+        "synonyms": [
+         "Baker-Gordon syndrome",
+         "BAGOS",
+         "SYT1-associated neurodevelopmental disorder"
+        ],
+        "summary": "A developmental disorder caused by changes in SYT1, the calcium sensor that times neurotransmitter release. Features include low muscle tone, unusual eye moveme"
+       },
+       {
+        "id": "disease:SYT2",
+        "type": "disease",
+        "label": "SYT2-related presynaptic congenital myasthenic syndromes",
+        "synonyms": [
+         "CMS7A",
+         "CMS7B",
+         "congenital myasthenic syndrome 7",
+         "Lambert-Eaton-like syndrome (SYT2)",
+         "CMS7",
+         "SYT2 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SYT2",
+         "congenital myasthenic syndrome type 7"
+        ],
+        "summary": "Changes in SYT2 weaken the signal from nerve to muscle. Children and adults have fatigable weakness and reduced reflexes; several patients improved on 3,4-diami"
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "stxbp1b",
+      "declared_type": "disease",
+      "sentence": "Electrophysiology studies in a stxbp1b zebrafish model characterized by spontaneous seizure activity (i.e., epilepsy) failed to detect a reduction in ictal-like events with 4-PBA treatment.",
+      "candidates": [
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:STX1A",
+        "type": "disease",
+        "label": "STX1A-related neurodevelopmental disorder",
+        "synonyms": [
+         "syntaxin-1A-related neurodevelopmental disorder"
+        ],
+        "summary": "A recently described disorder with intellectual disability, autism and epilepsy, reported in a small number of individuals with STX1A variants."
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:NSF",
+        "type": "disease",
+        "label": "NSF-related developmental and epileptic encephalopathy",
+        "synonyms": [
+         "DEE96"
+        ],
+        "summary": "A very rare early-infantile epileptic encephalopathy reported with de novo variants in NSF, the enzyme that recycles the SNARE machinery after each fusion event"
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SNAP25",
+        "type": "disease",
+        "label": "SNAP25-related disorders",
+        "synonyms": [
+         "CMS18",
+         "congenital myasthenic syndrome 18",
+         "SNAP25-DEE",
+         "DEE in SNAP25",
+         "SNAP25 Developmental and Epileptic Encephalopathy (SNAP25-DEE)",
+         "SNAP25 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SNAP25",
+         "congenital myasthenic syndrome type 18"
+        ],
+        "summary": "Changes in SNAP25 cause early-onset epilepsy with developmental delay; one reported variant instead causes a presynaptic congenital myasthenic syndrome with fat"
+       },
+       {
+        "id": "disease:SYT1",
+        "type": "disease",
+        "label": "SYT1-related disorders (Baker-Gordon syndrome)",
+        "synonyms": [
+         "Baker-Gordon syndrome",
+         "BAGOS",
+         "SYT1-associated neurodevelopmental disorder"
+        ],
+        "summary": "A developmental disorder caused by changes in SYT1, the calcium sensor that times neurotransmitter release. Features include low muscle tone, unusual eye moveme"
+       },
+       {
+        "id": "disease:SYT2",
+        "type": "disease",
+        "label": "SYT2-related presynaptic congenital myasthenic syndromes",
+        "synonyms": [
+         "CMS7A",
+         "CMS7B",
+         "congenital myasthenic syndrome 7",
+         "Lambert-Eaton-like syndrome (SYT2)",
+         "CMS7",
+         "SYT2 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SYT2",
+         "congenital myasthenic syndrome type 7"
+        ],
+        "summary": "Changes in SYT2 weaken the signal from nerve to muscle. Children and adults have fatigable weakness and reduced reflexes; several patients improved on 3,4-diami"
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"instance\",\"justification\":\"Severe epilepsy describes a recurrent, severe seizure phenotype.\"},{\"mention_id\":\"m2\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"Developmental delay is an alternative term for this HPO developmental-delay phenotype.\"},{\"mention_id\":\"m3\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No candidate represents movement disorder broadly; gait disturbance is only one possible manifestation.\"},{\"mention_id\":\"m4\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Protein stabilization is not protein destabilization or any other listed mechanism.\"},{\"mention_id\":\"m5\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"stxbp1a names a zebrafish ortholog used in a model, not the human STXBP1-related disorder itself.\"},{\"mention_id\":\"m6\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"stxbp1b names a zebrafish ortholog used in a model, not the human STXBP1-related disorder itself.\"}]}"
+  }
+ ]
+}

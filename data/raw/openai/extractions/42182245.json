@@ -1,0 +1,177 @@
+{
+ "pmid": "42182245",
+ "set": "community",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:51:42.652Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_07a8f25ae3356ef5016ac14e96cb6887d28992d2da3b4fcb57",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_07a8f25ae3356ef5016ac14e96d58087d28676092187ae7958": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 320,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 320,
+     "output_tokens": 0
+    },
+    "rs_07a8f25ae3356ef5016ac14e99126087d289f15b1efcb4a3be": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 160
+    },
+    "msg_07a8f25ae3356ef5016ac14e9fb2a087d2ba7a55dd18a97235": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 776
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 776
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1403,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 936,
+  "output_tokens_details": {
+   "reasoning_tokens": 160
+  },
+  "total_tokens": 2339
+ },
+ "latency_ms": 40939,
+ "input_sha1": "15f11c8dad6b33b3",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/community/pubmed/STXBP1.efetch.xml",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"STXBP1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"severe epilepsy\",\"object_type\":\"phenotype\",\"quote\":\"Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"intellectual disability\",\"object_type\":\"phenotype\",\"quote\":\"Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"STXBP1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"movement disorder\",\"object_type\":\"phenotype\",\"quote\":\"Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.\",\"study_type\":\"review\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-phenylbutyrate (4-PBA)\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"stabilize Munc18-1 protein levels\",\"object_type\":\"mechanism\",\"quote\":\"Recent studies in Munc18-1 (STXBP1) C. elegans models demonstrate that 4-phenylbutyrate (4-PBA) or related pharmacological chaperones stabilize Munc18-1 protein levels and rescue locomotion deficits.\",\"study_type\":\"animal_model\",\"species\":\"worm\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-PBA\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"stxbp1a\",\"object_type\":\"disease\",\"quote\":\"Here, we used a stxbp1a zebrafish model with a profound movement disorder to screen 4-PBA and alternative structural analogs identified using artificial intelligence (AI)-based screening.\",\"study_type\":\"animal_model\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-PBA alternative structural analogs\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"stxbp1a\",\"object_type\":\"disease\",\"quote\":\"Here, we used a stxbp1a zebrafish model with a profound movement disorder to screen 4-PBA and alternative structural analogs identified using artificial intelligence (AI)-based screening.\",\"study_type\":\"animal_model\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"4-PBA\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"stxbp1b\",\"object_type\":\"disease\",\"quote\":\"Electrophysiology studies in a stxbp1b zebrafish model characterized by spontaneous seizure activity (i.e., epilepsy) failed to detect a reduction in ictal-like events with 4-PBA treatment.\",\"study_type\":\"animal_model\",\"species\":null,\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe epilepsy",
+   "object_type": "phenotype",
+   "quote": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intellectual disability",
+   "object_type": "phenotype",
+   "quote": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "STXBP1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "movement disorder",
+   "object_type": "phenotype",
+   "quote": "Syntaxin-binding protein 1 (STXBP1) mutations lead to severe epilepsy, intellectual disability, developmental delay, and movement disorder.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-phenylbutyrate (4-PBA)",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "stabilize Munc18-1 protein levels",
+   "object_type": "mechanism",
+   "quote": "Recent studies in Munc18-1 (STXBP1) C. elegans models demonstrate that 4-phenylbutyrate (4-PBA) or related pharmacological chaperones stabilize Munc18-1 protein levels and rescue locomotion deficits.",
+   "study_type": "animal_model",
+   "species": "worm",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-PBA",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "stxbp1a",
+   "object_type": "disease",
+   "quote": "Here, we used a stxbp1a zebrafish model with a profound movement disorder to screen 4-PBA and alternative structural analogs identified using artificial intelligence (AI)-based screening.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-PBA alternative structural analogs",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "stxbp1a",
+   "object_type": "disease",
+   "quote": "Here, we used a stxbp1a zebrafish model with a profound movement disorder to screen 4-PBA and alternative structural analogs identified using artificial intelligence (AI)-based screening.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-PBA",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "stxbp1b",
+   "object_type": "disease",
+   "quote": "Electrophysiology studies in a stxbp1b zebrafish model characterized by spontaneous seizure activity (i.e., epilepsy) failed to detect a reduction in ictal-like events with 4-PBA treatment.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,237 @@
+{
+ "pmid": "42157447",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:43:12.993Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_07c5ab9be367130c016ac14c75f7f487d2a2189a416b31bd3a",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_07c5ab9be367130c016ac14c75ff5887d2b8b07790ef98748c": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 454,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 454,
+     "output_tokens": 0
+    },
+    "rs_07c5ab9be367130c016ac14c77b6c487d2b4fb74e343ac122c": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 100
+    },
+    "msg_07c5ab9be367130c016ac14c7c147087d29bc6a3bf5a4c11f8": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1731
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1731
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1537,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1831,
+  "output_tokens_details": {
+   "reasoning_tokens": 100
+  },
+  "total_tokens": 3368
+ },
+ "latency_ms": 76226,
+ "input_sha1": "c3ed9ddde6aa3d58",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/42157447.json",
+ "raw_response": "{\n  \"claims\": [\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"epilepsy\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Variants in SLC6A1, encoding the GABA transporter 1 (GAT-1), cause epilepsy, autism spectrum disorder, and developmental delay via loss of GABA uptake, impaired trafficking, and ER retention.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1\",\n      \"subject_type\": \"gene\",\n      \"relation\": \"causes\",\n      \"object_mention\": \"autism spectrum disorder\",\n      \"object_type\": \"disease\",\n      \"quote\": \"Variants in SLC6A1, encoding the GABA transporter 1 (GAT-1), cause epilepsy, autism spectrum disorder, and developmental delay via loss of GABA uptake, impaired trafficking, and ER retention.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"loss of GABA uptake\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Variants in SLC6A1, encoding the GABA transporter 1 (GAT-1), cause epilepsy, autism spectrum disorder, and developmental delay via loss of GABA uptake, impaired trafficking, and ER retention.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"SLC6A1 variants\",\n      \"subject_type\": \"variant_group\",\n      \"relation\": \"has_effect\",\n      \"object_mention\": \"ER retention\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"Variants in SLC6A1, encoding the GABA transporter 1 (GAT-1), cause epilepsy, autism spectrum disorder, and developmental delay via loss of GABA uptake, impaired trafficking, and ER retention.\",\n      \"study_type\": \"functional_study\",\n      \"species\": null,\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"4-Phenylbutyrate (PBA)\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"developed_for\",\n      \"object_mention\": \"SLC6A1-related disorders\",\n      \"object_type\": \"disease\",\n      \"quote\": \"We previously found that 4-Phenylbutyrate (PBA), an FDA-approved drug, restores GABA uptake and reduces seizures in SLC6A1-related disorders, prompting a phase I clinical trial (NCT04937062) primarily designed to evaluate safety and tolerability of Ravicti (PBA).\",\n      \"study_type\": \"clinical_trial\",\n      \"species\": \"human\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"PBA\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"targets\",\n      \"object_mention\": \"GABA uptake\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"PBA\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"targets\",\n      \"object_mention\": \"GAT-1 surface expression\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"TUDCA\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"targets\",\n      \"object_mention\": \"GABA uptake\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"TUDCA\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"targets\",\n      \"object_mention\": \"GAT-1 surface expression\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.\",\n      \"study_type\": \"functional_study\",\n      \"species\": \"cell\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"HDAC inhibitors\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"targets\",\n      \"object_mention\": \"GAT-1 function\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"HDAC inhibitors exhibited modest rescue in vitro but failed to restore GAT-1 function or mitigate seizures in the knockin mice.\",\n      \"study_type\": \"animal_model\",\n      \"species\": \"mouse\",\n      \"certainty\": \"established\",\n      \"negated\": true\n    },\n    {\n      \"subject_mention\": \"PBA\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"targets\",\n      \"object_mention\": \"pharmacochaperoning\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"PBA acts as a pharmacochaperone, not an HDAC inhibitor, to restore GAT-1 function and reduce seizure burden in the diseased mice, supporting pharmacochaperoning as the major mechanism for rescuing SLC6A1-related disorders.\",\n      \"study_type\": \"animal_model\",\n      \"species\": \"mouse\",\n      \"certainty\": \"suggested\",\n      \"negated\": false\n    },\n    {\n      \"subject_mention\": \"PBA\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"targets\",\n      \"object_mention\": \"HDAC\",\n      \"object_type\": \"mechanism\",\n      \"quote\": \"PBA acts as a pharmacochaperone, not an HDAC inhibitor, to restore GAT-1 function and reduce seizure burden in the diseased mice, supporting pharmacochaperoning as the major mechanism for rescuing SLC6A1-related disorders.\",\n      \"study_type\": \"animal_model\",\n      \"species\": \"mouse\",\n      \"certainty\": \"suggested\",\n      \"negated\": true\n    },\n    {\n      \"subject_mention\": \"PBA\",\n      \"subject_type\": \"therapy\",\n      \"relation\": \"developed_for\",\n      \"object_mention\": \"SLC6A1-related disorders\",\n      \"object_type\": \"disease\",\n      \"quote\": \"PBA acts as a pharmacochaperone, not an HDAC inhibitor, to restore GAT-1 function and reduce seizure burden in the diseased mice, supporting pharmacochaperoning as the major mechanism for rescuing SLC6A1-related disorders.\",\n      \"study_type\": \"animal_model\",\n      \"species\": \"mouse\",\n      \"certainty\": \"established\",\n      \"negated\": false\n    }\n  ]\n}",
+ "claims": [
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epilepsy",
+   "object_type": "disease",
+   "quote": "Variants in SLC6A1, encoding the GABA transporter 1 (GAT-1), cause epilepsy, autism spectrum disorder, and developmental delay via loss of GABA uptake, impaired trafficking, and ER retention.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autism spectrum disorder",
+   "object_type": "disease",
+   "quote": "Variants in SLC6A1, encoding the GABA transporter 1 (GAT-1), cause epilepsy, autism spectrum disorder, and developmental delay via loss of GABA uptake, impaired trafficking, and ER retention.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of GABA uptake",
+   "object_type": "mechanism",
+   "quote": "Variants in SLC6A1, encoding the GABA transporter 1 (GAT-1), cause epilepsy, autism spectrum disorder, and developmental delay via loss of GABA uptake, impaired trafficking, and ER retention.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SLC6A1 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "ER retention",
+   "object_type": "mechanism",
+   "quote": "Variants in SLC6A1, encoding the GABA transporter 1 (GAT-1), cause epilepsy, autism spectrum disorder, and developmental delay via loss of GABA uptake, impaired trafficking, and ER retention.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "4-Phenylbutyrate (PBA)",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SLC6A1-related disorders",
+   "object_type": "disease",
+   "quote": "We previously found that 4-Phenylbutyrate (PBA), an FDA-approved drug, restores GABA uptake and reduces seizures in SLC6A1-related disorders, prompting a phase I clinical trial (NCT04937062) primarily designed to evaluate safety and tolerability of Ravicti (PBA).",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GABA uptake",
+   "object_type": "mechanism",
+   "quote": "PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GAT-1 surface expression",
+   "object_type": "mechanism",
+   "quote": "PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TUDCA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GABA uptake",
+   "object_type": "mechanism",
+   "quote": "PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TUDCA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GAT-1 surface expression",
+   "object_type": "mechanism",
+   "quote": "PBA restored GABA uptake and GAT-1 surface expression across all variants, and TUDCA mimicked the effects of PBA.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HDAC inhibitors",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GAT-1 function",
+   "object_type": "mechanism",
+   "quote": "HDAC inhibitors exhibited modest rescue in vitro but failed to restore GAT-1 function or mitigate seizures in the knockin mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "pharmacochaperoning",
+   "object_type": "mechanism",
+   "quote": "PBA acts as a pharmacochaperone, not an HDAC inhibitor, to restore GAT-1 function and reduce seizure burden in the diseased mice, supporting pharmacochaperoning as the major mechanism for rescuing SLC6A1-related disorders.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "HDAC",
+   "object_type": "mechanism",
+   "quote": "PBA acts as a pharmacochaperone, not an HDAC inhibitor, to restore GAT-1 function and reduce seizure burden in the diseased mice, supporting pharmacochaperoning as the major mechanism for rescuing SLC6A1-related disorders.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": true
+  },
+  {
+   "subject_mention": "PBA",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SLC6A1-related disorders",
+   "object_type": "disease",
+   "quote": "PBA acts as a pharmacochaperone, not an HDAC inhibitor, to restore GAT-1 function and reduce seizure burden in the diseased mice, supporting pharmacochaperoning as the major mechanism for rescuing SLC6A1-related disorders.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

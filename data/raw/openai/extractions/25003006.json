@@ -1,0 +1,111 @@
+{
+ "pmid": "25003006",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:22:04.943Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_080d05abaac42b83016ac147c0db1887d285f7d6aeb5569c9b",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_080d05abaac42b83016ac147c0e75487d292fc6d35972f3c6d": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 220,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 220,
+     "output_tokens": 0
+    },
+    "msg_080d05abaac42b83016ac147c2f86487d2887d9baaabcb06a2": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 257
+      }
+     ],
+     "input_tokens": 2,
+     "output_tokens": 257
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1303,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 257,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 1560
+ },
+ "latency_ms": 14485,
+ "input_sha1": "1a606e0f2324cc71",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/25003006.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"SNAP25\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"intellectual disability\",\"object_type\":\"disease\",\"quote\":\"We suggest that SNAP25 mutations in humans are a novel genetic cause of intellectual disability and epilepsy.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"SNAP25\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"epilepsy\",\"object_type\":\"disease\",\"quote\":\"We suggest that SNAP25 mutations in humans are a novel genetic cause of intellectual disability and epilepsy.\",\"study_type\":\"case_report\",\"species\":\"human\",\"certainty\":\"suggested\",\"negated\":false},{\"subject_mention\":\"SNAP25\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"exocytotic release of neurotransmitters\",\"object_type\":\"mechanism\",\"quote\":\"SNAP25 is part of the soluble N-ethylmaleimide-sensitive factor attachment protein receptor (SNARE) protein complex which is involved in exocytotic release of neurotransmitters.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "SNAP25",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "intellectual disability",
+   "object_type": "disease",
+   "quote": "We suggest that SNAP25 mutations in humans are a novel genetic cause of intellectual disability and epilepsy.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epilepsy",
+   "object_type": "disease",
+   "quote": "We suggest that SNAP25 mutations in humans are a novel genetic cause of intellectual disability and epilepsy.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SNAP25",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "exocytotic release of neurotransmitters",
+   "object_type": "mechanism",
+   "quote": "SNAP25 is part of the soluble N-ethylmaleimide-sensitive factor attachment protein receptor (SNARE) protein complex which is involved in exocytotic release of neurotransmitters.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

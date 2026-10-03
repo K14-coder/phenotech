@@ -1,0 +1,465 @@
+{
+ "pmid": "31855252",
+ "entries": {
+  "84d73831537eb9d2": {
+   "mention": "developmental delay",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0001249"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "Developmental delay is an alternative term for global developmental delay in this neurodevelopmental context.",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:50:32.961Z"
+  },
+  "b9c788adbc22753f": {
+   "mention": "epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0100021",
+    "phenotype:HP:0012469",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0011445"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Epilepsy is broader than the listed seizure subtypes and is not equivalent to epileptic encephalopathy.",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:50:32.961Z"
+  },
+  "f46665bdf3192ab8": {
+   "mention": "Impaired mutant protein stability leading to reduced synaptic transmission",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:synaptic-vesicle-priming",
+    "mech:gain-of-function",
+    "mech:dominant-negative",
+    "mech:ca-triggered-exocytosis",
+    "mech:loss-of-function",
+    "mech:gaba-reuptake",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "Describes mutant protein destabilization specifically causing reduced synaptic transmission.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:50:32.961Z"
+  },
+  "259a34de43e0c96c": {
+   "mention": "protein stability of the disease variant (L446F) is less dramatically affected",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:dominant-negative",
+    "mech:protein-destabilization",
+    "mech:ca-triggered-exocytosis",
+    "mech:loss-of-function",
+    "mech:synaptic-vesicle-fusion",
+    "mech:haploinsufficiency",
+    "mech:snare-complex-disassembly",
+    "mech:synaptic-vesicle-priming",
+    "mech:snare-complex-assembly"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "Describes a variant-specific, comparatively milder impairment of protein stability.",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:50:32.961Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "gpt-6-astra",
+   "generated_at": "2026-10-03T18:50:32.961Z",
+   "usage": {
+    "attribution": {
+     "items": {
+      "msg_0429aa7893aa66c8016ac14e6f8fd487d2b68132e094567587": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 2356,
+         "output_tokens": 0
+        }
+       ],
+       "input_tokens": 2356,
+       "output_tokens": 0
+      },
+      "rs_0429aa7893aa66c8016ac14e70ea4887d2889570a0e112a903": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 2,
+       "output_tokens": 18
+      },
+      "msg_0429aa7893aa66c8016ac14e71ea5887d2ba16938c69f708dd": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "content": [
+        {
+         "cache_write_tokens": 0,
+         "cached_tokens": 0,
+         "input_tokens": 0,
+         "output_tokens": 180
+        }
+       ],
+       "input_tokens": 0,
+       "output_tokens": 180
+      }
+     },
+     "request_fields": {
+      "text.format": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 82,
+       "output_tokens": 0
+      },
+      "instructions": {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 260,
+       "output_tokens": 0
+      }
+     }
+    },
+    "input_tokens": 2700,
+    "input_tokens_details": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0
+    },
+    "output_tokens": 198,
+    "output_tokens_details": {
+     "reasoning_tokens": 18
+    },
+    "total_tokens": 2898
+   },
+   "request_payload": {
+    "title": "Homozygous STXBP1 variant causes encephalopathy and gain-of-function in synaptic transmission.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "developmental delay",
+      "declared_type": "phenotype",
+      "sentence": "Heterozygous mutations in the STXBP1 gene encoding the presynaptic protein MUNC18-1 cause STXBP1 encephalopathy, characterized by developmental delay, intellectual disability and epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "Heterozygous mutations in the STXBP1 gene encoding the presynaptic protein MUNC18-1 cause STXBP1 encephalopathy, characterized by developmental delay, intellectual disability and epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0100021",
+        "type": "phenotype",
+        "label": "Cerebral palsy",
+        "note": "HPO HP:0100021"
+       },
+       {
+        "id": "phenotype:HP:0012469",
+        "type": "phenotype",
+        "label": "Infantile spasms",
+        "note": "HPO HP:0012469"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0011445",
+        "type": "phenotype",
+        "label": "Athetoid cerebral palsy",
+        "note": "HPO HP:0011445"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "Impaired mutant protein stability leading to reduced synaptic transmission",
+      "declared_type": "mechanism",
+      "sentence": "Impaired mutant protein stability leading to reduced synaptic transmission is considered the main underlying pathogenetic mechanism.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "protein stability of the disease variant (L446F) is less dramatically affected",
+      "declared_type": "mechanism",
+      "sentence": "In Munc18-1 null mouse neurons, protein stability of the disease variant (L446F) is less dramatically affected than previously observed for heterozygous disease mutants.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"Developmental delay is an alternative term for global developmental delay in this neurodevelopmental context.\"},{\"mention_id\":\"m2\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Epilepsy is broader than the listed seizure subtypes and is not equivalent to epileptic encephalopathy.\"},{\"mention_id\":\"m3\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"Describes mutant protein destabilization specifically causing reduced synaptic transmission.\"},{\"mention_id\":\"m4\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"Describes a variant-specific, comparatively milder impairment of protein stability.\"}]}"
+  }
+ ]
+}

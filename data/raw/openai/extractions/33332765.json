@@ -1,0 +1,225 @@
+{
+ "pmid": "33332765",
+ "set": "biology",
+ "model": "gpt-6-astra",
+ "generated_at": "2026-10-03T18:35:03.361Z",
+ "auth_path": "chatgpt",
+ "structured_mode": "json_schema",
+ "response_id": "resp_01c247a631a7371c016ac14a996af487d2b0adf0fe2fad3733",
+ "request_id": null,
+ "usage": {
+  "attribution": {
+   "items": {
+    "msg_01c247a631a7371c016ac14a9977b887d28236485306e2f060": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 238,
+       "output_tokens": 0
+      }
+     ],
+     "input_tokens": 238,
+     "output_tokens": 0
+    },
+    "rs_01c247a631a7371c016ac14a9ad8c487d2bb802d773b0a7a5c": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 2,
+     "output_tokens": 155
+    },
+    "msg_01c247a631a7371c016ac14aa1494c87d2b33287bcbbcc80b8": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "content": [
+      {
+       "cache_write_tokens": 0,
+       "cached_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 1354
+      }
+     ],
+     "input_tokens": 0,
+     "output_tokens": 1354
+    }
+   },
+   "request_fields": {
+    "text.format": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 242,
+     "output_tokens": 0
+    },
+    "instructions": {
+     "cache_write_tokens": 0,
+     "cached_tokens": 0,
+     "input_tokens": 839,
+     "output_tokens": 0
+    }
+   }
+  },
+  "input_tokens": 1321,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 1509,
+  "output_tokens_details": {
+   "reasoning_tokens": 155
+  },
+  "total_tokens": 2830
+ },
+ "latency_ms": 63096,
+ "input_sha1": "b1214461a42d2c89",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/biology/pubmed/33332765.json",
+ "raw_response": "{\"claims\":[{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"gene\",\"relation\":\"causes\",\"object_mention\":\"severe epilepsy\",\"object_type\":\"disease\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"intellectual disability\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"developmental delay\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"ataxia\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"disease\",\"relation\":\"has_phenotype\",\"object_mention\":\"tremor\",\"object_type\":\"phenotype\",\"quote\":\"Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.\",\"study_type\":\"functional_study\",\"species\":\"human\",\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"Munc18-1\",\"subject_type\":\"gene\",\"relation\":\"participates_in\",\"object_mention\":\"neurotransmitter release\",\"object_type\":\"mechanism\",\"quote\":\"Munc18-1 is essential for neurotransmitter release, and mutations in Munc18-1 have been shown to cause neuronal dysfunction via aggregation and co-aggregation of the wild-type protein, reducing functional Munc18-1 levels well below hemizygous levels.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"mutations in Munc18-1\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"aggregation\",\"object_type\":\"mechanism\",\"quote\":\"Munc18-1 is essential for neurotransmitter release, and mutations in Munc18-1 have been shown to cause neuronal dysfunction via aggregation and co-aggregation of the wild-type protein, reducing functional Munc18-1 levels well below hemizygous levels.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"mutations in Munc18-1\",\"subject_type\":\"variant_group\",\"relation\":\"has_effect\",\"object_mention\":\"co-aggregation of the wild-type protein\",\"object_type\":\"mechanism\",\"quote\":\"Munc18-1 is essential for neurotransmitter release, and mutations in Munc18-1 have been shown to cause neuronal dysfunction via aggregation and co-aggregation of the wild-type protein, reducing functional Munc18-1 levels well below hemizygous levels.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"chemical chaperones\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"neuronal dysfunction caused by missense mutations in Munc18-1\",\"object_type\":\"mechanism\",\"quote\":\"No disease-modifying therapy exists to treat these disorders, and while chemical chaperones have been shown to alleviate neuronal dysfunction caused by missense mutations in Munc18-1, their required high concentrations and potential toxicity necessitate a Munc18-1-targeted therapy.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"two pharmacological chaperones\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"Munc18-1 aggregation\",\"object_type\":\"mechanism\",\"quote\":\"Here, we identify two pharmacological chaperones via structure-based drug design, that bind to wild-type and mutant Munc18-1, and revert Munc18-1 aggregation and neuronal dysfunction in vitro and in vivo, providing the first targeted treatment strategy for these severe pediatric encephalopathies.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"two pharmacological chaperones\",\"subject_type\":\"therapy\",\"relation\":\"targets\",\"object_mention\":\"neuronal dysfunction\",\"object_type\":\"mechanism\",\"quote\":\"Here, we identify two pharmacological chaperones via structure-based drug design, that bind to wild-type and mutant Munc18-1, and revert Munc18-1 aggregation and neuronal dysfunction in vitro and in vivo, providing the first targeted treatment strategy for these severe pediatric encephalopathies.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false},{\"subject_mention\":\"two pharmacological chaperones\",\"subject_type\":\"therapy\",\"relation\":\"developed_for\",\"object_mention\":\"severe pediatric encephalopathies\",\"object_type\":\"disease\",\"quote\":\"Here, we identify two pharmacological chaperones via structure-based drug design, that bind to wild-type and mutant Munc18-1, and revert Munc18-1 aggregation and neuronal dysfunction in vitro and in vivo, providing the first targeted treatment strategy for these severe pediatric encephalopathies.\",\"study_type\":\"functional_study\",\"species\":null,\"certainty\":\"established\",\"negated\":false}]}",
+ "claims": [
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "severe epilepsy",
+   "object_type": "disease",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "intellectual disability",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "ataxia",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "tremor",
+   "object_type": "phenotype",
+   "quote": "Heterozygous de novo mutations in the neuronal protein Munc18-1 cause syndromic neurological symptoms, including severe epilepsy, intellectual disability, developmental delay, ataxia, and tremor.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Munc18-1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "neurotransmitter release",
+   "object_type": "mechanism",
+   "quote": "Munc18-1 is essential for neurotransmitter release, and mutations in Munc18-1 have been shown to cause neuronal dysfunction via aggregation and co-aggregation of the wild-type protein, reducing functional Munc18-1 levels well below hemizygous levels.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "mutations in Munc18-1",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "aggregation",
+   "object_type": "mechanism",
+   "quote": "Munc18-1 is essential for neurotransmitter release, and mutations in Munc18-1 have been shown to cause neuronal dysfunction via aggregation and co-aggregation of the wild-type protein, reducing functional Munc18-1 levels well below hemizygous levels.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "mutations in Munc18-1",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "co-aggregation of the wild-type protein",
+   "object_type": "mechanism",
+   "quote": "Munc18-1 is essential for neurotransmitter release, and mutations in Munc18-1 have been shown to cause neuronal dysfunction via aggregation and co-aggregation of the wild-type protein, reducing functional Munc18-1 levels well below hemizygous levels.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "chemical chaperones",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "neuronal dysfunction caused by missense mutations in Munc18-1",
+   "object_type": "mechanism",
+   "quote": "No disease-modifying therapy exists to treat these disorders, and while chemical chaperones have been shown to alleviate neuronal dysfunction caused by missense mutations in Munc18-1, their required high concentrations and potential toxicity necessitate a Munc18-1-targeted therapy.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "two pharmacological chaperones",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "Munc18-1 aggregation",
+   "object_type": "mechanism",
+   "quote": "Here, we identify two pharmacological chaperones via structure-based drug design, that bind to wild-type and mutant Munc18-1, and revert Munc18-1 aggregation and neuronal dysfunction in vitro and in vivo, providing the first targeted treatment strategy for these severe pediatric encephalopathies.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "two pharmacological chaperones",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "neuronal dysfunction",
+   "object_type": "mechanism",
+   "quote": "Here, we identify two pharmacological chaperones via structure-based drug design, that bind to wild-type and mutant Munc18-1, and revert Munc18-1 aggregation and neuronal dysfunction in vitro and in vivo, providing the first targeted treatment strategy for these severe pediatric encephalopathies.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "two pharmacological chaperones",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "severe pediatric encephalopathies",
+   "object_type": "disease",
+   "quote": "Here, we identify two pharmacological chaperones via structure-based drug design, that bind to wild-type and mutant Munc18-1, and revert Munc18-1 aggregation and neuronal dysfunction in vitro and in vivo, providing the first targeted treatment strategy for these severe pediatric encephalopathies.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

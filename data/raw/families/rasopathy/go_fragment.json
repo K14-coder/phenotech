@@ -1,0 +1,990 @@
+{
+  "nodes": [
+    {
+      "id": "mech:ras-protein-signal-transduction",
+      "type": "mechanism",
+      "label": "Ras protein signal transduction",
+      "xrefs": {
+        "GO": "GO:0007265"
+      },
+      "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal.",
+      "attrs": {
+        "kind": "process",
+        "go_id": "GO:0007265",
+        "go_name": "Ras protein signal transduction",
+        "family": "rasopathy"
+      },
+      "sources": [
+        {
+          "source": "GO",
+          "ref": "GO:0007265",
+          "url": "https://www.ebi.ac.uk/QuickGO/term/GO:0007265",
+          "title": "Ras protein signal transduction",
+          "kind": "database",
+          "study_type": "database_record",
+          "quote": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal.",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "mech:mapk-cascade",
+      "type": "mechanism",
+      "label": "MAPK cascade",
+      "xrefs": {
+        "GO": "GO:0000165"
+      },
+      "summary": "An intracellular protein kinase cascade containing at least a MAP kinase (MAPK). It starts with the activation of a MAP3K, and the consecutive activation of a MPK2K and a MAPK. The cascade can also contain an additional tier: the upstream MAP4K. The kinases in each tier phosphorylate and activate the kinase in the downstream tier to transmit a signal within a cell.",
+      "attrs": {
+        "kind": "process",
+        "go_id": "GO:0000165",
+        "go_name": "MAPK cascade",
+        "family": "rasopathy"
+      },
+      "sources": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/term/GO:0000165",
+          "title": "MAPK cascade",
+          "kind": "database",
+          "study_type": "database_record",
+          "quote": "An intracellular protein kinase cascade containing at least a MAP kinase (MAPK). It starts with the activation of a MAP3K, and the consecutive activation of a MPK2K and a MAPK. The cascade can also contain an additional tier: the upstream MAP4K. The kinases in each tier phosphorylate and activate the kinase in the downstream tier to transmit a signal within a cell.",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "mech:negative-regulation-of-ras-signaling",
+      "type": "mechanism",
+      "label": "Negative regulation of Ras protein signal transduction",
+      "xrefs": {
+        "GO": "GO:0046580"
+      },
+      "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction.",
+      "attrs": {
+        "kind": "process",
+        "go_id": "GO:0046580",
+        "go_name": "negative regulation of Ras protein signal transduction",
+        "family": "rasopathy"
+      },
+      "sources": [
+        {
+          "source": "GO",
+          "ref": "GO:0046580",
+          "url": "https://www.ebi.ac.uk/QuickGO/term/GO:0046580",
+          "title": "negative regulation of Ras protein signal transduction",
+          "kind": "database",
+          "study_type": "database_record",
+          "quote": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction.",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "mech:positive-regulation-of-ras-signaling",
+      "type": "mechanism",
+      "label": "Positive regulation of Ras protein signal transduction",
+      "xrefs": {
+        "GO": "GO:0046579"
+      },
+      "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction.",
+      "attrs": {
+        "kind": "process",
+        "go_id": "GO:0046579",
+        "go_name": "positive regulation of Ras protein signal transduction",
+        "family": "rasopathy"
+      },
+      "sources": [
+        {
+          "source": "GO",
+          "ref": "GO:0046579",
+          "url": "https://www.ebi.ac.uk/QuickGO/term/GO:0046579",
+          "title": "positive regulation of Ras protein signal transduction",
+          "kind": "database",
+          "study_type": "database_record",
+          "quote": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction.",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "gene:PTPN11|participates_in|mech:mapk-cascade",
+      "source": "gene:PTPN11",
+      "target": "mech:mapk-cascade",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates PTPN11 to mapk cascade (GO:0000165 or a more specific child term), evidence codes IBA, IMP.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q06124&goId=GO:0000165&goUsage=descendants",
+          "title": "QuickGO: 2 annotation(s) of UniProtKB:Q06124 (PTPN11) to GO:0070374; evidence IBA, IMP",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:28074573",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28074573/",
+          "title": "GO annotation GO:0070374 (IMP, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IMP"
+        ],
+        "go_terms_hit": [
+          "GO:0070374"
+        ]
+      }
+    },
+    {
+      "id": "gene:SOS1|participates_in|mech:ras-protein-signal-transduction",
+      "source": "gene:SOS1",
+      "target": "mech:ras-protein-signal-transduction",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates SOS1 to ras protein signal transduction (GO:0007265 or a more specific child term), evidence codes IBA, IDA, IEA, TAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0007265",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q07889&goId=GO:0007265&goUsage=descendants",
+          "title": "QuickGO: 5 annotation(s) of UniProtKB:Q07889 (SOS1) to GO:0007265; evidence IBA, IDA, IEA, TAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:23027131",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23027131/",
+          "title": "GO annotation GO:0007265 (IDA, assigned by ComplexPortal)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:38188543",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38188543/",
+          "title": "GO annotation GO:0007265 (IDA, assigned by ComplexPortal)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IDA",
+          "IEA",
+          "TAS"
+        ],
+        "go_terms_hit": [
+          "GO:0007265"
+        ]
+      }
+    },
+    {
+      "id": "gene:RAF1|participates_in|mech:mapk-cascade",
+      "source": "gene:RAF1",
+      "target": "mech:mapk-cascade",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates RAF1 to mapk cascade (GO:0000165 or a more specific child term), evidence codes IBA, IDA, IEA, NAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P04049&goId=GO:0000165&goUsage=descendants",
+          "title": "QuickGO: 5 annotation(s) of UniProtKB:P04049 (RAF1) to GO:0000165, GO:0043410; evidence IBA, IDA, IEA, NAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:8576262",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8576262/",
+          "title": "GO annotation GO:0000165 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:10644344",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10644344/",
+          "title": "GO annotation GO:0043410 (IDA, assigned by GO_Central)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IDA",
+          "IEA",
+          "NAS"
+        ],
+        "go_terms_hit": [
+          "GO:0000165",
+          "GO:0043410"
+        ]
+      }
+    },
+    {
+      "id": "gene:BRAF|participates_in|mech:mapk-cascade",
+      "source": "gene:BRAF",
+      "target": "mech:mapk-cascade",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates BRAF to mapk cascade (GO:0000165 or a more specific child term), evidence codes IBA, IDA.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P15056&goId=GO:0000165&goUsage=descendants",
+          "title": "QuickGO: 4 annotation(s) of UniProtKB:P15056 (BRAF) to GO:0000165, GO:0070374; evidence IBA, IDA",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:18567582",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18567582/",
+          "title": "GO annotation GO:0000165 (IDA, assigned by BHF-UCL)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:29433126",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29433126/",
+          "title": "GO annotation GO:0000165 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:22065586",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22065586/",
+          "title": "GO annotation GO:0070374 (IDA, assigned by BHF-UCL)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IDA"
+        ],
+        "go_terms_hit": [
+          "GO:0000165",
+          "GO:0070374"
+        ]
+      }
+    },
+    {
+      "id": "gene:KRAS|participates_in|mech:ras-protein-signal-transduction",
+      "source": "gene:KRAS",
+      "target": "mech:ras-protein-signal-transduction",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates KRAS to ras protein signal transduction (GO:0007265 or a more specific child term), evidence codes IBA, IDA, IEA, NAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0007265",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P01116&goId=GO:0007265&goUsage=descendants",
+          "title": "QuickGO: 4 annotation(s) of UniProtKB:P01116 (KRAS) to GO:0007265, GO:0046579; evidence IBA, IDA, IEA, NAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:38188543",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38188543/",
+          "title": "GO annotation GO:0007265 (IDA, assigned by ComplexPortal)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IDA",
+          "IEA",
+          "NAS"
+        ],
+        "go_terms_hit": [
+          "GO:0007265",
+          "GO:0046579"
+        ]
+      }
+    },
+    {
+      "id": "gene:KRAS|participates_in|mech:mapk-cascade",
+      "source": "gene:KRAS",
+      "target": "mech:mapk-cascade",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates KRAS to mapk cascade (GO:0000165 or a more specific child term), evidence codes IEA, NAS, TAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P01116&goId=GO:0000165&goUsage=descendants",
+          "title": "QuickGO: 3 annotation(s) of UniProtKB:P01116 (KRAS) to GO:0000165, GO:0043410; evidence IEA, NAS, TAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IEA",
+          "NAS",
+          "TAS"
+        ],
+        "go_terms_hit": [
+          "GO:0000165",
+          "GO:0043410"
+        ]
+      }
+    },
+    {
+      "id": "gene:KRAS|participates_in|mech:positive-regulation-of-ras-signaling",
+      "source": "gene:KRAS",
+      "target": "mech:positive-regulation-of-ras-signaling",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates KRAS to positive regulation of ras protein signal transduction (GO:0046579 or a more specific child term), evidence codes NAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0046579",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P01116&goId=GO:0046579&goUsage=descendants",
+          "title": "QuickGO: 1 annotation(s) of UniProtKB:P01116 (KRAS) to GO:0046579; evidence NAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "NAS"
+        ],
+        "go_terms_hit": [
+          "GO:0046579"
+        ]
+      }
+    },
+    {
+      "id": "gene:HRAS|participates_in|mech:ras-protein-signal-transduction",
+      "source": "gene:HRAS",
+      "target": "mech:ras-protein-signal-transduction",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates HRAS to ras protein signal transduction (GO:0007265 or a more specific child term), evidence codes IBA, IDA, IEA, NAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0007265",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P01112&goId=GO:0007265&goUsage=descendants",
+          "title": "QuickGO: 5 annotation(s) of UniProtKB:P01112 (HRAS) to GO:0007265, GO:0046579; evidence IBA, IDA, IEA, NAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:23027131",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23027131/",
+          "title": "GO annotation GO:0007265 (IDA, assigned by BHF-UCL)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:23027131",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23027131/",
+          "title": "GO annotation GO:0007265 (IDA, assigned by ComplexPortal)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IDA",
+          "IEA",
+          "NAS"
+        ],
+        "go_terms_hit": [
+          "GO:0007265",
+          "GO:0046579"
+        ]
+      }
+    },
+    {
+      "id": "gene:HRAS|participates_in|mech:mapk-cascade",
+      "source": "gene:HRAS",
+      "target": "mech:mapk-cascade",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates HRAS to mapk cascade (GO:0000165 or a more specific child term), evidence codes IDA, IEA, TAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P01112&goId=GO:0000165&goUsage=descendants",
+          "title": "QuickGO: 6 annotation(s) of UniProtKB:P01112 (HRAS) to GO:0000165, GO:0043410, GO:0046330, GO:0070374; evidence IDA, IEA, TAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:23027131",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23027131/",
+          "title": "GO annotation GO:0043410 (IDA, assigned by BHF-UCL)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:9765203",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9765203/",
+          "title": "GO annotation GO:0043410 (IDA, assigned by BHF-UCL)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:22065586",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22065586/",
+          "title": "GO annotation GO:0046330 (IDA, assigned by BHF-UCL)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IDA",
+          "IEA",
+          "TAS"
+        ],
+        "go_terms_hit": [
+          "GO:0000165",
+          "GO:0043410",
+          "GO:0046330",
+          "GO:0070374"
+        ]
+      }
+    },
+    {
+      "id": "gene:HRAS|participates_in|mech:positive-regulation-of-ras-signaling",
+      "source": "gene:HRAS",
+      "target": "mech:positive-regulation-of-ras-signaling",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates HRAS to positive regulation of ras protein signal transduction (GO:0046579 or a more specific child term), evidence codes NAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0046579",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P01112&goId=GO:0046579&goUsage=descendants",
+          "title": "QuickGO: 1 annotation(s) of UniProtKB:P01112 (HRAS) to GO:0046579; evidence NAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "NAS"
+        ],
+        "go_terms_hit": [
+          "GO:0046579"
+        ]
+      }
+    },
+    {
+      "id": "gene:NF1|participates_in|mech:ras-protein-signal-transduction",
+      "source": "gene:NF1",
+      "target": "mech:ras-protein-signal-transduction",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates NF1 to ras protein signal transduction (GO:0007265 or a more specific child term), evidence codes ISS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0007265",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P21359&goId=GO:0007265&goUsage=descendants",
+          "title": "QuickGO: 1 annotation(s) of UniProtKB:P21359 (NF1) to GO:0007265; evidence ISS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "ISS"
+        ],
+        "go_terms_hit": [
+          "GO:0007265"
+        ]
+      }
+    },
+    {
+      "id": "gene:NF1|participates_in|mech:mapk-cascade",
+      "source": "gene:NF1",
+      "target": "mech:mapk-cascade",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates NF1 to mapk cascade (GO:0000165 or a more specific child term), evidence codes IMP, ISS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P21359&goId=GO:0000165&goUsage=descendants",
+          "title": "QuickGO: 3 annotation(s) of UniProtKB:P21359 (NF1) to GO:0000165, GO:0043409; evidence IMP, ISS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:16648142",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16648142/",
+          "title": "GO annotation GO:0043409 (IMP, assigned by MGI)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IMP",
+          "ISS"
+        ],
+        "go_terms_hit": [
+          "GO:0000165",
+          "GO:0043409"
+        ]
+      }
+    },
+    {
+      "id": "gene:MAP2K1|participates_in|mech:mapk-cascade",
+      "source": "gene:MAP2K1",
+      "target": "mech:mapk-cascade",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates MAP2K1 to mapk cascade (GO:0000165 or a more specific child term), evidence codes IBA, IEA, IMP, TAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q02750&goId=GO:0000165&goUsage=descendants",
+          "title": "QuickGO: 8 annotation(s) of UniProtKB:Q02750 (MAP2K1) to GO:0000165, GO:0032872, GO:0043410, GO:0070371, GO:0070372, GO:0070374; evidence IBA, IEA, IMP, TAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:24375836",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24375836/",
+          "title": "GO annotation GO:0070374 (IMP, assigned by BHF-UCL)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IEA",
+          "IMP",
+          "TAS"
+        ],
+        "go_terms_hit": [
+          "GO:0000165",
+          "GO:0032872",
+          "GO:0043410",
+          "GO:0070371",
+          "GO:0070372",
+          "GO:0070374"
+        ]
+      }
+    },
+    {
+      "id": "gene:SHOC2|participates_in|mech:ras-protein-signal-transduction",
+      "source": "gene:SHOC2",
+      "target": "mech:ras-protein-signal-transduction",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates SHOC2 to ras protein signal transduction (GO:0007265 or a more specific child term), evidence codes IBA, IMP, NAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0007265",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q9UQ13&goId=GO:0007265&goUsage=descendants",
+          "title": "QuickGO: 4 annotation(s) of UniProtKB:Q9UQ13 (SHOC2) to GO:0046579; evidence IBA, IMP, NAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:16630891",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16630891/",
+          "title": "GO annotation GO:0046579 (IMP, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:19684605",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19684605/",
+          "title": "GO annotation GO:0046579 (IMP, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IMP",
+          "NAS"
+        ],
+        "go_terms_hit": [
+          "GO:0046579"
+        ]
+      }
+    },
+    {
+      "id": "gene:SHOC2|participates_in|mech:mapk-cascade",
+      "source": "gene:SHOC2",
+      "target": "mech:mapk-cascade",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates SHOC2 to mapk cascade (GO:0000165 or a more specific child term), evidence codes IDA.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0000165",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q9UQ13&goId=GO:0000165&goUsage=descendants",
+          "title": "QuickGO: 4 annotation(s) of UniProtKB:Q9UQ13 (SHOC2) to GO:0043408; evidence IDA",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:35768504",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35768504/",
+          "title": "GO annotation GO:0043408 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:35830882",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35830882/",
+          "title": "GO annotation GO:0043408 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:35831509",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35831509/",
+          "title": "GO annotation GO:0043408 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IDA"
+        ],
+        "go_terms_hit": [
+          "GO:0043408"
+        ]
+      }
+    },
+    {
+      "id": "gene:SHOC2|participates_in|mech:positive-regulation-of-ras-signaling",
+      "source": "gene:SHOC2",
+      "target": "mech:positive-regulation-of-ras-signaling",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates SHOC2 to positive regulation of ras protein signal transduction (GO:0046579 or a more specific child term), evidence codes IBA, IMP, NAS.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0046579",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q9UQ13&goId=GO:0046579&goUsage=descendants",
+          "title": "QuickGO: 4 annotation(s) of UniProtKB:Q9UQ13 (SHOC2) to GO:0046579; evidence IBA, IMP, NAS",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:16630891",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16630891/",
+          "title": "GO annotation GO:0046579 (IMP, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:19684605",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19684605/",
+          "title": "GO annotation GO:0046579 (IMP, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IMP",
+          "NAS"
+        ],
+        "go_terms_hit": [
+          "GO:0046579"
+        ]
+      }
+    },
+    {
+      "id": "gene:LZTR1|participates_in|mech:ras-protein-signal-transduction",
+      "source": "gene:LZTR1",
+      "target": "mech:ras-protein-signal-transduction",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates LZTR1 to ras protein signal transduction (GO:0007265 or a more specific child term), evidence codes IBA, IDA, IEA.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0007265",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q8N653&goId=GO:0007265&goUsage=descendants",
+          "title": "QuickGO: 4 annotation(s) of UniProtKB:Q8N653 (LZTR1) to GO:0046580; evidence IBA, IDA, IEA",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:30442762",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30442762/",
+          "title": "GO annotation GO:0046580 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:30442766",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30442766/",
+          "title": "GO annotation GO:0046580 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IDA",
+          "IEA"
+        ],
+        "go_terms_hit": [
+          "GO:0046580"
+        ]
+      }
+    },
+    {
+      "id": "gene:LZTR1|participates_in|mech:negative-regulation-of-ras-signaling",
+      "source": "gene:LZTR1",
+      "target": "mech:negative-regulation-of-ras-signaling",
+      "type": "participates_in",
+      "label": "takes part in",
+      "explanation": "Gene Ontology annotates LZTR1 to negative regulation of ras protein signal transduction (GO:0046580 or a more specific child term), evidence codes IBA, IDA, IEA.",
+      "evidence_level": "curated",
+      "status": "supported",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source": "GO",
+          "ref": "GO:0046580",
+          "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q8N653&goId=GO:0046580&goUsage=descendants",
+          "title": "QuickGO: 4 annotation(s) of UniProtKB:Q8N653 (LZTR1) to GO:0046580; evidence IBA, IDA, IEA",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:30442762",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30442762/",
+          "title": "GO annotation GO:0046580 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        },
+        {
+          "source": "GO",
+          "ref": "PMID:30442766",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30442766/",
+          "title": "GO annotation GO:0046580 (IDA, assigned by UniProt)",
+          "kind": "database",
+          "study_type": "database_record",
+          "extracted_by": "database",
+          "retrieved": "2026-10-03"
+        }
+      ],
+      "attrs": {
+        "go_evidence_codes": [
+          "IBA",
+          "IDA",
+          "IEA"
+        ],
+        "go_terms_hit": [
+          "GO:0046580"
+        ]
+      }
+    }
+  ]
+}
