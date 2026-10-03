@@ -138,6 +138,36 @@ Only diseases with **≥ 5** annotated terms have an entry: 8,787 of them. For a
 "too few annotated phenotypes to compare" and still show the links. QTL and susceptibility loci can
 have their own page but are never listed as anyone's neighbour.
 
+**Update 2026-10-04: all 45 deep-atlas diseases.** The `atlas` block in `neighbours/` and the
+`far` flag now cover every `disease:<GENE>` node in `data/graph.json`: the SNARE slice and the DEE,
+lysosomal and RASopathy families, 45 in total. File formats are unchanged.
+
+The threshold was recalibrated over all 75 curated `similar_phenotype` pairs, and it stays at
+**0.2454**.
+
+- **Literal rule rejected.** The weakest pair alone is NPC1–ARSA at 0.1287. It is one of four
+  lysosomal pairs (NPC1–ARSA, HEXA–CLN3, GBA1–GLA, TPP1–GALC) that link visceral and neurological
+  subtypes, and as a threshold it would call 74% of all diseases "near".
+- **Rule now used: a trimmed minimum.** Take the weakest pair after dropping the lowest 5% of pairs
+  (4 of 75). That is SNAP25–SYT2, 0.2454.
+- **Effect.** 23.2% of comparable diseases are now near at least one mapped disease, up from 8.8%,
+  because there are 45 targets including the DEE family.
+- **Where it is recorded.** `meta.method.atlas_threshold.calibration` holds the trimmed pairs and
+  the literal minimum.
+
+The four checks now:
+
+| Disease | Result | Closest mapped diseases (cosine) |
+|---|---|---|
+| Huntington disease | **near** | CACNA1A 0.277, KCNT1 0.273, SLC2A1 0.268 |
+| Cystic fibrosis | **far** | top IDS 0.176 |
+| Duchenne muscular dystrophy | **near** | GAA/Pompe 0.308; SNAP25 0.237 and SYT2 0.233 stay below the threshold |
+| Dravet syndrome | **near** | SCN1A 0.642, SCN2A 0.527, KCNQ2 0.373 |
+
+These results show the ceiling of phenotype-only matching. Huntington becomes "near" through broad
+neurodegenerative and movement features shared with the DEE family. It is a phenotype match, not a
+mechanism one, which is exactly what the caveat says.
+
 ## Mechanism layer: `mechanism/<bucket>.json`, `clusters.json`, `meta.mechanism`
 
 This layer is new, and it is purely **additive**: `index.json` and `neighbours/` keep their format.

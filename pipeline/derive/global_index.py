@@ -57,7 +57,7 @@ SANITY = {
     "MONDO:0010679": ["MONDO:0010311", "MONDO:0011968", "MONDO:0011787"],  # DMD: Becker, SGCA, FKRP
     "MONDO:0100135": ["MONDO:0100079", "MONDO:0011461", "MONDO:0033361"],  # Dravet: DEE6A, GEFS+2, SCN1B
 }
-FAR_TEXT = ("No phenotype overlap with any of the 11 mapped diseases reaches the calibrated threshold: "
+FAR_TEXT = ("No phenotype overlap with any of the mapped deep-atlas diseases reaches the calibrated threshold: "
             "different mechanism family, most likely (phenotype similarity only; mechanism not assessed).")
 
 
@@ -218,8 +218,26 @@ def main():
     # ---------------------------------------------------------------- atlas mapping
     g = Graph()
     profiles = read_json(BIO_RAW / "hpo_stats.json")["profiles"]
+    # every deep-atlas disease in the graph (all families), not only the original 11. The original
+    # 11 keep the biology layer's curated profile entities; the others use their OMIM/ORPHA xrefs and
+    # subtypes that carry HPO annotations.
+    ATLAS = sorted(n_["id"].split(":", 1)[1] for n_ in g.nodes.values()
+                   if n_["type"] == "disease" and n_["id"].startswith("disease:"))
+    for sym in ATLAS:
+        if sym in profiles:
+            continue
+        dn = g.nodes[f"disease:{sym}"]
+        ents = set()
+        for src in [dn.get("xrefs", {}) or {}] + list((dn.get("attrs", {}) or {}).get("subtypes", []) or []):
+            for k_, pre in (("OMIM", "OMIM:"), ("ORPHA", "ORPHA:")):
+                v_ = src.get(k_)
+                for x_ in ([v_] if isinstance(v_, str) else (v_ or [])):
+                    x_ = str(x_).replace("Orphanet:", "").replace("ORPHA:", "").replace("OMIM:", "")
+                    ents.add(pre + x_)
+        ents = sorted(ents)
+        profiles[sym] = {"entities": ents, "annotated_entities": [e for e in ents if direct_raw.get(e)]}
     atlas_of = {}
-    for sym in SLICE_GENES:
+    for sym in ATLAS:
         dn = g.nodes.get(f"disease:{sym}", {})
         mids = list(dn.get("xrefs", {}).get("MONDO", []) or [])
         mids += [s.get("MONDO") for s in dn.get("attrs", {}).get("subtypes", []) if s.get("MONDO")]
@@ -228,10 +246,10 @@ def main():
                 atlas_of[mm] = f"disease:{sym}"
         for e in profiles.get(sym, {}).get("entities", []):
             atlas_of[xmap.get(e, e)] = f"disease:{sym}"
-    slice_set = set(SLICE_GENES)
+    slice_set = set(ATLAS)
     profile_keys = {xmap.get(e, e) for p_ in profiles.values() for e in p_.get("entities", [])}
     subtype_name = {}
-    for sym in SLICE_GENES:
+    for sym in ATLAS:
         for st in g.nodes.get(f"disease:{sym}", {}).get("attrs", {}).get("subtypes", []):
             for k_, pre in (("OMIM", "OMIM:"), ("ORPHA", "ORPHA:")):
                 for v_ in ([st.get(k_)] if isinstance(st.get(k_), str) else (st.get(k_) or [])):
@@ -356,7 +374,7 @@ def main():
         return out
 
     # ---------------------------------------------------------------- atlas umbrellas
-    umb = [s for s in SLICE_GENES if profiles.get(s, {}).get("annotated_entities")]
+    umb = [s for s in ATLAS if profiles.get(s, {}).get("annotated_entities")]
     umb_prop = []
     for s in umb:
         d = set().union(*(direct_raw[e] for e in profiles[s]["annotated_entities"]))
@@ -377,12 +395,20 @@ def main():
         if e["source"] in upos and e["target"] in upos:
             fam.append((e["id"], float(UU[upos[e["source"]], upos[e["target"]]])))
     fam.sort(key=lambda x: x[1])
-    T_NEAR = round(fam[0][1], 4)
+    # Trimmed minimum: the weakest curated pair after dropping the lowest 5% of pairs. With all four
+    # families the literal minimum (NPC1-ARSA 0.129) is one of four lysosomal pairs that link visceral
+    # to neurological subtypes, and it would call 74% of all diseases "near" - no longer informative.
+    TRIM = int(round(0.05 * len(fam)))
+    T_NEAR = round(fam[TRIM][1], 4)
     bgn = A[pool_mask & ~slice_rows]
     cal = {
         "in_family_pairs": [{"edge": eid, "cosine": round(c, 4)} for eid, c in fam],
         "chosen_threshold": T_NEAR,
-        "chosen_rule": "minimum cosine among the atlas's curated similar_phenotype pairs",
+        "chosen_rule": f"weakest curated similar_phenotype pair after trimming the lowest 5% ({TRIM} of {len(fam)} "
+                       f"pairs); the untrimmed minimum is reported as literal_minimum",
+        "literal_minimum": {"edge": fam[0][0], "cosine": round(fam[0][1], 4),
+                            "share_near_any": round(float((bgn >= fam[0][1]).any(axis=1).mean()), 4)},
+        "trimmed_pairs": [{"edge": e_, "cosine": round(c_, 4)} for e_, c_ in fam[:TRIM]],
         "share_of_comparable_non_slice_diseases_near_any": round(float((bgn >= T_NEAR).any(axis=1).mean()), 4),
         "alternatives_considered": {
             f"median_in_family_{round(float(np.median([c for _e, c in fam])), 4)}":
@@ -512,9 +538,9 @@ def main():
             "merge": "a disease merged from several sources (OMIM + ORPHA) is the centroid of its sources' "
                      "normalised vectors, so no single source's annotation style dominates",
             "atlas_threshold": {
-                "rule": f"'near' an atlas disease = cosine >= {T_NEAR}, the lowest cosine among the atlas's "
-                        "own curated similar_phenotype pairs; 'far' = near to none of the 10 profiled atlas "
-                        "diseases (STX1A has no HPO profile)",
+                "rule": f"'near' an atlas disease = cosine >= {T_NEAR}, the weakest of the atlas's own curated "
+                        "similar_phenotype pairs after trimming the lowest 5%; 'far' = near to none of the profiled atlas "
+                        f"diseases ({len(umb)} of {len(ATLAS)} have an HPO profile)",
                 "calibration": cal,
             },
         },
@@ -545,7 +571,7 @@ def main():
           f"MONDO, {dropped_no_name} nameless dropped), {len(q_ids)} with neighbours; "
           f"index {index_size / 1024:.0f} KB, shards {sum(sizes) / 1024 / 1024:.1f} MB "
           f"(max {max(sizes) / 1024:.0f} KB)")
-    print(f"  near threshold {T_NEAR} (weakest in-family pair {fam[0][0]}); near-any share "
+    print(f"  near threshold {T_NEAR} (weakest in-family pair after trimming: {fam[TRIM][0]}); near-any share "
           f"{cal['share_of_comparable_non_slice_diseases_near_any']}; alternatives {cal['alternatives_considered']}")
     print(f"  raw id mapping: {dict(mapped_counts)}")
 

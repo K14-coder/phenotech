@@ -1,7 +1,7 @@
 {
  "generated": "2026-10-04",
  "caveat": "phenotype similarity only; no evidence curation; mechanism not assessed",
- "far_text": "No phenotype overlap with any of the 11 mapped diseases reaches the calibrated threshold: different mechanism family, most likely (phenotype similarity only; mechanism not assessed).",
+ "far_text": "No phenotype overlap with any of the mapped deep-atlas diseases reaches the calibrated threshold: different mechanism family, most likely (phenotype similarity only; mechanism not assessed).",
  "sources": {
   "MONDO": {
    "file": "mondo-base.obo",
@@ -31,13 +31,13 @@
   "with_gene": 8145,
   "with_neighbours": 8787,
   "neighbour_pool": 8696,
-  "in_atlas": 133,
+  "in_atlas": 134,
   "raw_ids_merged": 14824,
   "raw_id_mapping": {
    "equivalentTo": 14380,
    "unmapped": 438,
-   "obsolete_replaced_by": 2,
-   "exact_name": 4
+   "exact_name": 4,
+   "obsolete_replaced_by": 2
   },
   "hpo_terms_in_vectors": 12563
  },
@@ -49,28 +49,80 @@
   "distinctive_ic": 4.0,
   "merge": "a disease merged from several sources (OMIM + ORPHA) is the centroid of its sources' normalised vectors, so no single source's annotation style dominates",
   "atlas_threshold": {
-   "rule": "'near' an atlas disease = cosine >= 0.2454, the lowest cosine among the atlas's own curated similar_phenotype pairs; 'far' = near to none of the 10 profiled atlas diseases (STX1A has no HPO profile)",
+   "rule": "'near' an atlas disease = cosine >= 0.2454, the weakest of the atlas's own curated similar_phenotype pairs after trimming the lowest 5%; 'far' = near to none of the profiled atlas diseases (44 of 45 have an HPO profile)",
    "calibration": {
     "in_family_pairs": [
      {
+      "edge": "disease:NPC1|similar_phenotype|disease:ARSA",
+      "cosine": 0.1287
+     },
+     {
+      "edge": "disease:HEXA|similar_phenotype|disease:CLN3",
+      "cosine": 0.1595
+     },
+     {
+      "edge": "disease:GBA1|similar_phenotype|disease:GLA",
+      "cosine": 0.1735
+     },
+     {
+      "edge": "disease:TPP1|similar_phenotype|disease:GALC",
+      "cosine": 0.1814
+     },
+     {
       "edge": "disease:SNAP25|similar_phenotype|disease:SYT2",
       "cosine": 0.2454
+     },
+     {
+      "edge": "disease:SOS1|similar_phenotype|disease:LZTR1",
+      "cosine": 0.2484
      },
      {
       "edge": "disease:UNC13A|similar_phenotype|disease:NSF",
       "cosine": 0.2501
      },
      {
+      "edge": "disease:CLN3|similar_phenotype|disease:TPP1",
+      "cosine": 0.2517
+     },
+     {
       "edge": "disease:STXBP1|similar_phenotype|disease:VAMP2",
       "cosine": 0.2549
+     },
+     {
+      "edge": "disease:KCNT1|similar_phenotype|disease:SLC6A1",
+      "cosine": 0.2575
      },
      {
       "edge": "disease:STXBP1|similar_phenotype|disease:STX1B",
       "cosine": 0.2725
      },
      {
+      "edge": "disease:KCNT1|similar_phenotype|disease:VAMP2",
+      "cosine": 0.2768
+     },
+     {
+      "edge": "disease:GRIN2B|similar_phenotype|disease:VAMP2",
+      "cosine": 0.2815
+     },
+     {
+      "edge": "disease:SOS1|similar_phenotype|disease:KRAS",
+      "cosine": 0.2819
+     },
+     {
       "edge": "disease:SYT1|similar_phenotype|disease:UNC13A",
       "cosine": 0.2835
+     },
+     {
+      "edge": "disease:SOS1|similar_phenotype|disease:SHOC2",
+      "cosine": 0.2843
+     },
+     {
+      "edge": "disease:PTPN11|similar_phenotype|disease:SOS1",
+      "cosine": 0.2924
+     },
+     {
+      "edge": "disease:PTPN11|similar_phenotype|disease:KRAS",
+      "cosine": 0.3023
      },
      {
       "edge": "disease:STX1B|similar_phenotype|disease:SLC6A1",
@@ -81,28 +133,255 @@
       "cosine": 0.311
      },
      {
+      "edge": "disease:KRAS|similar_phenotype|disease:RIT1",
+      "cosine": 0.3117
+     },
+     {
+      "edge": "disease:SOS1|similar_phenotype|disease:RAF1",
+      "cosine": 0.3231
+     },
+     {
+      "edge": "disease:RAF1|similar_phenotype|disease:KRAS",
+      "cosine": 0.3232
+     },
+     {
+      "edge": "disease:CDKL5|similar_phenotype|disease:SYT1",
+      "cosine": 0.3237
+     },
+     {
+      "edge": "disease:CDKL5|similar_phenotype|disease:VAMP2",
+      "cosine": 0.3277
+     },
+     {
       "edge": "disease:STXBP1|similar_phenotype|disease:SLC6A1",
       "cosine": 0.331
+     },
+     {
+      "edge": "disease:GBA1|similar_phenotype|disease:IDUA",
+      "cosine": 0.3314
+     },
+     {
+      "edge": "disease:KRAS|similar_phenotype|disease:SHOC2",
+      "cosine": 0.3427
+     },
+     {
+      "edge": "disease:PTPN11|similar_phenotype|disease:LZTR1",
+      "cosine": 0.3444
+     },
+     {
+      "edge": "disease:NPC1|similar_phenotype|disease:SMPD1",
+      "cosine": 0.3445
+     },
+     {
+      "edge": "disease:KCNQ2|similar_phenotype|disease:STX1B",
+      "cosine": 0.3452
+     },
+     {
+      "edge": "disease:KRAS|similar_phenotype|disease:LZTR1",
+      "cosine": 0.3491
+     },
+     {
+      "edge": "disease:KCNT1|similar_phenotype|disease:UNC13A",
+      "cosine": 0.3504
+     },
+     {
+      "edge": "disease:PTPN11|similar_phenotype|disease:CBL",
+      "cosine": 0.3506
+     },
+     {
+      "edge": "disease:CDKL5|similar_phenotype|disease:NSF",
+      "cosine": 0.3558
      },
      {
       "edge": "disease:STXBP1|similar_phenotype|disease:NSF",
       "cosine": 0.3576
      },
      {
+      "edge": "disease:KCNQ2|similar_phenotype|disease:NSF",
+      "cosine": 0.3804
+     },
+     {
+      "edge": "disease:SCN8A|similar_phenotype|disease:STX1B",
+      "cosine": 0.3819
+     },
+     {
+      "edge": "disease:KCNT1|similar_phenotype|disease:GRIN2B",
+      "cosine": 0.3896
+     },
+     {
+      "edge": "disease:KRAS|similar_phenotype|disease:HRAS",
+      "cosine": 0.3923
+     },
+     {
+      "edge": "disease:CDKL5|similar_phenotype|disease:CPLX1",
+      "cosine": 0.3951
+     },
+     {
       "edge": "disease:STXBP1|similar_phenotype|disease:UNC13A",
       "cosine": 0.3959
      },
      {
+      "edge": "disease:SCN2A|similar_phenotype|disease:UNC13A",
+      "cosine": 0.402
+     },
+     {
+      "edge": "disease:GBA1|similar_phenotype|disease:SMPD1",
+      "cosine": 0.4058
+     },
+     {
+      "edge": "disease:RAF1|similar_phenotype|disease:CBL",
+      "cosine": 0.4076
+     },
+     {
+      "edge": "disease:IDUA|similar_phenotype|disease:IDS",
+      "cosine": 0.4079
+     },
+     {
+      "edge": "disease:KRAS|similar_phenotype|disease:CBL",
+      "cosine": 0.411
+     },
+     {
+      "edge": "disease:MAP2K1|similar_phenotype|disease:RIT1",
+      "cosine": 0.414
+     },
+     {
+      "edge": "disease:ARSA|similar_phenotype|disease:GALC",
+      "cosine": 0.4193
+     },
+     {
+      "edge": "disease:SCN8A|similar_phenotype|disease:CACNA1A",
+      "cosine": 0.423
+     },
+     {
+      "edge": "disease:RAF1|similar_phenotype|disease:RIT1",
+      "cosine": 0.4247
+     },
+     {
       "edge": "disease:STXBP1|similar_phenotype|disease:CPLX1",
       "cosine": 0.4306
+     },
+     {
+      "edge": "disease:SCN2A|similar_phenotype|disease:CACNA1A",
+      "cosine": 0.4381
+     },
+     {
+      "edge": "disease:RAF1|similar_phenotype|disease:SHOC2",
+      "cosine": 0.4452
+     },
+     {
+      "edge": "disease:CDKL5|similar_phenotype|disease:UNC13A",
+      "cosine": 0.4485
+     },
+     {
+      "edge": "disease:KCNT1|similar_phenotype|disease:STXBP1",
+      "cosine": 0.452
+     },
+     {
+      "edge": "disease:SCN8A|similar_phenotype|disease:STXBP1",
+      "cosine": 0.4547
+     },
+     {
+      "edge": "disease:SCN8A|similar_phenotype|disease:CDKL5",
+      "cosine": 0.4577
+     },
+     {
+      "edge": "disease:SCN8A|similar_phenotype|disease:KCNT1",
+      "cosine": 0.4624
+     },
+     {
+      "edge": "disease:SHOC2|similar_phenotype|disease:RIT1",
+      "cosine": 0.4773
+     },
+     {
+      "edge": "disease:SCN1A|similar_phenotype|disease:STX1B",
+      "cosine": 0.4885
+     },
+     {
+      "edge": "disease:KCNQ2|similar_phenotype|disease:STXBP1",
+      "cosine": 0.5038
+     },
+     {
+      "edge": "disease:SCN1A|similar_phenotype|disease:CDKL5",
+      "cosine": 0.5137
+     },
+     {
+      "edge": "disease:RIT1|similar_phenotype|disease:LZTR1",
+      "cosine": 0.5235
+     },
+     {
+      "edge": "disease:GRIN2B|similar_phenotype|disease:STXBP1",
+      "cosine": 0.5399
+     },
+     {
+      "edge": "disease:SCN1A|similar_phenotype|disease:STXBP1",
+      "cosine": 0.5504
+     },
+     {
+      "edge": "disease:SCN2A|similar_phenotype|disease:GRIN2B",
+      "cosine": 0.5616
+     },
+     {
+      "edge": "disease:SCN2A|similar_phenotype|disease:STXBP1",
+      "cosine": 0.577
+     },
+     {
+      "edge": "disease:SCN1A|similar_phenotype|disease:KCNT1",
+      "cosine": 0.5897
+     },
+     {
+      "edge": "disease:KCNQ2|similar_phenotype|disease:KCNT1",
+      "cosine": 0.5958
+     },
+     {
+      "edge": "disease:SCN1A|similar_phenotype|disease:SCN8A",
+      "cosine": 0.6276
+     },
+     {
+      "edge": "disease:GRIN2B|similar_phenotype|disease:CDKL5",
+      "cosine": 0.6451
+     },
+     {
+      "edge": "disease:SCN2A|similar_phenotype|disease:SCN8A",
+      "cosine": 0.667
+     },
+     {
+      "edge": "disease:SCN1A|similar_phenotype|disease:SCN2A",
+      "cosine": 0.7264
+     },
+     {
+      "edge": "disease:SCN2A|similar_phenotype|disease:KCNQ2",
+      "cosine": 0.7997
      }
     ],
     "chosen_threshold": 0.2454,
-    "chosen_rule": "minimum cosine among the atlas's curated similar_phenotype pairs",
-    "share_of_comparable_non_slice_diseases_near_any": 0.0884,
+    "chosen_rule": "weakest curated similar_phenotype pair after trimming the lowest 5% (4 of 75 pairs); the untrimmed minimum is reported as literal_minimum",
+    "literal_minimum": {
+     "edge": "disease:NPC1|similar_phenotype|disease:ARSA",
+     "cosine": 0.1287,
+     "share_near_any": 0.7399
+    },
+    "trimmed_pairs": [
+     {
+      "edge": "disease:NPC1|similar_phenotype|disease:ARSA",
+      "cosine": 0.1287
+     },
+     {
+      "edge": "disease:HEXA|similar_phenotype|disease:CLN3",
+      "cosine": 0.1595
+     },
+     {
+      "edge": "disease:GBA1|similar_phenotype|disease:GLA",
+      "cosine": 0.1735
+     },
+     {
+      "edge": "disease:TPP1|similar_phenotype|disease:GALC",
+      "cosine": 0.1814
+     }
+    ],
+    "share_of_comparable_non_slice_diseases_near_any": 0.232,
     "alternatives_considered": {
-     "median_in_family_0.3098": 0.0336,
-     "per_umbrella_p99": 0.0602
+     "median_in_family_0.3819": 0.0306,
+     "per_umbrella_p99": 0.2133
     }
    }
   }
@@ -141,7 +420,7 @@
  "sanity_checks": {
   "MONDO:0007739": {
    "name": "Huntington disease",
-   "far_from_atlas": true,
+   "far_from_atlas": false,
    "top10": [
     [
      "MONDO:0011671",
@@ -306,7 +585,7 @@
   },
   "MONDO:0010679": {
    "name": "Duchenne muscular dystrophy",
-   "far_from_atlas": true,
+   "far_from_atlas": false,
    "top10": [
     [
      "MONDO:0029135",
@@ -464,9 +743,9 @@
   }
  },
  "files": {
-  "index.json": 1619261,
-  "neighbours_total": 15019294,
-  "neighbours_max_shard": 451161
+  "index.json": 1620867,
+  "neighbours_total": 15169628,
+  "neighbours_max_shard": 457230
  },
  "mechanism": {
   "generated": "2026-10-04",
@@ -988,8 +1267,328 @@
    "disease:SYNGAP1",
    "disease:TPP1"
   ],
-  "rows_flagged_total": 133,
-  "rows_added_from_families": 119,
+  "rows_flagged_total": 134,
+  "rows_added_from_families": 2,
   "rule": "MONDO xref/subtype match, or OMIM/ORPHA match on a single-gene row, or single-gene OMIM-Mendelian row for the umbrella's gene; multi-gene groups never flagged"
+ },
+ "dismech": {
+  "source": "DisMech (Monarch Initiative)",
+  "repo": "https://github.com/monarch-initiative/dismech",
+  "site": "https://dismech.monarchinitiative.org",
+  "license": "BSD-3-Clause",
+  "commit": "332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb",
+  "commit_date": "2026-10-03T21:28:47Z",
+  "attribution_text": "Mechanism pathograph from DisMech, the Disorder Mechanisms Knowledge Base of the Monarch Initiative (https://dismech.monarchinitiative.org), BSD-3-Clause. Curated independently of this atlas; evidence snippets are quoted verbatim from DisMech.",
+  "mondo_version": "mondo/releases/2026-09-01/mondo-base.owl",
+  "counts": {
+   "yaml_files": 3290,
+   "records": 3238,
+   "mondo_ids": 3217,
+   "mondo_ids_with_2plus_entries": 14,
+   "no_mondo_skipped": 52,
+   "joined_by_mapping_exactMatch": 0,
+   "in_index_json": 2428,
+   "index_extra_rows": 789,
+   "index_extra_obsolete_or_unknown_mondo": 0,
+   "steps_total": 52680,
+   "mechanism_steps": 22650,
+   "steps_by_type": {
+    "phenotype": 24168,
+    "cellular": 8264,
+    "molecular": 5505,
+    "gene": 5003,
+    "tissue": 3861,
+    "unspecified": 2634,
+    "organism": 2291,
+    "environmental": 954
+   },
+   "step_type_basis": {
+    "section": 30030,
+    "scale": 14493,
+    "inferred": 5523,
+    "none": 2634
+   },
+   "edges": 52548,
+   "dangling_causal_targets": 509,
+   "evidence_items_carried": 143102,
+   "snippets_carried": 143089,
+   "snippets_verified_verbatim": 143089,
+   "supports": {
+    "SUPPORT": 141197,
+    "REFUTE": 1590,
+    "NO_EVIDENCE": 315
+   },
+   "flags": {
+    "indirect": 5934,
+    "refute": 1590,
+    "no_evidence": 315
+   },
+   "evidence_items_in_corpus": 227012,
+   "snippets_in_corpus": 226979,
+   "supports_in_corpus": {
+    "SUPPORT": 224393,
+    "REFUTE": 2022,
+    "NO_EVIDENCE": 597
+   },
+   "reference_prefixes": {
+    "PMID": 130220,
+    "ORPHA": 5081,
+    "url": 3671,
+    "DOI": 2701,
+    "CGGV": 974,
+    "clinicaltrials": 262,
+    "PPR": 110,
+    "NCIT": 29,
+    "GEO": 18,
+    "CIVIC_ASSERTION": 17,
+    "CIVIC_EID": 8,
+    "CGDS": 7,
+    "STRCHIVE": 4
+   },
+   "refs_without_url": {
+    "STRCHIVE": 4
+   },
+   "atlas_links": 72,
+   "atlas_gene_only": 15
+  },
+  "shards": {
+   "dismech": {
+    "total_bytes": 30605689,
+    "max_bytes": 1067897,
+    "min_bytes": 27487,
+    "n": 64
+   },
+   "dismech_evidence": {
+    "total_bytes": 90936764,
+    "max_bytes": 3120869,
+    "min_bytes": 58976,
+    "n": 64
+   }
+  },
+  "files": {
+   "dismech_index.json": 222448,
+   "index_extra.json": 110951,
+   "dismech_atlas_links.json": 62505
+  },
+  "no_mondo_files": [
+   {
+    "file": "ANK2_Related_Complex_Neurodevelopmental_Disorder.yaml",
+    "name": "ANK2-Related Complex Neurodevelopmental Disorder"
+   },
+   {
+    "file": "Aconitine_Poisoning.yaml",
+    "name": "Aconitine Poisoning"
+   },
+   {
+    "file": "Acute_Post-Surgical_Pain.yaml",
+    "name": "Acute Post-Surgical Pain"
+   },
+   {
+    "file": "Adenovirus_Respiratory_Infection.yaml",
+    "name": "Adenovirus Respiratory Infection"
+   },
+   {
+    "file": "Ageing_Associated_Decline_in_Intrinsic_Capacity.yaml",
+    "name": "Ageing Associated Decline in Intrinsic Capacity"
+   },
+   {
+    "file": "Amatoxin_Poisoning.yaml",
+    "name": "Amatoxin Poisoning"
+   },
+   {
+    "file": "Arsenic_Poisoning.yaml",
+    "name": "Arsenic Poisoning"
+   },
+   {
+    "file": "Attenuated_Mucopolysaccharidosis_Type_I.yaml",
+    "name": "Attenuated Mucopolysaccharidosis Type I"
+   },
+   {
+    "file": "BBOX1-Related_Carnitine_Biosynthesis_Deficiency.yaml",
+    "name": "BBOX1-Related Carnitine Biosynthesis Deficiency"
+   },
+   {
+    "file": "BBSome-Related_Retinitis_Pigmentosa.yaml",
+    "name": "BBSome-related retinitis pigmentosa"
+   },
+   {
+    "file": "BEST1_Bestrophinopathies.yaml",
+    "name": "BEST1 Bestrophinopathies"
+   },
+   {
+    "file": "CCN2-Related_Kyphomelic_Dysplasia.yaml",
+    "name": "CCN2-Related Kyphomelic Dysplasia"
+   },
+   {
+    "file": "CKD-Mineral_Bone_Disorder.yaml",
+    "name": "CKD-Mineral Bone Disorder"
+   },
+   {
+    "file": "Chemotherapy_Induced_Diarrhea.yaml",
+    "name": "Chemotherapy-Induced Diarrhea"
+   },
+   {
+    "file": "Chemotherapy_Induced_Nausea_and_Vomiting.yaml",
+    "name": "Chemotherapy-Induced Nausea and Vomiting"
+   },
+   {
+    "file": "Chemotherapy_Induced_Neutropenia.yaml",
+    "name": "Chemotherapy-Induced Neutropenia"
+   },
+   {
+    "file": "Chlamydia_Pneumoniae_Pneumonia.yaml",
+    "name": "Chlamydia Pneumoniae Pneumonia"
+   },
+   {
+    "file": "Chlorophacinone_Poisoning.yaml",
+    "name": "Chlorophacinone Poisoning"
+   },
+   {
+    "file": "Deployment-Related_Constrictive_Bronchiolitis.yaml",
+    "name": "Deployment-Related Constrictive Bronchiolitis"
+   },
+   {
+    "file": "Developmental_Stuttering.yaml",
+    "name": "Developmental Stuttering"
+   },
+   {
+    "file": "Diethylene_Glycol_Poisoning.yaml",
+    "name": "Diethylene Glycol Poisoning"
+   },
+   {
+    "file": "Dyssegmental_Dysplasia.yaml",
+    "name": "Dyssegmental Dysplasia"
+   },
+   {
+    "file": "E-Cigarette_or_Vaping_Product_Use-Associated_Lung_Injury.yaml",
+    "name": "E-Cigarette or Vaping Product Use-Associated Lung Injury"
+   },
+   {
+    "file": "EEFSEC_Deficiency.yaml",
+    "name": "EEFSEC Deficiency"
+   },
+   {
+    "file": "FICUS_syndrome.yaml",
+    "name": "FICUS syndrome"
+   },
+   {
+    "file": "FLNC-Related_Dilated_Cardiomyopathy.yaml",
+    "name": "FLNC-Related Dilated Cardiomyopathy"
+   },
+   {
+    "file": "GOLGA2-Related_Golgin_A2_Deficiency.yaml",
+    "name": "GOLGA2-Related Golgin A2 Deficiency"
+   },
+   {
+    "file": "HAO1-Related_Glycolate_Oxidase_Deficiency.yaml",
+    "name": "HAO1-Related Glycolate Oxidase Deficiency"
+   },
+   {
+    "file": "HHV-8-Associated_Multicentric_Castleman_Disease.yaml",
+    "name": "HHV-8-Associated Multicentric Castleman Disease"
+   },
+   {
+    "file": "Human_Metapneumovirus_Infection.yaml",
+    "name": "Human Metapneumovirus Infection"
+   },
+   {
+    "file": "IHH-Related_Polysyndactyly.yaml",
+    "name": "IHH-Related Polysyndactyly"
+   },
+   {
+    "file": "KATNB1-related_Cortical_Malformation.yaml",
+    "name": "KATNB1-related Cortical Malformation"
+   },
+   {
+    "file": "KIF5B-Related_Kyphomelic_Dysplasia.yaml",
+    "name": "KIF5B-Related Kyphomelic Dysplasia"
+   },
+   {
+    "file": "KRT1_Keratinopathies.yaml",
+    "name": "KRT1 Keratinopathies"
+   },
+   {
+    "file": "Lone_Star_Virus_Infection.yaml",
+    "name": "Lone Star Virus Infection"
+   },
+   {
+    "file": "NDE1-related_Microcephaly_Lissencephaly.yaml",
+    "name": "NDE1-related Microcephaly-Lissencephaly"
+   },
+   {
+    "file": "Obesity_Due_to_MC4R_Pathway_Disruption.yaml",
+    "name": "Obesity Due to MC4R Pathway Disruption"
+   },
+   {
+    "file": "Propofol_Infusion_Syndrome.yaml",
+    "name": "Propofol Infusion Syndrome"
+   },
+   {
+    "file": "RAB5C-Related_Neurodevelopmental_Disorder_with_Macrocephaly.yaml",
+    "name": "RAB5C-Related Neurodevelopmental Disorder with Macrocephaly"
+   },
+   {
+    "file": "SLC26A1-Related_Oxalate_Transporter_Deficiency.yaml",
+    "name": "SLC26A1-Related Oxalate Transporter Deficiency"
+   },
+   {
+    "file": "SLC26A6-Related_Hyperoxaluria_and_Nephrolithiasis.yaml",
+    "name": "SLC26A6-Related Hyperoxaluria and Nephrolithiasis"
+   },
+   {
+    "file": "SPOP-Related_Neurodevelopmental_Disorder.yaml",
+    "name": "SPOP-Related Neurodevelopmental Disorder"
+   },
+   {
+    "file": "SRPX2-related_Speech_Epilepsy_Polymicrogyria.yaml",
+    "name": "SRPX2-related Speech-Epilepsy-Polymicrogyria"
+   },
+   {
+    "file": "Sarcopenia.yaml",
+    "name": "Sarcopenia"
+   },
+   {
+    "file": "Seasonal_Coronavirus_Infection.yaml",
+    "name": "Seasonal Coronavirus Infection"
+   },
+   {
+    "file": "Spaceflight_Associated_Neuro-Ocular_Syndrome.yaml",
+    "name": "Spaceflight Associated Neuro-Ocular Syndrome"
+   },
+   {
+    "file": "TRIO-Related_Neurodevelopmental_Disorder.yaml",
+    "name": "TRIO-Related Neurodevelopmental Disorder"
+   },
+   {
+    "file": "Transient_Neonatal_Pustular_Melanosis.yaml",
+    "name": "Transient Neonatal Pustular Melanosis"
+   },
+   {
+    "file": "USP8-related_pituitary_adenoma_4.yaml",
+    "name": "USP8-related pituitary adenoma 4"
+   },
+   {
+    "file": "Volumetric_Muscle_Loss.yaml",
+    "name": "Volumetric Muscle Loss"
+   },
+   {
+    "file": "WAPL-Related_Developmental_Disorder.yaml",
+    "name": "WAPL-Related Developmental Disorder"
+   },
+   {
+    "file": "ZRS-Related_Limb_Malformation.yaml",
+    "name": "ZRS-Related Limb Malformation"
+   }
+  ],
+  "dangling_examples": [
+   "2-Methylbutyryl-CoA_Dehydrogenase_Deficiency: Impaired isoleucine catabolism via SBCAD loss-of-function -> C5-acylcarnitine signal in blood",
+   "2-Methylbutyryl-CoA_Dehydrogenase_Deficiency: Impaired isoleucine catabolism via SBCAD loss-of-function -> 2-Methylbutyrylglycine (2-MBG) in urine",
+   "2-Methylbutyryl-CoA_Dehydrogenase_Deficiency: Metabolic rerouting via the R-pathway of isoleucine oxidation -> 2-Ethylhydracrylic acid (2-EHA) in urine",
+   "3-Hydroxy-3-Methylglutaric_Aciduria: Impaired ketone-body biosynthesis -> Ketone bodies",
+   "46_XY_DSD_Due_to_5_Alpha_Reductase_2_Deficiency: Impaired Testosterone to Dihydrotestosterone Conversion -> Dihydrotestosterone",
+   "46_XY_DSD_Due_to_5_Alpha_Reductase_2_Deficiency: Impaired Testosterone to Dihydrotestosterone Conversion -> Testosterone-to-dihydrotestosterone ratio",
+   "ALDH18A1_Cutis_Laxa: p.Arg138Trp-associated reduced P5CS activity and delayed proline accumulation -> p.Arg138Trp delayed fibroblast proline accumulation",
+   "Abetalipoproteinemia: Failed Chylomicron and VLDL Secretion -> Absent apoB-containing lipoproteins"
+  ]
  }
 }
