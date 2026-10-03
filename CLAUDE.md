@@ -34,16 +34,29 @@ To deploy, run `npx vercel deploy --prod` from `web/`. It needs `npx vercel logi
 
 All AI goes through `integrations/openai/llm.mjs`. It tries Sign in with ChatGPT first, then `OPENAI_API_KEY`. Precomputed demo outputs are made with `node web/scripts/precompute-ai.mjs`, which needs the dev server running. They land in `data/ai/`; sync them afterwards.
 
-As of 00:50: the Plus usage limit was hit and the API key has no credits. **0 of 21 AI drafts are generated yet.** That's the top open item.
+As of about 02:00 on Oct 4, ChatGPT plan calls fail with "this app's usage limit was reached" (an app-specific cap, so check chatgpt.com/settings/usage → Rare Disease Atlas), and the API key has no credits. **0 of 24 AI drafts are generated yet.** That's the top open item.
 
-## Open items (newest first)
+## Status (newest first)
 
-1. Profile-specific UI: "Devon" (newly diagnosed) is a simple, reassuring default; researchers get detail and recruitment and contact tools. In progress.
-2. Global search for all diseases, outside-the-map pages and DisMech/scale data on disease pages. In progress.
-3. Generate the 21 AI drafts once OpenAI access works, then sync, commit and redeploy.
-4. Biochemist review of the review sheet.
-5. 10× page: add the landscape-assessment baseline from Woan-Yu Lin (RTW Foundation) once we have her figure.
-6. Videos: see `docs/video-script.md`.
+**Done and deployed**
+- Profiles: Devon (default), Maria, Dr. Osei and Priya. See `docs/persona-spec.md`.
+- `/research` cohort table.
+- Global search over 11,456 diseases (plus DisMech extras) and `/d/<MONDO>` pages.
+- 4 deep families covering 45 diseases.
+- Breadth layer: trials, orgs and registries for 10,309 diseases.
+- DisMech: 3,238 mechanism records.
+- Population, readiness and recruitment channels.
+
+**Open**
+1. Generate the AI drafts: `cd web && node scripts/precompute-ai.mjs` with the dev server running. Then sync, commit and run `npx vercel deploy --prod` from `web/`, which is linked to the `rare-disease-atlas` project.
+2. Biochemist review (`docs/review/biochem-review.md`). Items flagged by the DisMech comparison:
+   - our SNAP25 loss-of-function edge cites PMID 25381298, which DisMech reads as dominant-negative;
+   - possibly missing MONDO xrefs: CDKL5 MONDO:0100039, GLUT1 MONDO:0000188, Gaucher MONDO:0018150, NPC MONDO:0018982 and MLD MONDO:0018868;
+   - the SCN1A/SCN2A nodes use the obsolete Dravet id MONDO:0011794 (replacement MONDO:0100135).
+3. The STXBP1 enrollment total for Dr. Osei includes Simons Searchlight (multi-disease, 100k), so it reads inflated. Exclude multi-disease registries from the sum.
+4. 10× page: add the landscape-assessment baseline from Woan-Yu Lin (RTW Foundation).
+5. Videos: see `docs/video-script.md`. Refresh the numbers from the `/method` page.
+6. A duplicate Vercel project called "web" was created by mistake. Delete it in the dashboard.
 
 ## Conventions
 
