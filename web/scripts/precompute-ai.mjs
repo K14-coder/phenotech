@@ -12,7 +12,7 @@
 //   node scripts/precompute-ai.mjs --out /tmp/ai-test --force
 //
 // Options:
-//   --only proposal|explain-path|compare-questions|experiment   one kind only
+//   --only proposal|explain-path|compare-questions|experiment|outreach   one kind only
 //   --limit N                      at most N model calls (default: no limit)
 //   --pairs FILE                   targets JSON (default scripts/ai-targets.json):
 //                                  explain-path {"from": "...", "to": "..."}, compare-questions {"kind": "compare-questions", "a": "...", "b": "..."}
@@ -62,6 +62,15 @@ if (!only || only === "experiment") {
       continue;
     }
     targets.push({ kind: "experiment", id: p.id, payload: { id: p.id } });
+  }
+}
+if (!only || only === "outreach") {
+  for (const p of (Array.isArray(pairs) ? pairs : []).filter((x) => x.kind === "outreach")) {
+    if (!nodeIds.has(p.id)) {
+      console.warn(`skip outreach ${p.id}: not in graph.json`);
+      continue;
+    }
+    targets.push({ kind: "outreach", id: p.id, payload: { id: p.id } });
   }
 }
 if (!only || only === "compare-questions") {

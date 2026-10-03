@@ -19,7 +19,7 @@ export function AiAction({
   busyLabel = "Writing…",
 }: {
   idx: GraphIndex;
-  kind: "proposal" | "explain-path" | "compare-questions" | "experiment";
+  kind: "proposal" | "explain-path" | "compare-questions" | "experiment" | "outreach";
   payload: Record<string, unknown>;
   label: string;
   busyLabel?: string;

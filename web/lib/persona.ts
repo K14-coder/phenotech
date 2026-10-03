@@ -1,41 +1,68 @@
 "use client";
 
-// "Viewing as" persona. Stored in localStorage, overridable with ?as=family|leader|researcher|biotech.
+// "Viewing as" profile (docs/persona-spec.md). Devon (newly diagnosed) is the default. Stored in
+// localStorage, overridable with ?as=family|leader|researcher|biotech (ids are stable).
 import { useSyncExternalStore } from "react";
 
 export type Persona = "family" | "leader" | "researcher" | "biotech";
 
-/** The brief's four people, in its order: Maria leads; Devon, Priya and Dr. Osei. */
-export const PERSONAS: { id: Persona; label: string; hint: string }[] = [
-  { id: "leader", label: "Maria, patient leader", hint: "The full action page" },
-  { id: "family", label: "Devon, newly diagnosed", hint: "Plainest wording; your community first" },
-  { id: "biotech", label: "Priya, biotech scout", hint: "Mechanism and unmet need first" },
-  { id: "researcher", label: "Dr. Osei, researcher", hint: "Mechanisms first, and who works on them" },
+export const PERSONAS: { id: Persona; name: string; short: string; label: string; hint: string }[] = [
+  {
+    id: "family",
+    name: "Devon",
+    short: "new to this",
+    label: "Devon (new to this)",
+    hint: "Just received a diagnosis. Plain words: what it means, who to contact, what to do this week.",
+  },
+  {
+    id: "leader",
+    name: "Maria",
+    short: "patient-group leader",
+    label: "Maria (patient-group leader)",
+    hint: "Runs a patient group. Neighbouring communities, reusable assets, partners and a sourced proposal.",
+  },
+  {
+    id: "researcher",
+    name: "Dr. Osei",
+    short: "researcher",
+    label: "Dr. Osei (researcher)",
+    hint: "Researcher or clinician. Mechanism and evidence, patient population, trial readiness and how to reach patients.",
+  },
+  {
+    id: "biotech",
+    name: "Priya",
+    short: "biotech scout",
+    label: "Priya (biotech scout)",
+    hint: "Biotech or pharma. Which diseases fit an approach, unmet need, trial readiness and population size.",
+  },
 ];
 
 const KEY = "atlas.persona";
-const DEFAULT: Persona = "leader";
+export const DEFAULT_PERSONA: Persona = "family";
 const valid = (x: unknown): x is Persona => x === "family" || x === "leader" || x === "researcher" || x === "biotech";
 
-let current: Persona | null = null;
+type State = { persona: Persona; chosen: boolean };
+let current: State | null = null;
+const SERVER: State = { persona: DEFAULT_PERSONA, chosen: true };
 const listeners = new Set<() => void>();
 
-function read(): Persona {
+function read(): State {
   try {
     const q = new URLSearchParams(window.location.search).get("as");
     if (valid(q)) {
       localStorage.setItem(KEY, q);
-      return q;
+      return { persona: q, chosen: true };
     }
     const s = localStorage.getItem(KEY);
-    if (valid(s)) return s;
+    if (valid(s)) return { persona: s, chosen: true };
   } catch {
-    // storage unavailable: default
+    // storage unavailable: default, and don't nag
+    return { persona: DEFAULT_PERSONA, chosen: true };
   }
-  return DEFAULT;
+  return { persona: DEFAULT_PERSONA, chosen: false };
 }
 
-function getSnapshot(): Persona {
+function getSnapshot(): State {
   if (current === null) current = read();
   return current;
 }
@@ -48,7 +75,7 @@ function subscribe(cb: () => void) {
 }
 
 export function setPersona(p: Persona) {
-  current = p;
+  current = { persona: p, chosen: true };
   try {
     localStorage.setItem(KEY, p);
   } catch {
@@ -58,5 +85,14 @@ export function setPersona(p: Persona) {
 }
 
 export function usePersona(): Persona {
-  return useSyncExternalStore(subscribe, getSnapshot, () => DEFAULT);
+  return useSyncExternalStore(subscribe, getSnapshot, () => SERVER).persona;
+}
+
+/** false only for a first-time visitor who has not picked a profile yet (drives the gentle chooser). */
+export function usePersonaChosen(): boolean {
+  return useSyncExternalStore(subscribe, getSnapshot, () => SERVER).chosen;
+}
+
+export function personaMeta(p: Persona) {
+  return PERSONAS.find((x) => x.id === p) ?? PERSONAS[0];
 }

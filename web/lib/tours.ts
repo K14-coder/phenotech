@@ -1,3 +1,4 @@
+import type { Persona } from "./persona";
 // Guided tours. Captions double as the demo video script, so keep each to one or two plain sentences.
 // Each step: the page to show, the element to highlight ([data-tour=...] anchors), and an optional action.
 
@@ -14,6 +15,8 @@ export interface TourStep {
 export interface Tour {
   id: string;
   name: string;
+  /** the profile the tour is told from (set when the tour starts) */
+  persona?: Persona;
   steps: TourStep[];
 }
 
@@ -21,6 +24,7 @@ export const TOURS: Record<string, Tour> = {
   maria: {
     id: "maria",
     name: "Follow Maria",
+    persona: "leader",
     steps: [
       {
         title: "Start with the gene name",
@@ -78,6 +82,7 @@ export const TOURS: Record<string, Tour> = {
   syt2: {
     id: "syt2",
     name: "A family with no patient group",
+    persona: "family",
     steps: [
       {
         title: "A new diagnosis",
@@ -87,32 +92,32 @@ export const TOURS: Record<string, Tour> = {
         action: "openSearch",
       },
       {
+        title: "What this means",
+        caption: "The page opens with what SYT2 means in plain words. Every fact has a “How do we know this?” link.",
+        path: "/disease/SYT2",
+        target: '[data-tour="plain"]',
+      },
+      {
         title: "An honest answer",
-        caption: "The atlas says plainly that there is no patient group specifically for SYT2, and shows where it looked.",
+        caption: "The atlas says plainly that there is no patient group just for SYT2, and that this is not the family’s fault.",
         path: "/disease/SYT2",
         target: '[data-tour="no-group"]',
       },
       {
         title: "The closest community",
-        caption: "The closest community already exists: the CMDIR registry accepts people with SYT2, and an umbrella group covers related conditions.",
+        caption: "The closest communities already exist, and a registry accepts people with SYT2.",
         path: "/disease/SYT2",
         target: '[data-tour="closest-community"]',
       },
       {
-        title: "Treatment evidence, not advice",
-        caption: "Published treatment evidence is shown as something to discuss with the child’s neurologist, never as advice.",
+        title: "Questions, not advice",
+        caption: "Treatment evidence becomes a question to bring to the child’s doctor, with a page to print for the appointment.",
         path: "/disease/SYT2",
-        target: '[data-tour="treatments"]',
-      },
-      {
-        title: "What nobody knows yet",
-        caption: "Open questions stay visible, with what is missing and how someone could find out.",
-        path: "/disease/SYT2",
-        target: '[data-tour="gaps"]',
+        target: '[data-tour="questions"]',
       },
       {
         title: "Help build the missing community",
-        caption: "Finally, the atlas suggests concrete ways this family could help build the community that doesn’t exist yet.",
+        caption: "Finally, the family can tell the atlas about a group, or start one, so the next family finds it.",
         path: "/disease/SYT2",
         target: '[data-tour="help-build"]',
       },

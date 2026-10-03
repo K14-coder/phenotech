@@ -3,6 +3,7 @@
 // Light guided tour: a spotlight on one element per step, a caption card, Next/Back/Exit.
 // Navigates between pages, waits for the target to render, works without live AI.
 import { createContext, useContext, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { setPersona } from "@/lib/persona";
 import { useRouter } from "next/navigation";
 import { useAtlas } from "../GraphProvider";
 import { useEvidence } from "../evidence/EvidenceProvider";
@@ -50,7 +51,11 @@ function save(s: State) {
   listeners.forEach((l) => l());
 }
 const start = (id: string) => {
-  if (TOURS[id]) save({ id, step: 0 });
+  const t = TOURS[id];
+  if (!t) return;
+  // each tour is told from one profile's point of view
+  if (t.persona) setPersona(t.persona);
+  save({ id, step: 0 });
 };
 
 export function TourProvider({ children }: { children: React.ReactNode }) {

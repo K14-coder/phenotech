@@ -7,7 +7,6 @@ import { WithGraph } from "../GraphProvider";
 import { useEvidence } from "../evidence/EvidenceProvider";
 import { LeftRail, type SymptomMode } from "./LeftRail";
 import { ClusterPanel, NodePanel, OverviewPanel } from "./AtlasPanels";
-import { ViewingAs } from "../ViewingAs";
 import { clustersOf, clusterSlot, neighbors, type GraphIndex } from "@/lib/graph";
 import { clusterColor } from "@/lib/style";
 import type { AtlasNode, NodeType } from "@/lib/types";
@@ -283,9 +282,6 @@ function Atlas({ idx }: { idx: GraphIndex }) {
         </div>
       </div>
       <aside aria-label="Selection details" className="panel-scroll h-full overflow-y-auto border-l border-line">
-        <div className="sticky top-0 z-10 flex h-10 items-center border-b border-line-2 bg-white px-5">
-          <ViewingAs variant="panel" />
-        </div>
         {selectedNode ? (
           <NodePanel
             key={selectedNode.id}

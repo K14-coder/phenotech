@@ -67,7 +67,7 @@ body {
   top: calc(100% + 6px);
   z-index: 60;
   width: max-content;
-  max-width: 280px;
+  max-width: min(280px, calc(100vw - 32px));
   padding: 8px 10px;
   border-radius: 6px;
   background: var(--color-ink);
@@ -102,4 +102,46 @@ body {
     transition-duration: 0ms !important;
     animation-duration: 0ms !important;
   }
+}
+
+/* Tap-to-explain on phones: a tapped term keeps focus, so show its tip on focus too */
+.term:focus .term-tip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* "Print for your appointment": only the one-page question sheet prints */
+.print-sheet {
+  display: none;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-sheet,
+  .print-sheet * {
+    visibility: visible;
+  }
+  .print-sheet {
+    display: block;
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    padding: 0 8mm;
+    color: #000;
+    font-size: 12pt;
+  }
+  @page {
+    margin: 14mm;
+  }
+}
+
+/* Hidden tips take no space (they used to widen phone pages); shown on hover, focus or tap */
+.term .term-tip {
+  display: none;
+}
+.term:hover .term-tip,
+.term:focus .term-tip,
+.term:focus-visible .term-tip {
+  display: block;
 }

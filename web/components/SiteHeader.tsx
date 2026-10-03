@@ -4,33 +4,38 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAtlas } from "./GraphProvider";
 import { SearchBox } from "./search/SearchBox";
-import { ViewingAs } from "./ViewingAs";
+import { FirstVisitChooser, ViewingAs } from "./ViewingAs";
+import { usePersona } from "@/lib/persona";
 
 const NAV = [
   { href: "/", label: "Search" },
   { href: "/atlas", label: "Atlas" },
+  { href: "/research", label: "Research" },
   { href: "/path", label: "Path" },
   { href: "/method", label: "How we know" },
   { href: "/impact", label: "Why 10×" },
 ];
+// Devon gets no technical navigation: search, and how we know
+const FAMILY_NAV = new Set(["/", "/method"]);
 
 export function SiteHeader() {
   const pathname = usePathname();
   const atlas = useAtlas();
   const sample = atlas.status === "ready" && atlas.idx.graph.meta.sample;
   const isHome = pathname === "/";
-  // the atlas shows the same switch next to its selection panel instead (brief's mockup)
-  const onAtlas = pathname.startsWith("/atlas");
+  const persona = usePersona();
+  const nav = persona === "family" ? NAV.filter((n) => FAMILY_NAV.has(n.href)) : NAV;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white">
-      <div className="flex h-14 items-center gap-6 px-5">
+    <>
+    <header className="sticky top-0 z-40 border-b border-line bg-white print:hidden">
+      <div className="flex h-14 items-center gap-3 px-3 sm:gap-6 sm:px-5">
         <Link href="/" className="flex shrink-0 items-center gap-2.5 text-[15px] font-semibold tracking-tight text-ink">
           <Mark />
-          Rare Disease Atlas
+          <span className="hidden min-[420px]:inline">Rare Disease Atlas</span>
         </Link>
-        <nav aria-label="Main" className="flex items-center gap-1">
-          {NAV.map((n) => {
+        <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
+          {nav.map((n) => {
             const active = n.href === "/" ? isHome : pathname.startsWith(n.href);
             return (
               <Link
@@ -46,17 +51,24 @@ export function SiteHeader() {
             );
           })}
         </nav>
-        <div className="ml-auto flex items-center gap-4">
-          {!onAtlas && <ViewingAs />}
+        <div className="ml-auto flex items-center gap-2 sm:gap-4">
           {!isHome && atlas.status === "ready" && (
-            <div className="w-[300px] xl:w-[340px]">
+            <div className="hidden w-[260px] lg:block xl:w-[320px]">
               <SearchBox variant="compact" />
             </div>
           )}
+          {!isHome && (
+            <Link href="/" className="rounded-md border border-line px-2.5 py-1.5 text-sm text-ink-2 hover:text-ink lg:hidden" aria-label="Search">
+              Search
+            </Link>
+          )}
           {sample && <SampleBadge />}
+          <ViewingAs />
         </div>
       </div>
     </header>
+    <FirstVisitChooser />
+    </>
   );
 }
 

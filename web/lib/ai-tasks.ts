@@ -18,7 +18,7 @@ import type { AtlasEdge, AtlasNode } from "./types";
 import { compareAiId, pathAiId, type AiDoc } from "./ai-shared";
 import { compareDiseases, spectrumWords } from "./compare";
 
-export const AI_KINDS = ["explain-path", "proposal", "compare-questions", "experiment"] as const;
+export const AI_KINDS = ["explain-path", "proposal", "compare-questions", "experiment", "outreach"] as const;
 export type AiKind = (typeof AI_KINDS)[number];
 
 /** Output shape for every kind (strict JSON Schema: all properties required, no extras). */
@@ -375,7 +375,55 @@ export function buildExperimentTask(idx: GraphIndex, payload: unknown): TaskResu
   return { task: { kind: "experiment", id, instructions: EXPERIMENT_INSTRUCTIONS, input: JSON.stringify(input, null, 1), refs: book.refs } };
 }
 
+// ---------- outreach (a researcher writes to a patient organisation proposing a study) ----------
+
+const OUTREACH_INSTRUCTIONS = `You draft a first message from a researcher to a rare-disease patient organisation, proposing to work together on a study. The reader is the organisation's leadership; the writer is a researcher who has not met them.
+Rules:
+- Use only the facts in the input JSON. Do not invent study details, sites, funding, numbers, names of people or results. Where something must be filled in by the researcher, write it as [in brackets].
+- Never ask the organisation for personal data about patients or families (no names, contacts or records). Ask only whether they would discuss the idea, and how their registry, natural history study or community could take part with proper consent and ethics approval.
+- Use these section headings, in this order: "Subject", "Why we are writing", "What we already know", "What we would propose", "What we would ask of you", "Next step".
+- "What we already know" names the mechanism, the existing registries, natural history studies or trials, and any limits or contested points in the input.
+- Every sentence that states a fact must list in edge_ids the refs (like "E2") of the connections it relies on. Courtesy and planning sentences may have an empty list. Never write refs in the text.
+- Warm, plain and respectful. Under 260 words.
+Output: a short title and the sections.`;
+
+export function buildOutreachTask(idx: GraphIndex, payload: unknown): TaskResult {
+  const p = (payload ?? {}) as { id?: unknown };
+  const id = typeof p.id === "string" ? p.id : "";
+  const disease = idx.nodeById.get(id);
+  if (!disease || disease.type !== "disease") return { error: "Unknown disease.", status: 404 };
+  const book = new RefBook(36);
+  const nbs = idx.adjacency.get(id) ?? [];
+  const pick = (rel: string, dir: "in" | "out", max: number) =>
+    nbs
+      .filter((n) => n.edge.type === rel && n.dir === dir)
+      .sort((a, b) => b.edge.confidence - a.edge.confidence)
+      .slice(0, max)
+      .map((n) => ({ node: idx.nodeById.get(n.other), edge: n.edge }))
+      .filter((x) => x.node);
+  const orgs = pick("serves", "in", 6);
+  const assets = pick("covers", "in", 8);
+  const studies = pick("studies", "in", 8);
+  const mechs = pick("driven_by", "out", 5);
+  const therapies = pick("developed_for", "in", 5);
+  const input = {
+    disease: { name: disease.label, summary: disease.summary ?? null },
+    patient_organisations: orgs.map((o) => ({ name: o.node!.label, scope: (o.node!.attrs as { scope?: string } | undefined)?.scope ?? null, ref: book.ref(o.edge) })),
+    registries_studies_and_resources: assets.map((a) => ({ name: a.node!.label, kind: (a.node!.attrs as { kind?: string } | undefined)?.kind ?? null, ref: book.ref(a.edge) })),
+    clinical_studies: studies.map((s) => {
+      const at = (s.node!.attrs ?? {}) as { status?: string; phase?: string; study_type?: string };
+      return { title: s.node!.label, status: at.status ?? null, phase: at.phase ?? null, type: at.study_type ?? null, ref: book.ref(s.edge) };
+    }),
+    mechanisms: mechs.map((m) => ({ name: m.node!.label, ref: book.ref(m.edge) })),
+    therapies_in_development: therapies.map((t) => ({ name: t.node!.label, ref: book.ref(t.edge) })),
+    connections: [] as ReturnType<typeof describeEdge>[],
+  };
+  input.connections = book.edges.map((e) => describeEdge(idx, e, book.byEdge.get(e.id)!));
+  return { task: { kind: "outreach", id, instructions: OUTREACH_INSTRUCTIONS, input: JSON.stringify(input, null, 1), refs: book.refs } };
+}
+
 export function buildTask(idx: GraphIndex, kind: string, payload: unknown): TaskResult {
+  if (kind === "outreach") return buildOutreachTask(idx, payload);
   if (kind === "experiment") return buildExperimentTask(idx, payload);
   if (kind === "explain-path") return buildExplainPathTask(idx, payload);
   if (kind === "proposal") return buildProposalTask(idx, payload);

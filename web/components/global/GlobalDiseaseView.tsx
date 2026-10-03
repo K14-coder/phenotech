@@ -11,6 +11,7 @@ import { WithGraph } from "../GraphProvider";
 import { SearchBox } from "../search/SearchBox";
 import { familyName } from "@/lib/bridges";
 import { diseaseHref, type GraphIndex } from "@/lib/graph";
+import type { AtlasNode, Cluster } from "@/lib/types";
 import {
   GLOBAL_INDEX_KEY,
   GLOBAL_META_KEY,
@@ -18,6 +19,8 @@ import {
   globalIdFromParam,
   isGlobalId,
   loadGlobalIndex,
+  mappedAtlasId,
+  normalizeTerm,
   loadGlobalMeta,
   loadShard,
   rowHref,
@@ -29,6 +32,11 @@ import {
   type NeighbourShard,
 } from "@/lib/global";
 import { retry, useResource } from "@/lib/resource";
+import { usePersona } from "@/lib/persona";
+import { loadScale, type ScaleEntry } from "@/lib/population";
+import { DevonPage } from "../devon/DevonPage";
+import { buildGlobalDevonModel } from "../devon/devonGlobal";
+import { DisMechIfAny, MechanismLayer } from "./MechanismBits";
 import { capFirst, joinList, plural } from "@/lib/text";
 
 const H2 = "text-[22px] font-semibold tracking-tight text-ink";
@@ -49,13 +57,17 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
   const metaRes = useResource<GlobalMeta>(GLOBAL_META_KEY, loadGlobalMeta);
   const loadNeighbours = useCallback(() => loadShard<NeighbourShard>("neighbours", id), [id]);
   const shardRes = useResource<NeighbourShard>(isGlobalId(id) ? shardKey("neighbours", id) : null, loadNeighbours);
+  const persona = usePersona();
+  const loadScaleEntry = useCallback(() => loadScale(id), [id]);
+  const scaleRes = useResource<ScaleEntry | null>(isGlobalId(id) ? `web:scale:${id}` : null, loadScaleEntry);
   const gi = indexRes?.data;
   const row = gi?.byId.get(id);
+  const mapped = row ? mappedAtlasId(row, idx) : null;
 
   // a disease the atlas maps in depth has its full action page
   useEffect(() => {
-    if (row?.atlas) router.replace(diseaseHref(row.atlas));
-  }, [row, router]);
+    if (mapped) router.replace(diseaseHref(mapped));
+  }, [mapped, router]);
   // the route's static metadata title is generic; name the tab after the disease (again after Next
   // re-applies the static title on client navigation between /d/ pages)
   useEffect(() => {
@@ -91,7 +103,7 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
       </Centered>
     );
   if (!row) return <NotFound id={id} />;
-  if (row.atlas)
+  if (mapped)
     return (
       <Centered>
         <p className="text-sm text-ink-3" role="status">
@@ -108,12 +120,13 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
   const families = idx.graph.clusters.filter((c) => c.basis === "pathway");
   const mappedDiseases = idx.graph.nodes.filter((n) => n.type === "disease").length;
   const scope = families.length
-    ? `${plural(families.length, "disease family", "disease families")} in depth today (${families.map(familyName).join(", ")})`
+    ? `${plural(families.length, "disease family", "disease families")} in depth today (${families.map(familyName).join("; ")})`
     : `${plural(mappedDiseases, "disease")} in depth today`;
+  const related = relatedAtlasDiseases(idx, row);
   const inheritance = entry?.inh.map((h) => terms[h]?.[0] ?? h) ?? [];
 
-  return (
-    <div className="pb-24">
+  const detail = (
+    <div className={persona === "family" ? "" : "pb-24"}>
       <header className="border-b border-line">
         <div className="mx-auto max-w-[1120px] px-8 pb-8 pt-7">
           <nav aria-label="Breadcrumb" className="text-xs text-ink-3">
@@ -128,9 +141,24 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
               <h1 className="text-[30px] font-semibold leading-tight tracking-[-0.02em] text-ink">{capFirst(row.name)}</h1>
               {row.syn.length > 0 && <p className="mt-1.5 text-sm text-ink-3">Also called {row.syn.join(", ")}</p>}
               <div className="mt-5 rounded-lg bg-subtle px-4 py-3.5">
-                <p className="text-[15px] leading-relaxed text-ink">
-                  <span className="font-semibold">Mapped in basic form.</span> The atlas maps {scope}; this disease isn’t one of them yet.
-                </p>
+                {related.length ? (
+                  <p className="text-[15px] leading-relaxed text-ink">
+                    <span className="font-semibold">Mapped in basic form here.</span> The atlas maps {scope}. One of its in-depth diseases lists “
+                    {row.name}” among its names:{" "}
+                    {related.map((n, i) => (
+                      <span key={n.id}>
+                        {i > 0 && ", "}
+                        <Link href={diseaseHref(n.id)} className="font-medium text-accent-700 hover:underline">
+                          {n.label} →
+                        </Link>
+                      </span>
+                    ))}
+                  </p>
+                ) : (
+                  <p className="text-[15px] leading-relaxed text-ink">
+                    <span className="font-semibold">Mapped in basic form.</span> The atlas maps {scope}; this disease isn’t one of them yet.
+                  </p>
+                )}
                 <p className="mt-1.5 text-sm leading-relaxed text-ink-3">
                   What you see here: {meta?.caveat ?? "phenotype similarity only; no evidence curation; mechanism not assessed"}.
                 </p>
@@ -155,8 +183,9 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
       </header>
 
       <div className="mx-auto max-w-[1120px] space-y-14 px-8 pt-12">
-        {/* Slot: per-disease mechanism, pathway and cluster data will arrive in the same djb2 bucketing
-            (lib/global.ts GlobalShardKind). Render it here, above the symptom-based sections. */}
+        {/* curated mechanism records (same djb2 bucketing) and DisMech's independent chain */}
+        <MechanismLayer id={row.id} gi={gi} />
+        <DisMechIfAny mondo={row.id} />
 
         {shardState === "error" ? (
           <p className="max-w-[760px] rounded-lg border border-dashed border-ink-4 px-5 py-4 text-sm text-ink-2">
@@ -174,8 +203,8 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
         ) : (
           <>
             <Distinctive entry={entry} terms={terms} icCut={icCut} meta={meta} />
-            <Similar entry={entry} terms={terms} icCut={icCut} gi={gi} />
-            <Closest idx={idx} entry={entry} terms={terms} meta={meta} />
+            <Similar entry={entry} terms={terms} icCut={icCut} gi={gi} idx={idx} />
+            <Closest idx={idx} entry={entry} terms={terms} meta={meta} families={families} compared={comparedFamilies(families, shardRes?.data)} />
           </>
         )}
 
@@ -199,6 +228,15 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
       </div>
     </div>
   );
+
+  if (persona === "family")
+    return (
+      <DevonPage
+        m={buildGlobalDevonModel(row, entry, terms, scaleRes?.data ?? null, shardState === "loading" || scaleRes?.status === "loading")}
+        learnMore={detail}
+      />
+    );
+  return detail;
 }
 
 function Distinctive({ entry, terms, icCut, meta }: { entry: NeighbourEntry; terms: Terms; icCut: number; meta?: GlobalMeta }) {
@@ -237,7 +275,24 @@ function Distinctive({ entry, terms, icCut, meta }: { entry: NeighbourEntry; ter
   );
 }
 
-function Similar({ entry, terms, icCut, gi }: { entry: NeighbourEntry; terms: Terms; icCut: number; gi: GlobalIndex }) {
+/** Atlas diseases that list this disease's name (or a synonym) among their own names, e.g. Dravet syndrome -> SCN1A. */
+function relatedAtlasDiseases(idx: GraphIndex, row: GlobalRow): AtlasNode[] {
+  const names = new Set([row.name, ...row.syn].map(normalizeTerm).filter((t) => t.length > 3));
+  return idx.graph.nodes.filter((n) => n.type === "disease" && [n.label, ...(n.synonyms ?? [])].some((s) => names.has(normalizeTerm(s))));
+}
+
+/**
+ * Which mapped families the symptom comparison covers: the families of every atlas disease that
+ * appears in this shard's comparisons. A family added after the comparison was computed is not
+ * covered until the global index is rebuilt, and the page says so.
+ */
+function comparedFamilies(families: Cluster[], shard?: NeighbourShard): Cluster[] {
+  if (!shard) return families;
+  const ids = new Set(Object.values(shard.d).flatMap((e) => e.atlas.map((a) => a[0])));
+  return families.filter((c) => c.members.some((m) => ids.has(m)));
+}
+
+function Similar({ entry, terms, icCut, gi, idx }: { entry: NeighbourEntry; terms: Terms; icCut: number; gi: GlobalIndex; idx: GraphIndex }) {
   if (!entry.nb.length) return null;
   return (
     <section aria-labelledby="nb-h" className="max-w-[760px]">
@@ -256,13 +311,15 @@ function Similar({ entry, terms, icCut, gi }: { entry: NeighbourEntry; terms: Te
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-baseline gap-x-2">
                   {r ? (
-                    <Link href={rowHref(r)} className="text-[15px] font-medium text-ink hover:text-accent-700 hover:underline">
+                    <Link href={rowHref(r, idx)} className="text-[15px] font-medium text-ink hover:text-accent-700 hover:underline">
                       {name}
                     </Link>
                   ) : (
                     <span className="text-[15px] font-medium text-ink">{name}</span>
                   )}
-                  {r?.atlas && <span className="rounded-full border border-accent-200 px-2 py-0.5 text-[11px] text-accent-700">mapped in depth</span>}
+                  {r && mappedAtlasId(r, idx) && (
+                    <span className="rounded-full border border-accent-200 px-2 py-0.5 text-[11px] text-accent-700">mapped in depth</span>
+                  )}
                   <span className="text-xs tabular-nums text-ink-3">similarity {score.toFixed(2)}</span>
                 </div>
                 {shared.length > 0 && <SharedTerms ids={shared} terms={terms} icCut={icCut} />}
@@ -275,10 +332,33 @@ function Similar({ entry, terms, icCut, gi }: { entry: NeighbourEntry; terms: Te
   );
 }
 
-function Closest({ idx, entry, terms, meta }: { idx: GraphIndex; entry: NeighbourEntry; terms: Terms; meta?: GlobalMeta }) {
+function Closest({
+  idx,
+  entry,
+  terms,
+  meta,
+  families,
+  compared,
+}: {
+  idx: GraphIndex;
+  entry: NeighbourEntry;
+  terms: Terms;
+  meta?: GlobalMeta;
+  families: Cluster[];
+  compared: Cluster[];
+}) {
   const near = entry.atlas.filter((a) => a[3]);
   const top = entry.atlas[0];
   const label = (aid: string) => idx.nodeById.get(aid)?.label ?? aid.replace(/^disease:/, "");
+  const notCompared = families.filter((c) => !compared.includes(c));
+  const comparedNames = compared.map(familyName).join("; ");
+  const coverage =
+    notCompared.length > 0 ? (
+      <p className="text-sm leading-relaxed text-ink-3">
+        The symptom comparison doesn’t cover the newer mapped {notCompared.length === 1 ? "family" : "families"} yet (
+        {notCompared.map(familyName).join("; ")}).
+      </p>
+    ) : null;
   return (
     <section aria-labelledby="closest-h" className="max-w-[760px]">
       <p className={EYEBROW}>The mapped families</p>
@@ -303,12 +383,16 @@ function Closest({ idx, entry, terms, meta }: { idx: GraphIndex; entry: Neighbou
             “Close” means at least as similar as the least similar pair of diseases the atlas itself links. The mapped disease’s page shows the
             sourced evidence for its family.
           </li>
+          {coverage && <li>{coverage}</li>}
         </ul>
       ) : (
         <div className="mt-4 space-y-2">
           <p className="text-[15px] leading-relaxed text-ink-2">
-            Its symptom pattern is far from the families mapped in depth, so it most likely belongs to a different mechanism family.
+            {notCompared.length && compared.length
+              ? `Its symptom pattern is far from the ${comparedNames}, so it most likely belongs to a different mechanism family.`
+              : "Its symptom pattern is far from the families mapped in depth, so it most likely belongs to a different mechanism family."}
           </p>
+          {coverage}
           {top && (
             <p className="text-sm text-ink-3">
               Nearest mapped disease:{" "}

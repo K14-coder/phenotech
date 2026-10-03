@@ -11,7 +11,10 @@ import { ProposalDraft } from "./ProposalDraft";
 import { ContributedBadge, contributionsOf } from "../ContributedBadge";
 import { BiotechNeed, ResearcherMechanisms } from "./PersonaSections";
 import { IdeasSection, LookAlikes, PatternBreaks, VariantHint } from "./DerivedSections";
-import { usePersona } from "@/lib/persona";
+import { usePersona, type Persona } from "@/lib/persona";
+import { DevonDisease } from "../devon/DevonDisease";
+import { OseiSections } from "../research/OseiSections";
+import { DisMechForAtlas } from "../global/MechanismBits";
 import { atlasHref, clustersOf, clusterSlot, compareHref, diseaseHref, diseaseIdFromParam, pathHref, type GraphIndex } from "@/lib/graph";
 import {
   REUSE_META,
@@ -37,14 +40,22 @@ import { ASSET_KIND_LABEL, THERAPY_MODALITY_LABEL, THERAPY_STAGE_LABEL, isPlaceh
 import type { AtlasNode, Gap } from "@/lib/types";
 
 export function DiseaseView({ param }: { param: string }) {
-  return <WithGraph>{(idx) => <Disease idx={idx} id={diseaseIdFromParam(param)} />}</WithGraph>;
+  return <WithGraph>{(idx) => <DiseaseByProfile idx={idx} id={diseaseIdFromParam(param)} />}</WithGraph>;
+}
+
+/** Devon gets his own plain page (the detailed one sits under "Learn more"); the others share the action page. */
+function DiseaseByProfile({ idx, id }: { idx: GraphIndex; id: string }) {
+  const persona = usePersona();
+  const node = idx.nodeById.get(id);
+  if (persona === "family" && node?.type === "disease")
+    return <DevonDisease key={id} idx={idx} node={node} learnMore={<Disease idx={idx} id={id} as="leader" embedded />} />;
+  return <Disease idx={idx} id={id} as={persona} />;
 }
 
 const H2 = "text-[22px] font-semibold tracking-tight text-ink";
 const EYEBROW = "text-xs font-semibold uppercase tracking-[0.08em] text-ink-3";
 
-function Disease({ idx, id }: { idx: GraphIndex; id: string }) {
-  const persona = usePersona();
+function Disease({ idx, id, as: persona, embedded = false }: { idx: GraphIndex; id: string; as: Persona; embedded?: boolean }) {
   const node = idx.nodeById.get(id);
   const data = useMemo(() => {
     if (!node || node.type !== "disease") return null;
@@ -72,9 +83,9 @@ function Disease({ idx, id }: { idx: GraphIndex; id: string }) {
   const searchedList = searched.length ? [...new Set(searched)] : idx.graph.meta.sources.map((s) => s.name);
 
   return (
-    <div className="pb-24">
+    <div className={embedded ? "pb-6" : "pb-24"}>
       {/* Header: summary first */}
-      <header className="border-b border-line">
+      <header className={`border-b border-line ${embedded ? "hidden" : ""}`}>
         <div className="mx-auto max-w-[1120px] px-8 pb-8 pt-7">
           <nav aria-label="Breadcrumb" className="text-xs text-ink-3">
             <Link href="/atlas" className="hover:text-ink">
@@ -146,7 +157,7 @@ function Disease({ idx, id }: { idx: GraphIndex; id: string }) {
       </header>
 
       {/* The three questions, answered in one line each */}
-      <nav aria-label="On this page" className="border-b border-line bg-subtle/60">
+      <nav aria-label="On this page" className={`border-b border-line bg-subtle/60 ${embedded ? "hidden" : ""}`}>
         <ol className="mx-auto grid max-w-[1120px] grid-cols-1 gap-px px-8 md:grid-cols-3">
           <SummaryCell n={1} href="#shares" q="Who shares our disease characteristics?">
             {matches.length ? (
@@ -173,7 +184,7 @@ function Disease({ idx, id }: { idx: GraphIndex; id: string }) {
         </ol>
       </nav>
 
-      <div className="mx-auto max-w-[1120px] space-y-16 px-8 pt-12">
+      <div className={`mx-auto max-w-[1120px] space-y-16 ${embedded ? "px-0 pt-2" : "px-8 pt-12"}`}>
         {persona === "family" && (
           <section id="community" aria-labelledby="community-h" className="scroll-mt-20">
             <p className={EYEBROW}>Start here</p>
@@ -195,8 +206,10 @@ function Disease({ idx, id }: { idx: GraphIndex; id: string }) {
             </div>
           </section>
         )}
+        {persona === "researcher" && <OseiSections idx={idx} node={node} />}
         {persona === "researcher" && <ResearcherMechanisms idx={idx} ctx={ctx} />}
         {persona === "biotech" && <BiotechNeed ctx={ctx} items={items} ownOrgs={ownOrgs} umbrellaOrgs={umbrellaOrgs} />}
+        {(persona === "researcher" || persona === "biotech" || embedded) && <DisMechForAtlas atlasId={id} />}
         {/* 1 */}
         <section id="shares" aria-labelledby="shares-h" className="scroll-mt-20">
           <p className={EYEBROW}>Question 1</p>

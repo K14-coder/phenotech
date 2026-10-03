@@ -12,6 +12,9 @@ import { communitiesFor, diseaseContext } from "@/lib/insights";
 import { useDerived, type ModalityCell, type ModalityData } from "@/lib/derived";
 import { ASSET_KIND_LABEL, isPlaceholderUrl, joinList } from "@/lib/text";
 import type { AtlasNode } from "@/lib/types";
+import { usePersona } from "@/lib/persona";
+import { loadPrevalence, loadReadiness, peopleRange, type PrevalenceFile, type ReadinessFile } from "@/lib/population";
+import { useResource } from "@/lib/resource";
 
 const FIT_ORDER: Record<string, number> = { good: 0, conditional: 1, poor: 2, not_assessed: 3 };
 
@@ -134,6 +137,8 @@ function Approach({ idx }: { idx: GraphIndex }) {
         </ul>
         <p className="mt-2 text-xs text-ink-3">Aggregation: {data.meta.aggregation}.</p>
       </details>
+
+      <NeedFirst idx={idx} rows={rows.map((r) => ({ id: r.id, fit: r.cell.fit }))} modality={mod.label} />
 
       <ol className="mt-8 space-y-4">
         {rows.map((r, i) => (
@@ -331,6 +336,74 @@ function DiseaseRow({ idx, data, diseaseId, cell, rank, open }: { idx: GraphInde
         </div>
       )}
     </li>
+  );
+}
+
+/** Unmet need and trial readiness first (Priya): the same diseases, ranked by need, then readiness, then size. */
+function NeedFirst({ idx, rows, modality }: { idx: GraphIndex; rows: { id: string; fit: string }[]; modality: string }) {
+  const persona = usePersona();
+  const ready = useResource<ReadinessFile | null>("pop:readiness", loadReadiness);
+  const prev = useResource<PrevalenceFile | null>("pop:prevalence", loadPrevalence);
+  const list = rows
+    .map((r) => {
+      const rd = ready?.data?.diseases[r.id];
+      const ww = prev?.data?.deep[r.id]?.estimated_people?.worldwide;
+      return { ...r, label: idx.nodeById.get(r.id)?.label ?? r.id, approved: rd?.components.approved_therapy?.status ?? null, tally: rd?.tally ?? null, of: rd?.tally_of ?? 8, people: ww ? peopleRange(ww) : null, size: ww?.high ?? -1 };
+    })
+    .sort((a, b) => Number(a.approved === "yes") - Number(b.approved === "yes") || (b.tally ?? -1) - (a.tally ?? -1) || b.size - a.size);
+  const table = (
+    <div className="mt-3 overflow-x-auto">
+      <table className="w-full min-w-[640px] text-sm">
+        <thead className="text-left text-xs text-ink-3">
+          <tr>
+            <th className="py-1.5 pr-3 font-medium">Disease</th>
+            <th className="py-1.5 pr-3 font-medium">Unmet need</th>
+            <th className="py-1.5 pr-3 font-medium">Trial readiness</th>
+            <th className="py-1.5 pr-3 font-medium">Est. people worldwide</th>
+            <th className="py-1.5 font-medium">Fit for {modality}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {list.map((r) => (
+            <tr key={r.id} className="border-t border-line-2">
+              <td className="py-1.5 pr-3">
+                <Link href={diseaseHref(r.id)} className="text-ink hover:text-accent-700 hover:underline">
+                  {r.label}
+                </Link>
+              </td>
+              <td className="py-1.5 pr-3 text-ink-2">{r.approved === "yes" ? "Approved therapy exists" : r.approved === "partial" ? "Partly met" : r.approved === "no" ? <b className="font-medium text-ink">No approved therapy</b> : "—"}</td>
+              <td className="py-1.5 pr-3 tabular-nums text-ink-2">{r.tally == null ? "—" : `${r.tally} / ${r.of}`}</td>
+              <td className="py-1.5 pr-3 tabular-nums text-ink-2">{r.people ?? "not estimable"}</td>
+              <td className="py-1.5">
+                <FitBadge fit={r.fit} />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p className="mt-2 text-xs text-ink-3">
+        Readiness: registry, outcome measures, models, trials, approved therapy, organisation, mechanism and funding (readiness.json). People: rough Orphanet ranges, not counts.{" "}
+        <Link href="/research" className="text-accent-700 hover:underline">
+          Full cohort view →
+        </Link>
+      </p>
+    </div>
+  );
+  if (!list.length) return null;
+  if (persona === "biotech")
+    return (
+      <section className="mt-8 rounded-lg border border-line px-4 py-4" aria-labelledby="need-h">
+        <h2 id="need-h" className="text-[17px] font-semibold text-ink">
+          Unmet need and trial readiness first
+        </h2>
+        {ready?.status === "loading" ? <p className="mt-2 text-sm text-ink-3">Loading…</p> : !ready?.data ? <p className="mt-2 text-sm text-ink-3">Readiness data not available yet.</p> : table}
+      </section>
+    );
+  return (
+    <details className="mt-8 rounded-lg border border-line px-4 py-2.5">
+      <summary className="cursor-pointer text-sm font-medium text-ink-2">Unmet need and trial readiness for these diseases</summary>
+      {table}
+    </details>
   );
 }
 

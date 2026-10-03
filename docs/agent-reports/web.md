@@ -546,3 +546,130 @@ Other node types show only the centrality row. The existing summary, facts, butt
   - Bridge styles read back from Cytoscape.
   - A persona change on the atlas shows up in the disease-page header.
   - The console is clean in a fresh tab.
+
+---
+
+## Any rare disease (global index, basic data)
+
+No live AI calls were made in this round. The data comes from `data/derived/global/` (see its README).
+
+### Sync and loading
+- **Sync:** `scripts/sync-data.mjs` copies `data/derived/global/**/*.json` into `public/data/derived/global/`, keeping the folder structure. Each file is checked as valid JSON first; a bad file is skipped with a warning.
+- **Loader (`lib/global.ts`):** the djb2 bucketing, ported exactly and checked against the README test vectors (38, 60 and 3).
+  - `searchGlobal()`, the README search recipe.
+  - `mappedAtlasId()` and `rowHref()`.
+  - The shard loader. `GlobalShardKind` is the slot for the mechanism, pathway and cluster shards that use the same bucketing; the `/d/` page has a marked place for them.
+- **Cache (`lib/resource.ts`):** a keyed cache for lazy loads. Loads are triggered from handlers and effects, never during render. Errors stick until `retry()`, so a missing file is never fetched in a loop.
+- **When files load:**
+  - `index.json` loads only on the first focus or keystroke in a search box, when a link opens search with text in it, or about a second after Home opens (idle prefetch). `/atlas` and the other pages do not fetch it.
+  - A `/d/` page loads `index.json`, `meta.json` and exactly one `neighbours/<bucket>.json`.
+
+### Search (`components/search/SearchBox.tsx`)
+- **Second group:** "Other rare diseases (basic data)", shown with synonym resolution, e.g. "“Huntington's chorea” → Huntington disease", plus the genes and the number of annotated symptoms.
+- **Mapped rows:** index rows with `atlas` set join the atlas group and open the existing disease page, but only if the loaded graph has that disease. The index flag can land before the graph is rebuilt; until then the row stays basic data.
+- **Order:**
+  - Atlas results stay on top when they are real matches.
+  - A clearly better global match goes first, so Enter opens it:
+    - the global match is exact (name, synonym, gene or id) and the atlas has no exact match; or
+    - the global match is a whole-word prefix and the atlas has only loose fuzzy matches.
+  - With global results present, the loosest fuzzy atlas matches (score above 0.3) are dropped.
+- **Ranking tweaks** on top of the README recipe:
+  - Within each rank, a whole-word match beats a partial one, and fewer extra words win before `n` ("rett" → Rett syndrome first).
+  - Among the atlas's own prefix matches, shorter names now come first.
+- **Path pickers:** the path pickers accept global diseases.
+- **Disease not found:** `/disease/<unknown>` now opens with the search filled in, so "huntington" lists Huntington disease immediately.
+
+### `/d/<id>` (`components/global/GlobalDiseaseView.tsx`)
+- **Header:** the name, synonyms, genes (with the Orphanet-only note when `gsrc` is 2), inheritance, number of annotated symptoms and identifiers. Links out to OMIM, Orphanet, Monarch, ClinicalTrials.gov, NORD and GeneReviews, built from `meta.url_templates`.
+- **Status line:** "Mapped in basic form. The atlas maps N disease families in depth today (…); this disease isn't one of them yet."
+  - N and the family names come from the graph's pathway clusters, so they update as families land.
+  - When an in-depth atlas disease lists this name among its own names (Dravet syndrome → SCN1A, Gaucher disease → GBA1), the line links to it instead.
+- **Caveat:** `meta.caveat` is shown under the status line on every page.
+- **Most distinctive symptoms:** the top 8, each labelled distinctive or broad (IC ≥ 4) with the IC, linked to HPO.
+- **Diseases with the most similar symptom patterns:** the top 10 with their shared symptoms. Each links to its `/d/` page, or to its atlas page if mapped.
+- **Closest disease in our mapped families:**
+  - "Close to …" for every near disease.
+  - Or the far sentence, with the nearest mapped disease and `meta.far_text`.
+  - The symptom comparison was computed against the SNAREopathies only, so when the graph has newer families the page says the comparison doesn't cover them yet. The far sentence then names the families actually compared.
+- **How the atlas would map it in depth:** three steps and a link to /contribute.
+- **Edge cases:**
+  - A disease with fewer than 5 annotated symptoms says it has too few to compare and still shows the links.
+  - A row that is mapped in the live graph redirects to its disease page.
+  - The tab title updates to the disease name.
+
+### Path page
+When either end is a global disease, the page explains that paths run only inside the families mapped in depth, and links to that disease's `/d/` page.
+
+### Load sizes (gzip is what goes over the wire)
+- `index.json`: 1.62 MB raw, 431 KB gzip, once.
+- `meta.json`: 29 KB raw, 8 KB gzip, `/d/` pages only.
+- Neighbour shard: 235 KB raw / 55 KB gzip on average; the largest is 451 KB / 102 KB. One shard per `/d/` page.
+- **Whole synced folder:** 147 MB. Another agent added `dismech/` (31 MB) and `dismech_evidence/` (87 MB) while I worked; `**` copies them, but no page loads them.
+
+### Checks
+- `tsc`, `eslint .` and `npm run build` pass.
+- The console was clean in fresh tabs.
+- The search order and bucketing were checked against the real data with Node.
+
+---
+
+## Profile-specific experience (docs/persona-spec.md)
+
+No live AI calls were made in this round.
+
+### Profile switch
+- **The switch:** "Viewing as: Devon (new to this) ▾" sits top right on every page, the atlas included. It opens a menu that gives each profile a one-line description (`components/ViewingAs.tsx`).
+- **First visit:** a gentle chooser appears under the header, "Who are you? (You can change this anytime)", with Devon preselected. It blocks nothing.
+- **Ids and defaults (`lib/persona.ts`):**
+  - The ids stay `family`, `leader`, `researcher` and `biotech`, and `?as=` still works.
+  - Devon is the default.
+- **Devon's header:** no technical navigation (only Search and How we know), and it works on a phone.
+- **Tours:** the Maria tour sets the Maria profile; the SYT2 tour sets Devon and walks his page.
+
+### Devon
+- **Landing (`/`):** "What diagnosis did you receive?", a hint, the search box, three reassurance lines and the safety note. Nothing else above the fold.
+- **Diagnosis page:** `components/devon/DevonPage.tsx` is fed by `DevonDisease.tsx` (mapped diseases) and `devonGlobal.ts` (`/d/` pages), in the spec's order:
+  - plain words, with glossary terms explained on tap (`components/PlainText.tsx`);
+  - "You are not alone", a rounded range labelled estimated;
+  - contact cards for groups, then registries;
+  - a "this week" checklist;
+  - questions for the doctor, with a one-page printable sheet (print CSS);
+  - studies looking for participants, in plain words;
+  - the honest no-group path;
+  - "Learn more" collapsed, holding the full detailed page.
+- **Sourcing:**
+  - Every fact has "How do we know this?": it opens the graph edge's evidence, or names the source with links.
+  - No confidence numbers are shown.
+  - Text comes from templates filled with real data; where data is missing, the page says so.
+- **Data used:**
+  - population/`prevalence.json`, `channels.json` and `readiness.json`;
+  - for `/d/` pages, the web/scale shards: organisations, studies, registries and prevalence.
+
+### Dr. Osei
+Disease pages add, in this order:
+- **Patient population:** estimated ranges for the world, Europe and the US; Orphanet records with type, class, area and source; ClinVar variant groups; and enrollment in existing studies.
+- **Trial readiness:** the readiness.json scorecard (tick, partial or gap), with evidence chips.
+- **Reach patients for a study:** organisational channels only (`channels.json`), plus investigators grouped by institution, and "Draft an outreach message".
+  - The new AI kind is `outreach`. Precomputed files are named `outreach--<id>.json`, and targets for VAMP2, STXBP1 and SCN2A are in `ai-targets.json`.
+  - Nothing has been precomputed yet.
+
+The DisMech chain sits on the detailed page.
+
+**`/research` cohort view:** all 45 diseases, sortable and filterable by family and mechanism. Columns: estimated affected, recruiting studies, registry, organisations, readiness and mechanism class.
+
+### Priya
+- **Landing:** Priya lands on `/approach` (once per visit), and Dr. Osei on `/research`.
+- **`/approach`:** opens with "Unmet need and trial readiness first" for Priya. Other profiles get it collapsed.
+- **`/research`:** for Priya, it leads with the unmet-need and readiness columns.
+
+### Data and sync
+- **Excluded:** `dismech_evidence/` (87 MB) is no longer copied.
+- **Distilled at sync** into `public/data/derived/web/`:
+  - `scale/<bucket>.json`: organisations, studies, registries and prevalence per index row and per atlas disease. 5.6 MB, one shard per page.
+  - `dismech_snippets/<bucket>.json`: one verbatim snippet per DisMech step.
+  - `available.json`: which optional products exist, so pages never probe for missing files.
+- **Not shipped:** `prevalence_orpha.json` (5.7 MB) is distilled into the scale shards.
+- **Search:** `index_extra.json` is now searched alongside the main index.
+- **`/d/` pages:**
+  - The mechanism layer: G2P and ClinGen records, Reactome pathways, the mechanism family and its members.
+  - The DisMech chain, only where DisMech has a record. It loads only when opened and carries attribution.

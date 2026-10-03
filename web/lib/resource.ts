@@ -32,6 +32,8 @@ export function ensure<T>(key: string, load: () => Promise<T>): Resource<T> {
   if (hit) return hit;
   const pending: Resource<T> = { status: "loading" };
   entries.set(key, pending);
+  // let subscribers show a loading state (ensure runs in handlers and effects, never during render)
+  queueMicrotask(emit);
   load().then(
     (data) => {
       entries.set(key, { status: "ready", data });

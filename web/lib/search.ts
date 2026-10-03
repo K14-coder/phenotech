@@ -52,7 +52,9 @@ export function createSearcher(idx: GraphIndex): Searcher {
       if (nt === nq) score = 0;
       // "VAMP2" -> "VAMP2-related disorders": a whole-word prefix counts as exact, so the disease
       // (type boost) ranks above the bare gene for a gene-symbol query
-      else if (e.term.toLowerCase().startsWith(q.toLowerCase()) && /^[\s\-–(]/.test(e.term.slice(q.length))) score = 0.005;
+      // (shorter names first among these: "Noonan syndrome 1" before "Noonan neurofibromatosis syndrome")
+      else if (e.term.toLowerCase().startsWith(q.toLowerCase()) && /^[\s\-–(]/.test(e.term.slice(q.length)))
+        score = 0.005 + Math.min(0.004, (e.term.length - q.length) * 0.0001);
       else if (nt.startsWith(nq)) score = Math.min(score, 0.08);
       score += TYPE_BOOST[node.type] ?? 0;
       if (e.kind !== "label") score += 0.01; // prefer the canonical label on ties

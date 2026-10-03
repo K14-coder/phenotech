@@ -74,10 +74,10 @@ export function SearchBox({
     if (gi && idx && q.trim().length >= 2) {
       const seen = new Set(hits.map((h) => h.node.id));
       for (const g of searchGlobal(gi, q, 16)) {
-        if (g.row.atlas) {
+        const node = g.row.atlas ? idx.nodeById.get(g.row.atlas) : undefined;
+        if (node) {
           // a mapped disease found by a name only the global index knows: route to its atlas page
-          const node = idx.nodeById.get(g.row.atlas);
-          if (!node || seen.has(node.id)) continue;
+          if (seen.has(node.id)) continue;
           seen.add(node.id);
           atlasHits.push({ node, matched: g.kind === "name" ? g.row.name : g.matched, kind: g.kind === "gene" ? "gene" : g.kind === "id" ? "xref" : "synonym", score: 0.05 });
         } else if (globalAllowed) otherHits.push(g);
@@ -130,7 +130,10 @@ export function SearchBox({
     setOpen(true);
   }
   useEffect(() => {
-    if (focusKey) inputRef.current?.focus();
+    if (!focusKey) return;
+    // a deep link or chip opens the list with text in it: make sure every rare disease is searchable
+    ensureGlobalIndex();
+    inputRef.current?.focus();
   }, [focusKey]);
 
   useEffect(() => {
@@ -179,7 +182,7 @@ export function SearchBox({
       return;
     }
     inputRef.current?.blur();
-    router.push(rowHref(hit.row));
+    router.push(rowHref(hit.row, idx));
   };
 
   const pick = (hit: SearchHit | undefined) => {

@@ -24,7 +24,7 @@ export interface GlobalRow {
   omim: string[];
   orpha: string[];
   genes: string[];
-  /** 1 = OMIM Mendelian genes, 2 = Orphanet genes only (may include modifiers), 0 = none */
+  /** 1 = OMIM Mendelian genes, 2 = Orphanet genes only (may include modifiers), 3 = DisMech curated genes, 0 = none */
   gsrc: number;
   /** distinct annotated HPO phenotype terms (< 5: no neighbours) */
   n: number;
@@ -88,9 +88,20 @@ export function globalIdFromParam(param: string): string {
   }
 }
 
+type LoadedGraph = { nodeById: Map<string, unknown> } | null | undefined;
+
+/**
+ * The atlas disease a row maps to, if the loaded graph has it. The index's atlas flag is rewritten
+ * when family files land, which can be before the graph is rebuilt: until then the row stays basic.
+ */
+export function mappedAtlasId(row: GlobalRow, idx: LoadedGraph): string | null {
+  return row.atlas && idx?.nodeById.has(row.atlas) ? row.atlas : null;
+}
+
 /** Mapped diseases keep their atlas action page; everything else gets the basic-data page. */
-export function rowHref(row: GlobalRow): string {
-  return row.atlas ? diseaseHref(row.atlas) : globalHref(row.id);
+export function rowHref(row: GlobalRow, idx: LoadedGraph): string {
+  const atlasId = mappedAtlasId(row, idx);
+  return atlasId ? diseaseHref(atlasId) : globalHref(row.id);
 }
 
 // ---------- search (README recipe) ----------
@@ -220,8 +231,26 @@ async function fetchJson<T>(url: string): Promise<T> {
 export const GLOBAL_INDEX_KEY = "global:index";
 export const GLOBAL_META_KEY = "global:meta";
 
-export const loadGlobalIndex = (): Promise<GlobalIndex> =>
-  fetchJson<{ f: string[]; rows: unknown[][] }>(`${GLOBAL_BASE}/index.json`).then(parseIndex);
+type RawIndex = { f: string[]; rows: unknown[][] };
+
+/** index.json plus index_extra.json (same schema: DisMech disorders whose MONDO id index.json lacks). */
+export const loadGlobalIndex = async (): Promise<GlobalIndex> => {
+  const [main, extra] = await Promise.all([
+    fetchJson<RawIndex>(`${GLOBAL_BASE}/index.json`),
+    fetchJson<RawIndex>(`${GLOBAL_BASE}/index_extra.json`).catch(() => null),
+  ]);
+  const gi = parseIndex(main);
+  if (extra?.f && Array.isArray(extra.rows)) {
+    const more = parseIndex(extra);
+    more.rows.forEach((r, i) => {
+      if (gi.byId.has(r.id)) return;
+      gi.rows.push(r);
+      gi.keys.push(more.keys[i]);
+      gi.byId.set(r.id, r);
+    });
+  }
+  return gi;
+};
 
 /** Starts the one-time index download (search focus, first keystroke, idle prefetch). */
 export function ensureGlobalIndex() {

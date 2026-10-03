@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { usePersona } from "@/lib/persona";
 import { useTour } from "../tour/TourProvider";
 import { WithGraph } from "../GraphProvider";
 import { SearchBox } from "../search/SearchBox";
@@ -31,6 +32,21 @@ function Home({ idx, search }: { idx: GraphIndex; search: Searcher }) {
   }
   const { start } = useTour();
   const meta = idx.graph.meta;
+  const persona = usePersona();
+  const router = useRouter();
+
+  // Priya lands on therapeutic approaches, Dr. Osei on the cohort view: once per visit, so the Search
+  // link still reaches this page afterwards
+  useEffect(() => {
+    if (qParam || (persona !== "biotech" && persona !== "researcher")) return;
+    try {
+      if (sessionStorage.getItem("atlas.landed")) return;
+      sessionStorage.setItem("atlas.landed", "1");
+    } catch {
+      return;
+    }
+    router.replace(persona === "biotech" ? "/approach" : "/research");
+  }, [persona, qParam, router]);
 
   const chips = useMemo(() => exampleChips(idx, search), [idx, search]);
   const diseases = useMemo(
@@ -46,6 +62,9 @@ function Home({ idx, search }: { idx: GraphIndex; search: Searcher }) {
     for (const n of idx.graph.nodes) c[n.type] = (c[n.type] ?? 0) + 1;
     return c;
   }, [idx]);
+
+  if (persona === "family")
+    return <DevonHome q={q} setQ={setQ} focusKey={focusKey} onTour={() => start("syt2")} diseases={diseases} />;
 
   return (
     <div className="mx-auto w-full max-w-[780px] px-6 pb-24 pt-[12vh]">
@@ -150,6 +169,83 @@ function Home({ idx, search }: { idx: GraphIndex; search: Searcher }) {
           Explore the full atlas →
         </Link>
       </footer>
+    </div>
+  );
+}
+
+/** Devon's landing (docs/persona-spec.md): one friendly question, a hint, and reassurance. Nothing technical above the fold. */
+function DevonHome({
+  q,
+  setQ,
+  focusKey,
+  onTour,
+  diseases,
+}: {
+  q: string;
+  setQ: (s: string) => void;
+  focusKey: number;
+  onTour: () => void;
+  diseases: { id: string; label: string }[];
+}) {
+  return (
+    <div className="mx-auto w-full max-w-[680px] px-4 pb-24 pt-10 sm:px-6 sm:pt-[12vh]">
+      <h1 className="text-[30px] font-semibold leading-[1.15] tracking-[-0.01em] text-ink sm:text-[38px]">What diagnosis did you receive?</h1>
+      <p className="mt-3 text-[17px] leading-relaxed text-ink-2">
+        Type the gene name from the report (for example STXBP1) or the condition name. You can also paste a line from the genetic report.
+      </p>
+      <div className="mt-6" data-tour="search">
+        <SearchBox
+          variant="hero"
+          value={q}
+          onChange={setQ}
+          autoFocus
+          focusKey={focusKey}
+          label="What diagnosis did you receive?"
+          placeholder="Gene or condition, e.g. STXBP1"
+        />
+      </div>
+      <ul className="mt-8 space-y-2.5 text-[17px] leading-relaxed text-ink">
+        <li className="flex gap-3">
+          <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-700" aria-hidden="true" />
+          You are not alone.
+        </li>
+        <li className="flex gap-3">
+          <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-700" aria-hidden="true" />
+          This atlas connects families, researchers and studies.
+        </li>
+        <li className="flex gap-3">
+          <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-700" aria-hidden="true" />
+          Everything here links to its source.
+        </li>
+      </ul>
+      <p className="mt-8 text-sm leading-relaxed text-ink-3">
+        This is information, not medical advice. Your child’s doctor or genetic counsellor is the right person for decisions.
+      </p>
+
+      <section className="mt-[22vh] border-t border-line pt-8" aria-label="More ways to start">
+        <p className="text-[15px] text-ink-2">Not sure where to start?</p>
+        <button
+          type="button"
+          onClick={onTour}
+          className="mt-3 inline-flex min-h-[44px] items-center rounded-lg border border-line px-4 text-[15px] font-medium text-ink hover:border-accent-500"
+        >
+          Follow a family through the atlas
+        </button>
+        {diseases.length > 0 && (
+          <>
+            <p className="mt-8 text-[15px] text-ink-2">Or open one of these:</p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {diseases.map((d) => (
+                <li key={d.id}>
+                  <Link href={diseaseHref(d.id)} className="inline-flex min-h-[40px] items-center rounded-lg border border-line px-3 text-[15px] text-ink-2 hover:border-accent-500 hover:text-ink">
+                    {d.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </section>
     </div>
   );
 }
