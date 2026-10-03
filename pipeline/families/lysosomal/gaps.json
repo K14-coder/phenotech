@@ -1,0 +1,120 @@
+[
+ {
+  "id": "gap:lysosomal-no-approved-therapy",
+  "about": "disease:HEXA",
+  "question": "Why do Tay-Sachs (HEXA), CLN3 disease and Krabbe disease (GALC) still have no approved disease-modifying therapy, while nine of the twelve family members do?",
+  "what_is_missing": [
+   "No FDA label was found for any HEXA, CLN3 or GALC product (openFDA searched by brand for every approved lysosomal product in this family).",
+   "CLN3: an open-label miglustat study states 'No disease-modifying treatments are currently available' (PMID:40924969); n=6, historical controls.",
+   "HEXA: only pyrimethamine (phase I/II, dose-limited by side effects; PMID:20926324, PMID:21185210) and a two-patient intrathecal AAV expanded-access report (PMID:35145305).",
+   "GALC: haematopoietic stem cell transplantation is the only disease-modifying option and works only when done early (PMID:27638597)."
+  ],
+  "searched": [
+   "openFDA drug label API (brand names for 19 approved lysosomal products)",
+   "PubMed: CLN3[tiab] AND miglustat",
+   "PubMed: pyrimethamine[ti] AND (Tay-Sachs OR GM2 OR hexosaminidase)",
+   "PubMed: (Tay-Sachs[ti] OR GM2[ti]) AND AAV AND gene therapy AND patients",
+   "PubMed: Krabbe[ti] AND (cord blood OR transplantation) AND infantile",
+   "ClinicalTrials.gov API v2 query.cond: Tay-Sachs Disease, GM2 Gangliosidosis, CLN3 Disease, Juvenile Neuronal Ceroid Lipofuscinosis, Krabbe Disease, Globoid Cell Leukodystrophy"
+  ],
+  "how_to_find_out": "All three are dominated by brain disease, which intravenous enzymes cannot reach (cluster:lysosomal-bbb-barrier). Track the registered CNS-directed gene-therapy and small-molecule trials linked to these diseases in the atlas; ask the patient organisations (NTSAD, Beyond Batten, Hunter's Hope) about programmes not yet registered."
+ },
+ {
+  "id": "gap:lysosomal-cns-forms-untreated",
+  "about": "disease:GBA1",
+  "question": "What treats the brain disease in the neuronopathic forms of diseases whose approved enzymes only treat the body (Gaucher types 2/3, ASMD type A, MPS I Hurler, neuronopathic MPS II)?",
+  "what_is_missing": [
+   "The current Cerezyme label covers only non-CNS manifestations of type 1 or type 3 Gaucher disease; the Xenpozyme label only non-CNS manifestations of ASMD.",
+   "Laronidase does not cross the blood-brain barrier (PMID:15895714).",
+   "The brain-penetrant options found are clinical-stage only: ambroxol for neuronopathic Gaucher (systematic review, PMID:39116528) and pabinafusp alfa for MPS II (phase 2/3, PMID:33038326). Any regulatory approval of pabinafusp alfa was not verified from a fetched label, so it is recorded as stage 'clinical'."
+  ],
+  "searched": [
+   "openFDA labels: CEREZYME, VPRIV, ELELYSO, XENPOZYME, ELAPRASE (ALDURAZYME returned no openFDA label)",
+   "PubMed: laronidase AND (\"blood-brain barrier\" OR \"central nervous system\") AND (Hurler OR \"MPS I\")",
+   "PubMed: ambroxol[ti] AND Gaucher AND chaperone",
+   "PubMed: pabinafusp[ti]",
+   "PubMed: \"enzyme replacement therapy\" AND \"blood-brain barrier\" AND \"lysosomal storage\" AND review[pt]"
+  ],
+  "how_to_find_out": "Follow the CNS-directed studies linked to these diseases (e.g. NCT04573023 and NCT05371613 for MPS II); check PMDA (Japan) and EMA records for pabinafusp alfa, which the atlas could not fetch as a label."
+ },
+ {
+  "id": "gap:lysosomal-chaperone-amenability-map",
+  "about": "mech:protein-destabilization",
+  "question": "Which variants in GBA1, HEXA, NPC1 and GAA are 'amenable' to a chaperone, the way GLA variants are classified for migalastat?",
+  "what_is_missing": [
+   "Only GLA has a regulator-accepted variant-level amenability test (the GALAFOLD label restricts use to an amenable GLA variant 'based on in vitro assay data').",
+   "For GBA1 (ambroxol), HEXA (pyrimethamine) and NPC1 (arimoclomol) the evidence is per drug, not per variant; for ambroxol the chaperone action itself is questioned for some variants (PMID:38797393), and the arimoclomol label says its mechanism in NPC is unknown.",
+   "Our variant_group nodes are ClinVar consequence classes (e.g. 574 GLA missense P/LP records), not functional amenability classes."
+  ],
+  "searched": [
+   "openFDA label GALAFOLD, MIPLYFFA",
+   "PubMed queries listed under the migalastat, ambroxol, pyrimethamine, NPC1 I1061T and GAA chaperone claims (pipeline/families/lysosomal/curation.py)",
+   "ClinVar esearch/esummary per gene"
+  ],
+  "how_to_find_out": "A cross-gene, variant-level table of misfolding readouts (ER retention, stability, response to chaperone in patient cells), like the one regulators accepted for migalastat. The same table would also test the cross-family bridge to SLC6A1, where about a third of loss-of-function missense variants reach the surface and are outside a chaperone's reach (PMID:38781976)."
+ },
+ {
+  "id": "gap:lysosomal-cln3-function",
+  "about": "disease:CLN3",
+  "question": "What does the CLN3 protein do, and what exactly is stored?",
+  "what_is_missing": [
+   "CLN3 is a lysosomal membrane protein, not an enzyme; we found no curated statement of its molecular function, so disease:CLN3 has no enzyme-deficiency or loss-of-function mechanism edge, only lysosomal storage (PMID:27491213).",
+   "GO annotations for CLN3 are mostly inferred (IEA/ISS), apart from lysosomal lumen acidification and lysosomal transport (IMP)."
+  ],
+  "searched": [
+   "PubMed: CLN3[ti] AND (Batten OR \"neuronal ceroid lipofuscinosis\") AND lysosom* AND review[pt]",
+   "QuickGO annotations for UniProtKB:Q13286 (16 candidate processes)"
+  ],
+  "how_to_find_out": "Recent structural and lipidomic studies of CLN3 (not yet curated here) should be reviewed by a biochemist before a mechanism edge is added."
+ },
+ {
+  "id": "gap:lysosomal-cross-family-phenotype",
+  "about": "disease:TPP1",
+  "question": "Do lysosomal and SNAREopathy disorders overlap in symptoms enough to be confused clinically?",
+  "what_is_missing": [
+   "With the same method and thresholds as the SNAREopathy layer (Resnik BMA, >= 95th percentile for both diseases and >= 99th for one), no cross-family pair qualified.",
+   "Near misses in the top 5% of both backgrounds: GALC-UNC13A (97.1/97.4%), GBA1-UNC13A (96.9/97.3%), TPP1-STXBP1 (96.5/95.7%), ARSA-STXBP1 (96.7/95.3%), GAA-SYT2 (96.0/95.8%: two causes of neuromuscular weakness). They are recorded in data/raw/families/lysosomal/hpo_stats.json, not drawn as edges."
+  ],
+  "searched": [
+   "phenotype.hpoa 2026-09-02 / hp.obo 2026-09-01; SNAREopathy profiles from data/raw/biology/hpo_stats.json"
+  ],
+  "how_to_find_out": "A clinician review of the near-miss pairs (e.g. whether CLN2 disease enters the differential of early-onset epileptic encephalopathy alongside STXBP1, which would argue for including TPP1 in epilepsy gene panels)."
+ },
+ {
+  "id": "gap:lysosomal-gba1-parkinson",
+  "about": "gene:GBA1",
+  "question": "How should GBA1's role in Parkinson disease be represented?",
+  "what_is_missing": [
+   "Monarch records GBA1 -> late-onset Parkinson disease and Lewy body dementia as 'contributes_to' (OMIM), and Orphanet as 'Major susceptibility factor in' (ORPHA:411602). These are susceptibility links, so they are excluded from the GBA1 umbrella's subtypes and causes edge (listed in attrs.excluded_susceptibility_links)."
+  ],
+  "searched": [
+   "Monarch v3 CausalGeneToDiseaseAssociation and CorrelatedGeneToDiseaseAssociation for HGNC:4177",
+   "Orphadata rd-associated-genes ORPHA:411602"
+  ],
+  "how_to_find_out": "If the atlas adds a Parkinson disease family, link it to gene:GBA1 with a susceptibility relation rather than 'causes'; the ambroxol chaperone work spans both (PMID:38797393)."
+ },
+ {
+  "id": "gap:lysosomal-community-coverage",
+  "about": "disease:TPP1",
+  "question": "Which lysosomal communities lack a verified patient organisation, registry or research group in the atlas?",
+  "what_is_missing": [
+   "CLN2 (TPP1): only one verified organisation (Noah's Hope); CLN3 organisations other than Beyond Batten name only the umbrella 'Batten disease'.",
+   "No registry page was verified for Gaucher, Fabry, Tay-Sachs, MPS II or MLD (registry studies found on ClinicalTrials.gov are included as assets instead).",
+   "No research group met the threshold (>= 2 senior-author papers among the 80 most recent title-matched papers) for Gaucher, MPS I or MPS II: the literature is spread over many groups. NIH RePORTER was not searched for this family.",
+   "ARSA: No MLD registry or natural-history study described on stored pages.",
+   "CLN3: No CLN3-specific registry found; Batten-wide BDCRC network and natural-history study recorded from the URBC page (umbrella term 'Batten disease').",
+   "GAA: No Pompe registry description was stored: IPA ('Pompe Registry') and AMDA ('Patient Registry') mention one only as menu links; the MDA Pompe page returned HTTP 404.",
+   "GALC: No Krabbe registry described explicitly; KrabbeCURES recorded as a research-participation platform. Partners for Krabbe Research (p4kr.org) and Legacy of Angels (legacyofangels.org) did not resolve (DNS).",
+   "GBA1: No Gaucher registry or natural-history study is described on the stored pages (Gauchers Association lists research projects such as Rapsodi and Gaucherite only as menu links).",
+   "GLA: No Fabry registry or natural-history study described on stored pages; National Fabry Disease Foundation (fabrydisease.org) fetch failed (HTTP 307 redirect loop).",
+   "HEXA: No GM2/Tay-Sachs registry description stored (CATS Foundation lists a 'Registry' only as a menu link).",
+   "IDS: No MPS II-specific registry or natural-history study described on stored pages; MPS Society Australia fetch failed (connection refused)."
+  ],
+  "searched": [
+   "Organisation websites listed in pipeline/families/lysosomal/web_sources.json (stored under data/raw/families/lysosomal/web/)",
+   "PubMed title searches in data/raw/families/lysosomal/research/<GENE>.esearch.json",
+   "ClinicalTrials.gov API v2 condition searches (titles with Registry / Natural History / Outcome Survey)"
+  ],
+  "how_to_find_out": "Search NIH RePORTER per disease (pipeline/community/fetch_reporter.py shows how), widen the PubMed window for Gaucher and MPS, and ask the umbrella groups (BDSRA, National MPS Society, NTSAD) for registries they run."
+ }
+]

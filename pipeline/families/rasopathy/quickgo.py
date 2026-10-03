@@ -45,6 +45,9 @@ def annotations(acc, go):
 def main():
     genes = read_json(RAW / "genes.json")
     info = term_info(sorted(p["go"] for p in PROCESSES.values()))
+    # TOR signalling term (target of the rapamycin therapy edge; no gene annotations needed)
+    cached_json(RAW / "quickgo" / "terms_GO_0031929.json", f"{QG}/ontology/go/terms/GO:0031929", headers=HDR,
+                refresh=REFRESH)
     nodes, edges = [], []
     for slug, p in PROCESSES.items():
         t = info.get(p["go"], {})

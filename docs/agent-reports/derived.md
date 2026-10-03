@@ -9,7 +9,7 @@ Generated 2026-10-03. Rebuild everything with:
 ./pipeline/derive/run.sh --refresh  # also re-fetch the PubMed / CT.gov records and mondo-base.obo
 ```
 
-Code: `pipeline/derive/{dcommon,hgvs,variants,modality,hypotheses,beyond_slice,counterexamples,global_index,fetch_literature,lit_search}.py`,
+Code: `pipeline/derive/{dcommon,hgvs,variants,modality,hypotheses,beyond_slice,counterexamples,global_index,atlas_flags,mechanism_index,fetch_literature,lit_search}.py`,
 `run.sh`. The global index step runs under `uv run --with numpy --with scipy` (the other steps are stdlib).
 
 | File | Size | What it is |
@@ -25,7 +25,9 @@ Code: `pipeline/derive/{dcommon,hgvs,variants,modality,hypotheses,beyond_slice,c
 | `data/derived/global/index.json` | 1.6 MB | **every** disease with HPO annotations or a gene: 11,456 MONDO-merged rows for search |
 | `data/derived/global/neighbours/<0..63>.json` | 14.3 MB in 64 shards (max 441 KB) | per-disease page data for 8,787 diseases: top 10 phenotype neighbours, own distinctive features, inheritance, distance to the 11 |
 | `data/derived/global/meta.json` | 11 KB | counts, release versions, URL templates, caveat, threshold calibration, sanity checks |
-| `data/derived/global/README.md` | 12 KB | schema, the djb2 shard function with test vectors, search recipe, UI guidance |
+| `data/derived/global/README.md` | 19 KB | schema, the djb2 shard function with test vectors, search recipe, mechanism layer, UI guidance |
+| `data/derived/global/mechanism/<0..63>.json` | 6.1 MB in 64 shards (max 224 KB) | per disease: curated mechanism class (G2P, ClinGen), ClinGen validity, Reactome pathways, mechanism cluster, mechanism neighbours |
+| `data/derived/global/clusters.json` | 0.6 MB | 225 mechanism clusters: label, size, top pathways, mechanism mix, distinctive phenotypes, members, rationale |
 
 Nothing outside `pipeline/derive/`, `data/derived/`, `data/curated/{modality,hypotheses}.json`,
 `data/raw/derive/` and `data/raw/downloads/mondo-base.obo` (gitignored) was touched. `data/graph.json` was read only. No OpenAI call was made.
@@ -329,6 +331,168 @@ Test vectors, identical in Python and Node:
    ClinicalTrials.gov condition search, a NORD site search and a GeneReviews search.
 5. Never draw these neighbours as graph edges, and never give them a confidence.
 
+## 7. Mechanism layer at scale (`data/derived/global/mechanism/`, `clusters.json`)
+
+Every monogenic disease in the global index now carries:
+
+- its curated mechanism class;
+- its ClinGen validity;
+- its mid-level Reactome pathways;
+- a mechanism cluster, so the atlas can group diseases by MECHANISM, not only by symptoms.
+
+The data is additive. `index.json` and `neighbours/` keep their formats, the new data sits in the
+documented `mechanism/<bucket>.json` slot (same djb2 bucketing), and the full schema is in
+`data/derived/global/README.md`.
+
+**Sources** (downloaded into the gitignored `data/raw/downloads/`):
+
+- G2P, all panels (3,851 records);
+- ClinGen gene–disease validity and dosage (both files created 2026-10-03);
+- Reactome NCBI2Reactome (lowest level), with its pathway names and hierarchy.
+
+**Mechanism class (curated only).** Every value keeps the source label verbatim and the record URL.
+
+| Source | Label | Our class |
+|---|---|---|
+| G2P | loss of function | `mech:loss-of-function` |
+| G2P | dominant negative | `mech:dominant-negative` |
+| G2P | gain of function | `mech:gain-of-function` |
+| G2P | undetermined | no class |
+| G2P | confidence "disputed" | no class |
+| G2P | confidence "refuted" | skipped |
+| ClinGen | HI score 3 or 2 | `mech:haploinsufficiency` |
+
+A ClinGen HI score goes to the HI disease ClinGen names, or else only to dominant entries of that
+gene.
+
+| Measure | Count |
+|---|---|
+| Diseases with a mechanism class | **2,648** (loss of function 2,088, haploinsufficiency 695, gain of function 172, dominant negative 107) |
+| Diseases with any mechanism record | 3,469 |
+| Diseases with ClinGen validity | 2,260 |
+| G2P records joined | 3,493 (MONDO 3,117, OMIM 198, gene 178) |
+| G2P records unjoined | 355 |
+
+**Pathways.**
+
+- Lowest-level Reactome pathways roll up to their depth-3 ancestor (top level = 0); a depth-2 leaf is
+  kept as is.
+- Pathways with more than 400 human genes are dropped.
+- The Disease branch is excluded.
+- At most 5 pathways are shown per gene.
+- **5,986 diseases have a pathway**, from 3,962 genes.
+
+**Clusters.**
+
+- The graph is gene-level. An edge requires a shared pathway, from the depth-3 set plus the depth-2
+  parents.
+- Weight = 0.6 × IDF-weighted pathway Jaccard + 0.4 × phenotype cosine of the genes' non-neoplastic
+  disease centroids.
+- 15 nearest neighbours per gene, then Leiden (resolution 1.0). Communities over 80 diseases are
+  re-split with a gently rising resolution.
+- **5,426 diseases clustered into 225 clusters. 200 clusters (5,362 diseases) fall in the 5–80
+  target; 25 are smaller.**
+
+Four fixes were needed to get here. Each was forced by a sanity check:
+
+1. **Disease-level nodes → gene-level nodes.** With diseases as nodes, SCN1A's own allelic diseases
+   landed in four clusters.
+2. **Pathway size counted over all human genes, plus IDF weighting.** Generic bins such as
+   "Neutrophil degranulation" had been grouping lysosomal enzymes with unrelated genes.
+3. **Reactome Disease branch excluded.** "Signaling by RAF1 mutants" put BRAF with platelet
+   integrin genes.
+4. **Phenotype centroids without tumour entries.** BRAF's and KRAS's cancer entries diluted their
+   Noonan profile.
+
+The sweep (sanity counts are "largest share in one cluster / clustered", then number of clusters):
+
+| Pathway weight | Resolution | Diseases in 5–80 clusters | Lysosomal | RAS | Sodium | SNARE |
+|---|---|---|---|---|---|---|
+| 0.75 | 1.0 | 5,357 | 31/83, 13 | 11/24, 4 | 17/17, 1 | 6/10, 3 |
+| **0.6 (chosen)** | **1.0** | **5,362** | **38/83, 12** | **11/24, 3** | **17/17, 1** | **6/10, 3** |
+| 0.6, class agreement ×1.25/×0.85 | 1.0 | 5,350 | 38/83, 13 | 11/24, 4 | 17/17, 1 | 6/10, 3 |
+
+In the earlier sweep, before the Disease-branch fix, resolutions 2 and 4 were worse than 1.0 on every
+check.
+
+### Sanity checks (verbatim)
+
+**1. Lysosomal storage: 83/93 clustered. Partly together.**
+
+- **MC0034 · size 43 · "Glycosphingolipid metabolism · loss of function · cherry red spot of the
+  macula"** holds 38 lysosomal diseases:
+  - ASAH1: Farber lipogranulomatosis; SMA-progressive myoclonic epilepsy;
+  - CTSA: galactosialidosis and 2 others;
+  - GALC: 3 Krabbe forms;
+  - GBA1: Gaucher types I/II/III, perinatal lethal, and ophthalmoplegia-calcification;
+  - GLA: Fabry;
+  - GLB1: GM1 types 1/2/3; MPS 4B;
+  - GM2A: Tay-Sachs AB variant;
+  - HEXA: Tay-Sachs, 4 forms;
+  - HEXB: Sandhoff, 4 forms;
+  - NEU1: 4 sialidoses;
+  - PSAP: 4 saposin deficiencies;
+  - SMPD1: Niemann-Pick A, B and chronic neurovisceral.
+- **MC0114 · size 22 · "Heparan sulfate/heparin (HS-GAG) metabolism · loss of function · heparan
+  sulfate excretion in urine"** holds 11: IDUA (Hurler, Hurler-Scheie, Scheie), IDS (3 MPS2 forms),
+  SGSH, NAGLU, HGSNAT (MPS3A/B/C, plus RP73 and CMT2V). It also contains EXT1/EXT2 exostoses.
+- **The rest split by substrate pathway:**
+  - MC0127 arylsulfatases (ARSA, ARSB, SUMF1; 5);
+  - MC0118 fatty acyl-CoA (PPT1; 5);
+  - MC0153 UPR (TPP1; 5);
+  - MC0038 plasma lipoprotein remodelling (LIPA, NPC1, NPC2; 4);
+  - MC0095 MHC-II antigen presentation (CTSD; 4);
+  - MC0190 lysosomal oligosaccharide catabolism (MAN2B1, MANBA; 4);
+  - MC0044 glycosaminoglycan metabolism (GALNS, GNS, GUSB; 3);
+  - MC0063 glycogen (GAA; 2);
+  - MC0002 N-glycosylation (FUCA1);
+  - MC0134 (LAMP2 Danon).
+- **Unclustered (no mid-level pathway): 10.** AGA, CLN3 ×4, GNPTAB ×2, NAGA ×3.
+
+**2. RASopathies: 24/24 clustered, but NOT one cluster.**
+
+- **MC0020 · size 50 · "FLT3 Signaling · gain of function · nevus"** holds 11: HRAS (Costello, wooly
+  hair nevus, phakomatosis pigmentokeratotica), KRAS (NS3, CFC2, brain AVM, Toriello-Lacassie-Droste),
+  PTPN11 (LEOPARD 1, metachondromatosis) and SOS1 (NS4, gingival fibromatosis 1). They sit with
+  PIK3CA, PTEN and AKT1/2.
+- **MC0102 · size 23 · "Signaling by FGFR · gain of function · curly hair"** holds 11: BRAF (NS7,
+  LEOPARD 3, CFC-related, and 6 tumour entries) and RAF1 (NS5, LEOPARD 2, DCM 1NN). They sit with
+  SPRED1/2, MAP2K2 and PPP1CB.
+- **MC0004 · size 66 · "Toll-like Receptor Cascades · loss of function · abnormal leukocyte
+  morphology"** holds MAP2K1 (CFC3, melorheostosis).
+
+Why: in Reactome the RAS genes share far more pathways with RTK/PI3K adaptors than with RAF/MEK
+(edge weight KRAS–PIK3CA 0.33 vs KRAS–BRAF 0.24), and Jaccard penalises hub genes. Reactome also
+places MEK1 in every Toll-like receptor cascade. A class-agreement factor (all of these are gain of
+function) made it worse, so I did not force it. The honest reading is two mechanism-coherent halves,
+RTK–RAS(–PI3K) and RAF–MEK, both labelled gain of function. The RASopathy family file
+(`family_rasopathies.json`) is the right place to assert the clinical grouping.
+
+**3. Sodium-channel epilepsies: 17/17 in ONE cluster.**
+
+- **MC0024 · size 49 · "Phase 0 - rapid depolarisation · haploinsufficiency · arrhythmia".**
+- SCN1A: DEE6A, DEE6B, GEFS+2, FHM3.
+- SCN1B: GEFS+1, DEE52, Brugada 5, AF13.
+- SCN2A: BFIS3, EA9, DEE11.
+- SCN3A: DEE62, FFEVF4.
+- SCN8A: BFIS5, DEE13, familial myoclonus 2, cognitive impairment ± ataxia.
+- The cluster also holds SCN4A, SCN5A, SCN9A, SCN11A and FGF13/14, so it is the whole
+  sodium-channelopathy family.
+
+**4. The SNARE slice: 10/14 clustered.**
+
+- **MC0005 · size 64 · "Neurotransmitter release cycle · loss of function · hyperreflexia"** holds
+  STXBP1 DEE4, SNAP25 CMS18, SYT1, VAMP2, CPLX1 DEE63, **and the bridge gene SLC6A1**. The
+  mechanism layer independently puts the atlas's core family and its bridge together.
+- SYT2 (3 CMS entries) is in MC0129 clathrin-mediated endocytosis.
+- NSF DEE96 is in MC0115 intra-Golgi/retrograde traffic.
+- **Unclustered:** STX1B (its only Reactome pathway is in the excluded Disease branch) and UNC13A ×3
+  (no Reactome annotation at all). STX1A has no single-gene disease entry.
+
+**Family flags.** `pipeline/derive/atlas_flags.py` rewrites only the `atlas` column of `index.json`
+from `data/curated/family_*.json`. It is stdlib, runs in under a second, and also runs at the end of
+`global_index.py`. Tonight: 0 family files, 14 rows flagged. Re-run it whenever a family lands.
+
 ## Open questions for a biochemist
 
 New ones this layer raises (the biology layer's seven still stand):
@@ -376,6 +540,13 @@ New ones this layer raises (the biology layer's seven still stand):
   gene-only Orphanet ids are left out, and Orphanet gene lists (`gsrc: 2`) may include modifiers.
   The "far" flag is phenotype evidence about mechanism, which is weak, and it is worded "most
   likely" for that reason.
+- The mechanism clusters are computed groupings over curated inputs, not curated families:
+  - RASopathies split into RTK–RAS–PI3K and RAF–MEK halves, with MAP2K1 in a TLR cluster;
+  - lysosomal diseases group by substrate pathway, not by organelle;
+  - genes without a usable Reactome pathway (UNC13A, STX1B, CLN3, AGA, NAGA, GNPTAB) stay
+    unclustered;
+  - 355 G2P and 722 ClinGen validity records could not be joined to an index row;
+  - G2P `joined_by: gene` (178 records) is the weakest join.
 - `data/curated/hypotheses.json` is merged into `data/graph.json` by the next
   `python3 pipeline/build_graph.py` run (the 5 `candidate_for` edges are already in the current
   build). `data/curated/modality.json` contributes no nodes or edges and is read directly.

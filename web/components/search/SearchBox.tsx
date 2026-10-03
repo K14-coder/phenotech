@@ -1,20 +1,27 @@
 "use client";
 
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAtlas } from "../GraphProvider";
 import { NodeTypeIcon } from "../NodeTypeIcon";
 import { clustersOf, clusterSlot, neighbors, nodeHref, type GraphIndex } from "@/lib/graph";
+import { GLOBAL_INDEX_KEY, ensureGlobalIndex, rowHref, searchGlobal, type GlobalHit, type GlobalIndex, type GlobalRow } from "@/lib/global";
+import { useResourceValue } from "@/lib/resource";
 import { MATCH_KIND_LABEL, type SearchHit } from "@/lib/search";
 import { clusterColor } from "@/lib/style";
 import { TYPE_LABEL } from "@/lib/text";
 import type { AtlasNode } from "@/lib/types";
 import { looksLikeVariant } from "@/lib/variant";
 
+type Option = { kind: "atlas"; hit: SearchHit } | { kind: "global"; hit: GlobalHit };
+type Group = { kind: "atlas" | "global"; options: Option[] };
+
 interface Props {
   variant?: "hero" | "compact" | "field";
   /** called instead of navigating (used by pickers) */
   onPick?: (node: AtlasNode) => void;
+  /** pickers that accept diseases outside the mapped families (basic data); without it a picker lists atlas results only */
+  onPickGlobal?: (row: GlobalRow) => void;
   value?: string;
   onChange?: (q: string) => void;
   placeholder?: string;
@@ -30,6 +37,7 @@ interface Props {
 export function SearchBox({
   variant = "compact",
   onPick,
+  onPickGlobal,
   value,
   onChange,
   placeholder,
@@ -54,10 +62,66 @@ export function SearchBox({
     () => (atlas.status === "ready" ? atlas.search(q, variant === "hero" ? 8 : 7) : []),
     [atlas, q, variant],
   );
+  const idx = atlas.status === "ready" ? atlas.idx : null;
+
+  // every other rare disease (basic data): index.json loads on the first focus or keystroke
+  const globalRes = useResourceValue<GlobalIndex>(GLOBAL_INDEX_KEY);
+  const gi = globalRes?.status === "ready" ? (globalRes.data ?? null) : null;
+  const globalAllowed = !onPick || !!onPickGlobal;
+  const groups = useMemo((): Group[] => {
+    let atlasHits = [...hits];
+    const otherHits: GlobalHit[] = [];
+    if (gi && idx && q.trim().length >= 2) {
+      const seen = new Set(hits.map((h) => h.node.id));
+      for (const g of searchGlobal(gi, q, 16)) {
+        if (g.row.atlas) {
+          // a mapped disease found by a name only the global index knows: route to its atlas page
+          const node = idx.nodeById.get(g.row.atlas);
+          if (!node || seen.has(node.id)) continue;
+          seen.add(node.id);
+          atlasHits.push({ node, matched: g.kind === "name" ? g.row.name : g.matched, kind: g.kind === "gene" ? "gene" : g.kind === "id" ? "xref" : "synonym", score: 0.05 });
+        } else if (globalAllowed) otherHits.push(g);
+      }
+    }
+    // with other diseases to offer, drop the atlas's loosest fuzzy matches ("Rett" -> a researcher's name)
+    if (otherHits.length) atlasHits = atlasHits.filter((h) => h.score <= 0.3);
+    // mapped results stay on top when they are real matches. A clearly better match among all rare
+    // diseases goes first so Enter opens it: an exact name ("Dravet" -> Dravet syndrome, over a grant
+    // that mentions Dravet), or a whole-word prefix when the atlas only has loose fuzzy matches
+    const atlasBest = Math.min(...atlasHits.map((h) => h.score), 1);
+    const globalBest = Math.min(...otherHits.map((g) => g.rank), 9);
+    const globalFirst = (globalBest <= 1 && atlasBest > 0.01) || (globalBest <= 2 && atlasBest > 0.1);
+    const atlasGroup: Group = { kind: "atlas", options: atlasHits.map((hit) => ({ kind: "atlas", hit })) };
+    const globalGroup: Group = {
+      kind: "global",
+      options: otherHits.slice(0, atlasHits.length ? 5 : 8).map((hit) => ({ kind: "global", hit })),
+    };
+    const ordered = globalFirst ? [globalGroup, atlasGroup] : [atlasGroup, globalGroup];
+    return ordered.filter((g) => g.options.length);
+  }, [hits, gi, idx, q, globalAllowed]);
+  const options = groups.flatMap((g) => g.options);
+
   // a pasted report line ("STXBP1 R388X", "c.1162C>T", "NM_...(GENE):c...") gets a top "Look up this variant" option
   const variantOption = variant !== "field" && looksLikeVariant(q);
-  const total = hits.length + (variantOption ? 1 : 0);
+  const offset = variantOption ? 1 : 0;
+  const total = offset + options.length;
   const active = Math.min(rawActive, Math.max(total - 1, 0));
+  const startGlobal = () => {
+    if (globalAllowed) ensureGlobalIndex();
+  };
+
+  // Home's big search box: fetch the index when the browser is idle, so the first keystroke finds everything
+  useEffect(() => {
+    if (variant !== "hero") return;
+    // Safari has no requestIdleCallback
+    const w = window as Omit<Window, "requestIdleCallback"> & { requestIdleCallback?: Window["requestIdleCallback"] };
+    if (w.requestIdleCallback) {
+      const h = w.requestIdleCallback(() => ensureGlobalIndex(), { timeout: 5000 });
+      return () => window.cancelIdleCallback(h);
+    }
+    const t = setTimeout(() => ensureGlobalIndex(), 2500);
+    return () => clearTimeout(t);
+  }, [variant]);
 
   // a new focusKey (example chip, ?q= deep link, guided tour) opens the list even if no focus event fires
   const [seenFocusKey, setSeenFocusKey] = useState(0);
@@ -100,8 +164,22 @@ export function SearchBox({
   };
 
   const pickAt = (i: number) => {
-    if (variantOption && i === 0) pickVariant();
-    else pick(hits[i - (variantOption ? 1 : 0)]);
+    if (variantOption && i === 0) return pickVariant();
+    const o = options[i - offset];
+    if (o?.kind === "atlas") pick(o.hit);
+    else if (o?.kind === "global") pickGlobal(o.hit);
+  };
+
+  const pickGlobal = (hit: GlobalHit | undefined) => {
+    if (!hit) return;
+    setOpen(false);
+    setQ("");
+    if (onPickGlobal) {
+      onPickGlobal(hit.row);
+      return;
+    }
+    inputRef.current?.blur();
+    router.push(rowHref(hit.row));
   };
 
   const pick = (hit: SearchHit | undefined) => {
@@ -138,7 +216,7 @@ export function SearchBox({
 
   const showList = open && q.trim().length >= 2;
   const hero = variant === "hero";
-  const idx = atlas.status === "ready" ? atlas.idx : null;
+  const globalLoading = globalAllowed && (!globalRes || globalRes.status === "loading");
 
   return (
     <div ref={wrapRef} className="relative w-full">
@@ -172,8 +250,12 @@ export function SearchBox({
             setQ(e.target.value);
             setActive(0);
             setOpen(true);
+            startGlobal();
           }}
-          onFocus={() => openOnFocus && setOpen(true)}
+          onFocus={() => {
+            startGlobal();
+            if (openOnFocus) setOpen(true);
+          }}
           onKeyDown={onKeyDown}
           className={`w-full bg-transparent text-ink placeholder:text-ink-3 focus:outline-none ${
             hero ? "text-[17px]" : "text-sm"
@@ -212,29 +294,45 @@ export function SearchBox({
                   <p className="truncate text-xs text-ink-3">“{q.trim()}” · find it in ClinVar and see what it points to</p>
                 </li>
               )}
-              {hits.map((h, j) => {
-                const i = j + (variantOption ? 1 : 0);
+              {groups.map((g, gi2) => {
+                const start = offset + groups.slice(0, gi2).reduce((n, x) => n + x.options.length, 0);
+                const label = g.kind === "global" ? "Other rare diseases (basic data)" : groups.length > 1 ? "In the atlas (mapped in depth)" : null;
                 return (
-                  <li
-                    key={h.node.id}
-                    id={`${listId}-opt-${i}`}
-                    role="option"
-                    aria-selected={i === active}
-                    onMouseEnter={() => setActive(i)}
-                    onMouseDown={(e) => {
-                      e.preventDefault();
-                      pick(h);
-                    }}
-                    className={`cursor-pointer px-3 ${hero ? "py-2.5" : "py-2"} ${i === active ? "bg-subtle" : ""}`}
-                  >
-                    {idx && <HitRow idx={idx} hit={h} detailed={hero} />}
-                  </li>
+                  <Fragment key={g.kind}>
+                    {label && <GroupLabel border={gi2 > 0 || variantOption}>{label}</GroupLabel>}
+                    {g.options.map((o, j) => {
+                      const i = start + j;
+                      return (
+                        <li
+                          key={o.kind === "atlas" ? o.hit.node.id : o.hit.row.id}
+                          id={`${listId}-opt-${i}`}
+                          role="option"
+                          aria-selected={i === active}
+                          onMouseEnter={() => setActive(i)}
+                          onMouseDown={(e) => {
+                            e.preventDefault();
+                            pickAt(i);
+                          }}
+                          className={`cursor-pointer px-3 ${hero ? "py-2.5" : "py-2"} ${i === active ? "bg-subtle" : ""}`}
+                        >
+                          {o.kind === "atlas" ? idx && <HitRow idx={idx} hit={o.hit} detailed={hero} /> : <GlobalHitRow hit={o.hit} />}
+                        </li>
+                      );
+                    })}
+                  </Fragment>
                 );
               })}
             </ul>
           ) : (
             <div id={`${listId}-list`} role="listbox" aria-label="Search results" className="px-4 py-4 text-sm text-ink-3">
-              No match for “{q.trim()}”. Try a gene from a genetic report, a protein name, or a symptom.
+              {globalLoading && globalRes ? (
+                <>Searching every rare disease for “{q.trim()}”…</>
+              ) : (
+                <>
+                  No match for “{q.trim()}”{gi && globalAllowed ? ` in the atlas or among ${gi.rows.length.toLocaleString("en-US")} rare diseases` : ""}. Try a gene from a genetic
+                  report, a protein name, or a symptom.
+                </>
+              )}
             </div>
           )}
           <div className="flex gap-4 border-t border-line-2 px-3 py-1.5 text-[11px] text-ink-3">
@@ -280,6 +378,43 @@ function HitRow({ idx, hit, detailed }: { idx: GraphIndex; hit: SearchHit; detai
         {resolved && <div className="text-xs text-ink-3">Matched {MATCH_KIND_LABEL[hit.kind]}</div>}
         {detailed && n.summary && <div className="mt-0.5 line-clamp-1 text-xs text-ink-3">{n.summary}</div>}
         {linkedDisease && <div className="mt-0.5 text-xs text-ink-2">Linked disease: {linkedDisease}</div>}
+      </div>
+    </div>
+  );
+}
+
+function GroupLabel({ children, border = false }: { children: React.ReactNode; border?: boolean }) {
+  return (
+    <li role="presentation" className={`px-3 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3 ${border ? "mt-1 border-t border-line-2" : ""}`}>
+      {children}
+    </li>
+  );
+}
+
+/** A disease outside the mapped families: name (or "synonym → name"), genes, and that it is basic data. */
+function GlobalHitRow({ hit }: { hit: GlobalHit }) {
+  const r = hit.row;
+  const resolved = hit.kind !== "name";
+  const genes = r.genes.slice(0, 3).join(", ") + (r.genes.length > 3 ? ` +${r.genes.length - 3}` : "");
+  return (
+    <div className="flex items-start gap-3">
+      <span className="mt-[5px] h-[11px] w-[11px] shrink-0 rounded-full border-[1.5px] border-ink-4" aria-hidden="true" />
+      <div className="min-w-0 flex-1">
+        {resolved ? (
+          <p className="truncate text-sm text-ink">
+            <span className="text-ink-3">“{hit.matched}”</span>
+            <span className="mx-1.5 text-ink-3" aria-label="resolves to">
+              →
+            </span>
+            <span className="font-medium">{r.name}</span>
+          </p>
+        ) : (
+          <p className="truncate text-sm font-medium text-ink">{r.name}</p>
+        )}
+        <p className="truncate text-xs text-ink-3">
+          {genes ? `${genes} · ` : ""}
+          {r.n >= 5 ? `${r.n} annotated symptoms` : "few annotated symptoms"}
+        </p>
       </div>
     </div>
   );

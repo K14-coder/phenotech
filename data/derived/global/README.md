@@ -17,7 +17,9 @@ of `pipeline/derive/run.sh`.
 |---|---|---|
 | `index.json` | 1.6 MB raw | once, for search |
 | `neighbours/<bucket>.json` | 64 shards, 14.3 MB total, max 441 KB | lazily, one shard per disease page |
-| `meta.json` | 11 KB | once: caveat text, URL templates, threshold, versions |
+| `meta.json` | 28 KB | once: caveat text, URL templates, threshold, versions, `mechanism` section |
+| `mechanism/<bucket>.json` | 64 shards, 6.1 MB total, max 224 KB | lazily: mechanism class, pathways, cluster for one disease |
+| `clusters.json` | 0.6 MB | once, for a "mechanism families" view: 225 clusters with labels and members |
 
 Sources:
 
@@ -135,6 +137,174 @@ Test vectors. Python and Node give identical results:
 Only diseases with **≥ 5** annotated terms have an entry: 8,787 of them. For any other row, say
 "too few annotated phenotypes to compare" and still show the links. QTL and susceptibility loci can
 have their own page but are never listed as anyone's neighbour.
+
+## Mechanism layer: `mechanism/<bucket>.json`, `clusters.json`, `meta.mechanism`
+
+This layer is new, and it is purely **additive**: `index.json` and `neighbours/` keep their format.
+It is built by `pipeline/derive/mechanism_index.py`, which runs after `global_index.py`. Use the
+**same** `bucket(id)` as for `neighbours/`.
+
+```json
+{"bucket": 38,
+ "p": {"R-HSA-264642": "Acetylcholine Neurotransmitter Release Cycle", ...},
+ "d": {"MONDO:0012812": {
+   "mechanisms": [{"class": "mech:loss-of-function", "source": "G2P", "label_verbatim": "loss of function",
+                   "url": "https://www.ebi.ac.uk/gene2phenotype/lgd/G2P01128", "confidence": "definitive",
+                   "allelic_requirement": "monoallelic_autosomal", "mechanism_support": "inferred",
+                   "variant_consequence": "absent gene product", "gene": "STXBP1", "panels": "DD",
+                   "joined_by": "MONDO", "record": "G2P01128"},
+                  {"class": "mech:haploinsufficiency", "source": "ClinGen dosage",
+                   "label_verbatim": "Sufficient Evidence for Haploinsufficiency",
+                   "url": "https://search.clinicalgenome.org/kb/gene-dosage/HGNC:11444",
+                   "confidence": "HI score 3 (sufficient evidence)", "gene": "STXBP1", "joined_by": "HI disease id"}],
+   "validity":   [{"classification": "Definitive", "moi": "AD", "gene": "STXBP1", "url": "https://search.clinicalgenome.org/kb/gene-validity/CGGV:...",
+                   "date": "2017-10-20", "gcep": "Epilepsy Gene Curation Expert Panel", "joined_by": "..."}],
+   "pathways":   ["R-HSA-264642", "R-HSA-181430"],
+   "cluster_id": "MC0005",
+   "mechanism_neighbours": [{"id": "MONDO:0014590", "gene": "SNAP25", "shared_pathways": ["R-HSA-112310", ...],
+                             "shared_mechanisms": ["mech:loss-of-function"], "gene_edge_weight": 0.468,
+                             "phenotype_cosine": 0.053}, ...]}}}
+```
+
+Every key is optional. A disease is present only if it has at least one of them.
+
+| key | meaning |
+|---|---|
+| `p` | Shard-local Reactome names. The URL is `https://reactome.org/content/detail/<id>`. |
+| `mechanisms[]` | Curated mechanism records. `class` is our vocabulary (`mech:loss-of-function`, `mech:haploinsufficiency`, `mech:dominant-negative`, `mech:gain-of-function`) or `null`. `label_verbatim` is the source's own words. `url` is the record. `confidence` is G2P's confidence or ClinGen's HI score. `joined_by` says how the record reached this disease. |
+| `validity[]` | ClinGen gene–disease validity: classification, mode of inheritance, report URL and the curating panel (GCEP). |
+| `pathways[]` | Up to 5 mid-level Reactome pathways of the disease's gene, most-annotated first. Entries with 2–3 genes get a vote across their genes. |
+| `cluster_id` | The mechanism cluster (`MC0001`…). Only single-gene diseases whose gene has a mid-level pathway get one. |
+| `mechanism_neighbours[]` | Up to 10 diseases in the **same cluster** that share at least one pathway **and** at least one mechanism class, listed with the shared items. Ranked by the gene–gene edge weight, then by phenotype cosine. A disease from the same gene ranks first. |
+
+`clusters.json` has one entry per cluster:
+
+- `id`, `label`, `size`, `small` (fewer than 5 diseases);
+- `top_pathways[]` with `id`, `name`, `coverage` and `url`;
+- `mechanism_mix`, a count per class plus `unassigned`, and `dominant_mechanism`;
+- `distinctive_phenotypes[]` with `hpo`, `name`, `ic` and `coverage`;
+- `genes`, the 12 most frequent;
+- `members`, the disease ids;
+- `rationale` and `evidence_basis`.
+
+The label reads `<top pathway> · <dominant mechanism> · <most distinctive enriched phenotype>`,
+e.g. "Glycosphingolipid metabolism · loss of function · cherry red spot of the macula".
+
+### Rules
+
+**Mechanism class.** Curated databases only, and the source label is always kept verbatim.
+
+| Source | Label | Our class |
+|---|---|---|
+| G2P | "loss of function" | `mech:loss-of-function` |
+| G2P | "dominant negative" | `mech:dominant-negative` |
+| G2P | "gain of function" | `mech:gain-of-function` |
+| G2P | "undetermined" | no class; label kept |
+| G2P | any record with confidence "disputed" | no class; label kept |
+| G2P | any record with confidence "refuted" | skipped (3 records) |
+| ClinGen dosage | HI score 3 or 2 | `mech:haploinsufficiency` |
+
+A ClinGen HI score is attached to the disease ClinGen names (the HI disease id). Otherwise it is
+attached only to dominant entries of that gene (autosomal dominant inheritance, or a G2P monoallelic
+record), never to recessive ones. Triplosensitivity is not forced into a class.
+
+How a record joins a disease, in order: MONDO id, then a unique OMIM number, then the only
+single-gene entry of that gene.
+
+| Source | Joined | Unjoined |
+|---|---|---|
+| G2P | 3,493 (3,117 by MONDO, 198 by OMIM, 178 by gene) | 355 |
+| ClinGen validity | 2,973 | 722 |
+| ClinGen HI | 427 genes | 8 genes |
+
+**Pathways.**
+
+- Each gene's lowest-level Reactome pathways (NCBI2Reactome) roll up to their **depth-3 ancestor**,
+  counting the top level as 0. For example: Metabolism (0) › Metabolism of lipids (1) › Sphingolipid
+  metabolism (2) › Glycosphingolipid metabolism (3), and Signal Transduction (0) › MAPK family
+  signaling cascades (1) › MAPK1/MAPK3 signaling (2) › RAF/MAP kinase cascade (3).
+- A leaf at depth 2 is kept as itself.
+- A pathway with more than 400 human genes is dropped as too broad (e.g. Neutrophil degranulation).
+- **Reactome's top-level "Disease" branch is excluded.** It holds mutant-specific copies of normal
+  pathways ("Signaling by RAF1 mutants") that re-annotate whole downstream machineries to the
+  mutated gene. With it, BRAF clustered with platelet-integrin genes.
+- For similarity, each gene's set also includes the depth-2 parents (the "band").
+
+**Clusters.**
+
+- Nodes are **genes**, not diseases. Pathways belong to the gene, and a disease-level graph split
+  SCN1A's own allelic diseases across four clusters. Each disease inherits its gene's cluster.
+- An edge exists only when two genes share a band pathway. Its weight is
+  `0.6 × IDF-weighted pathway Jaccard + 0.4 × phenotype cosine`:
+  - IDF is computed over all Reactome human genes;
+  - the phenotype cosine compares the genes' centroids of **non-neoplastic** diseases. Tumour and
+    somatic entries diluted BRAF's Noonan/CFC profile.
+- The graph keeps 15 nearest neighbours per gene and is symmetrised.
+- Leiden runs with RBConfiguration, resolution 1.0 and seed 20261003.
+- A community holding more than 80 diseases is re-split on its own subgraph, raising the resolution
+  ×1.5 per round so splits stay minimal.
+- Resolution and weights were chosen by a sweep, reported in `docs/agent-reports/derived.md`.
+- A mechanism-class agreement factor (×1.25 for a shared class family, ×0.85 for conflicting
+  families) was tested and is **off**: it split the RASopathies further.
+
+Result: 5,426 diseases in 225 clusters. 200 clusters, holding 5,362 diseases, fall in the 5–80
+target; 25 are small.
+
+### Sanity checks
+
+These are in `meta.mechanism.sanity_checks`, recomputed on every run.
+
+- **Lysosomal storage: partly.**
+  - The sphingolipidoses form **one** cluster: MC0034 "Glycosphingolipid metabolism · loss of
+    function · cherry red spot of the macula" (43 diseases, 38 of them lysosomal). It covers
+    Gaucher, Krabbe, Fabry, GM1, Tay-Sachs/Sandhoff/AB variant, sialidosis, galactosialidosis,
+    Niemann-Pick A/B, Farber and the saposin deficiencies.
+  - MPS I/II/IIIA/B/C form a heparan-sulfate cluster (MC0114, 22 diseases). It also contains EXT1/2
+    exostoses, which share the heparan-sulfate pathway but not the storage biology.
+  - The rest split by substrate pathway, because Reactome organises by substrate, not by organelle:
+    - arylsulfatases: ARSA, ARSB, SUMF1;
+    - glycogen: GAA;
+    - lipoprotein: LIPA, NPC1, NPC2;
+    - N-glycosylation: FUCA1;
+    - mannosidoses (own cluster);
+    - NCLs scattered: PPT1, TPP1, CTSD.
+  - 10 diseases have no mid-level pathway and are unclustered (AGA, CLN3, GNPTAB, NAGA).
+- **RASopathies: NOT one cluster** (3 clusters):
+  - MC0020 "FLT3 Signaling · gain of function · nevus" (50): KRAS, HRAS, NRAS, SOS1 and PTPN11,
+    together with PIK3CA/PTEN/AKT. This is RTK–RAS–PI3K.
+  - MC0102 "Signaling by FGFR · gain of function · curly hair" (23): BRAF, RAF1, SPRED1/2, MAP2K2 and
+    PPP1CB. This is RAF–MEK.
+  - MAP2K1 sits in MC0004, Toll-like receptor cascades, because Reactome places MEK1 in every TLR
+    cascade.
+  - The cause is structural. In Reactome, RAS genes share far more pathways with RTK/PI3K adaptors
+    than with RAF/MEK (KRAS–PIK3CA 0.33 against KRAS–BRAF 0.24 edge weight), and Jaccard penalises
+    hub genes.
+- **Sodium-channel epilepsies: yes.** All 17 diseases of SCN1A, SCN2A, SCN3A, SCN8A and SCN1B are
+  in MC0024 "Phase 0 - rapid depolarisation · haploinsufficiency · arrhythmia" (49 diseases). The
+  cluster also holds SCN4A, SCN5A and SCN9A, so it is the sodium-channelopathy family.
+- **SNARE slice.**
+  - MC0005 "Neurotransmitter release cycle · loss of function · hyperreflexia" (64) holds STXBP1,
+    SNAP25, SYT1, VAMP2, CPLX1 and the bridge gene SLC6A1.
+  - SYT2 is in clathrin-mediated endocytosis (MC0129) and NSF in Golgi traffic (MC0115).
+  - STX1B and UNC13A are unclustered. UNC13A has no Reactome annotation at all, and STX1B's only
+    pathway was in the excluded Disease branch. STX1A has no single-gene disease entry.
+
+### How the UI should use it
+
+1. Show `mechanisms[]` with the badge `class` and the source's own words (`label_verbatim`),
+   linked to `url`.
+2. Show `validity[]` as "ClinGen: Definitive (AD)", linked to the report.
+3. Show `pathways[]` as Reactome links.
+4. Show the cluster label as "mechanism family". Load `clusters.json` once and list the members.
+5. Show `mechanism_neighbours[]` as "same mechanism family, shares a pathway and a mechanism class"
+   with the shared items.
+6. Everything here is **computed** grouping over curated inputs. It is not evidence that two
+   diseases respond to the same therapy.
+
+The `atlas` flag can change when family files land. `python3 pipeline/derive/atlas_flags.py`
+rewrites only that column of `index.json` from `data/curated/family_*.json`, and it is stdlib and
+runs in under a second. It flags MONDO/subtype matches and single-gene entries, never multi-gene
+groups, and records itself in `meta.atlas_flags`.
 
 ## Method
 

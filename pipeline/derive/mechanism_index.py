@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import csv
 import math
+import os
 import re
 from collections import Counter, defaultdict, deque
 
@@ -52,9 +53,22 @@ MAX_PATHWAY_GENES = 400  # broader than this is not "mid-level" (e.g. Neutrophil
 SHOW_PATHWAYS = 5
 
 # ---------------------------------------------------------------- graph rule
-W_PATHWAY, W_PHENO = 0.75, 0.25   # mechanism (shared pathways) dominates; phenotype refines
+W_PATHWAY = float(os.environ.get("MECH_WPATH", 0.6))   # mechanism (shared pathways) dominates;
+W_PHENO = round(1 - W_PATHWAY, 4)                        # phenotype refines
 KNN = 15
-RESOLUTION = 1.0
+# mechanism class agreement multiplies the edge: shared class family x CLASS_AGREE, disjoint families
+# x CLASS_CONFLICT, unknown on either side x 1. Families: loss (loss of function + haploinsufficiency),
+# dominant negative, gain of function.
+CLASS_AGREE = float(os.environ.get("MECH_AGREE", 1.0))   # tested 1.25: no gain on the sanity sets
+CLASS_CONFLICT = float(os.environ.get("MECH_CONFLICT", 1.0))  # tested 0.85: RASopathies split further
+FAMILY = {"mech:loss-of-function": "loss", "mech:haploinsufficiency": "loss",
+          "mech:dominant-negative": "dn", "mech:gain-of-function": "gain"}
+RESOLUTION = float(os.environ.get("MECH_RES", 1.0))
+# tumour / somatic entries describe a cancer, not the germline disorder: kept as cluster members, but
+# left out of the gene's phenotype centroid (otherwise BRAF's Noonan/CFC profile is diluted by
+# hairy-cell leukaemia and histiocytoses)
+NEOPLASM = re.compile(r"carcinoma|cancer|leuka?emia|lymphoma|tumou?r|melanoma|neoplasm|sarcoma|blastoma|"
+                      r"glioma|adenoma|myeloma|histiocytosis|somatic", re.I)
 MAX_CLUSTER, MIN_CLUSTER = 80, 5
 SEED = 20261003
 TOP_NEIGHBOURS = 10
@@ -267,9 +281,17 @@ def main():
             size[p] += 1
     n_human_genes = len(all_leaves)
 
+    disease_root = next((r for r in roots if names.get(r) == "Disease"), None)
+
     def representatives(leaf):
         d = depth.get(leaf)
         if d is None:
+            return set()
+        # Reactome's top-level "Disease" branch holds mutant-specific copies of normal pathways
+        # ("Signaling by RAF1 mutants", "Paradoxical activation of RAF signaling by kinase inactive
+        # BRAF"), which re-annotate a whole downstream machinery to the mutated gene. Using them linked
+        # BRAF to platelet integrin genes. Mechanism here means what the gene normally does.
+        if disease_root and disease_root in p_ancestors(leaf):
             return set()
         if d <= MID_DEPTH:
             return {leaf} if d >= MIN_DEPTH else set()
@@ -277,14 +299,23 @@ def main():
 
     gene_pw, gene_pw_rank = {}, {}
     for gsym, ls in leaves.items():
-        votes = Counter()
+        votes, band = Counter(), set()
         for leaf in ls:
             for rep in representatives(leaf):
                 if size[rep] <= MAX_PATHWAY_GENES:
                     votes[rep] += 1
-        if votes:
-            gene_pw[gsym] = set(votes)
-            gene_pw_rank[gsym] = sorted(votes, key=lambda p: (-votes[p], size[p], names[p]))
+                    band.add(rep)
+                # the depth-2 parents join the similarity band: sibling depth-3 pathways (e.g. 'Signaling
+                # by RAS mutants' vs 'Signaling by RAF1 mutants') then share 'Oncogenic MAPK signaling',
+                # with a lower IDF weight because the parent is broader
+                for a in p_ancestors(rep):
+                    if depth.get(a) == MIN_DEPTH and size[a] <= MAX_PATHWAY_GENES:
+                        band.add(a)
+        if band:
+            gene_pw[gsym] = band
+            shown = sorted(votes, key=lambda p: (-votes[p], size[p], names[p])) or \
+                sorted(band, key=lambda p: (size[p], names[p]))
+            gene_pw_rank[gsym] = shown
 
     # ================================================================ 3. clusters
     # Nodes are GENES: pathways are a property of the gene, so a gene's allelic diseases must share a
@@ -312,7 +343,8 @@ def main():
     # gene phenotype vector = centroid of its diseases' vectors (diseases with >= 5 terms), re-normalised
     rr, cc, vv = [], [], []
     for i, g_ in enumerate(nodes):
-        ks = [qpos[k] for k in dis_of_gene[g_] if k in qpos]
+        ks = [qpos[k] for k in dis_of_gene[g_] if k in qpos and not NEOPLASM.search(E[k]["name"])] or \
+            [qpos[k] for k in dis_of_gene[g_] if k in qpos]
         for q in ks:
             rr.append(i)
             cc.append(q)
@@ -324,6 +356,13 @@ def main():
     Xg = sp.diags(1 / nrm) @ Xg
     BwT = Bw.T.tocsc()
     XgT = Xg.T.tocsc()
+    gfam = [set() for _ in nodes]
+    for i, g_ in enumerate(nodes):
+        for k in dis_of_gene[g_]:
+            gfam[i] |= {FAMILY[c] for c in classes_of.get(k, ())}
+    fam_codes = ["loss", "dn", "gain"]
+    F = np.array([[1.0 if f in gfam[i] else 0.0 for f in fam_codes] for i in range(len(nodes))], dtype=np.float32)
+    has_f = F.sum(axis=1) > 0
     knn = {}
     BLOCK = 1500
     for s0 in range(0, len(nodes), BLOCK):
@@ -335,6 +374,10 @@ def main():
             union = tot[i] + tot - it
             jac = np.where(it > 0, it / np.maximum(union, 1e-9), 0.0)
             w = np.where(it > 0, W_PATHWAY * jac + W_PHENO * cos[r], 0.0)
+            if has_f[i]:
+                shared_f = (F @ F[i]) > 0
+                factor = np.where(has_f, np.where(shared_f, CLASS_AGREE, CLASS_CONFLICT), 1.0)
+                w = w * factor
             w[i] = 0.0
             nz = np.nonzero(w)[0]
             if not len(nz):
@@ -355,6 +398,24 @@ def main():
                                         resolution_parameter=res, seed=SEED, n_iterations=-1)
 
     membership = list(leiden(graph, RESOLUTION).membership)
+    if os.environ.get("MECH_DEBUG"):
+        first = {nodes[v]: c for v, c in enumerate(membership)}
+        fsize = defaultdict(lambda: [0, 0])
+        for v, c in enumerate(membership):
+            fsize[c][0] += 1
+            fsize[c][1] += int(ndis[v])
+        dist = sorted(x[1] for x in fsize.values())
+        print(f"  [debug] first pass: {len(fsize)} communities; diseases per community: max {dist[-1]}, "
+              f"median {dist[len(dist) // 2]}, >80: {sum(1 for d in dist if d > 80)}, >120: {sum(1 for d in dist if d > 120)}")
+        for setname, gl in SANITY_SETS.items():
+            gl = [g_ for g_ in gl if g_ in npos]
+            cs = sorted({first[g_] for g_ in gl})
+            print(f"  [debug] first-pass {setname}: communities {[(c, tuple(fsize[c])) for c in cs]} (genes, diseases)")
+            for a_ in gl[:8]:
+                nb = {nodes[j]: (round(w, 3), round(jac, 3), round(c, 3)) for j, w, jac, c in knn.get(npos[a_], [])}
+                inset = {g_: nb[g_] for g_ in gl if g_ in nb}
+                top3 = [(nodes[j], round(w, 3)) for j, w, _a, _b in knn.get(npos[a_], [])[:4]]
+                print(f"     {a_} ({ndis[npos[a_]]} dis): in-set knn {inset} | top {top3}")
     # re-split communities holding more than MAX_CLUSTER diseases, on their own subgraph
     next_id = max(membership) + 1
     for rnd in range(1, 7):
@@ -365,7 +426,7 @@ def main():
         for c, vs in groups.items():
             if ndis[vs].sum() <= MAX_CLUSTER or len(vs) < 2:
                 continue
-            part = leiden(graph.subgraph(vs), RESOLUTION * (2 ** rnd))
+            part = leiden(graph.subgraph(vs), RESOLUTION * (1.5 ** rnd))
             if len(set(part.membership)) == 1:
                 continue
             changed = True
@@ -449,7 +510,7 @@ def main():
             "rationale": (f"{len(mem)} single-gene diseases from {len(genes)} genes. Genes were grouped by Leiden "
                           f"on a graph whose edges require a shared mid-level Reactome pathway and weigh "
                           f"{W_PATHWAY} x IDF-weighted pathway Jaccard + {W_PHENO} x IC-weighted phenotype cosine "
-                          f"(gene phenotype = centroid of its diseases); each disease inherits its gene's cluster. "
+                          f"(gene phenotype = centroid of its non-neoplastic diseases); each disease inherits its gene's cluster. "
                           + (f"{pwc[top_pw[0]]}/{len(mem)} members share '{names[top_pw[0]]}'. " if top_pw else "")
                           + f"Mechanism class (G2P/ClinGen) known for {n_with}/{len(mem)}"
                           + (f", mostly {dom}." if dom else ".")
@@ -579,15 +640,20 @@ def main():
             "join": "MONDO id, else a unique OMIM number, else the only single-gene entry for that gene",
             "pathway_level": (f"each gene's lowest-level Reactome pathways rolled up to their depth-{MID_DEPTH} "
                               f"ancestor (top level = 0); a shallower leaf at depth >= {MIN_DEPTH} is kept as is; "
-                              f"anything with > {MAX_PATHWAY_GENES} genes is dropped as too broad; up to "
-                              f"{SHOW_PATHWAYS} shown per gene, most-annotated first"),
+                              f"anything with > {MAX_PATHWAY_GENES} human genes is dropped as too broad; the "
+                              f"top-level 'Disease' branch (mutant-specific copies of normal pathways) is excluded. "
+                              f"Shown: up "
+                              f"to {SHOW_PATHWAYS} depth-{MID_DEPTH} pathways per gene, most-annotated first. "
+                              f"Similarity band: those plus their depth-{MIN_DEPTH} parents, IDF-weighted"),
             "graph": (f"nodes = genes of single-gene diseases with >= 1 mid-level pathway; edge only if they "
-                      f"share a pathway; weight = {W_PATHWAY} x IDF-weighted pathway Jaccard (IDF over all "
-                      f"Reactome human genes) + {W_PHENO} x phenotype cosine of the genes' disease centroids; "
+                      f"share a pathway; weight = ({W_PATHWAY} x IDF-weighted pathway Jaccard (IDF over all "
+                      f"Reactome human genes) + {W_PHENO} x phenotype cosine of the genes' non-neoplastic disease "
+                      f"centroids) x mechanism-class agreement ({CLASS_AGREE} shared family, {CLASS_CONFLICT} "
+                      f"conflicting, 1 unknown); "
                       f"{KNN} nearest neighbours per gene, symmetrised; diseases inherit their gene's cluster"),
             "community_detection": (f"Leiden (RBConfiguration, resolution {RESOLUTION}, seed {SEED}); communities "
-                                    f"holding > {MAX_CLUSTER} diseases re-split on their own subgraph at doubled "
-                                    f"resolution (up to 6 rounds)"),
+                                    f"holding > {MAX_CLUSTER} diseases re-split on their own subgraph, raising the "
+                                    f"resolution x1.5 per round (up to 6 rounds) so splits stay minimal"),
             "mechanism_neighbours": "same cluster AND >= 1 shared pathway AND >= 1 shared mechanism class",
             "url_templates": {"G2P": G2P_URL.format("{g2p_id}"), "Reactome": REACTOME_URL.format("{id}")},
         },
@@ -603,6 +669,12 @@ def main():
           f"clusters {c['clusters_by_size']} ({in_target} diseases in 5-80 clusters)")
     print(f"  shards {sum(sizes) / 1024 / 1024:.1f} MB (max {max(sizes) / 1024:.0f} KB), clusters.json "
           f"{size_clusters / 1024:.0f} KB; joins {dict(join_stats)}")
+    summ = []
+    for name, s_ in sanity.items():
+        big = max((len(c_["members_from_set"]) for c_ in s_["clusters"] if c_["cluster_id"]), default=0)
+        summ.append(f"{name.split('_')[0]}={big}/{s_['clustered']} in top cluster, "
+                    f"{sum(1 for c_ in s_['clusters'] if c_['cluster_id'])} clusters")
+    print(f"  SWEEP wpath={W_PATHWAY} res={RESOLUTION}: in5-80={in_target} | " + " | ".join(summ))
     for name, s in sanity.items():
         print(f"\n  == {name}: {s['clustered']}/{s['diseases']} clustered")
         for cc in s["clusters"][:8]:

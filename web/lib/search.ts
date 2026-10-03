@@ -72,4 +72,5 @@ export const MATCH_KIND_LABEL: Record<SynonymKind, string> = {
   protein: "the protein this gene makes",
   subtype: "a clinical subtype",
   xref: "a database ID",
+  gene: "the gene",
 };

@@ -10,8 +10,11 @@ import { SearchBox } from "../search/SearchBox";
 import { ConfidenceMeter, EvidenceLevelBadge, StatusBadge } from "../evidence/EvidenceBits";
 import { useEvidence } from "../evidence/EvidenceProvider";
 import { gapsAbout, nodeHref, pathHref, shortestEvidencePath, type GraphIndex } from "@/lib/graph";
+import { familyName } from "@/lib/bridges";
+import { GLOBAL_INDEX_KEY, globalHref, isGlobalId, loadGlobalIndex, type GlobalIndex, type GlobalRow } from "@/lib/global";
 import { closestDiseases } from "@/lib/insights";
-import { EVIDENCE_LEVEL_META, TYPE_LABEL, confidenceWord, relationSentence } from "@/lib/text";
+import { useResource } from "@/lib/resource";
+import { EVIDENCE_LEVEL_META, TYPE_LABEL, capFirst, confidenceWord, joinList, relationSentence } from "@/lib/text";
 import type { AtlasNode } from "@/lib/types";
 
 export function PathView() {
@@ -24,8 +27,18 @@ function PathInner({ idx }: { idx: GraphIndex }) {
   const from = params.get("from") ?? "";
   const to = params.get("to") ?? "";
   const [includeHyp, setIncludeHyp] = useState(params.get("hyp") === "1");
-  const fromNode = idx.nodeById.get(from);
-  const toNode = idx.nodeById.get(to);
+  // either end may be a disease outside the mapped families (MONDO/OMIM/ORPHA id from the global index)
+  const anyGlobal = isGlobalId(from) || isGlobalId(to);
+  const gres = useResource<GlobalIndex>(anyGlobal ? GLOBAL_INDEX_KEY : null, loadGlobalIndex);
+  const gi = gres?.data;
+  const resolve = (id: string) => {
+    const row = isGlobalId(id) ? gi?.byId.get(id) : undefined;
+    // a mapped disease reached by its global id is the atlas disease itself
+    const node = idx.nodeById.get(id) ?? (row?.atlas ? idx.nodeById.get(row.atlas) : undefined);
+    return { node, global: node ? undefined : isGlobalId(id) ? { id, row } : undefined };
+  };
+  const { node: fromNode, global: fromGlobal } = resolve(from);
+  const { node: toNode, global: toGlobal } = resolve(to);
 
   const result = useMemo(
     () => (fromNode && toNode ? shortestEvidencePath(idx, fromNode.id, toNode.id, { includeHypotheses: includeHyp }) : null),
@@ -65,7 +78,7 @@ function PathInner({ idx }: { idx: GraphIndex }) {
       </p>
 
       <div className="mt-8 grid grid-cols-1 items-end gap-3 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
-        <Picker label="From" node={fromNode} onPick={(n) => set(n.id, to)} onClear={() => set("", to)} />
+        <Picker label="From" node={fromNode} global={fromGlobal} onPick={(n) => set(n.id, to)} onPickGlobal={(r) => set(r.id, to)} onClear={() => set("", to)} />
         <button
           type="button"
           onClick={() => set(to, from)}
@@ -75,14 +88,16 @@ function PathInner({ idx }: { idx: GraphIndex }) {
         >
           ⇄
         </button>
-        <Picker label="To" node={toNode} onPick={(n) => set(from, n.id)} onClear={() => set(from, "")} />
+        <Picker label="To" node={toNode} global={toGlobal} onPick={(n) => set(from, n.id)} onPickGlobal={(r) => set(from, r.id)} onClear={() => set(from, "")} />
       </div>
       <label className="mt-4 inline-flex cursor-pointer items-center gap-2 text-sm text-ink-2">
         <input type="checkbox" checked={includeHyp} onChange={(e) => setIncludeHyp(e.target.checked)} className="h-3.5 w-3.5 accent-[#1f5a96]" />
         Allow untested hypotheses in the route
       </label>
 
-      {!fromNode || !toNode ? (
+      {fromGlobal || toGlobal ? (
+        <OutsideMapped idx={idx} ends={[fromGlobal, toGlobal].filter((g): g is GlobalEnd => !!g)} loading={gres?.status === "loading"} />
+      ) : !fromNode || !toNode ? (
         <div className="mt-12">
           <p className="text-sm font-medium text-ink-2">{fromNode || toNode ? "Pick the other end to trace a route." : "Try one of these"}</p>
           {!fromNode && !toNode && (
@@ -109,21 +124,38 @@ function PathInner({ idx }: { idx: GraphIndex }) {
   );
 }
 
+type GlobalEnd = { id: string; row: GlobalRow | undefined };
+
 function Picker({
   label,
   node,
+  global,
   onPick,
+  onPickGlobal,
   onClear,
 }: {
   label: string;
   node?: AtlasNode;
+  global?: GlobalEnd;
   onPick: (n: AtlasNode) => void;
+  onPickGlobal: (r: GlobalRow) => void;
   onClear: () => void;
 }) {
   return (
     <div className="min-w-0">
       <p className="mb-1.5 text-xs font-medium text-ink-3">{label}</p>
-      {node ? (
+      {global ? (
+        <div className="flex h-9 items-center justify-between gap-2 rounded-lg border border-line px-3">
+          <span className="flex min-w-0 items-center gap-2 text-sm text-ink">
+            <span className="h-[11px] w-[11px] shrink-0 rounded-full border-[1.5px] border-ink-4" aria-hidden="true" />
+            <span className="truncate font-medium">{global.row ? capFirst(global.row.name) : global.id}</span>
+            <span className="shrink-0 text-xs text-ink-3">basic data</span>
+          </span>
+          <button type="button" onClick={onClear} className="shrink-0 text-xs text-ink-3 hover:text-ink" aria-label={`Change ${label.toLowerCase()}`}>
+            Change
+          </button>
+        </div>
+      ) : node ? (
         <div className="flex h-9 items-center justify-between gap-2 rounded-lg border border-line px-3">
           <span className="flex min-w-0 items-center gap-2 text-sm text-ink">
             <NodeTypeIcon type={node.type} size={12} />
@@ -135,7 +167,14 @@ function Picker({
           </button>
         </div>
       ) : (
-        <SearchBox variant="field" shortcut={false} onPick={onPick} label={`${label}: search the atlas`} placeholder="Disease, gene, symptom…" />
+        <SearchBox
+          variant="field"
+          shortcut={false}
+          onPick={onPick}
+          onPickGlobal={onPickGlobal}
+          label={`${label}: search the atlas`}
+          placeholder="Disease, gene, symptom…"
+        />
       )}
     </div>
   );
@@ -250,6 +289,40 @@ function NodeRow({ node, first, last }: { node: AtlasNode; first: boolean; last:
         <span className="text-[16px] font-semibold text-ink group-hover:text-accent-700">{node.label}</span>
         <span className="ml-2 text-xs text-ink-3">{TYPE_LABEL[node.type]?.one}</span>
       </Link>
+    </div>
+  );
+}
+
+/** One or both ends sit outside the mapped families: say why there is no route, and where to go instead. */
+function OutsideMapped({ idx, ends, loading }: { idx: GraphIndex; ends: GlobalEnd[]; loading: boolean }) {
+  const families = idx.graph.clusters.filter((c) => c.basis === "pathway").map(familyName);
+  const names = ends.map((e) => (e.row ? capFirst(e.row.name) : e.id));
+  return (
+    <div className="mt-10 rounded-lg border border-line px-6 py-5">
+      <h2 className="text-[17px] font-semibold text-ink">Paths run only inside the mapped families</h2>
+      <p className="mt-2 text-sm leading-relaxed text-ink-2">
+        A route here is a chain of sourced connections, and the atlas has those only for the{" "}
+        {families.length > 1
+          ? `${families.length} families it maps in depth (${families.join(", ")})`
+          : families.length === 1
+            ? `family it maps in depth (${families[0]})`
+            : "diseases it maps in depth"}
+        .{" "}
+        {loading ? "Looking up the disease…" : `${joinList(names)} ${names.length > 1 ? "are" : "is"} mapped in basic form, so there is no evidence route to trace yet.`}
+      </p>
+      <ul className="mt-4 space-y-1.5">
+        {ends.map((e, i) => (
+          <li key={e.id}>
+            <Link href={globalHref(e.id)} className="text-sm font-medium text-accent-700 hover:underline">
+              Open {names[i]} (basic data) →
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 text-xs leading-relaxed text-ink-3">
+        Its page lists the most distinctive symptoms, the diseases with the most similar symptom patterns, and the closest disease in the
+        mapped families.
+      </p>
     </div>
   );
 }

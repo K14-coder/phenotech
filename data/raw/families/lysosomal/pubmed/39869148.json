@@ -1,0 +1,67 @@
+{
+ "pmid": "39869148",
+ "title": "An augmented transformer model trained on protein family specific variant data leads to improved prediction of variants of uncertain significance.",
+ "abstract": "Variants of uncertain significance (VUS) represent variants that lack sufficient evidence to be confidently associated with a disease, thus posing a challenge in the interpretation of genetic testing results. Here we report an improved method for predicting the VUS of Arylsulfatase A (ARSA) gene as part of the Critical Assessment of Genome Interpretation challenge (CAGI6). Our method uses a transfer learning approach that leverages a pre-trained protein language model to predict the impact of mutations on the activity of the ARSA enzyme, whose deficiency is known to cause a rare genetic disorder, metachromatic leukodystrophy. Our innovative framework combines zero-shot log odds scores and embeddings from the ESM, an evolutionary scale model as features for training a supervised model on gene variants functionally related to the ARSA gene. The zero-shot log odds score feature captures the generic properties of the proteins learned due to its pre-training on millions of sequences in the UniProt data, while the ESM embeddings for the proteins in the ARSA family capture features specific to the family. We also tested our approach on another enzyme, N-acetyl-glucosaminidase (NAGLU), that belongs to the same superfamily as ARSA. Our results demonstrate that the performance of our family models (augmented ESM models) is either comparable or better than the ESM models. The ARSA model compares favorably with the majority of state-of-the-art predictors on area under precision and recall curve (AUPRC) performance metric. However, the NAGLU model outperforms all pathogenicity predictors evaluated in this study on AUPRC metric. The improved AUPRC has relevance in a diagnostic setting where variant prioritization generally entails identifying a small number of pathogenic variants from a larger number of benign variants. Our results also indicate that genes that have sparse or no experimental variant impact data, the family variant data can serve as a proxy training data for making accurate predictions. Attention analysis of active sites and binding sites in ARSA and NAGLU proteins shed light on probable mechanisms of pathogenicity for positions that are highly attended.",
+ "abstract_sections": [
+  {
+   "label": null,
+   "text": "Variants of uncertain significance (VUS) represent variants that lack sufficient evidence to be confidently associated with a disease, thus posing a challenge in the interpretation of genetic testing results. Here we report an improved method for predicting the VUS of Arylsulfatase A (ARSA) gene as part of the Critical Assessment of Genome Interpretation challenge (CAGI6). Our method uses a transfer learning approach that leverages a pre-trained protein language model to predict the impact of mutations on the activity of the ARSA enzyme, whose deficiency is known to cause a rare genetic disorder, metachromatic leukodystrophy. Our innovative framework combines zero-shot log odds scores and embeddings from the ESM, an evolutionary scale model as features for training a supervised model on gene variants functionally related to the ARSA gene. The zero-shot log odds score feature captures the generic properties of the proteins learned due to its pre-training on millions of sequences in the UniProt data, while the ESM embeddings for the proteins in the ARSA family capture features specific to the family. We also tested our approach on another enzyme, N-acetyl-glucosaminidase (NAGLU), that belongs to the same superfamily as ARSA. Our results demonstrate that the performance of our family models (augmented ESM models) is either comparable or better than the ESM models. The ARSA model compares favorably with the majority of state-of-the-art predictors on area under precision and recall curve (AUPRC) performance metric. However, the NAGLU model outperforms all pathogenicity predictors evaluated in this study on AUPRC metric. The improved AUPRC has relevance in a diagnostic setting where variant prioritization generally entails identifying a small number of pathogenic variants from a larger number of benign variants. Our results also indicate that genes that have sparse or no experimental variant impact data, the family variant data can serve as a proxy training data for making accurate predictions. Attention analysis of active sites and binding sites in ARSA and NAGLU proteins shed light on probable mechanisms of pathogenicity for positions that are highly attended."
+  }
+ ],
+ "authors": [
+  {
+   "last": "Joshi",
+   "fore": "Dinesh",
+   "initials": "D",
+   "affiliations": [
+    "TCS Research, Tata Consultancy Services, Hyderabad, India."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Pradhan",
+   "fore": "Swatantra",
+   "initials": "S",
+   "affiliations": [
+    "TCS Research, Tata Consultancy Services, Hyderabad, India."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Sajeed",
+   "fore": "Rakshanda",
+   "initials": "R",
+   "affiliations": [
+    "TCS Research, Tata Consultancy Services, Hyderabad, India."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Srinivasan",
+   "fore": "Rajgopal",
+   "initials": "R",
+   "affiliations": [
+    "TCS Research, Tata Consultancy Services, Hyderabad, India."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Rana",
+   "fore": "Sadhna",
+   "initials": "S",
+   "affiliations": [
+    "TCS Research, Tata Consultancy Services, Hyderabad, India. [email-redacted]."
+   ],
+   "orcid": null
+  }
+ ],
+ "journal": "Human genetics",
+ "year": 2025,
+ "pub_types": [
+  "Journal Article"
+ ],
+ "doi": "10.1007/s00439-025-02727-z",
+ "url": "https://pubmed.ncbi.nlm.nih.gov/39869148/",
+ "source": "NCBI E-utilities efetch (XML)",
+ "retrieved": "2026-10-04"
+}

@@ -1,0 +1,386 @@
+{
+ "pmid": "41573945",
+ "title": "High-resolution promoter interaction analysis implicates genes involved in the activation of Type 3 Innate Lymphoid Cells in autoimmune disease risk.",
+ "abstract": "Innate lymphoid cells (ILCs) are rare, tissue-resident innate lymphocytes that functionally mirror CD4+ T helper cell lineages but lack antigen receptors. Type 3 ILCs (ILC3s) are enriched in the gut, airways, and mucosal lymphoid tissues, where they regulate inflammation and promote barrier integrity. To define the regulatory architecture of primary human ILC3s, we map promoter-anchored chromosomal contacts using high-resolution, low-input Promoter Capture Hi-C (PCHi-C) in these cells alongside CD4+ T cells. By combining statistical detection with a PCHi-C-adapted Activity-by-Contact approach, we link promoters to distal regulatory elements, identifying hundreds of ILC3-specific contacts. We use these maps to connect genome-wide association study (GWAS) risk variants for Crohn's disease to target genes using multiCOGS, a Bayesian framework that integrates PCHi-C with summary-statistic imputation and multivariate fine-mapping. This analysis highlights both known and unanticipated candidates, including CLN3, a causal gene for the neurodevelopmental Batten disease. Using a mouse ILC3-like cell line, we show that Cln3 is downregulated upon cytokine stimulation, and Cln3 overexpression alters stimulation-induced transcriptional programmes and cytokine secretion. Extending this approach, we generate a catalogue of ILC3-linked risk genes for five additional autoimmune conditions and show that they are enriched for regulators of the ILC3 inflammatory response identified in a CRISPR interference screen. Together, these findings illuminate long-range gene control in ILC3s and prioritise known and newly implicated autoimmune risk genes with potential roles in this clinically important cell type.",
+ "abstract_sections": [
+  {
+   "label": null,
+   "text": "Innate lymphoid cells (ILCs) are rare, tissue-resident innate lymphocytes that functionally mirror CD4+ T helper cell lineages but lack antigen receptors. Type 3 ILCs (ILC3s) are enriched in the gut, airways, and mucosal lymphoid tissues, where they regulate inflammation and promote barrier integrity. To define the regulatory architecture of primary human ILC3s, we map promoter-anchored chromosomal contacts using high-resolution, low-input Promoter Capture Hi-C (PCHi-C) in these cells alongside CD4+ T cells. By combining statistical detection with a PCHi-C-adapted Activity-by-Contact approach, we link promoters to distal regulatory elements, identifying hundreds of ILC3-specific contacts. We use these maps to connect genome-wide association study (GWAS) risk variants for Crohn's disease to target genes using multiCOGS, a Bayesian framework that integrates PCHi-C with summary-statistic imputation and multivariate fine-mapping. This analysis highlights both known and unanticipated candidates, including CLN3, a causal gene for the neurodevelopmental Batten disease. Using a mouse ILC3-like cell line, we show that Cln3 is downregulated upon cytokine stimulation, and Cln3 overexpression alters stimulation-induced transcriptional programmes and cytokine secretion. Extending this approach, we generate a catalogue of ILC3-linked risk genes for five additional autoimmune conditions and show that they are enriched for regulators of the ILC3 inflammatory response identified in a CRISPR interference screen. Together, these findings illuminate long-range gene control in ILC3s and prioritise known and newly implicated autoimmune risk genes with potential roles in this clinically important cell type."
+  }
+ ],
+ "authors": [
+  {
+   "last": "Malysheva",
+   "fore": "Valeriya",
+   "initials": "V",
+   "affiliations": [
+    "MRC Laboratory of Medical Sciences, London W12 0HS, UK.",
+    "Institute of Clinical Sciences, Faculty of Medicine, Imperial College, London W12 0HS, UK.",
+    "VIB, Center for Molecular Neurology, Antwerp, 2610, Belgium.",
+    "Faculty of Pharmaceutical, Biomedical and Veterinary Sciences, University of Antwerp, Antwerp 2000, Belgium.",
+    "VIB, Center for AI and Computational Biology, Leuven, 2610, Belgium.",
+    "Trinity Hall, University of Cambridge, Cambridge, UK."
+   ],
+   "orcid": "0000-0002-0919-7845"
+  },
+  {
+   "last": "Ray-Jones",
+   "fore": "Helen",
+   "initials": "H",
+   "affiliations": [
+    "MRC Laboratory of Medical Sciences, London W12 0HS, UK.",
+    "Institute of Clinical Sciences, Faculty of Medicine, Imperial College, London W12 0HS, UK.",
+    "VIB, Center for Molecular Neurology, Antwerp, 2610, Belgium.",
+    "Department of Internal Medicine, Erasmus MC University Medical Center, Rotterdam, the Netherlands."
+   ],
+   "orcid": "0000-0002-8884-6865"
+  },
+  {
+   "last": "Lakes",
+   "fore": "Nora",
+   "initials": "N",
+   "affiliations": [
+    "Immunology Graduate Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Medical Scientist Training Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0002-8398-9680"
+  },
+  {
+   "last": "Brown",
+   "fore": "Rachel A",
+   "initials": "RA",
+   "affiliations": [
+    "Department of Microbial Infection and Immunity, The Ohio State University, Columbus, OH, 43210, USA.",
+    "Pelotonia Institute for Immuno-Oncology, The Ohio State University, Columbus, OH 43210, USA."
+   ],
+   "orcid": "0000-0001-5201-1420"
+  },
+  {
+   "last": "Cazares",
+   "fore": "Tareian A",
+   "initials": "TA",
+   "affiliations": [
+    "Immunology Graduate Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Immunobiology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0003-4624-6156"
+  },
+  {
+   "last": "Clay",
+   "fore": "Owen",
+   "initials": "O",
+   "affiliations": [
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA.",
+    "Division of Rheumatology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Ohayon",
+   "fore": "David E",
+   "initials": "DE",
+   "affiliations": [
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0002-5226-5110"
+  },
+  {
+   "last": "Artemov",
+   "fore": "Pavel",
+   "initials": "P",
+   "affiliations": [
+    "MRC Laboratory of Medical Sciences, London W12 0HS, UK.",
+    "Institute of Clinical Sciences, Faculty of Medicine, Imperial College, London W12 0HS, UK."
+   ],
+   "orcid": "0000-0001-6699-6400"
+  },
+  {
+   "last": "Wayman",
+   "fore": "Joseph A",
+   "initials": "JA",
+   "affiliations": [
+    "Division of Immunobiology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Yang",
+   "fore": "Zi F",
+   "initials": "ZF",
+   "affiliations": [
+    "Division of Immunobiology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Della Rosa",
+   "fore": "Monica",
+   "initials": "M",
+   "affiliations": [
+    "MRC Laboratory of Medical Sciences, London W12 0HS, UK.",
+    "Institute of Clinical Sciences, Faculty of Medicine, Imperial College, London W12 0HS, UK."
+   ],
+   "orcid": "0000-0002-0626-4598"
+  },
+  {
+   "last": "Petitjean",
+   "fore": "Carmen",
+   "initials": "C",
+   "affiliations": [
+    "MRC Laboratory of Medical Sciences, London W12 0HS, UK.",
+    "Institute of Clinical Sciences, Faculty of Medicine, Imperial College, London W12 0HS, UK."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Booth",
+   "fore": "Clarissa",
+   "initials": "C",
+   "affiliations": [
+    "Center for Genetics and Rare Diseases, Sanford Research, Sioux Falls, SD 57104, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Ellaway",
+   "fore": "Joseph I J",
+   "initials": "JIJ",
+   "affiliations": [
+    "MRC Laboratory of Medical Sciences, London W12 0HS, UK.",
+    "Institute of Clinical Sciences, Faculty of Medicine, Imperial College, London W12 0HS, UK."
+   ],
+   "orcid": "0000-0002-6670-5391"
+  },
+  {
+   "last": "Barnes",
+   "fore": "Jenna R",
+   "initials": "JR",
+   "affiliations": [
+    "Medical Scientist Training Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Dangel",
+   "fore": "Andrew W",
+   "initials": "AW",
+   "affiliations": [
+    "Department of Microbial Infection and Immunity, The Ohio State University, Columbus, OH, 43210, USA.",
+    "Pelotonia Institute for Immuno-Oncology, The Ohio State University, Columbus, OH 43210, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Saini",
+   "fore": "Ankita",
+   "initials": "A",
+   "affiliations": [
+    "Department of Microbial Infection and Immunity, The Ohio State University, Columbus, OH, 43210, USA.",
+    "Pelotonia Institute for Immuno-Oncology, The Ohio State University, Columbus, OH 43210, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Orchard",
+   "fore": "William R",
+   "initials": "WR",
+   "affiliations": [
+    "MRC Laboratory of Medical Sciences, London W12 0HS, UK.",
+    "University of Cambridge, Cambridge, UK."
+   ],
+   "orcid": "0000-0001-8329-5577"
+  },
+  {
+   "last": "Chen",
+   "fore": "Xiaoting",
+   "initials": "X",
+   "affiliations": [
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0002-3782-3962"
+  },
+  {
+   "last": "Parameswaran",
+   "fore": "Sreeja",
+   "initials": "S",
+   "affiliations": [
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Burden",
+   "fore": "Frances",
+   "initials": "F",
+   "affiliations": [
+    "Department of Haematology, University of Cambridge, Cambridge Biomedical Campus, Cambridge, UK.",
+    "National Health Service (NHS) Blood and Transplant, Cambridge Biomedical Campus, Cambridge, UK."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Frontini",
+   "fore": "Mattia",
+   "initials": "M",
+   "affiliations": [
+    "Department of Haematology, University of Cambridge, Cambridge Biomedical Campus, Cambridge, UK.",
+    "National Health Service (NHS) Blood and Transplant, Cambridge Biomedical Campus, Cambridge, UK.",
+    "Department of Clinical and Biomedical Sciences, Faculty of Health and Life Sciences, University of Exeter Medical School, Exeter, UK."
+   ],
+   "orcid": "0000-0001-8074-6299"
+  },
+  {
+   "last": "Nagano",
+   "fore": "Takashi",
+   "initials": "T",
+   "affiliations": [
+    "The Babraham Institute, Cambridge, CB22 3AT, UK."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Fraser",
+   "fore": "Peter",
+   "initials": "P",
+   "affiliations": [
+    "The Babraham Institute, Cambridge, CB22 3AT, UK.",
+    "Florida State University, Department of Biological Sciences, Florida State University, Tallahassee, FL 32306-4295, USA."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Schoenfelder",
+   "fore": "Stefan",
+   "initials": "S",
+   "affiliations": [
+    "The Babraham Institute, Cambridge, CB22 3AT, UK."
+   ],
+   "orcid": "0000-0002-3200-8133"
+  },
+  {
+   "last": "Weirauch",
+   "fore": "Matthew T",
+   "initials": "MT",
+   "affiliations": [
+    "Immunology Graduate Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Medical Scientist Training Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA.",
+    "Department of Pediatrics, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Developmental Biology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH, 45229, USA.",
+    "Division of Biomedical Informatics, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA.",
+    "Division of Allergy and Immunology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0001-7977-9122"
+  },
+  {
+   "last": "Kottyan",
+   "fore": "Leah C",
+   "initials": "LC",
+   "affiliations": [
+    "Immunology Graduate Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Medical Scientist Training Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA.",
+    "Department of Pediatrics, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Allergy and Immunology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0003-3979-2220"
+  },
+  {
+   "last": "Smith",
+   "fore": "David F",
+   "initials": "DF",
+   "affiliations": [
+    "Department of Pediatrics, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Department of Otolaryngology, Head and Neck Surgery, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Divisions of Pediatric Otolaryngology and Pulmonary & Sleep Medicine, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0002-0048-4012"
+  },
+  {
+   "last": "Powell",
+   "fore": "Nick",
+   "initials": "N",
+   "affiliations": [
+    "Department of Metabolism, Digestion and Reproduction, Imperial College London, London W12 0NN, UK."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Weimer",
+   "fore": "Jill M",
+   "initials": "JM",
+   "affiliations": [
+    "Center for Genetics and Rare Diseases, Sanford Research, Sioux Falls, SD 57104, USA."
+   ],
+   "orcid": "0000-0003-2504-4942"
+  },
+  {
+   "last": "Oltz",
+   "fore": "Eugene M",
+   "initials": "EM",
+   "affiliations": [
+    "Department of Microbial Infection and Immunity, The Ohio State University, Columbus, OH, 43210, USA.",
+    "Pelotonia Institute for Immuno-Oncology, The Ohio State University, Columbus, OH 43210, USA."
+   ],
+   "orcid": "0000-0002-2513-7156"
+  },
+  {
+   "last": "Wallace",
+   "fore": "Chris",
+   "initials": "C",
+   "affiliations": [
+    "MRC Biostatistics Unit, Cambridge Biomedical Campus, Cambridge Institute of Public Health, Forvie Site, Robinson Way, Cambridge CB2 0SR, UK.",
+    "Cambridge Institute of Therapeutic Immunology & Infectious Disease (CITIID), Jeffrey Cheah Biomedical Centre, Cambridge Biomedical Campus, University of Cambridge, Cambridge, CB2 0AW."
+   ],
+   "orcid": "0000-0001-9755-1703"
+  },
+  {
+   "last": "Miraldi",
+   "fore": "Emily R",
+   "initials": "ER",
+   "affiliations": [
+    "Immunology Graduate Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Medical Scientist Training Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Immunobiology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA.",
+    "Department of Pediatrics, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Biomedical Informatics, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0002-0232-3116"
+  },
+  {
+   "last": "Waggoner",
+   "fore": "Stephen",
+   "initials": "S",
+   "affiliations": [
+    "Immunology Graduate Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Medical Scientist Training Program, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA.",
+    "Division of Human Genetics and Center for Autoimmune Genomics and Etiology (CAGE), Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA.",
+    "Division of Rheumatology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA.",
+    "Department of Pediatrics, University of Cincinnati College of Medicine, Cincinnati, OH 45229, USA."
+   ],
+   "orcid": "0000-0001-9658-2874"
+  },
+  {
+   "last": "Spivakov",
+   "fore": "Mikhail",
+   "initials": "M",
+   "affiliations": [
+    "MRC Laboratory of Medical Sciences, London W12 0HS, UK.",
+    "Institute of Clinical Sciences, Faculty of Medicine, Imperial College, London W12 0HS, UK."
+   ],
+   "orcid": "0000-0002-0383-3943"
+  }
+ ],
+ "journal": "bioRxiv : the preprint server for biology",
+ "year": 2026,
+ "pub_types": [
+  "Journal Article",
+  "Preprint"
+ ],
+ "doi": "10.1101/2022.10.19.512842",
+ "url": "https://pubmed.ncbi.nlm.nih.gov/41573945/",
+ "source": "NCBI E-utilities efetch (XML)",
+ "retrieved": "2026-10-04"
+}

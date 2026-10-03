@@ -171,7 +171,7 @@ def http(url: str, headers: dict | None = None, retries: int = 5, backoff: float
     return 0, str(last).encode(), url
 
 
-def fetch_direct(url: str, timeout: int = 25) -> tuple[int, str, str]:
+def fetch_direct(url: str, timeout: int = 12) -> tuple[int, str, str]:
     """Plain (free) fetch with a browser UA; no retries beyond 2. Returns (status, text, final_url)."""
     st, body, final = http(url, headers={"User-Agent": BROWSER_UA,
                                          "Accept": "text/html,application/xhtml+xml"},
@@ -357,6 +357,9 @@ def get_html(url: str) -> str | None:
 
 
 def _looks_blocked(html: str) -> bool:
-    h = html[:5000].lower()
-    return any(k in h for k in ("cf-browser-verification", "just a moment...", "attention required! | cloudflare",
-                                "access denied", "captcha", "are you a robot", "enable javascript and cookies"))
+    h = html[:6000].lower()
+    if any(k in h for k in ("cf-browser-verification", "<title>just a moment...</title>",
+                            "attention required! | cloudflare", "enable javascript and cookies to continue")):
+        return True
+    # short interstitial pages only: many normal pages load reCAPTCHA scripts
+    return len(html) < 15000 and any(k in h for k in ("access denied", "are you a robot", "captcha"))

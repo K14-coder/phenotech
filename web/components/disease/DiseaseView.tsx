@@ -871,14 +871,17 @@ function EmptyNote({ children }: { children: React.ReactNode }) {
 }
 
 function NotFound({ id }: { id: string }) {
+  // start the search with what was asked for, so a disease outside the mapped families shows up right away
+  const [q, setQ] = useState(id.replace(/^disease:/, ""));
   return (
     <div className="mx-auto w-full max-w-xl px-6 py-24">
-      <h1 className="text-xl font-semibold text-ink">We couldn’t find that disease</h1>
+      <h1 className="text-xl font-semibold text-ink">That disease isn’t mapped in depth</h1>
       <p className="mt-2 text-sm text-ink-3">
-        “{id.replace(/^disease:/, "")}” is not in the current atlas. Try searching by gene, protein or symptom.
+        “{id.replace(/^disease:/, "")}” is not one of the diseases the atlas maps in depth. Search below: every other rare disease has a page
+        with basic data.
       </p>
       <div className="mt-6">
-        <SearchBox variant="field" autoFocus />
+        <SearchBox variant="field" autoFocus value={q} onChange={setQ} focusKey={1} />
       </div>
     </div>
   );

@@ -8,6 +8,20 @@
     "therapy:3-4-diaminopyridine|developed_for|disease:VAMP2"
   ],
   "drop_nodes": [],
-  "node_patches": {},
+  "node_patches": {
+    "therapy:fenfluramine": {
+      "attrs": {
+        "modality": "repurposed_drug",
+        "stage": "approved",
+        "approvals": [
+          {
+            "agency": "FDA",
+            "label": "FINTEPLA",
+            "source_ref": "FDA-label:FINTEPLA"
+          }
+        ]
+      }
+    }
+  },
   "edge_patches": {}
 }

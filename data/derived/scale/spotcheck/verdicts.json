@@ -1,0 +1,14 @@
+{
+  "method": "30 random links per source (seed 7, pipeline/scale/spotcheck.py), each judged by reading the quoted source field/title/conditions: is the link true as labelled?",
+  "trials_name": {"n": 30, "correct": 27, "errors": {
+      "7": "ATM-mutated breast cancer trial matched 'Ataxia Telangiectasia' inside 'Ataxia Telangiectasia Mutated Gene Mutation' (fixed: gene-context rule)",
+      "18": "Malouf syndrome synonym 'Najjar syndrome' matched inside 'Crigler-Najjar Syndrome' (fixed: hyphen/eponym rule)",
+      "28": "Adult Refsum 'Refsum disease' matched inside 'Infantile Refsum's Disease' (fixed: longest span wins)"},
+    "note": "judged on the first build; the three error patterns were then fixed and the file rebuilt"},
+  "trials_gene_first_build": {"n": 30, "correct": 13, "note": "loose symbol matching (somatic cancer studies, acronyms such as HBB=Helping Babies Breathe, NHS=Natural History Study, drug codes DCC-3116, anti-LRP4, SNP studies). Rules rewritten (gene-context requirement, acronym detector, no oncology studies)."},
+  "trials_gene": {"n": 30, "correct": 27, "errors": {
+      "3": "APOA2 nutrigenomics (BMI) study, not AApoAII amyloidosis",
+      "9": "'CD40 Ligand Deficiency' read as CD40 (it is CD40LG)",
+      "28": "somatic MAP2K1 vascular-malformation trial credited to cardiofaciocutaneous syndrome"},
+    "note": "precision judged at GENE level (study is about a germline disorder of that gene); the specific disease of a multi-disease gene is often a sibling phenotype, so the UI must label these 'mentions <GENE>'"}
+}

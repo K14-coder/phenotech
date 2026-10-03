@@ -91,7 +91,31 @@ def slugify(s: str, maxlen: int = 60) -> str:
 
 
 def existing_graph_ids() -> set[str]:
-    """Node ids already present in data/graph.json (to reuse, never duplicate)."""
-    if not GRAPH.exists():
-        return set()
-    return {n["id"] for n in read_json(GRAPH)["nodes"]}
+    """Node ids owned by OTHER layers (to reuse, never duplicate): every node in the other curated
+    fragments that pipeline/build_graph.py merges into data/graph.json. This family's own fragment is
+    excluded, so a rebuild after build_graph.py does not mistake its own nodes for foreign ones."""
+    ids = set()
+    for p in sorted(CURATED.glob("*.json")):
+        if p.name in (OUT_FRAGMENT.name, "overrides.json"):
+            continue
+        try:
+            data = read_json(p)
+        except Exception:  # noqa: BLE001
+            continue
+        if isinstance(data, dict):
+            ids |= {n["id"] for n in data.get("nodes", []) if isinstance(n, dict) and "id" in n}
+    return ids
+
+
+def existing_node_types() -> dict[str, str]:
+    types = {}
+    for p in sorted(CURATED.glob("*.json")):
+        if p.name in (OUT_FRAGMENT.name, "overrides.json"):
+            continue
+        try:
+            data = read_json(p)
+        except Exception:  # noqa: BLE001
+            continue
+        if isinstance(data, dict):
+            types.update({n["id"]: n["type"] for n in data.get("nodes", []) if isinstance(n, dict) and "id" in n})
+    return types

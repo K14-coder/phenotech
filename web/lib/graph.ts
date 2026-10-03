@@ -19,7 +19,7 @@ export interface Neighbor {
   dir: "out" | "in";
 }
 
-export type SynonymKind = "label" | "synonym" | "protein" | "subtype" | "xref";
+export type SynonymKind = "label" | "synonym" | "protein" | "subtype" | "xref" | "gene";
 
 export interface SynonymEntry {
   nodeId: string;

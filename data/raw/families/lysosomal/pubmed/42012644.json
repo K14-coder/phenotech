@@ -1,0 +1,153 @@
+{
+ "pmid": "42012644",
+ "title": "Automated Deep Learning-Based Demyelination Load Segmentation in Metachromatic Leukodystrophy.",
+ "abstract": "PURPOSE: Metachromatic leukodystrophy (MLD) is a rare lysosomal storage disorder characterized by progressive white matter demyelination. Quantification of demyelinated white matter on MRI-typically expressed as the demyelination load-serves as a key imaging biomarker of disease burden, enabling objective monitoring beyond visual rating scales. However, current semi-automated pipelines are limited by manual interaction, pediatric brain variability, and differences in MRI acquisition. This study aimed to develop and validate a self-configuring convolutional neural network (CNN) for automated segmentation of demyelinated white matter in MLD and to compare its performance with a conventional semi-automated method across heterogeneous MRI datasets. METHODS: An nnU-Net was trained on 189 3D T1- and axial T2-weighted scans from 35 MLD patients using visually controlled conventional masks as ground truth. Independent testing was performed on 130 scans (73 high-resolution 3D, 57 lower-resolution 2D T1-weighted) from 49 patients. Performance was assessed by Dice coefficient, Bland-Altman bias, correlation with Gross Motor Function Classification (GMFC-MLD), MLD MRI severity score, longitudinal consistency, and qualitative review of outliers. RESULTS: CNN-based segmentation showed strong spatial agreement with the reference method, with a median Dice coefficient of 0.82 for 3D T1-weighted scans and 0.75 for 2D scans. Volumetric bias was minimal on Bland-Altman analysis. CNN-derived demyelination load correlated significantly with motor impairment (rS = 0.38 for 3D and r = 0.56 for 2D; both p < 0.001) and showed a stronger association with the MLD MRI severity score than conventional segmentation (3D: rS = 0.48 vs. 0.28; 2D: rS = 0.83 vs. 0.29). Correlations with clinical status were slightly lower (CNN: rS = 0.38, p < 0.001; conventional: (rS = 0.26, p < 0.025)) Longitudinal analyses demonstrated stable, monotonic changes over time, and qualitative review revealed fewer boundary misclassifications. CONCLUSION: The nnU-Net enables fast, reproducible, and clinically meaningful segmentation of demyelinated white matter in MLD. It generalizes across MRI protocols, correlates with motor function, and offers a scalable tool for standardized biomarker extraction in clinical trials and other leukodystrophies.",
+ "abstract_sections": [
+  {
+   "label": "PURPOSE",
+   "text": "Metachromatic leukodystrophy (MLD) is a rare lysosomal storage disorder characterized by progressive white matter demyelination. Quantification of demyelinated white matter on MRI-typically expressed as the demyelination load-serves as a key imaging biomarker of disease burden, enabling objective monitoring beyond visual rating scales. However, current semi-automated pipelines are limited by manual interaction, pediatric brain variability, and differences in MRI acquisition. This study aimed to develop and validate a self-configuring convolutional neural network (CNN) for automated segmentation of demyelinated white matter in MLD and to compare its performance with a conventional semi-automated method across heterogeneous MRI datasets."
+  },
+  {
+   "label": "METHODS",
+   "text": "An nnU-Net was trained on 189 3D T1- and axial T2-weighted scans from 35 MLD patients using visually controlled conventional masks as ground truth. Independent testing was performed on 130 scans (73 high-resolution 3D, 57 lower-resolution 2D T1-weighted) from 49 patients. Performance was assessed by Dice coefficient, Bland-Altman bias, correlation with Gross Motor Function Classification (GMFC-MLD), MLD MRI severity score, longitudinal consistency, and qualitative review of outliers."
+  },
+  {
+   "label": "RESULTS",
+   "text": "CNN-based segmentation showed strong spatial agreement with the reference method, with a median Dice coefficient of 0.82 for 3D T1-weighted scans and 0.75 for 2D scans. Volumetric bias was minimal on Bland-Altman analysis. CNN-derived demyelination load correlated significantly with motor impairment (rS = 0.38 for 3D and r = 0.56 for 2D; both p < 0.001) and showed a stronger association with the MLD MRI severity score than conventional segmentation (3D: rS = 0.48 vs. 0.28; 2D: rS = 0.83 vs. 0.29). Correlations with clinical status were slightly lower (CNN: rS = 0.38, p < 0.001; conventional: (rS = 0.26, p < 0.025)) Longitudinal analyses demonstrated stable, monotonic changes over time, and qualitative review revealed fewer boundary misclassifications."
+  },
+  {
+   "label": "CONCLUSION",
+   "text": "The nnU-Net enables fast, reproducible, and clinically meaningful segmentation of demyelinated white matter in MLD. It generalizes across MRI protocols, correlates with motor function, and offers a scalable tool for standardized biomarker extraction in clinical trials and other leukodystrophies."
+  }
+ ],
+ "authors": [
+  {
+   "last": "Martin",
+   "fore": "Pascal",
+   "initials": "P",
+   "affiliations": [
+    "Department of Neurology and Epileptology, Hertie Institute for Clinical Brain Research, University of Tübingen, Tübingen, Germany. [email-redacted]."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Schaerer",
+   "fore": "Joël",
+   "initials": "J",
+   "affiliations": [
+    "Clario, Inc. (formerly Bioclinica, Inc.), Lyon, France."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Cajgfinger",
+   "fore": "Thomas",
+   "initials": "T",
+   "affiliations": [
+    "Clario, Inc. (formerly Bioclinica, Inc.), Lyon, France."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Delmonte",
+   "fore": "Alessandro",
+   "initials": "A",
+   "affiliations": [
+    "Clario, Inc. (formerly Bioclinica, Inc.), Lyon, France."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Bender",
+   "fore": "Benjamin",
+   "initials": "B",
+   "affiliations": [
+    "Department of Diagnostic and Interventional Neuroradiology, University of Tübingen, Tübingen, Germany."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Whiteman",
+   "fore": "David",
+   "initials": "D",
+   "affiliations": [
+    "Takeda Pharmaceutical Company Ltd, Cambridge, MA, United States."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Malanga",
+   "fore": "C J",
+   "initials": "CJ",
+   "affiliations": [
+    "Takeda Pharmaceutical Company Ltd, Cambridge, MA, United States."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Fusellier",
+   "fore": "Alexandre",
+   "initials": "A",
+   "affiliations": [
+    "Clario, Inc. (formerly Bioclinica, Inc.), Lyon, France."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Scott",
+   "fore": "David",
+   "initials": "D",
+   "affiliations": [
+    "Clario, Inc. (formerly Bioclinica, Inc.), San Mateo, CA, United States."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Suhy",
+   "fore": "Joyce",
+   "initials": "J",
+   "affiliations": [
+    "Clario, Inc. (formerly Bioclinica, Inc.), San Mateo, CA, United States."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Rosewich",
+   "fore": "Hendrik",
+   "initials": "H",
+   "affiliations": [
+    "Department of Pediatric Neurology & Developmental Medicine, University Children's Hospital Tübingen, Tübingen, Germany.",
+    "Department of Pediatric Neurology, University of Göttingen, Göttingen, Germany."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Groeschel",
+   "fore": "Samuel",
+   "initials": "S",
+   "affiliations": [
+    "Department of Pediatric Neurology & Developmental Medicine, University Children's Hospital Tübingen, Tübingen, Germany.",
+    "Experimental Pediatric Neuroimaging, University Children's Hospital Tübingen, Tübingen, Germany."
+   ],
+   "orcid": null
+  },
+  {
+   "last": "Bracoud",
+   "fore": "Luc",
+   "initials": "L",
+   "affiliations": [
+    "Clario, Inc. (formerly Bioclinica, Inc.), Lyon, France."
+   ],
+   "orcid": null
+  }
+ ],
+ "journal": "Clinical neuroradiology",
+ "year": 2026,
+ "pub_types": [
+  "Journal Article"
+ ],
+ "doi": "10.1007/s00062-026-01652-6",
+ "url": "https://pubmed.ncbi.nlm.nih.gov/42012644/",
+ "source": "NCBI E-utilities efetch (XML)",
+ "retrieved": "2026-10-04"
+}

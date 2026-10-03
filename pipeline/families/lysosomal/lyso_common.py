@@ -176,7 +176,10 @@ _SENT = re.compile(r"(?<=[.!?])\s+(?=[A-Z(“\"])")
 
 
 def sentences(text: str) -> list[str]:
-    return [s.strip() for s in _SENT.split(text or "") if s.strip()]
+    out = []
+    for seg in re.split(r"\s*\n\s*", text or ""):
+        out += [s.strip() for s in _SENT.split(seg) if s.strip()]
+    return out
 
 
 def quote_for(ref: str, needle: str) -> str:
@@ -189,6 +192,14 @@ def quote_for(ref: str, needle: str) -> str:
     n = norm(needle)
     sents = sentences(txt)
     hits = [s for s in sents if n in norm(s)]
+    # labels repeat the same sentence (highlights + full section): identical repeats are not ambiguous
+    hits = list({norm(s): s for s in hits}.values())
+    if len(hits) > 1:
+        # a label repeats a sentence with and without its section header: the shortest hit is contained
+        # in all the others, so it is the unambiguous verbatim sentence
+        shortest = min(hits, key=len)
+        if all(norm(shortest) in norm(h) for h in hits):
+            hits = [shortest]
     if len(hits) == 1:
         return hits[0]
     if len(hits) > 1:

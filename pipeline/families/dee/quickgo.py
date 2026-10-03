@@ -52,6 +52,12 @@ def term_info(go_ids):
     return {r["id"]: r for r in obj["results"]}
 
 
+def term_names(go_ids):
+    obj = cached_json(RAW / "quickgo" / f"names_{'_'.join(i.replace(':', '') for i in go_ids)}.json",
+                      f"{QG}/ontology/go/terms/{','.join(go_ids)}", headers=HDR, refresh=REFRESH)
+    return {r["id"]: r.get("name", "") for r in obj.get("results", [])}
+
+
 def annotations(acc, go):
     path = RAW / "quickgo" / f"{acc}__{go.replace(':', '_')}.json"
     fresh = REFRESH or not path.exists()
@@ -120,7 +126,11 @@ def main():
             if anns:
                 edges.append(edge_for(sym, acc, slug, label, go, anns))
                 table.append((sym, slug, edges[-1]["confidence"], slug in EXISTING_TERMS))
-    # SNARE genes x new DEE terms (cross-family)
+    # SNARE genes x new DEE terms (cross-family). Stricter than within-family: an IEA-only hit is
+    # dropped, and so is a hit on a "regulation of ..." term when the mechanism itself is not a
+    # regulation term (e.g. VAMP2 -> "regulation of delayed rectifier potassium channel activity"
+    # is NOT evidence that VAMP2 has potassium channel activity).
+    dropped = []
     for sym in SNARE_GENES:
         acc = bio_genes.get(sym, {}).get("uniprot_acc")
         if not acc:
@@ -128,6 +138,13 @@ def main():
         for slug, (label, go) in NEW_TERMS.items():
             anns = [a for a in annotations(acc, go)
                     if (a.get("qualifier") or "").startswith(("involved_in", "acts_upstream", "enables", "contributes_to"))]
+            anns = [a for a in anns if a["goEvidence"] != "IEA"]
+            if anns and "regulation" not in label.lower():
+                hit_names = term_names(sorted({a["goId"] for a in anns}))
+                keep = [a for a in anns if "regulation of" not in hit_names.get(a["goId"], "").lower()]
+                if len(keep) < len(anns):
+                    dropped.append((sym, slug, sorted(hit_names.values())))
+                anns = keep
             if anns:
                 e = edge_for(sym, acc, slug, label, go, anns)
                 e["attrs"]["cross_family"] = True
@@ -135,6 +152,8 @@ def main():
                 table.append((sym, slug, e["confidence"], True))
     for row in table:
         print("  %-8s -> %-42s conf=%.1f %s" % (row[0], row[1], row[2], "CROSS-FAMILY" if row[3] else ""))
+    for d in dropped:
+        print(f"  dropped cross-family hit {d[0]} -> {d[1]}: {d[2]}")
     write_json(RAW / "go_fragment.json", {"nodes": nodes, "edges": edges})
     print(f"mechanism(process) nodes={len(nodes)} participates_in={len(edges)}")
 

@@ -7,7 +7,7 @@ ras_subtypes.GERMLINE_OMIM (all taken from Monarch OMIM causal edges; somatic ca
 mosaic/somatic entities are excluded) + gene-specific Orphanet entities (1 associated gene,
 "Disease-causing germline").
 Similarity: Resnik best-match-average with a per-disease background of 3,000 random non-slice
-diseases (seed 20261003); an edge needs >= 95th percentile for both and >= 99th for one.
+diseases (seed 20261003); an edge needs >= 99.9th percentile for both (the family is homogeneous).
 
 Run:  python3 pipeline/families/rasopathy/hpo.py
 Out:  data/raw/families/rasopathy/hpo_fragment.json, hpo_stats.json
@@ -23,7 +23,9 @@ from ras_subtypes import GERMLINE_OMIM, orpha_gene_specific
 
 H = load_bio("hpo")
 DISTINCTIVE_IC, BROAD_IC = H.DISTINCTIVE_IC, H.BROAD_IC
-TOP_K, MAX_PER_DISEASE, BACKGROUND_N, PCTL, PCTL_STRICT = 12, 20, 3000, 0.95, 0.99
+# The RASopathies are phenotypically homogeneous by design (62 of 66 pairs pass the biology layer's
+# 95th/99th-percentile rule), so this family requires the top 0.1% of BOTH background distributions.
+TOP_K, MAX_PER_DISEASE, BACKGROUND_N, PCTL, PCTL_STRICT = 12, 20, 3000, 0.999, 0.999
 # broad RASopathy hallmarks kept when directly annotated, so broad vs distinctive contrast stays visible
 HALLMARKS = ["HP:0004322", "HP:0001639", "HP:0001642", "HP:0001249", "HP:0000957", "HP:0000465"]
 
@@ -221,7 +223,7 @@ def main():
                     "attrs": {"resnik_bma": round(p["bma"], 3), "ic_weighted_jaccard": round(p["ic_jaccard"], 3),
                               "background_percentile": {a: round(p["pct_a"], 4), b: round(p["pct_b"], 4)},
                               "shared_distinctive": distinctive, "shared_intermediate": inter, "shared_broad": broad,
-                              "method": "Resnik BMA; edge if >= 95th percentile of both diseases' background and >= 99th for one",
+                              "method": "Resnik BMA; edge if >= 99.9th percentile of both diseases' backgrounds (family-specific, stricter than the biology layer)",
                               "family": FAMILY}})
     write_json(RAW / "hpo_fragment.json", {"nodes": sorted(nodes.values(), key=lambda n: n["id"]),
                                            "edges": edges + sim})

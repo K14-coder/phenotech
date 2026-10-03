@@ -96,7 +96,12 @@ def main():
     if args:
         fetch_pmids(args)
         return
-    from curation import referenced_ids  # noqa: E402
+    import importlib.util, pathlib  # noqa: E401  (our curation.py, not pipeline/biology/curation.py)
+    spec = importlib.util.spec_from_file_location('dee_curation', pathlib.Path(__file__).with_name('curation.py'))
+    mod = importlib.util.module_from_spec(spec)
+    sys.path.insert(0, str(pathlib.Path(__file__).parent))
+    spec.loader.exec_module(mod)
+    referenced_ids = mod.referenced_ids
     pmids, ncts, labels = referenced_ids()
     fetch_pmids(sorted(pmids))
     for n in sorted(ncts):

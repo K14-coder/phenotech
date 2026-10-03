@@ -63,7 +63,16 @@ def norm(s: str) -> str:
 
 
 def existing_graph() -> dict:
-    """Node id -> node for everything already in data/graph.json (reuse, never duplicate)."""
-    if not GRAPH.exists():
-        return {}
-    return {n["id"]: n for n in read_json(GRAPH)["nodes"]}
+    """Node id -> node from every OTHER curated fragment (data/curated/*.json except ours).
+
+    Reads the fragments rather than data/graph.json, because graph.json may already contain this
+    family's own nodes from an earlier build."""
+    out = {}
+    for p in sorted(CURATED.glob("*.json")):
+        if p.name in (OUT_FRAGMENT.name, "overrides.json"):
+            continue
+        d = read_json(p)
+        if isinstance(d, dict):
+            for n in d.get("nodes", []):
+                out.setdefault(n["id"], n)
+    return out

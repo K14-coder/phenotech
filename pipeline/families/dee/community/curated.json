@@ -1,0 +1,1051 @@
+{
+  "_note": "Agent curation for the DEE community layer. Every quote must string-match (after NFKC/dash/quote/whitespace normalisation) the stored page data/raw/families/dee/community/web/<src>.txt, or the unescaped .html when in=html (logo alt text / link targets). build_community.py drops anything that does not match; verify_community.py re-checks the output.",
+  "orgs": [
+    {
+      "id": "org:dravet-syndrome-foundation",
+      "label": "Dravet Syndrome Foundation",
+      "url": "https://dravetfoundation.org/",
+      "country": "US",
+      "scope": "syndrome-specific (Dravet syndrome); US non-profit",
+      "summary": "US foundation that funds research on Dravet syndrome and related epilepsies and supports affected families.",
+      "serves": {
+        "SCN1A": {
+          "match": "syndrome+gene",
+          "evidence": [
+            {
+              "src": "dravet-foundation-home",
+              "quote": "The mission of Dravet Syndrome Foundation (DSF) is to aggressively raise funds for Dravet syndrome and related epilepsies; to support and fund research; increase awareness; and to provide support to affected individuals and families."
+            },
+            {
+              "src": "dravet-foundation-genetics",
+              "quote": "More than 90% of patients diagnosed with Dravet syndrome have an SCN1A mutation."
+            }
+          ],
+          "explanation": "The Dravet Syndrome Foundation's mission is to fund research and support families affected by Dravet syndrome; its genetics page says more than 90% of people diagnosed with Dravet syndrome have an SCN1A mutation."
+        }
+      },
+      "evidence": [
+        {
+          "src": "dravet-foundation-home",
+          "quote": "The mission of Dravet Syndrome Foundation (DSF) is to aggressively raise funds for Dravet syndrome and related epilepsies; to support and fund research; increase awareness; and to provide support to affected individuals and families."
+        }
+      ]
+    },
+    {
+      "id": "org:dravet-syndrome-uk",
+      "label": "Dravet Syndrome UK",
+      "url": "https://www.dravet.org.uk/",
+      "country": "UK",
+      "scope": "syndrome-specific (Dravet syndrome); UK charity",
+      "summary": "Independent UK charity for people affected by Dravet syndrome.",
+      "serves": {
+        "SCN1A": {
+          "match": "syndrome",
+          "confidence": 0.75,
+          "evidence": [
+            {
+              "src": "dravet-uk-home",
+              "quote": "Dravet Syndrome UK is an independent UK charity dedicated to improving the lives of those affected by Dravet Syndrome."
+            }
+          ],
+          "explanation": "Dravet Syndrome UK says it is dedicated to people affected by Dravet syndrome. The quoted page names the syndrome, not the SCN1A gene, so this link is at syndrome level."
+        }
+      },
+      "evidence": [
+        {
+          "src": "dravet-uk-home",
+          "quote": "Dravet Syndrome UK is an independent UK charity dedicated to improving the lives of those affected by Dravet Syndrome."
+        }
+      ]
+    },
+    {
+      "id": "org:familiescn2a-foundation",
+      "label": "FamilieSCN2A Foundation",
+      "url": "https://scn2a.org/",
+      "country": "US",
+      "scope": "gene-specific (SCN2A); parent-founded 501(c)(3)",
+      "summary": "Parent-founded foundation for SCN2A-related disorders (epilepsy and autism): research funding, advocacy, a patient registry and family support.",
+      "serves": {
+        "SCN2A": {
+          "evidence": [
+            {
+              "src": "familiescn2a-home",
+              "quote": "The global leader in SCN2A-related autism & epilepsy research, advocacy, and community."
+            },
+            {
+              "src": "familiescn2a-home",
+              "quote": "The FamilieSCN2A Foundation is a registered 501(c)(3)."
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "familiescn2a-home",
+          "quote": "The global leader in SCN2A-related autism & epilepsy research, advocacy, and community."
+        }
+      ]
+    },
+    {
+      "id": "org:cute-syndrome-foundation",
+      "label": "The Cute Syndrome Foundation",
+      "url": "https://www.thecutesyndrome.com/",
+      "scope": "gene-specific (SCN8A)",
+      "summary": "Raises awareness of SCN8A, funds SCN8A research and supports affected families.",
+      "serves": {
+        "SCN8A": {
+          "evidence": [
+            {
+              "src": "cute-syndrome-home",
+              "quote": "The Cute Syndrome Foundation raises awareness of SCN8A mutations, funds the dedicated and talented scientists researching SCN8A, and supports the families around the world who are affected by this disorder."
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "cute-syndrome-home",
+          "quote": "The Cute Syndrome Foundation raises awareness of SCN8A mutations, funds the dedicated and talented scientists researching SCN8A, and supports the families around the world who are affected by this disorder."
+        }
+      ]
+    },
+    {
+      "id": "org:kcnq2-cure-alliance",
+      "label": "KCNQ2 Cure Alliance",
+      "url": "https://www.kcnq2cure.org/",
+      "country": "US",
+      "scope": "gene-specific (KCNQ2); 501(c)(3)",
+      "summary": "Connects KCNQ2 families, funds research (KCNQ2 Currents grant program) and supports a KCNQ2 biorepository managed by COMBINEDBrain.",
+      "serves": {
+        "KCNQ2": {
+          "evidence": [
+            {
+              "src": "kcnq2cure-home",
+              "quote": "For ten years, KCNQ2 Cure Alliance has connected families, funded research, and worked alongside doctors and scientists toward better treatments and a cure for KCNQ2-related disorders."
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "kcnq2cure-home",
+          "quote": "For ten years, KCNQ2 Cure Alliance has connected families, funded research, and worked alongside doctors and scientists toward better treatments and a cure for KCNQ2-related disorders."
+        },
+        {
+          "src": "kcnq2cure-home",
+          "quote": "A 501(c)(3) nonprofit organization"
+        }
+      ]
+    },
+    {
+      "id": "org:kcnt1-epilepsy-foundation",
+      "label": "KCNT1 Epilepsy Foundation",
+      "url": "https://kcnt1epilepsy.org/",
+      "scope": "gene-specific (KCNT1)",
+      "summary": "Supports families affected by KCNT1-related epilepsy and runs the KCNT1 International Registry.",
+      "serves": {
+        "KCNT1": {
+          "evidence": [
+            {
+              "src": "kcnt1-foundation-home",
+              "quote": "Supporting families affected by KCNT1 epilepsy through research, resources, and community."
+            },
+            {
+              "src": "kcnt1-foundation-home",
+              "quote": "We support families, researchers, and partners working toward a better future for those affected by KCNT1-related epilepsy."
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "kcnt1-foundation-home",
+          "quote": "Supporting families affected by KCNT1 epilepsy through research, resources, and community."
+        }
+      ]
+    },
+    {
+      "id": "org:cacna1a-foundation",
+      "label": "CACNA1A Foundation",
+      "url": "https://cacna1a.org/",
+      "country": "US",
+      "scope": "gene-specific (CACNA1A); parent-led 501(c)(3)",
+      "summary": "Parent-led non-profit for CACNA1A-related disorders (incl. hemiplegic migraine and ataxia resources); runs a contact registry and a research grant program.",
+      "serves": {
+        "CACNA1A": {
+          "evidence": [
+            {
+              "src": "cacna1a-foundation-home",
+              "quote": "CACNA1A Foundation is a parent-led 501(c)(3) non-profit. We are dedicated to creating awareness and finding a cure for CACNA1A genetic variants."
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "cacna1a-foundation-home",
+          "quote": "CACNA1A Foundation is a parent-led 501(c)(3) non-profit. We are dedicated to creating awareness and finding a cure for CACNA1A genetic variants."
+        }
+      ]
+    },
+    {
+      "id": "org:grin2b-foundation",
+      "label": "GRIN2B Foundation",
+      "url": "https://grin2b.org/",
+      "country": "US",
+      "scope": "gene-specific (GRIN2B); parent-run 501(c)3",
+      "summary": "Parent-run foundation supporting children with GRIN2B variants; lists the GRIN Variant Patient Registry and Simons Searchlight.",
+      "serves": {
+        "GRIN2B": {
+          "evidence": [
+            {
+              "src": "grin2b-foundation-home",
+              "quote": "Welcome to GRIN2B Foundation! Our goal is to offer support and share research to the small but growing community of children diagnosed with alterations in their GRIN2B gene."
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "grin2b-foundation-home",
+          "quote": "Welcome to GRIN2B Foundation! Our goal is to offer support and share research to the small but growing community of children diagnosed with alterations in their GRIN2B gene."
+        },
+        {
+          "src": "grin2b-foundation-home",
+          "quote": "GRIN2B Foundation is recognized as a 501(c)3 non-profit corporation."
+        }
+      ]
+    },
+    {
+      "id": "org:curegrin-foundation",
+      "label": "CureGRIN Foundation",
+      "url": "https://curegrin.org/",
+      "scope": "umbrella (GRI disorders: GRIA, GRID, GRIK and GRIN genes, incl. GRIN2B)",
+      "summary": "Foundation for the glutamate-receptor (GRI) disorders, including GRIN2B; funds research and runs a GRI census.",
+      "serves": {
+        "GRIN2B": {
+          "confidence": 0.75,
+          "evidence": [
+            {
+              "src": "curegrin-home",
+              "quote": "CureGRIN Foundation is dedicated to improving the lives of people around the world with GRI Disorders (GRIA, GRID, GRIK, and GRIN) and their families through research, education, and support."
+            },
+            {
+              "src": "curegrin-home",
+              "quote": "GRIN Disorders due to variants in either GRIN1, GRIN2A, GRIN2B or GRIN2D occur in one out of every 5,208 births"
+            }
+          ],
+          "explanation": "CureGRIN Foundation serves the GRI disorders as a group; its site names GRIN2B among the GRIN disorder genes. It is an umbrella group, not GRIN2B-specific."
+        }
+      },
+      "evidence": [
+        {
+          "src": "curegrin-home",
+          "quote": "CureGRIN Foundation is dedicated to improving the lives of people around the world with GRI Disorders (GRIA, GRID, GRIK, and GRIN) and their families through research, education, and support."
+        }
+      ]
+    },
+    {
+      "id": "org:international-foundation-for-cdkl5-research",
+      "label": "International Foundation for CDKL5 Research (IFCR)",
+      "url": "https://www.cdkl5.com/",
+      "scope": "gene-specific (CDKL5 deficiency disorder)",
+      "summary": "US-based CDKL5 foundation: family support, the Connect CDKL5 platform and a network of CDKL5 Centers of Excellence.",
+      "serves": {
+        "CDKL5": {
+          "evidence": [
+            {
+              "src": "ifcr-cdkl5-home",
+              "quote": "relationships, and engaged with clinicians, researchers, advocates, and industry partners working toward the same goal: better outcomes for every individual with CDKL5."
+            },
+            {
+              "src": "ifcr-cdkl5-home",
+              "quote": "10 CDKL5 Centers of Excellence in the US"
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "ifcr-cdkl5-home",
+          "quote": "CDKL5 Connection is the official podcast of the International Foundation for CDKL5 Research (IFCR), bridging science, care, and community."
+        }
+      ]
+    },
+    {
+      "id": "org:loulou-foundation",
+      "label": "Loulou Foundation",
+      "url": "https://www.louloufoundation.org/",
+      "country": "UK",
+      "scope": "gene-specific (CDKL5 deficiency disorder); research funder",
+      "summary": "Private UK non-profit funding therapeutics research for CDKL5 deficiency disorder; hosts the annual CDKL5 Forum.",
+      "serves": {
+        "CDKL5": {
+          "evidence": [
+            {
+              "src": "loulou-foundation-home",
+              "quote": "Loulou Foundation is a private non-profit UK foundation dedicated to advancing research into the understanding and development of therapeutics for CDKL5 deficiency disorder."
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "loulou-foundation-home",
+          "quote": "Loulou Foundation is a private non-profit UK foundation dedicated to advancing research into the understanding and development of therapeutics for CDKL5 deficiency disorder."
+        },
+        {
+          "src": "loulou-foundation-home",
+          "quote": "Every year since 2015, the Foundation has hosted the CDKL5 Forum, an annual international symposium dedicated to CDKL5 and CDD."
+        }
+      ]
+    },
+    {
+      "id": "org:cdkl5-uk",
+      "label": "CDKL5 UK",
+      "url": "https://curecdkl5.org.uk/",
+      "country": "UK",
+      "scope": "gene-specific (CDKL5); UK charity",
+      "summary": "UK charity for people affected by CDKL5 deficiency disorder.",
+      "serves": {
+        "CDKL5": {
+          "evidence": [
+            {
+              "src": "cdkl5-uk-home",
+              "quote": "CDKL5 UK is a charity set up to promote relief, care and services to promote health for persons suffering from and affected by CDKL5 and raise vital funds for"
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "cdkl5-uk-home",
+          "quote": "CDKL5 UK is a charity set up to promote relief, care and services to promote health for persons suffering from and affected by CDKL5 and raise vital funds for"
+        }
+      ]
+    },
+    {
+      "id": "org:cure-syngap1",
+      "label": "CURE SYNGAP1",
+      "url": "https://curesyngap1.org/",
+      "country": "US",
+      "scope": "gene-specific (SYNGAP1); family-led 501(c)(3)",
+      "summary": "Global family group for SYNGAP1-related disorders (site curesyngap1.org, requested as the SynGAP Research Fund); runs a Citizen Health natural history registry and points families to RARE-X and Simons Searchlight.",
+      "attrs_extra": {
+        "note": "Requested as 'SynGAP Research Fund (curesyngap1.org)'; the stored page brands the organisation CURE SYNGAP1."
+      },
+      "serves": {
+        "SYNGAP1": {
+          "evidence": [
+            {
+              "src": "srf-curesyngap1-home",
+              "quote": "CURE SYNGAP1 is a global group of families committed to accelerating the science to cure SYNGAP1 & to supporting each other."
+            }
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "src": "srf-curesyngap1-home",
+          "quote": "CURE SYNGAP1 is a global group of families committed to accelerating the science to cure SYNGAP1 & to supporting each other."
+        },
+        {
+          "src": "srf-curesyngap1-home",
+          "quote": "CURE SYNGAP1 is a 501(c)(3) public charity (EIN 83-1200789) headquartered in California."
+        }
+      ]
+    },
+    {
+      "id": "org:glut1-deficiency-foundation",
+      "label": "Glut1 Deficiency Foundation",
+      "url": "https://www.g1dfoundation.org/",
+      "country": "US",
+      "scope": "syndrome-specific (GLUT1 deficiency syndrome / SLC2A1)",
+      "summary": "Foundation for GLUT1 deficiency: diagnosis and ketogenic-diet resources, a research grant program and a natural history study.",
+      "serves": {
+        "SLC2A1": {
+          "match": "syndrome+gene",
+          "evidence": [
+            {
+              "src": "g1d-foundation-home",
+              "quote": "Giving you the resources you need to understand a Glut1 Deficiency diagnosis, treat it effectively, and help find a cure."
+            },
+            {
+              "src": "ren-members-partners",
+              "quote": "Glut1 Deficiency Foundation (SLC2A1)"
+            }
+          ],
+          "explanation": "The Glut1 Deficiency Foundation provides resources to understand, treat and cure GLUT1 deficiency; the Rare Epilepsy Network's member list names it with the gene SLC2A1."
+        }
+      },
+      "evidence": [
+        {
+          "src": "g1d-foundation-home",
+          "quote": "Giving you the resources you need to understand a Glut1 Deficiency diagnosis, treat it effectively, and help find a cure."
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset:kcnt1-international-registry",
+      "label": "KCNT1 International Registry (NORD IAMRARE)",
+      "kind": "registry",
+      "url": "https://www.kcnt1epilepsy.org/kcnt1-international-registry/",
+      "access": "Families enrol online on the NORD IAMRARE platform",
+      "status": "open",
+      "covers": [
+        "KCNT1"
+      ],
+      "maintained_by": [
+        "org:kcnt1-epilepsy-foundation"
+      ],
+      "evidence": [
+        {
+          "src": "kcnt1-registry",
+          "quote": "The KCNT1 International Registry is a comprehensive database managed by the KCNT1 Epilepsy Foundation and hosted on the National Organization for Rare Disorders (NORD®) IAMRARE® platform and dedicated to individuals with changes in the KCNT1 gene and KCNT1 related disorders."
+        }
+      ]
+    },
+    {
+      "id": "asset:cacna1a-foundation-contact-registry",
+      "label": "CACNA1A Foundation Contact Registry",
+      "kind": "registry",
+      "url": "https://www.cacna1a.org/contactregistry",
+      "access": "Adults with CACNA1A-related disorders or their caregivers register online",
+      "status": "open",
+      "covers": [
+        "CACNA1A"
+      ],
+      "maintained_by": [
+        "org:cacna1a-foundation"
+      ],
+      "evidence": [
+        {
+          "src": "cacna1a-contactregistry",
+          "quote": "If you are an adult with CACNA1A-related disorders or the parent, primary caregiver, or guardian of someone with CACNA1A-related disorders, we encourage you to register in our Registry."
+        }
+      ]
+    },
+    {
+      "id": "asset:grin-variant-patient-registry",
+      "label": "GRIN Variant Patient Registry",
+      "kind": "registry",
+      "url": "https://grin2b.com/grin-registry/",
+      "access": "Online enrolment; records held by the Colorado (Benke) or Leipzig (Lemke) registry sites",
+      "status": "open",
+      "covers": [
+        "GRIN2B"
+      ],
+      "maintained_by": [
+        "org:grin2b-foundation"
+      ],
+      "covers_confidence": 0.75,
+      "covers_explanation": "The GRIN2B Foundation's registry page describes the GRIN Variant Patient Registry as the primary registry for all GRIN variants; the page sits on the GRIN2B Foundation's site.",
+      "maintains_explanation": "The GRIN2B Foundation hosts the enrolment page for the GRIN Variant Patient Registry; the page says the registry records are held by the Benke/Colorado or Lemke/Leipzig sites.",
+      "evidence": [
+        {
+          "src": "grin2b-registry",
+          "quote": "The GRIN Variant Patient Registry is the primary patient registry to support a comprehensive understanding of all GRIN variants."
+        },
+        {
+          "src": "grin2b-registry",
+          "quote": "Please contact the registry you enrolled (Benke/Colorado or Lemke/Leipzig; see links above)."
+        },
+        {
+          "src": "grin2b-registry",
+          "quote": "GRIN Variant Patient Registry | GRIN2B Foundation"
+        }
+      ]
+    },
+    {
+      "id": "asset:connect-cdkl5",
+      "label": "Connect CDKL5 (IFCR community data platform)",
+      "kind": "data_platform",
+      "url": "https://www.cdkl5.com/connect-cdkl5",
+      "access": "Free for families; IFCR shares aggregate data with companies, clinicians and researchers",
+      "status": "open",
+      "covers": [
+        "CDKL5"
+      ],
+      "maintained_by": [
+        "org:international-foundation-for-cdkl5-research"
+      ],
+      "evidence": [
+        {
+          "src": "ifcr-connect-cdkl5",
+          "quote": "That is why the IFCR encourages you to participate in our Connect CDKL5 community platform."
+        },
+        {
+          "src": "ifcr-connect-cdkl5",
+          "quote": "If they need demographic data on a specific mutation, Connect CDKL5 makes it possible to provide it."
+        },
+        {
+          "src": "ifcr-cdkl5-home",
+          "quote": "500+ Patients in Connect CDKL5"
+        }
+      ]
+    },
+    {
+      "id": "asset:international-scn8a-registry",
+      "label": "International SCN8A Registry (scn8a.net)",
+      "kind": "registry",
+      "url": "https://www.scn8a.net/",
+      "access": "Online questionnaire for participants (University of Arizona IRB-approved)",
+      "status": "open",
+      "covers": [
+        "SCN8A"
+      ],
+      "maintained_by": [],
+      "evidence": [
+        {
+          "src": "scn8a-alliance-home",
+          "quote": "Welcome to the home base for the International SCN8A Registry This website is the portal for the SCN8A Registry Research Study, which features a questionnaire tailored to collect a range of SCN8A medical and genetic data from each participant"
+        },
+        {
+          "src": "scn8a-alliance-home",
+          "quote": "This project was approved by the University of Arizona Human Subjects Committee."
+        }
+      ]
+    },
+    {
+      "id": "asset:glut1-deficiency-natural-history-study",
+      "label": "GLUT1 Deficiency Foundation natural history study",
+      "kind": "natural_history_study",
+      "url": "https://www.g1dfoundation.org/natural-history-study/",
+      "access": "Families take part via the Glut1 Deficiency Foundation",
+      "status": "open",
+      "covers": [
+        "SLC2A1"
+      ],
+      "maintained_by": [
+        "org:glut1-deficiency-foundation"
+      ],
+      "evidence": [
+        {
+          "src": "g1d-natural-history-study",
+          "quote": "The G1DF has established two opportunities to bring the power of natural history studies to the GLUT1 Deficiency patient community."
+        }
+      ]
+    },
+    {
+      "id": "asset:familiescn2a-dragonfly-registry",
+      "label": "Dragonfly patient registry (FamilieSCN2A)",
+      "kind": "registry",
+      "url": "https://www.scn2a.org/research/",
+      "access": "Families join via the FamilieSCN2A Foundation",
+      "status": "open",
+      "covers": [
+        "SCN2A"
+      ],
+      "maintained_by": [
+        "org:familiescn2a-foundation"
+      ],
+      "maintains_explanation": "The FamilieSCN2A Foundation's research page points families to the Dragonfly patient registry and its home page invites them to join the DRAGONFLY study.",
+      "evidence": [
+        {
+          "src": "familiescn2a-research",
+          "quote": "Explore clinical trials and research opportunities, including interventional studies, observational studies, and the Dragonfly patient registry."
+        },
+        {
+          "src": "familiescn2a-home",
+          "quote": "Join the DRAGONFLY Study"
+        }
+      ]
+    }
+  ],
+  "existing_edges": [
+    {
+      "source": "asset:simons-searchlight",
+      "type": "covers",
+      "gene": "SCN1A",
+      "confidence": 0.85,
+      "explanation": "Simons Searchlight has an SCN1A gene page inviting families with SCN1A changes to connect through its registry.",
+      "evidence": [
+        {
+          "src": "simons-searchlight-scn1a",
+          "quote": "SCN1A-related syndrome happens when there are changes to the SCN1A gene. Learn more about the SCN1A gene and connect with other Simons Searchlight families with the resources on this page."
+        }
+      ]
+    },
+    {
+      "source": "asset:simons-searchlight",
+      "type": "covers",
+      "gene": "SCN2A",
+      "confidence": 0.85,
+      "explanation": "Simons Searchlight has an SCN2A gene page inviting families with SCN2A changes to connect through its registry.",
+      "evidence": [
+        {
+          "src": "simons-searchlight-scn2a",
+          "quote": "SCN2A-related syndrome happens when there are changes to the SCN2A gene. Learn more about the SCN2A gene and connect with other Simons Searchlight families with the resources on this page."
+        }
+      ]
+    },
+    {
+      "source": "asset:simons-searchlight",
+      "type": "covers",
+      "gene": "GRIN2B",
+      "confidence": 0.85,
+      "explanation": "Simons Searchlight has a GRIN2B gene page inviting families to connect through its registry.",
+      "evidence": [
+        {
+          "src": "simons-searchlight-grin2b",
+          "quote": "Learn more about the GRIN2B gene and connect with other Simons Searchlight families with the resources on this page."
+        }
+      ]
+    },
+    {
+      "source": "asset:simons-searchlight",
+      "type": "covers",
+      "gene": "SYNGAP1",
+      "confidence": 0.85,
+      "explanation": "Simons Searchlight has a SYNGAP1 gene page, and CURE SYNGAP1 points SYNGAP1 families to join Simons Searchlight.",
+      "evidence": [
+        {
+          "src": "simons-searchlight-syngap1",
+          "quote": "SYNGAP1-related syndrome happens when there are changes to the SYNGAP1 gene. Learn more about SYNGAP1 and connect with other Simons Searchlight families with the resources on this page."
+        },
+        {
+          "src": "curesyngap1-citizen-registry",
+          "quote": "Join SYNGAP1 Registries Join cureSYNGAP1.org/Citizen Join SYNGAP1.Rare-X.org/ Join Simons Searchlight"
+        }
+      ]
+    },
+    {
+      "source": "asset:citizen-health",
+      "type": "covers",
+      "gene": "CACNA1A",
+      "confidence": 0.75,
+      "explanation": "Citizen Health's communities page lists CACNA1A among the conditions its advocacy partners focus on.",
+      "evidence": [
+        {
+          "src": "citizen-health-communities",
+          "quote": "Our partners focus on 100+ rare diseases and conditions including... ADCY5 AGS Angelman syndrome CACNA1A"
+        }
+      ]
+    },
+    {
+      "source": "asset:citizen-health",
+      "type": "covers",
+      "gene": "KCNT1",
+      "confidence": 0.75,
+      "explanation": "Citizen Health's communities page lists KCNT1 Epilepsy among its partner conditions and quotes the KCNT1 Epilepsy Foundation as a partner.",
+      "evidence": [
+        {
+          "src": "citizen-health-communities",
+          "quote": "KCNH1 KCNT1 Epilepsy KMT2C"
+        },
+        {
+          "src": "citizen-health-communities",
+          "quote": "Co-founder & President KCNT1 Epilepsy Foundation"
+        }
+      ]
+    },
+    {
+      "source": "asset:citizen-health",
+      "type": "covers",
+      "gene": "SCN2A",
+      "confidence": 0.75,
+      "explanation": "Citizen Health's communities page lists SCN2A among the conditions its advocacy partners focus on.",
+      "evidence": [
+        {
+          "src": "citizen-health-communities",
+          "quote": "Rett syndrome Rett syndrome SCN2A SCN8A SCN8A SELENON-Related Myopathy"
+        }
+      ]
+    },
+    {
+      "source": "asset:citizen-health",
+      "type": "covers",
+      "gene": "SCN8A",
+      "confidence": 0.75,
+      "explanation": "Citizen Health's communities page lists SCN8A among the conditions its advocacy partners focus on.",
+      "evidence": [
+        {
+          "src": "citizen-health-communities",
+          "quote": "Rett syndrome Rett syndrome SCN2A SCN8A SCN8A SELENON-Related Myopathy"
+        }
+      ]
+    },
+    {
+      "source": "asset:citizen-health",
+      "type": "covers",
+      "gene": "KCNQ2",
+      "confidence": 0.85,
+      "explanation": "The KCNQ2 Cure Alliance describes Citizen Health as a KCNQ2 digital natural history study built from medical records.",
+      "evidence": [
+        {
+          "src": "kcnq2cure-recruiting",
+          "quote": "Citizen Health is a KCNQ2 digital natural history study that uses medical records to collect meaningful information on how a mutation in the KCNQ2 gene has affected a person's life"
+        }
+      ]
+    },
+    {
+      "source": "asset:citizen-health",
+      "type": "covers",
+      "gene": "SYNGAP1",
+      "confidence": 0.85,
+      "explanation": "CURE SYNGAP1 reports US families enrolled in its Citizen Health natural history study and links families to it.",
+      "evidence": [
+        {
+          "src": "srf-curesyngap1-home",
+          "quote": "305 US Families in Citizen Health NHS"
+        },
+        {
+          "src": "curesyngap1-citizen-registry",
+          "quote": "Join SYNGAP1 Registries Join cureSYNGAP1.org/Citizen Join SYNGAP1.Rare-X.org/ Join Simons Searchlight"
+        }
+      ]
+    },
+    {
+      "source": "org:cure-syngap1",
+      "type": "maintains",
+      "asset": "asset:citizen-health",
+      "confidence": 0.8,
+      "label": "partners on",
+      "explanation": "CURE SYNGAP1 runs its SYNGAP1 natural history registry on Citizen Health (cureSYNGAP1.org/Citizen) and reports the number of US families enrolled.",
+      "evidence": [
+        {
+          "src": "srf-curesyngap1-home",
+          "quote": "305 US Families in Citizen Health NHS"
+        },
+        {
+          "src": "curesyngap1-citizen-registry",
+          "quote": "Join SYNGAP1 Registries Join cureSYNGAP1.org/Citizen Join SYNGAP1.Rare-X.org/ Join Simons Searchlight"
+        }
+      ]
+    },
+    {
+      "source": "asset:rare-x-data-collection",
+      "type": "covers",
+      "gene": "SYNGAP1",
+      "confidence": 0.7,
+      "explanation": "CURE SYNGAP1's registry page links SYNGAP1 families to a SYNGAP1 RARE-X data collection (SYNGAP1.Rare-X.org).",
+      "evidence": [
+        {
+          "src": "curesyngap1-citizen-registry",
+          "quote": "Join SYNGAP1 Registries Join cureSYNGAP1.org/Citizen Join SYNGAP1.Rare-X.org/ Join Simons Searchlight"
+        }
+      ]
+    },
+    {
+      "source": "asset:endd-stxbp1-syngap1-center",
+      "type": "covers",
+      "gene": "SYNGAP1",
+      "confidence": 0.85,
+      "explanation": "The ENDD Center (Penn/CHOP) focuses on STXBP1 and SYNGAP1 disorders; its natural history page says Dr. Ingo Helbig of CHOP leads the natural history study for both, with one SYNGAP1 site at CHOP.",
+      "evidence": [
+        {
+          "src": "endd-home",
+          "quote": "with an initial focus on treating STXBP1 and SYNGAP1 related disorders."
+        },
+        {
+          "src": "endd-nhs",
+          "quote": "Dr. Ingo Helbig of CHOP leads the NHS for both STXBP1 and SYNGAP1."
+        },
+        {
+          "src": "endd-nhs",
+          "quote": "For SYNGAP1 disorders, there is currently one site: CHOP's Epilepsy and Neurodevelopmental Disorders program (ENDD)."
+        }
+      ]
+    },
+    {
+      "source": "asset:combinedbrain-biorepository",
+      "type": "covers",
+      "gene": "KCNQ2",
+      "confidence": 0.85,
+      "explanation": "The KCNQ2 Cure Alliance says families donate samples to a KCNQ2 biorepository that is managed by COMBINEDBrain.",
+      "evidence": [
+        {
+          "src": "kcnq2cure-home",
+          "quote": "KCNQ2 Biorepository Families donate samples at collection events so researchers can study KCNQ2 in the lab. The biorepository is managed by COMBINEDBrain."
+        }
+      ]
+    },
+    {
+      "source": "org:kcnq2-cure-alliance",
+      "type": "maintains",
+      "asset": "asset:combinedbrain-biorepository",
+      "confidence": 0.75,
+      "label": "partners on",
+      "explanation": "The KCNQ2 Cure Alliance runs KCNQ2 sample collection days for a biorepository that COMBINEDBrain manages.",
+      "evidence": [
+        {
+          "src": "kcnq2cure-home",
+          "quote": "KCNQ2 Biorepository Families donate samples at collection events so researchers can study KCNQ2 in the lab. The biorepository is managed by COMBINEDBrain."
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "SCN1A",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists the Dravet Syndrome Foundation (SCN1A) as a member, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "Dravet Syndrome Foundation (SCN1A)"
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "SCN2A",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists the FamilieSCN2A Foundation as a member, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "FamilieSCN2A Foundation"
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "SCN8A",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists the International SCN8A Alliance as a member, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "International SCN8A Alliance"
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "KCNQ2",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists the KCNQ2 Cure Alliance as a member, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "KCNQ2 Cure Alliance"
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "KCNT1",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists the KCNT1 Epilepsy Foundation as a member, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "KCNT1 Epilepsy Foundation"
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "CACNA1A",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists the CACNA1A Foundation as a member, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "CACNA1A Foundation"
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "GRIN2B",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists CureGRIN Foundation, naming Grin2B among its genes, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "CureGRIN Foundation (GRIA, GRID, GRIK & GRIN genes including Grin1, Grin2A, Grin2B & Grin2D)"
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "CDKL5",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists the International Foundation for CDKL5 Research as a member, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "International Foundation for CDKL5 Research"
+        }
+      ]
+    },
+    {
+      "source": "org:rare-epilepsy-network",
+      "type": "serves",
+      "gene": "SLC2A1",
+      "level": "observational",
+      "confidence": 0.6,
+      "explanation": "The Rare Epilepsy Network's members & partners page lists the Glut1 Deficiency Foundation (SLC2A1) as a member, so REN serves this community as an umbrella network.",
+      "evidence": [
+        {
+          "src": "ren-members-partners",
+          "quote": "Glut1 Deficiency Foundation (SLC2A1)"
+        }
+      ]
+    },
+    {
+      "source": "org:dee-p-connections",
+      "type": "serves",
+      "gene": "SCN1A",
+      "level": "inferred",
+      "confidence": 0.5,
+      "explanation": "The DEEP Collaborative partners page shows the Dravet Syndrome Foundation logo. This is a partnership signal, not a formal membership record.",
+      "evidence": [
+        {
+          "src": "dee-p-deep-collaborative",
+          "in": "html",
+          "quote": "alt=\"Dravet Syndrome Foundation\""
+        }
+      ]
+    },
+    {
+      "source": "org:dee-p-connections",
+      "type": "serves",
+      "gene": "SCN2A",
+      "level": "inferred",
+      "confidence": 0.5,
+      "explanation": "The DEEP Collaborative partners page shows the FamilieSCN2A Foundation logo. This is a partnership signal, not a formal membership record.",
+      "evidence": [
+        {
+          "src": "dee-p-deep-collaborative",
+          "in": "html",
+          "quote": "alt=\"FamilieSCN2A Foundation\""
+        }
+      ]
+    },
+    {
+      "source": "org:dee-p-connections",
+      "type": "serves",
+      "gene": "SCN8A",
+      "level": "inferred",
+      "confidence": 0.5,
+      "explanation": "The DEEP Collaborative partners page shows the International SCN8A Alliance logo. This is a partnership signal, not a formal membership record.",
+      "evidence": [
+        {
+          "src": "dee-p-deep-collaborative",
+          "in": "html",
+          "quote": "alt=\"International SCN8A Alliance Logo\""
+        }
+      ]
+    },
+    {
+      "source": "org:dee-p-connections",
+      "type": "serves",
+      "gene": "KCNQ2",
+      "level": "inferred",
+      "confidence": 0.5,
+      "explanation": "The DEEP Collaborative partners page shows the KCNQ2 Cure Alliance logo. This is a partnership signal, not a formal membership record.",
+      "evidence": [
+        {
+          "src": "dee-p-deep-collaborative",
+          "in": "html",
+          "quote": "alt=\"KCNQ2 Cure Alliance\""
+        }
+      ]
+    },
+    {
+      "source": "org:dee-p-connections",
+      "type": "serves",
+      "gene": "CACNA1A",
+      "level": "inferred",
+      "confidence": 0.5,
+      "explanation": "The DEEP Collaborative partners page links to the CACNA1A Foundation's website. This is a partnership signal, not a formal membership record.",
+      "evidence": [
+        {
+          "src": "dee-p-deep-collaborative",
+          "in": "html",
+          "quote": "href=\"https://www.cacna1a.org/\""
+        }
+      ]
+    },
+    {
+      "source": "org:dee-p-connections",
+      "type": "serves",
+      "gene": "GRIN2B",
+      "level": "inferred",
+      "confidence": 0.5,
+      "explanation": "The DEEP Collaborative partners page shows the GRIN2B Foundation logo. This is a partnership signal, not a formal membership record.",
+      "evidence": [
+        {
+          "src": "dee-p-deep-collaborative",
+          "in": "html",
+          "quote": "alt=\"GRIN2B Foundation\""
+        }
+      ]
+    },
+    {
+      "source": "org:dee-p-connections",
+      "type": "serves",
+      "gene": "CDKL5",
+      "level": "inferred",
+      "confidence": 0.5,
+      "explanation": "The DEEP Collaborative partners page shows the International Foundation for CDKL5 Research logo. This is a partnership signal, not a formal membership record.",
+      "evidence": [
+        {
+          "src": "dee-p-deep-collaborative",
+          "in": "html",
+          "quote": "alt=\"International Foundation for CDKL5 Research\""
+        }
+      ]
+    },
+    {
+      "source": "org:dee-p-connections",
+      "type": "serves",
+      "gene": "SYNGAP1",
+      "level": "inferred",
+      "confidence": 0.5,
+      "explanation": "The DEEP Collaborative partners page shows the Cure SYNGAP1 logo. This is a partnership signal, not a formal membership record.",
+      "evidence": [
+        {
+          "src": "dee-p-deep-collaborative",
+          "in": "html",
+          "quote": "alt=\"Cure SYNGAP1\""
+        }
+      ]
+    }
+  ],
+  "unverified": [
+    {
+      "gene": "KCNQ2",
+      "name": "Jack Pribaz Foundation",
+      "tried": [
+        "https://www.jackpribazfoundation.org/ (DNS: host not found)",
+        "Bright Data Google search 'Jack Pribaz Foundation KCNQ2' (SERP error)",
+        "Bright Data Google search 'Jack Pribaz Foundation' (SERP error)"
+      ]
+    },
+    {
+      "gene": "SYNGAP1",
+      "name": "Bridge the Gap - SYNGAP Education and Research Foundation",
+      "tried": [
+        "https://www.bridgesyngap.org/ (direct: empty page; Bright Data: parked domain page)"
+      ]
+    },
+    {
+      "gene": "SCN8A",
+      "name": "International SCN8A Alliance (own site)",
+      "tried": [
+        "https://scn8aalliance.org/ (HTTP 500 direct; Bright Data returned no usable page)"
+      ]
+    }
+  ]
+}

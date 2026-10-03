@@ -52,6 +52,42 @@ const nDerived = copyJson(join(dataRoot, "derived"), join(webRoot, "public", "da
 const nCurated = copyJson(join(dataRoot, "curated"), join(webRoot, "public", "data", "curated"), ["modality.json", "impact.json"]);
 if (nDerived || nCurated) console.log(`[sync-data] copied ${nDerived} derived and ${nCurated} curated file(s)`);
 
+// global disease index (every rare disease, basic data; see data/derived/global/README.md), folder
+// structure kept: index.json, meta.json, neighbours/<0-63>.json and any later shard folders
+//   ../data/derived/global/**/*.json -> public/data/derived/global/**
+const copyTree = (from, to) => {
+  const out = { files: 0, bytes: 0, skipped: 0 };
+  if (!existsSync(from)) return out;
+  mkdirSync(to, { recursive: true });
+  for (const ent of readdirSync(from, { withFileTypes: true })) {
+    const s = join(from, ent.name);
+    const d = join(to, ent.name);
+    if (ent.isDirectory()) {
+      const sub = copyTree(s, d);
+      out.files += sub.files;
+      out.bytes += sub.bytes;
+      out.skipped += sub.skipped;
+    } else if (ent.name.endsWith(".json")) {
+      const text = readFileSync(s, "utf8");
+      try {
+        JSON.parse(text);
+      } catch (err) {
+        console.warn(`[sync-data] skipping global/${ent.name}: not valid JSON (${err.message})`);
+        out.skipped++;
+        continue;
+      }
+      copyFileSync(s, d);
+      out.files++;
+      out.bytes += Buffer.byteLength(text);
+    }
+  }
+  return out;
+};
+{
+  const g = copyTree(join(dataRoot, "derived", "global"), join(webRoot, "public", "data", "derived", "global"));
+  if (g.files) console.log(`[sync-data] copied ${g.files} global index file(s), ${(g.bytes / 1e6).toFixed(1)} MB${g.skipped ? `, ${g.skipped} skipped` : ""}`);
+}
+
 const aiSrc = join(dataRoot, "ai");
 if (existsSync(aiSrc)) {
   const aiDest = join(webRoot, "public", "data", "ai");
