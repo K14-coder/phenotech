@@ -15,7 +15,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P0: submission blockers
 
-- [~] (claimed by main-session web agent, 2026-10-04) **Rename to Phenotech** everywhere (site, emails, worker, docs; `EMAIL_FROM` on Vercel is already "Phenotech <no-reply@mehro.ch>") **plus atlas controls:** hop-depth slider from the searched/focused item, toggles to hide link types and factor links, hide node types and individual nodes, lens links limited to the shown neighbourhood.
+- [x] (web agent, commits a7f6a4f + atlas controls commit) **Rename to Phenotech** everywhere (site, emails, worker, docs; `EMAIL_FROM` on Vercel is already "Phenotech <no-reply@mehro.ch>") **plus atlas controls:** hop-depth slider from the searched/focused item, toggles to hide link types and factor links, hide node types and individual nodes, lens links limited to the shown neighbourhood.
 
 - [ ] **(you, later)** Make the repo public before submission (team decision: later). The GitHub repo `K14-coder/rare-disease-atlas` is private for now. Either make it public, or share it the way Hack-Nation asks. Run a final secret scan before making it public (see KNOWLEDGE.md → "Secret scan").
 - [x] (vibrant-babbage, 2026-10-04) Refresh `README.md` for the current product: Tasukeru, depth/breadth tiers, four views, `/sequence` with genome-wide ClinVar, community and research queue, both benchmarks, OpenAI use, updated architecture diagram, acknowledgements.
@@ -88,6 +88,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- Renamed Tasukeru → Phenotech (site, emails, logo, worker, docs). Atlas controls: search box sets the focus; "steps from" depth 1/2/3/all (default 1); link-group toggles; right-click / long-press → hide node or show only it and its neighbours; "Hidden: n · Show all"; factor lens off by default with ×, drawing only links between shown nodes; depth / hidden types / hidden nodes / lens in the URL; phone layout (map first, filters and details as bottom sheets); fixed Cytoscape's stale click offset after the view chooser closes.
 - Independent Claude re-reading of 256 family abstracts (96.1% agreement, 274 new supporting sources); 42 Claude outreach drafts; `/method` counts both readers (vibrant-babbage).
 - Web: seven-factor view. Disease fingerprint (7 rows) on atlas and /d/ pages (plain in Simple "Learn more", open in Research/Industry); 7-segment factor bars with the strongest factors in words on closest diseases (atlas) and most similar diseases (/d/); "Seven factors side by side" on /compare; atlas factor lens (Off / All / each factor, width = similarity) and a Research weights panel (tested defaults symptoms 1, genes 0.5, pathway 0.5); "The seven factors" on /method (commit 912f426).
 - README and video script refreshed; Research-view enrollment excludes multi-disease registries; relutrigine and NBI-921352 directions; obsolete-MONDO join in the mechanism layer (vibrant-babbage).
