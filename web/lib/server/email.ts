@@ -194,7 +194,14 @@ export function contactEmail(to: string, organisation: string, message: string, 
 }
 
 export function trialsEmail(to: string, items: { disease: string; title: string; url: string; meta?: string }[], weekly: boolean, meUrl: string, unsubscribe: Unsub): Email {
-  const subject = weekly ? "Your weekly summary" : items.length === 1 ? `A study is recruiting for ${items[0].disease}` : "New studies recruiting for diseases you follow";
+  const grantsOnly = items.every((i) => i.disease.startsWith("New research"));
+  const subject = weekly
+    ? "Your weekly summary"
+    : grantsOnly
+      ? `New researchers working on ${items[0].disease.replace(/^New research · /, "")}`
+      : items.length === 1
+        ? `A study is recruiting for ${items[0].disease}`
+        : "News for diseases you follow";
   return {
     to,
     subject,
@@ -202,14 +209,20 @@ export function trialsEmail(to: string, items: { disease: string; title: string;
     unsubscribe,
     ...render(subject, {
       paragraphs: [
-        weekly ? "Here is what is new this week for the diseases you follow." : "These studies have started recruiting, or appeared in our data, for diseases you follow.",
-        "Ages, places and how to join are on each study page. A doctor can help you decide whether a study fits.",
+        weekly
+          ? "Here is what is new this week for the diseases you follow."
+          : grantsOnly
+            ? "Newly funded research projects name a gene behind a disease you follow. It means more researchers are working on it."
+            : "We found new recruiting studies, or newly funded research, for diseases you follow.",
+        grantsOnly
+          ? "Each link opens the public project page at NIH RePORTER, with the institution doing the work."
+          : "Ages, places and how to join are on each study page. A doctor can help you decide whether a study fits.",
       ],
       items: items.map((i) => ({ label: i.disease, title: i.title, url: i.url, meta: i.meta })),
       button: { label: "Open my atlas", url: meUrl },
       why: weekly
         ? "You are receiving this weekly summary because you follow these diseases and chose a weekly summary."
-        : "You are receiving this because you follow these diseases and asked to hear when a study starts recruiting.",
+        : "You are receiving this because you follow these diseases and asked to hear about new studies and research.",
       unsubscribe,
     }),
   };

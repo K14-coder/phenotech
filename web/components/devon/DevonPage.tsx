@@ -2,6 +2,7 @@
 
 // Devon's diagnosis page, in the spec's order. The same layout serves a disease mapped in depth
 // (/disease/<id>) and any other rare disease (/d/<id>); builders fill a DevonModel from real data only.
+import { FollowButton } from "../community/AccountBits";
 import Link from "next/link";
 import { useState } from "react";
 import { PlainText } from "../PlainText";
@@ -9,6 +10,7 @@ import { GeneralHelp } from "../help/GeneralHelp";
 import {
   Checklist,
   ContactCard,
+  ContactTip,
   ContributeLine,
   DevonSection,
   DoctorQuestions,
@@ -24,6 +26,8 @@ import {
 
 export interface DevonModel {
   name: string;
+  /** disease id for "Follow for alerts" (signed-in members only) */
+  followId?: string;
   /** short name for sentences: the gene, or the disease name */
   short: string;
   plain: { text: string; how?: How }[];
@@ -133,6 +137,7 @@ export function DevonPage({ m, learnMore }: { m: DevonModel; learnMore?: React.R
       <header>
         <p className="text-sm text-ink-3">Your diagnosis</p>
         <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink sm:text-[32px]">{m.name}</h1>
+        {m.followId && <FollowButton diseaseId={m.followId} diseaseName={m.name} />}
         {m.chosenType && (
           <p className="mt-2 text-[15px] text-ink-2">
             You told us: <b className="font-medium text-ink">{m.chosenType}</b>. This page covers all its types; ask your doctor which parts apply to yours.
@@ -179,6 +184,7 @@ export function DevonPage({ m, learnMore }: { m: DevonModel; learnMore?: React.R
       </DevonSection>
 
       <DevonSection id="contact" title="People you can contact">
+        <ContactTip items={[...m.groups, ...m.registries]} />
         {hasGroup ? (
           <MoreList items={m.groups} first={3} noun="group" render={(c) => <ContactCard key={c.key} c={c} />} />
         ) : (

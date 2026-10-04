@@ -850,3 +850,84 @@ The landscape step is gone from impact.json, and the "awaiting expert figure" co
 - `tsc --noEmit` and `eslint` are clean. One `npm run build` at the end passed.
 - These pages were checked at 1440 and 390 px with headless Chromium, with no sideways scroll and no console errors: `/sequence/request` (yes, no, not sure), `/method`, `/impact`, `/verify`, `/forgot`, `/reset`, `/me` (signed out, and signed in with the confirm banner), `/admin` (test-mode notice) and `/sequence`.
 - The only console error found was a deliberately invalid unsubscribe link, which shows a 400 and a friendly page.
+
+## Live alerts, contact details, "What we collect"
+
+### Live "new trial / new researchers" alerts
+`/api/cron/digest` now checks live sources (`web/lib/server/live.ts`, `web/lib/server/digest.ts`).
+
+**What it looks for**, for each disease at least one member follows:
+- **ClinicalTrials.gov API v2:** RECRUITING and NOT_YET_RECRUITING studies matching the name, synonyms or gene.
+- **NIH RePORTER:** projects in fiscal year ≥ the current year minus 1 that name one of the disease's genes.
+
+**Trial precision filter**, a compact port of `pipeline/scale/build_trials.py`, as described in `data/derived/scale/README.md`:
+- Names and synonyms must match as whole phrases. These are rejected:
+  - hyphen-glued hits;
+  - hits followed by a gene context ("… gene", "mutated");
+  - digit-free abbreviations;
+  - generic single words.
+- Gene symbols are case-sensitive and need a gene context within 3 words. They are rejected in:
+  - oncology or common-disease studies;
+  - drug, biomarker or SNP contexts;
+  - acronyms the study spells out;
+  - the symbol stoplist.
+- Gene matches are labelled "mentions <GENE>".
+
+**Grants:** RePORTER is asked only for the title, organisation and fiscal year; no investigator fields are requested. Projects are deduplicated by core project number and link to the public project page.
+
+**State in the store:**
+- a seen-set per source and disease (`alerts:seen:<trials|grants>:<d>`);
+- the first check of a disease only seeds the seen-set;
+- a failed request never seeds.
+
+**Notices:**
+- Every follower gets an inbox notice (new inbox kinds `trial` and `grant`, with a link).
+- Members who asked for study news by email (the `trials` consent, now worded "new recruiting studies and newly funded research") also get an email, now or in their weekly summary.
+- `sent:<uid>` prevents duplicates.
+
+**Limits:**
+- `ALERTS_MAX_REQUESTS` caps requests per run (default 40, which is 20 diseases).
+- Diseases are checked 4 at a time, with an 8 s timeout per request and a 40 s budget.
+- A rotating cursor (`alerts:cursor`) covers long lists across runs.
+- The run logs a single counts line.
+
+**Follow for alerts:** disease pages (Simple, Detailed/Research and global) now show a one-tap "Follow for alerts" for signed-in members. Once followed it reads "Following: new studies and research appear in My atlas". Signed-out visitors still get the join box.
+
+**vercel.json:** adds `/api/queue/sweep` daily at 08:30 UTC. It uses the same `CRON_SECRET`; the sweep route requires at least 16 characters.
+
+### Contact details
+- **Sync:** `scripts/sync-data.mjs` turns `data/derived/contacts/{orgs,trials}.json` into slim browser files (`public/data/derived/contacts/`, 47 KB and 160 KB) and sets the `available.contacts` flag.
+  - Personal names are dropped at this step; CT.gov central contacts keep only phone and email.
+  - Snippets and evidence text are dropped too.
+  - Result: 210 organisations and 1,463 recruiting studies.
+- **Display:** `components/contacts/ContactLine.tsx` shows a `tel:` and `mailto:` with "From their website · retrieved <date>" or "From ClinicalTrials.gov · retrieved <date>". It appears on:
+  - the Simple view's "People you can contact" cards and registries;
+  - study cards;
+  - Research "Reach patients" channels.
+- **Matching:** organisations are matched by id, then website host, then name; studies by NCT.
+- **Simple tip:** the Simple view adds "When you call or write, it helps to mention the gene name and that you found them through the Rare Disease Atlas." It appears only when a card has a contact.
+- **Researchers:** no contacts are shown for individual researchers; they stay reachable through "Request contact" or their institution.
+
+### /method
+"What we collect and how often" is generated from `available.json` and the graph's source list:
+- daily live checks for followed diseases;
+- static layers refreshed on rebuild, with the build date.
+
+### Tests
+**Cron dry run:** an isolated dev server on port 3100 with its own store file, `EMAIL_DRY_RUN=1` and one throwaway follower of STXBP1, SCN2A and Duchenne (`MONDO:0010679`), with live APIs.
+- Run 1 seeded 6 sets (STXBP1 6 trials and 1 grant; SCN2A 1 trial and 23 grants; DMD 30 trials and 16 grants) with 6 requests, 0 failures and no notices, in about 1 s.
+- After 4 seen entries were removed, run 2 found 3 new trials and 1 new grant, wrote 4 inbox notices and 1 email (written to the outbox only).
+- Run 3 sent nothing.
+- With `ALERTS_MAX_REQUESTS=2`, each run checked 1 disease, and the cursor went 1, 2, 0, 1.
+- 401 without the secret. No addresses in the log. All accounts and the store file were deleted.
+
+**UI:** 1440 and 390 px, with no sideways scroll and no console errors:
+- STXBP1 Simple: 7 tel and 7 mailto links, with the tip.
+- STXBP1 Research: 9 tel and 10 mailto links.
+- DMD Simple (global page).
+- `/method`, `/me`.
+- The follow button on a global page, signed in.
+
+**Fixed along the way:** 748 px of sideways scroll on the Research view at 390 px (the ClinVar variant-type grid).
+
+**Checks:** `tsc` and `eslint` are clean; one `npm run build` passed.

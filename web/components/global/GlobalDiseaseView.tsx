@@ -36,6 +36,7 @@ import { usePersona } from "@/lib/persona";
 import { loadScale, type ScaleEntry } from "@/lib/population";
 import { DevonPage } from "../devon/DevonPage";
 import { JoinBox } from "../community/JoinBox";
+import { FollowButton } from "../community/AccountBits";
 import { buildGlobalDevonModel } from "../devon/devonGlobal";
 import { DisMechIfAny, MechanismLayer } from "./MechanismBits";
 import { CommunityResearch } from "../queue/CommunityResearch";
@@ -142,6 +143,7 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
             <div className="max-w-[700px]">
               <h1 className="text-[30px] font-semibold leading-tight tracking-[-0.02em] text-ink">{capFirst(row.name)}</h1>
               {row.syn.length > 0 && <p className="mt-1.5 text-sm text-ink-3">Also called {row.syn.join(", ")}</p>}
+              <FollowButton diseaseId={row.id} diseaseName={capFirst(row.name)} />
               <div className="mt-5 rounded-lg bg-subtle px-4 py-3.5">
                 {related.length ? (
                   <p className="text-[15px] leading-relaxed text-ink">
@@ -237,7 +239,7 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
     return (
       <>
         <DevonPage
-          m={buildGlobalDevonModel(row, entry, terms, scaleRes?.data ?? null, shardState === "loading" || scaleRes?.status === "loading")}
+          m={{ ...buildGlobalDevonModel(row, entry, terms, scaleRes?.data ?? null, shardState === "loading" || scaleRes?.status === "loading"), followId: row.id }}
           learnMore={detail}
         />
         {join}

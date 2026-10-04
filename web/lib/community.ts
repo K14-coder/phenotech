@@ -50,13 +50,15 @@ export interface Announcement {
 
 export interface InboxMessage {
   id: string;
-  kind: "announcement" | "contact" | "notice";
+  kind: "announcement" | "contact" | "notice" | "trial" | "grant";
   diseases: string[];
   title: string;
   body: string;
   created: string;
   /** announcements: eligibility, contact, ethics */
   extra?: Record<string, string>;
+  /** trial / grant alerts: the public record (ClinicalTrials.gov or NIH RePORTER) */
+  url?: string;
 }
 
 export const DISEASE_ID = /^(disease:[A-Za-z0-9_-]{2,20}|(MONDO|OMIM|ORPHA):[A-Za-z0-9_.-]{2,20})$/;

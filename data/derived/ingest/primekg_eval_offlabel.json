@@ -1,0 +1,1339 @@
+{
+ "generated": "2026-10-04",
+ "benchmark": {
+  "primekg_disease_nodes_with_drug_edges": 2054,
+  "units_after_merging_overlapping_nodes": 2054,
+  "nodes_merged": 0,
+  "mapped_nodes": 711,
+  "mapped_exact": 711,
+  "mapped_child": 0,
+  "eligible_nodes": 461,
+  "drugs_with_any_eligible_indication": 682,
+  "benchmark_drugs": 314,
+  "candidate_pool": 305,
+  "cases": 1756,
+  "contraindication_pairs_in_pool": 653,
+  "offlabel_pairs_in_pool": 0
+ },
+ "cases": 1756,
+ "pool": 305,
+ "drug_groups": 109,
+ "drugs": 314,
+ "specific_drug_cases": 592,
+ "features": {
+  "phenotype": "symptoms: HPO IC-weighted cosine over ancestor-propagated annotations (phenotype.hpoa, as in the global index)",
+  "genes": "genes involved: Jaccard of the causal gene sets",
+  "mechanism": "mechanism class: IDF-weighted cosine of G2P / ClinGen classes (global/mechanism) + gnomAD constraint tokens (LoF-intolerant pLI>=0.9 or LOEUF<0.6; LoF-tolerant LOEUF>1; missense-constrained Z>=3.09)",
+  "constraint": "gnomAD v4.1 continuous: 1 - mean |diff| of [pLI, 1-min(LOEUF,1.5)/1.5, clip(misZ/6, -1, 1)] (most constrained gene of the disease)",
+  "pathway_mid": "signalling pathway: Reactome mid-level (depth-3) pathways of the disease, from global/mechanism; IDF-weighted cosine",
+  "pathway_full": "signalling pathway: Reactome lowest-level + all ancestors of the genes (NCBI2Reactome); IDF-weighted cosine",
+  "gene_family": "protein family: PANTHER + InterPro Family entries (features/gene_families.json); IDF-weighted cosine",
+  "protein_domain": "protein structure/domains: InterPro Domain/Repeat/Homologous superfamily + Pfam; IDF-weighted cosine",
+  "tissue": "tissue: HPA tissue-enriched nTPM (features/gene_tissue.json), cosine of log1p(nTPM)",
+  "mutation_spectrum": "mutation type: full-ClinVar P/LP consequence spectrum (clinvar_gene_spectrum.json), 1 - Jensen-Shannon divergence",
+  "alphamissense": "molecular consequence / structure: 1 - |diff| of AlphaMissense gene mean pathogenicity",
+  "structure_tm": "protein structure: AlphaFold TM-align score between the disease genes (data/derived/mechsim.json, 220 genes)"
+ },
+ "coverage": {
+  "phenotype": {
+   "pool_nodes_with_data": 253,
+   "of": 305
+  },
+  "genes": {
+   "pool_nodes_with_data": 305,
+   "of": 305
+  },
+  "mechanism": {
+   "pool_nodes_with_data": 271,
+   "of": 305
+  },
+  "constraint": {
+   "pool_nodes_with_data": 283,
+   "of": 305
+  },
+  "pathway_mid": {
+   "pool_nodes_with_data": 230,
+   "of": 305
+  },
+  "pathway_full": {
+   "pool_nodes_with_data": 291,
+   "of": 305
+  },
+  "gene_family": {
+   "pool_nodes_with_data": 304,
+   "of": 305
+  },
+  "protein_domain": {
+   "pool_nodes_with_data": 303,
+   "of": 305
+  },
+  "tissue": {
+   "pool_nodes_with_data": 243,
+   "of": 305
+  },
+  "mutation_spectrum": {
+   "pool_nodes_with_data": 297,
+   "of": 305
+  },
+  "alphamissense": {
+   "pool_nodes_with_data": 285,
+   "of": 305
+  },
+  "structure_tm": {
+   "pool_nodes_with_data": 58,
+   "of": 305
+  }
+ },
+ "results": {
+  "random": {
+   "rr": 0.0214,
+   "rr_ci": [
+    0.021,
+    0.0218
+   ],
+   "r@1": 0.0034,
+   "r@1_ci": [
+    0.0033,
+    0.0035
+   ],
+   "r@3": 0.0103,
+   "r@3_ci": [
+    0.01,
+    0.0105
+   ],
+   "r@5": 0.0171,
+   "r@5_ci": [
+    0.0167,
+    0.0175
+   ],
+   "r@10": 0.0342,
+   "r@10_ci": [
+    0.0334,
+    0.0349
+   ],
+   "median_rank": 149.0,
+   "rr_macro_group": 0.0209
+  },
+  "single:phenotype": {
+   "rr": 0.2736,
+   "rr_ci": [
+    0.1752,
+    0.4341
+   ],
+   "r@1": 0.192,
+   "r@1_ci": [
+    0.0912,
+    0.3617
+   ],
+   "r@3": 0.3065,
+   "r@3_ci": [
+    0.1995,
+    0.4643
+   ],
+   "r@5": 0.3761,
+   "r@5_ci": [
+    0.2555,
+    0.5247
+   ],
+   "r@10": 0.4446,
+   "r@10_ci": [
+    0.3216,
+    0.593
+   ],
+   "median_rank": 20.0,
+   "rr_macro_group": 0.3239
+  },
+  "single:genes": {
+   "rr": 0.2669,
+   "rr_ci": [
+    0.1923,
+    0.3506
+   ],
+   "r@1": 0.1778,
+   "r@1_ci": [
+    0.1019,
+    0.2663
+   ],
+   "r@3": 0.3077,
+   "r@3_ci": [
+    0.2051,
+    0.4147
+   ],
+   "r@5": 0.3585,
+   "r@5_ci": [
+    0.2692,
+    0.454
+   ],
+   "r@10": 0.4496,
+   "r@10_ci": [
+    0.3677,
+    0.5273
+   ],
+   "median_rank": 27.0,
+   "rr_macro_group": 0.2569
+  },
+  "single:mechanism": {
+   "rr": 0.0325,
+   "rr_ci": [
+    0.0273,
+    0.0384
+   ],
+   "r@1": 0.0057,
+   "r@1_ci": [
+    0.0042,
+    0.0073
+   ],
+   "r@3": 0.018,
+   "r@3_ci": [
+    0.0134,
+    0.0232
+   ],
+   "r@5": 0.0311,
+   "r@5_ci": [
+    0.0228,
+    0.0415
+   ],
+   "r@10": 0.0611,
+   "r@10_ci": [
+    0.0458,
+    0.0788
+   ],
+   "median_rank": 113.0,
+   "rr_macro_group": 0.0306
+  },
+  "single:constraint": {
+   "rr": 0.146,
+   "rr_ci": [
+    0.1076,
+    0.1987
+   ],
+   "r@1": 0.091,
+   "r@1_ci": [
+    0.0518,
+    0.1463
+   ],
+   "r@3": 0.1531,
+   "r@3_ci": [
+    0.1063,
+    0.2173
+   ],
+   "r@5": 0.1951,
+   "r@5_ci": [
+    0.1415,
+    0.2534
+   ],
+   "r@10": 0.2398,
+   "r@10_ci": [
+    0.1899,
+    0.2834
+   ],
+   "median_rank": 76.0,
+   "rr_macro_group": 0.1372
+  },
+  "single:pathway_mid": {
+   "rr": 0.2226,
+   "rr_ci": [
+    0.1405,
+    0.3073
+   ],
+   "r@1": 0.1739,
+   "r@1_ci": [
+    0.0919,
+    0.261
+   ],
+   "r@3": 0.2318,
+   "r@3_ci": [
+    0.1614,
+    0.3047
+   ],
+   "r@5": 0.2811,
+   "r@5_ci": [
+    0.1814,
+    0.3842
+   ],
+   "r@10": 0.311,
+   "r@10_ci": [
+    0.2061,
+    0.4215
+   ],
+   "median_rank": 153.5,
+   "rr_macro_group": 0.1628
+  },
+  "single:pathway_full": {
+   "rr": 0.2585,
+   "rr_ci": [
+    0.1942,
+    0.3332
+   ],
+   "r@1": 0.176,
+   "r@1_ci": [
+    0.1135,
+    0.2567
+   ],
+   "r@3": 0.2804,
+   "r@3_ci": [
+    0.2036,
+    0.3641
+   ],
+   "r@5": 0.3297,
+   "r@5_ci": [
+    0.2415,
+    0.4218
+   ],
+   "r@10": 0.4049,
+   "r@10_ci": [
+    0.3238,
+    0.4934
+   ],
+   "median_rank": 20.0,
+   "rr_macro_group": 0.2591
+  },
+  "single:gene_family": {
+   "rr": 0.2319,
+   "rr_ci": [
+    0.1756,
+    0.3081
+   ],
+   "r@1": 0.1325,
+   "r@1_ci": [
+    0.0679,
+    0.2274
+   ],
+   "r@3": 0.2702,
+   "r@3_ci": [
+    0.1967,
+    0.3586
+   ],
+   "r@5": 0.3154,
+   "r@5_ci": [
+    0.2445,
+    0.3937
+   ],
+   "r@10": 0.408,
+   "r@10_ci": [
+    0.3214,
+    0.4829
+   ],
+   "median_rank": 26.0,
+   "rr_macro_group": 0.2439
+  },
+  "single:protein_domain": {
+   "rr": 0.2173,
+   "rr_ci": [
+    0.1725,
+    0.2754
+   ],
+   "r@1": 0.1168,
+   "r@1_ci": [
+    0.0709,
+    0.1825
+   ],
+   "r@3": 0.2613,
+   "r@3_ci": [
+    0.1878,
+    0.3399
+   ],
+   "r@5": 0.3165,
+   "r@5_ci": [
+    0.2396,
+    0.399
+   ],
+   "r@10": 0.3901,
+   "r@10_ci": [
+    0.3314,
+    0.4488
+   ],
+   "median_rank": 26.0,
+   "rr_macro_group": 0.229
+  },
+  "single:tissue": {
+   "rr": 0.0963,
+   "rr_ci": [
+    0.0537,
+    0.1518
+   ],
+   "r@1": 0.0426,
+   "r@1_ci": [
+    0.0159,
+    0.0875
+   ],
+   "r@3": 0.0957,
+   "r@3_ci": [
+    0.0385,
+    0.1658
+   ],
+   "r@5": 0.1292,
+   "r@5_ci": [
+    0.0659,
+    0.2056
+   ],
+   "r@10": 0.1855,
+   "r@10_ci": [
+    0.0968,
+    0.2917
+   ],
+   "median_rank": 59.5,
+   "rr_macro_group": 0.107
+  },
+  "single:mutation_spectrum": {
+   "rr": 0.1105,
+   "rr_ci": [
+    0.0745,
+    0.1762
+   ],
+   "r@1": 0.0704,
+   "r@1_ci": [
+    0.0355,
+    0.1368
+   ],
+   "r@3": 0.1002,
+   "r@3_ci": [
+    0.0587,
+    0.171
+   ],
+   "r@5": 0.1226,
+   "r@5_ci": [
+    0.073,
+    0.203
+   ],
+   "r@10": 0.183,
+   "r@10_ci": [
+    0.1367,
+    0.2498
+   ],
+   "median_rank": 109.0,
+   "rr_macro_group": 0.155
+  },
+  "single:alphamissense": {
+   "rr": 0.0566,
+   "rr_ci": [
+    0.0347,
+    0.0955
+   ],
+   "r@1": 0.0348,
+   "r@1_ci": [
+    0.0144,
+    0.0679
+   ],
+   "r@3": 0.0436,
+   "r@3_ci": [
+    0.0209,
+    0.0836
+   ],
+   "r@5": 0.0563,
+   "r@5_ci": [
+    0.0307,
+    0.1046
+   ],
+   "r@10": 0.0809,
+   "r@10_ci": [
+    0.0484,
+    0.135
+   ],
+   "median_rank": 129.0,
+   "rr_macro_group": 0.0811
+  },
+  "single:structure_tm": {
+   "rr": 0.0358,
+   "rr_ci": [
+    0.0269,
+    0.0506
+   ],
+   "r@1": 0.0107,
+   "r@1_ci": [
+    0.0057,
+    0.02
+   ],
+   "r@3": 0.0262,
+   "r@3_ci": [
+    0.0153,
+    0.0463
+   ],
+   "r@5": 0.0365,
+   "r@5_ci": [
+    0.0234,
+    0.0591
+   ],
+   "r@10": 0.0649,
+   "r@10_ci": [
+    0.045,
+    0.0948
+   ],
+   "median_rank": 161.5,
+   "rr_macro_group": 0.0582
+  },
+  "equal_all": {
+   "rr": 0.2959,
+   "rr_ci": [
+    0.2186,
+    0.3833
+   ],
+   "r@1": 0.2101,
+   "r@1_ci": [
+    0.1286,
+    0.3054
+   ],
+   "r@3": 0.3326,
+   "r@3_ci": [
+    0.2537,
+    0.4215
+   ],
+   "r@5": 0.3946,
+   "r@5_ci": [
+    0.3199,
+    0.4728
+   ],
+   "r@10": 0.4544,
+   "r@10_ci": [
+    0.3834,
+    0.5265
+   ],
+   "median_rank": 16.0,
+   "rr_macro_group": 0.3046
+  },
+  "nested_grid": {
+   "rr": 0.257,
+   "r@5": 0.3685,
+   "rr_ci": [
+    0.1941,
+    0.3508
+   ],
+   "r@5_ci": [
+    0.2957,
+    0.4665
+   ]
+  },
+  "nested_anchored": {
+   "rr": 0.2796,
+   "r@5": 0.3871,
+   "rr_ci": [
+    0.2003,
+    0.3994
+   ],
+   "r@5_ci": [
+    0.2752,
+    0.5409
+   ]
+  },
+  "nested_logit": {
+   "rr": 0.2718,
+   "rr_ci": [
+    0.1941,
+    0.3884
+   ],
+   "r@1": 0.1532,
+   "r@1_ci": [
+    0.0842,
+    0.2596
+   ],
+   "r@3": 0.3069,
+   "r@3_ci": [
+    0.197,
+    0.4699
+   ],
+   "r@5": 0.3907,
+   "r@5_ci": [
+    0.2742,
+    0.5424
+   ],
+   "r@10": 0.5068,
+   "r@10_ci": [
+    0.4031,
+    0.6353
+   ],
+   "median_rank": 10.0,
+   "rr_macro_group": 0.3391
+  },
+  "grid_refit_in_sample": {
+   "rr": 0.3265,
+   "rr_ci": [
+    0.2412,
+    0.4234
+   ],
+   "r@1": 0.2121,
+   "r@1_ci": [
+    0.113,
+    0.329
+   ],
+   "r@3": 0.367,
+   "r@3_ci": [
+    0.2932,
+    0.4461
+   ],
+   "r@5": 0.4576,
+   "r@5_ci": [
+    0.3572,
+    0.5801
+   ],
+   "r@10": 0.5636,
+   "r@10_ci": [
+    0.4733,
+    0.6604
+   ],
+   "median_rank": 8.0,
+   "rr_macro_group": 0.3346
+  },
+  "logit_refit_in_sample": {
+   "rr": 0.3102,
+   "rr_ci": [
+    0.2352,
+    0.417
+   ],
+   "r@1": 0.1686,
+   "r@1_ci": [
+    0.1002,
+    0.2742
+   ],
+   "r@3": 0.3633,
+   "r@3_ci": [
+    0.2575,
+    0.5079
+   ],
+   "r@5": 0.467,
+   "r@5_ci": [
+    0.3689,
+    0.585
+   ],
+   "r@10": 0.5649,
+   "r@10_ci": [
+    0.4807,
+    0.6584
+   ],
+   "median_rank": 7.0,
+   "rr_macro_group": 0.3566
+  },
+  "phenotype+mechanism": {
+   "rr": 0.2046,
+   "rr_ci": [
+    0.1426,
+    0.2914
+   ],
+   "r@1": 0.1373,
+   "r@1_ci": [
+    0.0789,
+    0.2265
+   ],
+   "r@3": 0.2228,
+   "r@3_ci": [
+    0.1537,
+    0.315
+   ],
+   "r@5": 0.2769,
+   "r@5_ci": [
+    0.2037,
+    0.3679
+   ],
+   "r@10": 0.3261,
+   "r@10_ci": [
+    0.2505,
+    0.4217
+   ],
+   "median_rank": 55.0,
+   "rr_macro_group": 0.229
+  },
+  "phenotype+genes": {
+   "rr": 0.298,
+   "rr_ci": [
+    0.2189,
+    0.41
+   ],
+   "r@1": 0.1541,
+   "r@1_ci": [
+    0.0831,
+    0.2616
+   ],
+   "r@3": 0.3635,
+   "r@3_ci": [
+    0.2541,
+    0.513
+   ],
+   "r@5": 0.4582,
+   "r@5_ci": [
+    0.3516,
+    0.5929
+   ],
+   "r@10": 0.5904,
+   "r@10_ci": [
+    0.5061,
+    0.6758
+   ],
+   "median_rank": 7.0,
+   "rr_macro_group": 0.3574
+  },
+  "phenotype+pathway_full": {
+   "rr": 0.2986,
+   "rr_ci": [
+    0.2117,
+    0.4346
+   ],
+   "r@1": 0.1936,
+   "r@1_ci": [
+    0.107,
+    0.331
+   ],
+   "r@3": 0.3024,
+   "r@3_ci": [
+    0.1931,
+    0.4703
+   ],
+   "r@5": 0.4215,
+   "r@5_ci": [
+    0.3228,
+    0.5507
+   ],
+   "r@10": 0.5428,
+   "r@10_ci": [
+    0.453,
+    0.6415
+   ],
+   "median_rank": 8.0,
+   "rr_macro_group": 0.3459
+  },
+  "phenotype+genes+pathway_full+gene_family": {
+   "rr": 0.3167,
+   "rr_ci": [
+    0.2317,
+    0.4148
+   ],
+   "r@1": 0.2016,
+   "r@1_ci": [
+    0.1146,
+    0.3052
+   ],
+   "r@3": 0.3434,
+   "r@3_ci": [
+    0.2452,
+    0.4553
+   ],
+   "r@5": 0.4488,
+   "r@5_ci": [
+    0.3586,
+    0.5487
+   ],
+   "r@10": 0.5565,
+   "r@10_ci": [
+    0.4686,
+    0.6526
+   ],
+   "median_rank": 7.0,
+   "rr_macro_group": 0.3336
+  }
+ },
+ "paired_vs_phenotype_rr": {
+  "random": {
+   "diff": -0.2521,
+   "ci": [
+    -0.4129,
+    -0.1538
+   ],
+   "p_better": 0.0
+  },
+  "single:genes": {
+   "diff": -0.0067,
+   "ci": [
+    -0.1383,
+    0.1198
+   ],
+   "p_better": 0.441
+  },
+  "single:mechanism": {
+   "diff": -0.241,
+   "ci": [
+    -0.4034,
+    -0.1411
+   ],
+   "p_better": 0.0
+  },
+  "single:constraint": {
+   "diff": -0.1276,
+   "ci": [
+    -0.248,
+    -0.0453
+   ],
+   "p_better": 0.0
+  },
+  "single:pathway_mid": {
+   "diff": -0.051,
+   "ci": [
+    -0.1978,
+    0.0796
+   ],
+   "p_better": 0.223
+  },
+  "single:pathway_full": {
+   "diff": -0.015,
+   "ci": [
+    -0.1369,
+    0.0916
+   ],
+   "p_better": 0.403
+  },
+  "single:gene_family": {
+   "diff": -0.0416,
+   "ci": [
+    -0.1455,
+    0.039
+   ],
+   "p_better": 0.192
+  },
+  "single:protein_domain": {
+   "diff": -0.0563,
+   "ci": [
+    -0.2128,
+    0.057
+   ],
+   "p_better": 0.216
+  },
+  "single:tissue": {
+   "diff": -0.1772,
+   "ci": [
+    -0.3473,
+    -0.0515
+   ],
+   "p_better": 0.001
+  },
+  "single:mutation_spectrum": {
+   "diff": -0.163,
+   "ci": [
+    -0.3218,
+    -0.0612
+   ],
+   "p_better": 0.0
+  },
+  "single:alphamissense": {
+   "diff": -0.2169,
+   "ci": [
+    -0.3734,
+    -0.1178
+   ],
+   "p_better": 0.0
+  },
+  "single:structure_tm": {
+   "diff": -0.2377,
+   "ci": [
+    -0.3963,
+    -0.1398
+   ],
+   "p_better": 0.0
+  },
+  "equal_all": {
+   "diff": 0.0224,
+   "ci": [
+    -0.1076,
+    0.1443
+   ],
+   "p_better": 0.624
+  },
+  "nested_grid": {
+   "diff": -0.0166,
+   "ci": [
+    -0.1021,
+    0.05
+   ],
+   "p_better": 0.377
+  },
+  "nested_anchored": {
+   "diff": 0.0061,
+   "ci": [
+    -0.0489,
+    0.0567
+   ],
+   "p_better": 0.615
+  },
+  "nested_logit": {
+   "diff": -0.0018,
+   "ci": [
+    -0.0602,
+    0.0528
+   ],
+   "p_better": 0.505
+  },
+  "grid_refit_in_sample": {
+   "diff": 0.0529,
+   "ci": [
+    -0.0729,
+    0.1808
+   ],
+   "p_better": 0.767
+  },
+  "logit_refit_in_sample": {
+   "diff": 0.0367,
+   "ci": [
+    -0.0367,
+    0.1051
+   ],
+   "p_better": 0.835
+  },
+  "phenotype+mechanism": {
+   "diff": -0.069,
+   "ci": [
+    -0.1513,
+    -0.0179
+   ],
+   "p_better": 0.0
+  },
+  "phenotype+genes": {
+   "diff": 0.0245,
+   "ci": [
+    -0.0457,
+    0.0941
+   ],
+   "p_better": 0.746
+  },
+  "phenotype+pathway_full": {
+   "diff": 0.025,
+   "ci": [
+    -0.0186,
+    0.0704
+   ],
+   "p_better": 0.865
+  },
+  "phenotype+genes+pathway_full+gene_family": {
+   "diff": 0.0432,
+   "ci": [
+    -0.0765,
+    0.1669
+   ],
+   "p_better": 0.728
+  }
+ },
+ "nested_grid": {
+  "selection_frequency_of_5_folds": {
+   "phenotype": 5,
+   "genes": 4,
+   "pathway_mid": 4,
+   "gene_family": 1,
+   "protein_domain": 1
+  },
+  "fold_choices": [
+   [
+    "phenotype",
+    "genes",
+    "pathway_mid"
+   ],
+   [
+    "phenotype",
+    "genes",
+    "pathway_mid"
+   ],
+   [
+    "phenotype",
+    "genes",
+    "pathway_mid",
+    "gene_family"
+   ],
+   [
+    "phenotype",
+    "protein_domain"
+   ],
+   [
+    "phenotype",
+    "genes",
+    "pathway_mid"
+   ]
+  ],
+  "refit_all_cases": [
+   "phenotype",
+   "genes",
+   "pathway_mid"
+  ]
+ },
+ "anchored": {
+  "fold_choices": [
+   {
+    "phenotype": 1.0,
+    "genes": 0.5,
+    "pathway_mid": 0.5
+   },
+   {
+    "phenotype": 1.0,
+    "genes": 0.5,
+    "pathway_mid": 0.5
+   },
+   {
+    "phenotype": 1.0,
+    "genes": 0.5,
+    "pathway_mid": 0.5
+   },
+   {
+    "phenotype": 1.0,
+    "pathway_full": 0.25,
+    "protein_domain": 0.5
+   },
+   {
+    "phenotype": 1.0,
+    "pathway_full": 0.25,
+    "protein_domain": 0.5
+   }
+  ],
+  "refit_all_cases": {
+   "phenotype": 1.0,
+   "pathway_full": 0.25,
+   "protein_domain": 0.5
+  }
+ },
+ "logit": {
+  "fold_weights": [
+   {
+    "phenotype": 3.237,
+    "genes": 1.581,
+    "mechanism": 0.14,
+    "constraint": 0.0,
+    "pathway_mid": 1.367,
+    "pathway_full": 1.881,
+    "gene_family": 0.0,
+    "protein_domain": 0.086,
+    "tissue": 0.8,
+    "mutation_spectrum": 0.0,
+    "alphamissense": 0.0,
+    "structure_tm": 0.0
+   },
+   {
+    "phenotype": 3.353,
+    "genes": 0.417,
+    "mechanism": 0.152,
+    "constraint": 0.0,
+    "pathway_mid": 0.863,
+    "pathway_full": 1.508,
+    "gene_family": 0.675,
+    "protein_domain": 1.045,
+    "tissue": 0.502,
+    "mutation_spectrum": 0.0,
+    "alphamissense": 0.0,
+    "structure_tm": 0.0
+   },
+   {
+    "phenotype": 2.692,
+    "genes": 0.691,
+    "mechanism": 0.279,
+    "constraint": 0.0,
+    "pathway_mid": 0.835,
+    "pathway_full": 1.351,
+    "gene_family": 0.77,
+    "protein_domain": 1.061,
+    "tissue": 0.498,
+    "mutation_spectrum": 0.0,
+    "alphamissense": 0.0,
+    "structure_tm": 0.0
+   },
+   {
+    "phenotype": 4.701,
+    "genes": 0.0,
+    "mechanism": 0.0,
+    "constraint": 0.0,
+    "pathway_mid": 0.0,
+    "pathway_full": 0.408,
+    "gene_family": 1.102,
+    "protein_domain": 1.785,
+    "tissue": 0.193,
+    "mutation_spectrum": 0.0,
+    "alphamissense": 0.0,
+    "structure_tm": 0.0
+   },
+   {
+    "phenotype": 3.09,
+    "genes": 0.423,
+    "mechanism": 0.225,
+    "constraint": 0.0,
+    "pathway_mid": 0.747,
+    "pathway_full": 1.551,
+    "gene_family": 0.784,
+    "protein_domain": 1.214,
+    "tissue": 0.673,
+    "mutation_spectrum": 0.0,
+    "alphamissense": 0.0,
+    "structure_tm": 0.0
+   }
+  ],
+  "refit_weights": {
+   "phenotype": 3.363,
+   "genes": 0.457,
+   "mechanism": 0.123,
+   "constraint": 0.0,
+   "pathway_mid": 0.741,
+   "pathway_full": 1.466,
+   "gene_family": 0.68,
+   "protein_domain": 1.111,
+   "tissue": 0.547,
+   "mutation_spectrum": 0.0,
+   "alphamissense": 0.0,
+   "structure_tm": 0.0
+  }
+ },
+ "ablation_nested_grid_mrr": {
+  "phenotype": 0.2679,
+  "genes": 0.238,
+  "mechanism": 0.257,
+  "constraint": 0.257,
+  "pathway_mid": 0.2485,
+  "pathway_full": 0.257,
+  "gene_family": 0.2606,
+  "protein_domain": 0.2529,
+  "tissue": 0.257,
+  "mutation_spectrum": 0.257,
+  "alphamissense": 0.257,
+  "structure_tm": 0.257
+ },
+ "specific_drugs_mrr": {
+  "random": 0.0208,
+  "single:phenotype": 0.3169,
+  "single:genes": 0.2749,
+  "single:mechanism": 0.0359,
+  "single:pathway_full": 0.2681,
+  "single:gene_family": 0.2723,
+  "single:mutation_spectrum": 0.1892,
+  "equal_all": 0.3356,
+  "nested_grid": 0.3432,
+  "nested_logit": 0.3567,
+  "phenotype+mechanism": 0.2596,
+  "phenotype+genes+pathway_full+gene_family": 0.3452
+ },
+ "no_shared_gene_cases": 857,
+ "no_shared_gene_mrr": {
+  "random": {
+   "rr": 0.0212,
+   "rr_ci": [
+    0.0209,
+    0.0216
+   ]
+  },
+  "single:phenotype": {
+   "rr": 0.2273,
+   "rr_ci": [
+    0.135,
+    0.3725
+   ]
+  },
+  "single:genes": {
+   "rr": 0.0127,
+   "rr_ci": [
+    0.0112,
+    0.0149
+   ]
+  },
+  "single:mechanism": {
+   "rr": 0.03,
+   "rr_ci": [
+    0.0211,
+    0.0394
+   ]
+  },
+  "single:constraint": {
+   "rr": 0.0161,
+   "rr_ci": [
+    0.0122,
+    0.0211
+   ]
+  },
+  "single:pathway_mid": {
+   "rr": 0.048,
+   "rr_ci": [
+    0.0255,
+    0.0833
+   ]
+  },
+  "single:pathway_full": {
+   "rr": 0.0475,
+   "rr_ci": [
+    0.0275,
+    0.0801
+   ]
+  },
+  "single:gene_family": {
+   "rr": 0.042,
+   "rr_ci": [
+    0.0197,
+    0.0729
+   ]
+  },
+  "single:protein_domain": {
+   "rr": 0.0425,
+   "rr_ci": [
+    0.0186,
+    0.0759
+   ]
+  },
+  "single:tissue": {
+   "rr": 0.0295,
+   "rr_ci": [
+    0.0212,
+    0.0429
+   ]
+  },
+  "single:mutation_spectrum": {
+   "rr": 0.0333,
+   "rr_ci": [
+    0.0166,
+    0.0583
+   ]
+  },
+  "single:alphamissense": {
+   "rr": 0.0258,
+   "rr_ci": [
+    0.0164,
+    0.0406
+   ]
+  },
+  "single:structure_tm": {
+   "rr": 0.0197,
+   "rr_ci": [
+    0.0169,
+    0.0228
+   ]
+  },
+  "equal_all": {
+   "rr": 0.0581,
+   "rr_ci": [
+    0.0358,
+    0.0948
+   ]
+  },
+  "nested_grid": {
+   "rr": 0.0868,
+   "rr_ci": [
+    0.0661,
+    0.1141
+   ]
+  },
+  "nested_anchored": {
+   "rr": 0.15,
+   "rr_ci": [
+    0.099,
+    0.2261
+   ]
+  },
+  "nested_logit": {
+   "rr": 0.1235,
+   "rr_ci": [
+    0.0767,
+    0.193
+   ]
+  },
+  "grid_refit_in_sample": {
+   "rr": 0.1035,
+   "rr_ci": [
+    0.0733,
+    0.1437
+   ]
+  },
+  "logit_refit_in_sample": {
+   "rr": 0.1368,
+   "rr_ci": [
+    0.0834,
+    0.2157
+   ]
+  },
+  "phenotype+mechanism": {
+   "rr": 0.1283,
+   "rr_ci": [
+    0.0854,
+    0.1824
+   ]
+  },
+  "phenotype+genes": {
+   "rr": 0.1382,
+   "rr_ci": [
+    0.0875,
+    0.214
+   ]
+  },
+  "phenotype+pathway_full": {
+   "rr": 0.1588,
+   "rr_ci": [
+    0.0832,
+    0.2812
+   ]
+  },
+  "phenotype+genes+pathway_full+gene_family": {
+   "rr": 0.0883,
+   "rr_ci": [
+    0.0558,
+    0.1321
+   ]
+  }
+ },
+ "contraindication_check": {
+  "single:phenotype": {
+   "contraindication_mean_percentile": 0.4454,
+   "heldout_indication_mean_percentile": 0.31,
+   "n_contra_pairs": 651
+  },
+  "single:genes": {
+   "contraindication_mean_percentile": 0.5146,
+   "heldout_indication_mean_percentile": 0.2662,
+   "n_contra_pairs": 651
+  },
+  "single:mechanism": {
+   "contraindication_mean_percentile": 0.5534,
+   "heldout_indication_mean_percentile": 0.4039,
+   "n_contra_pairs": 651
+  },
+  "single:constraint": {
+   "contraindication_mean_percentile": 0.4977,
+   "heldout_indication_mean_percentile": 0.341,
+   "n_contra_pairs": 651
+  },
+  "single:pathway_mid": {
+   "contraindication_mean_percentile": 0.5071,
+   "heldout_indication_mean_percentile": 0.3678,
+   "n_contra_pairs": 651
+  },
+  "single:pathway_full": {
+   "contraindication_mean_percentile": 0.5066,
+   "heldout_indication_mean_percentile": 0.2057,
+   "n_contra_pairs": 651
+  },
+  "single:gene_family": {
+   "contraindication_mean_percentile": 0.4903,
+   "heldout_indication_mean_percentile": 0.2554,
+   "n_contra_pairs": 651
+  },
+  "single:protein_domain": {
+   "contraindication_mean_percentile": 0.503,
+   "heldout_indication_mean_percentile": 0.2282,
+   "n_contra_pairs": 651
+  },
+  "single:tissue": {
+   "contraindication_mean_percentile": 0.4535,
+   "heldout_indication_mean_percentile": 0.3622,
+   "n_contra_pairs": 651
+  },
+  "single:mutation_spectrum": {
+   "contraindication_mean_percentile": 0.5028,
+   "heldout_indication_mean_percentile": 0.4274,
+   "n_contra_pairs": 651
+  },
+  "single:alphamissense": {
+   "contraindication_mean_percentile": 0.485,
+   "heldout_indication_mean_percentile": 0.4535,
+   "n_contra_pairs": 651
+  },
+  "single:structure_tm": {
+   "contraindication_mean_percentile": 0.5267,
+   "heldout_indication_mean_percentile": 0.4832,
+   "n_contra_pairs": 651
+  },
+  "equal_all": {
+   "contraindication_mean_percentile": 0.5106,
+   "heldout_indication_mean_percentile": 0.2054,
+   "n_contra_pairs": 651
+  },
+  "grid_refit_in_sample": {
+   "contraindication_mean_percentile": 0.4605,
+   "heldout_indication_mean_percentile": 0.144,
+   "n_contra_pairs": 651
+  },
+  "logit_refit_in_sample": {
+   "contraindication_mean_percentile": 0.461,
+   "heldout_indication_mean_percentile": 0.114,
+   "n_contra_pairs": 651
+  },
+  "phenotype+mechanism": {
+   "contraindication_mean_percentile": 0.518,
+   "heldout_indication_mean_percentile": 0.2806,
+   "n_contra_pairs": 651
+  }
+ },
+ "runtime_s": 5.1,
+ "positives": "indication + off-label use"
+}

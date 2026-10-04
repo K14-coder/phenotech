@@ -5,6 +5,7 @@ import { PERSONAS } from "@/lib/persona";
 import { useMemo } from "react";
 import { WithGraph } from "../GraphProvider";
 import { AccuracySection } from "./AccuracySection";
+import { CollectionList } from "./CollectionList";
 import { EvidenceLegend } from "../evidence/EvidenceBits";
 import { CounterexampleCard } from "../disease/DerivedSections";
 import { useDerived, type Counterexample } from "@/lib/derived";
@@ -112,6 +113,8 @@ function Method({ idx }: { idx: GraphIndex }) {
               </li>
             ))}
           </ol>
+
+          <CollectionList idx={idx} />
 
           <h2 className="mt-12 text-[22px] font-semibold tracking-tight text-ink">What the atlas will not do</h2>
           <ul className="mt-4 space-y-3 text-sm leading-relaxed text-ink-2">

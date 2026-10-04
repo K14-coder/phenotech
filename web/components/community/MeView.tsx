@@ -210,8 +210,24 @@ function Home({ idx, a, u }: { idx: GraphIndex; a: AccountState; u: PublicUser }
         <ul className="mt-3 space-y-3">
           {(a.inbox ?? []).map((m) => (
             <li key={m.id} className="rounded-xl border border-line px-4 py-3">
-              <p className="text-xs font-medium uppercase tracking-[0.06em] text-ink-3">{m.kind === "announcement" ? "Study announcement (reviewed)" : m.kind === "contact" ? "Message from a researcher" : "Notice"}</p>
-              <p className="mt-1 text-[16px] font-medium text-ink">{m.title}</p>
+              <p className="text-xs font-medium uppercase tracking-[0.06em] text-ink-3">
+                {m.kind === "announcement"
+                  ? "Study announcement (reviewed)"
+                  : m.kind === "contact"
+                    ? "Message from a researcher"
+                    : m.kind === "trial"
+                      ? "New study · ClinicalTrials.gov"
+                      : m.kind === "grant"
+                        ? "New research · NIH RePORTER"
+                        : "Notice"}
+              </p>
+              {m.url ? (
+                <a href={m.url} target="_blank" rel="noopener noreferrer" className="mt-1 block text-[16px] font-medium text-accent-700 hover:underline">
+                  {m.title} ↗
+                </a>
+              ) : (
+                <p className="mt-1 text-[16px] font-medium text-ink">{m.title}</p>
+              )}
               <p className="mt-1 whitespace-pre-line text-[15px] text-ink-2">{m.body}</p>
               {m.extra && (
                 <dl className="mt-2 space-y-0.5 text-sm text-ink-3">
@@ -269,7 +285,7 @@ function Home({ idx, a, u }: { idx: GraphIndex; a: AccountState; u: PublicUser }
         </h2>
         {(
           [
-            ["trials", "Tell me when a clinical trial starts recruiting for a disease I follow"],
+            ["trials", "Email me about new recruiting studies and newly funded research for a disease I follow"],
             ["researcherContact", "Researchers may contact me through the atlas (they never see my email)"],
             ["groupForms", "Tell me when a patient group forms for a disease I follow"],
             ["weeklyDigest", "A weekly summary instead of single notices"],

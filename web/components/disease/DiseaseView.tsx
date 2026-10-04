@@ -15,6 +15,7 @@ import { ResearchRecommendations } from "./ResearchRecommendations";
 import { usePersona, type Persona } from "@/lib/persona";
 import { DevonDisease } from "../devon/DevonDisease";
 import { JoinBox } from "../community/JoinBox";
+import { FollowButton } from "../community/AccountBits";
 import { OseiSections } from "../research/OseiSections";
 import { DisMechForAtlas } from "../global/MechanismBits";
 import { atlasHref, clustersOf, clusterSlot, compareHref, diseaseHref, diseaseIdFromParam, pathHref, type GraphIndex } from "@/lib/graph";
@@ -114,6 +115,7 @@ function Disease({ idx, id, as: persona, embedded = false }: { idx: GraphIndex; 
                 {genes.length ? <>Caused by changes in the {joinList(genes)} gene</> : "Gene not recorded"}
                 {node.synonyms?.length ? <> · Also called {node.synonyms.slice(0, 3).join(", ")}</> : null}
               </p>
+              <FollowButton diseaseId={node.id} diseaseName={node.label} />
               {node.summary && <p className="mt-4 text-base leading-relaxed text-ink-2">{node.summary}</p>}
               {mechs.length > 0 && (
                 <div className="mt-5" data-tour="mechanisms">

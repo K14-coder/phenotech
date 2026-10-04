@@ -20,6 +20,8 @@ import {
   type ReadinessStatus,
 } from "@/lib/population";
 import { useResource } from "@/lib/resource";
+import { orgContact, trialContact, useContacts } from "@/lib/contacts";
+import { ContactLine } from "../contacts/ContactLine";
 import type { AtlasNode } from "@/lib/types";
 
 const H2 = "text-[22px] font-semibold tracking-tight text-ink";
@@ -120,7 +122,7 @@ function Population({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
           </div>
         </div>
       )}
-      <div className="mt-4 grid gap-4 md:grid-cols-2">
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 [&>*]:min-w-0 [overflow-wrap:anywhere]">
         <div className="rounded-lg border border-line px-4 py-3">
           <p className="text-xs font-medium text-ink-3">ClinVar pathogenic variants by type</p>
           {vgs.length ? (
@@ -223,6 +225,7 @@ function Reach({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
   const ch = useResource<ChannelsFile | null>("pop:channels", loadChannels);
   const by = ch?.data?.by_disease[node.id];
   const find = (id: string): Channel | undefined => ch?.data?.channels.find((c) => c.id === id);
+  const contacts = useContacts();
   const inv = investigatorsFor(idx, node.id);
   const byInst = new Map<string, number>();
   for (const p of inv.people) if (p.institution) byInst.set(p.institution, (byInst.get(p.institution) ?? 0) + 1);
@@ -234,7 +237,8 @@ function Reach({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
       </h2>
       <p className="mt-1.5 text-sm text-ink-3">
         Organisational channels only: registries with research access, patient organisations’ research contacts, active groups and trial sponsors.
-        No personal contact details are collected or shown.
+        Phones and emails are organisations’ published general contacts or a study’s ClinicalTrials.gov contact point; individual researchers are
+        reachable only through “Request contact” or their institution’s page.
       </p>
       {ch?.status === "loading" ? (
         <p className="mt-3 text-sm text-ink-3">Loading…</p>
@@ -261,6 +265,7 @@ function Reach({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
                         </span>
                       </div>
                       {c.how_to_reach && <p className="mt-0.5 text-ink-2">{c.how_to_reach}</p>}
+                      <ContactLine p={t === "recruiting_trial" ? trialContact(contacts, c.id + " " + (c.url ?? "")) : orgContact(contacts, { id: c.id, url: c.url, name: c.name })} size="sm" />
                       <div className="mt-1 flex flex-wrap gap-x-3 text-xs">
                         {c.url && (
                           <a href={c.url} target="_blank" rel="noopener noreferrer" className="text-accent-700 hover:underline">

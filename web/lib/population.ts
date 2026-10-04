@@ -100,6 +100,7 @@ export interface ScaleEntry {
 }
 
 export interface Available {
+  generated?: string;
   population: string[];
   scale: boolean;
   dismech: boolean;
@@ -110,6 +111,7 @@ export interface Available {
   variant_positions?: boolean;
   eval?: boolean;
   testing_options?: boolean;
+  contacts?: boolean;
 }
 
 async function fetchJson<T>(url: string): Promise<T> {

@@ -277,6 +277,37 @@ const writeShards = (dir, entries) => {
     // not there
   }
   if (p.files) console.log(`[sync-data] copied ${p.files} population file(s)`);
+  // contacts: organisations' published general emails / phones and ClinicalTrials.gov central contacts
+  // (data/derived/contacts/{orgs,trials}.json); a stale copy is removed when the source is gone
+  {
+    const cdst = join(webRoot, "public", "data", "derived", "contacts");
+    // slimmed for the browser: no names (CT.gov central contacts keep only phone / email), no snippets
+    const csrc = join(dataRoot, "derived", "contacts");
+    const orgsC = readJson(join(csrc, "orgs.json"));
+    const trialsC = readJson(join(csrc, "trials.json"));
+    if (orgsC || trialsC) {
+      mkdirSync(cdst, { recursive: true });
+      const EM = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const orgs = {};
+      for (const [id, o] of Object.entries(orgsC?.orgs ?? {})) {
+        const e = (o.emails ?? []).filter((x) => EM.test(x)).slice(0, 2);
+        const p = (o.phones ?? []).filter((x) => x?.number).slice(0, 2).map((x) => ({ d: x.number, t: x.e164 ?? null }));
+        if (!e.length && !p.length) continue;
+        const ev = [...(o.email_evidence ?? []), ...(o.phone_evidence ?? [])][0];
+        orgs[id] = { n: o.name, w: o.website ?? null, e, p, u: ev?.source_url ?? o.contact_page_url ?? o.source_url ?? null, r: ev?.retrieved ?? o.retrieved ?? null };
+      }
+      const trials = {};
+      for (const [nct, t] of Object.entries(trialsC?.trials ?? {})) {
+        if (!["RECRUITING", "NOT_YET_RECRUITING"].includes(t.status)) continue;
+        const c = (t.central_contacts ?? []).find((x) => x.email || x.phone);
+        if (!c) continue;
+        trials[nct] = { e: c.email && EM.test(c.email) ? c.email : null, p: c.phone ? { d: c.phone + (c.phoneExt ? ` ext. ${c.phoneExt}` : ""), t: c.e164 ?? null } : null, r: t.retrieved ?? null };
+      }
+      writeFileSync(join(cdst, "orgs.json"), JSON.stringify({ built: orgsC?.meta?.built ?? null, orgs }));
+      writeFileSync(join(cdst, "trials.json"), JSON.stringify({ built: trialsC?.meta?.built ?? null, trials }));
+      console.log(`[sync-data] contacts: ${Object.keys(orgs).length} organisations, ${Object.keys(trials).length} recruiting studies (names dropped)`);
+    } else if (existsSync(cdst)) rmSync(cdst, { recursive: true, force: true });
+  }
   const list = (dir) => (existsSync(dir) ? readdirSync(dir).filter((x) => x.endsWith(".json")).sort() : []);
   const available = {
     generated: new Date().toISOString().slice(0, 10),
@@ -290,6 +321,7 @@ const writeShards = (dir, entries) => {
     variant_positions: existsSync(join(webRoot, "public", "data", "derived", "variant_positions.json")),
     eval: existsSync(join(webRoot, "public", "data", "derived", "eval.json")),
     testing_options: existsSync(join(webRoot, "public", "data", "curated", "testing_options.json")),
+    contacts: existsSync(join(webRoot, "public", "data", "derived", "contacts", "orgs.json")) || existsSync(join(webRoot, "public", "data", "derived", "contacts", "trials.json")),
   };
   mkdirSync(join(webRoot, "public", "data", "derived", "web"), { recursive: true });
   writeFileSync(join(webRoot, "public", "data", "derived", "web", "available.json"), JSON.stringify(available, null, 2) + "\n");

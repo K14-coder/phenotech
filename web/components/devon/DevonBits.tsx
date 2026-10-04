@@ -7,6 +7,8 @@ import { useId, useState } from "react";
 import { useEvidence } from "../evidence/EvidenceProvider";
 import { PlainText } from "../PlainText";
 import { SaveButton } from "../community/AccountBits";
+import { ContactLine } from "../contacts/ContactLine";
+import { orgContact, trialContact, useContacts } from "@/lib/contacts";
 
 export interface SourceLink {
   label: string;
@@ -92,6 +94,8 @@ export interface Contact {
 }
 
 export function ContactCard({ c, cta = "Visit website" }: { c: Contact; cta?: string }) {
+  const contacts = useContacts();
+  const point = orgContact(contacts, { id: c.key, url: c.url, name: c.name });
   return (
     <li className="rounded-xl border border-line bg-white px-4 py-4">
       <p className="text-[17px] font-semibold leading-snug text-ink">{c.name}</p>
@@ -106,6 +110,7 @@ export function ContactCard({ c, cta = "Visit website" }: { c: Contact; cta?: st
         </ul>
       )}
       {c.blurb && <p className="mt-2 text-[15px] leading-relaxed text-ink-2">{c.blurb}</p>}
+      <ContactLine p={point} />
       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
         {c.url && (
           <a
@@ -147,6 +152,8 @@ export function studyKind(type?: string | null, phase?: string | string[] | null
 }
 
 export function StudyCard({ s }: { s: Study }) {
+  const contacts = useContacts();
+  const point = trialContact(contacts, `${s.key} ${s.url}`);
   return (
     <li className="rounded-xl border border-line bg-white px-4 py-4">
       <p className="text-[16px] font-medium leading-snug text-ink">{s.title}</p>
@@ -159,6 +166,7 @@ export function StudyCard({ s }: { s: Study }) {
         </p>
       )}
       <p className="mt-1 text-sm text-ink-3">Ages, places and how to join are on the study page.</p>
+      <ContactLine p={point} />
       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
         <a
           href={s.url}
@@ -272,6 +280,17 @@ export function ContributeLine({ href }: { href: string }) {
       <Link href={href} className="font-medium text-accent-700 hover:underline">
         Tell us about it →
       </Link>
+    </p>
+  );
+}
+
+/** Simple view: a gentle tip above contact cards, shown only when at least one card has a phone or email. */
+export function ContactTip({ items }: { items: Contact[] }) {
+  const contacts = useContacts();
+  if (!items.some((c) => orgContact(contacts, { id: c.key, url: c.url, name: c.name }))) return null;
+  return (
+    <p className="rounded-lg bg-subtle px-3.5 py-2.5 text-[15px] text-ink-2">
+      When you call or write, it helps to mention the gene name and that you found them through the Rare Disease Atlas.
     </p>
   );
 }

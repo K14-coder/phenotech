@@ -229,6 +229,7 @@ function buildModel(idx: GraphIndex, node: AtlasNode, ch: ChannelsFile | null, p
   ];
   return {
     name: node.label,
+    followId: node.id,
     short,
     plain,
     approved,
