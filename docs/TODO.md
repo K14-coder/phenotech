@@ -52,6 +52,7 @@ Several Claude agents and people work in parallel. Follow this every time:
   - [ ] Rerun `global_index.py` → `mechanism_index.py` → `direction_build.py` (full) → `direction_eval.py` on a machine with `data/raw/downloads/`, so Dravet gets its G2P mechanism record and a disease-side direction. The cloud session could not reach EBI, ClinGen or OBO hosts.
 - [x] Hypotheses recomputed with the cross-family links (10 ideas, now including 4-PBA → SCN1A and rapamycin → NF1).
 - [x] Experiment AI drafts for all 10 current ideas (gpt-6-astra).
+- [~] (claimed by agent "vibrant-babbage", 2026-10-04 08:10 CEST) **Independent Claude re-reading of the cited family abstracts** (DEE, lysosomal, RASopathy, cross-family; ~270 PMIDs never cross-checked): same schema and instructions as the OpenAI layer, `READER=claude` in `pipeline/openai/*`, labelled `claude:*`, verified by code, compared with the curated edges.
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
 - [x] (vibrant-babbage, 2026-10-04) The STXBP1 enrollment total in the Research view excluded multi-disease registries: a study linked to 3+ atlas diseases or listing more than 5 conditions is shown as "not counted" (STXBP1: 101,363 → 863 across 8 studies).
