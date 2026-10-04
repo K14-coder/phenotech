@@ -1,16 +1,16 @@
 # Graph build report
 
-Built 2026-10-04T03:03:29+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
+Built 2026-10-04T04:32:28+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
 
 ## Summary
 
 - **1411 nodes, 2953 edges, 17 clusters, 61 gaps**
 - Edges with at least one source: **2953/2953**
-- Evidence items with a verbatim quote: 1963/4149; quotes string-verified against the stored source: **1963/1963**
-- Contested edges (with counter-evidence): 76
-- OpenAI cross-check: 68 cited sources re-read and stamped; 111 new supporting and 2 new contradicting sources added (contradictions wait for human review)
-- Cited sources where the OpenAI reading disagrees with the curators: 8
-- Human-reviewed edges: 0
+- Evidence items with a verbatim quote: 1972/4158; quotes string-verified against the stored source: **1972/1972**
+- Contested edges (with counter-evidence): 75
+- OpenAI cross-check: 73 cited sources re-read and stamped; 108 new supporting and 0 new contradicting sources added (contradictions wait for human review)
+- Cited sources where the OpenAI reading disagrees with the curators: 12
+- Human-reviewed edges: 63
 - Dropped by review: 1; dropped as dangling: 0
 
 ## Fragments
@@ -76,10 +76,10 @@ Built 2026-10-04T03:03:29+00:00 from `biology.json`, `community.json`, `contribu
 ## Edges by evidence level
 
 - curated: 1391
-- inferred: 685
-- observational: 403
-- clinical: 274
-- experimental: 190
+- inferred: 687
+- observational: 404
+- clinical: 272
+- experimental: 189
 - hypothesis: 10
 
 ## Problems
