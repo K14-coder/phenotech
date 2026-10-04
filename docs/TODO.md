@@ -27,6 +27,8 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P1: model and evidence quality
 
+- [~] (claimed by main-session web agent, 2026-10-04) **Seven-factor view everywhere (must-have):** genes involved, signalling pathway, tissue type, symptoms, protein structure and families, mutation type and molecular consequence. Covers the factor fingerprint on disease pages, per-factor breakdowns on similar-disease and compare views, a factor lens and weights in the atlas, and the use of `data/derived/mechsim.json` (colleague) plus the features and ingest data.
+
 - [ ] Fix the PTPN11 direction in `data/derived/direction/gene_direction.json`: Noonan PTPN11 is gain of function, and only NSML is loss of function. Split by variant group / subtype (`pipeline/ingest/direction_build.py`).
 
 - [x] **Direction-aware therapy matching** (done 2026-10-04): neutral on PrimeKG, no contraindication shift, atlas gain = target leakage → keep it as a flag only. See eval.md section 6.
