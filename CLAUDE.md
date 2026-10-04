@@ -2,6 +2,8 @@
 
 This is the project for Hack-Nation Challenge 05, "AI Atlas for the World's Rare Diseases". The README covers the product; this file covers where things stand and how to keep working.
 
+**Start here:** read this file, then `docs/KNOWLEDGE.md` (decisions, benchmark lessons, traps) and `docs/TODO.md` (the prioritized to-do list; keep it updated).
+
 **Always pull before starting and push when done.** Several people and agents work on `main`.
 
 ## Run it

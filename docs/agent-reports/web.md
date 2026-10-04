@@ -1063,3 +1063,41 @@ The header already had a mark: three connected dots in the site's accent colours
 - The sample HTML was rendered in Chromium at 600 px and 390 px, light and dark: the logo loads, there is no sideways scroll, and the dark palette applies (the divider was softened for dark mode).
 - The preview page lists 7 templates at 390 and 1440 px, with no console errors, and returns 401 without the token.
 - `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Contacts prominent everywhere, named contact persons, report/remove
+
+### Contact display (`components/contacts/ContactLine.tsx`)
+- **Buttons:** `OrgContact` and `StudyContact` show **Call** (`tel:`) and **Email** (`mailto:`) buttons with the number and address written out, plus "From their website · retrieved <date>" or "From ClinicalTrials.gov".
+- **When nothing is published:**
+  - organisations: "No phone or email published on their website." for the 329 organisations whose site the extractor read (scope from `data/raw/contacts/orgs_extracted.json`), otherwise "No phone or email published that we know of." Breadth-section cards also have a "Website" link.
+  - studies: "No central phone or email on ClinicalTrials.gov; the study page lists its sites."
+- **Where it appears:**
+  - Simple group, registry and umbrella cards, and study cards. Groups that publish a contact are sorted first, so they are not hidden behind "Show more".
+  - Detailed and Industry patient-community cards and registries (`OrgCard`), which showed no contacts before.
+  - Research "Reach patients" channels: small buttons. The channel note text now wraps (it caused 94 px of sideways scroll on GBA1 at 390 px).
+  - `/d/` pages in Detailed, Research and Industry: a new "People you can contact · Patient groups and open studies" section from the scale data (up to 8 groups, reachable ones first, and 6 open studies with their CT.gov contact). The Simple view already had these.
+
+### Named contact persons
+- **Sync:** `data/derived/contacts/people.json` is synced into `public/data/derived/contacts/orgs.json` (`people`): 112 people for 19+ organisations at build time.
+  - Fields kept: name, role, email and phone as published, page URL and retrieved date. Snippets are dropped.
+  - A role guard in sync drops anything that reads as a researcher (professor, investigator, researcher, scientist, postdoc, PhD student, lab head).
+- **Card:** "Contact person: <name>, <role>" with Call and Email buttons, and the note "Shown as published by <org> on <their page> (retrieved …). To correct or remove, contact the organisation or us", where "us" links to `/privacy#report`.
+
+### Report or remove a contact
+- **`/privacy`:** a new section, "Contact details we show for groups and studies", explains what is shown and that researchers are never shown. It holds the "Report or remove a contact" form.
+- **Storage:** the form posts to `POST /api/contact-report` (same origin, rate-limited, validated). Requests are stored as `report:<id>` in `reports:pending`.
+- **Review:** `/admin` lists "Contact reports" after the queue loads (`GET`/`POST /api/admin/reports`, `ADMIN_TOKEN`), with "Mark as handled". The data itself is changed in `data/derived/contacts` and takes effect on the next build.
+
+### Visible contact links (tel / mailto), 1440 and 390 px, before → after
+| Page | Simple | Detailed | Research | Industry |
+|---|---|---|---|---|
+| /disease/STXBP1 | 7/7 → 9/7 | 0/0 → 2/6 | 9/10 → 11/16 | 0/0 → 2/6 |
+| /disease/SYT2 | 0/3 → 0/3 | 0/0 → 2/5 | 0/2 → 2/7 | 0/0 → 2/5 |
+| /disease/GBA1 | 8/6 → 8/6 | 0/0 → 8/11 | 8/6 → 16/17 | 0/0 → 8/11 |
+| /d/ cystic fibrosis (MONDO:0009061) | 6/6 → 6/7 | 0/0 → 6/7 | 0/0 → 6/7 | 0/0 → 6/7 |
+
+**Other checks:**
+- `/disease/IDUA` (Simple) shows 3 named contact persons, for example Canadian MPS Registry → Mary Bone, Executive Director, with an Email button.
+- The report form reached the admin queue and was marked as handled; the test entry lived only in a throwaway store.
+- No console errors and no sideways scroll at 1440 or 390 px.
+- `tsc` and `eslint` are clean; one `npm run build` passed.

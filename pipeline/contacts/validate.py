@@ -10,7 +10,8 @@ Policy: keep only contact details an ORGANISATION publishes so that it can be co
  - Snippets are scrubbed: any email or phone in the snippet other than the kept value becomes
    "[removed]".
 
-Usage as a library: filter_org_evidence(evidence, org) and filter_trial(study).
+Usage as a library: filter_org_evidence(evidence, org), filter_trial(study) and filter_person(entry, org)
+(named contact people: org-domain page, name + contact in the same block; see people.py).
 CLI: python3 pipeline/contacts/validate.py  -> re-checks data/derived/contacts/*.json, removes any
 offending value in place and prints what it removed.
 """
@@ -266,6 +267,135 @@ def filter_trial(study):
     return study, removed
 
 
+# ---------------------------------------------------------------- named contact people (people.json)
+PEOPLE_BLOCK_MAX = 450
+NOT_PUBLIC_RE = re.compile(r"(?i)(not (?:to be used |intended )?for (?:public|commercial|marketing) (?:use|distribution|purposes)|"
+                           r"not for publication|for (?:internal|members'?) use only|"
+                           r"(?:contact )?details (?:are |must )?not (?:to be )?(?:used|shared|published|passed on))")
+
+
+def _scrub_multi(snip, keep_emails, keep_phones):
+    ke = {e.lower() for e in keep_emails}
+    kd = [re.sub(r"\D", "", p) for p in keep_phones]
+
+    def rep_email(m):
+        return m.group(0) if m.group(0).lower().strip(".") in ke else "[removed]"
+
+    def rep_phone(m):
+        d = re.sub(r"\D", "", m.group(0))
+        if len(d) < 8 or any(k and (d in k or k in d) for k in kd):
+            return m.group(0)
+        return "[removed]"
+    return PHONE_ANY.sub(rep_phone, EMAIL_ANY.sub(rep_email, snip or ""))
+
+
+def filter_person(entry, org):
+    """Rule: the org itself publishes this person, on its OWN website domain, as a contact; name and
+    contact value(s) in the same page block (the snippet). Returns (entry|None, reason|None)."""
+    site = org.get("website") or org.get("url") or ""
+    org_host = host_of(site)
+    page_host = host_of(entry.get("page_url") or "")
+    if not org_host or not page_host or base_domain(page_host) != base_domain(org_host):
+        return None, "page_not_on_org_domain"
+    site_path = urllib.parse.urlsplit(site).path.strip("/")
+    if site_path.count("/") >= 1 and not urllib.parse.urlsplit(entry["page_url"]).path.strip("/").startswith(site_path):
+        # the org's "website" is a profile/sub-page on someone else's site (umbrella directory) or a
+        # registry hosted by a parent org: the people on that domain are not this entry's contacts
+        return None, "org_website_is_a_subpage_of_another_site"
+    name = (entry.get("name") or "").strip()
+    snip = entry.get("snippet") or ""
+    if not name or len(name) > 60:
+        return None, "no_name"
+    if NOT_PUBLIC_RE.search(snip):
+        return None, "page_says_not_for_public_use"
+    blocks = snip.split(" || ")
+    if any(len(b) > PEOPLE_BLOCK_MAX for b in blocks):
+        return None, "block_too_long"
+    emails, phones = [], []
+    for e in entry.get("emails") or []:
+        e = e.strip().strip(".").lower()
+        local, _, dom = e.partition("@")
+        if not re.fullmatch(r"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,24}", e) or JUNK.search(e):
+            continue
+        if base_domain(dom) != base_domain(org_host) and dom not in FREEMAIL and not org_named_domain(dom, org):
+            continue  # address on someone else's domain (employer, university): not the org's contact
+        if not any(name_in(name, b) and e in b.lower() for b in blocks):
+            continue  # name and address must sit in the same block
+        if dom in FREEMAIL and BOARD_ONLY.fullmatch((entry.get("role") or "").strip()) and not PERSON_CTX.search(snip):
+            continue  # a board member's private mailbox listed in a board roster, not presented as a contact
+        emails.append(e)
+    for ph in entry.get("phones") or []:
+        d = re.sub(r"\D", "", ph)
+        hit = [b for b in blocks if name_in(name, b) and d and d in re.sub(r"\D", "", b)]
+        if not hit or not 8 <= len(d) <= 15:
+            continue
+        b = hit[0]
+        pos = b.find(ph)
+        if pos >= 0 and re.search(r"(?i)fax\b[^0-9]{0,6}$", b[:pos][-30:]):
+            continue
+        phones.append(ph)
+    if not emails and not phones:
+        return None, "no_contact_in_same_block_on_org_domain"
+    out = {**entry, "name": name, "emails": emails, "phones": phones,
+           "snippet": _scrub_multi(snip, emails, phones)}
+    return out, None
+
+
+BOARD_ONLY = re.compile(r"(?i)(?:board member|director|trustee|treasurer|secretary|vice[- ]president|member|)")
+PERSON_CTX = re.compile(r"(?i)(contact|get in touch|reach|write to|email us|questions|enquir|inquir|kontakt|contatt)")
+
+
+def org_named_domain(dom, org):
+    """A second domain of the same organisation, e.g. kinslowfoundation.org for 'Kinslow TUBB4a Foundation'."""
+    stem = re.sub(r"[^a-z0-9]", "", base_domain(dom).split(".")[0])
+    words = re.findall(r"[a-z0-9]+", (org.get("name") or "").lower())
+    if len(stem) < 5 or re.search(r"(univ|hospital|health|clinic|nhs|edu|med|ac$)", stem):
+        return False
+    squashed = "".join(words)
+    return stem in squashed or any(stem.startswith(w) and len(w) >= 5 and stem[len(w):] in squashed for w in words)
+
+
+def name_in(name, block):
+    toks = [t for t in re.split(r"\s+", name) if len(t) > 1]
+    return all(t.lower() in block.lower() for t in toks)
+
+
+def check_people_file(d, orgs_meta):
+    """Re-check data/derived/contacts/people.json in place."""
+    pf = d / "people.json"
+    if not pf.exists():
+        return 0
+    pj = json.loads(pf.read_text())
+    n = 0
+    for oid in list(pj["people"]):
+        org = orgs_meta.get(oid) or {}
+        keep = []
+        for x in pj["people"][oid]:
+            y, why = filter_person(x, org)
+            if why:
+                print("REMOVE person", oid, x.get("name", "")[:1] + "***", why)
+                n += 1
+                continue
+            if y["emails"] != x["emails"] or y["phones"] != x["phones"]:
+                print("TRIM person", oid, x.get("name", "")[:1] + "***")
+                n += 1
+            if not y.get("removal_note") or y["page_url"] not in y["removal_note"] or "/privacy" not in y["removal_note"]:
+                print("MISSING removal note", oid)
+                n += 1
+                y["removal_note"] = (f"Shown as published by {org.get('name', oid)} on {y['page_url']}. To correct or "
+                                     f"remove, contact the organisation or us via /privacy")
+            keep.append(y)
+        if keep:
+            pj["people"][oid] = keep
+        else:
+            del pj["people"][oid]
+    if n and "--dry" not in sys.argv:
+        pj["meta"]["orgs_with_people"] = len(pj["people"])
+        pj["meta"]["people"] = sum(len(v) for v in pj["people"].values())
+        pf.write_text(json.dumps(pj, indent=1, ensure_ascii=False))
+    return n
+
+
 def main():
     d = ROOT / "data" / "derived" / "contacts"
     orgs = json.loads((d / "orgs.json").read_text())
@@ -291,6 +421,12 @@ def main():
             n_removed += 1
         if s is None:
             del trials["trials"][nct]
+    targets = json.loads((ROOT / "data/raw/contacts/orgs_extracted.json").read_text())["orgs"] \
+        if (ROOT / "data/raw/contacts/orgs_extracted.json").exists() else {}
+    om = {k: {"name": t["name"], "website": t.get("url")} for k, t in targets.items()}
+    for k, o in orgs["orgs"].items():
+        om.setdefault(k, {"name": o["name"], "website": o.get("website")})
+    n_removed += check_people_file(d, om)
     if n_removed and "--dry" not in sys.argv:
         (d / "orgs.json").write_text(json.dumps(orgs, indent=1, ensure_ascii=False))
         (d / "trials.json").write_text(json.dumps(trials, indent=1, ensure_ascii=False))

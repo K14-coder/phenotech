@@ -1,0 +1,55 @@
+{
+ "note": "Manual decisions applied by people.py. A rejection removes that (org, name) pair; the reason is logged in data/raw/contacts/people_candidates.json.",
+ "reject": [
+  {
+   "org": "org:rasopathies-network",
+   "name": "Ami Brooks",
+   "reason": "contact for a third-party university study team, not for the organisation"
+  },
+  {
+   "org": "org:rasopathies-network",
+   "name": "Emma Burkitt-Wright",
+   "reason": "contact for a third-party clinical genetics study team, not for the organisation"
+  },
+  {
+   "org": "org:rasopathies-network",
+   "name": "Jane Messere",
+   "reason": "hospital study-site research nurse, not a contact for the organisation"
+  },
+  {
+   "org": "org:rasopathies-network",
+   "name": "Anna de la Motte",
+   "reason": "hospital study-site coordinator, not a contact for the organisation"
+  }
+ ],
+ "add": [
+  {
+   "org": "org:znm-zusammen-stark-e-v",
+   "name": "Judith Wartenburger",
+   "role": "Assistenz des Vorstands",
+   "emails": [
+    "judith.wartenburger@znm-zusammenstark.org"
+   ],
+   "phones": [
+    "01515 4820534"
+   ],
+   "page_url": "https://znm-zusammenstark.org/",
+   "lines_before": 2,
+   "why": "general-enquiries contact block ('Bei allgemeinen Anfragen kontaktieren Sie bitte'); two people in one line, each followed by their own Tel/Email pair"
+  },
+  {
+   "org": "org:znm-zusammen-stark-e-v",
+   "name": "Maria Miquel",
+   "role": "Assistenz des Vorstands",
+   "emails": [
+    "maria.miquel@znm-zusammenstark.org"
+   ],
+   "phones": [
+    "0151 43389269"
+   ],
+   "page_url": "https://znm-zusammenstark.org/",
+   "lines_before": 2,
+   "why": "same block as above"
+  }
+ ]
+}

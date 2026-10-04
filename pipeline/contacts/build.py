@@ -170,8 +170,10 @@ We collect **only contact details that an organisation publishes so that it can 
   status is `RECRUITING` or `NOT_YET_RECRUITING`. Sponsors publish these so participants can reach the
   study. Overall officials keep only **affiliation + role** (no names). Locations keep only
   facility, city, state, country and status (site-level contacts are dropped).
-- **Never**: researchers' emails or phones from papers, author lists or staff pages; no combining of
-  sources to find a person's details.
+- **Named people** only when the organisation itself publishes that person, on its own website, as a
+  contact for the organisation (see "Named contact people" below, `people.json`).
+- **Never**: researchers' emails or phones from papers or author lists; no combining of sources to find
+  or complete a person's details; no guessed addresses.
 - `validate.py` keeps only role mailboxes on the org's own domain (info@, contact@, support@, helpline@,
   membership@ ..., or the organisation's own acronym/name) and removes anything that looks personal: first.last@ or first-name mailboxes, addresses
   matching a person named next to them, free-mail addresses (gmail, yahoo, ...) not presented as the
@@ -236,19 +238,23 @@ Masked log of everything the validator removed (org id, kind, masked value, reas
 python3 pipeline/contacts/fetch_trials.py     # CT.gov, cached
 python3 pipeline/contacts/extract_orgs.py     # stored pages + capped contact-page fetches, cached
 python3 pipeline/contacts/build.py            # validate + write derived files
-python3 pipeline/contacts/validate.py         # optional re-check of derived files
+python3 pipeline/contacts/people.py           # named contact people (after build.py, which writes exclusions.json)
+python3 pipeline/contacts/validate.py         # optional re-check of derived files (incl. people.json)
 ```
 
 ## Caveats
-- Precision over recall: role mailboxes are kept, named individuals are dropped even on the org's own
-  site, so some small groups whose only address is a founder's mailbox show no email (link to their
-  contact page instead).
+- Precision over recall: `orgs.json` keeps role mailboxes only; named people the org presents as its
+  contact are in `people.json` (see below).
 - Some stored pages had emails redacted at storage time (`[email-redacted]`); those orgs got a fresh
   contact-page fetch.
 - Directory-only scale orgs (Global Genes / NORD profile, no own website) are not covered.
 - Phone extraction from visible text needs a phone keyword on the same line; a few numbers may be
   mis-labelled (e.g. a fax listed without a label).
 """
+    old = (OUT / "README.md").read_text() if (OUT / "README.md").exists() else ""
+    if "<!-- people:start -->" in old:  # keep the section written by people.py
+        readme = readme.rstrip() + "\n\n" + old[old.index("<!-- people:start -->"):old.index("<!-- people:end -->")] \
+            + "<!-- people:end -->\n"
     (OUT / "README.md").write_text(readme)
     print(json.dumps({**meta, **tmeta, "excluded_org_values": len(oex), "reasons": reasons,
                       "fetch": fetch_stats, "brightdata": bd_total}, default=str, indent=1))

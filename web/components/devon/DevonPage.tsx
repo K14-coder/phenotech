@@ -2,6 +2,7 @@
 
 // Devon's diagnosis page, in the spec's order. The same layout serves a disease mapped in depth
 // (/disease/<id>) and any other rare disease (/d/<id>); builders fill a DevonModel from real data only.
+import { orgContact, orgPeople, useContacts } from "@/lib/contacts";
 import { FollowButton } from "../community/AccountBits";
 import Link from "next/link";
 import { useState } from "react";
@@ -74,7 +75,12 @@ function MoreList<T>({ items, first, noun, plural, render }: { items: T[]; first
   );
 }
 
-export function DevonPage({ m, learnMore }: { m: DevonModel; learnMore?: React.ReactNode }) {
+export function DevonPage({ m: model, learnMore }: { m: DevonModel; learnMore?: React.ReactNode }) {
+  // groups and registries that publish a phone, email or contact person come first, so they are never hidden behind "Show more"
+  const contacts = useContacts();
+  const reachable = (c: Contact) => (orgContact(contacts, { id: c.key, url: c.url, name: c.name }) || orgPeople(contacts, { id: c.key }).length ? 0 : 1);
+  const byReach = (list: Contact[]) => list.map((c, i) => [c, i] as const).sort((a, b) => reachable(a[0]) - reachable(b[0]) || a[1] - b[1]).map(([c]) => c);
+  const m = contacts ? { ...model, groups: byReach(model.groups), registries: byReach(model.registries), umbrella: byReach(model.umbrella) } : model;
   const hasGroup = m.groups.length > 0;
   const firstGroup = m.groups[0];
   const firstRegistry = m.registries[0];

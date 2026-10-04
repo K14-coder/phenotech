@@ -14,8 +14,10 @@ We collect **only contact details that an organisation publishes so that it can 
   status is `RECRUITING` or `NOT_YET_RECRUITING`. Sponsors publish these so participants can reach the
   study. Overall officials keep only **affiliation + role** (no names). Locations keep only
   facility, city, state, country and status (site-level contacts are dropped).
-- **Never**: researchers' emails or phones from papers, author lists or staff pages; no combining of
-  sources to find a person's details.
+- **Named people** only when the organisation itself publishes that person, on its own website, as a
+  contact for the organisation (see "Named contact people" below, `people.json`).
+- **Never**: researchers' emails or phones from papers or author lists; no combining of sources to find
+  or complete a person's details; no guessed addresses.
 - `validate.py` keeps only role mailboxes on the org's own domain (info@, contact@, support@, helpline@,
   membership@ ..., or the organisation's own acronym/name) and removes anything that looks personal: first.last@ or first-name mailboxes, addresses
   matching a person named next to them, free-mail addresses (gmail, yahoo, ...) not presented as the
@@ -80,15 +82,73 @@ Masked log of everything the validator removed (org id, kind, masked value, reas
 python3 pipeline/contacts/fetch_trials.py     # CT.gov, cached
 python3 pipeline/contacts/extract_orgs.py     # stored pages + capped contact-page fetches, cached
 python3 pipeline/contacts/build.py            # validate + write derived files
-python3 pipeline/contacts/validate.py         # optional re-check of derived files
+python3 pipeline/contacts/people.py           # named contact people (after build.py, which writes exclusions.json)
+python3 pipeline/contacts/validate.py         # optional re-check of derived files (incl. people.json)
 ```
 
 ## Caveats
-- Precision over recall: role mailboxes are kept, named individuals are dropped even on the org's own
-  site, so some small groups whose only address is a founder's mailbox show no email (link to their
-  contact page instead).
+- Precision over recall: `orgs.json` keeps role mailboxes only; named people the org presents as its
+  contact are in `people.json` (see below).
 - Some stored pages had emails redacted at storage time (`[email-redacted]`); those orgs got a fresh
   contact-page fetch.
 - Directory-only scale orgs (Global Genes / NORD profile, no own website) are not covered.
 - Phone extraction from visible text needs a phone keyword on the same line; a few numbers may be
   mis-labelled (e.g. a fax listed without a label).
+
+<!-- people:start -->
+## Named contact people (`people.json`)
+
+Built 2026-10-04 by `pipeline/contacts/people.py`; re-checked by `validate.py`.
+
+### Rule
+A named person is included **only when the organisation itself publishes that person, on its own
+website domain, as a contact for the organisation** -- e.g. a contact page listing "Family support
+coordinator: Jane Doe, jane@org.org", "Contact our founder Maria at ...", or a "Get in touch" / team
+block naming the person with an email or phone.
+
+- We keep exactly what that page publishes: name, role/title and the email(s)/phone(s) shown next to the
+  person, plus org id, page url, the verbatim page block as `snippet`, and the retrieved date.
+- **One source only, the org's own page.** Nothing is combined from papers, LinkedIn, search engines or
+  other sites; no address is guessed from a pattern.
+- Skipped: people shown only as board members without contact details; pages saying contact details are
+  not for public use; registries/studies (asset nodes: their host org's entry carries the people);
+  contacts for third-party study teams listed on an org's site; researchers and clinicians from papers.
+- `validate.filter_person` enforces: page on the same registrable domain as the org's website (and not a
+  profile page on an umbrella site); name and each kept email/phone in the **same page block** (the
+  snippet, max 450 characters per block); emails only on the org's own domain(s) or a free-mail address
+  shown as that person's contact (a board member's private free-mail in a plain roster is dropped);
+  addresses on employers'/universities' domains dropped; fax numbers dropped; any other email/phone in
+  the snippet becomes `[removed]`. An address published only behind a link icon is attributed to a
+  person only if the link label names them or the address carries their name; otherwise it is dropped
+  as ambiguous. An address shared by 3+ people of one org (e.g. `admin@` next to every board member) is
+  the org's general mailbox and is not shown as a person's contact.
+- Manual decisions: `pipeline/contacts/people_review.json` (rejections with reasons; two additions for a
+  two-person block the parser cannot split, re-checked against the stored page).
+
+### Removal path
+Every entry carries `removal_note`, which the UI shows next to the person:
+"Shown as published by <org> on <url>. To correct or remove, contact the organisation or us via /privacy"
+
+### Counts
+
+| | |
+|---|---|
+| Orgs with a named contact person | 27 (deep 21, top300 6) |
+| Named contact people | 112 (with email 112, with phone 9) |
+| Candidates rejected under the rule | 31: no_contact_in_same_block_on_org_domain 11, only_shared_org_mailbox 10, not_presented_as_contact 5, manual: contact for a third-party clinical genetics study team, not for the organisation 1, manual: hospital study-site coordinator, not a contact for the organisation 1, manual: hospital study-site research nurse, not a contact for the organisation 1, manual: contact for a third-party university study team, not for the organisation 1, org_website_is_a_subpage_of_another_site 1 |
+| Earlier exclusions re-checked (`named_individual_phone`, `personal_looking_mailbox`) | 82: requalified 26, still excluded 56 (masked log: `exclusions_people_review.json`) |
+| Team/contact/about/staff pages fetched for deep-disease orgs (max 1 per org host) | {'ok': 127, 'no_unfetched_page_link': 24, 'no_stored_homepage_html': 11} |
+| Bright Data Web Unlocker requests for this layer | 4 (cap 100) |
+
+### Format
+`{meta, people: {<org id>: [{name, role, emails[], phones[], page_url, snippet, retrieved, removal_note}]}}`
+(org ids as in `orgs.json`). In snippets, page lines are joined with ` | `, blocks from the same page with
+` || `, a bio paragraph is shortened to `[...]`, and `(mailto: x)` marks an address the page publishes
+behind a link (e.g. a name or a "Contact Kacie" button). All candidates with their decision: `data/raw/contacts/people_candidates.json`.
+
+### Re-run
+```
+python3 pipeline/contacts/people.py            # add --no-fetch to use only cached pages
+python3 pipeline/contacts/validate.py          # re-checks orgs.json, trials.json and people.json
+```
+<!-- people:end -->

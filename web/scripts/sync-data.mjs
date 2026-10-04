@@ -303,9 +303,29 @@ const writeShards = (dir, entries) => {
         if (!c) continue;
         trials[nct] = { e: c.email && EM.test(c.email) ? c.email : null, p: c.phone ? { d: c.phone + (c.phoneExt ? ` ext. ${c.phoneExt}` : ""), t: c.e164 ?? null } : null, r: t.retrieved ?? null };
       }
-      writeFileSync(join(cdst, "orgs.json"), JSON.stringify({ built: orgsC?.meta?.built ?? null, orgs }));
+      // organisations whose own website was checked (with or without a contact), so the UI can say "we looked"
+      // scope of the extraction (data/raw/contacts/orgs_extracted.json: every org whose site was read, 473), else the derived orgs
+      const scopeC = readJson(join(dataRoot, "raw", "contacts", "orgs_extracted.json"));
+      const checked = Object.entries(scopeC?.orgs ?? orgsC?.orgs ?? {})
+        .filter(([, o]) => o.url ?? o.website)
+        .map(([id, o]) => [id, o.url ?? o.website]);
+      // named contact persons that an organisation publishes on its own site (data/derived/contacts/people.json)
+      const peopleC = readJson(join(csrc, "people.json"));
+      const people = {};
+      const plist = Array.isArray(peopleC?.people)
+        ? peopleC.people
+        : Object.entries(peopleC?.people ?? peopleC?.orgs ?? {}).flatMap(([oid, v]) => (Array.isArray(v) ? v : (v?.people ?? [])).map((x) => ({ org_id: oid, ...x })));
+      for (const x of plist) {
+        const oid = x.org_id ?? x.org ?? x.organisation_id;
+        // never individual researchers (also guarded by role words), only an organisation's own named contacts
+        if (!oid || !x.name || x.kind === "researcher" || x.is_researcher || /\b(professor|principal investigator|investigator|researcher|scientist|postdoc|ph\.?d\.? (student|candidate)|lab (head|lead))\b/i.test(x.role ?? "")) continue;
+        const e = (x.emails ?? (x.email ? [x.email] : [])).filter((m) => EM.test(m)).slice(0, 1);
+        const ph = (x.phones ?? (x.phone ? [x.phone] : [])).map((q) => (typeof q === "string" ? { d: q, t: null } : { d: q.number ?? q.display ?? "", t: q.e164 ?? null })).filter((q) => q.d).slice(0, 1);
+        (people[oid] ??= []).push({ n: x.name, r: x.role ?? null, e, p: ph, u: x.page_url ?? x.source_url ?? null, r2: x.retrieved ?? null });
+      }
+      writeFileSync(join(cdst, "orgs.json"), JSON.stringify({ built: orgsC?.meta?.built ?? null, orgs, checked, people }));
       writeFileSync(join(cdst, "trials.json"), JSON.stringify({ built: trialsC?.meta?.built ?? null, trials }));
-      console.log(`[sync-data] contacts: ${Object.keys(orgs).length} organisations, ${Object.keys(trials).length} recruiting studies (names dropped)`);
+      console.log(`[sync-data] contacts: ${Object.keys(orgs).length} organisations (${checked.length} websites checked, ${Object.values(people).flat().length} named contacts), ${Object.keys(trials).length} recruiting studies (names dropped)`);
     } else if (existsSync(cdst)) rmSync(cdst, { recursive: true, force: true });
   }
   // full ClinVar P/LP shards (data/derived/ingest/clinvar/<djb2(gene)%64>.json), loaded one shard at a time by

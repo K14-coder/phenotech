@@ -20,8 +20,7 @@ import {
   type ReadinessStatus,
 } from "@/lib/population";
 import { useResource } from "@/lib/resource";
-import { orgContact, trialContact, useContacts } from "@/lib/contacts";
-import { ContactLine } from "../contacts/ContactLine";
+import { OrgContact, StudyContact } from "../contacts/ContactLine";
 import type { AtlasNode } from "@/lib/types";
 
 const H2 = "text-[22px] font-semibold tracking-tight text-ink";
@@ -225,7 +224,6 @@ function Reach({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
   const ch = useResource<ChannelsFile | null>("pop:channels", loadChannels);
   const by = ch?.data?.by_disease[node.id];
   const find = (id: string): Channel | undefined => ch?.data?.channels.find((c) => c.id === id);
-  const contacts = useContacts();
   const inv = investigatorsFor(idx, node.id);
   const byInst = new Map<string, number>();
   for (const p of inv.people) if (p.institution) byInst.set(p.institution, (byInst.get(p.institution) ?? 0) + 1);
@@ -257,7 +255,7 @@ function Reach({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
                   .filter((c): c is Channel => !!c)
                   .slice(0, t === "patient_org" || t === "recruiting_trial" ? 6 : 8)
                   .map((c) => (
-                    <li key={c.id} className="rounded-md border border-line px-3 py-2 text-sm">
+                    <li key={c.id} className="rounded-md border border-line px-3 py-2 text-sm [overflow-wrap:anywhere]">
                       <div className="flex flex-wrap items-baseline justify-between gap-x-3">
                         <span className="font-medium text-ink">{c.name}</span>
                         <span className="text-xs text-ink-3">
@@ -265,7 +263,7 @@ function Reach({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
                         </span>
                       </div>
                       {c.how_to_reach && <p className="mt-0.5 text-ink-2">{c.how_to_reach}</p>}
-                      <ContactLine p={t === "recruiting_trial" ? trialContact(contacts, c.id + " " + (c.url ?? "")) : orgContact(contacts, { id: c.id, url: c.url, name: c.name })} size="sm" />
+                      {t === "recruiting_trial" ? <StudyContact idOrUrl={`${c.id} ${c.url ?? ""}`} size="sm" /> : <OrgContact org={{ id: c.id, url: c.url, name: c.name }} size="sm" />}
                       <div className="mt-1 flex flex-wrap gap-x-3 text-xs">
                         {c.url && (
                           <a href={c.url} target="_blank" rel="noopener noreferrer" className="text-accent-700 hover:underline">

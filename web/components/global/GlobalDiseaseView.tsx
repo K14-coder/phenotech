@@ -34,6 +34,8 @@ import {
 } from "@/lib/global";
 import { loadAvailableOnce } from "@/lib/population";
 import { GeneFactors } from "../disease/GeneFactors";
+import { OrgContact, StudyContact } from "../contacts/ContactLine";
+import { orgContact, useContacts } from "@/lib/contacts";
 import { retry, useResource } from "@/lib/resource";
 import { usePersona } from "@/lib/persona";
 import { loadScale, type ScaleEntry } from "@/lib/population";
@@ -217,6 +219,7 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
         )}
 
         {shardState !== "loading" && shardState !== "error" && !entry && <SimilarBest id={row.id} gi={gi} idx={idx} fallback={null} />}
+        {persona !== "family" && scaleRes?.data && <ScaleContacts scale={scaleRes.data} />}
         {persona !== "leader" && row.genes.length > 0 && (
           <div className="max-w-[760px]">
             <GeneFactors genes={row.genes} />
@@ -428,6 +431,63 @@ function Closest({
           )}
           {meta?.far_text && <p className="text-xs leading-relaxed text-ink-3">{meta.far_text}</p>}
         </div>
+      )}
+    </section>
+  );
+}
+
+/** Breadth layer: patient groups and open studies for this disease, with their published phone and email. */
+function ScaleContacts({ scale }: { scale: ScaleEntry }) {
+  const OPEN = ["RECRUITING", "NOT_YET_RECRUITING", "ENROLLING_BY_INVITATION"];
+  const contacts = useContacts();
+  // groups that publish a phone or email first
+  const orgs = scale.orgs
+    .map((o, i) => [o, i] as const)
+    .sort((a, b) => Number(!orgContact(contacts, { url: a[0].u, name: a[0].n })) - Number(!orgContact(contacts, { url: b[0].u, name: b[0].n })) || a[1] - b[1])
+    .map(([o]) => o)
+    .slice(0, 8);
+  const studies = scale.studies.filter((x) => OPEN.includes(x.st)).slice(0, 6);
+  if (!orgs.length && !studies.length) return null;
+  return (
+    <section aria-labelledby="reach-scale-h" className="max-w-[760px]">
+      <p className={EYEBROW}>People you can contact</p>
+      <h2 id="reach-scale-h" className={`mt-1 ${H2}`}>
+        Patient groups and open studies
+      </h2>
+      <p className="mt-1.5 text-sm text-ink-3">Matched automatically from public directories and ClinicalTrials.gov. Phones and emails are the ones each group or study publishes.</p>
+      {orgs.length > 0 && (
+        <ul className="mt-4 space-y-2.5">
+          {orgs.map((o) => (
+            <li key={`${o.n}-${o.u ?? ""}`} className="rounded-lg border border-line px-4 py-3">
+              <p className="text-[15px] font-medium text-ink">
+                {o.n}
+                {o.c ? <span className="ml-2 text-xs font-normal text-ink-3">{o.c}</span> : null}
+              </p>
+              <OrgContact org={{ url: o.u, name: o.n }} size="sm" />
+              {o.u && (
+                <a href={o.u} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-xs text-accent-700 hover:underline">
+                  Website ↗
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+      {studies.length > 0 && (
+        <>
+          <p className="mt-5 text-xs font-medium text-ink-3">Studies looking for participants</p>
+          <ul className="mt-2 space-y-2.5">
+            {studies.map((x) => (
+              <li key={x.id} className="rounded-lg border border-line px-4 py-3">
+                <a href={x.u} target="_blank" rel="noopener noreferrer" className="text-[15px] font-medium text-ink hover:text-accent-700 hover:underline">
+                  {x.t} ↗
+                </a>
+                <p className="text-xs text-ink-3">{[x.st.toLowerCase().replace(/_/g, " "), x.sp].filter(Boolean).join(" · ")}</p>
+                <StudyContact idOrUrl={x.id} size="sm" />
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </section>
   );

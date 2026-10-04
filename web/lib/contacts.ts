@@ -31,11 +31,25 @@ interface TrialRec {
   r?: string | null;
 }
 
+/** A person an organisation itself publishes as its contact (never a researcher), exactly as published. */
+export interface ContactPerson {
+  name: string;
+  role: string | null;
+  phones: { display: string; tel: string }[];
+  emails: string[];
+  page: string | null;
+  retrieved: string | null;
+}
+
 export interface ContactsIndex {
   byId: Map<string, ContactPoint>;
   byHost: Map<string, ContactPoint>;
   byName: Map<string, ContactPoint>;
   trials: Map<string, ContactPoint>;
+  /** organisations whose own website was read (so "no phone or email published" is a real finding) */
+  checkedIds: Set<string>;
+  checkedHosts: Set<string>;
+  people: Map<string, ContactPerson[]>;
 }
 
 const host = (u?: string | null) => {
@@ -74,7 +88,24 @@ async function loadContacts(): Promise<ContactsIndex | null> {
         .catch(() => null),
     ),
   );
-  const idx: ContactsIndex = { byId: new Map(), byHost: new Map(), byName: new Map(), trials: new Map() };
+  const idx: ContactsIndex = { byId: new Map(), byHost: new Map(), byName: new Map(), trials: new Map(), checkedIds: new Set(), checkedHosts: new Set(), people: new Map() };
+  for (const [id, url] of (orgs?.checked ?? []) as [string, string][]) {
+    idx.checkedIds.add(id);
+    const h = host(url);
+    if (h) idx.checkedHosts.add(h);
+  }
+  for (const [id, list] of Object.entries((orgs?.people ?? {}) as Record<string, { n: string; r: string | null; e?: string[]; p?: { d: string; t: string | null }[]; u?: string | null; r2?: string | null }[]>))
+    idx.people.set(
+      id,
+      list.map((x) => ({
+        name: x.n,
+        role: x.r,
+        emails: (x.e ?? []).filter((m) => EMAIL.test(m)),
+        phones: (x.p ?? []).map((q) => ({ display: q.d, tel: telOf(q.t ?? q.d) })).filter((q) => q.tel.replace(/\D/g, "").length >= 6),
+        page: x.u ?? null,
+        retrieved: x.r2 ?? null,
+      })),
+    );
   for (const [id, o] of Object.entries((orgs?.orgs ?? {}) as Record<string, OrgRec>)) {
     const p = orgPoint(o);
     if (!p) continue;
@@ -103,4 +134,14 @@ export function trialContact(idx: ContactsIndex | null, idOrUrl: string): Contac
   if (!idx) return null;
   const nct = idOrUrl.match(/NCT\d{8}/)?.[0];
   return nct ? (idx.trials.get(nct) ?? null) : null;
+}
+
+/** Was this organisation's own website read for contacts? */
+export function orgChecked(idx: ContactsIndex | null, o: { id?: string; url?: string | null }): boolean {
+  if (!idx) return false;
+  return (!!o.id && idx.checkedIds.has(o.id)) || (!!host(o.url) && idx.checkedHosts.has(host(o.url)));
+}
+
+export function orgPeople(idx: ContactsIndex | null, o: { id?: string }): ContactPerson[] {
+  return (idx && o.id && idx.people.get(o.id)) || [];
 }

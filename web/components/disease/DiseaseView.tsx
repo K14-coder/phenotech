@@ -18,6 +18,7 @@ import { JoinBox } from "../community/JoinBox";
 import { FollowButton } from "../community/AccountBits";
 import { OseiSections } from "../research/OseiSections";
 import { GeneFactors } from "./GeneFactors";
+import { OrgContact } from "../contacts/ContactLine";
 import { DisMechForAtlas } from "../global/MechanismBits";
 import { atlasHref, clustersOf, clusterSlot, compareHref, diseaseHref, diseaseIdFromParam, pathHref, type GraphIndex } from "@/lib/graph";
 import {
@@ -679,6 +680,7 @@ function OrgCard({ o, note }: { o: OrgPartner; note: string }) {
             Website ↗
           </a>
         )}
+        <OrgContact org={{ id: o.org.id, url: isPlaceholderUrl(url) ? null : url, name: o.org.label }} size="sm" />
       </div>
       <EvidenceChip edge={o.edge} label="Source" />
     </li>
@@ -831,6 +833,7 @@ function CommunityBlock({
                           <div className="min-w-0">
                             <p className="text-sm font-medium text-ink">{r.node.label}</p>
                             <p className="mt-0.5 text-xs text-ink-3">Registry that already accepts people with {short}</p>
+                            <OrgContact org={{ id: r.node.id, url: r.node.type === "asset" && !isPlaceholderUrl(r.node.attrs?.url) ? r.node.attrs?.url : null, name: r.node.label }} size="sm" />
                             {r.node.type === "asset" && !isPlaceholderUrl(r.node.attrs?.url) && (
                               <a href={r.node.attrs?.url} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-xs text-accent-700 hover:underline">
                                 Website ↗

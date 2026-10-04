@@ -7,8 +7,8 @@ import { useId, useState } from "react";
 import { useEvidence } from "../evidence/EvidenceProvider";
 import { PlainText } from "../PlainText";
 import { SaveButton } from "../community/AccountBits";
-import { ContactLine } from "../contacts/ContactLine";
-import { orgContact, trialContact, useContacts } from "@/lib/contacts";
+import { OrgContact, StudyContact } from "../contacts/ContactLine";
+import { orgContact, useContacts } from "@/lib/contacts";
 
 export interface SourceLink {
   label: string;
@@ -94,8 +94,6 @@ export interface Contact {
 }
 
 export function ContactCard({ c, cta = "Visit website" }: { c: Contact; cta?: string }) {
-  const contacts = useContacts();
-  const point = orgContact(contacts, { id: c.key, url: c.url, name: c.name });
   return (
     <li className="rounded-xl border border-line bg-white px-4 py-4">
       <p className="text-[17px] font-semibold leading-snug text-ink">{c.name}</p>
@@ -110,7 +108,7 @@ export function ContactCard({ c, cta = "Visit website" }: { c: Contact; cta?: st
         </ul>
       )}
       {c.blurb && <p className="mt-2 text-[15px] leading-relaxed text-ink-2">{c.blurb}</p>}
-      <ContactLine p={point} />
+      <OrgContact org={{ id: c.key, url: c.url, name: c.name }} />
       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
         {c.url && (
           <a
@@ -152,8 +150,6 @@ export function studyKind(type?: string | null, phase?: string | string[] | null
 }
 
 export function StudyCard({ s }: { s: Study }) {
-  const contacts = useContacts();
-  const point = trialContact(contacts, `${s.key} ${s.url}`);
   return (
     <li className="rounded-xl border border-line bg-white px-4 py-4">
       <p className="text-[16px] font-medium leading-snug text-ink">{s.title}</p>
@@ -166,7 +162,7 @@ export function StudyCard({ s }: { s: Study }) {
         </p>
       )}
       <p className="mt-1 text-sm text-ink-3">Ages, places and how to join are on the study page.</p>
-      <ContactLine p={point} />
+      <StudyContact idOrUrl={`${s.key} ${s.url}`} />
       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
         <a
           href={s.url}

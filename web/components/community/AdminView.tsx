@@ -16,6 +16,15 @@ interface Pending {
   created: string;
 }
 
+interface Report {
+  id: string;
+  about: string;
+  kind: "wrong" | "remove" | "other";
+  message: string;
+  replyTo: string | null;
+  created: string;
+}
+
 interface EmailStatus {
   mode: "dry-run" | "smtp" | "resend" | "disabled";
   domainVerified: boolean;
@@ -68,6 +77,7 @@ export function AdminView() {
   const [items, setItems] = useState<Pending[] | null>(null);
   const [email, setEmail] = useState<EmailStatus | null>(null);
   const [note, setNote] = useState<string | null>(null);
+  const [reports, setReports] = useState<Report[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const call = async (method: "GET" | "POST", body?: unknown) => {
@@ -86,6 +96,8 @@ export function AdminView() {
       const j = await call("GET");
       setItems(j.pending ?? []);
       setEmail(j.email ?? null);
+      const rr = await fetch("/api/admin/reports", { headers: { "x-admin-token": token } });
+      setReports(rr.ok ? (((await rr.json()) as { reports?: Report[] }).reports ?? []) : null);
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     }
@@ -142,6 +154,40 @@ export function AdminView() {
           {note}
         </p>
       )}
+      {reports && (
+        <section aria-labelledby="reports-h" className="space-y-3">
+          <h2 id="reports-h" className="text-[19px] font-semibold text-ink">
+            Contact reports <span className="text-ink-3">{reports.length}</span>
+          </h2>
+          {!reports.length && <p className="text-ink-3">No contact reports waiting.</p>}
+          <ul className="space-y-3">
+            {reports.map((r) => (
+              <li key={r.id} className="rounded-xl border border-line px-4 py-3 text-[15px]">
+                <p className="font-medium text-ink">
+                  {r.kind === "remove" ? "Remove" : r.kind === "wrong" ? "Wrong or out of date" : "Other"}: {r.about}
+                </p>
+                <p className="mt-1 whitespace-pre-line text-ink-2">{r.message}</p>
+                <p className="mt-1 text-sm text-ink-3">
+                  {new Date(r.created).toLocaleString()}
+                  {r.replyTo ? ` · reply to ${r.replyTo}` : " · no reply address"}
+                </p>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    await fetch("/api/admin/reports", { method: "POST", headers: { "x-admin-token": token, "Content-Type": "application/json" }, body: JSON.stringify({ id: r.id }) });
+                    setReports((list) => (list ?? []).filter((x) => x.id !== r.id));
+                  }}
+                  className="mt-2 h-9 rounded-lg border border-line px-3 text-sm text-ink-2"
+                >
+                  Mark as handled
+                </button>
+              </li>
+            ))}
+          </ul>
+          <p className="text-xs text-ink-3">Changes to contact data are made in data/derived/contacts and take effect on the next build.</p>
+        </section>
+      )}
+      <h2 className="text-[19px] font-semibold text-ink">Study announcements</h2>
       {items && !items.length && <p className="text-ink-3">Nothing waiting for review.</p>}
       <ul className="space-y-4">
         {(items ?? []).map((a) => (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ReportContact } from "@/components/community/ReportContact";
 
 export const metadata: Metadata = { title: "Privacy · Tasukeru" };
 
@@ -33,6 +34,19 @@ export default function Page() {
         has a one-click unsubscribe link. Password-reset and confirmation emails are sent only when you ask for them. Emails are sent from no-reply@mehro.ch, through
         Resend or our own mail server, which receive your address and the message for that purpose only.
       </p>
+
+      <h2 id="report" className={`${H2} scroll-mt-20`}>
+        Contact details we show for groups and studies
+      </h2>
+      <p className={P}>
+        On group and study cards we show only contact details that an organisation publishes so that people can reach it: its general phone
+        number and email from its own website, a contact person it names on its own site (with the role, phone and email exactly as published,
+        and a link to that page), and a recruiting study’s central contact from ClinicalTrials.gov. We never show researchers’ personal
+        contact details; researchers are reached only through “Request contact” or their institution’s page. If a detail is wrong, or it is
+        about you and you want it removed, tell the organisation or use this form. A person on our team reviews every request.
+      </p>
+      <h3 className="mt-5 text-[16px] font-semibold text-ink">Report or remove a contact</h3>
+      <ReportContact />
 
       <h2 className={H2}>Your controls</h2>
       <p className={P}>
