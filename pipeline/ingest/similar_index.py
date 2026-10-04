@@ -38,6 +38,75 @@ TOP = 10
 W_GENE, W_PATH = 0.5, 0.5
 DISTINCTIVE_IC = 4.0
 EXCLUDE = re.compile(r"\bQTL|susceptibility", re.I)
+# reason quality (display only; never used in scoring)
+MIN_REASON_IC = 2.5
+TOP_OWN = 30                     # a term is "characteristic" if it covers one of the disease's top-30 terms by IC
+MSK_ROOT = "HP:0033127"          # Abnormality of the musculoskeletal system
+MSK_WEIGHT = 0.3                 # down-weight unless both diseases are mainly (>= 50% of terms) musculoskeletal
+GENERIC_PATHWAY_GENES = 300
+GENERIC_PATHWAY_NAMES = {"Generic Transcription Pathway", "RNA Polymerase II Transcription", "Gene expression (Transcription)",
+                         "Metabolism of proteins", "Signal Transduction", "Metabolism", "Disease", "Immune System",
+                         "Developmental Biology", "Post-translational protein modification", "Metabolism of lipids",
+                         "Transport of small molecules", "Cellular responses to stimuli", "Hemostasis"}
+FREQ_CODE = {"HP:0040280": 1.0, "HP:0040281": 0.9, "HP:0040282": 0.55, "HP:0040283": 0.17, "HP:0040284": 0.03, "HP:0040285": 0.0}
+
+
+def parse_freq(x):
+    x = x.strip()
+    if not x:
+        return None
+    if x in FREQ_CODE:
+        return FREQ_CODE[x]
+    try:
+        if "/" in x:
+            a, b = x.split("/")
+            return int(a) / int(b) if int(b) else None
+        if x.endswith("%"):
+            return float(x[:-1]) / 100
+    except ValueError:
+        return None
+    return None
+
+
+def hpo_ancestors():
+    parents = defaultdict(set)
+    cur = None
+    for line in open(RAW / "hp.obo", encoding="utf-8"):
+        if line.startswith("id: HP:"):
+            cur = line[4:].strip()
+        elif line.startswith("is_a: HP:") and cur:
+            parents[cur].add(line[6:16])
+    memo = {}
+
+    def anc(t):
+        if t not in memo:
+            out = {t}
+            for q in parents.get(t, ()):
+                out |= anc(q)
+            memo[t] = out
+        return memo[t]
+    return anc
+
+
+def characteristic(direct, freq, ic, anc_of):
+    """term -> (c weight) for every propagated term of one disease."""
+    top = set(sorted((t for t in direct if ic.get(t, 0) > 0), key=lambda t: -ic[t])[:TOP_OWN])
+    best_f, in_top = {}, set()
+    for u in direct:
+        f = freq.get(u)
+        for t in anc_of(u):
+            if f is not None:
+                best_f[t] = max(best_f.get(t, 0.0), f)
+            if u in top:
+                in_top.add(t)
+    out = {}
+    for t in {t for u in direct for t in anc_of(u)}:
+        if t in best_f:
+            f = best_f[t]
+            out[t] = 1.0 if f >= 0.3 else (0.5 if f >= 0.05 else 0.2)
+        else:
+            out[t] = 0.8 if t in in_top else 0.4
+    return out
 
 
 def djb2(s):
@@ -78,6 +147,51 @@ def main():
     nrm = np.linalg.norm(P, axis=1)
     P[nrm > 0] /= nrm[nrm > 0, None]
 
+    # reason helpers: HPO frequency per disease, characteristic weights, musculoskeletal share ------
+    anc_of = hpo_ancestors()
+    raw_freq = defaultdict(dict)
+    for line in open(RAW / "phenotype.hpoa", encoding="utf-8"):
+        if line.startswith("#") or line.startswith("database_id"):
+            continue
+        r = line.rstrip("\n").split("\t")
+        if len(r) < 11 or r[2] == "NOT" or r[10] != "P":
+            continue
+        f = parse_freq(r[7])
+        if f is not None:
+            raw_freq[r[0]][r[3]] = max(raw_freq[r[0]].get(r[3], 0.0), f)
+    charw, mainly_msk = [], []
+    for k in ids:
+        fr = {}
+        for rid in E[k]["raw"]:
+            for t, f in raw_freq.get(rid, {}).items():
+                fr[t] = max(fr.get(t, 0.0), f)
+        d = E[k]["direct"]
+        charw.append(characteristic(d, fr, ic, anc_of))
+        mainly_msk.append(sum(1 for t in d if MSK_ROOT in anc_of(t)) >= 0.5 * len(d))
+
+    def symptom_reasons(i, j):
+        both_msk = mainly_msk[i] and mainly_msk[j]
+        cands = []
+        for t in prop[i] & prop[j]:
+            if ic[t] < MIN_REASON_IC:
+                continue
+            w = ic[t] * charw[i].get(t, 0.4) * charw[j].get(t, 0.4)
+            if not both_msk and MSK_ROOT in anc_of(t):
+                w *= MSK_WEIGHT
+            cands.append((w, t))
+        cands.sort(key=lambda x: (-x[0], x[1]))
+        st = []
+        for _, t in cands:
+            if any(t in anc_of(u) or u in anc_of(t) for u in st):
+                continue   # no ancestor/descendant pairs
+            st.append(t)
+            if len(st) == 3:
+                break
+        if not st:
+            sh = sorted(prop[i] & prop[j], key=lambda t: -ic[t])
+            st = sh[:1]
+        return st
+
     # pathway matrix -------------------------------------------------------------
     gene_paths, pnames = load_reactome()
     sym2ncbi = {}
@@ -88,6 +202,7 @@ def main():
     df = Counter(t for s in gene_paths.values() for t in s)
     ng = len(gene_paths)
     pidf = {t: math.log((ng + 1) / (c + 1)) for t, c in df.items()}
+    generic_pw = {t for t, c in df.items() if c > GENERIC_PATHWAY_GENES or pnames.get(t) in GENERIC_PATHWAY_NAMES}
     genes = [set(genes_of.get(k, [])) for k in ids]
     paths = [set().union(*[gene_paths.get(sym2ncbi.get(g, ""), set()) for g in gs]) if gs else set() for gs in genes]
     pv = {t: i for i, t in enumerate(sorted({t for s in paths for t in s}))}
@@ -135,18 +250,9 @@ def main():
             for j in top:
                 if score[j] <= 0:
                     break
-                shared = sorted(prop[i] & prop[j], key=lambda t: -ic[t])
-                st = []
-                for t in shared:
-                    if ic[t] < DISTINCTIVE_IC and st:
-                        break
-                    if any(t in anc.get(u, []) for u in st):
-                        continue   # skip ancestors of a term already listed
-                    st.append(t)
-                    if len(st) == 3:
-                        break
+                st = symptom_reasons(i, j)
                 sgn = sorted(genes[i] & genes[j])
-                spw = sorted(paths[i] & paths[j], key=lambda t: -pidf[t])[:2]
+                spw = sorted(paths[i] & paths[j] - generic_pw, key=lambda t: -pidf[t])[:2]   # display: generic pathways dropped (scoring keeps them)
                 for t in st:
                     shard_t[b][t] = [hname.get(t, t), round(ic[t], 2)]
                 for t in spw:

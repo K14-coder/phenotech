@@ -684,19 +684,38 @@ score = phen/max_phen + 0.5 · genes/max_genes + 0.5 · pathway/max_pathway
 |---|---|
 | `score` | The combined score above. |
 | `phenotype`, `genes`, `pathway` | The raw component similarities, before normalisation, each 0–1. |
-| `shared_hpo` | Up to 3 shared symptoms. They are the most informative shared HPO terms, with IC ≥ 4.0 (distinctive), and none is an ancestor of another listed term. If no shared term reaches IC 4.0, the single most informative one is shown. Labels and IC are in the shard's `t`. |
+| `shared_hpo` | Up to 3 shared symptoms, chosen to be **characteristic of both diseases**, not merely rare. Labels and IC are in the shard's `t`. The ranking rule is described below the table. |
 | `same_genes` | Shared causal genes. Show them as "same gene: X". |
-| `shared_pathways` | Up to 2 shared Reactome pathways, most specific (highest IDF) first. Names are in the shard's `p`. The URL is `https://reactome.org/content/detail/<id>`. |
+| `shared_pathways` | Up to 2 shared Reactome pathways, most specific (highest IDF) first. **Generic pathways are left out of the reasons**: those with more than 300 genes (counted with descendants), and named generic ones such as "Generic Transcription Pathway", "RNA Polymerase II Transcription", "Metabolism of proteins", "Signal Transduction", "Metabolism", "Immune System" and "Developmental Biology" (the list is `GENERIC_PATHWAY_NAMES` in the script). They still count in the `pathway` score, which is what the benchmark validated, so a neighbour can have a pathway score and an empty list. Names are in the shard's `p`; the URL is `https://reactome.org/content/detail/<id>`. |
 
-**Sizes.** 64 shards hold 10,690 diseases, every one with 10 neighbours. They total **13.5 MB raw / 3.3 MB gzipped**, and the largest shard is 415 KB.
+**How `shared_hpo` terms are chosen** (display only; scoring is unchanged):
+1. **Candidates.** Shared terms are taken from the ancestor-propagated profiles, keeping those with IC ≥ 2.5.
+2. **Weight.** Each candidate gets `IC × c(disease A) × c(disease B)`. The characteristic factor `c` comes from the
+   frequencies in `phenotype.hpoa`: n/m fractions, percentages or the HP:00402xx codes, with the maximum taken over the
+   disease's direct terms at or below the term.
+
+   | Term in that disease | `c` |
+   |---|---|
+   | frequency ≥ 30% (frequent, very frequent, obligate) | 1.0 |
+   | frequency 5–29% (occasional) | 0.5 |
+   | frequency below 5% | 0.2 |
+   | no frequency annotated, but the term covers one of the disease's top 30 terms by IC | 0.8 |
+   | no frequency annotated, otherwise | 0.4 |
+
+3. **Musculoskeletal terms** (under HP:0033127) are multiplied by 0.3, unless both diseases are mainly musculoskeletal (at
+   least 50% of their terms).
+4. **Selection.** The top 3 by weight are kept. A term is skipped if it is an ancestor or a descendant of one already
+   chosen. If no shared term reaches IC 2.5, the single most informative shared term is shown.
+
+**Sizes.** 64 shards hold 10,690 diseases, every one with 10 neighbours. They total **14.0 MB raw / 3.4 MB gzipped**, and the largest shard is 427 KB.
 
 **Examples.**
 
 | Disease | Top neighbours |
 |---|---|
-| Huntington disease | Lopes-Maciel-Rodan syndrome (same gene HTT), juvenile HD (HTT), HD-like 2, HD-like 1, SCA48, ... |
-| Dravet syndrome | GEFS+ (SCN1A, SCN1B, SCN2A, GABRG2, SCN9A), DEE 6A (SCN1A), DEE52 (SCN1B), GEFS+ type 2, PCDH19 clustering epilepsy, ... |
-| Tay-Sachs disease | AB variant, the Sandhoff forms, infantile Krabbe, adult MLD, GM1 gangliosidosis. Reasons include "cherry red spot of the macula" and "glycosphingolipid catabolism". |
+| Huntington disease | Lopes-Maciel-Rodan syndrome (agitation; bradykinesia; caudate atrophy · same gene HTT · MECP2 transcription pathways), juvenile HD (bradykinesia; irritability; chorea · HTT), HD-like 2 (delusion; personality changes; memory impairment), HD-like 1, SCA48 (chorea; depression; extrapyramidal signs). There are no generic "transcription" pathway reasons. |
+| Dravet syndrome | GEFS+ (febrile seizure; generalized absence seizure; generalized myoclonic seizure · SCN1A, SCN1B, SCN2A, GABRG2, SCN9A · L1–ankyrin interaction; phase 0 rapid depolarisation), DEE 6A (visually-induced seizure; focal hemiclonic seizure; absence seizure · SCN1A), DEE52 (SCN1B), GEFS+ type 2, PCDH19 clustering epilepsy. |
+| Tay-Sachs disease | AB variant (GM2-ganglioside accumulation; cherry red spot; aspiration · glycosphingolipid catabolism), infantile Sandhoff (cherry red spot; abnormal thalamic MRI signal; developmental regression), Sandhoff, infantile Krabbe, adult MLD, GM1 gangliosidosis. |
 
 **Caveat.** This is a similarity ranking to help people look further. It is not evidence of a shared treatment.
 Contraindicated diseases are not ranked low by it (see ingest.md §3).

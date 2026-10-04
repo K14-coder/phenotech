@@ -192,15 +192,33 @@ The ordering is the same as on all cases.
 `pipeline/ingest/similar_index.py` applies the recommended scorer, `phen + 0.5·genes + 0.5·full Reactome`, to every
 global-index disease that has HPO annotations: 10,690 diseases, with 10 neighbours each. Each neighbour carries:
 - the score and its three raw component scores;
-- up to 3 shared distinctive symptoms (HPO, IC ≥ 4);
+- up to 3 shared symptoms that are characteristic of both diseases (ranking rule below);
 - "same gene" genes;
-- up to 2 shared pathway names.
+- up to 2 shared pathway names, with generic pathways left out (rule below).
 
 | File | Size |
 |---|---|
-| `data/derived/global/similar/<djb2(MONDO)%64>.json` | 13.5 MB raw / 3.3 MB gzipped (max shard 415 KB) |
+| `data/derived/global/similar/<djb2(MONDO)%64>.json` | 14.0 MB raw / 3.4 MB gzipped (max shard 427 KB) |
 | `data/derived/global/gene_factors.json` (5,191 genes: constraint label, ClinVar dominant type, AlphaMissense label; explanation only) | 695 KB / 97 KB gzipped |
 
 Both files are documented in `data/derived/global/README.md`.
 
 Note for whoever deploys: `sync-data.mjs` copies all of `data/derived/global/`, so these files will be deployed, adding about 14 MB raw.
+
+**Reason quality (second pass; display only, so scores and rankings are unchanged).**
+
+*Symptoms.* Shared symptoms used to be simply the rarest shared terms. That gave "Limited knee extension" and
+"Tibial torsion" as the reasons for Dravet–GEFS+. Now each shared term is weighted by IC × how characteristic it is in each disease:
+- 1.0 if HPO marks it frequent or very frequent (≥ 30%);
+- 0.5 if occasional;
+- 0.8 if it has no frequency but is among the disease's top 30 terms by IC, else 0.4.
+
+Musculoskeletal terms are weighted ×0.3 unless both diseases are mainly musculoskeletal.
+
+*Pathways.* Generic Reactome pathways are dropped from the reasons: more than 300 genes, or a named generic pathway such
+as Generic Transcription Pathway, Metabolism of proteins or Signal Transduction. They stay in the score, as in the benchmark.
+
+New example reasons:
+- **Dravet → GEFS+:** febrile seizure; generalized absence seizure; generalized myoclonic seizure.
+- **Huntington → SCA48:** chorea; depression; extrapyramidal signs. The generic transcription pathway reason is gone.
+- **Tay-Sachs → infantile Sandhoff:** cherry red spot of the macula; abnormal thalamic MRI signal; developmental regression.
