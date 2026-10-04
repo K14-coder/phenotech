@@ -983,3 +983,51 @@ The landscape step is gone from impact.json, and the "awaiting expert figure" co
 **UI:** at 1440 and 390 px there is no sideways scroll and no console errors on `/sequence`, `/variant`, `/d/MONDO:0010679` (Research and Simple), `/disease/STXBP1` (Research and Simple) and `/method`.
 
 **Checks:** `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Rebrand to Tasukeru, SMTP transport
+
+### Rebrand
+"Rare Disease Atlas" no longer appears in user-facing text in `web/`.
+- **Root metadata:** the title is "Tasukeru: a rare-disease atlas". The description explains 助ける, "to help". Also set: `applicationName`, OpenGraph (`siteName` Tasukeru) and Twitter tags.
+- **Page titles:** all 28 page titles now read "<page> · Tasukeru", including global disease pages.
+- **Header and first visit:** the header logo text is "Tasukeru", and the first-visit chooser starts with "Welcome to Tasukeru."
+- **Copy:**
+  - the Simple view printout line, and the contact tip "found them through Tasukeru, a rare-disease atlas";
+  - the ChatGPT-plan notice;
+  - the DNA printout footer;
+  - `/privacy`: "Privacy at Tasukeru", sending from no-reply@mehro.ch through Resend or our own mail server;
+  - `/method`: a new line saying Tasukeru (助ける) means "to help" or "to rescue" in Japanese.
+- **Emails:**
+  - the header reads "Tasukeru · a rare-disease atlas", and the footer adds "Tasukeru (助ける, 'to help') · a rare-disease atlas";
+  - subjects are prefixed "Tasukeru: …", and the weekly one is "Your Tasukeru weekly summary";
+  - the sender comes from `EMAIL_FROM`; a bare address gets the display name "Tasukeru".
+- **Worker and user agents:**
+  - `APP_NAME` (the Sign in with ChatGPT `agent_name_hint`) is "Tasukeru";
+  - the banner and help text read "Tasukeru research worker";
+  - the worker's user agent is `tasukeru-worker/<v>`;
+  - the live alerts user agent is `tasukeru/0.1`;
+  - the NCBI `tool` is `tasukeru`.
+- **Unchanged:** routes, ids, env vars, file names (`rare-atlas-worker.mjs`, `~/.rare-atlas-worker/`) and the Vercel URL.
+
+### SMTP transport
+- **Order in `lib/server/email.ts`:** `EMAIL_DRY_RUN=1`, then SMTP when `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER` and `SMTP_PASS` are all set, then Resend when `RESEND_API_KEY` is set, otherwise disabled.
+- **SMTP:** sends with nodemailer 7.
+  - Port 465 uses TLS from the start; 587 requires STARTTLS; other ports use STARTTLS if offered.
+  - Connection timeouts are set, and nodemailer's logger and debug output are off.
+  - Errors return only a short code (`smtp EAUTH`, `smtp ESOCKET`, `HTTP 403`). The log shows tag and code only, never addresses or credentials.
+- **Admin test email:** `/admin` has "Send a test email to myself", which calls `POST /api/admin/test-email`.
+  - It needs the `ADMIN_TOKEN` header, a same-origin request and a signed-in, confirmed account. It is rate-limited.
+  - It always sends to the session's own address and reports the transport and the result.
+
+### Tests
+**Fake SMTP server:** written for the test (scratchpad, no TLS; it accepts or rejects AUTH on demand), with an isolated dev server using made-up SMTP credentials.
+- Test email before signing in: "Please sign in."
+- Sign-up: the confirmation arrived at the fake server, from "Tasukeru <no-reply@mehro.ch>", subject "Tasukeru: please confirm your email". Its link confirmed the account.
+- Wrong admin token: refused.
+- Test email: `{"transport":"smtp","sent":true}`, and "Tasukeru: test email" arrived.
+- AUTH rejected: `smtp EAUTH`. Server down: `smtp ESOCKET`.
+- Credentials and addresses appear 0 times in the server log. The account and the store file were deleted.
+
+**UI:** at 1440 and 390 px, `/`, `/method`, `/privacy`, `/disease/STXBP1` and `/admin` show the new titles and OG site name, with no sideways scroll and no console errors. The test button appears after the queue loads.
+
+**Checks:** `tsc` and `eslint` are clean; one `npm run build` passed.

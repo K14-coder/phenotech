@@ -93,7 +93,7 @@ export function FirstVisitChooser() {
     <div className="border-b border-line bg-subtle/70 print:hidden">
       <div className="mx-auto flex max-w-[1120px] flex-col gap-3 px-4 py-4 sm:px-8 md:flex-row md:items-center">
         <p className="shrink-0 text-[15px] font-medium text-ink">
-          How should we show things? <span className="font-normal text-ink-3">(You can change this anytime)</span>
+          Welcome to Tasukeru. How should we show things? <span className="font-normal text-ink-3">(You can change this anytime)</span>
         </p>
         <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Choose a view">
           {PERSONAS.map((p) => (

@@ -244,7 +244,7 @@ export function DoctorQuestions({ name, questions, sources }: { name: string; qu
           ))}
         </ol>
         <p style={{ marginTop: "12pt", fontSize: "9pt" }}>
-          This is information, not medical advice. Prepared with the Rare Disease Atlas. Sources:{" "}
+          This is information, not medical advice. Prepared with Tasukeru, a rare-disease atlas. Sources:{" "}
           {sources.map((s) => `${s.label} (${s.url})`).join("; ") || "see the atlas page"}.
         </p>
       </div>
@@ -290,7 +290,7 @@ export function ContactTip({ items }: { items: Contact[] }) {
   if (!items.some((c) => orgContact(contacts, { id: c.key, url: c.url, name: c.name }))) return null;
   return (
     <p className="rounded-lg bg-subtle px-3.5 py-2.5 text-[15px] text-ink-2">
-      When you call or write, it helps to mention the gene name and that you found them through the Rare Disease Atlas.
+      When you call or write, it helps to mention the gene name and that you found them through Tasukeru, a rare-disease atlas.
     </p>
   );
 }

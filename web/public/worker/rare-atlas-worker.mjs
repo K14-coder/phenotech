@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable -- generated file (pipeline/crowd/build_worker.mjs) */
 /**
- * rare-atlas-worker.mjs: research rare diseases for the Rare Disease Atlas with YOUR OpenAI access.
+ * rare-atlas-worker.mjs: research rare diseases for Tasukeru (a rare-disease atlas) with YOUR OpenAI access.
  * Single file, no dependencies, Node >= 20. Run: node rare-atlas-worker.mjs --help
  *
  * What it does: claims a disease from the atlas research queue, sends the PubMed abstracts the atlas
@@ -66,7 +66,7 @@ const MANAGE_USAGE_URL = 'https://chatgpt.com/settings/usage';
  * Sent as agent_name_hint on first registration only. The docs ask for the app's actual name, used
  * consistently across installations. The user can edit it on the consent screen.
  */
-const APP_NAME = 'Rare Disease Atlas';
+const APP_NAME = 'Tasukeru';
 
 const DOCUMENTED_ENDPOINTS = Object.freeze({
   authorization_endpoint: `${ISSUER}/api/accounts/authorize`,
@@ -1798,7 +1798,7 @@ async function complete({
 }
 
 // ===========================================================================
-// Rare Disease Atlas research worker (main loop). The code above this line is a copy of
+// Tasukeru research worker (main loop). The code above this line is a copy of
 // integrations/openai/siwc.mjs and llm.mjs, inlined by pipeline/crowd/build_worker.mjs.
 // ===========================================================================
 
@@ -1808,7 +1808,7 @@ const DEFAULT_SERVER = 'https://rare-disease-atlas-five.vercel.app';
 const CONFIG_PATH = path.join(WORKER_HOME, 'config.json');
 const SHORT = { mechanism: 'mechanism', process: 'process', therapies: 'therapies', phenotypes: 'phenotypes', natural_history: 'natural history', research_groups: 'research groups' };
 
-const HELP = `Rare Disease Atlas research worker ${WORKER_VERSION}
+const HELP = `Tasukeru research worker ${WORKER_VERSION}
 
 Researches rare diseases from the atlas research queue with YOUR OpenAI access, in a loop until you stop it.
 The atlas fetches the PubMed abstracts; your model extracts claims; the atlas verifies every quote.
@@ -1895,7 +1895,7 @@ async function atlas(server, token, route, method = 'GET', body) {
   try {
     r = await fetch(`${server}${route}`, {
       method,
-      headers: { authorization: `Bearer ${token}`, ...(body === undefined ? {} : { 'content-type': 'application/json' }), 'user-agent': `rare-atlas-worker/${WORKER_VERSION}` },
+      headers: { authorization: `Bearer ${token}`, ...(body === undefined ? {} : { 'content-type': 'application/json' }), 'user-agent': `tasukeru-worker/${WORKER_VERSION}` },
       body: body === undefined ? undefined : JSON.stringify(body),
       redirect: 'error',
       signal: AbortSignal.timeout(90_000),
@@ -2093,7 +2093,7 @@ async function main() {
   }
   if (command) throw new Error(`Unknown command "${command}". Try --help.`);
 
-  console.log(`Rare Disease Atlas research worker ${WORKER_VERSION} -> ${server}`);
+  console.log(`Tasukeru research worker ${WORKER_VERSION} -> ${server}`);
   const token = await ensureToken(server, args);
   await ensureOpenAI(args);
   const maxTasks = args['max-tasks'] ? Math.max(1, Number(args['max-tasks'])) : Infinity;

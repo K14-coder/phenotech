@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { JoinView } from "@/components/community/JoinView";
 
-export const metadata: Metadata = { title: "Join the community · Rare Disease Atlas" };
+export const metadata: Metadata = { title: "Join the community · Tasukeru" };
 
 export default function Page() {
   return (

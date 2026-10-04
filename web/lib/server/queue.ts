@@ -33,7 +33,7 @@ const MAX_GROUPS_PER_SUBMIT = 30;
 const CLAIMS_PER_HOUR = 20;
 const SUBMITS_PER_HOUR = 120;
 export const STATUS_LABEL = "community-researched, AI-extracted, quote-verified, unreviewed";
-const NCBI_TOOL = "rare-disease-atlas";
+const NCBI_TOOL = "tasukeru";
 
 // ---------- seed ----------
 

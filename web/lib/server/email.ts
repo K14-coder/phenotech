@@ -1,22 +1,36 @@
-// Email through Resend's HTTP API (plain fetch, no SDK), with a dry-run sender for local tests.
+// Email for Tasukeru: SMTP (the mehro.ch mailbox) or Resend's HTTP API, with a dry-run sender for local tests.
 //  - EMAIL_DRY_RUN=1: write each email to web/.data/outbox/ (gitignored) instead of sending.
-//  - RESEND_API_KEY + EMAIL_FROM: send through https://api.resend.com/emails.
+//  - SMTP_HOST + SMTP_PORT + SMTP_USER + SMTP_PASS: send through that server with nodemailer
+//    (port 465: TLS from the start; 587: STARTTLS required; other ports: STARTTLS if offered).
+//  - RESEND_API_KEY: send through https://api.resend.com/emails.
+//  - EMAIL_FROM: the sender, e.g. "Tasukeru <no-reply@mehro.ch>".
 //  - neither: log "email disabled" (never the address); notices stay in the inbox only.
 // Until a sending domain is verified, Resend delivers only to the account owner's own address:
 // EMAIL_DOMAIN_VERIFIED=1 tells the admin page the domain is verified.
 import { mkdir, writeFile } from "node:fs/promises";
+import nodemailer, { type Transporter } from "nodemailer";
 import path from "node:path";
 
-export type EmailMode = "dry-run" | "resend" | "disabled";
+export type EmailMode = "dry-run" | "smtp" | "resend" | "disabled";
 
+const smtpReady = () => !!(process.env.SMTP_HOST && process.env.SMTP_PORT && process.env.SMTP_USER && process.env.SMTP_PASS);
+
+/** dry run first (local tests), then the mailbox's own SMTP server, then Resend, else disabled. */
 export function emailMode(): EmailMode {
   if (process.env.EMAIL_DRY_RUN === "1") return "dry-run";
-  if (process.env.RESEND_API_KEY && process.env.EMAIL_FROM) return "resend";
+  if (smtpReady()) return "smtp";
+  if (process.env.RESEND_API_KEY) return "resend";
   return "disabled";
 }
 
 export function emailStatus() {
   return { mode: emailMode(), domainVerified: process.env.EMAIL_DOMAIN_VERIFIED === "1" };
+}
+
+/** Sender: EMAIL_FROM (e.g. "Tasukeru <no-reply@mehro.ch>"); a bare address gets the Tasukeru display name. */
+export function fromAddress(): string {
+  const raw = (process.env.EMAIL_FROM ?? "").trim() || (emailMode() === "smtp" ? (process.env.SMTP_USER ?? "") : "onboarding@resend.dev");
+  return raw.includes("<") ? raw : `Tasukeru <${raw}>`;
 }
 
 /** Absolute base URL for links in emails: APP_URL, else the production URL Vercel provides, else the request. */
@@ -43,39 +57,94 @@ export interface Email {
   tag: string;
 }
 
-export async function sendEmail(e: Email): Promise<{ sent: boolean; mode: EmailMode }> {
+let smtp: Transporter | null = null;
+let smtpKey = "";
+function smtpTransport(): Transporter {
+  const port = Number(process.env.SMTP_PORT);
+  const key = `${process.env.SMTP_HOST}:${port}:${process.env.SMTP_USER}`;
+  if (!smtp || key !== smtpKey) {
+    smtp = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port,
+      secure: port === 465,
+      requireTLS: port === 587,
+      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+      connectionTimeout: 10_000,
+      greetingTimeout: 10_000,
+      socketTimeout: 20_000,
+      // never let nodemailer log message contents or credentials
+      logger: false,
+      debug: false,
+    });
+    smtpKey = key;
+  }
+  return smtp;
+}
+
+export interface SendResult {
+  sent: boolean;
+  mode: EmailMode;
+  /** a short error code only (EAUTH, ECONNECTION, HTTP 403 ...), never addresses or credentials */
+  error?: string;
+}
+
+export async function sendEmail(e: Email): Promise<SendResult> {
   const mode = emailMode();
   const subject = e.subject.replace(/[\r\n]+/g, " ").slice(0, 200);
   const headers: Record<string, string> = e.unsubscribe ? { "List-Unsubscribe": `<${e.unsubscribe.post}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } : {};
   if (mode === "disabled") {
     console.info(`email disabled (${e.tag})`);
-    return { sent: false, mode };
+    return { sent: false, mode, error: "disabled" };
   }
   if (mode === "dry-run") {
     try {
       const dir = path.join(process.cwd(), ".data", "outbox");
       await mkdir(dir, { recursive: true });
       const base = `${new Date().toISOString().replace(/[:.]/g, "-")}-${e.tag}`;
-      await writeFile(path.join(dir, `${base}.json`), JSON.stringify({ to: e.to, subject, headers, text: e.text }, null, 2));
+      await writeFile(path.join(dir, `${base}.json`), JSON.stringify({ from: fromAddress(), to: e.to, subject, headers, text: e.text }, null, 2));
       await writeFile(path.join(dir, `${base}.html`), e.html);
       return { sent: true, mode };
     } catch {
       console.error(`email dry run could not write the outbox (${e.tag})`);
-      return { sent: false, mode };
+      return { sent: false, mode, error: "outbox" };
+    }
+  }
+  if (mode === "smtp") {
+    try {
+      await smtpTransport().sendMail({ from: fromAddress(), to: e.to, subject, html: e.html, text: e.text, headers });
+      return { sent: true, mode };
+    } catch (err) {
+      const code = String((err as { code?: string; responseCode?: number })?.code ?? (err as { responseCode?: number })?.responseCode ?? "error").slice(0, 24);
+      console.error(`email send failed (${e.tag}): smtp ${code}`);
+      return { sent: false, mode, error: `smtp ${code}` };
     }
   }
   try {
     const r = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ from: process.env.EMAIL_FROM, to: [e.to], subject, html: e.html, text: e.text, headers }),
+      body: JSON.stringify({ from: fromAddress(), to: [e.to], subject, html: e.html, text: e.text, headers }),
     });
     if (!r.ok) console.error(`email send failed (${e.tag}): HTTP ${r.status}`);
-    return { sent: r.ok, mode };
+    return r.ok ? { sent: true, mode } : { sent: false, mode, error: `HTTP ${r.status}` };
   } catch {
     console.error(`email send failed (${e.tag}): network error`);
-    return { sent: false, mode };
+    return { sent: false, mode, error: "network" };
   }
+}
+
+/** Admin "send a test email to myself". */
+export function testEmail(to: string): Email {
+  const subject = "Tasukeru: test email";
+  return {
+    to,
+    subject,
+    tag: "test",
+    ...render(subject, {
+      paragraphs: ["This is a test email from Tasukeru.", `It was sent with the ${emailMode()} transport on ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC.`],
+      why: "You are receiving this because you asked for a test email on the Tasukeru admin page.",
+    }),
+  };
 }
 
 // ---------- templates: plain, kind, short; every email says why you get it ----------
@@ -101,15 +170,15 @@ function render(subject: string, b: Block): { html: string; text: string } {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f7f8f9;padding:24px 12px"><tr><td align="center">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:28px">
 <tr><td>
-<p style="margin:0 0 18px;font-size:14px;color:#5f6672">Rare Disease Atlas</p>
+<p style="margin:0 0 18px;font-size:15px;font-weight:600;color:#1f5a96">Tasukeru <span style="font-weight:400;color:#5f6672">· a rare-disease atlas</span></p>
 ${b.paragraphs.map(p).join("\n")}
 ${b.quote ? `<div style="margin:6px 0 18px;padding:14px 16px;background:#f7f8f9;border-radius:8px">${b.quote.title ? `<p style="margin:0 0 8px;font-size:16px;font-weight:600;color:#16181d">${esc(b.quote.title)}</p>` : ""}${b.quote.lines.map((l) => `<p style="margin:0 0 6px;font-size:15px;line-height:1.5;color:#3f4550">${esc(l)}</p>`).join("")}</div>` : ""}
 ${b.items?.length ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 18px">${b.items.map((i) => `<tr><td style="padding:10px 0;border-top:1px solid #eff1f3"><p style="margin:0 0 2px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#5f6672">${esc(i.label)}</p><p style="margin:0;font-size:16px;line-height:1.4"><a href="${esc(i.url)}" style="color:#1f5a96;font-weight:600;text-decoration:none">${esc(i.title)}</a></p>${i.meta ? `<p style="margin:2px 0 0;font-size:14px;color:#5f6672">${esc(i.meta)}</p>` : ""}</td></tr>`).join("")}</table>` : ""}
 ${b.button ? `<p style="margin:8px 0 22px"><a href="${esc(b.button.url)}" style="display:inline-block;background:#1f5a96;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:12px 18px;border-radius:8px">${esc(b.button.label)}</a></p><p style="margin:0 0 18px;font-size:13px;color:#5f6672;word-break:break-all">Or open this link: ${esc(b.button.url)}</p>` : ""}
-<p style="margin:18px 0 0;padding-top:14px;border-top:1px solid #eff1f3;font-size:13px;line-height:1.5;color:#5f6672">${esc(b.why)}${b.unsubscribe ? ` <a href="${esc(b.unsubscribe.page)}" style="color:#5f6672">Unsubscribe in one click</a>.` : ""}</p>
+<p style="margin:18px 0 0;padding-top:14px;border-top:1px solid #eff1f3;font-size:13px;line-height:1.5;color:#5f6672">${esc(b.why)}${b.unsubscribe ? ` <a href="${esc(b.unsubscribe.page)}" style="color:#5f6672">Unsubscribe in one click</a>.` : ""}<br>Tasukeru (助ける, “to help”) · a rare-disease atlas</p>
 </td></tr></table></td></tr></table></body></html>`;
   const text = [
-    "Rare Disease Atlas",
+    "Tasukeru · a rare-disease atlas",
     "",
     ...b.paragraphs.flatMap((t) => [t, ""]),
     ...(b.quote ? [...(b.quote.title ? [b.quote.title] : []), ...b.quote.lines, ""] : []),
@@ -117,19 +186,20 @@ ${b.button ? `<p style="margin:8px 0 22px"><a href="${esc(b.button.url)}" style=
     ...(b.button ? [`${b.button.label}: ${b.button.url}`, ""] : []),
     "--",
     b.why,
+    "Tasukeru (助ける, \"to help\") · a rare-disease atlas",
     ...(b.unsubscribe ? [`Unsubscribe in one click: ${b.unsubscribe.page}`] : []),
   ].join("\n");
   return { html, text };
 }
 
 export function verificationEmail(to: string, url: string): Email {
-  const subject = "Please confirm your email";
+  const subject = "Tasukeru: please confirm your email";
   return {
     to,
     subject,
     tag: "verify",
     ...render(subject, {
-      paragraphs: ["Thank you for joining the Rare Disease Atlas.", "Please confirm this is your email address. The link works for 7 days."],
+      paragraphs: ["Thank you for joining Tasukeru, the rare-disease atlas.", "Please confirm this is your email address. The link works for 7 days."],
       button: { label: "Confirm my email", url },
       why: "You are receiving this because someone used this address to create an account. If it wasn't you, ignore this email and nothing will happen.",
     }),
@@ -137,13 +207,13 @@ export function verificationEmail(to: string, url: string): Email {
 }
 
 export function resetEmail(to: string, url: string): Email {
-  const subject = "Reset your password";
+  const subject = "Tasukeru: reset your password";
   return {
     to,
     subject,
     tag: "reset",
     ...render(subject, {
-      paragraphs: ["Someone asked to reset the password for your Rare Disease Atlas account.", "The link works once, for one hour."],
+      paragraphs: ["Someone asked to reset the password for your Tasukeru account.", "The link works once, for one hour."],
       button: { label: "Choose a new password", url },
       why: "You are receiving this because a password reset was requested for this address. If it wasn't you, ignore this email; your password stays the same.",
     }),
@@ -157,7 +227,7 @@ export function announcementEmail(
   meUrl: string,
   unsubscribe: Unsub,
 ): Email {
-  const subject = `A new study for ${diseases}`;
+  const subject = `Tasukeru: a new study for ${diseases}`;
   return {
     to,
     subject,
@@ -174,7 +244,7 @@ export function announcementEmail(
 }
 
 export function contactEmail(to: string, organisation: string, message: string, diseases: string, verified: boolean, meUrl: string, unsubscribe: Unsub): Email {
-  const subject = `A researcher would like to hear from families (${diseases})`;
+  const subject = `Tasukeru: a researcher would like to hear from families (${diseases})`;
   return {
     to,
     subject,
@@ -196,12 +266,12 @@ export function contactEmail(to: string, organisation: string, message: string, 
 export function trialsEmail(to: string, items: { disease: string; title: string; url: string; meta?: string }[], weekly: boolean, meUrl: string, unsubscribe: Unsub): Email {
   const grantsOnly = items.every((i) => i.disease.startsWith("New research"));
   const subject = weekly
-    ? "Your weekly summary"
+    ? "Your Tasukeru weekly summary"
     : grantsOnly
-      ? `New researchers working on ${items[0].disease.replace(/^New research · /, "")}`
+      ? `Tasukeru: new researchers working on ${items[0].disease.replace(/^New research · /, "")}`
       : items.length === 1
-        ? `A study is recruiting for ${items[0].disease}`
-        : "News for diseases you follow";
+        ? `Tasukeru: a study is recruiting for ${items[0].disease}`
+        : "Tasukeru: news for diseases you follow";
   return {
     to,
     subject,

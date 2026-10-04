@@ -10,9 +10,17 @@ import { TourProvider } from "@/components/tour/TourProvider";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Rare Disease Atlas",
+  title: { default: "Tasukeru: a rare-disease atlas", template: "%s" },
   description:
-    "Find who shares your disease's biology, what useful work already exists, and what to do together, with the evidence for every connection.",
+    "Tasukeru (助ける, \u201cto help\u201d) is a rare-disease atlas: find who shares your disease's biology, what useful work already exists, and what to do together, with the evidence for every connection.",
+  applicationName: "Tasukeru",
+  openGraph: {
+    title: "Tasukeru: a rare-disease atlas",
+    description: "Find who shares your disease's biology, what useful work already exists, and what to do together, with the evidence for every connection.",
+    siteName: "Tasukeru",
+    type: "website",
+  },
+  twitter: { card: "summary", title: "Tasukeru: a rare-disease atlas" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

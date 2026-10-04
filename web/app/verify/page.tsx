@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { VerifyView } from "@/components/community/EmailPages";
 
-export const metadata: Metadata = { title: "Confirm your email · Rare Disease Atlas", robots: { index: false } };
+export const metadata: Metadata = { title: "Confirm your email · Tasukeru", robots: { index: false } };
 
 export default function Page() {
   return (

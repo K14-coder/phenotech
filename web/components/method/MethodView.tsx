@@ -74,6 +74,9 @@ function Method({ idx }: { idx: GraphIndex }) {
       <p className="mt-3 max-w-[680px] text-[17px] leading-relaxed text-ink-3">
         Every connection in the atlas has to show where it comes from. These numbers are counted live from the data you are looking at.
       </p>
+      <p className="mt-2 max-w-[680px] text-sm text-ink-3">
+        Tasukeru (助ける) means “to help” or “to rescue” in Japanese. It is a rare-disease atlas built to help families and researchers find each other.
+      </p>
       <p className="mt-2 text-sm">
         <Link href="/impact" className="font-medium text-accent-700 hover:underline">
           Why this could be 10× faster →

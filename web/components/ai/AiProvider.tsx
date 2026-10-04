@@ -157,7 +157,7 @@ function PlanNotice({ manageUsageUrl, onClose }: { manageUsageUrl: string; onClo
           You’re using your ChatGPT plan
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-ink-2">
-          AI drafts in Rare Disease Atlas now run on your ChatGPT plan. They count toward your plan’s usage limits, which are shared
+          AI drafts in Tasukeru now run on your ChatGPT plan. They count toward your plan’s usage limits, which are shared
           with your own ChatGPT use. This app adds no charges of its own.
         </p>
         <div className="mt-5 flex items-center justify-end gap-3">

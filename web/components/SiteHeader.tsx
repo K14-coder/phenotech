@@ -34,7 +34,7 @@ export function SiteHeader() {
       <div className="flex h-14 items-center gap-3 px-3 sm:gap-6 sm:px-5">
         <Link href="/" className="flex shrink-0 items-center gap-2.5 text-[15px] font-semibold tracking-tight text-ink">
           <Mark />
-          <span className="hidden min-[420px]:inline">Rare Disease Atlas</span>
+          <span className="hidden min-[420px]:inline">Tasukeru</span>
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
           {nav.map((n) => {

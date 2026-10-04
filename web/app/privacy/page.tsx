@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Privacy · Rare Disease Atlas" };
+export const metadata: Metadata = { title: "Privacy · Tasukeru" };
 
 const H2 = "mt-8 text-[19px] font-semibold text-ink";
 const P = "mt-2 text-[16px] leading-relaxed text-ink-2";
@@ -8,8 +8,8 @@ const P = "mt-2 text-[16px] leading-relaxed text-ink-2";
 export default function Page() {
   return (
     <div className="mx-auto w-full max-w-[680px] px-4 pb-24 pt-10">
-      <h1 className="text-[28px] font-semibold text-ink">Privacy</h1>
-      <p className={P}>You can use the whole atlas without an account. Searches, pages and DNA checks are not tied to you, and the DNA sequence and VCF check runs entirely in your browser.</p>
+      <h1 className="text-[28px] font-semibold text-ink">Privacy at Tasukeru</h1>
+      <p className={P}>You can use all of Tasukeru without an account. Searches, pages and DNA checks are not tied to you, and the DNA sequence and VCF check runs entirely in your browser.</p>
 
       <h2 className={H2}>If you create an account, we keep</h2>
       <ul className="mt-2 list-disc space-y-1 pl-5 text-[16px] text-ink-2">
@@ -30,8 +30,8 @@ export default function Page() {
       <p className={P}>
         We email you only after you confirm your address, and only what you asked for: new studies for diseases you follow (one at a time or as a
         weekly summary), approved study announcements, and messages researchers send through the atlas. Each email says why you are getting it and
-        has a one-click unsubscribe link. Password-reset and confirmation emails are sent only when you ask for them. Emails are delivered by
-        Resend, which receives your address and the message for that purpose only.
+        has a one-click unsubscribe link. Password-reset and confirmation emails are sent only when you ask for them. Emails are sent from no-reply@mehro.ch, through
+        Resend or our own mail server, which receive your address and the message for that purpose only.
       </p>
 
       <h2 className={H2}>Your controls</h2>

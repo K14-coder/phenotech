@@ -17,7 +17,7 @@ interface Pending {
 }
 
 interface EmailStatus {
-  mode: "dry-run" | "resend" | "disabled";
+  mode: "dry-run" | "smtp" | "resend" | "disabled";
   domainVerified: boolean;
 }
 
@@ -25,7 +25,43 @@ const EMAIL_NOTE: Record<EmailStatus["mode"], string> = {
   "dry-run": "Email is in dry-run mode: messages are written to .data/outbox/ on the server, not sent.",
   disabled: "Email is switched off (RESEND_API_KEY and EMAIL_FROM are not set). Notices appear only in members’ inboxes on My atlas.",
   resend: "Email is sent through Resend.",
+  smtp: "Email is sent through the mailbox’s own SMTP server.",
 };
+
+function TestEmail({ token }: { token: string }) {
+  const [state, setState] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  return (
+    <div className="flex flex-wrap items-center gap-3 text-[15px]">
+      <button
+        type="button"
+        disabled={busy}
+        onClick={async () => {
+          setBusy(true);
+          setState(null);
+          try {
+            const r = await fetch("/api/admin/test-email", { method: "POST", headers: { "x-admin-token": token, "Content-Type": "application/json" }, body: "{}" });
+            const j = (await r.json()) as { transport?: string; sent?: boolean; error?: string | null };
+            setState(r.ok ? `Transport: ${j.transport}. ${j.sent ? "Sent to your own address." : `Not sent (${j.error ?? "unknown"}).`}` : (j.error ?? `HTTP ${r.status}`));
+          } catch (e) {
+            setState(e instanceof Error ? e.message : String(e));
+          } finally {
+            setBusy(false);
+          }
+        }}
+        className="h-10 rounded-lg border border-line px-4 text-sm text-ink-2 hover:border-accent-500 disabled:opacity-50"
+      >
+        {busy ? "Sending…" : "Send a test email to myself"}
+      </button>
+      {state && (
+        <span className="text-sm text-ink-2" role="status">
+          {state}
+        </span>
+      )}
+      <span className="w-full text-xs text-ink-3">Goes to the address of the account you are signed in with on this browser.</span>
+    </div>
+  );
+}
 
 export function AdminView() {
   const [token, setToken] = useState("");
@@ -95,6 +131,7 @@ export function AdminView() {
           <p className="text-ink-3">{EMAIL_NOTE[email.mode]}</p>
         </div>
       )}
+      {email && <TestEmail token={token} />}
       {note && (
         <p className="rounded-lg bg-subtle px-3 py-2 text-[15px] text-ink-2" role="status">
           {note}

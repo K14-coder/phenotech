@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { AtlasView } from "@/components/atlas/AtlasView";
 
-export const metadata: Metadata = { title: "Atlas · Rare Disease Atlas" };
+export const metadata: Metadata = { title: "Atlas · Tasukeru" };
 
 export default function Page() {
   return (
