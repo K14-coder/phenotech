@@ -1,0 +1,85 @@
+{
+ "pmid": "35831509",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.600Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "367e05684a5cf139",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/35831509.json",
+ "claims": [
+  {
+   "subject_mention": "SHOC2-MRAS-PP1C holophosphatase complex",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "removing an inhibitory phosphorylation event on the RAF family of proteins",
+   "object_type": "mechanism",
+   "quote": "The SHOC2-MRAS-PP1C holophosphatase complex functions as a key regulator of RTK-RAS signalling by removing an inhibitory phosphorylation event on the RAF family of proteins to potentiate MAPK signalling1.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHOC2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "congenital RASopathy syndromes",
+   "object_type": "disease",
+   "quote": "SHOC2 forms a ternary complex with MRAS and PP1C, and human germline gain-of-function mutations in this complex result in congenital RASopathy syndromes2-5.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHOC2-MRAS-PP1C germline gain-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "SHOC2 forms a ternary complex with MRAS and PP1C, and human germline gain-of-function mutations in this complex result in congenital RASopathy syndromes2-5.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "mutant versions of SHOC2 in RASopathies",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "enhanced holophosphatase activity",
+   "object_type": "mechanism",
+   "quote": "These observations explain how mutant versions of SHOC2 in RASopathies and cancer stabilize the interactions of complex members to enhance holophosphatase activity.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHOC2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "SHOC2-MRAS-PP1C complex formation",
+   "object_type": "mechanism",
+   "quote": "Complex formation is initially mediated by interactions between SHOC2 and PP1C and is stabilized by the binding of GTP-loaded MRAS.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MRAS",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "SHOC2-MRAS-PP1C complex formation",
+   "object_type": "mechanism",
+   "quote": "Complex formation is initially mediated by interactions between SHOC2 and PP1C and is stabilized by the binding of GTP-loaded MRAS.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

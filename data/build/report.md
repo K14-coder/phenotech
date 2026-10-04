@@ -1,15 +1,17 @@
 # Graph build report
 
-Built 2026-10-04T04:42:03+00:00 from `biology.json`, `community.json`, `contributions.json`, `cross_family.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
+Built 2026-10-04T05:12:32+00:00 from `biology.json`, `claude_extracted.json`, `community.json`, `contributions.json`, `cross_family.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
 
 ## Summary
 
 - **1412 nodes, 2977 edges, 17 clusters, 63 gaps**
 - Edges with at least one source: **2977/2977**
-- Evidence items with a verbatim quote: 2012/4201; quotes string-verified against the stored source: **2012/2012**
+- Evidence items with a verbatim quote: 2286/4475; quotes string-verified against the stored source: **2286/2286**
 - Contested edges (with counter-evidence): 75
 - OpenAI cross-check: 73 cited sources re-read and stamped; 108 new supporting and 0 new contradicting sources added (contradictions wait for human review)
+- Claude cross-check: 179 cited sources re-read and stamped; 274 new supporting and 0 new contradicting sources added (contradictions wait for human review)
 - Cited sources where the OpenAI reading disagrees with the curators: 12
+- Cited sources where the Claude reading disagrees with the curators: 8
 - Human-reviewed edges: 0; AI-reviewed edges (not human): 63
 - Dropped by review: 1; dropped as dangling: 0
 
@@ -18,6 +20,7 @@ Built 2026-10-04T04:42:03+00:00 from `biology.json`, `community.json`, `contribu
 | File | Nodes | Edges |
 |---|---|---|
 | `biology.json` | 201 | 332 |
+| `claude_extracted.json` | 46 | 0 |
 | `community.json` | 200 | 280 |
 | `contributions.json` | 0 | 0 |
 | `cross_family.json` | 1 | 24 |

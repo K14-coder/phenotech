@@ -1,0 +1,586 @@
+{
+ "pmid": "41604001",
+ "entries": {
+  "4ef856bc5e2cbd41": {
+   "mention": "galactocerebrosidase deficiency",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:haploinsufficiency",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:protein-destabilization",
+    "mech:glucose-transmembrane-transport",
+    "mech:glycogen-catabolism"
+   ],
+   "node_id": "mech:lysosomal-enzyme-deficiency",
+   "match": "instance",
+   "justification": "Galactocerebrosidase deficiency",
+   "raw_node_id": "mech:lysosomal-enzyme-deficiency",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "540dd339b2615a52": {
+   "mention": "juvenile GLD",
+   "type": "disease",
+   "candidates": [
+    "disease:GALC",
+    "disease:ARSA",
+    "disease:CLN3",
+    "disease:TPP1",
+    "disease:GBA1",
+    "disease:HEXA",
+    "disease:NPC1",
+    "disease:CBL",
+    "disease:CDKL5",
+    "disease:GRIN2B"
+   ],
+   "node_id": "disease:GALC",
+   "match": "instance",
+   "justification": "Juvenile Krabbe is a GALC subtype",
+   "raw_node_id": "disease:GALC",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "c7e4281479fd3981": {
+   "mention": "white matter disease",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0012762",
+    "phenotype:HP:0012430",
+    "phenotype:HP:0040329",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0006191",
+    "phenotype:HP:0012075",
+    "phenotype:HP:0034203",
+    "phenotype:HP:0009908",
+    "phenotype:HP:0012796",
+    "phenotype:HP:0006610"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "White matter disease broader than candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "b770e5a0ed93fae8": {
+   "mention": "epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0002133",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0002131",
+    "phenotype:HP:0031475",
+    "phenotype:HP:0030842"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No epilepsy/seizure candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "b3a650b94bfa9af7": {
+   "mention": "cognitive impairment",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000365",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0008762",
+    "phenotype:HP:0002384",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0031162",
+    "phenotype:HP:0034687",
+    "phenotype:HP:0010726",
+    "phenotype:HP:0012249"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No cognitive impairment candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.835Z",
+   "request_payload": {
+    "title": "Long-term neurological outcome after hematopoietic stem cell transplant in juvenile Krabbe disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "galactocerebrosidase deficiency",
+      "declared_type": "mechanism",
+      "sentence": "Globoid cell leukodystrophy (GLD) is a progressive neurodegenerative disease caused by galactocerebrosidase deficiency.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "juvenile GLD",
+      "declared_type": "disease",
+      "sentence": "HSCT significantly impacts the natural history of juvenile GLD, resulting in largely optimal long-term outcomes, preserved quality of life, and minimal disability.",
+      "candidates": [
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:NPC1",
+        "type": "disease",
+        "label": "NPC1-related disorders (Niemann-Pick disease type C)",
+        "synonyms": [
+         "Niemann-Pick disease type C",
+         "NPC",
+         "NP-C",
+         "NPC1",
+         "Niemann-Pick disease type C1",
+         "Niemann-Pick disease, type C1",
+         "type C1 Niemann-Pick disease",
+         "Niemann-Pick disease type C, classic form"
+        ],
+        "summary": "Loss of the NPC1 cholesterol transporter traps cholesterol and lipids in lysosomes: liver and spleen enlargement and a progressive neurological disease with ata"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "white matter disease",
+      "declared_type": "phenotype",
+      "sentence": "Two symptomatic patients-with extensive pre-HSCT white matter disease and specific pre-HSCT clinical features (epilepsy and cognitive impairment)-had suboptimal outcomes.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0012762",
+        "type": "phenotype",
+        "label": "Cerebral white matter atrophy",
+        "note": "HPO HP:0012762"
+       },
+       {
+        "id": "phenotype:HP:0012430",
+        "type": "phenotype",
+        "label": "Cerebral white matter hypoplasia",
+        "note": "HPO HP:0012430"
+       },
+       {
+        "id": "phenotype:HP:0040329",
+        "type": "phenotype",
+        "label": "Multifocal hyperintensity of cerebral white matter on MRI",
+        "note": "HPO HP:0040329"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0006191",
+        "type": "phenotype",
+        "label": "Deep palmar crease",
+        "note": "HPO HP:0006191"
+       },
+       {
+        "id": "phenotype:HP:0012075",
+        "type": "phenotype",
+        "label": "Personality disorder",
+        "note": "HPO HP:0012075"
+       },
+       {
+        "id": "phenotype:HP:0034203",
+        "type": "phenotype",
+        "label": "Decreased iduronate sulfatase level",
+        "note": "HPO HP:0034203"
+       },
+       {
+        "id": "phenotype:HP:0009908",
+        "type": "phenotype",
+        "label": "Anterior creases of earlobe",
+        "note": "HPO HP:0009908"
+       },
+       {
+        "id": "phenotype:HP:0012796",
+        "type": "phenotype",
+        "label": "Increased cup-to-disc ratio",
+        "note": "HPO HP:0012796"
+       },
+       {
+        "id": "phenotype:HP:0006610",
+        "type": "phenotype",
+        "label": "Wide intermamillary distance",
+        "note": "HPO HP:0006610"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "Two symptomatic patients-with extensive pre-HSCT white matter disease and specific pre-HSCT clinical features (epilepsy and cognitive impairment)-had suboptimal outcomes.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0002133",
+        "type": "phenotype",
+        "label": "Status epilepticus",
+        "note": "HPO HP:0002133"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0002131",
+        "type": "phenotype",
+        "label": "Episodic ataxia",
+        "note": "HPO HP:0002131"
+       },
+       {
+        "id": "phenotype:HP:0031475",
+        "type": "phenotype",
+        "label": "Status epilepticus without prominent motor symptoms",
+        "note": "HPO HP:0031475"
+       },
+       {
+        "id": "phenotype:HP:0030842",
+        "type": "phenotype",
+        "label": "Choking episodes",
+        "note": "HPO HP:0030842"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "cognitive impairment",
+      "declared_type": "phenotype",
+      "sentence": "Two symptomatic patients-with extensive pre-HSCT white matter disease and specific pre-HSCT clinical features (epilepsy and cognitive impairment)-had suboptimal outcomes.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0008762",
+        "type": "phenotype",
+        "label": "Repetitive compulsive behavior",
+        "note": "HPO HP:0008762"
+       },
+       {
+        "id": "phenotype:HP:0002384",
+        "type": "phenotype",
+        "label": "Focal impaired awareness seizure",
+        "note": "HPO HP:0002384"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0031162",
+        "type": "phenotype",
+        "label": "Impaired oropharyngeal swallow response",
+        "note": "HPO HP:0031162"
+       },
+       {
+        "id": "phenotype:HP:0034687",
+        "type": "phenotype",
+        "label": "Impaired cerebroside sulfate hydrolysis",
+        "note": "HPO HP:0034687"
+       },
+       {
+        "id": "phenotype:HP:0010726",
+        "type": "phenotype",
+        "label": "Prominent corneal nerve fibers",
+        "note": "HPO HP:0010726"
+       },
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"galactocerebrosidase deficiency\",\"node_id\":\"mech:lysosomal-enzyme-deficiency\",\"match\":\"instance\",\"justification\":\"Galactocerebrosidase deficiency\"},{\"mention_id\":\"m2\",\"mention\":\"juvenile GLD\",\"node_id\":\"disease:GALC\",\"match\":\"instance\",\"justification\":\"Juvenile Krabbe is a GALC subtype\"},{\"mention_id\":\"m3\",\"mention\":\"white matter disease\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"White matter disease broader than candidates\"},{\"mention_id\":\"m4\",\"mention\":\"epilepsy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No epilepsy/seizure candidate\"},{\"mention_id\":\"m5\",\"mention\":\"cognitive impairment\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No cognitive impairment candidate\"}]}"
+  }
+ ]
+}

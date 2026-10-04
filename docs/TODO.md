@@ -52,7 +52,10 @@ Several Claude agents and people work in parallel. Follow this every time:
   - [ ] Rerun `global_index.py` → `mechanism_index.py` → `direction_build.py` (full) → `direction_eval.py` on a machine with `data/raw/downloads/`, so Dravet gets its G2P mechanism record and a disease-side direction. The cloud session could not reach EBI, ClinGen or OBO hosts.
 - [x] Hypotheses recomputed with the cross-family links (10 ideas, now including 4-PBA → SCN1A and rapamycin → NF1).
 - [x] Experiment AI drafts for all 10 current ideas (gpt-6-astra).
-- [~] (claimed by agent "vibrant-babbage", 2026-10-04 08:10 CEST) **Independent Claude re-reading of the cited family abstracts** (DEE, lysosomal, RASopathy, cross-family; ~270 PMIDs never cross-checked): same schema and instructions as the OpenAI layer, `READER=claude` in `pipeline/openai/*`, labelled `claude:*`, verified by code, compared with the curated edges.
+- [x] (vibrant-babbage, 2026-10-04) **Independent Claude re-reading of the cited family abstracts**: 256 abstracts (DEE 47, lysosomal 98, RASopathy 84, cross-family 27), 1,499 claims, all quote-verified by code; agreement with the curators 172/179 (96.1%), 274 new supporting sources on existing edges, 56 synonyms. `READER=claude` in `pipeline/openai/*`, report `docs/agent-reports/claude-extraction.md`.
+  - [ ] Review the 169 Claude candidate edges in `data/build/claude_candidate_edges.json` (not merged; move accepted ones into a curated fragment).
+  - [ ] Review the 8 Claude disagreements in the report: five are failed trials filed as limiting (quinidine/ADNFLE, phenytoin/Dravet, simvastatin and lovastatin/NF1, tipifarnib/NF1); two are the PTPN11 Noonan-GoF vs LEOPARD-LoF split (same paper, PMID:16358218).
+- [x] (vibrant-babbage, 2026-10-04) Outreach drafts for all 45 deep diseases (42 new, by Claude through the app's evidence packs and `sanitizeDoc`; `web/scripts/agent-ai.mjs`; 0 citations dropped).
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
 - [x] (vibrant-babbage, 2026-10-04) The STXBP1 enrollment total in the Research view excluded multi-disease registries: a study linked to 3+ atlas diseases or listing more than 5 conditions is shown as "not counted" (STXBP1: 101,363 → 863 across 8 studies).
@@ -81,6 +84,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- Independent Claude re-reading of 256 family abstracts (96.1% agreement, 274 new supporting sources); 42 Claude outreach drafts; `/method` counts both readers (vibrant-babbage).
 - README and video script refreshed; Research-view enrollment excludes multi-disease registries; relutrigine and NBI-921352 directions; obsolete-MONDO join in the mechanism layer (vibrant-babbage).
 - Web: direction flag ("Direction fits" / "Direction mismatch", direct target only, per variant group where a gene mixes directions) on disease therapy evidence, idea cards, /approach programmes, /variant and /sequence; AI reviews labelled "Independently reviewed by AI (not a human expert)" and counted separately on /method; direction result on /method (commit 2a3070c).
 - Cross-family biology: RAS → MAPK (LZTR1, RIT1, SOS1, CBL), SYNGAP1 ↔ MAPK/mTOR, mTOR, synaptic plasticity, misfolding (SCN1A, KCNQ2), autophagy; 11/45 → 29/45 diseases cross-linked by a specific mechanism. `docs/agent-reports/cross-family.md`.

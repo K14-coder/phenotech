@@ -1,0 +1,37 @@
+{
+ "pmid": "20937865",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.543Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c5f7a441e503ac8b",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/20937865.json",
+ "claims": [
+  {
+   "subject_mention": "H-ras(G12V)",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "constitutively active",
+   "object_type": "mechanism",
+   "quote": "We show that a constitutively active form of H-ras (H-ras(G12V)), expressed presynaptically at excitatory synapses in mice, accelerates and enhances multiple, mechanistically distinct forms of plasticity in the developing visual cortex.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "H-ras",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "plasticity in developing visual cortex",
+   "object_type": "mechanism",
+   "quote": "Constitutively active H-ras accelerates multiple forms of plasticity in developing visual cortex.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

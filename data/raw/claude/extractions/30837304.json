@@ -1,0 +1,73 @@
+{
+ "pmid": "30837304",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.572Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1faedecc6282073d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/30837304.json",
+ "claims": [
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome (NS)",
+   "object_type": "disease",
+   "quote": "Some cases of Noonan syndrome (NS) are associated with gain-of-function mutations in the phosphatase SHP2 (encoded by PTPN11); however, SHP2 is abundant in multiple cell types, so it is unclear which cell type(s) contribute to NS phenotypes.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHP2 (PTPN11) gain-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "Some cases of Noonan syndrome (NS) are associated with gain-of-function mutations in the phosphatase SHP2 (encoded by PTPN11); however, SHP2 is abundant in multiple cell types, so it is unclear which cell type(s) contribute to NS phenotypes.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHP2D61G",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "increased ERK signaling",
+   "object_type": "mechanism",
+   "quote": "Here, we found that expressing the NS-associated mutant SHP2D61G in excitatory, but not inhibitory, hippocampal neurons increased ERK signaling and impaired both long-term potentiation (LTP) and spatial memory in mice, although endogenous SHP2 was expressed in both neuronal types.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GAB1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "ERK activation",
+   "object_type": "mechanism",
+   "quote": "Transcriptomic analyses revealed that the genes encoding SHP2-interacting proteins that are critical for ERK activation, such as GAB1 and GRB2, were enriched in excitatory neurons.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GRB2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "ERK activation",
+   "object_type": "mechanism",
+   "quote": "Transcriptomic analyses revealed that the genes encoding SHP2-interacting proteins that are critical for ERK activation, such as GAB1 and GRB2, were enriched in excitatory neurons.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,396 @@
+{
+ "pmid": "40924969",
+ "entries": {
+  "01f4dde0d767ba10": {
+   "mention": "progressive neurodegeneration",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002180",
+    "phenotype:HP:0002344",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0000253",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0000529",
+    "phenotype:HP:0007240",
+    "phenotype:HP:0007199",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0000546"
+   ],
+   "node_id": "phenotype:HP:0002180",
+   "match": "instance",
+   "justification": "progressive neurodegeneration",
+   "raw_node_id": "phenotype:HP:0002180",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.831Z"
+  },
+  "e77a4a0ea61d5d0d": {
+   "mention": "Miglustat",
+   "type": "therapy",
+   "candidates": [
+    "therapy:miglustat",
+    "therapy:eliglustat",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:migalastat",
+    "therapy:statins-nf1-cognition",
+    "therapy:arimoclomol",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:hsct-krabbe",
+    "therapy:mirdametinib"
+   ],
+   "node_id": "therapy:miglustat",
+   "match": "same",
+   "justification": "miglustat",
+   "raw_node_id": "therapy:miglustat",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.831Z"
+  },
+  "ccff04be8c316867": {
+   "mention": "Oral Miglustat",
+   "type": "therapy",
+   "candidates": [
+    "therapy:miglustat",
+    "therapy:eliglustat",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:migalastat",
+    "therapy:statins-nf1-cognition",
+    "therapy:arimoclomol",
+    "therapy:hsct-krabbe",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:ambroxol",
+    "therapy:aav-stxbp1-gene-replacement"
+   ],
+   "node_id": "therapy:miglustat",
+   "match": "same",
+   "justification": "oral miglustat",
+   "raw_node_id": "therapy:miglustat",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.831Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.831Z",
+   "request_payload": {
+    "title": "Long-Term Open-Label Study Evaluating Oral Miglustat Treatment in Patients With Neuronal Ceroid Lipofuscinosis Type 3.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "progressive neurodegeneration",
+      "declared_type": "phenotype",
+      "sentence": "Neuronal ceroid lipofuscinosis type 3 (CLN3) is a rare lysosomal storage disorder characterized by progressive neurodegeneration.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002180",
+        "type": "phenotype",
+        "label": "Neurodegeneration",
+        "note": "HPO HP:0002180"
+       },
+       {
+        "id": "phenotype:HP:0002344",
+        "type": "phenotype",
+        "label": "Progressive neurologic deterioration",
+        "note": "HPO HP:0002344"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0000253",
+        "type": "phenotype",
+        "label": "Progressive microcephaly",
+        "note": "HPO HP:0000253"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0000529",
+        "type": "phenotype",
+        "label": "Progressive visual loss",
+        "note": "HPO HP:0000529"
+       },
+       {
+        "id": "phenotype:HP:0007240",
+        "type": "phenotype",
+        "label": "Progressive gait ataxia",
+        "note": "HPO HP:0007240"
+       },
+       {
+        "id": "phenotype:HP:0007199",
+        "type": "phenotype",
+        "label": "Progressive spastic paraparesis",
+        "note": "HPO HP:0007199"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "Miglustat",
+      "declared_type": "therapy",
+      "sentence": "Miglustat, a substrate reduction therapy, has shown preclinical efficacy in CLN3 models (conference abstract).",
+      "candidates": [
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:mirdametinib",
+        "type": "therapy",
+        "label": "Mirdametinib (MEK1/2 inhibitor; Gomekli)",
+        "synonyms": [
+         "Gomekli",
+         "PD-0325901"
+        ],
+        "summary": "An oral MEK inhibitor, FDA-approved for symptomatic plexiform neurofibromas in NF1 in adults and children 2 years and older; the second approved MEK inhibitor i"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "Oral Miglustat",
+      "declared_type": "therapy",
+      "sentence": "Long-Term Open-Label Study Evaluating Oral Miglustat Treatment in Patients With Neuronal Ceroid Lipofuscinosis Type 3.",
+      "candidates": [
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"progressive neurodegeneration\",\"node_id\":\"phenotype:HP:0002180\",\"match\":\"instance\",\"justification\":\"progressive neurodegeneration\"},{\"mention_id\":\"m2\",\"mention\":\"Miglustat\",\"node_id\":\"therapy:miglustat\",\"match\":\"same\",\"justification\":\"miglustat\"},{\"mention_id\":\"m3\",\"mention\":\"Oral Miglustat\",\"node_id\":\"therapy:miglustat\",\"match\":\"same\",\"justification\":\"oral miglustat\"}]}"
+  }
+ ]
+}

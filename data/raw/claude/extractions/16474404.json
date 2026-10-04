@@ -1,0 +1,109 @@
+{
+ "pmid": "16474404",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.531Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "7184e36a9bc7d9e8",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/16474404.json",
+ "claims": [
+  {
+   "subject_mention": "KRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "cardio-facio-cutaneous syndrome",
+   "object_type": "disease",
+   "quote": "Germline KRAS and BRAF mutations in cardio-facio-cutaneous syndrome.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "BRAF",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "cardio-facio-cutaneous syndrome",
+   "object_type": "disease",
+   "quote": "Germline KRAS and BRAF mutations in cardio-facio-cutaneous syndrome.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CFC",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "dysregulation of the RAS-RAF-ERK pathway",
+   "object_type": "mechanism",
+   "quote": "In 43 individuals with CFC, we identified two heterozygous KRAS mutations in three individuals and eight BRAF mutations in 16 individuals, suggesting that dysregulation of the RAS-RAF-ERK pathway is a common molecular basis for the three related disorders.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan",
+   "object_type": "disease",
+   "quote": "It phenotypically overlaps with Noonan and Costello syndrome, which are caused by mutations in PTPN11 and HRAS, respectively.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Costello syndrome",
+   "object_type": "disease",
+   "quote": "It phenotypically overlaps with Noonan and Costello syndrome, which are caused by mutations in PTPN11 and HRAS, respectively.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "distinctive facial appearance",
+   "object_type": "phenotype",
+   "quote": "Cardio-facio-cutaneous (CFC) syndrome is characterized by a distinctive facial appearance, heart defects and mental retardation.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "heart defects",
+   "object_type": "phenotype",
+   "quote": "Cardio-facio-cutaneous (CFC) syndrome is characterized by a distinctive facial appearance, heart defects and mental retardation.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "mental retardation",
+   "object_type": "phenotype",
+   "quote": "Cardio-facio-cutaneous (CFC) syndrome is characterized by a distinctive facial appearance, heart defects and mental retardation.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

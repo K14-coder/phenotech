@@ -1,0 +1,434 @@
+{
+ "pmid": "29940508",
+ "entries": {
+  "c8e28b8d4e753660": {
+   "mention": "downstream intracellular signaling triggered by N-methyl-d-aspartate receptor activation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:nmda-receptor-activity",
+    "mech:tor-signaling",
+    "mech:intracellular-cholesterol-transport",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ca-triggered-exocytosis",
+    "mech:ras-protein-signal-transduction",
+    "mech:lysosomal-storage",
+    "mech:action-potential",
+    "mech:glucose-transmembrane-transport"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "downstream signalling, not receptor activity",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.890Z"
+  },
+  "f815916da10205b9": {
+   "mention": "Ras-Raf-MEK-ERK pathway",
+   "type": "mechanism",
+   "candidates": [
+    "mech:ras-protein-signal-transduction",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:action-potential",
+    "mech:autophagy",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:gain-of-function",
+    "mech:glucose-transmembrane-transport"
+   ],
+   "node_id": "mech:ras-protein-signal-transduction",
+   "match": "instance",
+   "justification": "Ras-Raf-MEK-ERK pathway",
+   "raw_node_id": "mech:ras-protein-signal-transduction",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.890Z"
+  },
+  "394ce8b0a10f20f3": {
+   "mention": "basal synaptic responses",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-priming",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:synaptic-vesicle-fusion",
+    "mech:lysosomal-storage",
+    "mech:gaba-reuptake",
+    "mech:lysosomal-protein-catabolism",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:action-potential",
+    "mech:glucose-transmembrane-transport"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "basal synaptic responses not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.890Z"
+  },
+  "5a5170e9700cfb39": {
+   "mention": "LTP deficit",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:haploinsufficiency",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:protein-destabilization",
+    "mech:action-potential",
+    "mech:autophagy",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:gain-of-function"
+   ],
+   "node_id": "mech:regulation-of-synaptic-plasticity",
+   "match": "instance",
+   "justification": "LTP deficit",
+   "raw_node_id": "mech:regulation-of-synaptic-plasticity",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.890Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.890Z",
+   "request_payload": {
+    "title": "Chronic treatment with a MEK inhibitor reverses enhanced excitatory field potentials in Syngap1+/- mice.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "downstream intracellular signaling triggered by N-methyl-d-aspartate receptor activation",
+      "declared_type": "mechanism",
+      "sentence": "SYNGAP1 functions as a crucial regulator of downstream intracellular signaling triggered by N-methyl-d-aspartate receptor activation.",
+      "candidates": [
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:intracellular-cholesterol-transport",
+        "type": "mechanism",
+        "label": "Intracellular cholesterol transport",
+        "note": "kind: process",
+        "summary": "The directed movement of cholesterol, cholest-5-en-3-beta-ol, within cells."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "Ras-Raf-MEK-ERK pathway",
+      "declared_type": "mechanism",
+      "sentence": "One of the most important signaling pathways regulated by SYNGAP1 is the Ras-Raf-MEK-ERK pathway.",
+      "candidates": [
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:autophagy",
+        "type": "mechanism",
+        "label": "Autophagy",
+        "note": "kind: process",
+        "summary": "The cell's self-digestion pathway: material is wrapped in autophagosomes and delivered to lysosomes for breakdown."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "basal synaptic responses",
+      "declared_type": "mechanism",
+      "sentence": "Chronic administration of PD-0325901 normalized basal synaptic responses, but did not reverse LTP deficit.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "LTP deficit",
+      "declared_type": "mechanism",
+      "sentence": "Chronic administration of PD-0325901 normalized basal synaptic responses, but did not reverse LTP deficit.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:autophagy",
+        "type": "mechanism",
+        "label": "Autophagy",
+        "note": "kind: process",
+        "summary": "The cell's self-digestion pathway: material is wrapped in autophagosomes and delivered to lysosomes for breakdown."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"downstream intracellular signaling triggered by N-methyl-d-aspartate receptor activation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"downstream signalling, not receptor activity\"},{\"mention_id\":\"m2\",\"mention\":\"Ras-Raf-MEK-ERK pathway\",\"node_id\":\"mech:ras-protein-signal-transduction\",\"match\":\"instance\",\"justification\":\"Ras-Raf-MEK-ERK pathway\"},{\"mention_id\":\"m3\",\"mention\":\"basal synaptic responses\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"basal synaptic responses not a candidate\"},{\"mention_id\":\"m4\",\"mention\":\"LTP deficit\",\"node_id\":\"mech:regulation-of-synaptic-plasticity\",\"match\":\"instance\",\"justification\":\"LTP deficit\"}]}"
+  }
+ ]
+}

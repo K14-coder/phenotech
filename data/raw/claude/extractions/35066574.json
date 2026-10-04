@@ -1,0 +1,37 @@
+{
+ "pmid": "35066574",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.592Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1fc2a2edbbf804b8",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/35066574.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "RAS GTP-ase activating activity",
+   "object_type": "mechanism",
+   "quote": "The NF1 gene encodes neurofibromin, a large protein with RAS GTP-ase activating (RAS-GAP) activity, and loss of NF1 results in increased RAS signaling.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromin",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "tumor suppression",
+   "object_type": "mechanism",
+   "quote": "Investigating the role of these domains as well as the various signaling pathways that neurofibromin regulates and interacts with will provide a better understanding of how neurofibromin acts to suppress tumor development and potentially open new therapeutic avenues.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

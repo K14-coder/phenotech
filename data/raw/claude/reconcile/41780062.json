@@ -1,0 +1,532 @@
+{
+ "pmid": "41780062",
+ "entries": {
+  "e490b086256e8d7a": {
+   "mention": "Dravet syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:SCN1A",
+    "disease:SCN2A",
+    "disease:CDKL5",
+    "disease:GRIN2B",
+    "disease:CBL",
+    "disease:HRAS",
+    "disease:SLC6A1",
+    "disease:SYNGAP1",
+    "disease:IDS",
+    "disease:IDUA"
+   ],
+   "node_id": "disease:SCN1A",
+   "match": "instance",
+   "justification": "Dravet is SCN1A subtype",
+   "raw_node_id": "disease:SCN1A",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.808Z"
+  },
+  "a216442ba1005d85": {
+   "mention": "zorevunersen",
+   "type": "therapy",
+   "candidates": [
+    "therapy:zorevunersen",
+    "therapy:elsunersen",
+    "therapy:kv7-openers",
+    "therapy:kcnt1-aso",
+    "therapy:scn8a-aso",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement"
+   ],
+   "node_id": "therapy:zorevunersen",
+   "match": "same",
+   "justification": "zorevunersen",
+   "raw_node_id": "therapy:zorevunersen",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.808Z"
+  },
+  "b322119a59175945": {
+   "mention": "up-regulate NaV1.1 sodium channels",
+   "type": "mechanism",
+   "candidates": [
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:potassium-channel-activity",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:ca-triggered-exocytosis",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:lysosomal-storage",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:nmda-receptor-activity",
+    "mech:intracellular-cholesterol-transport"
+   ],
+   "node_id": "mech:voltage-gated-sodium-channel-activity",
+   "match": "instance",
+   "justification": "increasing NaV1.1 channel activity",
+   "raw_node_id": "mech:voltage-gated-sodium-channel-activity",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.808Z"
+  },
+  "0baae4fcc386092e": {
+   "mention": "cognitive deficits",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0007018",
+    "phenotype:HP:0008762",
+    "phenotype:HP:0004482",
+    "phenotype:HP:0000762",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0002870",
+    "phenotype:HP:0001257",
+    "phenotype:HP:0001598",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0005876"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no cognitive term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.808Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.808Z",
+   "request_payload": {
+    "title": "Zorevunersen in Children and Adolescents with Dravet Syndrome.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Dravet syndrome",
+      "declared_type": "disease",
+      "sentence": "BACKGROUND: Dravet syndrome is a severe developmental and epileptic encephalopathy caused primarily by SCN1A haploinsufficiency.",
+      "candidates": [
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "zorevunersen",
+      "declared_type": "therapy",
+      "sentence": "The effects of zorevunersen, an antisense oligonucleotide designed to up-regulate NaV1.1 sodium channels, in patients with Dravet syndrome are not known.",
+      "candidates": [
+       {
+        "id": "therapy:zorevunersen",
+        "type": "therapy",
+        "label": "Zorevunersen (STK-001, SCN1A TANGO antisense oligonucleotide)",
+        "synonyms": [
+         "STK-001",
+         "TANGO ASO"
+        ],
+        "summary": "An antisense oligonucleotide designed to raise productive SCN1A (NaV1.1) expression; in phase 3 for Dravet syndrome."
+       },
+       {
+        "id": "therapy:elsunersen",
+        "type": "therapy",
+        "label": "Elsunersen (PRAX-222, SCN2A-targeting antisense oligonucleotide)",
+        "synonyms": [
+         "PRAX-222"
+        ],
+        "summary": "An antisense oligonucleotide that lowers SCN2A expression, studied in early-onset gain-of-function SCN2A DEE."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:kcnt1-aso",
+        "type": "therapy",
+        "label": "KCNT1-targeting antisense oligonucleotide (knockdown)",
+        "synonyms": [
+         "Kcnt1 gapmer ASO"
+        ],
+        "summary": "Antisense oligonucleotides that lower KCNT1 expression; tested in mice and given investigationally to two infants."
+       },
+       {
+        "id": "therapy:scn8a-aso",
+        "type": "therapy",
+        "label": "Scn8a-lowering antisense oligonucleotide (preclinical)",
+        "synonyms": [
+         "Scn8a ASO"
+        ],
+        "summary": "An antisense oligonucleotide that lowers Scn8a; protective in mouse models of SCN8A encephalopathy and of Dravet syndrome."
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "up-regulate NaV1.1 sodium channels",
+      "declared_type": "mechanism",
+      "sentence": "The effects of zorevunersen, an antisense oligonucleotide designed to up-regulate NaV1.1 sodium channels, in patients with Dravet syndrome are not known.",
+      "candidates": [
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:intracellular-cholesterol-transport",
+        "type": "mechanism",
+        "label": "Intracellular cholesterol transport",
+        "note": "kind: process",
+        "summary": "The directed movement of cholesterol, cholest-5-en-3-beta-ol, within cells."
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "cognitive deficits",
+      "declared_type": "phenotype",
+      "sentence": "Risks of sudden unexpected death in epilepsy and cognitive deficits are higher among patients with this syndrome than in the general population with epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0008762",
+        "type": "phenotype",
+        "label": "Repetitive compulsive behavior",
+        "note": "HPO HP:0008762"
+       },
+       {
+        "id": "phenotype:HP:0004482",
+        "type": "phenotype",
+        "label": "Relative macrocephaly",
+        "note": "HPO HP:0004482"
+       },
+       {
+        "id": "phenotype:HP:0000762",
+        "type": "phenotype",
+        "label": "Decreased nerve conduction velocity",
+        "note": "HPO HP:0000762"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0002870",
+        "type": "phenotype",
+        "label": "Obstructive sleep apnea",
+        "note": "HPO HP:0002870"
+       },
+       {
+        "id": "phenotype:HP:0001257",
+        "type": "phenotype",
+        "label": "Spasticity",
+        "note": "HPO HP:0001257"
+       },
+       {
+        "id": "phenotype:HP:0001598",
+        "type": "phenotype",
+        "label": "Concave nail",
+        "note": "HPO HP:0001598"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Dravet syndrome\",\"node_id\":\"disease:SCN1A\",\"match\":\"instance\",\"justification\":\"Dravet is SCN1A subtype\"},{\"mention_id\":\"m2\",\"mention\":\"zorevunersen\",\"node_id\":\"therapy:zorevunersen\",\"match\":\"same\",\"justification\":\"zorevunersen\"},{\"mention_id\":\"m3\",\"mention\":\"up-regulate NaV1.1 sodium channels\",\"node_id\":\"mech:voltage-gated-sodium-channel-activity\",\"match\":\"instance\",\"justification\":\"increasing NaV1.1 channel activity\"},{\"mention_id\":\"m4\",\"mention\":\"cognitive deficits\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no cognitive term\"}]}"
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "pmid": "29688815",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.566Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "8ed596ae4113cca6",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/29688815.json",
+ "claims": [
+  {
+   "subject_mention": "cerliponase alfa",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "neuronal ceroid lipofuscinosis type 2 (CLN2) disease",
+   "object_type": "disease",
+   "quote": "Recombinant human tripeptidyl peptidase 1 (cerliponase alfa) is an enzyme-replacement therapy that has been developed to treat neuronal ceroid lipofuscinosis type 2 (CLN2) disease, a rare lysosomal disorder that causes progressive dementia in children.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CLN2 disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "progressive dementia",
+   "object_type": "phenotype",
+   "quote": "Recombinant human tripeptidyl peptidase 1 (cerliponase alfa) is an enzyme-replacement therapy that has been developed to treat neuronal ceroid lipofuscinosis type 2 (CLN2) disease, a rare lysosomal disorder that causes progressive dementia in children.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "cerliponase alfa",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "CLN2 disease",
+   "object_type": "disease",
+   "quote": "Intraventricular infusion of cerliponase alfa in patients with CLN2 disease resulted in less decline in motor and language function than that in historical controls.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

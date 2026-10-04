@@ -1,0 +1,404 @@
+{
+ "pmid": "34893157",
+ "entries": {
+  "295d143719a9ab70": {
+   "mention": "MPS II",
+   "type": "disease",
+   "candidates": [
+    "disease:IDS",
+    "disease:IDUA",
+    "disease:GAA",
+    "disease:KCNQ2",
+    "disease:KCNT1",
+    "disease:GBA1",
+    "disease:CACNA1A",
+    "disease:ARSA",
+    "disease:BRAF",
+    "disease:CBL"
+   ],
+   "node_id": "disease:IDS",
+   "match": "same",
+   "justification": "MPS II",
+   "raw_node_id": "disease:IDS",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.821Z"
+  },
+  "ef97f9ae1892f0d4": {
+   "mention": "IDS mutations",
+   "type": "variant_group",
+   "candidates": [
+    "vg:IDS:whole-gene-deletion",
+    "vg:IDS:splice",
+    "vg:IDS:contiguous-gene-deletion",
+    "vg:IDS:truncating",
+    "vg:IDUA:whole-gene-deletion",
+    "vg:ARSA:whole-gene-deletion",
+    "vg:CACNA1A:whole-gene-deletion",
+    "vg:CDKL5:whole-gene-deletion",
+    "vg:CLN3:whole-gene-deletion",
+    "vg:GAA:whole-gene-deletion"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "All IDS mutations; broader than one variant class",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.821Z"
+  },
+  "843c30db26cd4c4b": {
+   "mention": "accumulation of glycosaminoglycans (GAGs)",
+   "type": "mechanism",
+   "candidates": [
+    "mech:glycosaminoglycan-catabolism",
+    "mech:lysosomal-storage",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ca-triggered-exocytosis",
+    "mech:action-potential",
+    "mech:glycogen-catabolism"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "GAG accumulation is lysosomal storage",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.821Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.821Z",
+   "request_payload": {
+    "title": "A molecular genetics view on Mucopolysaccharidosis Type II.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "MPS II",
+      "declared_type": "disease",
+      "sentence": "MPS II symptoms are caused by mutations in the lysosomal iduronate-2-sulfatase (IDS) gene.",
+      "candidates": [
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KCNT1",
+        "type": "disease",
+        "label": "KCNT1-related disorders",
+        "synonyms": [
+         "EIMFS",
+         "epilepsy of infancy with migrating focal seizures",
+         "DEE14",
+         "ADNFLE",
+         "ENFL5",
+         "KCNT1 autosomal dominant nocturnal frontal lobe epilepsy",
+         "autosomal dominant nocturnal frontal lobe epilepsy caused by mutation in KCNT1",
+         "autosomal dominant nocturnal frontal lobe epilepsy type 5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNT1 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "IDS mutations",
+      "declared_type": "variant_group",
+      "sentence": "The mutations cause a loss of enzymatic performance and result in the accumulation of glycosaminoglycans (GAGs), heparan sulfate and dermatan sulfate, which are no longer degradable.",
+      "candidates": [
+       {
+        "id": "vg:IDS:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "IDS: Single-gene deletions / duplications",
+        "summary": "9 of 806 pathogenic or likely-pathogenic ClinVar records for IDS fall in this group."
+       },
+       {
+        "id": "vg:IDS:splice",
+        "type": "variant_group",
+        "label": "IDS: Splice-site variants",
+        "summary": "67 of 806 pathogenic or likely-pathogenic ClinVar records for IDS fall in this group."
+       },
+       {
+        "id": "vg:IDS:contiguous-gene-deletion",
+        "type": "variant_group",
+        "label": "IDS: Larger deletions spanning this gene and its neighbours",
+        "summary": "197 of 806 pathogenic or likely-pathogenic ClinVar records for IDS fall in this group. These copy-number changes cover more than one gene, so no mechanism edge "
+       },
+       {
+        "id": "vg:IDS:truncating",
+        "type": "variant_group",
+        "label": "IDS: Truncating variants (nonsense, frameshift, start-lost)",
+        "summary": "241 of 806 pathogenic or likely-pathogenic ClinVar records for IDS fall in this group."
+       },
+       {
+        "id": "vg:IDUA:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "IDUA: Single-gene deletions / duplications",
+        "summary": "6 of 586 pathogenic or likely-pathogenic ClinVar records for IDUA fall in this group."
+       },
+       {
+        "id": "vg:ARSA:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "ARSA: Single-gene deletions / duplications",
+        "summary": "13 of 530 pathogenic or likely-pathogenic ClinVar records for ARSA fall in this group."
+       },
+       {
+        "id": "vg:CACNA1A:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "CACNA1A: Single-gene deletions / duplications",
+        "summary": "37 of 652 pathogenic/likely-pathogenic ClinVar records for CACNA1A fall in this group."
+       },
+       {
+        "id": "vg:CDKL5:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "CDKL5: Single-gene deletions / duplications",
+        "summary": "36 of 881 pathogenic/likely-pathogenic ClinVar records for CDKL5 fall in this group."
+       },
+       {
+        "id": "vg:CLN3:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "CLN3: Single-gene deletions / duplications",
+        "summary": "39 of 328 pathogenic or likely-pathogenic ClinVar records for CLN3 fall in this group."
+       },
+       {
+        "id": "vg:GAA:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "GAA: Single-gene deletions / duplications",
+        "summary": "25 of 898 pathogenic or likely-pathogenic ClinVar records for GAA fall in this group."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "accumulation of glycosaminoglycans (GAGs)",
+      "declared_type": "mechanism",
+      "sentence": "The mutations cause a loss of enzymatic performance and result in the accumulation of glycosaminoglycans (GAGs), heparan sulfate and dermatan sulfate, which are no longer degradable.",
+      "candidates": [
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"MPS II\",\"node_id\":\"disease:IDS\",\"match\":\"same\",\"justification\":\"MPS II\"},{\"mention_id\":\"m2\",\"mention\":\"IDS mutations\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"All IDS mutations; broader than one variant class\"},{\"mention_id\":\"m3\",\"mention\":\"accumulation of glycosaminoglycans (GAGs)\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"GAG accumulation is lysosomal storage\"}]}"
+  }
+ ]
+}

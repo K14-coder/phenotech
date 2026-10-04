@@ -1,0 +1,109 @@
+{
+ "pmid": "30898653",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.573Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "958a667499a77b02",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/30898653.json",
+ "claims": [
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "short stature",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: Noonan syndrome (NS) is a genetic disorder characterized by short stature, a distinctive facial appearance, and heart defects.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "heart defects",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: Noonan syndrome (NS) is a genetic disorder characterized by short stature, a distinctive facial appearance, and heart defects.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "We recently discovered a novel NS gene, RIT1, which is a member of the RAS subfamily of small GTPases.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hypertrophic cardiomyopathy",
+   "object_type": "phenotype",
+   "quote": "NS patients with RIT1 mutations have a high incidence of hypertrophic cardiomyopathy and edematous phenotype, but the specific role of RIT1 remains unclear.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "edematous phenotype",
+   "object_type": "phenotype",
+   "quote": "NS patients with RIT1 mutations have a high incidence of hypertrophic cardiomyopathy and edematous phenotype, but the specific role of RIT1 remains unclear.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Rit1 A57G",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "AKT activation",
+   "object_type": "mechanism",
+   "quote": "FINDINGS: Rit1A57G/+ embryos exhibited decreased viability, edema, subcutaneous hemorrhage and AKT activation.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Rit1 A57G",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "AKT activation",
+   "object_type": "mechanism",
+   "quote": "Phosphorylated (at Thr308) AKT levels were also elevated in isoproterenol-treated Rit1A57G/+ hearts.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1 A57G",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "AKT signaling",
+   "object_type": "mechanism",
+   "quote": "Biochemical analysis indicates that the AKT signaling pathway might be related to downstream signaling in the RIT1 A57G mutant at a developmental stage and under β-adrenergic stimulation in the heart.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

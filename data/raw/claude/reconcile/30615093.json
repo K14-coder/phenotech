@@ -1,0 +1,579 @@
+{
+ "pmid": "30615093",
+ "entries": {
+  "1386636aefb1783c": {
+   "mention": "epilepsy",
+   "type": "disease",
+   "candidates": [
+    "disease:SCN8A",
+    "disease:CDKL5",
+    "disease:KCNT1",
+    "disease:SCN1A",
+    "disease:SLC6A1",
+    "disease:SYNGAP1",
+    "disease:CPLX1",
+    "disease:SLC2A1",
+    "disease:KCNQ2",
+    "disease:SCN2A"
+   ],
+   "node_id": "disease:SCN8A",
+   "match": "instance",
+   "justification": "epilepsy caused by SCN8A",
+   "raw_node_id": "disease:SCN8A",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.803Z"
+  },
+  "5bbe8ea5bd09bfd6": {
+   "mention": "intellectual disability",
+   "type": "disease",
+   "candidates": [
+    "disease:SCN8A",
+    "disease:CDKL5",
+    "disease:GRIN2B",
+    "disease:SCN2A",
+    "disease:SYNGAP1",
+    "disease:KCNQ2",
+    "disease:SLC6A1",
+    "disease:SNAP25",
+    "disease:UNC13A",
+    "disease:GBA1"
+   ],
+   "node_id": "disease:SCN8A",
+   "match": "instance",
+   "justification": "ID caused by SCN8A",
+   "raw_node_id": "disease:SCN8A",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.803Z"
+  },
+  "ea47f398d6528bdf": {
+   "mention": "autism",
+   "type": "disease",
+   "candidates": [
+    "disease:SCN8A",
+    "disease:GRIN2B",
+    "disease:SYNGAP1",
+    "disease:LZTR1",
+    "disease:KCNQ2",
+    "disease:SLC6A1",
+    "disease:VAMP2",
+    "disease:TPP1",
+    "disease:KCNT1",
+    "disease:CACNA1A"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "autism is a broader feature",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.803Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.803Z",
+   "request_payload": {
+    "title": "Neuronal mechanisms of mutations in SCN8A causing epilepsy or intellectual disability.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "epilepsy",
+      "declared_type": "disease",
+      "sentence": "Neuronal mechanisms of mutations in SCN8A causing epilepsy or intellectual disability.",
+      "candidates": [
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KCNT1",
+        "type": "disease",
+        "label": "KCNT1-related disorders",
+        "synonyms": [
+         "EIMFS",
+         "epilepsy of infancy with migrating focal seizures",
+         "DEE14",
+         "ADNFLE",
+         "ENFL5",
+         "KCNT1 autosomal dominant nocturnal frontal lobe epilepsy",
+         "autosomal dominant nocturnal frontal lobe epilepsy caused by mutation in KCNT1",
+         "autosomal dominant nocturnal frontal lobe epilepsy type 5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNT1 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "intellectual disability",
+      "declared_type": "disease",
+      "sentence": "Neuronal mechanisms of mutations in SCN8A causing epilepsy or intellectual disability.",
+      "candidates": [
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SNAP25",
+        "type": "disease",
+        "label": "SNAP25-related disorders",
+        "synonyms": [
+         "CMS18",
+         "congenital myasthenic syndrome 18",
+         "SNAP25-DEE",
+         "DEE in SNAP25",
+         "SNAP25 Developmental and Epileptic Encephalopathy (SNAP25-DEE)",
+         "SNAP25 congenital myasthenic syndrome",
+         "congenital myasthenic syndrome caused by mutation in SNAP25",
+         "congenital myasthenic syndrome type 18"
+        ],
+        "summary": "Changes in SNAP25 cause early-onset epilepsy with developmental delay; one reported variant instead causes a presynaptic congenital myasthenic syndrome with fat"
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "autism",
+      "declared_type": "disease",
+      "sentence": "We first studied the biophysical and neurophysiological consequences of four mutations in the human Na+ channel gene SCN8A causing either mild (E1483K) or severe epilepsy (R1872W), or intellectual disability and autism without epilepsy (R1620L, A1622D).",
+      "candidates": [
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:VAMP2",
+        "type": "disease",
+        "label": "VAMP2-related disorders",
+        "synonyms": [
+         "NEDHAHM",
+         "synaptobrevin-2-related disorder"
+        ],
+        "summary": "Changes in VAMP2 (synaptobrevin-2) cause a neurodevelopmental disorder with low muscle tone from birth, intellectual disability and autistic features, often wit"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:KCNT1",
+        "type": "disease",
+        "label": "KCNT1-related disorders",
+        "synonyms": [
+         "EIMFS",
+         "epilepsy of infancy with migrating focal seizures",
+         "DEE14",
+         "ADNFLE",
+         "ENFL5",
+         "KCNT1 autosomal dominant nocturnal frontal lobe epilepsy",
+         "autosomal dominant nocturnal frontal lobe epilepsy caused by mutation in KCNT1",
+         "autosomal dominant nocturnal frontal lobe epilepsy type 5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNT1 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"epilepsy\",\"node_id\":\"disease:SCN8A\",\"match\":\"instance\",\"justification\":\"epilepsy caused by SCN8A\"},{\"mention_id\":\"m2\",\"mention\":\"intellectual disability\",\"node_id\":\"disease:SCN8A\",\"match\":\"instance\",\"justification\":\"ID caused by SCN8A\"},{\"mention_id\":\"m3\",\"mention\":\"autism\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"autism is a broader feature\"}]}"
+  }
+ ]
+}

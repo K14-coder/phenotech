@@ -1,0 +1,85 @@
+{
+ "pmid": "28130275",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.560Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a28275384392fcbf",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/28130275.json",
+ "claims": [
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "excessive accumulation of lysosomal glycogen",
+   "object_type": "mechanism",
+   "quote": "In this study, we have examined the involvement of the mTOR pathway in the pathophysiology of a severe muscle wasting condition, Pompe disease, caused by excessive accumulation of lysosomal glycogen.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "dysregulation of mTOR signaling",
+   "object_type": "mechanism",
+   "quote": "Here, we report the dysregulation of mTOR signaling in the diseased muscle cells, and we focus on potential sites for therapeutic intervention.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TSC knockdown",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "reactivation of mTOR",
+   "object_type": "mechanism",
+   "quote": "Reactivation of mTOR in the whole muscle of Pompe mice by TSC knockdown resulted in the reversal of atrophy and a striking removal of autophagic buildup.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TSC knockdown",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Pompe",
+   "object_type": "disease",
+   "quote": "Reactivation of mTOR in the whole muscle of Pompe mice by TSC knockdown resulted in the reversal of atrophy and a striking removal of autophagic buildup.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "arginine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "aberrant mTOR signaling",
+   "object_type": "mechanism",
+   "quote": "Of particular interest, we found that the aberrant mTOR signaling can be reversed by arginine.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "modulation of mTOR signaling",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Pompe disease",
+   "object_type": "disease",
+   "quote": "Modulation of mTOR signaling as a strategy for the treatment of Pompe disease.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

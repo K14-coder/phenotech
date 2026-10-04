@@ -1,0 +1,950 @@
+{
+ "pmid": "16474404",
+ "entries": {
+  "74cbab6fd6bae2c2": {
+   "mention": "CFC",
+   "type": "disease",
+   "candidates": [
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:MAP2K1",
+    "disease:HRAS",
+    "disease:PTPN11",
+    "disease:ARSA",
+    "disease:CACNA1A",
+    "disease:CBL",
+    "disease:CDKL5",
+    "disease:CLN3"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "CFC caused by both KRAS and BRAF; broader than one gene node",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "1f01dee340baaaba": {
+   "mention": "dysregulation of the RAS-RAF-ERK pathway",
+   "type": "mechanism",
+   "candidates": [
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:ca-triggered-exocytosis",
+    "mech:ras-protein-signal-transduction",
+    "mech:lysosomal-storage",
+    "mech:synaptic-vesicle-fusion",
+    "mech:dominant-negative"
+   ],
+   "node_id": "mech:ras-protein-signal-transduction",
+   "match": "instance",
+   "justification": "Dysregulated RAS-RAF-ERK pathway",
+   "raw_node_id": "mech:ras-protein-signal-transduction",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "df9744f34ca50fab": {
+   "mention": "Noonan",
+   "type": "disease",
+   "candidates": [
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:PTPN11",
+    "disease:LZTR1",
+    "disease:RAF1",
+    "disease:RIT1",
+    "disease:SOS1",
+    "disease:NF1",
+    "disease:HRAS",
+    "disease:CBL"
+   ],
+   "node_id": "disease:PTPN11",
+   "match": "instance",
+   "justification": "Noonan syndrome tied to PTPN11 in sentence",
+   "raw_node_id": "disease:PTPN11",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "6e552b3fcc8ecfea": {
+   "mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:HRAS",
+    "disease:PTPN11",
+    "disease:MAP2K1",
+    "disease:CBL",
+    "disease:CDKL5",
+    "disease:GRIN2B",
+    "disease:SCN2A",
+    "disease:SCN1A"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "CFC syndrome in general spans several genes",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "e7080ecd8d28db28": {
+   "mention": "distinctive facial appearance",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001041",
+    "phenotype:HP:0000280",
+    "phenotype:HP:0001288",
+    "phenotype:HP:0006610",
+    "phenotype:HP:0006979",
+    "phenotype:HP:0005684",
+    "phenotype:HP:0025680",
+    "phenotype:HP:0002870",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0002046"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Distinctive facial appearance not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "4b5f7319e5dcd5a5": {
+   "mention": "heart defects",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001631",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0000365",
+    "phenotype:HP:0002046",
+    "phenotype:HP:0002421",
+    "phenotype:HP:0031705",
+    "phenotype:HP:0000726",
+    "phenotype:HP:0000746",
+    "phenotype:HP:0008802",
+    "phenotype:HP:0000790"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Heart defects broader than atrial septal defect",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "539ce60f628c25dc": {
+   "mention": "mental retardation",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001268",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0000546",
+    "phenotype:HP:0001653",
+    "phenotype:HP:0000073",
+    "phenotype:HP:0002883",
+    "phenotype:HP:0002835",
+    "phenotype:HP:0030147",
+    "phenotype:HP:0001659"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No intellectual disability candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.849Z",
+   "request_payload": {
+    "title": "Germline KRAS and BRAF mutations in cardio-facio-cutaneous syndrome.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "CFC",
+      "declared_type": "disease",
+      "sentence": "In 43 individuals with CFC, we identified two heterozygous KRAS mutations in three individuals and eight BRAF mutations in 16 individuals, suggesting that dysregulation of the RAS-RAF-ERK pathway is a common molecular basis for the three related disorders.",
+      "candidates": [
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:MAP2K1",
+        "type": "disease",
+        "label": "MAP2K1-related disorders (cardiofaciocutaneous syndrome 3)",
+        "synonyms": [
+         "CFC3",
+         "cardiofaciocutaneous syndrome 3",
+         "MEK1",
+         "MAP2K1 cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in MAP2K1",
+         "cardiofaciocutaneous syndrome type 3"
+        ],
+        "summary": "Germline MAP2K1 (MEK1) changes cause cardiofaciocutaneous syndrome."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "dysregulation of the RAS-RAF-ERK pathway",
+      "declared_type": "mechanism",
+      "sentence": "In 43 individuals with CFC, we identified two heterozygous KRAS mutations in three individuals and eight BRAF mutations in 16 individuals, suggesting that dysregulation of the RAS-RAF-ERK pathway is a common molecular basis for the three related disorders.",
+      "candidates": [
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "Noonan",
+      "declared_type": "disease",
+      "sentence": "It phenotypically overlaps with Noonan and Costello syndrome, which are caused by mutations in PTPN11 and HRAS, respectively.",
+      "candidates": [
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "Cardio-facio-cutaneous (CFC) syndrome",
+      "declared_type": "disease",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is characterized by a distinctive facial appearance, heart defects and mental retardation.",
+      "candidates": [
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:MAP2K1",
+        "type": "disease",
+        "label": "MAP2K1-related disorders (cardiofaciocutaneous syndrome 3)",
+        "synonyms": [
+         "CFC3",
+         "cardiofaciocutaneous syndrome 3",
+         "MEK1",
+         "MAP2K1 cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in MAP2K1",
+         "cardiofaciocutaneous syndrome type 3"
+        ],
+        "summary": "Germline MAP2K1 (MEK1) changes cause cardiofaciocutaneous syndrome."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "distinctive facial appearance",
+      "declared_type": "phenotype",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is characterized by a distinctive facial appearance, heart defects and mental retardation.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001041",
+        "type": "phenotype",
+        "label": "Facial erythema",
+        "note": "HPO HP:0001041"
+       },
+       {
+        "id": "phenotype:HP:0000280",
+        "type": "phenotype",
+        "label": "Coarse facial features",
+        "note": "HPO HP:0000280"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       },
+       {
+        "id": "phenotype:HP:0006610",
+        "type": "phenotype",
+        "label": "Wide intermamillary distance",
+        "note": "HPO HP:0006610"
+       },
+       {
+        "id": "phenotype:HP:0006979",
+        "type": "phenotype",
+        "label": "Sleep-wake cycle disturbance",
+        "note": "HPO HP:0006979"
+       },
+       {
+        "id": "phenotype:HP:0005684",
+        "type": "phenotype",
+        "label": "Distal arthrogryposis",
+        "note": "HPO HP:0005684"
+       },
+       {
+        "id": "phenotype:HP:0025680",
+        "type": "phenotype",
+        "label": "Compound muscle action potential amplitude facilitation",
+        "note": "HPO HP:0025680"
+       },
+       {
+        "id": "phenotype:HP:0002870",
+        "type": "phenotype",
+        "label": "Obstructive sleep apnea",
+        "note": "HPO HP:0002870"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0002046",
+        "type": "phenotype",
+        "label": "Heat intolerance",
+        "note": "HPO HP:0002046"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "heart defects",
+      "declared_type": "phenotype",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is characterized by a distinctive facial appearance, heart defects and mental retardation.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001631",
+        "type": "phenotype",
+        "label": "Atrial septal defect",
+        "note": "HPO HP:0001631"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0002046",
+        "type": "phenotype",
+        "label": "Heat intolerance",
+        "note": "HPO HP:0002046"
+       },
+       {
+        "id": "phenotype:HP:0002421",
+        "type": "phenotype",
+        "label": "Poor head control",
+        "note": "HPO HP:0002421"
+       },
+       {
+        "id": "phenotype:HP:0031705",
+        "type": "phenotype",
+        "label": "Compensatory head posture",
+        "note": "HPO HP:0031705"
+       },
+       {
+        "id": "phenotype:HP:0000726",
+        "type": "phenotype",
+        "label": "Dementia",
+        "note": "HPO HP:0000726"
+       },
+       {
+        "id": "phenotype:HP:0000746",
+        "type": "phenotype",
+        "label": "Delusion",
+        "note": "HPO HP:0000746"
+       },
+       {
+        "id": "phenotype:HP:0008802",
+        "type": "phenotype",
+        "label": "Hypoplasia of the femoral head",
+        "note": "HPO HP:0008802"
+       },
+       {
+        "id": "phenotype:HP:0000790",
+        "type": "phenotype",
+        "label": "Hematuria",
+        "note": "HPO HP:0000790"
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "mental retardation",
+      "declared_type": "phenotype",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is characterized by a distinctive facial appearance, heart defects and mental retardation.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       },
+       {
+        "id": "phenotype:HP:0001653",
+        "type": "phenotype",
+        "label": "Mitral regurgitation",
+        "note": "HPO HP:0001653"
+       },
+       {
+        "id": "phenotype:HP:0000073",
+        "type": "phenotype",
+        "label": "Ureteral duplication",
+        "note": "HPO HP:0000073"
+       },
+       {
+        "id": "phenotype:HP:0002883",
+        "type": "phenotype",
+        "label": "Hyperventilation",
+        "note": "HPO HP:0002883"
+       },
+       {
+        "id": "phenotype:HP:0002835",
+        "type": "phenotype",
+        "label": "Aspiration",
+        "note": "HPO HP:0002835"
+       },
+       {
+        "id": "phenotype:HP:0030147",
+        "type": "phenotype",
+        "label": "Truncal titubation",
+        "note": "HPO HP:0030147"
+       },
+       {
+        "id": "phenotype:HP:0001659",
+        "type": "phenotype",
+        "label": "Aortic regurgitation",
+        "note": "HPO HP:0001659"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"CFC\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"CFC caused by both KRAS and BRAF; broader than one gene node\"},{\"mention_id\":\"m2\",\"mention\":\"dysregulation of the RAS-RAF-ERK pathway\",\"node_id\":\"mech:ras-protein-signal-transduction\",\"match\":\"instance\",\"justification\":\"Dysregulated RAS-RAF-ERK pathway\"},{\"mention_id\":\"m3\",\"mention\":\"Noonan\",\"node_id\":\"disease:PTPN11\",\"match\":\"instance\",\"justification\":\"Noonan syndrome tied to PTPN11 in sentence\"},{\"mention_id\":\"m4\",\"mention\":\"Cardio-facio-cutaneous (CFC) syndrome\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"CFC syndrome in general spans several genes\"},{\"mention_id\":\"m5\",\"mention\":\"distinctive facial appearance\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Distinctive facial appearance not among candidates\"},{\"mention_id\":\"m6\",\"mention\":\"heart defects\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Heart defects broader than atrial septal defect\"},{\"mention_id\":\"m7\",\"mention\":\"mental retardation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No intellectual disability candidate\"}]}"
+  }
+ ]
+}

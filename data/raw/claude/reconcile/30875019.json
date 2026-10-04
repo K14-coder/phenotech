@@ -1,0 +1,814 @@
+{
+ "pmid": "30875019",
+ "entries": {
+  "fb7606841297f4f4": {
+   "mention": "Fabry disease",
+   "type": "disease",
+   "candidates": [
+    "disease:GLA",
+    "disease:CLN3",
+    "disease:TPP1",
+    "disease:GAA",
+    "disease:GALC",
+    "disease:IDUA",
+    "disease:GBA1",
+    "disease:SLC2A1",
+    "disease:HEXA",
+    "disease:NF1"
+   ],
+   "node_id": "disease:GLA",
+   "match": "same",
+   "justification": "Fabry disease",
+   "raw_node_id": "disease:GLA",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  },
+  "01e53776c5f44e8b": {
+   "mention": "deficient or absent α-galactosidase A activity",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:nmda-receptor-activity",
+    "mech:potassium-channel-activity",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:action-potential",
+    "mech:haploinsufficiency",
+    "mech:synaptic-vesicle-fusion",
+    "mech:regulation-of-synaptic-plasticity"
+   ],
+   "node_id": "mech:lysosomal-enzyme-deficiency",
+   "match": "instance",
+   "justification": "alpha-galactosidase A deficiency",
+   "raw_node_id": "mech:lysosomal-enzyme-deficiency",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  },
+  "87558546d5f628af": {
+   "mention": "Migalastat",
+   "type": "therapy",
+   "candidates": [
+    "therapy:migalastat",
+    "therapy:statins-nf1-cognition",
+    "therapy:miglustat",
+    "therapy:eliglustat",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:arimoclomol",
+    "therapy:kv7-openers",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:hsct-krabbe"
+   ],
+   "node_id": "therapy:migalastat",
+   "match": "same",
+   "justification": "same drug",
+   "raw_node_id": "therapy:migalastat",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  },
+  "c31f54f4454f0cfc": {
+   "mention": "stabilization and trafficking of amenable mutant α-galactosidase A from the endoplasmic reticulum to lysosomes",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosome-organization",
+    "mech:gain-of-function",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:lysosomal-storage",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:ca-triggered-exocytosis",
+    "mech:lysosomal-enzyme-deficiency"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "chaperone action, no matching mechanism candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  },
+  "5bc98a5a2281b08d": {
+   "mention": "Oral migalastat",
+   "type": "therapy",
+   "candidates": [
+    "therapy:migalastat",
+    "therapy:statins-nf1-cognition",
+    "therapy:miglustat",
+    "therapy:eliglustat",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:arimoclomol",
+    "therapy:kv7-openers",
+    "therapy:hsct-krabbe",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:aav-stxbp1-gene-replacement"
+   ],
+   "node_id": "therapy:migalastat",
+   "match": "same",
+   "justification": "same drug",
+   "raw_node_id": "therapy:migalastat",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  },
+  "f24748a8b02aefb7": {
+   "mention": "GL-3 inclusions",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-fusion",
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:glycogen-catabolism",
+    "mech:lysosome-organization",
+    "mech:lysosomal-storage",
+    "mech:protein-destabilization",
+    "mech:glucose-transmembrane-transport",
+    "mech:glycosaminoglycan-catabolism"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "GL-3 lysosomal inclusions",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.820Z",
+   "request_payload": {
+    "title": "Migalastat: A Review in Fabry Disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Fabry disease",
+      "declared_type": "disease",
+      "sentence": "Fabry disease is a rare lysosomal disorder characterized by deficient or absent α-galactosidase A activity resulting from mutations in the GLA gene.",
+      "candidates": [
+       {
+        "id": "disease:GLA",
+        "type": "disease",
+        "label": "GLA-related disorders (Fabry disease)",
+        "synonyms": [
+         "Fabry disease",
+         "Anderson-Fabry disease",
+         "alpha-galactosidase A deficiency",
+         "Alpha-galactosidase A deficiency",
+         "FD",
+         "Fabry's disease",
+         "Fd",
+         "angiokeratoma corporis diffusum"
+        ],
+        "summary": "X-linked deficiency of alpha-galactosidase A makes globotriaosylceramide (Gb3) build up in blood vessels, kidney, heart and nerves: pain crises, kidney failure,"
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "deficient or absent α-galactosidase A activity",
+      "declared_type": "mechanism",
+      "sentence": "Fabry disease is a rare lysosomal disorder characterized by deficient or absent α-galactosidase A activity resulting from mutations in the GLA gene.",
+      "candidates": [
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "Migalastat",
+      "declared_type": "therapy",
+      "sentence": "Migalastat (Galafold™), a pharmacological chaperone, stabilizes and facilitates trafficking of amenable mutant forms of α-galactosidase A enzyme from the endoplasmic reticulum to lysosomes and increases its lysosomal activity.",
+      "candidates": [
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "stabilization and trafficking of amenable mutant α-galactosidase A from the endoplasmic reticulum to lysosomes",
+      "declared_type": "mechanism",
+      "sentence": "Migalastat (Galafold™), a pharmacological chaperone, stabilizes and facilitates trafficking of amenable mutant forms of α-galactosidase A enzyme from the endoplasmic reticulum to lysosomes and increases its lysosomal activity.",
+      "candidates": [
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "Oral migalastat",
+      "declared_type": "therapy",
+      "sentence": "Oral migalastat is the first pharmacological chaperone approved for treating patients [aged ≥ 18 years (USA and Canada) or ≥ 16 years in other countries] with Fabry disease who have a migalastat-amenable GLA mutation.",
+      "candidates": [
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "GL-3 inclusions",
+      "declared_type": "mechanism",
+      "sentence": "In the modified ITT population (i.e. patients with migalastat-amenable GLA mutations), relative to placebo, migalastat treatment significantly reduced the mean number of GL-3 inclusions/KIC and plasma lyso-globotriaosylsphingosine levels at 6 months.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Fabry disease\",\"node_id\":\"disease:GLA\",\"match\":\"same\",\"justification\":\"Fabry disease\"},{\"mention_id\":\"m2\",\"mention\":\"deficient or absent α-galactosidase A activity\",\"node_id\":\"mech:lysosomal-enzyme-deficiency\",\"match\":\"instance\",\"justification\":\"alpha-galactosidase A deficiency\"},{\"mention_id\":\"m3\",\"mention\":\"Migalastat\",\"node_id\":\"therapy:migalastat\",\"match\":\"same\",\"justification\":\"same drug\"},{\"mention_id\":\"m4\",\"mention\":\"stabilization and trafficking of amenable mutant α-galactosidase A from the endoplasmic reticulum to lysosomes\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"chaperone action, no matching mechanism candidate\"},{\"mention_id\":\"m5\",\"mention\":\"Oral migalastat\",\"node_id\":\"therapy:migalastat\",\"match\":\"same\",\"justification\":\"same drug\"},{\"mention_id\":\"m6\",\"mention\":\"GL-3 inclusions\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"GL-3 lysosomal inclusions\"}]}"
+  }
+ ]
+}

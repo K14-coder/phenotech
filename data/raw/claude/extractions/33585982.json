@@ -1,0 +1,37 @@
+{
+ "pmid": "33585982",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.585Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "8c6b574599ec8785",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/33585982.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "low-grade gliomas",
+   "object_type": "phenotype",
+   "quote": "Low-grade gliomas (LGGs) are the most common childhood brain tumor in the general population and in individuals with the Neurofibromatosis type 1 (NF1) cancer predisposition syndrome.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1-LGG",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "bi-allelic NF1 inactivation",
+   "object_type": "mechanism",
+   "quote": "Whereas, most tumors harbored bi-allelic NF1 inactivation as the only genetic abnormality, 11% had additional mutations.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

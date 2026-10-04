@@ -1,0 +1,291 @@
+{
+ "pmid": "41199165",
+ "entries": {
+  "85bcdfde2d57ec68": {
+   "mention": "progressive vision loss",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000529",
+    "phenotype:HP:0000253",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0007240",
+    "phenotype:HP:0002344",
+    "phenotype:HP:0007199",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0002371",
+    "phenotype:HP:0000716"
+   ],
+   "node_id": "phenotype:HP:0000529",
+   "match": "same",
+   "justification": "Progressive visual loss",
+   "raw_node_id": "phenotype:HP:0000529",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  },
+  "8800391d47a2c5d3": {
+   "mention": "language impairment",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000365",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0002384",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0031162",
+    "phenotype:HP:0034687",
+    "phenotype:HP:0012249",
+    "phenotype:HP:0000726"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No language impairment candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  },
+  "93b31e60697df165": {
+   "mention": "cognitive decline",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0008762",
+    "phenotype:HP:0004482",
+    "phenotype:HP:0000762",
+    "phenotype:HP:0002162",
+    "phenotype:HP:0002213",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0002870",
+    "phenotype:HP:0034300",
+    "phenotype:HP:0001598",
+    "phenotype:HP:0003403"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No cognitive decline candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.833Z",
+   "request_payload": {
+    "title": "Sex-specific and age-related progression of auditory neurophysiological deficits in the Cln3 mouse model of Batten disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "progressive vision loss",
+      "declared_type": "phenotype",
+      "sentence": "Clinical features include progressive vision loss, language impairment, and cognitive decline.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000529",
+        "type": "phenotype",
+        "label": "Progressive visual loss",
+        "note": "HPO HP:0000529"
+       },
+       {
+        "id": "phenotype:HP:0000253",
+        "type": "phenotype",
+        "label": "Progressive microcephaly",
+        "note": "HPO HP:0000253"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0007240",
+        "type": "phenotype",
+        "label": "Progressive gait ataxia",
+        "note": "HPO HP:0007240"
+       },
+       {
+        "id": "phenotype:HP:0002344",
+        "type": "phenotype",
+        "label": "Progressive neurologic deterioration",
+        "note": "HPO HP:0002344"
+       },
+       {
+        "id": "phenotype:HP:0007199",
+        "type": "phenotype",
+        "label": "Progressive spastic paraparesis",
+        "note": "HPO HP:0007199"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0002371",
+        "type": "phenotype",
+        "label": "Loss of speech",
+        "note": "HPO HP:0002371"
+       },
+       {
+        "id": "phenotype:HP:0000716",
+        "type": "phenotype",
+        "label": "Depression",
+        "note": "HPO HP:0000716"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "language impairment",
+      "declared_type": "phenotype",
+      "sentence": "Clinical features include progressive vision loss, language impairment, and cognitive decline.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0002384",
+        "type": "phenotype",
+        "label": "Focal impaired awareness seizure",
+        "note": "HPO HP:0002384"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0031162",
+        "type": "phenotype",
+        "label": "Impaired oropharyngeal swallow response",
+        "note": "HPO HP:0031162"
+       },
+       {
+        "id": "phenotype:HP:0034687",
+        "type": "phenotype",
+        "label": "Impaired cerebroside sulfate hydrolysis",
+        "note": "HPO HP:0034687"
+       },
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       },
+       {
+        "id": "phenotype:HP:0000726",
+        "type": "phenotype",
+        "label": "Dementia",
+        "note": "HPO HP:0000726"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "cognitive decline",
+      "declared_type": "phenotype",
+      "sentence": "Clinical features include progressive vision loss, language impairment, and cognitive decline.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0008762",
+        "type": "phenotype",
+        "label": "Repetitive compulsive behavior",
+        "note": "HPO HP:0008762"
+       },
+       {
+        "id": "phenotype:HP:0004482",
+        "type": "phenotype",
+        "label": "Relative macrocephaly",
+        "note": "HPO HP:0004482"
+       },
+       {
+        "id": "phenotype:HP:0000762",
+        "type": "phenotype",
+        "label": "Decreased nerve conduction velocity",
+        "note": "HPO HP:0000762"
+       },
+       {
+        "id": "phenotype:HP:0002162",
+        "type": "phenotype",
+        "label": "Low posterior hairline",
+        "note": "HPO HP:0002162"
+       },
+       {
+        "id": "phenotype:HP:0002213",
+        "type": "phenotype",
+        "label": "Fine hair",
+        "note": "HPO HP:0002213"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0002870",
+        "type": "phenotype",
+        "label": "Obstructive sleep apnea",
+        "note": "HPO HP:0002870"
+       },
+       {
+        "id": "phenotype:HP:0034300",
+        "type": "phenotype",
+        "label": "Decreased acid sphingomyelinase activity",
+        "note": "HPO HP:0034300"
+       },
+       {
+        "id": "phenotype:HP:0001598",
+        "type": "phenotype",
+        "label": "Concave nail",
+        "note": "HPO HP:0001598"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"progressive vision loss\",\"node_id\":\"phenotype:HP:0000529\",\"match\":\"same\",\"justification\":\"Progressive visual loss\"},{\"mention_id\":\"m2\",\"mention\":\"language impairment\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No language impairment candidate\"},{\"mention_id\":\"m3\",\"mention\":\"cognitive decline\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No cognitive decline candidate\"}]}"
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "pmid": "25987178",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.555Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "cffc2d112f8ce41a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/25987178.json",
+ "claims": [
+  {
+   "subject_mention": "ARSA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Metachromatic leukodystrophy",
+   "object_type": "disease",
+   "quote": "Metachromatic leukodystrophy is an inherited lysosomal disorder caused by recessive mutations in ARSA encoding arylsulfatase A.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Metachromatic leukodystrophy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "sulfatide accumulation leading to demyelination",
+   "object_type": "mechanism",
+   "quote": "Low activity of arylsulfatase A results in the accumulation of sulfatides in the central and peripheral nervous system leading to demyelination.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hematopoietic stem cell transplantation",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "metachromatic leukodystrophy",
+   "object_type": "disease",
+   "quote": "This review discusses diagnostic process and efficacy of current and possible future therapies such as hematopoietic stem cell transplantation, enzyme replacement therapy and gene therapy.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "enzyme replacement therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "metachromatic leukodystrophy",
+   "object_type": "disease",
+   "quote": "This review discusses diagnostic process and efficacy of current and possible future therapies such as hematopoietic stem cell transplantation, enzyme replacement therapy and gene therapy.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "gene therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "metachromatic leukodystrophy",
+   "object_type": "disease",
+   "quote": "This review discusses diagnostic process and efficacy of current and possible future therapies such as hematopoietic stem cell transplantation, enzyme replacement therapy and gene therapy.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

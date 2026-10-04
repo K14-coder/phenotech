@@ -1,0 +1,467 @@
+{
+ "pmid": "41739308",
+ "entries": {
+  "a48de602b86ddebb": {
+   "mention": "intrathecal AAVrh10-mHexa combined with anti-inflammatory treatment",
+   "type": "therapy",
+   "candidates": [
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:sodium-channel-blockers",
+    "therapy:hsct-krabbe",
+    "therapy:cerliponase-alfa",
+    "therapy:pabinafusp-alfa",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:trametinib",
+    "therapy:scn8a-aso",
+    "therapy:pyrimethamine"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "AAVrh10-mHexa combo differs from the AAVrh8 HEXA/HEXB product",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.836Z"
+  },
+  "17fe350b0e7261b6": {
+   "mention": "early-onset Tay-Sachs disease",
+   "type": "disease",
+   "candidates": [
+    "disease:HEXA",
+    "disease:GALC",
+    "disease:GAA",
+    "disease:STXBP1",
+    "disease:NPC1",
+    "disease:CACNA1A",
+    "disease:SCN1A",
+    "disease:SCN8A",
+    "disease:CLN3",
+    "disease:TPP1"
+   ],
+   "node_id": "disease:HEXA",
+   "match": "instance",
+   "justification": "early-onset Tay-Sachs is a HEXA subtype",
+   "raw_node_id": "disease:HEXA",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.836Z"
+  },
+  "d7660e2cad936195": {
+   "mention": "AAVrh10-based intrathecal delivery combined with istradefylline",
+   "type": "therapy",
+   "candidates": [
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:munc18-1-pharmacological-chaperone",
+    "therapy:etx101",
+    "therapy:hsct-krabbe",
+    "therapy:ambroxol",
+    "therapy:eliglustat",
+    "therapy:kv7-openers",
+    "therapy:pyrimethamine",
+    "therapy:acetylcholinesterase-inhibitor-cms"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "AAVrh10 plus istradefylline combo, no candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.836Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.836Z",
+   "request_payload": {
+    "title": "Intrathecal delivery of AAVrh10-mHexa combined with anti-inflammatory treatment reduces neuropathological markers and extends the lifespan of mice with early-onset Tay-Sachs disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "intrathecal AAVrh10-mHexa combined with anti-inflammatory treatment",
+      "declared_type": "therapy",
+      "sentence": "Intrathecal delivery of AAVrh10-mHexa combined with anti-inflammatory treatment reduces neuropathological markers and extends the lifespan of mice with early-onset Tay-Sachs disease.",
+      "candidates": [
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:cerliponase-alfa",
+        "type": "therapy",
+        "label": "Cerliponase alfa (intraventricular enzyme replacement for CLN2)",
+        "synonyms": [
+         "Brineura",
+         "rhTPP1"
+        ],
+        "summary": "Recombinant TPP1 delivered straight into the fluid spaces of the brain, bypassing the blood-brain barrier. It slows the loss of walking and language in CLN2 dis"
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       },
+       {
+        "id": "therapy:scn8a-aso",
+        "type": "therapy",
+        "label": "Scn8a-lowering antisense oligonucleotide (preclinical)",
+        "synonyms": [
+         "Scn8a ASO"
+        ],
+        "summary": "An antisense oligonucleotide that lowers Scn8a; protective in mouse models of SCN8A encephalopathy and of Dravet syndrome."
+       },
+       {
+        "id": "therapy:pyrimethamine",
+        "type": "therapy",
+        "label": "Pyrimethamine (pharmacological chaperone for hexosaminidase A)",
+        "synonyms": [
+         "PMT"
+        ],
+        "summary": "An old antiparasitic drug that partly rescues misfolded hexosaminidase A; it raised enzyme activity in late-onset Tay-Sachs patients, but higher doses caused si"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "early-onset Tay-Sachs disease",
+      "declared_type": "disease",
+      "sentence": "Intrathecal delivery of AAVrh10-mHexa combined with anti-inflammatory treatment reduces neuropathological markers and extends the lifespan of mice with early-onset Tay-Sachs disease.",
+      "candidates": [
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:NPC1",
+        "type": "disease",
+        "label": "NPC1-related disorders (Niemann-Pick disease type C)",
+        "synonyms": [
+         "Niemann-Pick disease type C",
+         "NPC",
+         "NP-C",
+         "NPC1",
+         "Niemann-Pick disease type C1",
+         "Niemann-Pick disease, type C1",
+         "type C1 Niemann-Pick disease",
+         "Niemann-Pick disease type C, classic form"
+        ],
+        "summary": "Loss of the NPC1 cholesterol transporter traps cholesterol and lipids in lysosomes: liver and spleen enlargement and a progressive neurological disease with ata"
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "AAVrh10-based intrathecal delivery combined with istradefylline",
+      "declared_type": "therapy",
+      "sentence": "These results suggest that AAVrh10-based intrathecal delivery combined with istradefylline provides a promising therapeutic strategy for treating Tay-Sachs disease.",
+      "candidates": [
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:munc18-1-pharmacological-chaperone",
+        "type": "therapy",
+        "label": "Structure-based pharmacological chaperones for Munc18-1",
+        "synonyms": [
+         "Munc18-1 pharmacochaperone"
+        ],
+        "summary": "Small molecules designed from the Munc18-1 structure to bind and stabilize the protein. Intended to replace generic chemical chaperones, which need high doses."
+       },
+       {
+        "id": "therapy:etx101",
+        "type": "therapy",
+        "label": "ETX101 (AAV9-delivered gene therapy for SCN1A Dravet syndrome)",
+        "synonyms": [
+         "ETX101"
+        ],
+        "summary": "An AAV9-delivered gene therapy in phase 1/2 for SCN1A-positive Dravet syndrome."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:pyrimethamine",
+        "type": "therapy",
+        "label": "Pyrimethamine (pharmacological chaperone for hexosaminidase A)",
+        "synonyms": [
+         "PMT"
+        ],
+        "summary": "An old antiparasitic drug that partly rescues misfolded hexosaminidase A; it raised enzyme activity in late-onset Tay-Sachs patients, but higher doses caused si"
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"intrathecal AAVrh10-mHexa combined with anti-inflammatory treatment\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"AAVrh10-mHexa combo differs from the AAVrh8 HEXA/HEXB product\"},{\"mention_id\":\"m2\",\"mention\":\"early-onset Tay-Sachs disease\",\"node_id\":\"disease:HEXA\",\"match\":\"instance\",\"justification\":\"early-onset Tay-Sachs is a HEXA subtype\"},{\"mention_id\":\"m3\",\"mention\":\"AAVrh10-based intrathecal delivery combined with istradefylline\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"AAVrh10 plus istradefylline combo, no candidate\"}]}"
+  }
+ ]
+}

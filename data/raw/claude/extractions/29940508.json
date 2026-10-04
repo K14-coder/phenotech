@@ -1,0 +1,73 @@
+{
+ "pmid": "29940508",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.567Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a9306b476d7853ab",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/29940508.json",
+ "claims": [
+  {
+   "subject_mention": "SYNGAP1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "downstream intracellular signaling triggered by N-methyl-d-aspartate receptor activation",
+   "object_type": "mechanism",
+   "quote": "SYNGAP1 functions as a crucial regulator of downstream intracellular signaling triggered by N-methyl-d-aspartate receptor activation.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYNGAP1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "Ras-Raf-MEK-ERK pathway",
+   "object_type": "mechanism",
+   "quote": "One of the most important signaling pathways regulated by SYNGAP1 is the Ras-Raf-MEK-ERK pathway.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYNGAP1 loss-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "Loss-of-function mutations in the SYNGAP1 gene have been documented in many human cognitive and neurological disorders.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PD-0325901",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "basal synaptic responses",
+   "object_type": "mechanism",
+   "quote": "Chronic administration of PD-0325901 normalized basal synaptic responses, but did not reverse LTP deficit.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PD-0325901",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "LTP deficit",
+   "object_type": "mechanism",
+   "quote": "Chronic administration of PD-0325901 normalized basal synaptic responses, but did not reverse LTP deficit.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": true
+  }
+ ]
+}

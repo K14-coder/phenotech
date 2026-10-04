@@ -1,0 +1,97 @@
+{
+ "pmid": "31548609",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.577Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e9987b7246561a8b",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/31548609.json",
+ "claims": [
+  {
+   "subject_mention": "oxysterol binding protein (OSBP)",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "cholesterol delivery across ER-lysosome contacts to activate mTORC1",
+   "object_type": "mechanism",
+   "quote": "Here, we show that oxysterol binding protein (OSBP) and its anchors at the endoplasmic reticulum (ER), VAPA and VAPB, deliver cholesterol across ER-lysosome contacts to activate mTORC1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "VAPA",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "cholesterol delivery across ER-lysosome contacts to activate mTORC1",
+   "object_type": "mechanism",
+   "quote": "Here, we show that oxysterol binding protein (OSBP) and its anchors at the endoplasmic reticulum (ER), VAPA and VAPB, deliver cholesterol across ER-lysosome contacts to activate mTORC1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "VAPB",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "cholesterol delivery across ER-lysosome contacts to activate mTORC1",
+   "object_type": "mechanism",
+   "quote": "Here, we show that oxysterol binding protein (OSBP) and its anchors at the endoplasmic reticulum (ER), VAPA and VAPB, deliver cholesterol across ER-lysosome contacts to activate mTORC1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NPC1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "lysosomal cholesterol transport",
+   "object_type": "mechanism",
+   "quote": "By contrast, OSBP-mediated cholesterol trafficking drives constitutive mTORC1 activation in a disease model caused by the loss of the lysosomal cholesterol transporter, Niemann-Pick C1 (NPC1).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Niemann-Pick type C",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "aberrant growth signalling",
+   "object_type": "mechanism",
+   "quote": "ER-lysosome contacts enable cholesterol sensing by mTORC1 and drive aberrant growth signalling in Niemann-Pick type C.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "inactivation of OSBP",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "aberrant mTORC1 signalling",
+   "object_type": "mechanism",
+   "quote": "Chemical and genetic inactivation of OSBP suppresses aberrant mTORC1 signalling and restores autophagic function in cellular models of Niemann-Pick type C (NPC).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "inactivation of OSBP",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Niemann-Pick type C",
+   "object_type": "disease",
+   "quote": "Chemical and genetic inactivation of OSBP suppresses aberrant mTORC1 signalling and restores autophagic function in cellular models of Niemann-Pick type C (NPC).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

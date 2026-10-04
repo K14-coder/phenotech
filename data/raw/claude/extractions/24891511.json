@@ -1,0 +1,109 @@
+{
+ "pmid": "24891511",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.550Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "98b1a4e08c8e2285",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/24891511.json",
+ "claims": [
+  {
+   "subject_mention": "NPC1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Niemann-Pick disease type C",
+   "object_type": "disease",
+   "quote": "Most cases with Niemann-Pick disease type C carry mutations in NPC1.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NPC1 I1061T",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "protein destabilization with endoplasmic reticulum-associated degradation",
+   "object_type": "mechanism",
+   "quote": "Some of the mutations, including the most frequent I1061T, give rise to unstable proteins selected for endoplasmic reticulum-associated degradation.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Hsp70",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "NPC1 stabilization",
+   "object_type": "mechanism",
+   "quote": "Co-expression and RNAi knockdown experiments in HEK cells indicated that Hsp70/Hsp90 stabilized NPC1, whereas Hsc70 destabilized it.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Hsp90",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "NPC1 stabilization",
+   "object_type": "mechanism",
+   "quote": "Co-expression and RNAi knockdown experiments in HEK cells indicated that Hsp70/Hsp90 stabilized NPC1, whereas Hsc70 destabilized it.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Hsc70",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "NPC1 destabilization",
+   "object_type": "mechanism",
+   "quote": "Co-expression and RNAi knockdown experiments in HEK cells indicated that Hsp70/Hsp90 stabilized NPC1, whereas Hsc70 destabilized it.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "CHIP",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "NPC1 ubiquitylation",
+   "object_type": "mechanism",
+   "quote": "Accordingly, expression of an E3 ligase CHIP (carboxyl terminus of Hsp70-interacting protein) enhanced MG132-induced accumulation of ubiquitylated NPC1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "geranylgeranylacetone",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "NPC1 I1061T protein level",
+   "object_type": "mechanism",
+   "quote": "In human fibroblasts carrying the I1061T mutation, adenovirus-mediated expression of Hsp70 or treatment with an HSP-inducer geranylgeranylacetone (GGA) increased the level of the mutant protein.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "geranylgeranylacetone",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "cholesterol accumulation",
+   "object_type": "mechanism",
+   "quote": "In GGA-treated cells, the rescued protein was localized in the late endosome and ameliorated cholesterol accumulation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

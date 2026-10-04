@@ -1,0 +1,438 @@
+{
+ "pmid": "38827265",
+ "entries": {
+  "c2b2bdcba5b98ef0": {
+   "mention": "trametinib",
+   "type": "therapy",
+   "candidates": [
+    "therapy:trametinib",
+    "therapy:mirdametinib",
+    "therapy:binimetinib",
+    "therapy:selumetinib",
+    "therapy:tipifarnib",
+    "therapy:quinidine",
+    "therapy:kv7-openers",
+    "therapy:statins-nf1-cognition",
+    "therapy:fenfluramine",
+    "therapy:hsct-krabbe"
+   ],
+   "node_id": "therapy:trametinib",
+   "match": "same",
+   "justification": "Exact drug",
+   "raw_node_id": "therapy:trametinib",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.880Z"
+  },
+  "4c90c94a1b112648": {
+   "mention": "RASopathies",
+   "type": "disease",
+   "candidates": [
+    "disease:KRAS",
+    "disease:RAF1",
+    "disease:BRAF",
+    "disease:PTPN11",
+    "disease:SCN8A",
+    "disease:GRIN2B",
+    "disease:STXBP1",
+    "disease:GBA1",
+    "disease:SCN1A",
+    "disease:CDKL5"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "RASopathies span many genes",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.880Z"
+  },
+  "172d023df5ba42fe": {
+   "mention": "upregulated mitogen-activated protein kinase activity",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:potassium-channel-activity",
+    "mech:protein-destabilization",
+    "mech:nmda-receptor-activity",
+    "mech:ras-protein-signal-transduction",
+    "mech:lysosomal-protein-catabolism"
+   ],
+   "node_id": "mech:ras-protein-signal-transduction",
+   "match": "instance",
+   "justification": "Upregulated MAPK activity downstream of RAS",
+   "raw_node_id": "mech:ras-protein-signal-transduction",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.880Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.880Z",
+   "request_payload": {
+    "title": "Treatment of RAF1-Related Obstructive Hypertrophic Cardiomyopathy by MEK Inhibition Using Trametinib.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "trametinib",
+      "declared_type": "therapy",
+      "sentence": "Treatment of RAF1-Related Obstructive Hypertrophic Cardiomyopathy by MEK Inhibition Using Trametinib.",
+      "candidates": [
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       },
+       {
+        "id": "therapy:mirdametinib",
+        "type": "therapy",
+        "label": "Mirdametinib (MEK1/2 inhibitor; Gomekli)",
+        "synonyms": [
+         "Gomekli",
+         "PD-0325901"
+        ],
+        "summary": "An oral MEK inhibitor, FDA-approved for symptomatic plexiform neurofibromas in NF1 in adults and children 2 years and older; the second approved MEK inhibitor i"
+       },
+       {
+        "id": "therapy:binimetinib",
+        "type": "therapy",
+        "label": "Binimetinib (MEK162; MEK1/2 inhibitor)",
+        "synonyms": [
+         "MEK162",
+         "ARRY-162"
+        ],
+        "summary": "A MEK inhibitor tested in NF1 plexiform neurofibromas (phase 2, completed). The first MEK-inhibitor trial in Noonan syndrome hypertrophic cardiomyopathy (2012) "
+       },
+       {
+        "id": "therapy:selumetinib",
+        "type": "therapy",
+        "label": "Selumetinib (MEK1/2 inhibitor; Koselugo)",
+        "synonyms": [
+         "Koselugo",
+         "AZD6244",
+         "ARRY-142886"
+        ],
+        "summary": "An oral MEK1/2 inhibitor. FDA-approved for symptomatic, inoperable plexiform neurofibromas in neurofibromatosis type 1; the first approved drug that acts on the"
+       },
+       {
+        "id": "therapy:tipifarnib",
+        "type": "therapy",
+        "label": "Tipifarnib (farnesyltransferase inhibitor)",
+        "synonyms": [
+         "R115777",
+         "Zarnestra"
+        ],
+        "summary": "Blocks RAS membrane anchoring by inhibiting farnesylation. A randomised placebo-controlled phase 2 trial in NF1 plexiform neurofibromas did not prolong time to "
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:fenfluramine",
+        "type": "therapy",
+        "label": "Fenfluramine"
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "RASopathies",
+      "declared_type": "disease",
+      "sentence": "RASopathies cause nonsarcomeric hypertrophic cardiomyopathy via dysregulated signaling through RAS and upregulated mitogen-activated protein kinase activity.",
+      "candidates": [
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "upregulated mitogen-activated protein kinase activity",
+      "declared_type": "mechanism",
+      "sentence": "RASopathies cause nonsarcomeric hypertrophic cardiomyopathy via dysregulated signaling through RAS and upregulated mitogen-activated protein kinase activity.",
+      "candidates": [
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"trametinib\",\"node_id\":\"therapy:trametinib\",\"match\":\"same\",\"justification\":\"Exact drug\"},{\"mention_id\":\"m2\",\"mention\":\"RASopathies\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"RASopathies span many genes\"},{\"mention_id\":\"m3\",\"mention\":\"upregulated mitogen-activated protein kinase activity\",\"node_id\":\"mech:ras-protein-signal-transduction\",\"match\":\"instance\",\"justification\":\"Upregulated MAPK activity downstream of RAS\"}]}"
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "pmid": "39759878",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.612Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "22469ee3c5d2700c",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/39759878.json",
+ "claims": [
+  {
+   "subject_mention": "HEXA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Tay-Sachs disease is a fatal neurodegenerative disorder caused by HEXA mutations inactivating the metabolic enzyme HexA.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HEXA mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "Tay-Sachs disease is a fatal neurodegenerative disorder caused by HEXA mutations inactivating the metabolic enzyme HexA.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HEXA c.1278insTATC",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "The most common mutation is c.1278insTATC, a tandem 4-bp duplication disrupting HEXA expression by frameshift.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Precise template-free correction",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "HEXA gene function",
+   "object_type": "mechanism",
+   "quote": "Precise template-free correction restores gene function in Tay-Sachs disease while reframing is ineffective.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "reframing",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "HEXA gene function",
+   "object_type": "mechanism",
+   "quote": "Precise template-free correction restores gene function in Tay-Sachs disease while reframing is ineffective.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "Precise template-free correction",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Precise template-free correction restores gene function in Tay-Sachs disease while reframing is ineffective.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Frame-restored variants",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "HexA function",
+   "object_type": "mechanism",
+   "quote": "Frame-restored variants did not recover significant HexA function, presumably due to structural incompatibility of incurred amino acid insertions.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "pmid": "40577679",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.620Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "669b8feab71b78c6",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40577679.json",
+ "claims": [
+  {
+   "subject_mention": "arylsulfatase A gene",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Metachromatic leukodystrophy",
+   "object_type": "disease",
+   "quote": "Metachromatic leukodystrophy (MLD) is a rare autosomal recessive lysosomal storage disorder caused by disease-causing variants in the gene coding for arylsulfatase A, leading to deficient enzyme activity and subsequent accumulation of sulfatides.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MLD",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "sulfatide accumulation",
+   "object_type": "mechanism",
+   "quote": "Metachromatic leukodystrophy (MLD) is a rare autosomal recessive lysosomal storage disorder caused by disease-causing variants in the gene coding for arylsulfatase A, leading to deficient enzyme activity and subsequent accumulation of sulfatides.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MLD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "progressive motor defects",
+   "object_type": "phenotype",
+   "quote": "MLD is characterized by demyelination and neurodegeneration of the central and peripheral nervous system, manifesting as progressive motor and cognitive defects in affected individuals.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MLD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "progressive cognitive defects",
+   "object_type": "phenotype",
+   "quote": "MLD is characterized by demyelination and neurodegeneration of the central and peripheral nervous system, manifesting as progressive motor and cognitive defects in affected individuals.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hematopoietic stem cell gene therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "early-onset forms of MLD",
+   "object_type": "disease",
+   "quote": "Research advancements have enabled improved understanding of the effects of allogeneic hematopoietic stem cell transplantation and the development of novel therapeutic approaches, including hematopoietic stem cell gene therapy, which is now authorized in the EU, United Kingdom, and United States as treatment for selected patients with early-onset forms of MLD.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

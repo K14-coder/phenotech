@@ -1,0 +1,61 @@
+{
+ "pmid": "35429480",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.594Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "9c1fb015f4f1a007",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/35429480.json",
+ "claims": [
+  {
+   "subject_mention": "CDKL5 deficiency disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe global developmental impairment",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: CDKL5 deficiency disorder (CDD) is a rare, X-linked, developmental and epileptic encephalopathy characterised by severe global developmental impairment and seizures that can begin in the first few months after birth and are often treatment refractory.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5 deficiency disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "treatment-refractory seizures",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: CDKL5 deficiency disorder (CDD) is a rare, X-linked, developmental and epileptic encephalopathy characterised by severe global developmental impairment and seizures that can begin in the first few months after birth and are often treatment refractory.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ganaxolone",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "CDKL5 deficiency disorder",
+   "object_type": "disease",
+   "quote": "Safety and efficacy of ganaxolone in patients with CDKL5 deficiency disorder: results from the double-blind phase of a randomised, placebo-controlled, phase 3 trial.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Ganaxolone",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "CDD",
+   "object_type": "disease",
+   "quote": "INTERPRETATION: Ganaxolone significantly reduced the frequency of CDD-associated seizures compared with placebo and was generally well tolerated.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

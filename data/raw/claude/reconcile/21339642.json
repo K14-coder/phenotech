@@ -1,0 +1,1258 @@
+{
+ "pmid": "21339642",
+ "entries": {
+  "3047f3f78421d049": {
+   "mention": "NS",
+   "type": "disease",
+   "candidates": [
+    "disease:RAF1",
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:LZTR1",
+    "disease:PTPN11",
+    "disease:RIT1",
+    "disease:SOS1",
+    "disease:CBL",
+    "disease:KCNQ2",
+    "disease:NF1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Noonan syndrome overall is broader than one gene's disorder",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "c8c66ebebc0d4c9b": {
+   "mention": "increased kinase activity",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:potassium-channel-activity",
+    "mech:nmda-receptor-activity",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:action-potential",
+    "mech:synaptic-vesicle-fusion",
+    "mech:dominant-negative",
+    "mech:lysosomal-storage",
+    "mech:lysosomal-enzyme-deficiency"
+   ],
+   "node_id": "mech:protein-serine-threonine-kinase-activity",
+   "match": "instance",
+   "justification": "increased RAF1 serine/threonine kinase activity",
+   "raw_node_id": "mech:protein-serine-threonine-kinase-activity",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "4c43f1401e744872": {
+   "mention": "craniofacial dysmorphia",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002268",
+    "phenotype:HP:0007166",
+    "phenotype:HP:0001041",
+    "phenotype:HP:0001310",
+    "phenotype:HP:0004442",
+    "phenotype:HP:0000280",
+    "phenotype:HP:0007308",
+    "phenotype:HP:0001332",
+    "phenotype:HP:0020035",
+    "phenotype:HP:0001260"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no craniofacial dysmorphism candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "bde8d4c430a766b1": {
+   "mention": "hematologic abnormalities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002353",
+    "phenotype:HP:0030810",
+    "phenotype:HP:0012249",
+    "phenotype:HP:0002453",
+    "phenotype:HP:0011203",
+    "phenotype:HP:0011441",
+    "phenotype:HP:0002492",
+    "phenotype:HP:0012703",
+    "phenotype:HP:0011636",
+    "phenotype:HP:0010846"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no hematologic abnormality candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "d9bb7d82c403aece": {
+   "mention": "MEK-ERK pathway modulation",
+   "type": "therapy",
+   "candidates": [
+    "therapy:statins-nf1-cognition",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:hsct-krabbe",
+    "therapy:binimetinib",
+    "therapy:trametinib",
+    "therapy:eliglustat",
+    "therapy:mirdametinib",
+    "therapy:miglustat",
+    "therapy:rapamycin-nsml",
+    "therapy:selumetinib"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "generic pathway modulation; candidates are specific drugs",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "82bc068e2892f0ee": {
+   "mention": "Noonan syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:RAF1",
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:LZTR1",
+    "disease:PTPN11",
+    "disease:RIT1",
+    "disease:SOS1",
+    "disease:NF1",
+    "disease:CBL",
+    "disease:HRAS"
+   ],
+   "node_id": "disease:RAF1",
+   "match": "instance",
+   "justification": "Noonan syndrome associated with Raf1 mutation is RAF1-related",
+   "raw_node_id": "disease:RAF1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "06c12a4842abf468": {
+   "mention": "MEK inhibition",
+   "type": "therapy",
+   "candidates": [
+    "therapy:rapamycin-nsml",
+    "therapy:binimetinib",
+    "therapy:statins-nf1-cognition",
+    "therapy:selumetinib",
+    "therapy:mirdametinib",
+    "therapy:tipifarnib",
+    "therapy:trametinib",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:hsct-krabbe"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "generic MEK inhibition; candidates are specific drugs",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "d9c50e72e88e5b3e": {
+   "mention": "MEK-ERK activation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:lysosome-organization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:protein-destabilization",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:potassium-channel-activity",
+    "mech:negative-regulation-of-ras-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no MAPK cascade candidate offered",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "3ea6642ee1018efc": {
+   "mention": "enhanced MEK-ERK activity",
+   "type": "mechanism",
+   "candidates": [
+    "mech:potassium-channel-activity",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:nmda-receptor-activity",
+    "mech:action-potential",
+    "mech:synaptic-vesicle-fusion",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no MAPK cascade candidate offered",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  },
+  "a98b0578c669603b": {
+   "mention": "enhanced MEK-ERK activation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:potassium-channel-activity",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:synaptic-vesicle-fusion",
+    "mech:lysosome-organization",
+    "mech:protein-destabilization"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no MAPK cascade candidate offered",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.856Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.856Z",
+   "request_payload": {
+    "title": "MEK-ERK pathway modulation ameliorates disease phenotypes in a mouse model of Noonan syndrome associated with the Raf1(L613V) mutation.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "NS",
+      "declared_type": "disease",
+      "sentence": "Germline mutations in RAF1 (which encodes the serine-threonine kinase RAF1) account for approximately 3%-5% of cases of NS.",
+      "candidates": [
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "increased kinase activity",
+      "declared_type": "mechanism",
+      "sentence": "Unlike other NS alleles, RAF1 mutations that confer increased kinase activity are highly associated with HCM.",
+      "candidates": [
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "craniofacial dysmorphia",
+      "declared_type": "phenotype",
+      "sentence": "Like NS patients, mice heterozygous for this mutation (referred to herein as L613V/+ mice) had short stature, craniofacial dysmorphia, and hematologic abnormalities.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002268",
+        "type": "phenotype",
+        "label": "Paroxysmal dystonia",
+        "note": "HPO HP:0002268"
+       },
+       {
+        "id": "phenotype:HP:0007166",
+        "type": "phenotype",
+        "label": "Paroxysmal dyskinesia",
+        "note": "HPO HP:0007166"
+       },
+       {
+        "id": "phenotype:HP:0001041",
+        "type": "phenotype",
+        "label": "Facial erythema",
+        "note": "HPO HP:0001041"
+       },
+       {
+        "id": "phenotype:HP:0001310",
+        "type": "phenotype",
+        "label": "Dysmetria",
+        "note": "HPO HP:0001310"
+       },
+       {
+        "id": "phenotype:HP:0004442",
+        "type": "phenotype",
+        "label": "Sagittal craniosynostosis",
+        "note": "HPO HP:0004442"
+       },
+       {
+        "id": "phenotype:HP:0000280",
+        "type": "phenotype",
+        "label": "Coarse facial features",
+        "note": "HPO HP:0000280"
+       },
+       {
+        "id": "phenotype:HP:0007308",
+        "type": "phenotype",
+        "label": "Extrapyramidal dyskinesia",
+        "note": "HPO HP:0007308"
+       },
+       {
+        "id": "phenotype:HP:0001332",
+        "type": "phenotype",
+        "label": "Dystonia",
+        "note": "HPO HP:0001332"
+       },
+       {
+        "id": "phenotype:HP:0020035",
+        "type": "phenotype",
+        "label": "Lower limb dysmetria",
+        "note": "HPO HP:0020035"
+       },
+       {
+        "id": "phenotype:HP:0001260",
+        "type": "phenotype",
+        "label": "Dysarthria",
+        "note": "HPO HP:0001260"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "hematologic abnormalities",
+      "declared_type": "phenotype",
+      "sentence": "Like NS patients, mice heterozygous for this mutation (referred to herein as L613V/+ mice) had short stature, craniofacial dysmorphia, and hematologic abnormalities.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002353",
+        "type": "phenotype",
+        "label": "EEG abnormality",
+        "note": "HPO HP:0002353"
+       },
+       {
+        "id": "phenotype:HP:0030810",
+        "type": "phenotype",
+        "label": "Abnormal tongue physiology",
+        "note": "HPO HP:0030810"
+       },
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       },
+       {
+        "id": "phenotype:HP:0002453",
+        "type": "phenotype",
+        "label": "Abnormal globus pallidus morphology",
+        "note": "HPO HP:0002453"
+       },
+       {
+        "id": "phenotype:HP:0011203",
+        "type": "phenotype",
+        "label": "EEG with abnormally slow frequencies",
+        "note": "HPO HP:0011203"
+       },
+       {
+        "id": "phenotype:HP:0011441",
+        "type": "phenotype",
+        "label": "Abnormal medulla oblongata morphology",
+        "note": "HPO HP:0011441"
+       },
+       {
+        "id": "phenotype:HP:0002492",
+        "type": "phenotype",
+        "label": "Abnormal corticospinal tract morphology",
+        "note": "HPO HP:0002492"
+       },
+       {
+        "id": "phenotype:HP:0012703",
+        "type": "phenotype",
+        "label": "Abnormal subarachnoid space morphology",
+        "note": "HPO HP:0012703"
+       },
+       {
+        "id": "phenotype:HP:0011636",
+        "type": "phenotype",
+        "label": "Abnormal coronary artery origin",
+        "note": "HPO HP:0011636"
+       },
+       {
+        "id": "phenotype:HP:0010846",
+        "type": "phenotype",
+        "label": "EEG with persistent abnormal rhythmic activity",
+        "note": "HPO HP:0010846"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "MEK-ERK pathway modulation",
+      "declared_type": "therapy",
+      "sentence": "MEK-ERK pathway modulation ameliorates disease phenotypes in a mouse model of Noonan syndrome associated with the Raf1(L613V) mutation.",
+      "candidates": [
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:binimetinib",
+        "type": "therapy",
+        "label": "Binimetinib (MEK162; MEK1/2 inhibitor)",
+        "synonyms": [
+         "MEK162",
+         "ARRY-162"
+        ],
+        "summary": "A MEK inhibitor tested in NF1 plexiform neurofibromas (phase 2, completed). The first MEK-inhibitor trial in Noonan syndrome hypertrophic cardiomyopathy (2012) "
+       },
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:mirdametinib",
+        "type": "therapy",
+        "label": "Mirdametinib (MEK1/2 inhibitor; Gomekli)",
+        "synonyms": [
+         "Gomekli",
+         "PD-0325901"
+        ],
+        "summary": "An oral MEK inhibitor, FDA-approved for symptomatic plexiform neurofibromas in NF1 in adults and children 2 years and older; the second approved MEK inhibitor i"
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:rapamycin-nsml",
+        "type": "therapy",
+        "label": "Rapamycin (sirolimus) for NSML-associated hypertrophic cardiomyopathy",
+        "synonyms": [
+         "sirolimus",
+         "mTOR inhibitor"
+        ],
+        "summary": "An approved mTOR inhibitor that reversed hypertrophic cardiomyopathy in mice carrying NSML-type (catalytically impaired) PTPN11 mutations. Human heart tissue da"
+       },
+       {
+        "id": "therapy:selumetinib",
+        "type": "therapy",
+        "label": "Selumetinib (MEK1/2 inhibitor; Koselugo)",
+        "synonyms": [
+         "Koselugo",
+         "AZD6244",
+         "ARRY-142886"
+        ],
+        "summary": "An oral MEK1/2 inhibitor. FDA-approved for symptomatic, inoperable plexiform neurofibromas in neurofibromatosis type 1; the first approved drug that acts on the"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "Noonan syndrome",
+      "declared_type": "disease",
+      "sentence": "MEK-ERK pathway modulation ameliorates disease phenotypes in a mouse model of Noonan syndrome associated with the Raf1(L613V) mutation.",
+      "candidates": [
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "MEK inhibition",
+      "declared_type": "therapy",
+      "sentence": "Agonist-evoked MEK-ERK activation was enhanced in multiple cell types, and postnatal MEK inhibition normalized the growth, facial, and cardiac defects in L613V/+ mice.",
+      "candidates": [
+       {
+        "id": "therapy:rapamycin-nsml",
+        "type": "therapy",
+        "label": "Rapamycin (sirolimus) for NSML-associated hypertrophic cardiomyopathy",
+        "synonyms": [
+         "sirolimus",
+         "mTOR inhibitor"
+        ],
+        "summary": "An approved mTOR inhibitor that reversed hypertrophic cardiomyopathy in mice carrying NSML-type (catalytically impaired) PTPN11 mutations. Human heart tissue da"
+       },
+       {
+        "id": "therapy:binimetinib",
+        "type": "therapy",
+        "label": "Binimetinib (MEK162; MEK1/2 inhibitor)",
+        "synonyms": [
+         "MEK162",
+         "ARRY-162"
+        ],
+        "summary": "A MEK inhibitor tested in NF1 plexiform neurofibromas (phase 2, completed). The first MEK-inhibitor trial in Noonan syndrome hypertrophic cardiomyopathy (2012) "
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:selumetinib",
+        "type": "therapy",
+        "label": "Selumetinib (MEK1/2 inhibitor; Koselugo)",
+        "synonyms": [
+         "Koselugo",
+         "AZD6244",
+         "ARRY-142886"
+        ],
+        "summary": "An oral MEK1/2 inhibitor. FDA-approved for symptomatic, inoperable plexiform neurofibromas in neurofibromatosis type 1; the first approved drug that acts on the"
+       },
+       {
+        "id": "therapy:mirdametinib",
+        "type": "therapy",
+        "label": "Mirdametinib (MEK1/2 inhibitor; Gomekli)",
+        "synonyms": [
+         "Gomekli",
+         "PD-0325901"
+        ],
+        "summary": "An oral MEK inhibitor, FDA-approved for symptomatic plexiform neurofibromas in NF1 in adults and children 2 years and older; the second approved MEK inhibitor i"
+       },
+       {
+        "id": "therapy:tipifarnib",
+        "type": "therapy",
+        "label": "Tipifarnib (farnesyltransferase inhibitor)",
+        "synonyms": [
+         "R115777",
+         "Zarnestra"
+        ],
+        "summary": "Blocks RAS membrane anchoring by inhibiting farnesylation. A randomised placebo-controlled phase 2 trial in NF1 plexiform neurofibromas did not prolong time to "
+       },
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       }
+      ]
+     },
+     {
+      "mention_id": "m8",
+      "mention": "MEK-ERK activation",
+      "declared_type": "mechanism",
+      "sentence": "Agonist-evoked MEK-ERK activation was enhanced in multiple cell types, and postnatal MEK inhibition normalized the growth, facial, and cardiac defects in L613V/+ mice.",
+      "candidates": [
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     },
+     {
+      "mention_id": "m9",
+      "mention": "enhanced MEK-ERK activity",
+      "declared_type": "mechanism",
+      "sentence": "These data show that different NS genes have intrinsically distinct pathological effects, demonstrate that enhanced MEK-ERK activity is critical for causing HCM and other RAF1-mutant NS phenotypes, and suggest a mutation-specific approach to the treatment of RASopathies.",
+      "candidates": [
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     },
+     {
+      "mention_id": "m10",
+      "mention": "enhanced MEK-ERK activation",
+      "declared_type": "mechanism",
+      "sentence": "Agonist-evoked MEK-ERK activation was enhanced in multiple cell types, and postnatal MEK inhibition normalized the growth, facial, and cardiac defects in L613V/+ mice.",
+      "candidates": [
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"NS\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Noonan syndrome overall is broader than one gene's disorder\"},{\"mention_id\":\"m2\",\"mention\":\"increased kinase activity\",\"node_id\":\"mech:protein-serine-threonine-kinase-activity\",\"match\":\"instance\",\"justification\":\"increased RAF1 serine/threonine kinase activity\"},{\"mention_id\":\"m3\",\"mention\":\"craniofacial dysmorphia\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no craniofacial dysmorphism candidate\"},{\"mention_id\":\"m4\",\"mention\":\"hematologic abnormalities\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no hematologic abnormality candidate\"},{\"mention_id\":\"m5\",\"mention\":\"MEK-ERK pathway modulation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"generic pathway modulation; candidates are specific drugs\"},{\"mention_id\":\"m6\",\"mention\":\"Noonan syndrome\",\"node_id\":\"disease:RAF1\",\"match\":\"instance\",\"justification\":\"Noonan syndrome associated with Raf1 mutation is RAF1-related\"},{\"mention_id\":\"m7\",\"mention\":\"MEK inhibition\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"generic MEK inhibition; candidates are specific drugs\"},{\"mention_id\":\"m8\",\"mention\":\"MEK-ERK activation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no MAPK cascade candidate offered\"},{\"mention_id\":\"m9\",\"mention\":\"enhanced MEK-ERK activity\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no MAPK cascade candidate offered\"},{\"mention_id\":\"m10\",\"mention\":\"enhanced MEK-ERK activation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no MAPK cascade candidate offered\"}]}"
+  }
+ ]
+}

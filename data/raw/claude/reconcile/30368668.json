@@ -1,0 +1,794 @@
+{
+ "pmid": "30368668",
+ "entries": {
+  "e764d434bced82d5": {
+   "mention": "RASopathies",
+   "type": "disease",
+   "candidates": [
+    "disease:KRAS",
+    "disease:RAF1",
+    "disease:LZTR1",
+    "disease:BRAF",
+    "disease:PTPN11",
+    "disease:SCN8A",
+    "disease:GRIN2B",
+    "disease:STXBP1",
+    "disease:GBA1",
+    "disease:SCN1A"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "RASopathies umbrella broader than any gene node",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.863Z"
+  },
+  "e3da5387e0ce810f": {
+   "mention": "NS",
+   "type": "disease",
+   "candidates": [
+    "disease:LZTR1",
+    "disease:RAF1",
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:PTPN11",
+    "disease:RIT1",
+    "disease:SOS1",
+    "disease:CBL",
+    "disease:KCNQ2",
+    "disease:NF1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "NS here spans LZTR1 and PPP1CB; broader",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.863Z"
+  },
+  "5815aee96a33738e": {
+   "mention": "intellectual disabilities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001249",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0002187",
+    "phenotype:HP:0006889",
+    "phenotype:HP:0002540",
+    "phenotype:HP:0000712",
+    "phenotype:HP:0000737",
+    "phenotype:HP:0006610",
+    "phenotype:HP:0009697",
+    "phenotype:HP:0002372"
+   ],
+   "node_id": "phenotype:HP:0001249",
+   "match": "same",
+   "justification": "Intellectual disability",
+   "raw_node_id": "phenotype:HP:0001249",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.863Z"
+  },
+  "64b1e0d8f91d4182": {
+   "mention": "RAF1-PPP1CB complex binding",
+   "type": "mechanism",
+   "candidates": [
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly",
+    "mech:protein-destabilization",
+    "mech:tor-signaling",
+    "mech:synaptic-vesicle-priming",
+    "mech:haploinsufficiency",
+    "mech:sphingolipid-catabolism",
+    "mech:ras-protein-signal-transduction",
+    "mech:action-potential",
+    "mech:negative-regulation-of-ras-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Protein complex binding; no candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.863Z"
+  },
+  "9d7bea7b65251ede": {
+   "mention": "RAF1 Ser259 phosphorylation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:lysosome-organization",
+    "mech:protein-destabilization",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:ras-protein-signal-transduction"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "RAF1 phosphorylation; no candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.863Z"
+  },
+  "a980543609647d67": {
+   "mention": "RAS/MAPK pathway",
+   "type": "mechanism",
+   "candidates": [
+    "mech:mapk-cascade",
+    "mech:ras-protein-signal-transduction",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:action-potential",
+    "mech:autophagy",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:gain-of-function"
+   ],
+   "node_id": "mech:mapk-cascade",
+   "match": "same",
+   "justification": "RAS/MAPK pathway",
+   "raw_node_id": "mech:mapk-cascade",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.863Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.863Z",
+   "request_payload": {
+    "title": "Delineation of LZTR1 mutation-positive patients with Noonan syndrome and identification of LZTR1 binding to RAF1-PPP1CB complexes.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "RASopathies",
+      "declared_type": "disease",
+      "sentence": "Whole exome sequencing studies recently identified LZTR1, PPP1CB and MRAS as new causative genes in RASopathies.",
+      "candidates": [
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "NS",
+      "declared_type": "disease",
+      "sentence": "We identified eight LZTR1 variants, including a de novo variant, in seven probands who were suspicious for NS and one known de novo PPP1CB variant in a patient with NS.",
+      "candidates": [
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "intellectual disabilities",
+      "declared_type": "phenotype",
+      "sentence": "Five of the seven probands had short stature or intellectual disabilities.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0002187",
+        "type": "phenotype",
+        "label": "Profound intellectual disability",
+        "note": "HPO HP:0002187"
+       },
+       {
+        "id": "phenotype:HP:0006889",
+        "type": "phenotype",
+        "label": "Borderline intellectual disability",
+        "note": "HPO HP:0006889"
+       },
+       {
+        "id": "phenotype:HP:0002540",
+        "type": "phenotype",
+        "label": "Inability to walk",
+        "note": "HPO HP:0002540"
+       },
+       {
+        "id": "phenotype:HP:0000712",
+        "type": "phenotype",
+        "label": "Emotional lability",
+        "note": "HPO HP:0000712"
+       },
+       {
+        "id": "phenotype:HP:0000737",
+        "type": "phenotype",
+        "label": "Irritability",
+        "note": "HPO HP:0000737"
+       },
+       {
+        "id": "phenotype:HP:0006610",
+        "type": "phenotype",
+        "label": "Wide intermamillary distance",
+        "note": "HPO HP:0006610"
+       },
+       {
+        "id": "phenotype:HP:0009697",
+        "type": "phenotype",
+        "label": "Contracture of the distal interphalangeal joint of the fingers",
+        "note": "HPO HP:0009697"
+       },
+       {
+        "id": "phenotype:HP:0002372",
+        "type": "phenotype",
+        "label": "Normal interictal EEG",
+        "note": "HPO HP:0002372"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "RAF1-PPP1CB complex binding",
+      "declared_type": "mechanism",
+      "sentence": "Immunoprecipitation of endogenous LZTR1 followed by western blotting showed that LZTR1 bound to the RAF1-PPP1CB complex.",
+      "candidates": [
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "RAF1 Ser259 phosphorylation",
+      "declared_type": "mechanism",
+      "sentence": "Cells transfected with a small interfering RNA against LZTR1 exhibited decreased levels of RAF1 phosphorylated at Ser259.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "RAS/MAPK pathway",
+      "declared_type": "mechanism",
+      "sentence": "These are the first results to demonstrate LZTR1 in association with the RAF1-PPP1CB complex as a component of the RAS/MAPK pathway.",
+      "candidates": [
+       {
+        "id": "mech:mapk-cascade",
+        "type": "mechanism",
+        "label": "MAPK cascade",
+        "note": "kind: process",
+        "summary": "An intracellular protein kinase cascade containing at least a MAP kinase (MAPK). It starts with the activation of a MAP3K, and the consecutive activation of a M"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:autophagy",
+        "type": "mechanism",
+        "label": "Autophagy",
+        "note": "kind: process",
+        "summary": "The cell's self-digestion pathway: material is wrapped in autophagosomes and delivered to lysosomes for breakdown."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"RASopathies\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"RASopathies umbrella broader than any gene node\"},{\"mention_id\":\"m2\",\"mention\":\"NS\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"NS here spans LZTR1 and PPP1CB; broader\"},{\"mention_id\":\"m3\",\"mention\":\"intellectual disabilities\",\"node_id\":\"phenotype:HP:0001249\",\"match\":\"same\",\"justification\":\"Intellectual disability\"},{\"mention_id\":\"m4\",\"mention\":\"RAF1-PPP1CB complex binding\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Protein complex binding; no candidate\"},{\"mention_id\":\"m5\",\"mention\":\"RAF1 Ser259 phosphorylation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"RAF1 phosphorylation; no candidate\"},{\"mention_id\":\"m6\",\"mention\":\"RAS/MAPK pathway\",\"node_id\":\"mech:mapk-cascade\",\"match\":\"same\",\"justification\":\"RAS/MAPK pathway\"}]}"
+  }
+ ]
+}

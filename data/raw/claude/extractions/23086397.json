@@ -1,0 +1,85 @@
+{
+ "pmid": "23086397",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.546Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "13110680da6edc11",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/23086397.json",
+ "claims": [
+  {
+   "subject_mention": "KCNT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "malignant migrating partial seizures of infancy",
+   "object_type": "disease",
+   "quote": "De novo gain-of-function KCNT1 channel mutations cause malignant migrating partial seizures of infancy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1 de novo gain-of-function channel mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "De novo gain-of-function KCNT1 channel mutations cause malignant migrating partial seizures of infancy.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "constitutive activation of the channel",
+   "object_type": "mechanism",
+   "quote": "Functional studies showed that the mutations led to constitutive activation of the channel, mimicking the effects of phosphorylation of the C-terminal domain by protein kinase C.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MMPSI",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pharmacoresistant seizures",
+   "object_type": "phenotype",
+   "quote": "Malignant migrating partial seizures of infancy (MMPSI) is a rare epileptic encephalopathy of infancy that combines pharmacoresistant seizures with developmental delay.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MMPSI",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Malignant migrating partial seizures of infancy (MMPSI) is a rare epileptic encephalopathy of infancy that combines pharmacoresistant seizures with developmental delay.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "developmental signaling pathways",
+   "object_type": "mechanism",
+   "quote": "In addition to regulating ion flux, KCNT1 has a non-conducting function, as its C terminus interacts with cytoplasmic proteins involved in developmental signaling pathways.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

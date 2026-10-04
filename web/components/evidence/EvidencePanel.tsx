@@ -190,12 +190,14 @@ function extractedByText(x: Evidence["extracted_by"]): string {
   if (x === "agent-curation") return "Extracted by an AI curation agent";
   if (x === "computed") return "Computed by the atlas";
   if (x.startsWith("openai:")) return `Extracted by OpenAI (${x.slice(7)})`;
+  if (x.startsWith("claude:")) return "Extracted by an independent Claude reading";
   if (x.startsWith("human:")) return `Added by ${x.slice(6)}`;
   return x;
 }
 
-/** "openai:gpt-6-astra" -> "GPT-6-Astra" */
+/** "openai:gpt-6-astra" -> "GPT-6-Astra"; "claude:agent-reading" -> "Claude" */
 export function modelName(by: string): string {
+  if (/^claude:/i.test(by)) return "Claude";
   const raw = by.replace(/^openai:/i, "").replace(/^human:/i, "");
   return raw
     .split("-")
@@ -282,6 +284,7 @@ export function SourceCard({ ev, contradicts = false, contributed = false }: { e
         </blockquote>
       )}
       {ev.cross_checked && <CrossCheck cc={ev.cross_checked} />}
+      {ev.cross_checked_also?.map((cc) => <CrossCheck key={cc.by} cc={cc} />)}
       {needsQuote && (
         <p className="mt-3 text-xs text-warn-ink">No verbatim quote recorded. This source type should include one.</p>
       )}

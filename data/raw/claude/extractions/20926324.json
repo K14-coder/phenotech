@@ -1,0 +1,97 @@
+{
+ "pmid": "20926324",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.542Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "4a41e15af5f7761d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/20926324.json",
+ "claims": [
+  {
+   "subject_mention": "HEXA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Late-onset GM2 gangliosidosis",
+   "object_type": "disease",
+   "quote": "Late-onset GM2 gangliosidosis is an autosomal recessive, neurodegenerative, lysosomal storage disease, caused by deficiency of ß-hexosaminidase A (Hex A), resulting from mutations in the HEXA (Tay-Sachs variant) or the HEXB (Sandhoff variant) genes.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HEXB",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Late-onset GM2 gangliosidosis",
+   "object_type": "disease",
+   "quote": "Late-onset GM2 gangliosidosis is an autosomal recessive, neurodegenerative, lysosomal storage disease, caused by deficiency of ß-hexosaminidase A (Hex A), resulting from mutations in the HEXA (Tay-Sachs variant) or the HEXB (Sandhoff variant) genes.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Late-onset GM2 gangliosidosis",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "deficiency of ß-hexosaminidase A (Hex A)",
+   "object_type": "mechanism",
+   "quote": "Late-onset GM2 gangliosidosis is an autosomal recessive, neurodegenerative, lysosomal storage disease, caused by deficiency of ß-hexosaminidase A (Hex A), resulting from mutations in the HEXA (Tay-Sachs variant) or the HEXB (Sandhoff variant) genes.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "late-onset GM2 gangliosidosis",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "unstable protein targeted for premature degradation",
+   "object_type": "mechanism",
+   "quote": "The enzyme deficiency in many patients with juvenile or adult onset forms of the disease results from the production of an unstable protein, which becomes targeted for premature degradation by the quality control system of the smooth endoplasmic reticulum and is not transported to lysosomes.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pyrimethamine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "enzyme protein and activity in lysosomes",
+   "object_type": "mechanism",
+   "quote": "In vitro studies have shown that many mutations in either the α or β subunit of Hex A can be partially rescued, i.e. enhanced levels of both enzyme protein and activity in lysosomes, following the growth of patient cells in the presence of the drug, pyrimethamine.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pyrimethamine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "late-onset GM2 gangliosidosis",
+   "object_type": "disease",
+   "quote": "We concluded that pyrimethamine treatment enhances leukocyte Hex A activity in patients with late-onset GM2 gangliosidosis at doses lower than those associated with unacceptable side effects.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pyrimethamine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "leukocyte Hex A activity",
+   "object_type": "mechanism",
+   "quote": "We concluded that pyrimethamine treatment enhances leukocyte Hex A activity in patients with late-onset GM2 gangliosidosis at doses lower than those associated with unacceptable side effects.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

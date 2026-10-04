@@ -1,0 +1,473 @@
+{
+ "pmid": "31595648",
+ "entries": {
+  "45fb04a7970d4f57": {
+   "mention": "Noonan-like phenotype",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:6001124",
+    "phenotype:HP:0007099",
+    "phenotype:HP:0003554",
+    "phenotype:HP:0000733",
+    "phenotype:HP:6000717",
+    "phenotype:HP:0012171",
+    "phenotype:HP:0030810",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0100697",
+    "phenotype:HP:0001004"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No Noonan-like phenotype term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.868Z"
+  },
+  "55fefe332a7711c3": {
+   "mention": "cardiovascular abnormalities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002353",
+    "phenotype:HP:0007670",
+    "phenotype:HP:0012249",
+    "phenotype:HP:0011203",
+    "phenotype:HP:0030810",
+    "phenotype:HP:0011636",
+    "phenotype:HP:0040296",
+    "phenotype:HP:0002453",
+    "phenotype:HP:0030467",
+    "phenotype:HP:0011441"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Generic cardiovascular abnormalities",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.868Z"
+  },
+  "8b1b629233a39887": {
+   "mention": "symptomatic spinal neurofibromas",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0006851",
+    "phenotype:HP:0100698",
+    "phenotype:HP:0010302",
+    "phenotype:HP:0002185",
+    "phenotype:HP:0000169",
+    "phenotype:HP:0002529",
+    "phenotype:HP:0002180",
+    "phenotype:HP:0030426",
+    "phenotype:HP:0031475",
+    "phenotype:HP:0007133"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Symmetric root neurofibromas narrower; spinal cord tumor broader",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.868Z"
+  },
+  "1061cfeb9c76cdf7": {
+   "mention": "pigmentary manifestations",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0007281",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0001520",
+    "phenotype:HP:0001518",
+    "phenotype:HP:0007481",
+    "phenotype:HP:0001308",
+    "phenotype:HP:0007704",
+    "phenotype:HP:0002883",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0001653"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No pigmentary term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.868Z"
+  },
+  "d34ef36922b91cfe": {
+   "mention": "externally visible plexiform neurofibromas",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0100698",
+    "phenotype:HP:0006851",
+    "phenotype:HP:0002185",
+    "phenotype:HP:0000974",
+    "phenotype:HP:0030426",
+    "phenotype:HP:0000169",
+    "phenotype:HP:0002068",
+    "phenotype:HP:0011974",
+    "phenotype:HP:0002180",
+    "phenotype:HP:0007133"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Plexiform neurofibromas not subcutaneous neurofibromas",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.868Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.868Z",
+   "request_payload": {
+    "title": "Clinical spectrum of individuals with pathogenic NF1 missense variants affecting p.Met1149, p.Arg1276, and p.Lys1423: genotype-phenotype study in neurofibromatosis type 1.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Noonan-like phenotype",
+      "declared_type": "phenotype",
+      "sentence": "About 25% (95% confidence interval: 20.5-31.2%) of individuals heterozygous for a pathogenic NF1 p.Met1149, p.Arg1276, or p.Lys1423 missense variant had a Noonan-like phenotype, which is significantly more compared with the \"classic\" NF1-affected cohorts (all p < .0001).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:6001124",
+        "type": "phenotype",
+        "label": "Sphenoid wing dysplasia",
+        "note": "HPO HP:6001124"
+       },
+       {
+        "id": "phenotype:HP:0007099",
+        "type": "phenotype",
+        "label": "Chiari type I malformation",
+        "note": "HPO HP:0007099"
+       },
+       {
+        "id": "phenotype:HP:0003554",
+        "type": "phenotype",
+        "label": "Type 2 muscle fiber atrophy",
+        "note": "HPO HP:0003554"
+       },
+       {
+        "id": "phenotype:HP:0000733",
+        "type": "phenotype",
+        "label": "Motor stereotypy",
+        "note": "HPO HP:0000733"
+       },
+       {
+        "id": "phenotype:HP:6000717",
+        "type": "phenotype",
+        "label": "Axonal spheroids",
+        "note": "HPO HP:6000717"
+       },
+       {
+        "id": "phenotype:HP:0012171",
+        "type": "phenotype",
+        "label": "Stereotypical hand wringing",
+        "note": "HPO HP:0012171"
+       },
+       {
+        "id": "phenotype:HP:0030810",
+        "type": "phenotype",
+        "label": "Abnormal tongue physiology",
+        "note": "HPO HP:0030810"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0100697",
+        "type": "phenotype",
+        "label": "Malignant peripheral nerve sheath tumor",
+        "note": "HPO HP:0100697"
+       },
+       {
+        "id": "phenotype:HP:0001004",
+        "type": "phenotype",
+        "label": "Lymphedema",
+        "note": "HPO HP:0001004"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "cardiovascular abnormalities",
+      "declared_type": "phenotype",
+      "sentence": "Furthermore, p.Arg1276 and p.Lys1423 pathogenic missense variants were associated with a high prevalence of cardiovascular abnormalities, including pulmonic stenosis (all p < .0001), while p.Arg1276 variants had a high prevalence of symptomatic spinal neurofibromas (p < .0001) compared with \"classic\" NF1-affected cohorts.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002353",
+        "type": "phenotype",
+        "label": "EEG abnormality",
+        "note": "HPO HP:0002353"
+       },
+       {
+        "id": "phenotype:HP:0007670",
+        "type": "phenotype",
+        "label": "Abnormal vestibulo-ocular reflex",
+        "note": "HPO HP:0007670"
+       },
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       },
+       {
+        "id": "phenotype:HP:0011203",
+        "type": "phenotype",
+        "label": "EEG with abnormally slow frequencies",
+        "note": "HPO HP:0011203"
+       },
+       {
+        "id": "phenotype:HP:0030810",
+        "type": "phenotype",
+        "label": "Abnormal tongue physiology",
+        "note": "HPO HP:0030810"
+       },
+       {
+        "id": "phenotype:HP:0011636",
+        "type": "phenotype",
+        "label": "Abnormal coronary artery origin",
+        "note": "HPO HP:0011636"
+       },
+       {
+        "id": "phenotype:HP:0040296",
+        "type": "phenotype",
+        "label": "Abnormal location of the eyebrow",
+        "note": "HPO HP:0040296"
+       },
+       {
+        "id": "phenotype:HP:0002453",
+        "type": "phenotype",
+        "label": "Abnormal globus pallidus morphology",
+        "note": "HPO HP:0002453"
+       },
+       {
+        "id": "phenotype:HP:0030467",
+        "type": "phenotype",
+        "label": "Abnormal pattern electroretinogram",
+        "note": "HPO HP:0030467"
+       },
+       {
+        "id": "phenotype:HP:0011441",
+        "type": "phenotype",
+        "label": "Abnormal medulla oblongata morphology",
+        "note": "HPO HP:0011441"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "symptomatic spinal neurofibromas",
+      "declared_type": "phenotype",
+      "sentence": "Furthermore, p.Arg1276 and p.Lys1423 pathogenic missense variants were associated with a high prevalence of cardiovascular abnormalities, including pulmonic stenosis (all p < .0001), while p.Arg1276 variants had a high prevalence of symptomatic spinal neurofibromas (p < .0001) compared with \"classic\" NF1-affected cohorts.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0006851",
+        "type": "phenotype",
+        "label": "Symmetric spinal nerve root neurofibromas",
+        "note": "HPO HP:0006851"
+       },
+       {
+        "id": "phenotype:HP:0100698",
+        "type": "phenotype",
+        "label": "Subcutaneous neurofibroma",
+        "note": "HPO HP:0100698"
+       },
+       {
+        "id": "phenotype:HP:0010302",
+        "type": "phenotype",
+        "label": "Spinal cord tumor",
+        "note": "HPO HP:0010302"
+       },
+       {
+        "id": "phenotype:HP:0002185",
+        "type": "phenotype",
+        "label": "Neurofibrillary tangles",
+        "note": "HPO HP:0002185"
+       },
+       {
+        "id": "phenotype:HP:0000169",
+        "type": "phenotype",
+        "label": "Gingival fibromatosis",
+        "note": "HPO HP:0000169"
+       },
+       {
+        "id": "phenotype:HP:0002529",
+        "type": "phenotype",
+        "label": "Neuronal loss in central nervous system",
+        "note": "HPO HP:0002529"
+       },
+       {
+        "id": "phenotype:HP:0002180",
+        "type": "phenotype",
+        "label": "Neurodegeneration",
+        "note": "HPO HP:0002180"
+       },
+       {
+        "id": "phenotype:HP:0030426",
+        "type": "phenotype",
+        "label": "Ossifying fibroma",
+        "note": "HPO HP:0030426"
+       },
+       {
+        "id": "phenotype:HP:0031475",
+        "type": "phenotype",
+        "label": "Status epilepticus without prominent motor symptoms",
+        "note": "HPO HP:0031475"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "pigmentary manifestations",
+      "declared_type": "phenotype",
+      "sentence": "However, p.Met1149-positive individuals had a mild phenotype, characterized mainly by pigmentary manifestations without externally visible plexiform neurofibromas, symptomatic spinal neurofibromas or symptomatic optic pathway gliomas.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0001520",
+        "type": "phenotype",
+        "label": "Large for gestational age",
+        "note": "HPO HP:0001520"
+       },
+       {
+        "id": "phenotype:HP:0001518",
+        "type": "phenotype",
+        "label": "Small for gestational age",
+        "note": "HPO HP:0001518"
+       },
+       {
+        "id": "phenotype:HP:0007481",
+        "type": "phenotype",
+        "label": "Hyperpigmented nevi",
+        "note": "HPO HP:0007481"
+       },
+       {
+        "id": "phenotype:HP:0001308",
+        "type": "phenotype",
+        "label": "Tongue fasciculations",
+        "note": "HPO HP:0001308"
+       },
+       {
+        "id": "phenotype:HP:0007704",
+        "type": "phenotype",
+        "label": "Paroxysmal involuntary eye movements",
+        "note": "HPO HP:0007704"
+       },
+       {
+        "id": "phenotype:HP:0002883",
+        "type": "phenotype",
+        "label": "Hyperventilation",
+        "note": "HPO HP:0002883"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0001653",
+        "type": "phenotype",
+        "label": "Mitral regurgitation",
+        "note": "HPO HP:0001653"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "externally visible plexiform neurofibromas",
+      "declared_type": "phenotype",
+      "sentence": "However, p.Met1149-positive individuals had a mild phenotype, characterized mainly by pigmentary manifestations without externally visible plexiform neurofibromas, symptomatic spinal neurofibromas or symptomatic optic pathway gliomas.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0100698",
+        "type": "phenotype",
+        "label": "Subcutaneous neurofibroma",
+        "note": "HPO HP:0100698"
+       },
+       {
+        "id": "phenotype:HP:0006851",
+        "type": "phenotype",
+        "label": "Symmetric spinal nerve root neurofibromas",
+        "note": "HPO HP:0006851"
+       },
+       {
+        "id": "phenotype:HP:0002185",
+        "type": "phenotype",
+        "label": "Neurofibrillary tangles",
+        "note": "HPO HP:0002185"
+       },
+       {
+        "id": "phenotype:HP:0000974",
+        "type": "phenotype",
+        "label": "Hyperextensible skin",
+        "note": "HPO HP:0000974"
+       },
+       {
+        "id": "phenotype:HP:0030426",
+        "type": "phenotype",
+        "label": "Ossifying fibroma",
+        "note": "HPO HP:0030426"
+       },
+       {
+        "id": "phenotype:HP:0000169",
+        "type": "phenotype",
+        "label": "Gingival fibromatosis",
+        "note": "HPO HP:0000169"
+       },
+       {
+        "id": "phenotype:HP:0002068",
+        "type": "phenotype",
+        "label": "Neuromuscular dysphagia",
+        "note": "HPO HP:0002068"
+       },
+       {
+        "id": "phenotype:HP:0011974",
+        "type": "phenotype",
+        "label": "Myelofibrosis",
+        "note": "HPO HP:0011974"
+       },
+       {
+        "id": "phenotype:HP:0002180",
+        "type": "phenotype",
+        "label": "Neurodegeneration",
+        "note": "HPO HP:0002180"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Noonan-like phenotype\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No Noonan-like phenotype term\"},{\"mention_id\":\"m2\",\"mention\":\"cardiovascular abnormalities\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Generic cardiovascular abnormalities\"},{\"mention_id\":\"m3\",\"mention\":\"symptomatic spinal neurofibromas\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Symmetric root neurofibromas narrower; spinal cord tumor broader\"},{\"mention_id\":\"m4\",\"mention\":\"pigmentary manifestations\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No pigmentary term\"},{\"mention_id\":\"m5\",\"mention\":\"externally visible plexiform neurofibromas\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Plexiform neurofibromas not subcutaneous neurofibromas\"}]}"
+  }
+ ]
+}

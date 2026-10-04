@@ -1,0 +1,61 @@
+{
+ "pmid": "40166006",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.613Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "137bfaf6ffbacded",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40166006.json",
+ "claims": [
+  {
+   "subject_mention": "Smpd1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Niemann-Pick Disease",
+   "object_type": "disease",
+   "quote": "Niemann-Pick Disease (NPD) is a rare autosomal recessive lysosomal storage disorder (LSD) caused by the deficiency of acid sphingomyelinase (ASMD), which is encoded by the Smpd1 gene.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Niemann-Pick Disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "deficiency of acid sphingomyelinase",
+   "object_type": "mechanism",
+   "quote": "Niemann-Pick Disease (NPD) is a rare autosomal recessive lysosomal storage disorder (LSD) caused by the deficiency of acid sphingomyelinase (ASMD), which is encoded by the Smpd1 gene.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "lysosomal dysfunction",
+   "object_type": "mechanism",
+   "quote": "Immunofluorescence and biochemical assays demonstrated that ASMD induced lysosomal dysfunction, as evidenced by the accumulation of lysosomal-associated membrane proteins, lysosomal protease, and autophagosomes in pericytes and cardiomyocytes.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "pericytes and cardiac inflammation",
+   "object_type": "mechanism",
+   "quote": "These findings suggest that ASMD induces profound pathological changes and vascular dysfunction in the myocardium, potentially driven by mechanisms involving lysosomal dysfunction as well as both pericytes and cardiac inflammation.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

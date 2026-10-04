@@ -1,0 +1,49 @@
+{
+ "pmid": "42219246",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.645Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "199b24c21cc5f2aa",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/42219246.json",
+ "claims": [
+  {
+   "subject_mention": "classic infantile Pompe disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "distal muscle weakness",
+   "object_type": "phenotype",
+   "quote": "With increased survival due to enzyme replacement therapy, children with classic infantile Pompe disease tend to develop a clinical phenotype with pronounced distal muscle weakness, while late-onset patients typically exhibit proximal muscle weakness.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "late-onset Pompe disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "proximal muscle weakness",
+   "object_type": "phenotype",
+   "quote": "With increased survival due to enzyme replacement therapy, children with classic infantile Pompe disease tend to develop a clinical phenotype with pronounced distal muscle weakness, while late-onset patients typically exhibit proximal muscle weakness.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "classic infantile Pompe disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "foot dorsiflexion weakness",
+   "object_type": "phenotype",
+   "quote": "Foot dorsiflexion weakness occurred only in classic infantile patients with tibialis anterior involvement.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

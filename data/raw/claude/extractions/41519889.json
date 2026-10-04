@@ -1,0 +1,49 @@
+{
+ "pmid": "41519889",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.632Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "36ebf0ee47c94450",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/41519889.json",
+ "claims": [
+  {
+   "subject_mention": "SHOC2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "dephosphorylation of a conserved phosphoserine",
+   "object_type": "mechanism",
+   "quote": "RAF activation is essential for MAPK signaling and is mediated by RAS binding and the dephosphorylation of a conserved phosphoserine by the SHOC2-RAS-PP1C complex.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MRTX1133",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "SKP assembly",
+   "object_type": "mechanism",
+   "quote": "RAS inhibitors MRTX1133 and RMC-6236 alter Switch-I/II conformations, thereby blocking SKP assembly more effectively than they disrupt preformed complexes.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RMC-6236",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "SKP assembly",
+   "object_type": "mechanism",
+   "quote": "RAS inhibitors MRTX1133 and RMC-6236 alter Switch-I/II conformations, thereby blocking SKP assembly more effectively than they disrupt preformed complexes.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

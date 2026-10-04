@@ -1,0 +1,857 @@
+{
+ "pmid": "16439621",
+ "entries": {
+  "20e7f905ff3577b7": {
+   "mention": "CFC syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:BRAF",
+    "disease:MAP2K1",
+    "disease:CBL",
+    "disease:HRAS",
+    "disease:CDKL5",
+    "disease:GRIN2B",
+    "disease:SCN2A",
+    "disease:SCN1A",
+    "disease:SLC6A1",
+    "disease:SYNGAP1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "CFC syndrome spans BRAF, MAP2K1/2, KRAS",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "1ccee5878e104088": {
+   "mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:BRAF",
+    "disease:MAP2K1",
+    "disease:KRAS",
+    "disease:HRAS",
+    "disease:CBL",
+    "disease:CDKL5",
+    "disease:GRIN2B",
+    "disease:SCN2A",
+    "disease:SCN1A",
+    "disease:SLC6A1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "CFC syndrome spans several genes",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "edfe74f6565c200c": {
+   "mention": "characteristic craniofacial features",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000280",
+    "phenotype:HP:0004442",
+    "phenotype:HP:0001041",
+    "phenotype:HP:0005525",
+    "phenotype:HP:0002313",
+    "phenotype:HP:0002756",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0001134",
+    "phenotype:HP:0003445",
+    "phenotype:HP:0001788"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No matching craniofacial term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "bc1af206baad21a3": {
+   "mention": "cardiac defects",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001631",
+    "phenotype:HP:0001639",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0000917",
+    "phenotype:HP:0002862",
+    "phenotype:HP:0007429",
+    "phenotype:HP:0032773",
+    "phenotype:HP:0000726",
+    "phenotype:HP:0000746",
+    "phenotype:HP:0001761"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Generic cardiac defects broader than candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "cac8e8936855ce4f": {
+   "mention": "ectodermal abnormalities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002353",
+    "phenotype:HP:0012249",
+    "phenotype:HP:0030810",
+    "phenotype:HP:0030467",
+    "phenotype:HP:0011203",
+    "phenotype:HP:0011636",
+    "phenotype:HP:0007670",
+    "phenotype:HP:0040296",
+    "phenotype:HP:0002453",
+    "phenotype:HP:0011441"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No ectodermal term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "baafa6c82ac6cfe4": {
+   "mention": "developmental delay",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0011344",
+    "phenotype:HP:0011343",
+    "phenotype:HP:0012736",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0001510",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0012569"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "Developmental delay",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  },
+  "afeca2b874114bb5": {
+   "mention": "B-Raf activation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:lysosome-organization",
+    "mech:protein-destabilization",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:potassium-channel-activity",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling"
+   ],
+   "node_id": "mech:gain-of-function",
+   "match": "instance",
+   "justification": "Activating BRAF mutations are gain of function",
+   "raw_node_id": "mech:gain-of-function",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.849Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.849Z",
+   "request_payload": {
+    "title": "Germline mutations in genes within the MAPK pathway cause cardio-facio-cutaneous syndrome.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "CFC syndrome",
+      "declared_type": "disease",
+      "sentence": "The majority of cases (18 out of 23) are caused by mutations in BRAF, a gene frequently mutated in cancer.",
+      "candidates": [
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:MAP2K1",
+        "type": "disease",
+        "label": "MAP2K1-related disorders (cardiofaciocutaneous syndrome 3)",
+        "synonyms": [
+         "CFC3",
+         "cardiofaciocutaneous syndrome 3",
+         "MEK1",
+         "MAP2K1 cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in MAP2K1",
+         "cardiofaciocutaneous syndrome type 3"
+        ],
+        "summary": "Germline MAP2K1 (MEK1) changes cause cardiofaciocutaneous syndrome."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "Cardio-facio-cutaneous (CFC) syndrome",
+      "declared_type": "disease",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+      "candidates": [
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:MAP2K1",
+        "type": "disease",
+        "label": "MAP2K1-related disorders (cardiofaciocutaneous syndrome 3)",
+        "synonyms": [
+         "CFC3",
+         "cardiofaciocutaneous syndrome 3",
+         "MEK1",
+         "MAP2K1 cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in MAP2K1",
+         "cardiofaciocutaneous syndrome type 3"
+        ],
+        "summary": "Germline MAP2K1 (MEK1) changes cause cardiofaciocutaneous syndrome."
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "characteristic craniofacial features",
+      "declared_type": "phenotype",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000280",
+        "type": "phenotype",
+        "label": "Coarse facial features",
+        "note": "HPO HP:0000280"
+       },
+       {
+        "id": "phenotype:HP:0004442",
+        "type": "phenotype",
+        "label": "Sagittal craniosynostosis",
+        "note": "HPO HP:0004442"
+       },
+       {
+        "id": "phenotype:HP:0001041",
+        "type": "phenotype",
+        "label": "Facial erythema",
+        "note": "HPO HP:0001041"
+       },
+       {
+        "id": "phenotype:HP:0005525",
+        "type": "phenotype",
+        "label": "Spontaneous hemolytic crises",
+        "note": "HPO HP:0005525"
+       },
+       {
+        "id": "phenotype:HP:0002313",
+        "type": "phenotype",
+        "label": "Spastic paraparesis",
+        "note": "HPO HP:0002313"
+       },
+       {
+        "id": "phenotype:HP:0002756",
+        "type": "phenotype",
+        "label": "Pathologic fracture",
+        "note": "HPO HP:0002756"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0001134",
+        "type": "phenotype",
+        "label": "Anterior polar cataract",
+        "note": "HPO HP:0001134"
+       },
+       {
+        "id": "phenotype:HP:0003445",
+        "type": "phenotype",
+        "label": "EMG: neuropathic changes",
+        "note": "HPO HP:0003445"
+       },
+       {
+        "id": "phenotype:HP:0001788",
+        "type": "phenotype",
+        "label": "Premature rupture of membranes",
+        "note": "HPO HP:0001788"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "cardiac defects",
+      "declared_type": "phenotype",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001631",
+        "type": "phenotype",
+        "label": "Atrial septal defect",
+        "note": "HPO HP:0001631"
+       },
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0000917",
+        "type": "phenotype",
+        "label": "Superior pectus carinatum",
+        "note": "HPO HP:0000917"
+       },
+       {
+        "id": "phenotype:HP:0002862",
+        "type": "phenotype",
+        "label": "Bladder carcinoma",
+        "note": "HPO HP:0002862"
+       },
+       {
+        "id": "phenotype:HP:0007429",
+        "type": "phenotype",
+        "label": "Few cafe-au-lait spots",
+        "note": "HPO HP:0007429"
+       },
+       {
+        "id": "phenotype:HP:0032773",
+        "type": "phenotype",
+        "label": "Focal autonomic seizure with palpitations/tachycardia/bradycardia/asystole",
+        "note": "HPO HP:0032773"
+       },
+       {
+        "id": "phenotype:HP:0000726",
+        "type": "phenotype",
+        "label": "Dementia",
+        "note": "HPO HP:0000726"
+       },
+       {
+        "id": "phenotype:HP:0000746",
+        "type": "phenotype",
+        "label": "Delusion",
+        "note": "HPO HP:0000746"
+       },
+       {
+        "id": "phenotype:HP:0001761",
+        "type": "phenotype",
+        "label": "Pes cavus",
+        "note": "HPO HP:0001761"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "ectodermal abnormalities",
+      "declared_type": "phenotype",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002353",
+        "type": "phenotype",
+        "label": "EEG abnormality",
+        "note": "HPO HP:0002353"
+       },
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       },
+       {
+        "id": "phenotype:HP:0030810",
+        "type": "phenotype",
+        "label": "Abnormal tongue physiology",
+        "note": "HPO HP:0030810"
+       },
+       {
+        "id": "phenotype:HP:0030467",
+        "type": "phenotype",
+        "label": "Abnormal pattern electroretinogram",
+        "note": "HPO HP:0030467"
+       },
+       {
+        "id": "phenotype:HP:0011203",
+        "type": "phenotype",
+        "label": "EEG with abnormally slow frequencies",
+        "note": "HPO HP:0011203"
+       },
+       {
+        "id": "phenotype:HP:0011636",
+        "type": "phenotype",
+        "label": "Abnormal coronary artery origin",
+        "note": "HPO HP:0011636"
+       },
+       {
+        "id": "phenotype:HP:0007670",
+        "type": "phenotype",
+        "label": "Abnormal vestibulo-ocular reflex",
+        "note": "HPO HP:0007670"
+       },
+       {
+        "id": "phenotype:HP:0040296",
+        "type": "phenotype",
+        "label": "Abnormal location of the eyebrow",
+        "note": "HPO HP:0040296"
+       },
+       {
+        "id": "phenotype:HP:0002453",
+        "type": "phenotype",
+        "label": "Abnormal globus pallidus morphology",
+        "note": "HPO HP:0002453"
+       },
+       {
+        "id": "phenotype:HP:0011441",
+        "type": "phenotype",
+        "label": "Abnormal medulla oblongata morphology",
+        "note": "HPO HP:0011441"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "developmental delay",
+      "declared_type": "phenotype",
+      "sentence": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0011343",
+        "type": "phenotype",
+        "label": "Moderate global developmental delay",
+        "note": "HPO HP:0011343"
+       },
+       {
+        "id": "phenotype:HP:0012736",
+        "type": "phenotype",
+        "label": "Profound global developmental delay",
+        "note": "HPO HP:0012736"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0001510",
+        "type": "phenotype",
+        "label": "Growth delay",
+        "note": "HPO HP:0001510"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0012569",
+        "type": "phenotype",
+        "label": "Delayed menarche",
+        "note": "HPO HP:0012569"
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "B-Raf activation",
+      "declared_type": "mechanism",
+      "sentence": "Of the 11 mutations identified, two result in amino acid substitutions that occur in tumors, but most are unique and suggest previously unknown mechanisms of B-Raf activation.",
+      "candidates": [
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"CFC syndrome\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"CFC syndrome spans BRAF, MAP2K1/2, KRAS\"},{\"mention_id\":\"m2\",\"mention\":\"Cardio-facio-cutaneous (CFC) syndrome\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"CFC syndrome spans several genes\"},{\"mention_id\":\"m3\",\"mention\":\"characteristic craniofacial features\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No matching craniofacial term\"},{\"mention_id\":\"m4\",\"mention\":\"cardiac defects\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Generic cardiac defects broader than candidates\"},{\"mention_id\":\"m5\",\"mention\":\"ectodermal abnormalities\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No ectodermal term\"},{\"mention_id\":\"m6\",\"mention\":\"developmental delay\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"Developmental delay\"},{\"mention_id\":\"m7\",\"mention\":\"B-Raf activation\",\"node_id\":\"mech:gain-of-function\",\"match\":\"instance\",\"justification\":\"Activating BRAF mutations are gain of function\"}]}"
+  }
+ ]
+}

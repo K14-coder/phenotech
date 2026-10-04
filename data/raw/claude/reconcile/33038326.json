@@ -1,0 +1,353 @@
+{
+ "pmid": "33038326",
+ "entries": {
+  "76b8221f7680d41a": {
+   "mention": "pabinafusp alfa",
+   "type": "therapy",
+   "candidates": [
+    "therapy:pabinafusp-alfa",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:olipudase-alfa",
+    "therapy:cerliponase-alfa",
+    "therapy:kv7-openers",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:arimoclomol",
+    "therapy:laronidase"
+   ],
+   "node_id": "therapy:pabinafusp-alfa",
+   "match": "same",
+   "justification": "Pabinafusp alfa",
+   "raw_node_id": "therapy:pabinafusp-alfa",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.821Z"
+  },
+  "89b59128cc908898": {
+   "mention": "mucopolysaccharidosis II",
+   "type": "disease",
+   "candidates": [
+    "disease:IDS",
+    "disease:IDUA",
+    "disease:GAA",
+    "disease:GBA1",
+    "disease:HEXA",
+    "disease:ARSA",
+    "disease:GALC",
+    "disease:LZTR1",
+    "disease:NF1",
+    "disease:PTPN11"
+   ],
+   "node_id": "disease:IDS",
+   "match": "same",
+   "justification": "MPS II",
+   "raw_node_id": "disease:IDS",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.821Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.821Z",
+   "request_payload": {
+    "title": "A Phase 2/3 Trial of Pabinafusp Alfa, IDS Fused with Anti-Human Transferrin Receptor Antibody, Targeting Neurodegeneration in MPS-II.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "pabinafusp alfa",
+      "declared_type": "therapy",
+      "sentence": "In order to establish its efficacy and safety, a multicenter, single-arm, open-label phase 2/3 clinical trial was conducted in 28 Japanese patients with mucopolysaccharidosis II (MPS-II, Hunter syndrome) by intravenous administrations of 2.0 mg/kg of pabinafusp alfa for 52 weeks.",
+      "candidates": [
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:olipudase-alfa",
+        "type": "therapy",
+        "label": "Olipudase alfa (enzyme replacement for ASMD)",
+        "synonyms": [
+         "Xenpozyme",
+         "rhASM"
+        ],
+        "summary": "Intravenous recombinant acid sphingomyelinase, approved only for the non-brain manifestations of ASMD."
+       },
+       {
+        "id": "therapy:cerliponase-alfa",
+        "type": "therapy",
+        "label": "Cerliponase alfa (intraventricular enzyme replacement for CLN2)",
+        "synonyms": [
+         "Brineura",
+         "rhTPP1"
+        ],
+        "summary": "Recombinant TPP1 delivered straight into the fluid spaces of the brain, bypassing the blood-brain barrier. It slows the loss of walking and language in CLN2 dis"
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       },
+       {
+        "id": "therapy:laronidase",
+        "type": "therapy",
+        "label": "Laronidase (enzyme replacement for MPS I)",
+        "synonyms": [
+         "Aldurazyme"
+        ],
+        "summary": "Intravenous recombinant alpha-L-iduronidase for MPS I. It does not cross the blood-brain barrier, so it is not expected to treat the brain disease of the severe"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "mucopolysaccharidosis II",
+      "declared_type": "disease",
+      "sentence": "In order to establish its efficacy and safety, a multicenter, single-arm, open-label phase 2/3 clinical trial was conducted in 28 Japanese patients with mucopolysaccharidosis II (MPS-II, Hunter syndrome) by intravenous administrations of 2.0 mg/kg of pabinafusp alfa for 52 weeks.",
+      "candidates": [
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"pabinafusp alfa\",\"node_id\":\"therapy:pabinafusp-alfa\",\"match\":\"same\",\"justification\":\"Pabinafusp alfa\"},{\"mention_id\":\"m2\",\"mention\":\"mucopolysaccharidosis II\",\"node_id\":\"disease:IDS\",\"match\":\"same\",\"justification\":\"MPS II\"}]}"
+  }
+ ]
+}

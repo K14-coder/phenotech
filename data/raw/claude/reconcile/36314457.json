@@ -1,0 +1,205 @@
+{
+ "pmid": "36314457",
+ "entries": {
+  "e490b086256e8d7a": {
+   "mention": "Dravet syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:SCN1A",
+    "disease:SCN2A",
+    "disease:CDKL5",
+    "disease:GRIN2B",
+    "disease:CBL",
+    "disease:HRAS",
+    "disease:SLC6A1",
+    "disease:SYNGAP1",
+    "disease:IDS",
+    "disease:IDUA"
+   ],
+   "node_id": "disease:SCN1A",
+   "match": "instance",
+   "justification": "Dravet is SCN1A subtype",
+   "raw_node_id": "disease:SCN1A",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.806Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.806Z",
+   "request_payload": {
+    "title": "Does long-term phenytoin have a place in Dravet syndrome?",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Dravet syndrome",
+      "declared_type": "disease",
+      "sentence": "We describe four patients with Dravet syndrome in whom long-term phenytoin therapy reduced seizure frequency and duration.",
+      "candidates": [
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Dravet syndrome\",\"node_id\":\"disease:SCN1A\",\"match\":\"instance\",\"justification\":\"Dravet is SCN1A subtype\"}]}"
+  }
+ ]
+}

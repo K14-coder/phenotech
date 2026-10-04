@@ -1,0 +1,109 @@
+{
+ "pmid": "30481304",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.571Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a053a3a172e225bc",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/30481304.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "Two classes of germline LZTR1 mutations underlie dominant and recessive forms of NS, while constitutional monoallelic, mostly inactivating, mutations in the same gene cause schwannomatosis, a cancer-prone disorder clinically distinct from NS.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "schwannomatosis",
+   "object_type": "disease",
+   "quote": "Two classes of germline LZTR1 mutations underlie dominant and recessive forms of NS, while constitutional monoallelic, mostly inactivating, mutations in the same gene cause schwannomatosis, a cancer-prone disorder clinically distinct from NS.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "dominant NS-causing LZTR1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "protein destabilization",
+   "object_type": "mechanism",
+   "quote": "Here we show that dominant NS-causing LZTR1 mutations do not affect significantly protein stability and subcellular localization.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "dominant NS-causing LZTR1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "enhanced stimulus-dependent RAS-MAPK signaling",
+   "object_type": "mechanism",
+   "quote": "We provide the first evidence that these mutations, but not the missense changes occurring as biallelic mutations in recessive NS, enhance stimulus-dependent RAS-MAPK signaling, which is triggered, at least in part, by an increased RAS protein pool.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 missense changes in recessive NS",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "enhanced stimulus-dependent RAS-MAPK signaling",
+   "object_type": "mechanism",
+   "quote": "We provide the first evidence that these mutations, but not the missense changes occurring as biallelic mutations in recessive NS, enhance stimulus-dependent RAS-MAPK signaling, which is triggered, at least in part, by an increased RAS protein pool.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "dominant NS-causing LZTR1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "perturbed binding of LZTR1 to CUL3",
+   "object_type": "mechanism",
+   "quote": "Moreover, we document that dominant NS-causing mutations do not perturb binding of LZTR1 to CUL3, a scaffold coordinating the assembly of a multimeric complex catalyzing protein ubiquitination but are predicted to affect the surface of the Kelch domain mediating substrate binding to the complex.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "protein ubiquitination",
+   "object_type": "mechanism",
+   "quote": "Collectively, our data suggest a model in which LZTR1 contributes to the ubiquitinationof protein(s) functioning as positive modulator(s) of the RAS-MAPK signaling pathway.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "impaired substrate ubiquitination and degradation",
+   "object_type": "mechanism",
+   "quote": "In this model, LZTR1 mutations are predicted to variably impair binding of these substrates to the multi-component ligase complex and their efficient ubiquitination and degradation, resulting in MAPK signaling upregulation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

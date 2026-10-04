@@ -1,0 +1,683 @@
+{
+ "pmid": "20631222",
+ "entries": {
+  "6ee3170ab7f48341": {
+   "mention": "neurotransmitter release",
+   "type": "mechanism",
+   "candidates": [
+    "mech:ca-triggered-exocytosis",
+    "mech:glucose-transmembrane-transport",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:ras-protein-signal-transduction",
+    "mech:intracellular-cholesterol-transport",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:action-potential",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:gaba-reuptake"
+   ],
+   "node_id": "mech:ca-triggered-exocytosis",
+   "match": "same",
+   "justification": "Ca-channel-mediated neurotransmitter release",
+   "raw_node_id": "mech:ca-triggered-exocytosis",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.887Z"
+  },
+  "ec5030fcd61a7bc4": {
+   "mention": "FHM",
+   "type": "disease",
+   "candidates": [
+    "disease:CACNA1A",
+    "disease:SCN1A",
+    "disease:VAMP2",
+    "disease:ARSA",
+    "disease:BRAF",
+    "disease:CBL",
+    "disease:CDKL5",
+    "disease:CLN3",
+    "disease:CPLX1",
+    "disease:GAA"
+   ],
+   "node_id": "disease:CACNA1A",
+   "match": "instance",
+   "justification": "FHM1 from Cacna1a S218L",
+   "raw_node_id": "disease:CACNA1A",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.887Z"
+  },
+  "712f78efc9ed90aa": {
+   "mention": "susceptibility to seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001250",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0031165",
+    "phenotype:HP:0002540",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0020221",
+    "phenotype:HP:0025336",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0025335",
+    "phenotype:HP:0011167"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "same",
+   "justification": "seizures",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.887Z"
+  },
+  "2e3c1dd207f3c402": {
+   "mention": "delayed brain edema",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000823",
+    "phenotype:HP:0012569",
+    "phenotype:HP:0002181",
+    "phenotype:HP:0030915",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0025336",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0025335",
+    "phenotype:HP:0002283",
+    "phenotype:HP:0004466"
+   ],
+   "node_id": "phenotype:HP:0002181",
+   "match": "instance",
+   "justification": "delayed brain edema",
+   "raw_node_id": "phenotype:HP:0002181",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.887Z"
+  },
+  "946e1bfc90006145": {
+   "mention": "fatal coma after minor head trauma",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002421",
+    "phenotype:HP:0031705",
+    "phenotype:HP:0006583",
+    "phenotype:HP:0008802",
+    "phenotype:HP:0007549",
+    "phenotype:HP:0010302",
+    "phenotype:HP:0002492",
+    "phenotype:HP:0002862",
+    "phenotype:HP:0011636",
+    "phenotype:HP:0002372"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no coma term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.887Z"
+  },
+  "3e93720232f5e377": {
+   "mention": "enhanced Ca(2+) influx",
+   "type": "mechanism",
+   "candidates": [
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:sphingolipid-catabolism",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:ca-triggered-exocytosis",
+    "mech:mapk-cascade",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:glycogen-catabolism",
+    "mech:potassium-channel-activity",
+    "mech:glycosaminoglycan-catabolism",
+    "mech:lysosomal-protein-catabolism"
+   ],
+   "node_id": "mech:voltage-gated-calcium-channel-activity",
+   "match": "instance",
+   "justification": "enhanced CaV2.1 Ca influx",
+   "raw_node_id": "mech:voltage-gated-calcium-channel-activity",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.887Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.887Z",
+   "request_payload": {
+    "title": "Severe and progressive neurotransmitter release aberrations in familial hemiplegic migraine type 1 Cacna1a S218L knock-in mice.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "neurotransmitter release",
+      "declared_type": "mechanism",
+      "sentence": "These channels mediate neurotransmitter release at many central synapses and at the neuromuscular junction (NMJ).",
+      "candidates": [
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:intracellular-cholesterol-transport",
+        "type": "mechanism",
+        "label": "Intracellular cholesterol transport",
+        "note": "kind: process",
+        "summary": "The directed movement of cholesterol, cholest-5-en-3-beta-ol, within cells."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "FHM",
+      "declared_type": "disease",
+      "sentence": "Mutation S218L causes a severe neurological phenotype of FHM and, additionally, ataxia and susceptibility to seizures, delayed brain edema, and fatal coma after minor head trauma.",
+      "candidates": [
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:VAMP2",
+        "type": "disease",
+        "label": "VAMP2-related disorders",
+        "synonyms": [
+         "NEDHAHM",
+         "synaptobrevin-2-related disorder"
+        ],
+        "summary": "Changes in VAMP2 (synaptobrevin-2) cause a neurodevelopmental disorder with low muscle tone from birth, intellectual disability and autistic features, often wit"
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "susceptibility to seizures",
+      "declared_type": "phenotype",
+      "sentence": "Mutation S218L causes a severe neurological phenotype of FHM and, additionally, ataxia and susceptibility to seizures, delayed brain edema, and fatal coma after minor head trauma.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       },
+       {
+        "id": "phenotype:HP:0002540",
+        "type": "phenotype",
+        "label": "Inability to walk",
+        "note": "HPO HP:0002540"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0020221",
+        "type": "phenotype",
+        "label": "Clonic seizure",
+        "note": "HPO HP:0020221"
+       },
+       {
+        "id": "phenotype:HP:0025336",
+        "type": "phenotype",
+        "label": "Delayed ability to sit",
+        "note": "HPO HP:0025336"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0025335",
+        "type": "phenotype",
+        "label": "Delayed ability to stand",
+        "note": "HPO HP:0025335"
+       },
+       {
+        "id": "phenotype:HP:0011167",
+        "type": "phenotype",
+        "label": "Focal tonic seizure",
+        "note": "HPO HP:0011167"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "delayed brain edema",
+      "declared_type": "phenotype",
+      "sentence": "Mutation S218L causes a severe neurological phenotype of FHM and, additionally, ataxia and susceptibility to seizures, delayed brain edema, and fatal coma after minor head trauma.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000823",
+        "type": "phenotype",
+        "label": "Delayed puberty",
+        "note": "HPO HP:0000823"
+       },
+       {
+        "id": "phenotype:HP:0012569",
+        "type": "phenotype",
+        "label": "Delayed menarche",
+        "note": "HPO HP:0012569"
+       },
+       {
+        "id": "phenotype:HP:0002181",
+        "type": "phenotype",
+        "label": "Cerebral edema",
+        "note": "HPO HP:0002181"
+       },
+       {
+        "id": "phenotype:HP:0030915",
+        "type": "phenotype",
+        "label": "Cerebellar edema",
+        "note": "HPO HP:0030915"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0025336",
+        "type": "phenotype",
+        "label": "Delayed ability to sit",
+        "note": "HPO HP:0025336"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0025335",
+        "type": "phenotype",
+        "label": "Delayed ability to stand",
+        "note": "HPO HP:0025335"
+       },
+       {
+        "id": "phenotype:HP:0002283",
+        "type": "phenotype",
+        "label": "Global brain atrophy",
+        "note": "HPO HP:0002283"
+       },
+       {
+        "id": "phenotype:HP:0004466",
+        "type": "phenotype",
+        "label": "Delayed brainstem auditory evoked response conduction time",
+        "note": "HPO HP:0004466"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "fatal coma after minor head trauma",
+      "declared_type": "phenotype",
+      "sentence": "Mutation S218L causes a severe neurological phenotype of FHM and, additionally, ataxia and susceptibility to seizures, delayed brain edema, and fatal coma after minor head trauma.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002421",
+        "type": "phenotype",
+        "label": "Poor head control",
+        "note": "HPO HP:0002421"
+       },
+       {
+        "id": "phenotype:HP:0031705",
+        "type": "phenotype",
+        "label": "Compensatory head posture",
+        "note": "HPO HP:0031705"
+       },
+       {
+        "id": "phenotype:HP:0006583",
+        "type": "phenotype",
+        "label": "Fatal liver failure in infancy",
+        "note": "HPO HP:0006583"
+       },
+       {
+        "id": "phenotype:HP:0008802",
+        "type": "phenotype",
+        "label": "Hypoplasia of the femoral head",
+        "note": "HPO HP:0008802"
+       },
+       {
+        "id": "phenotype:HP:0007549",
+        "type": "phenotype",
+        "label": "Desquamation of skin soon after birth",
+        "note": "HPO HP:0007549"
+       },
+       {
+        "id": "phenotype:HP:0010302",
+        "type": "phenotype",
+        "label": "Spinal cord tumor",
+        "note": "HPO HP:0010302"
+       },
+       {
+        "id": "phenotype:HP:0002492",
+        "type": "phenotype",
+        "label": "Abnormal corticospinal tract morphology",
+        "note": "HPO HP:0002492"
+       },
+       {
+        "id": "phenotype:HP:0002862",
+        "type": "phenotype",
+        "label": "Bladder carcinoma",
+        "note": "HPO HP:0002862"
+       },
+       {
+        "id": "phenotype:HP:0011636",
+        "type": "phenotype",
+        "label": "Abnormal coronary artery origin",
+        "note": "HPO HP:0011636"
+       },
+       {
+        "id": "phenotype:HP:0002372",
+        "type": "phenotype",
+        "label": "Normal interictal EEG",
+        "note": "HPO HP:0002372"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "enhanced Ca(2+) influx",
+      "declared_type": "mechanism",
+      "sentence": "Our results suggest enhanced Ca(2+) influx into motor nerve terminals through S218L-mutated presynaptic Ca(V)2.1 channels, likely because of the earlier reported negative shift of activation potential and reduced inactivation.",
+      "candidates": [
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:mapk-cascade",
+        "type": "mechanism",
+        "label": "MAPK cascade",
+        "note": "kind: process",
+        "summary": "An intracellular protein kinase cascade containing at least a MAP kinase (MAPK). It starts with the activation of a MAP3K, and the consecutive activation of a M"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"neurotransmitter release\",\"node_id\":\"mech:ca-triggered-exocytosis\",\"match\":\"same\",\"justification\":\"Ca-channel-mediated neurotransmitter release\"},{\"mention_id\":\"m2\",\"mention\":\"FHM\",\"node_id\":\"disease:CACNA1A\",\"match\":\"instance\",\"justification\":\"FHM1 from Cacna1a S218L\"},{\"mention_id\":\"m3\",\"mention\":\"susceptibility to seizures\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"same\",\"justification\":\"seizures\"},{\"mention_id\":\"m4\",\"mention\":\"delayed brain edema\",\"node_id\":\"phenotype:HP:0002181\",\"match\":\"instance\",\"justification\":\"delayed brain edema\"},{\"mention_id\":\"m5\",\"mention\":\"fatal coma after minor head trauma\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no coma term\"},{\"mention_id\":\"m6\",\"mention\":\"enhanced Ca(2+) influx\",\"node_id\":\"mech:voltage-gated-calcium-channel-activity\",\"match\":\"instance\",\"justification\":\"enhanced CaV2.1 Ca influx\"}]}"
+  }
+ ]
+}

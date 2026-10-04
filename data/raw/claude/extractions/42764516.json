@@ -1,0 +1,37 @@
+{
+ "pmid": "42764516",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.652Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1b19d3ecc58ef528",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/42764516.json",
+ "claims": [
+  {
+   "subject_mention": "hematopoietic stem cell transplantation (HSCT)",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Metachromatic leukodystrophy (MLD)",
+   "object_type": "disease",
+   "quote": "Metachromatic leukodystrophy (MLD) is a progressive neurometabolic disease which can be treated with hematopoietic stem cell transplantation (HSCT).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Allogeneic haematopoietic stem cell transplantation",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "late-onset metachromatic leukodystrophy",
+   "object_type": "disease",
+   "quote": "Allogeneic haematopoietic stem cell transplantation in late-onset metachromatic leukodystrophy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

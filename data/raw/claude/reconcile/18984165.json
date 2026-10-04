@@ -1,0 +1,731 @@
+{
+ "pmid": "18984165",
+ "entries": {
+  "d76a567df8490a0e": {
+   "mention": "ERK/synapsin I-dependent GABA release",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gaba-reuptake",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:synaptic-vesicle-priming",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:gain-of-function",
+    "mech:synaptic-vesicle-fusion",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:action-potential"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "GABA release, not reuptake",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.886Z"
+  },
+  "43ddc4744f90f5ec": {
+   "mention": "neurofibromatosis type I",
+   "type": "disease",
+   "candidates": [
+    "disease:NF1",
+    "disease:IDUA",
+    "disease:LZTR1",
+    "disease:GBA1",
+    "disease:IDS",
+    "disease:CLN3",
+    "disease:TPP1",
+    "disease:HEXA",
+    "disease:GAA",
+    "disease:SLC2A1"
+   ],
+   "node_id": "disease:NF1",
+   "match": "same",
+   "justification": "Neurofibromatosis type 1",
+   "raw_node_id": "disease:NF1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.886Z"
+  },
+  "b0cba033eb603612": {
+   "mention": "disruption of ERK signaling in GABA release",
+   "type": "mechanism",
+   "candidates": [
+    "mech:tor-signaling",
+    "mech:gain-of-function",
+    "mech:gaba-reuptake",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:loss-of-function",
+    "mech:ras-protein-signal-transduction",
+    "mech:protein-destabilization",
+    "mech:ca-triggered-exocytosis"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No ERK/MAPK candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.886Z"
+  },
+  "d5130bdfe0c4150a": {
+   "mention": "GABA(A) antagonist",
+   "type": "therapy",
+   "candidates": [
+    "therapy:trametinib",
+    "therapy:pyrimethamine",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:kcnt1-aso",
+    "therapy:scn8a-aso",
+    "therapy:migalastat",
+    "therapy:zorevunersen",
+    "therapy:elsunersen",
+    "therapy:hsct-krabbe",
+    "therapy:kv7-openers"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No GABA-A antagonist candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.886Z"
+  },
+  "c41669b4037899b7": {
+   "mention": "Nf1 mutation",
+   "type": "disease",
+   "candidates": [
+    "disease:NF1",
+    "disease:SYNGAP1",
+    "disease:RAF1",
+    "disease:SOS1",
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:RIT1",
+    "disease:LZTR1",
+    "disease:KCNQ2",
+    "disease:MAP2K1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Gene mutation in mice, not a disease name",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.886Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.886Z",
+   "request_payload": {
+    "title": "Neurofibromin regulation of ERK signaling modulates GABA release and learning.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "ERK/synapsin I-dependent GABA release",
+      "declared_type": "mechanism",
+      "sentence": "Our results demonstrate that neurofibromin modulates ERK/synapsin I-dependent GABA release, which in turn modulates hippocampal LTP and learning.",
+      "candidates": [
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "neurofibromatosis type I",
+      "declared_type": "disease",
+      "sentence": "We uncovered a role for ERK signaling in GABA release, long-term potentiation (LTP), and learning, and show that disruption of this mechanism accounts for the learning deficits in a mouse model for learning disabilities in neurofibromatosis type I (NF1).",
+      "candidates": [
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "disruption of ERK signaling in GABA release",
+      "declared_type": "mechanism",
+      "sentence": "We uncovered a role for ERK signaling in GABA release, long-term potentiation (LTP), and learning, and show that disruption of this mechanism accounts for the learning deficits in a mouse model for learning disabilities in neurofibromatosis type I (NF1).",
+      "candidates": [
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "GABA(A) antagonist",
+      "declared_type": "therapy",
+      "sentence": "Importantly, the learning deficits associated with the Nf1 mutation were rescued by a subthreshold dose of a GABA(A) antagonist.",
+      "candidates": [
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       },
+       {
+        "id": "therapy:pyrimethamine",
+        "type": "therapy",
+        "label": "Pyrimethamine (pharmacological chaperone for hexosaminidase A)",
+        "synonyms": [
+         "PMT"
+        ],
+        "summary": "An old antiparasitic drug that partly rescues misfolded hexosaminidase A; it raised enzyme activity in late-onset Tay-Sachs patients, but higher doses caused si"
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:kcnt1-aso",
+        "type": "therapy",
+        "label": "KCNT1-targeting antisense oligonucleotide (knockdown)",
+        "synonyms": [
+         "Kcnt1 gapmer ASO"
+        ],
+        "summary": "Antisense oligonucleotides that lower KCNT1 expression; tested in mice and given investigationally to two infants."
+       },
+       {
+        "id": "therapy:scn8a-aso",
+        "type": "therapy",
+        "label": "Scn8a-lowering antisense oligonucleotide (preclinical)",
+        "synonyms": [
+         "Scn8a ASO"
+        ],
+        "summary": "An antisense oligonucleotide that lowers Scn8a; protective in mouse models of SCN8A encephalopathy and of Dravet syndrome."
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:zorevunersen",
+        "type": "therapy",
+        "label": "Zorevunersen (STK-001, SCN1A TANGO antisense oligonucleotide)",
+        "synonyms": [
+         "STK-001",
+         "TANGO ASO"
+        ],
+        "summary": "An antisense oligonucleotide designed to raise productive SCN1A (NaV1.1) expression; in phase 3 for Dravet syndrome."
+       },
+       {
+        "id": "therapy:elsunersen",
+        "type": "therapy",
+        "label": "Elsunersen (PRAX-222, SCN2A-targeting antisense oligonucleotide)",
+        "synonyms": [
+         "PRAX-222"
+        ],
+        "summary": "An antisense oligonucleotide that lowers SCN2A expression, studied in early-onset gain-of-function SCN2A DEE."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "Nf1 mutation",
+      "declared_type": "disease",
+      "sentence": "Importantly, the learning deficits associated with the Nf1 mutation were rescued by a subthreshold dose of a GABA(A) antagonist.",
+      "candidates": [
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:MAP2K1",
+        "type": "disease",
+        "label": "MAP2K1-related disorders (cardiofaciocutaneous syndrome 3)",
+        "synonyms": [
+         "CFC3",
+         "cardiofaciocutaneous syndrome 3",
+         "MEK1",
+         "MAP2K1 cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in MAP2K1",
+         "cardiofaciocutaneous syndrome type 3"
+        ],
+        "summary": "Germline MAP2K1 (MEK1) changes cause cardiofaciocutaneous syndrome."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"ERK/synapsin I-dependent GABA release\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"GABA release, not reuptake\"},{\"mention_id\":\"m2\",\"mention\":\"neurofibromatosis type I\",\"node_id\":\"disease:NF1\",\"match\":\"same\",\"justification\":\"Neurofibromatosis type 1\"},{\"mention_id\":\"m3\",\"mention\":\"disruption of ERK signaling in GABA release\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No ERK/MAPK candidate\"},{\"mention_id\":\"m4\",\"mention\":\"GABA(A) antagonist\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No GABA-A antagonist candidate\"},{\"mention_id\":\"m5\",\"mention\":\"Nf1 mutation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Gene mutation in mice, not a disease name\"}]}"
+  }
+ ]
+}

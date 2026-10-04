@@ -1,0 +1,133 @@
+{
+ "pmid": "38797393",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.608Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "d241615e927aa1e0",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/38797393.json",
+ "claims": [
+  {
+   "subject_mention": "GBA1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "hydrolyzing the glycosphingolipids",
+   "object_type": "mechanism",
+   "quote": "Glucocerebrosidase (GCase), encoded by the GBA1 gene, is one of the lysosomal enzymes responsible for hydrolyzing the glycosphingolipids.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GBA1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Gaucher diseases",
+   "object_type": "disease",
+   "quote": "Deficiency in GCase activity (in patients with two defective alleles of GBA1) leads to glucosylceramide storage in lysosomes which in turn results in the development of the Gaucher diseases, a lysosomal storage disorder, while a heterozygous state may be correlated with the GBA1 mutation-associated Parkinson disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GBA1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "GBA1 mutation-associated Parkinson disease",
+   "object_type": "disease",
+   "quote": "Deficiency in GCase activity (in patients with two defective alleles of GBA1) leads to glucosylceramide storage in lysosomes which in turn results in the development of the Gaucher diseases, a lysosomal storage disorder, while a heterozygous state may be correlated with the GBA1 mutation-associated Parkinson disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher diseases",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "glucosylceramide storage in lysosomes",
+   "object_type": "mechanism",
+   "quote": "Deficiency in GCase activity (in patients with two defective alleles of GBA1) leads to glucosylceramide storage in lysosomes which in turn results in the development of the Gaucher diseases, a lysosomal storage disorder, while a heterozygous state may be correlated with the GBA1 mutation-associated Parkinson disease.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pharmacological chaperones",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "correct conformation of abnormally folded enzymes",
+   "object_type": "mechanism",
+   "quote": "One of the proposed forms of therapy for these two conditions is the use of pharmacological chaperones which work by facilitating the achievement of the correct conformation of abnormally folded enzymes.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "ambroxol",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GCase levels and activity",
+   "object_type": "mechanism",
+   "quote": "Studies conducted on the action of this compound have indeed indicated its effectiveness in increasing GCase levels and activity.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "ambroxol",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Gaucher disease",
+   "object_type": "disease",
+   "quote": "This paper summarizes the biological mechanisms of action of ambroxol in Gaucher disease and GBA1 mutation-associated Parkinson disease, focused on its activity as a chaperone, modulator of ERAD pathways, inducer of autophagy, and pain reliever in cellular and animal models as well as in patients.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ambroxol",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "GBA1 mutation-associated Parkinson disease",
+   "object_type": "disease",
+   "quote": "This paper summarizes the biological mechanisms of action of ambroxol in Gaucher disease and GBA1 mutation-associated Parkinson disease, focused on its activity as a chaperone, modulator of ERAD pathways, inducer of autophagy, and pain reliever in cellular and animal models as well as in patients.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ambroxol",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "ERAD pathways",
+   "object_type": "mechanism",
+   "quote": "This paper summarizes the biological mechanisms of action of ambroxol in Gaucher disease and GBA1 mutation-associated Parkinson disease, focused on its activity as a chaperone, modulator of ERAD pathways, inducer of autophagy, and pain reliever in cellular and animal models as well as in patients.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ambroxol",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "autophagy",
+   "object_type": "mechanism",
+   "quote": "This paper summarizes the biological mechanisms of action of ambroxol in Gaucher disease and GBA1 mutation-associated Parkinson disease, focused on its activity as a chaperone, modulator of ERAD pathways, inducer of autophagy, and pain reliever in cellular and animal models as well as in patients.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

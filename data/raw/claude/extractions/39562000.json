@@ -1,0 +1,37 @@
+{
+ "pmid": "39562000",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.612Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b7a3c4182766f7f4",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/39562000.json",
+ "claims": [
+  {
+   "subject_mention": "glucocerebrosidase",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "degradation of glucosylceramide into glucose and ceramide",
+   "object_type": "mechanism",
+   "quote": "This study investigates the molecular and cellular basis of cognitive impairment associated with heterozygous mutations in GBA1, the strongest risk gene for Parkinson's disease, which encodes glucocerebrosidase, a lysosome enzyme that degrades the glycosphingolipid glucosylceramide into glucose and ceramide.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Parkinson's disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "Cognitive impairment",
+   "object_type": "phenotype",
+   "quote": "Cognitive impairment is a common but poorly understood non-motor aspect of Parkinson's disease, negatively affecting the patient's functional capacity and quality of life.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

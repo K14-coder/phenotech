@@ -1,0 +1,61 @@
+{
+ "pmid": "17689147",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.536Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "48d780ee64f38b22",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/17689147.json",
+ "claims": [
+  {
+   "subject_mention": "Miglustat",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NPC",
+   "object_type": "disease",
+   "quote": "INTERPRETATION: Miglustat improves or stabilises several clinically relevant markers of NPC.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Miglustat",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "glucosylceramide synthase",
+   "object_type": "mechanism",
+   "quote": "Miglustat, a small iminosugar, reversibly inhibits glucosylceramide synthase, which catalyses the first committed step of glycosphingolipid synthesis.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Niemann-Pick type C disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "intracellular lipid-trafficking defect",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Niemann-Pick type C disease (NPC) is an inherited neurodegenerative disorder characterised by an intracellular lipid-trafficking defect with secondary accumulation of glycosphingolipids.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Niemann-Pick type C disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "secondary accumulation of glycosphingolipids",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Niemann-Pick type C disease (NPC) is an inherited neurodegenerative disorder characterised by an intracellular lipid-trafficking defect with secondary accumulation of glycosphingolipids.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

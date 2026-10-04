@@ -1,0 +1,939 @@
+{
+ "pmid": "42610455",
+ "entries": {
+  "680710b135786e9e": {
+   "mention": "neonatal-onset epilepsies",
+   "type": "disease",
+   "candidates": [
+    "disease:KCNQ2",
+    "disease:SCN2A",
+    "disease:STX1B",
+    "disease:CACNA1A",
+    "disease:SCN1A",
+    "disease:SCN8A",
+    "disease:HEXA",
+    "disease:GALC",
+    "disease:GAA",
+    "disease:STXBP1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "neonatal-onset epilepsies in general are broader than KCNQ2 disorders",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "4eb36b90e6bde481": {
+   "mention": "sodium channel blocker",
+   "type": "therapy",
+   "candidates": [
+    "therapy:quinidine",
+    "therapy:sodium-channel-blockers",
+    "therapy:4-phenylbutyrate",
+    "therapy:kv7-openers",
+    "therapy:hsct-krabbe",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:migalastat",
+    "therapy:kcnt1-aso",
+    "therapy:munc18-1-pharmacological-chaperone",
+    "therapy:pyrimethamine"
+   ],
+   "node_id": "therapy:sodium-channel-blockers",
+   "match": "same",
+   "justification": "sodium channel blocker class",
+   "raw_node_id": "therapy:sodium-channel-blockers",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "1e0e45cb85842169": {
+   "mention": "SCB",
+   "type": "therapy",
+   "candidates": [
+    "therapy:sodium-channel-blockers",
+    "therapy:scn8a-aso",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:zorevunersen",
+    "therapy:etx101",
+    "therapy:elsunersen",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-stxbp1-gene-replacement"
+   ],
+   "node_id": "therapy:sodium-channel-blockers",
+   "match": "same",
+   "justification": "SCB = sodium channel blockers",
+   "raw_node_id": "therapy:sodium-channel-blockers",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "9f2069fbb77e0f66": {
+   "mention": "CBZ",
+   "type": "therapy",
+   "candidates": [
+    "therapy:cannabidiol",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:ambroxol",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:arimoclomol"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "carbamazepine; sodium channel blocker class not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "074d50f7ef3d800e": {
+   "mention": "OXC",
+   "type": "therapy",
+   "candidates": [
+    "therapy:sodium-channel-blockers",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:ambroxol",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:arimoclomol"
+   ],
+   "node_id": "therapy:sodium-channel-blockers",
+   "match": "instance",
+   "justification": "oxcarbazepine is a member of the class",
+   "raw_node_id": "therapy:sodium-channel-blockers",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "d768c27d2591b26f": {
+   "mention": "SeL(F)NE",
+   "type": "disease",
+   "candidates": [
+    "disease:KCNQ2",
+    "disease:IDS",
+    "disease:CDKL5",
+    "disease:CACNA1A",
+    "disease:HEXA",
+    "disease:SCN1A",
+    "disease:KRAS",
+    "disease:RAF1",
+    "disease:SOS1",
+    "disease:SCN8A"
+   ],
+   "node_id": "disease:KCNQ2",
+   "match": "instance",
+   "justification": "self-limited familial neonatal epilepsy is a KCNQ2 subtype here",
+   "raw_node_id": "disease:KCNQ2",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.809Z",
+   "request_payload": {
+    "title": "Early sodium channel blocker initiation is associated with better outcomes in KCNQ2 disorders.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "neonatal-onset epilepsies",
+      "declared_type": "disease",
+      "sentence": "Pathogenic KCNQ2 variants are the most common genetic cause of neonatal-onset epilepsies, with phenotypes ranging from self-limited (familial) neonatal epilepsy (SeL(F)NE) to severe developmental and epileptic encephalopathy (KCNQ2-DEE).",
+      "candidates": [
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "sodium channel blocker",
+      "declared_type": "therapy",
+      "sentence": "Early sodium channel blocker initiation is associated with better outcomes in KCNQ2 disorders.",
+      "candidates": [
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:kcnt1-aso",
+        "type": "therapy",
+        "label": "KCNT1-targeting antisense oligonucleotide (knockdown)",
+        "synonyms": [
+         "Kcnt1 gapmer ASO"
+        ],
+        "summary": "Antisense oligonucleotides that lower KCNT1 expression; tested in mice and given investigationally to two infants."
+       },
+       {
+        "id": "therapy:munc18-1-pharmacological-chaperone",
+        "type": "therapy",
+        "label": "Structure-based pharmacological chaperones for Munc18-1",
+        "synonyms": [
+         "Munc18-1 pharmacochaperone"
+        ],
+        "summary": "Small molecules designed from the Munc18-1 structure to bind and stabilize the protein. Intended to replace generic chemical chaperones, which need high doses."
+       },
+       {
+        "id": "therapy:pyrimethamine",
+        "type": "therapy",
+        "label": "Pyrimethamine (pharmacological chaperone for hexosaminidase A)",
+        "synonyms": [
+         "PMT"
+        ],
+        "summary": "An old antiparasitic drug that partly rescues misfolded hexosaminidase A; it raised enzyme activity in late-onset Tay-Sachs patients, but higher doses caused si"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "SCB",
+      "declared_type": "therapy",
+      "sentence": "In LOF KCNQ2-DEE, time-to-event analyses showed that early SCB initiation (≤1 month) was associated with earlier seizure offset.",
+      "candidates": [
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:scn8a-aso",
+        "type": "therapy",
+        "label": "Scn8a-lowering antisense oligonucleotide (preclinical)",
+        "synonyms": [
+         "Scn8a ASO"
+        ],
+        "summary": "An antisense oligonucleotide that lowers Scn8a; protective in mouse models of SCN8A encephalopathy and of Dravet syndrome."
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:zorevunersen",
+        "type": "therapy",
+        "label": "Zorevunersen (STK-001, SCN1A TANGO antisense oligonucleotide)",
+        "synonyms": [
+         "STK-001",
+         "TANGO ASO"
+        ],
+        "summary": "An antisense oligonucleotide designed to raise productive SCN1A (NaV1.1) expression; in phase 3 for Dravet syndrome."
+       },
+       {
+        "id": "therapy:etx101",
+        "type": "therapy",
+        "label": "ETX101 (AAV9-delivered gene therapy for SCN1A Dravet syndrome)",
+        "synonyms": [
+         "ETX101"
+        ],
+        "summary": "An AAV9-delivered gene therapy in phase 1/2 for SCN1A-positive Dravet syndrome."
+       },
+       {
+        "id": "therapy:elsunersen",
+        "type": "therapy",
+        "label": "Elsunersen (PRAX-222, SCN2A-targeting antisense oligonucleotide)",
+        "synonyms": [
+         "PRAX-222"
+        ],
+        "summary": "An antisense oligonucleotide that lowers SCN2A expression, studied in early-onset gain-of-function SCN2A DEE."
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "CBZ",
+      "declared_type": "therapy",
+      "sentence": "Our results support the use of SCBs, particularly CBZ and OXC, as first-line therapy in (LOF) KCNQ2-DEE and SeL(F)NE.",
+      "candidates": [
+       {
+        "id": "therapy:cannabidiol",
+        "type": "therapy",
+        "label": "Cannabidiol (plant-derived, pharmaceutical)",
+        "synonyms": [
+         "EPIDIOLEX",
+         "CBD",
+         "GWP42003-P"
+        ],
+        "summary": "A purified cannabidiol oral solution with an FDA label covering seizures associated with Dravet syndrome."
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "OXC",
+      "declared_type": "therapy",
+      "sentence": "Our results support the use of SCBs, particularly CBZ and OXC, as first-line therapy in (LOF) KCNQ2-DEE and SeL(F)NE.",
+      "candidates": [
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "SeL(F)NE",
+      "declared_type": "disease",
+      "sentence": "Our results support the use of SCBs, particularly CBZ and OXC, as first-line therapy in (LOF) KCNQ2-DEE and SeL(F)NE.",
+      "candidates": [
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"neonatal-onset epilepsies\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"neonatal-onset epilepsies in general are broader than KCNQ2 disorders\"},{\"mention_id\":\"m2\",\"mention\":\"sodium channel blocker\",\"node_id\":\"therapy:sodium-channel-blockers\",\"match\":\"same\",\"justification\":\"sodium channel blocker class\"},{\"mention_id\":\"m3\",\"mention\":\"SCB\",\"node_id\":\"therapy:sodium-channel-blockers\",\"match\":\"same\",\"justification\":\"SCB = sodium channel blockers\"},{\"mention_id\":\"m4\",\"mention\":\"CBZ\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"carbamazepine; sodium channel blocker class not among candidates\"},{\"mention_id\":\"m5\",\"mention\":\"OXC\",\"node_id\":\"therapy:sodium-channel-blockers\",\"match\":\"instance\",\"justification\":\"oxcarbazepine is a member of the class\"},{\"mention_id\":\"m6\",\"mention\":\"SeL(F)NE\",\"node_id\":\"disease:KCNQ2\",\"match\":\"instance\",\"justification\":\"self-limited familial neonatal epilepsy is a KCNQ2 subtype here\"}]}"
+  }
+ ]
+}

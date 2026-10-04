@@ -1,0 +1,316 @@
+{
+ "pmid": "38294974",
+ "entries": {
+  "aa6b66e4748542b2": {
+   "mention": "Niemann-Pick disease type C",
+   "type": "disease",
+   "candidates": [
+    "disease:NPC1",
+    "disease:SMPD1",
+    "disease:GBA1",
+    "disease:GAA",
+    "disease:CLN3",
+    "disease:TPP1",
+    "disease:GLA",
+    "disease:GALC",
+    "disease:IDUA",
+    "disease:SLC2A1"
+   ],
+   "node_id": "disease:NPC1",
+   "match": "same",
+   "justification": "Niemann-Pick disease type C",
+   "raw_node_id": "disease:NPC1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.823Z"
+  },
+  "9811dd67a7807b0a": {
+   "mention": "lysosomal and metabolic dysfunction",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-protein-catabolism",
+    "mech:lysosomal-storage",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:lysosome-organization",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:glycogen-catabolism",
+    "mech:action-potential",
+    "mech:sphingolipid-catabolism",
+    "mech:glycosaminoglycan-catabolism"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Vague dysfunction, ambiguous",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.823Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.823Z",
+   "request_payload": {
+    "title": "Trial of N-Acetyl-l-Leucine in Niemann-Pick Disease Type C.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Niemann-Pick disease type C",
+      "declared_type": "disease",
+      "sentence": "We evaluated the safety and efficacy of N-acetyl-l-leucine (NALL), an agent that potentially ameliorates lysosomal and metabolic dysfunction, for the treatment of Niemann-Pick disease type C.",
+      "candidates": [
+       {
+        "id": "disease:NPC1",
+        "type": "disease",
+        "label": "NPC1-related disorders (Niemann-Pick disease type C)",
+        "synonyms": [
+         "Niemann-Pick disease type C",
+         "NPC",
+         "NP-C",
+         "NPC1",
+         "Niemann-Pick disease type C1",
+         "Niemann-Pick disease, type C1",
+         "type C1 Niemann-Pick disease",
+         "Niemann-Pick disease type C, classic form"
+        ],
+        "summary": "Loss of the NPC1 cholesterol transporter traps cholesterol and lipids in lysosomes: liver and spleen enlargement and a progressive neurological disease with ata"
+       },
+       {
+        "id": "disease:SMPD1",
+        "type": "disease",
+        "label": "SMPD1-related disorders (acid sphingomyelinase deficiency, Niemann-Pick A/B)",
+        "synonyms": [
+         "acid sphingomyelinase deficiency",
+         "ASMD",
+         "Niemann-Pick disease type A",
+         "Niemann-Pick disease type B",
+         "Niemann Pick disease type B",
+         "type B Niemann-Pick disease"
+        ],
+        "summary": "Deficiency of acid sphingomyelinase makes sphingomyelin build up: enlarged liver and spleen and lung disease; the infantile neurovisceral form (type A) also cau"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:GLA",
+        "type": "disease",
+        "label": "GLA-related disorders (Fabry disease)",
+        "synonyms": [
+         "Fabry disease",
+         "Anderson-Fabry disease",
+         "alpha-galactosidase A deficiency",
+         "Alpha-galactosidase A deficiency",
+         "FD",
+         "Fabry's disease",
+         "Fd",
+         "angiokeratoma corporis diffusum"
+        ],
+        "summary": "X-linked deficiency of alpha-galactosidase A makes globotriaosylceramide (Gb3) build up in blood vessels, kidney, heart and nerves: pain crises, kidney failure,"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "lysosomal and metabolic dysfunction",
+      "declared_type": "mechanism",
+      "sentence": "We evaluated the safety and efficacy of N-acetyl-l-leucine (NALL), an agent that potentially ameliorates lysosomal and metabolic dysfunction, for the treatment of Niemann-Pick disease type C.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Niemann-Pick disease type C\",\"node_id\":\"disease:NPC1\",\"match\":\"same\",\"justification\":\"Niemann-Pick disease type C\"},{\"mention_id\":\"m2\",\"mention\":\"lysosomal and metabolic dysfunction\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Vague dysfunction, ambiguous\"}]}"
+  }
+ ]
+}

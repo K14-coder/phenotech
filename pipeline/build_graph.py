@@ -28,7 +28,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 CURATED = ROOT / "data" / "curated"
 OUT_GRAPH = ROOT / "data" / "graph.json"
 OUT_REPORT = ROOT / "data" / "build" / "report.md"
-CROSSCHECK = ROOT / "data" / "build" / "crosscheck.json"
+# One file per independent reader (pipeline/openai/*, READER=openai | claude), applied in this order.
+CROSSCHECKS = [("OpenAI", ROOT / "data" / "build" / "crosscheck.json"),
+               ("Claude", ROOT / "data" / "build" / "crosscheck_claude.json")]
 
 NODE_TYPES = {
     "disease", "gene", "variant_group", "mechanism", "phenotype", "patient_org", "asset",
@@ -125,17 +127,21 @@ def apply_node_merges(nodes, edges, clusters, gaps, merges, conflicts):
     return merged, clusters, gaps
 
 
-def apply_crosscheck(edges, today):
-    """Apply the independent OpenAI reading of each paper (data/build/crosscheck.json).
+def apply_crosschecks(edges, today):
+    """Apply every reader's crosscheck file; returns {reader label: (marked, added_support, added_contra)}."""
+    return {label: apply_crosscheck(edges, today, path) for label, path in CROSSCHECKS if path.exists()}
 
-    Evidence the curators already cited gets a cross_checked stamp saying whether the model agreed.
-    Papers the curators didn't cite are added: supporting ones as evidence, contradicting ones as
+
+def apply_crosscheck(edges, today, path):
+    """Apply one independent reading of each paper (data/build/crosscheck*.json).
+
+    Evidence already on the edge gets a cross_checked stamp saying whether the reader agreed; when a
+    second reader checks the same item, its stamp goes to cross_checked_also (the first stays put).
+    Papers not yet on the edge are added: supporting ones as evidence, contradicting ones as
     counter-evidence marked needs_review.
     """
-    if not CROSSCHECK.exists():
-        return 0, 0, 0
-    data = json.loads(CROSSCHECK.read_text())
-    by = f"openai:{data.get('model', 'unknown')}"
+    data = json.loads(path.read_text())
+    by = data.get("extracted_by") or f"openai:{data.get('model', 'unknown')}"
     checked_on = (data.get("generated_at") or today)[:10]
     marked = added_support = added_contra = 0
     for edge_id, items in data.get("edges", {}).items():
@@ -148,7 +154,12 @@ def apply_crosscheck(edges, today):
                 if ev.get("ref") == item.get("ref")
             ]
             for ev in existing:
-                ev["cross_checked"] = {"by": by, "agrees": bool(item.get("agrees")), "date": checked_on}
+                stamp = {"by": by, "agrees": bool(item.get("agrees")), "date": checked_on}
+                if ev.get("cross_checked") and ev["cross_checked"].get("by", "").split(":")[0] != by.split(":")[0]:
+                    also = [x for x in ev.get("cross_checked_also", []) if x.get("by") != by]
+                    ev["cross_checked_also"] = also + [stamp]
+                else:
+                    ev["cross_checked"] = stamp
             if existing:
                 marked += 1
                 continue
@@ -399,10 +410,10 @@ def main():
     for e in dangling:
         edges.pop(e["id"])
 
-    marked, added_support, added_contra = apply_crosscheck(edges, today)
+    crosschecked = apply_crosschecks(edges, today)
 
     # Status follows the evidence: reviewed counter-evidence makes an edge contested. Contradictions
-    # that only the OpenAI cross-check found wait for human review first.
+    # that only an independent AI reading found wait for human review first.
     for e in edges.values():
         if not e.get("counter_evidence"):
             e.pop("counter_evidence", None)
@@ -472,10 +483,12 @@ def main():
         f"- Edges with at least one source: **{len(sourced)}/{len(edges)}**",
         f"- Evidence items with a verbatim quote: {len(quoted)}/{len(all_evidence)}; quotes string-verified against the stored source: **{len(verified)}/{len(quoted)}**",
         f"- Contested edges (with counter-evidence): {sum(1 for e in edges.values() if e['status'] == 'contested')}",
-        f"- OpenAI cross-check: {marked} cited sources re-read and stamped; {added_support} new supporting and "
-        f"{added_contra} new contradicting sources added (contradictions wait for human review)",
-        f"- Cited sources where the OpenAI reading disagrees with the curators: "
-        f"{sum(1 for e in edges.values() for ev in e.get('evidence', []) + e.get('counter_evidence', []) if ev.get('cross_checked', {}).get('agrees') is False)}",
+        *[f"- {label} cross-check: {m} cited sources re-read and stamped; {sup} new supporting and "
+          f"{con} new contradicting sources added (contradictions wait for human review)"
+          for label, (m, sup, con) in crosschecked.items()],
+        *[f"- Cited sources where the {label} reading disagrees with the curators: "
+          f"{sum(1 for e in edges.values() for ev in e.get('evidence', []) + e.get('counter_evidence', []) for st in [ev.get('cross_checked') or {}, *ev.get('cross_checked_also', [])] if st.get('agrees') is False and st.get('by', '').startswith(label.lower() + ':'))}"
+          for label in crosschecked],
         f"- Human-reviewed edges: {sum(1 for e in edges.values() if e.get('review') and not str(e['review'].get('by', '')).startswith('ai-review:'))}; AI-reviewed edges (not human): {sum(1 for e in edges.values() if str((e.get('review') or {}).get('by', '')).startswith('ai-review:'))}",
         f"- Dropped by review: {len(rejected)}; dropped as dangling: {len(dangling)}",
         "",

@@ -1,0 +1,73 @@
+{
+ "pmid": "28256214",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.561Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "783b90efd0d42337",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/28256214.json",
+ "claims": [
+  {
+   "subject_mention": "SCN2A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autism spectrum disorder",
+   "object_type": "disease",
+   "quote": "BACKGROUND: Variants in the SCN2A gene that disrupt the encoded neuronal sodium channel NaV1.2 are important risk factors for autism spectrum disorder (ASD), developmental delay, and infantile seizures.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "infantile seizures",
+   "object_type": "disease",
+   "quote": "BACKGROUND: Variants in the SCN2A gene that disrupt the encoded neuronal sodium channel NaV1.2 are important risk factors for autism spectrum disorder (ASD), developmental delay, and infantile seizures.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A infantile seizure missense variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "Variants observed in infantile seizures are predominantly missense, leading to a gain of function and increased neuronal excitability.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A ASD-associated variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dampened or eliminated channel function",
+   "object_type": "mechanism",
+   "quote": "RESULTS: In contrast to gain of function variants that contribute to seizure, we found that all ASD-associated variants dampened or eliminated channel function.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASD",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "changes in neuronal excitability",
+   "object_type": "mechanism",
+   "quote": "CONCLUSIONS: This functional characterization thus identifies SCN2A mutation and NaV1.2 dysfunction as the most frequently observed ASD risk factor detectable by exome sequencing and suggests that associated changes in neuronal excitability, particularly in developing neurons, may contribute to ASD etiology.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

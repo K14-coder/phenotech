@@ -1,0 +1,73 @@
+{
+ "pmid": "31222966",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.575Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c1c0cf0c93287bcc",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/31222966.json",
+ "claims": [
+  {
+   "subject_mention": "HRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Costello syndrome",
+   "object_type": "disease",
+   "quote": "Costello syndrome (CS) is a RASopathy caused by activating germline mutations in HRAS.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Costello syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "activating germline mutations in HRAS",
+   "object_type": "mechanism",
+   "quote": "Costello syndrome (CS) is a RASopathy caused by activating germline mutations in HRAS.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "distinctive craniofacial features",
+   "object_type": "phenotype",
+   "quote": "Individuals with CS may have distinctive craniofacial features, cardiac anomalies, growth and developmental delays, as well as dermatological, orthopedic, ocular, and neurological issues; however, considerable overlap with other RASopathies exists.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cardiac anomalies",
+   "object_type": "phenotype",
+   "quote": "Individuals with CS may have distinctive craniofacial features, cardiac anomalies, growth and developmental delays, as well as dermatological, orthopedic, ocular, and neurological issues; however, considerable overlap with other RASopathies exists.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "growth and developmental delays",
+   "object_type": "phenotype",
+   "quote": "Individuals with CS may have distinctive craniofacial features, cardiac anomalies, growth and developmental delays, as well as dermatological, orthopedic, ocular, and neurological issues; however, considerable overlap with other RASopathies exists.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

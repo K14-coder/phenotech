@@ -1,0 +1,97 @@
+{
+ "pmid": "25959749",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.555Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1cc8775d0bac5984",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/25959749.json",
+ "claims": [
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Mutations in RIT1 cause Noonan syndrome - additional functional evidence and expanding the clinical phenotype.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1 p.Met90Ile and p.Ala57Gly",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "Both variants resulted in increased MEK-ERK signaling compared to wild-type, underscoring gain-of-function as the primary functional mechanism.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "increased RAS-MAPK/MEK-ERK signaling",
+   "object_type": "mechanism",
+   "quote": "We provide additional evidence for a causal relationship between pathogenic mutations in RIT1, increased RAS-MAPK/MEK-ERK signaling and the clinical phenotype.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe lymphedema of the lower extremity and genitalia",
+   "object_type": "phenotype",
+   "quote": "In addition, we observed severe lymphedema of the lower extremity and genitalia in one patient.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "lymphedema of the lower extremities",
+   "object_type": "phenotype",
+   "quote": "The phenotypic spectrum is likely to expand and includes lymphedema of the lower extremities in addition to nuchal hygroma.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "nuchal hygroma",
+   "object_type": "phenotype",
+   "quote": "The phenotypic spectrum is likely to expand and includes lymphedema of the lower extremities in addition to nuchal hygroma.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "mutant RIT1 protein",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "reduced GTPase activity",
+   "object_type": "mechanism",
+   "quote": "The mutant RIT1 protein may possess reduced GTPase activity or a diminished ability to interact with cellular GTPase activating proteins; however the precise mechanism remains unknown.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "pmid": "33566141",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.585Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "7e3dbc33793ba561",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/33566141.json",
+ "claims": [
+  {
+   "subject_mention": "neurofibromin",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Neurofibromatosis type 1 (NF1)",
+   "object_type": "disease",
+   "quote": "Neurofibromatosis type 1 (NF1) is a genetic autosomal dominant disease caused by mutation of the protein neurofibromin, a regulator of cell growth.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "olfactory bulbs (OBs) enlargement",
+   "object_type": "phenotype",
+   "quote": "We report two cases of NF1 patients with asymptomatic olfactory bulbs (OBs) enlargement depicted with Magnetic Resonance Imaging (MRI).",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

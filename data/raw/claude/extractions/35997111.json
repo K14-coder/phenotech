@@ -1,0 +1,97 @@
+{
+ "pmid": "35997111",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.601Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c049d3d929e7f9b3",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/35997111.json",
+ "claims": [
+  {
+   "subject_mention": "cyclin-dependent kinase-like 5 (CDKL5)",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "CDKL5 deficiency disorder",
+   "object_type": "disease",
+   "quote": "CDKL5 deficiency disorder (CDD) is an X-linked brain disorder of young children and is caused by pathogenic variants in the cyclin-dependent kinase-like 5 (CDKL5) gene.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "infantile onset, drug-resistant seizures",
+   "object_type": "phenotype",
+   "quote": "Individuals with CDD suffer infantile onset, drug-resistant seizures, severe neurodevelopmental impairment and profound lifelong disability.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe neurodevelopmental impairment",
+   "object_type": "phenotype",
+   "quote": "Individuals with CDD suffer infantile onset, drug-resistant seizures, severe neurodevelopmental impairment and profound lifelong disability.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "profound lifelong disability",
+   "object_type": "phenotype",
+   "quote": "Individuals with CDD suffer infantile onset, drug-resistant seizures, severe neurodevelopmental impairment and profound lifelong disability.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "phosphorylation events in neuronal network development",
+   "object_type": "mechanism",
+   "quote": "The CDKL5 protein is a kinase that regulates key phosphorylation events vital to the development of the complex neuronal network of the brain.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5 pathogenic variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of CDKL5 catalytic activity",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants identified in patients may either result in loss of CDKL5 catalytic activity or are hypomorphic leading to partial loss of function.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5 hypomorphic variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "partial loss of function",
+   "object_type": "mechanism",
+   "quote": "Pathogenic variants identified in patients may either result in loss of CDKL5 catalytic activity or are hypomorphic leading to partial loss of function.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

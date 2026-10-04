@@ -1,0 +1,536 @@
+{
+ "pmid": "42000856",
+ "entries": {
+  "3ca833950b8137b9": {
+   "mention": "cardiac-type Fabry disease",
+   "type": "disease",
+   "candidates": [
+    "disease:GLA",
+    "disease:GBA1",
+    "disease:NPC1",
+    "disease:SMPD1",
+    "disease:GAA",
+    "disease:CLN3",
+    "disease:TPP1",
+    "disease:GALC",
+    "disease:IDUA",
+    "disease:SLC2A1"
+   ],
+   "node_id": "disease:GLA",
+   "match": "instance",
+   "justification": "Cardiac-type Fabry is a GLA subtype",
+   "raw_node_id": "disease:GLA",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.838Z"
+  },
+  "bb9f27620c526d53": {
+   "mention": "GLA IVS4+919G>A",
+   "type": "variant_group",
+   "candidates": [
+    "vg:GLA:splice",
+    "vg:GLA:missense",
+    "vg:GLA:truncating",
+    "vg:GLA:contiguous-gene-deletion",
+    "vg:ARSA:contiguous-gene-deletion",
+    "vg:ARSA:missense",
+    "vg:ARSA:splice",
+    "vg:ARSA:truncating",
+    "vg:ARSA:whole-gene-deletion",
+    "vg:BRAF:contiguous-gene-deletion"
+   ],
+   "node_id": "vg:GLA:splice",
+   "match": "instance",
+   "justification": "Specific GLA cryptic splice variant",
+   "raw_node_id": "vg:GLA:splice",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.838Z"
+  },
+  "004335e15889133d": {
+   "mention": "adenine base editing",
+   "type": "therapy",
+   "candidates": [
+    "therapy:fabry-enzyme-replacement",
+    "therapy:idursulfase",
+    "therapy:kv7-openers",
+    "therapy:quinidine",
+    "therapy:sodium-channel-blockers",
+    "therapy:fenfluramine",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:3-4-diaminopyridine",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:acetylcholinesterase-inhibitor-cms"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No base editing candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.838Z"
+  },
+  "f60d636395bef081": {
+   "mention": "cryptic splicing",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-priming",
+    "mech:sphingolipid-catabolism",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:protein-destabilization",
+    "mech:tor-signaling",
+    "mech:glycogen-catabolism",
+    "mech:haploinsufficiency",
+    "mech:synaptic-vesicle-fusion",
+    "mech:glycosaminoglycan-catabolism",
+    "mech:lysosomal-protein-catabolism"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No splicing candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.838Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.838Z",
+   "request_payload": {
+    "title": "Beneficial bystander-enhanced cryptic splice rescue of cardiac-type Fabry GLA IVS4+919G>A by adenine base editing in patient fibroblasts.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "cardiac-type Fabry disease",
+      "declared_type": "disease",
+      "sentence": "The IVS4+919G>A mutation in the GLA gene, prevalent in East Asian populations, causes cardiac-type Fabry disease by creating an abnormal splice site.",
+      "candidates": [
+       {
+        "id": "disease:GLA",
+        "type": "disease",
+        "label": "GLA-related disorders (Fabry disease)",
+        "synonyms": [
+         "Fabry disease",
+         "Anderson-Fabry disease",
+         "alpha-galactosidase A deficiency",
+         "Alpha-galactosidase A deficiency",
+         "FD",
+         "Fabry's disease",
+         "Fd",
+         "angiokeratoma corporis diffusum"
+        ],
+        "summary": "X-linked deficiency of alpha-galactosidase A makes globotriaosylceramide (Gb3) build up in blood vessels, kidney, heart and nerves: pain crises, kidney failure,"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:NPC1",
+        "type": "disease",
+        "label": "NPC1-related disorders (Niemann-Pick disease type C)",
+        "synonyms": [
+         "Niemann-Pick disease type C",
+         "NPC",
+         "NP-C",
+         "NPC1",
+         "Niemann-Pick disease type C1",
+         "Niemann-Pick disease, type C1",
+         "type C1 Niemann-Pick disease",
+         "Niemann-Pick disease type C, classic form"
+        ],
+        "summary": "Loss of the NPC1 cholesterol transporter traps cholesterol and lipids in lysosomes: liver and spleen enlargement and a progressive neurological disease with ata"
+       },
+       {
+        "id": "disease:SMPD1",
+        "type": "disease",
+        "label": "SMPD1-related disorders (acid sphingomyelinase deficiency, Niemann-Pick A/B)",
+        "synonyms": [
+         "acid sphingomyelinase deficiency",
+         "ASMD",
+         "Niemann-Pick disease type A",
+         "Niemann-Pick disease type B",
+         "Niemann Pick disease type B",
+         "type B Niemann-Pick disease"
+        ],
+        "summary": "Deficiency of acid sphingomyelinase makes sphingomyelin build up: enlarged liver and spleen and lung disease; the infantile neurovisceral form (type A) also cau"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "GLA IVS4+919G>A",
+      "declared_type": "variant_group",
+      "sentence": "This results in the insertion of a 57-nucleotide segment between exon 4 and exon 5, introducing a premature stop codon and leading to a truncated, non-functional α-Gal A protein.",
+      "candidates": [
+       {
+        "id": "vg:GLA:splice",
+        "type": "variant_group",
+        "label": "GLA: Splice-site variants",
+        "summary": "52 of 1200 pathogenic or likely-pathogenic ClinVar records for GLA fall in this group."
+       },
+       {
+        "id": "vg:GLA:missense",
+        "type": "variant_group",
+        "label": "GLA: Missense variants (single amino-acid changes)",
+        "summary": "574 of 1200 pathogenic or likely-pathogenic ClinVar records for GLA fall in this group."
+       },
+       {
+        "id": "vg:GLA:truncating",
+        "type": "variant_group",
+        "label": "GLA: Truncating variants (nonsense, frameshift, start-lost)",
+        "summary": "143 of 1200 pathogenic or likely-pathogenic ClinVar records for GLA fall in this group."
+       },
+       {
+        "id": "vg:GLA:contiguous-gene-deletion",
+        "type": "variant_group",
+        "label": "GLA: Larger deletions spanning this gene and its neighbours",
+        "summary": "421 of 1200 pathogenic or likely-pathogenic ClinVar records for GLA fall in this group. These copy-number changes cover more than one gene, so no mechanism edge"
+       },
+       {
+        "id": "vg:ARSA:contiguous-gene-deletion",
+        "type": "variant_group",
+        "label": "ARSA: Larger deletions spanning this gene and its neighbours",
+        "summary": "152 of 530 pathogenic or likely-pathogenic ClinVar records for ARSA fall in this group. These copy-number changes cover more than one gene, so no mechanism edge"
+       },
+       {
+        "id": "vg:ARSA:missense",
+        "type": "variant_group",
+        "label": "ARSA: Missense variants (single amino-acid changes)",
+        "summary": "191 of 530 pathogenic or likely-pathogenic ClinVar records for ARSA fall in this group."
+       },
+       {
+        "id": "vg:ARSA:splice",
+        "type": "variant_group",
+        "label": "ARSA: Splice-site variants",
+        "summary": "37 of 530 pathogenic or likely-pathogenic ClinVar records for ARSA fall in this group."
+       },
+       {
+        "id": "vg:ARSA:truncating",
+        "type": "variant_group",
+        "label": "ARSA: Truncating variants (nonsense, frameshift, start-lost)",
+        "summary": "129 of 530 pathogenic or likely-pathogenic ClinVar records for ARSA fall in this group."
+       },
+       {
+        "id": "vg:ARSA:whole-gene-deletion",
+        "type": "variant_group",
+        "label": "ARSA: Single-gene deletions / duplications",
+        "summary": "13 of 530 pathogenic or likely-pathogenic ClinVar records for ARSA fall in this group."
+       },
+       {
+        "id": "vg:BRAF:contiguous-gene-deletion",
+        "type": "variant_group",
+        "label": "BRAF: Larger deletions/duplications spanning this gene and its neighbours",
+        "summary": "49 of 180 pathogenic or likely-pathogenic ClinVar records for BRAF fall in this group. These copy-number changes cover more than one gene, so no mechanism edge "
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "adenine base editing",
+      "declared_type": "therapy",
+      "sentence": "These findings demonstrate in vitro splice rescue of a deep intronic, cardiac-type Fabry disease variant by adenine base editing and suggest that bystander edits in non-coding sequence can further enhance correction by suppressing cryptic splicing, with concordant improvements in α-Gal A activity and Gb3 signals.",
+      "candidates": [
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:idursulfase",
+        "type": "therapy",
+        "label": "Idursulfase (enzyme replacement for MPS II)",
+        "synonyms": [
+         "Elaprase"
+        ],
+        "summary": "Intravenous recombinant iduronate-2-sulfatase for Hunter syndrome (MPS II)."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:fenfluramine",
+        "type": "therapy",
+        "label": "Fenfluramine"
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "cryptic splicing",
+      "declared_type": "mechanism",
+      "sentence": "These findings demonstrate in vitro splice rescue of a deep intronic, cardiac-type Fabry disease variant by adenine base editing and suggest that bystander edits in non-coding sequence can further enhance correction by suppressing cryptic splicing, with concordant improvements in α-Gal A activity and Gb3 signals.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"cardiac-type Fabry disease\",\"node_id\":\"disease:GLA\",\"match\":\"instance\",\"justification\":\"Cardiac-type Fabry is a GLA subtype\"},{\"mention_id\":\"m2\",\"mention\":\"GLA IVS4+919G>A\",\"node_id\":\"vg:GLA:splice\",\"match\":\"instance\",\"justification\":\"Specific GLA cryptic splice variant\"},{\"mention_id\":\"m3\",\"mention\":\"adenine base editing\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No base editing candidate\"},{\"mention_id\":\"m4\",\"mention\":\"cryptic splicing\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No splicing candidate\"}]}"
+  }
+ ]
+}

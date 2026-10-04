@@ -1,0 +1,624 @@
+{
+ "pmid": "41189054",
+ "entries": {
+  "a26f0ae51c03cae3": {
+   "mention": "vision loss",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000529",
+    "phenotype:HP:0002371",
+    "phenotype:HP:0001125",
+    "phenotype:HP:0000746",
+    "phenotype:HP:0002529",
+    "phenotype:HP:0000716",
+    "phenotype:HP:0000822",
+    "phenotype:HP:0002202",
+    "phenotype:HP:0007015",
+    "phenotype:HP:0002835"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Generic vision loss; candidate is progressive visual loss",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.832Z"
+  },
+  "51f520769b4f88d2": {
+   "mention": "splice-switching antisense oligonucleotide (ASO)",
+   "type": "therapy",
+   "candidates": [
+    "therapy:kcnt1-aso",
+    "therapy:scn8a-aso",
+    "therapy:unc13a-splice-switching-aso",
+    "therapy:elsunersen",
+    "therapy:zorevunersen",
+    "therapy:sodium-channel-blockers",
+    "therapy:hsct-krabbe",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:gaucher-enzyme-replacement"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "CLN3 ASO not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.832Z"
+  },
+  "a054c917cfb6328e": {
+   "mention": "ASO",
+   "type": "therapy",
+   "candidates": [
+    "therapy:scn8a-aso",
+    "therapy:zorevunersen",
+    "therapy:unc13a-splice-switching-aso",
+    "therapy:kcnt1-aso",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:olipudase-alfa",
+    "therapy:statins-nf1-cognition",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:miglustat",
+    "therapy:trametinib"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "CLN3 ASO not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.832Z"
+  },
+  "58c086c7dfe1a4f7": {
+   "mention": "exon skipping",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:tor-signaling",
+    "mech:synaptic-vesicle-priming",
+    "mech:ras-protein-signal-transduction",
+    "mech:action-potential",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:ca-triggered-exocytosis",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:negative-regulation-of-ras-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Exon skipping not a listed mechanism",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.832Z"
+  },
+  "50f1bd8e0f689ee5": {
+   "mention": "ASO-based approach",
+   "type": "therapy",
+   "candidates": [
+    "therapy:scn8a-aso",
+    "therapy:zorevunersen",
+    "therapy:unc13a-splice-switching-aso",
+    "therapy:kcnt1-aso",
+    "therapy:munc18-1-pharmacological-chaperone",
+    "therapy:idursulfase",
+    "therapy:ambroxol",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:olipudase-alfa",
+    "therapy:fabry-enzyme-replacement"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "CLN3 ASO approach not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.832Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.832Z",
+   "request_payload": {
+    "title": "Therapeutic antisense oligonucleotide mitigates retinal dysfunction in a pig model of CLN3 Batten disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "vision loss",
+      "declared_type": "phenotype",
+      "sentence": "Typically, the disease manifests as vision loss in early childhood and progresses to neurological dysfunction and death in young adulthood.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000529",
+        "type": "phenotype",
+        "label": "Progressive visual loss",
+        "note": "HPO HP:0000529"
+       },
+       {
+        "id": "phenotype:HP:0002371",
+        "type": "phenotype",
+        "label": "Loss of speech",
+        "note": "HPO HP:0002371"
+       },
+       {
+        "id": "phenotype:HP:0001125",
+        "type": "phenotype",
+        "label": "Transient unilateral blurring of vision",
+        "note": "HPO HP:0001125"
+       },
+       {
+        "id": "phenotype:HP:0000746",
+        "type": "phenotype",
+        "label": "Delusion",
+        "note": "HPO HP:0000746"
+       },
+       {
+        "id": "phenotype:HP:0002529",
+        "type": "phenotype",
+        "label": "Neuronal loss in central nervous system",
+        "note": "HPO HP:0002529"
+       },
+       {
+        "id": "phenotype:HP:0000716",
+        "type": "phenotype",
+        "label": "Depression",
+        "note": "HPO HP:0000716"
+       },
+       {
+        "id": "phenotype:HP:0000822",
+        "type": "phenotype",
+        "label": "Hypertension",
+        "note": "HPO HP:0000822"
+       },
+       {
+        "id": "phenotype:HP:0002202",
+        "type": "phenotype",
+        "label": "Pleural effusion",
+        "note": "HPO HP:0002202"
+       },
+       {
+        "id": "phenotype:HP:0007015",
+        "type": "phenotype",
+        "label": "Poor gross motor coordination",
+        "note": "HPO HP:0007015"
+       },
+       {
+        "id": "phenotype:HP:0002835",
+        "type": "phenotype",
+        "label": "Aspiration",
+        "note": "HPO HP:0002835"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "splice-switching antisense oligonucleotide (ASO)",
+      "declared_type": "therapy",
+      "sentence": "We have previously shown that a splice-switching antisense oligonucleotide (ASO) delivered to the central nervous system can reduce neurological disease burden in mouse models of CLN3 disease.",
+      "candidates": [
+       {
+        "id": "therapy:kcnt1-aso",
+        "type": "therapy",
+        "label": "KCNT1-targeting antisense oligonucleotide (knockdown)",
+        "synonyms": [
+         "Kcnt1 gapmer ASO"
+        ],
+        "summary": "Antisense oligonucleotides that lower KCNT1 expression; tested in mice and given investigationally to two infants."
+       },
+       {
+        "id": "therapy:scn8a-aso",
+        "type": "therapy",
+        "label": "Scn8a-lowering antisense oligonucleotide (preclinical)",
+        "synonyms": [
+         "Scn8a ASO"
+        ],
+        "summary": "An antisense oligonucleotide that lowers Scn8a; protective in mouse models of SCN8A encephalopathy and of Dravet syndrome."
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       },
+       {
+        "id": "therapy:elsunersen",
+        "type": "therapy",
+        "label": "Elsunersen (PRAX-222, SCN2A-targeting antisense oligonucleotide)",
+        "synonyms": [
+         "PRAX-222"
+        ],
+        "summary": "An antisense oligonucleotide that lowers SCN2A expression, studied in early-onset gain-of-function SCN2A DEE."
+       },
+       {
+        "id": "therapy:zorevunersen",
+        "type": "therapy",
+        "label": "Zorevunersen (STK-001, SCN1A TANGO antisense oligonucleotide)",
+        "synonyms": [
+         "STK-001",
+         "TANGO ASO"
+        ],
+        "summary": "An antisense oligonucleotide designed to raise productive SCN1A (NaV1.1) expression; in phase 3 for Dravet syndrome."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "ASO",
+      "declared_type": "therapy",
+      "sentence": "A single intravitreal injection of ASO induces robust exon skipping in the retina for up to 12 months.",
+      "candidates": [
+       {
+        "id": "therapy:scn8a-aso",
+        "type": "therapy",
+        "label": "Scn8a-lowering antisense oligonucleotide (preclinical)",
+        "synonyms": [
+         "Scn8a ASO"
+        ],
+        "summary": "An antisense oligonucleotide that lowers Scn8a; protective in mouse models of SCN8A encephalopathy and of Dravet syndrome."
+       },
+       {
+        "id": "therapy:zorevunersen",
+        "type": "therapy",
+        "label": "Zorevunersen (STK-001, SCN1A TANGO antisense oligonucleotide)",
+        "synonyms": [
+         "STK-001",
+         "TANGO ASO"
+        ],
+        "summary": "An antisense oligonucleotide designed to raise productive SCN1A (NaV1.1) expression; in phase 3 for Dravet syndrome."
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       },
+       {
+        "id": "therapy:kcnt1-aso",
+        "type": "therapy",
+        "label": "KCNT1-targeting antisense oligonucleotide (knockdown)",
+        "synonyms": [
+         "Kcnt1 gapmer ASO"
+        ],
+        "summary": "Antisense oligonucleotides that lower KCNT1 expression; tested in mice and given investigationally to two infants."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:olipudase-alfa",
+        "type": "therapy",
+        "label": "Olipudase alfa (enzyme replacement for ASMD)",
+        "synonyms": [
+         "Xenpozyme",
+         "rhASM"
+        ],
+        "summary": "Intravenous recombinant acid sphingomyelinase, approved only for the non-brain manifestations of ASMD."
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "exon skipping",
+      "declared_type": "mechanism",
+      "sentence": "A single intravitreal injection of ASO induces robust exon skipping in the retina for up to 12 months.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "ASO-based approach",
+      "declared_type": "therapy",
+      "sentence": "Our findings demonstrate the utility of an ASO-based approach to treat retinal dysfunction in CLN3 Batten disease and support broader ASO applications for treating ocular diseases.",
+      "candidates": [
+       {
+        "id": "therapy:scn8a-aso",
+        "type": "therapy",
+        "label": "Scn8a-lowering antisense oligonucleotide (preclinical)",
+        "synonyms": [
+         "Scn8a ASO"
+        ],
+        "summary": "An antisense oligonucleotide that lowers Scn8a; protective in mouse models of SCN8A encephalopathy and of Dravet syndrome."
+       },
+       {
+        "id": "therapy:zorevunersen",
+        "type": "therapy",
+        "label": "Zorevunersen (STK-001, SCN1A TANGO antisense oligonucleotide)",
+        "synonyms": [
+         "STK-001",
+         "TANGO ASO"
+        ],
+        "summary": "An antisense oligonucleotide designed to raise productive SCN1A (NaV1.1) expression; in phase 3 for Dravet syndrome."
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       },
+       {
+        "id": "therapy:kcnt1-aso",
+        "type": "therapy",
+        "label": "KCNT1-targeting antisense oligonucleotide (knockdown)",
+        "synonyms": [
+         "Kcnt1 gapmer ASO"
+        ],
+        "summary": "Antisense oligonucleotides that lower KCNT1 expression; tested in mice and given investigationally to two infants."
+       },
+       {
+        "id": "therapy:munc18-1-pharmacological-chaperone",
+        "type": "therapy",
+        "label": "Structure-based pharmacological chaperones for Munc18-1",
+        "synonyms": [
+         "Munc18-1 pharmacochaperone"
+        ],
+        "summary": "Small molecules designed from the Munc18-1 structure to bind and stabilize the protein. Intended to replace generic chemical chaperones, which need high doses."
+       },
+       {
+        "id": "therapy:idursulfase",
+        "type": "therapy",
+        "label": "Idursulfase (enzyme replacement for MPS II)",
+        "synonyms": [
+         "Elaprase"
+        ],
+        "summary": "Intravenous recombinant iduronate-2-sulfatase for Hunter syndrome (MPS II)."
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:olipudase-alfa",
+        "type": "therapy",
+        "label": "Olipudase alfa (enzyme replacement for ASMD)",
+        "synonyms": [
+         "Xenpozyme",
+         "rhASM"
+        ],
+        "summary": "Intravenous recombinant acid sphingomyelinase, approved only for the non-brain manifestations of ASMD."
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"vision loss\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Generic vision loss; candidate is progressive visual loss\"},{\"mention_id\":\"m2\",\"mention\":\"splice-switching antisense oligonucleotide (ASO)\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"CLN3 ASO not a candidate\"},{\"mention_id\":\"m3\",\"mention\":\"ASO\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"CLN3 ASO not a candidate\"},{\"mention_id\":\"m4\",\"mention\":\"exon skipping\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Exon skipping not a listed mechanism\"},{\"mention_id\":\"m5\",\"mention\":\"ASO-based approach\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"CLN3 ASO approach not a candidate\"}]}"
+  }
+ ]
+}

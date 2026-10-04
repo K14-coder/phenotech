@@ -1,0 +1,581 @@
+{
+ "pmid": "31222966",
+ "entries": {
+  "a74acb9b0c97f1c1": {
+   "mention": "activating germline mutations in HRAS",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:action-potential",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ras-protein-signal-transduction",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:gain-of-function",
+    "mech:nmda-receptor-activity",
+    "mech:lysosomal-storage"
+   ],
+   "node_id": "mech:gain-of-function",
+   "match": "instance",
+   "justification": "activating HRAS mutations are gain of function",
+   "raw_node_id": "mech:gain-of-function",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.867Z"
+  },
+  "c4601824592748a7": {
+   "mention": "CS",
+   "type": "disease",
+   "candidates": [
+    "disease:HRAS",
+    "disease:ARSA",
+    "disease:BRAF",
+    "disease:CACNA1A",
+    "disease:CBL",
+    "disease:CDKL5",
+    "disease:CLN3",
+    "disease:CPLX1",
+    "disease:GAA",
+    "disease:GALC"
+   ],
+   "node_id": "disease:HRAS",
+   "match": "same",
+   "justification": "CS = Costello syndrome",
+   "raw_node_id": "disease:HRAS",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.867Z"
+  },
+  "7ac84827cfceb1f0": {
+   "mention": "distinctive craniofacial features",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000280",
+    "phenotype:HP:0001041",
+    "phenotype:HP:0004442",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0001788",
+    "phenotype:HP:0002643",
+    "phenotype:HP:0006979",
+    "phenotype:HP:0012760",
+    "phenotype:HP:0001288",
+    "phenotype:HP:0031165"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no craniofacial feature candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.867Z"
+  },
+  "b55dab5e7456439a": {
+   "mention": "cardiac anomalies",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0012059",
+    "phenotype:HP:0002862",
+    "phenotype:HP:0001639",
+    "phenotype:HP:0001761",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0100008",
+    "phenotype:HP:0001601",
+    "phenotype:HP:0002353",
+    "phenotype:HP:0032773",
+    "phenotype:HP:0011203"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no general cardiac anomaly candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.867Z"
+  },
+  "f7a1c63969776675": {
+   "mention": "growth and developmental delays",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0001510",
+    "phenotype:HP:0012736",
+    "phenotype:HP:0011344",
+    "phenotype:HP:0011343",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0025335"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "combined growth and developmental delay; ambiguous",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.867Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.867Z",
+   "request_payload": {
+    "title": "Costello syndrome: Clinical phenotype, genotype, and management guidelines.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "activating germline mutations in HRAS",
+      "declared_type": "mechanism",
+      "sentence": "Costello syndrome (CS) is a RASopathy caused by activating germline mutations in HRAS.",
+      "candidates": [
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "CS",
+      "declared_type": "disease",
+      "sentence": "Individuals with CS may have distinctive craniofacial features, cardiac anomalies, growth and developmental delays, as well as dermatological, orthopedic, ocular, and neurological issues; however, considerable overlap with other RASopathies exists.",
+      "candidates": [
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "distinctive craniofacial features",
+      "declared_type": "phenotype",
+      "sentence": "Individuals with CS may have distinctive craniofacial features, cardiac anomalies, growth and developmental delays, as well as dermatological, orthopedic, ocular, and neurological issues; however, considerable overlap with other RASopathies exists.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000280",
+        "type": "phenotype",
+        "label": "Coarse facial features",
+        "note": "HPO HP:0000280"
+       },
+       {
+        "id": "phenotype:HP:0001041",
+        "type": "phenotype",
+        "label": "Facial erythema",
+        "note": "HPO HP:0001041"
+       },
+       {
+        "id": "phenotype:HP:0004442",
+        "type": "phenotype",
+        "label": "Sagittal craniosynostosis",
+        "note": "HPO HP:0004442"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0001788",
+        "type": "phenotype",
+        "label": "Premature rupture of membranes",
+        "note": "HPO HP:0001788"
+       },
+       {
+        "id": "phenotype:HP:0002643",
+        "type": "phenotype",
+        "label": "Neonatal respiratory distress",
+        "note": "HPO HP:0002643"
+       },
+       {
+        "id": "phenotype:HP:0006979",
+        "type": "phenotype",
+        "label": "Sleep-wake cycle disturbance",
+        "note": "HPO HP:0006979"
+       },
+       {
+        "id": "phenotype:HP:0012760",
+        "type": "phenotype",
+        "label": "Reduced social responsiveness",
+        "note": "HPO HP:0012760"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "cardiac anomalies",
+      "declared_type": "phenotype",
+      "sentence": "Individuals with CS may have distinctive craniofacial features, cardiac anomalies, growth and developmental delays, as well as dermatological, orthopedic, ocular, and neurological issues; however, considerable overlap with other RASopathies exists.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0012059",
+        "type": "phenotype",
+        "label": "Lentigo maligna melanoma",
+        "note": "HPO HP:0012059"
+       },
+       {
+        "id": "phenotype:HP:0002862",
+        "type": "phenotype",
+        "label": "Bladder carcinoma",
+        "note": "HPO HP:0002862"
+       },
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0001761",
+        "type": "phenotype",
+        "label": "Pes cavus",
+        "note": "HPO HP:0001761"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0100008",
+        "type": "phenotype",
+        "label": "Schwannoma",
+        "note": "HPO HP:0100008"
+       },
+       {
+        "id": "phenotype:HP:0001601",
+        "type": "phenotype",
+        "label": "Laryngomalacia",
+        "note": "HPO HP:0001601"
+       },
+       {
+        "id": "phenotype:HP:0002353",
+        "type": "phenotype",
+        "label": "EEG abnormality",
+        "note": "HPO HP:0002353"
+       },
+       {
+        "id": "phenotype:HP:0032773",
+        "type": "phenotype",
+        "label": "Focal autonomic seizure with palpitations/tachycardia/bradycardia/asystole",
+        "note": "HPO HP:0032773"
+       },
+       {
+        "id": "phenotype:HP:0011203",
+        "type": "phenotype",
+        "label": "EEG with abnormally slow frequencies",
+        "note": "HPO HP:0011203"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "growth and developmental delays",
+      "declared_type": "phenotype",
+      "sentence": "Individuals with CS may have distinctive craniofacial features, cardiac anomalies, growth and developmental delays, as well as dermatological, orthopedic, ocular, and neurological issues; however, considerable overlap with other RASopathies exists.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0001510",
+        "type": "phenotype",
+        "label": "Growth delay",
+        "note": "HPO HP:0001510"
+       },
+       {
+        "id": "phenotype:HP:0012736",
+        "type": "phenotype",
+        "label": "Profound global developmental delay",
+        "note": "HPO HP:0012736"
+       },
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0011343",
+        "type": "phenotype",
+        "label": "Moderate global developmental delay",
+        "note": "HPO HP:0011343"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0025335",
+        "type": "phenotype",
+        "label": "Delayed ability to stand",
+        "note": "HPO HP:0025335"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"activating germline mutations in HRAS\",\"node_id\":\"mech:gain-of-function\",\"match\":\"instance\",\"justification\":\"activating HRAS mutations are gain of function\"},{\"mention_id\":\"m2\",\"mention\":\"CS\",\"node_id\":\"disease:HRAS\",\"match\":\"same\",\"justification\":\"CS = Costello syndrome\"},{\"mention_id\":\"m3\",\"mention\":\"distinctive craniofacial features\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no craniofacial feature candidate\"},{\"mention_id\":\"m4\",\"mention\":\"cardiac anomalies\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no general cardiac anomaly candidate\"},{\"mention_id\":\"m5\",\"mention\":\"growth and developmental delays\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"combined growth and developmental delay; ambiguous\"}]}"
+  }
+ ]
+}

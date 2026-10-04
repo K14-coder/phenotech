@@ -1,0 +1,133 @@
+{
+ "pmid": "25036864",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.551Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c2ae5dde2a51ba8c",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/25036864.json",
+ "claims": [
+  {
+   "subject_mention": "GAA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Pompe disease",
+   "object_type": "disease",
+   "quote": "Pompe disease is an inherited lysosomal storage disorder that results from a deficiency in acid α-glucosidase (GAA) activity due to mutations in the GAA gene.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "deficiency in acid α-glucosidase (GAA) activity",
+   "object_type": "mechanism",
+   "quote": "Pompe disease is an inherited lysosomal storage disorder that results from a deficiency in acid α-glucosidase (GAA) activity due to mutations in the GAA gene.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "accumulation of lysosomal glycogen",
+   "object_type": "mechanism",
+   "quote": "Pompe disease is characterized by accumulation of lysosomal glycogen primarily in heart and skeletal muscles, which leads to progressive muscle weakness.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "progressive muscle weakness",
+   "object_type": "phenotype",
+   "quote": "Pompe disease is characterized by accumulation of lysosomal glycogen primarily in heart and skeletal muscles, which leads to progressive muscle weakness.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "P545L GAA",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "ER retention",
+   "object_type": "mechanism",
+   "quote": "In this study, we examined the effect of AT2220 on mutant GAA, in vitro and in vivo, with a primary focus on the endoplasmic reticulum (ER)-retained P545L mutant form of human GAA (P545L GAA).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AT2220",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GAA stabilization",
+   "object_type": "mechanism",
+   "quote": "We have shown previously that the small molecule pharmacological chaperone AT2220 (1-deoxynojirimycin hydrochloride, duvoglustat hydrochloride) binds and stabilizes wild-type as well as multiple mutant forms of GAA, and can lead to higher cellular levels of GAA.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AT2220",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "specific activity of P545L GAA",
+   "object_type": "mechanism",
+   "quote": "AT2220 increased the specific activity of P545L GAA toward both natural (glycogen) and artificial substrates in vitro.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AT2220",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "ER export, lysosomal delivery, proteolytic processing, and stability of P545L GAA",
+   "object_type": "mechanism",
+   "quote": "Incubation with AT2220 also increased the ER export, lysosomal delivery, proteolytic processing, and stability of P545L GAA.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AT2220",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "lysosomal glycogen accumulation",
+   "object_type": "mechanism",
+   "quote": "Importantly, oral administration of AT2220 also resulted in significant glycogen reduction in disease-relevant tissues.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AT2220",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Pompe disease",
+   "object_type": "disease",
+   "quote": "The pharmacological chaperone AT2220 increases the specific activity and lysosomal delivery of mutant acid alpha-glucosidase, and promotes glycogen reduction in a transgenic mouse model of Pompe disease.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

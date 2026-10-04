@@ -1,0 +1,471 @@
+{
+ "pmid": "40482356",
+ "entries": {
+  "ca843ccd642e8275": {
+   "mention": "Hematopoietic stem cell transplantation",
+   "type": "therapy",
+   "candidates": [
+    "therapy:hsct-krabbe",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:statins-nf1-cognition",
+    "therapy:eliglustat",
+    "therapy:miglustat",
+    "therapy:cannabidiol",
+    "therapy:pabinafusp-alfa",
+    "therapy:tipifarnib",
+    "therapy:unc13a-splice-switching-aso"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Candidate is HSCT for Krabbe; here HSCT for MLD",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.828Z"
+  },
+  "7ec054381d4774a9": {
+   "mention": "metachromatic leukodystrophy (MLD)",
+   "type": "disease",
+   "candidates": [
+    "disease:ARSA",
+    "disease:GALC",
+    "disease:IDUA",
+    "disease:PTPN11",
+    "disease:CBL",
+    "disease:NF1",
+    "disease:KCNQ2",
+    "disease:SCN8A",
+    "disease:SLC6A1",
+    "disease:GRIN2B"
+   ],
+   "node_id": "disease:ARSA",
+   "match": "same",
+   "justification": "MLD",
+   "raw_node_id": "disease:ARSA",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.828Z"
+  },
+  "bb2f405a277bbf50": {
+   "mention": "autologous stem-cell-based gene therapy",
+   "type": "therapy",
+   "candidates": [
+    "therapy:atidarsagene-autotemcel",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:etx101",
+    "therapy:hsct-krabbe",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:munc18-1-pharmacological-chaperone",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:ambroxol",
+    "therapy:ganaxolone",
+    "therapy:pyrimethamine"
+   ],
+   "node_id": "therapy:atidarsagene-autotemcel",
+   "match": "instance",
+   "justification": "Autologous HSC gene therapy for MLD = arsa-cel",
+   "raw_node_id": "therapy:atidarsagene-autotemcel",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.828Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.828Z",
+   "request_payload": {
+    "title": "Key lessons from the first international treatment eligibility committee: the case of metachromatic leukodystrophy.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Hematopoietic stem cell transplantation",
+      "declared_type": "therapy",
+      "sentence": "Hematopoietic stem cell transplantation or autologous stem-cell-based gene therapy can be life-changing but come with uncertainties, risks, and high costs.",
+      "candidates": [
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:cannabidiol",
+        "type": "therapy",
+        "label": "Cannabidiol (plant-derived, pharmaceutical)",
+        "synonyms": [
+         "EPIDIOLEX",
+         "CBD",
+         "GWP42003-P"
+        ],
+        "summary": "A purified cannabidiol oral solution with an FDA label covering seizures associated with Dravet syndrome."
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:tipifarnib",
+        "type": "therapy",
+        "label": "Tipifarnib (farnesyltransferase inhibitor)",
+        "synonyms": [
+         "R115777",
+         "Zarnestra"
+        ],
+        "summary": "Blocks RAS membrane anchoring by inhibiting farnesylation. A randomised placebo-controlled phase 2 trial in NF1 plexiform neurofibromas did not prolong time to "
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "metachromatic leukodystrophy (MLD)",
+      "declared_type": "disease",
+      "sentence": "Hematopoietic stem cell transplantation or autologous stem-cell-based gene therapy can be life-changing but come with uncertainties, risks, and high costs.",
+      "candidates": [
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "autologous stem-cell-based gene therapy",
+      "declared_type": "therapy",
+      "sentence": "Hematopoietic stem cell transplantation or autologous stem-cell-based gene therapy can be life-changing but come with uncertainties, risks, and high costs.",
+      "candidates": [
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:etx101",
+        "type": "therapy",
+        "label": "ETX101 (AAV9-delivered gene therapy for SCN1A Dravet syndrome)",
+        "synonyms": [
+         "ETX101"
+        ],
+        "summary": "An AAV9-delivered gene therapy in phase 1/2 for SCN1A-positive Dravet syndrome."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:munc18-1-pharmacological-chaperone",
+        "type": "therapy",
+        "label": "Structure-based pharmacological chaperones for Munc18-1",
+        "synonyms": [
+         "Munc18-1 pharmacochaperone"
+        ],
+        "summary": "Small molecules designed from the Munc18-1 structure to bind and stabilize the protein. Intended to replace generic chemical chaperones, which need high doses."
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:ganaxolone",
+        "type": "therapy",
+        "label": "Ganaxolone",
+        "synonyms": [
+         "ZTALMY"
+        ],
+        "summary": "A neuroactive steroid with an FDA label for seizures associated with CDKL5 deficiency disorder."
+       },
+       {
+        "id": "therapy:pyrimethamine",
+        "type": "therapy",
+        "label": "Pyrimethamine (pharmacological chaperone for hexosaminidase A)",
+        "synonyms": [
+         "PMT"
+        ],
+        "summary": "An old antiparasitic drug that partly rescues misfolded hexosaminidase A; it raised enzyme activity in late-onset Tay-Sachs patients, but higher doses caused si"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Hematopoietic stem cell transplantation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Candidate is HSCT for Krabbe; here HSCT for MLD\"},{\"mention_id\":\"m2\",\"mention\":\"metachromatic leukodystrophy (MLD)\",\"node_id\":\"disease:ARSA\",\"match\":\"same\",\"justification\":\"MLD\"},{\"mention_id\":\"m3\",\"mention\":\"autologous stem-cell-based gene therapy\",\"node_id\":\"therapy:atidarsagene-autotemcel\",\"match\":\"instance\",\"justification\":\"Autologous HSC gene therapy for MLD = arsa-cel\"}]}"
+  }
+ ]
+}

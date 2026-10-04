@@ -1,0 +1,85 @@
+{
+ "pmid": "19402159",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.540Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "eaaaba4967625ee8",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/19402159.json",
+ "claims": [
+  {
+   "subject_mention": "Nav1.1 (SCN1A)",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "GEFS+",
+   "object_type": "disease",
+   "quote": "A rescuable folding defective Nav1.1 (SCN1A) sodium channel mutant causes GEFS+: common mechanism in Nav1.1 related epilepsies?",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(v)1.1 (SCN1A)",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "genetically determined epilepsy",
+   "object_type": "disease",
+   "quote": "Mutations of voltage-gated Na(+) channels are the most common known cause of genetically determined epilepsy; Na(v)1.1 (SCN1A) is the most frequent target.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(v)1.1-M1841T",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "folding-defective",
+   "object_type": "mechanism",
+   "quote": "We have recently characterized in a family with extreme phenotypes the first epileptogenic folding-defective Na(+) channel mutant (Na(v)1.1-M1841T), whose loss of function is attenuated by interactions with associated proteins and drugs.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(v)1.1-M1841T",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "We have recently characterized in a family with extreme phenotypes the first epileptogenic folding-defective Na(+) channel mutant (Na(v)1.1-M1841T), whose loss of function is attenuated by interactions with associated proteins and drugs.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(v)1.1-R1916G",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "folding-defective",
+   "object_type": "mechanism",
+   "quote": "Here we characterize another Na(v)1.1 folding-defective mutant (Na(v)1.1-R1916G) that, however, has been identified in a GEFS+ family with relatively mild phenotypes.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(v)1.1 epileptogenic mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function caused by folding defects",
+   "object_type": "mechanism",
+   "quote": "Thus, loss of function caused by folding defects that can be attenuated by molecular interactions may be a common pathogenic mechanism for Na(v)1.1 epileptogenic mutants.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

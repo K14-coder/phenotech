@@ -1,0 +1,476 @@
+{
+ "pmid": "17644022",
+ "entries": {
+  "11d2b2df2f04c073": {
+   "mention": "ER-associated degradation of misfolded enzyme",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:gain-of-function",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:loss-of-function",
+    "mech:protein-destabilization",
+    "mech:ca-triggered-exocytosis",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:lysosome-organization",
+    "mech:lysosomal-storage"
+   ],
+   "node_id": "mech:protein-destabilization",
+   "match": "instance",
+   "justification": "ERAD of misfolded GCase",
+   "raw_node_id": "mech:protein-destabilization",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.810Z"
+  },
+  "d5fb984e8731d6bf": {
+   "mention": "beta-glucocerebrosidase enzyme insufficiency",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:haploinsufficiency",
+    "mech:glucose-transmembrane-transport",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:lysosome-organization",
+    "mech:glycogen-catabolism",
+    "mech:sphingolipid-catabolism",
+    "mech:nmda-receptor-activity"
+   ],
+   "node_id": "mech:lysosomal-enzyme-deficiency",
+   "match": "instance",
+   "justification": "GCase insufficiency",
+   "raw_node_id": "mech:lysosomal-enzyme-deficiency",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.810Z"
+  },
+  "53b9ece4bdfec0d9": {
+   "mention": "lysosomal glycolipid storage",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:lysosomal-protein-catabolism",
+    "mech:lysosome-organization",
+    "mech:sphingolipid-catabolism",
+    "mech:glycogen-catabolism",
+    "mech:glycosaminoglycan-catabolism",
+    "mech:nmda-receptor-activity",
+    "mech:tor-signaling",
+    "mech:voltage-gated-sodium-channel-activity"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "glycolipid storage",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.810Z"
+  },
+  "71c61673c6035f27": {
+   "mention": "pharmacological chaperones",
+   "type": "therapy",
+   "candidates": [
+    "therapy:migalastat",
+    "therapy:munc18-1-pharmacological-chaperone",
+    "therapy:pyrimethamine",
+    "therapy:ambroxol",
+    "therapy:4-phenylbutyrate",
+    "therapy:cannabidiol",
+    "therapy:hsct-krabbe",
+    "therapy:ganaxolone",
+    "therapy:sodium-channel-blockers",
+    "therapy:stiripentol"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "chaperone class broader",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.810Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.810Z",
+   "request_payload": {
+    "title": "Gaucher disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "ER-associated degradation of misfolded enzyme",
+      "declared_type": "mechanism",
+      "sentence": "The common mutations found in the lysosomal enzyme deficient in Gaucher disease, beta-glucocerebrosidase, earmark these proteins for destruction by the endoplasmic reticulum-localised protein folding machinery, resulting in enzyme insufficiency, lysosomal glycolipid storage and subsequent pathology.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "beta-glucocerebrosidase enzyme insufficiency",
+      "declared_type": "mechanism",
+      "sentence": "The common mutations found in the lysosomal enzyme deficient in Gaucher disease, beta-glucocerebrosidase, earmark these proteins for destruction by the endoplasmic reticulum-localised protein folding machinery, resulting in enzyme insufficiency, lysosomal glycolipid storage and subsequent pathology.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "lysosomal glycolipid storage",
+      "declared_type": "mechanism",
+      "sentence": "The common mutations found in the lysosomal enzyme deficient in Gaucher disease, beta-glucocerebrosidase, earmark these proteins for destruction by the endoplasmic reticulum-localised protein folding machinery, resulting in enzyme insufficiency, lysosomal glycolipid storage and subsequent pathology.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "pharmacological chaperones",
+      "declared_type": "therapy",
+      "sentence": "However, many of these mutants can be rescued from global misfolding to preserve glycolipid substrate binding and eventual catalysis in the lysosome, by the addition of subinhibitory concentrations of pharmacologically active small molecules.",
+      "candidates": [
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:munc18-1-pharmacological-chaperone",
+        "type": "therapy",
+        "label": "Structure-based pharmacological chaperones for Munc18-1",
+        "synonyms": [
+         "Munc18-1 pharmacochaperone"
+        ],
+        "summary": "Small molecules designed from the Munc18-1 structure to bind and stabilize the protein. Intended to replace generic chemical chaperones, which need high doses."
+       },
+       {
+        "id": "therapy:pyrimethamine",
+        "type": "therapy",
+        "label": "Pyrimethamine (pharmacological chaperone for hexosaminidase A)",
+        "synonyms": [
+         "PMT"
+        ],
+        "summary": "An old antiparasitic drug that partly rescues misfolded hexosaminidase A; it raised enzyme activity in late-onset Tay-Sachs patients, but higher doses caused si"
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:cannabidiol",
+        "type": "therapy",
+        "label": "Cannabidiol (plant-derived, pharmaceutical)",
+        "synonyms": [
+         "EPIDIOLEX",
+         "CBD",
+         "GWP42003-P"
+        ],
+        "summary": "A purified cannabidiol oral solution with an FDA label covering seizures associated with Dravet syndrome."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:ganaxolone",
+        "type": "therapy",
+        "label": "Ganaxolone",
+        "synonyms": [
+         "ZTALMY"
+        ],
+        "summary": "A neuroactive steroid with an FDA label for seizures associated with CDKL5 deficiency disorder."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:stiripentol",
+        "type": "therapy",
+        "label": "Stiripentol",
+        "synonyms": [
+         "DIACOMIT"
+        ],
+        "summary": "An anti-seizure medicine with an FDA label for seizures associated with Dravet syndrome in patients taking clobazam."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"ER-associated degradation of misfolded enzyme\",\"node_id\":\"mech:protein-destabilization\",\"match\":\"instance\",\"justification\":\"ERAD of misfolded GCase\"},{\"mention_id\":\"m2\",\"mention\":\"beta-glucocerebrosidase enzyme insufficiency\",\"node_id\":\"mech:lysosomal-enzyme-deficiency\",\"match\":\"instance\",\"justification\":\"GCase insufficiency\"},{\"mention_id\":\"m3\",\"mention\":\"lysosomal glycolipid storage\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"glycolipid storage\"},{\"mention_id\":\"m4\",\"mention\":\"pharmacological chaperones\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"chaperone class broader\"}]}"
+  }
+ ]
+}

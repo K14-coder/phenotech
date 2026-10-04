@@ -1,0 +1,121 @@
+{
+ "pmid": "31943325",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.578Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "f466af0449df6a10",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/31943325.json",
+ "claims": [
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "SCN8A encephalopathy",
+   "object_type": "disease",
+   "quote": "OBJECTIVE: SCN8A encephalopathy is a developmental and epileptic encephalopathy (DEE) caused by de novo gain-of-function mutations of sodium channel Nav 1.6 that result in neuronal hyperactivity.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A de novo gain-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "OBJECTIVE: SCN8A encephalopathy is a developmental and epileptic encephalopathy (DEE) caused by de novo gain-of-function mutations of sodium channel Nav 1.6 that result in neuronal hyperactivity.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "gain-of-function mutations of sodium channel Nav 1.6",
+   "object_type": "mechanism",
+   "quote": "OBJECTIVE: SCN8A encephalopathy is a developmental and epileptic encephalopathy (DEE) caused by de novo gain-of-function mutations of sodium channel Nav 1.6 that result in neuronal hyperactivity.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "early onset drug-resistant seizures",
+   "object_type": "phenotype",
+   "quote": "Affected individuals exhibit early onset drug-resistant seizures, developmental delay, and cognitive impairment.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Affected individuals exhibit early onset drug-resistant seizures, developmental delay, and cognitive impairment.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive impairment",
+   "object_type": "phenotype",
+   "quote": "Affected individuals exhibit early onset drug-resistant seizures, developmental delay, and cognitive impairment.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Scn8a antisense oligonucleotide",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SCN8A encephalopathy",
+   "object_type": "disease",
+   "quote": "Scn8a Antisense Oligonucleotide Is Protective in Mouse Models of SCN8A Encephalopathy and Dravet Syndrome.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Scn8a antisense oligonucleotide",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "Scn8a Antisense Oligonucleotide Is Protective in Mouse Models of SCN8A Encephalopathy and Dravet Syndrome.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Scn8a ASO",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "A single treatment with Scn8a ASO extended survival of Dravet syndrome mice from 3 weeks to >5 months.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

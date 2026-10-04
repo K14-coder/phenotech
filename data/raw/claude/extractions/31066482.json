@@ -1,0 +1,49 @@
+{
+ "pmid": "31066482",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.574Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b9b2cc8c8a397cb1",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/31066482.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pseudarthrosis of a long bone",
+   "object_type": "phenotype",
+   "quote": "Up to 5% of NF1 patients suffer from pseudarthrosis of a long bone (NF1-PA).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1-PA",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Biallelic NF1 inactivation",
+   "object_type": "mechanism",
+   "quote": "Biallelic NF1 inactivation was identified in all investigated PA cells obtained during the first surgery.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1-PA",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "NF1 inactivation",
+   "object_type": "mechanism",
+   "quote": "These results indicate that NF1 inactivation is required but not sufficient for the development of NF1-PA.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

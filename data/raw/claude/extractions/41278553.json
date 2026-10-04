@@ -1,0 +1,61 @@
+{
+ "pmid": "41278553",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.629Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "6c87a1fa54e856c8",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41278553.json",
+ "claims": [
+  {
+   "subject_mention": "GALC",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Krabbe disease (KD)",
+   "object_type": "disease",
+   "quote": "Krabbe disease (KD), also known as globoid cell leukodystrophy, is a rare autosomal recessive neurodegenerative disorder caused by pathogenic variants in the GALC gene.",
+   "study_type": "case_report",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "late-onset Krabbe disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "Generalized tonic-clonic seizures",
+   "object_type": "phenotype",
+   "quote": "Generalized tonic-clonic seizures as the initial symptom of late-onset Krabbe disease: a Case Report.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "adult-onset KD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "progressive spastic paraparesis",
+   "object_type": "phenotype",
+   "quote": "While infantile-onset KD is prevalent globally, adult-onset KD is frequently presented in East Asian populations and typically manifests with progressive spastic paraparesis.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "adult-onset KD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "symmetrical white matter lesions",
+   "object_type": "phenotype",
+   "quote": "Brain MRI revealed symmetrical white matter lesions and early cortical involvement.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

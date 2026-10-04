@@ -1,0 +1,61 @@
+{
+ "pmid": "21237447",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.544Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "d787beee53459b7f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/21237447.json",
+ "claims": [
+  {
+   "subject_mention": "SYNGAP1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autosomal dominant NSID",
+   "object_type": "disease",
+   "quote": "Recently, we reported de novo truncating mutations in the SYNGAP1 gene of 3 of 94 NSID cases, suggesting that its disruption represents a common cause of autosomal dominant NSID.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYNGAP1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NSID",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: We provide evidence that truncating mutations in SYNGAP1 are common in NSID and can be also associated with autism.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NSID",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autism",
+   "object_type": "phenotype",
+   "quote": "CONCLUSIONS: We provide evidence that truncating mutations in SYNGAP1 are common in NSID and can be also associated with autism.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NSID",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "mild generalized epilepsy",
+   "object_type": "phenotype",
+   "quote": "RESULTS: We identified de novo out-of-frame deletions in two patients with NSID and mild generalized epilepsy (c.2677delC/p.Q893RfsX184 and c.321_324delGAAG/p. K108VfsX25) and a de novo splicing mutation (c.2294 + 1G>A), which results in the creation of a premature stop codon, in a patient with NSID and autism.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

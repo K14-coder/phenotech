@@ -1,0 +1,85 @@
+{
+ "pmid": "40266357",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.616Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b1eaeb35858bd628",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40266357.json",
+ "claims": [
+  {
+   "subject_mention": "HEXA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Tay-Sachs disease is caused by variants in HEXA encoding the α-subunit and Sandhoff disease is caused by variants in HEXB encoding the β-subunit.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HEXB",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Sandhoff disease",
+   "object_type": "disease",
+   "quote": "Tay-Sachs disease is caused by variants in HEXA encoding the α-subunit and Sandhoff disease is caused by variants in HEXB encoding the β-subunit.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GM2 gangliosidosis",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "deficiency of the heterodimeric enzyme β-hexosaminidase A",
+   "object_type": "mechanism",
+   "quote": "GM2 gangliosidosis is lysosomal storage disorder caused by deficiency of the heterodimeric enzyme β-hexosaminidase A.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LOTS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "smaller cerebellum volume",
+   "object_type": "phenotype",
+   "quote": "LOTS patients had significantly smaller cerebellum volume compared to neurotypical controls (p < 0.0001) and LOSD patients (p < 0.0001).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LOSD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "reduced brain structure volume",
+   "object_type": "phenotype",
+   "quote": "There was no statistical difference for the volume of any structure between LOSD and neurotypical controls.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "LOTS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cerebellar pathology",
+   "object_type": "phenotype",
+   "quote": "This result indicates a greater burden of cerebellar pathology in LOTS patients compared with LOSD patients.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

@@ -32,8 +32,11 @@ function Method({ idx }: { idx: GraphIndex }) {
     const allEvidence = edges.flatMap((e) => [...e.evidence, ...(e.counter_evidence ?? [])]);
     const quoted = allEvidence.filter((ev) => typeof ev.quote === "string" && ev.quote.trim());
     const verified = quoted.filter((ev) => ev.verified).length;
-    const crossChecked = edges.filter((e) => [...e.evidence, ...(e.counter_evidence ?? [])].some((ev) => ev.cross_checked));
-    const disagreements = edges.filter((e) => [...e.evidence, ...(e.counter_evidence ?? [])].some((ev) => ev.cross_checked && !ev.cross_checked.agrees || ev.needs_review)).length;
+    const stamps = (e: (typeof edges)[number]) =>
+      [...e.evidence, ...(e.counter_evidence ?? [])].flatMap((ev) => [ev.cross_checked, ...(ev.cross_checked_also ?? [])].filter((x): x is NonNullable<typeof x> => !!x));
+    const crossChecked = edges.filter((e) => stamps(e).length);
+    const byReader = (r: string) => edges.filter((e) => stamps(e).some((st) => st.by.startsWith(`${r}:`))).length;
+    const disagreements = edges.filter((e) => stamps(e).some((st) => !st.agrees) || [...e.evidence, ...(e.counter_evidence ?? [])].some((ev) => ev.needs_review)).length;
     const reviewed = edges.filter((e) => e.review && !isAiReview(e.review));
     const aiReviewed = edges.filter((e) => isAiReview(e.review));
     const contested = edges.filter((e) => e.status === "contested").length;
@@ -44,6 +47,8 @@ function Method({ idx }: { idx: GraphIndex }) {
       quoted: quoted.length,
       verified,
       crossChecked: crossChecked.length,
+      crossOpenAI: byReader("openai"),
+      crossClaude: byReader("claude"),
       disagreements,
       reviewed: reviewed.length,
       corrected: reviewed.filter((e) => e.review?.verdict !== "confirmed").length,
@@ -62,8 +67,10 @@ function Method({ idx }: { idx: GraphIndex }) {
     { big: `${s.verified} / ${s.quoted}`, label: "quotes string-verified", body: "Every quote shown is checked word for word against the stored source text. Unmatched quotes are marked “Not verified”." },
     {
       big: `${s.crossChecked}`,
-      label: "connections cross-checked by OpenAI",
-      body: s.crossChecked ? `An independent AI re-reading of the source. ${s.disagreements} disagreement${s.disagreements === 1 ? "" : "s"} flagged for expert review.` : "An independent AI re-reading of each source. Results are added as they arrive.",
+      label: "connections cross-checked by an independent AI reading",
+      body: s.crossChecked
+        ? `Re-read by OpenAI (${s.crossOpenAI})${s.crossClaude ? ` and Claude (${s.crossClaude})` : ""}, each blind to the curation. ${s.disagreements} disagreement${s.disagreements === 1 ? "" : "s"} flagged for expert review.`
+        : "An independent AI re-reading of each source. Results are added as they arrive.",
     },
     {
       big: `${s.reviewed}`,
@@ -121,7 +128,7 @@ function Method({ idx }: { idx: GraphIndex }) {
               ["Public sources", "Genes, diseases, symptoms, variants, trials, grants and patient groups come from the public databases and websites listed on the right, each with the date it was retrieved."],
               ["Curation", "Each connection is written as a plain sentence, given an evidence level (clinical, curated database, experimental, case reports, inferred, hypothesis) and a confidence score from a fixed rubric."],
               ["Verbatim quotes, verified", "Quotes from papers and websites are copied word for word and string-matched against the stored source text. A quote that doesn't match is shown as not verified."],
-              ["An independent OpenAI re-reading", "A second, independent pass with an OpenAI model re-reads each source. When it disagrees, the connection is flagged for expert review. A flag alone never turns a link into “contested”."],
+              ["Independent AI re-readings", "A second pass re-reads each cited abstract without seeing the curation: OpenAI for the SNAREopathies, Claude for the other families, with the same instructions and the same quote check. When a reading disagrees, the connection is flagged for expert review. A flag alone never turns a link into “contested”."],
               ["Human review", "A biochemist reviews flagged and important connections. Their verdict and note appear in the evidence panel."],
             ].map(([title, body], i) => (
               <li key={title} className="grid grid-cols-[28px_minmax(0,1fr)] gap-2">

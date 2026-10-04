@@ -1,0 +1,49 @@
+{
+ "pmid": "35145305",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.592Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "5746b5db7254e382",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/35145305.json",
+ "claims": [
+  {
+   "subject_mention": "Tay-Sachs disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "hexosaminidase A deficiency",
+   "object_type": "mechanism",
+   "quote": "Tay-Sachs disease (TSD) is an inherited neurological disorder caused by deficiency of hexosaminidase A (HexA).",
+   "study_type": "case_series",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AAV gene therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "AAV gene therapy for Tay-Sachs disease.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AAVrh8-HEXA and AAVrh8-HEXB",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "CSF HexA activity",
+   "object_type": "mechanism",
+   "quote": "Cerebrospinal fluid (CSF) HexA activity increased from baseline and remained stable in both patients.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

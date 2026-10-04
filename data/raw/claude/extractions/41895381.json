@@ -1,0 +1,49 @@
+{
+ "pmid": "41895381",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.635Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c3115198a5a7b4b7",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41895381.json",
+ "claims": [
+  {
+   "subject_mention": "Niemann-Pick disease type C (NPC)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "Sensorineural hearing loss",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: Sensorineural hearing loss is increasingly recognized in Niemann-Pick disease type C (NPC), but the underlying cochlear lesion remains undefined.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Niemann-Pick C1",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Spiral ligament dysfunction",
+   "object_type": "mechanism",
+   "quote": "Spiral ligament dysfunction and endocochlear potential loss drive hearing impairment in Niemann-Pick C1 mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Niemann-Pick C1",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "endocochlear potential loss",
+   "object_type": "mechanism",
+   "quote": "Spiral ligament dysfunction and endocochlear potential loss drive hearing impairment in Niemann-Pick C1 mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

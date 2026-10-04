@@ -1,0 +1,584 @@
+{
+ "pmid": "9462754",
+ "entries": {
+  "fe0ac5c0fa219ccb": {
+   "mention": "blood-brain barrier hexose transport",
+   "type": "mechanism",
+   "candidates": [
+    "mech:glucose-transmembrane-transport",
+    "mech:intracellular-cholesterol-transport",
+    "mech:ras-protein-signal-transduction",
+    "mech:ca-triggered-exocytosis",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:dominant-negative",
+    "mech:gain-of-function",
+    "mech:lysosomal-protein-catabolism",
+    "mech:protein-serine-threonine-kinase-activity"
+   ],
+   "node_id": "mech:glucose-transmembrane-transport",
+   "match": "instance",
+   "justification": "BBB hexose (glucose) transport via GLUT1",
+   "raw_node_id": "mech:glucose-transmembrane-transport",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "4b85c515dd3dba09": {
+   "mention": "infantile seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001250",
+    "phenotype:HP:0012469",
+    "phenotype:HP:0031165",
+    "phenotype:HP:0007105",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0020221",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0002349"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "instance",
+   "justification": "Infantile seizures are seizures",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "b143d88603320b92": {
+   "mention": "delayed development",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000750",
+    "phenotype:HP:0012569",
+    "phenotype:HP:0000823",
+    "phenotype:HP:0001263",
+    "phenotype:HP:0002188",
+    "phenotype:HP:0011344",
+    "phenotype:HP:0025336",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0025335",
+    "phenotype:HP:0011343"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "Delayed development",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "503c73af87492ade": {
+   "mention": "acquired microcephaly",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000252",
+    "phenotype:HP:0040196",
+    "phenotype:HP:0011451",
+    "phenotype:HP:0000253",
+    "phenotype:HP:0004482",
+    "phenotype:HP:0030799",
+    "phenotype:HP:0000268",
+    "phenotype:HP:0000244",
+    "phenotype:HP:0007105",
+    "phenotype:HP:0200134"
+   ],
+   "node_id": "phenotype:HP:0000252",
+   "match": "instance",
+   "justification": "Acquired microcephaly is a form of microcephaly",
+   "raw_node_id": "phenotype:HP:0000252",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "314c957e6905968a": {
+   "mention": "hypoglycorrachia",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011972",
+    "phenotype:HP:0001252",
+    "phenotype:HP:0008936",
+    "phenotype:HP:0001276",
+    "phenotype:HP:0001290",
+    "phenotype:HP:0002079",
+    "phenotype:HP:0002521",
+    "phenotype:HP:0008802",
+    "phenotype:HP:0007333",
+    "phenotype:HP:0012430"
+   ],
+   "node_id": "phenotype:HP:0011972",
+   "match": "same",
+   "justification": "Hypoglycorrhachia (spelling variant)",
+   "raw_node_id": "phenotype:HP:0011972",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  },
+  "6e22f3cbea78adba": {
+   "mention": "truncation of the GLUT-1 protein",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:protein-destabilization",
+    "mech:ras-protein-signal-transduction",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:dominant-negative",
+    "mech:loss-of-function",
+    "mech:lysosomal-protein-catabolism",
+    "mech:regulation-of-synaptic-plasticity"
+   ],
+   "node_id": "mech:loss-of-function",
+   "match": "instance",
+   "justification": "Truncation of GLUT1 abolishes function",
+   "raw_node_id": "mech:loss-of-function",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.809Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.809Z",
+   "request_payload": {
+    "title": "GLUT-1 deficiency syndrome caused by haploinsufficiency of the blood-brain barrier hexose carrier.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "blood-brain barrier hexose transport",
+      "declared_type": "mechanism",
+      "sentence": "GLUT-1 deficiency syndrome caused by haploinsufficiency of the blood-brain barrier hexose carrier.",
+      "candidates": [
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:intracellular-cholesterol-transport",
+        "type": "mechanism",
+        "label": "Intracellular cholesterol transport",
+        "note": "kind: process",
+        "summary": "The directed movement of cholesterol, cholest-5-en-3-beta-ol, within cells."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "infantile seizures",
+      "declared_type": "phenotype",
+      "sentence": "Several years ago, we described two patients with infantile seizures, delayed development and acquired microcephaly who have normal circulating blood glucose, low-to-normal cerebrospinal fluid (CSF) lactate, but persistent hypoglycorrachia (low CSF glucose) and diminished transport of hexose into isolated red blood cells (RBC).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0012469",
+        "type": "phenotype",
+        "label": "Infantile spasms",
+        "note": "HPO HP:0012469"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       },
+       {
+        "id": "phenotype:HP:0007105",
+        "type": "phenotype",
+        "label": "Infantile encephalopathy",
+        "note": "HPO HP:0007105"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0020221",
+        "type": "phenotype",
+        "label": "Clonic seizure",
+        "note": "HPO HP:0020221"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0002349",
+        "type": "phenotype",
+        "label": "Focal aware seizure",
+        "note": "HPO HP:0002349"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "delayed development",
+      "declared_type": "phenotype",
+      "sentence": "Several years ago, we described two patients with infantile seizures, delayed development and acquired microcephaly who have normal circulating blood glucose, low-to-normal cerebrospinal fluid (CSF) lactate, but persistent hypoglycorrachia (low CSF glucose) and diminished transport of hexose into isolated red blood cells (RBC).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0012569",
+        "type": "phenotype",
+        "label": "Delayed menarche",
+        "note": "HPO HP:0012569"
+       },
+       {
+        "id": "phenotype:HP:0000823",
+        "type": "phenotype",
+        "label": "Delayed puberty",
+        "note": "HPO HP:0000823"
+       },
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0002188",
+        "type": "phenotype",
+        "label": "Delayed CNS myelination",
+        "note": "HPO HP:0002188"
+       },
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0025336",
+        "type": "phenotype",
+        "label": "Delayed ability to sit",
+        "note": "HPO HP:0025336"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0025335",
+        "type": "phenotype",
+        "label": "Delayed ability to stand",
+        "note": "HPO HP:0025335"
+       },
+       {
+        "id": "phenotype:HP:0011343",
+        "type": "phenotype",
+        "label": "Moderate global developmental delay",
+        "note": "HPO HP:0011343"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "acquired microcephaly",
+      "declared_type": "phenotype",
+      "sentence": "Several years ago, we described two patients with infantile seizures, delayed development and acquired microcephaly who have normal circulating blood glucose, low-to-normal cerebrospinal fluid (CSF) lactate, but persistent hypoglycorrachia (low CSF glucose) and diminished transport of hexose into isolated red blood cells (RBC).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000252",
+        "type": "phenotype",
+        "label": "Microcephaly",
+        "note": "HPO HP:0000252"
+       },
+       {
+        "id": "phenotype:HP:0040196",
+        "type": "phenotype",
+        "label": "Mild microcephaly",
+        "note": "HPO HP:0040196"
+       },
+       {
+        "id": "phenotype:HP:0011451",
+        "type": "phenotype",
+        "label": "Primary microcephaly",
+        "note": "HPO HP:0011451"
+       },
+       {
+        "id": "phenotype:HP:0000253",
+        "type": "phenotype",
+        "label": "Progressive microcephaly",
+        "note": "HPO HP:0000253"
+       },
+       {
+        "id": "phenotype:HP:0004482",
+        "type": "phenotype",
+        "label": "Relative macrocephaly",
+        "note": "HPO HP:0004482"
+       },
+       {
+        "id": "phenotype:HP:0030799",
+        "type": "phenotype",
+        "label": "Scaphocephaly",
+        "note": "HPO HP:0030799"
+       },
+       {
+        "id": "phenotype:HP:0000268",
+        "type": "phenotype",
+        "label": "Dolichocephaly",
+        "note": "HPO HP:0000268"
+       },
+       {
+        "id": "phenotype:HP:0000244",
+        "type": "phenotype",
+        "label": "Brachyturricephaly",
+        "note": "HPO HP:0000244"
+       },
+       {
+        "id": "phenotype:HP:0007105",
+        "type": "phenotype",
+        "label": "Infantile encephalopathy",
+        "note": "HPO HP:0007105"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "hypoglycorrachia",
+      "declared_type": "phenotype",
+      "sentence": "Several years ago, we described two patients with infantile seizures, delayed development and acquired microcephaly who have normal circulating blood glucose, low-to-normal cerebrospinal fluid (CSF) lactate, but persistent hypoglycorrachia (low CSF glucose) and diminished transport of hexose into isolated red blood cells (RBC).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011972",
+        "type": "phenotype",
+        "label": "Hypoglycorrhachia",
+        "note": "HPO HP:0011972"
+       },
+       {
+        "id": "phenotype:HP:0001252",
+        "type": "phenotype",
+        "label": "Hypotonia",
+        "note": "HPO HP:0001252"
+       },
+       {
+        "id": "phenotype:HP:0008936",
+        "type": "phenotype",
+        "label": "Axial hypotonia",
+        "note": "HPO HP:0008936"
+       },
+       {
+        "id": "phenotype:HP:0001276",
+        "type": "phenotype",
+        "label": "Hypertonia",
+        "note": "HPO HP:0001276"
+       },
+       {
+        "id": "phenotype:HP:0001290",
+        "type": "phenotype",
+        "label": "Generalized hypotonia",
+        "note": "HPO HP:0001290"
+       },
+       {
+        "id": "phenotype:HP:0002079",
+        "type": "phenotype",
+        "label": "Hypoplasia of the corpus callosum",
+        "note": "HPO HP:0002079"
+       },
+       {
+        "id": "phenotype:HP:0002521",
+        "type": "phenotype",
+        "label": "Hypsarrhythmia",
+        "note": "HPO HP:0002521"
+       },
+       {
+        "id": "phenotype:HP:0008802",
+        "type": "phenotype",
+        "label": "Hypoplasia of the femoral head",
+        "note": "HPO HP:0008802"
+       },
+       {
+        "id": "phenotype:HP:0007333",
+        "type": "phenotype",
+        "label": "Hypoplasia of the frontal lobes",
+        "note": "HPO HP:0007333"
+       },
+       {
+        "id": "phenotype:HP:0012430",
+        "type": "phenotype",
+        "label": "Cerebral white matter hypoplasia",
+        "note": "HPO HP:0012430"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "truncation of the GLUT-1 protein",
+      "declared_type": "mechanism",
+      "sentence": "We now report two distinct classes of mutations as the molecular basis for the functional defect of glucose transport: hemizygosity of GLUT1 and nonsense mutations resulting in truncation of the GLUT-1 protein.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"blood-brain barrier hexose transport\",\"node_id\":\"mech:glucose-transmembrane-transport\",\"match\":\"instance\",\"justification\":\"BBB hexose (glucose) transport via GLUT1\"},{\"mention_id\":\"m2\",\"mention\":\"infantile seizures\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"instance\",\"justification\":\"Infantile seizures are seizures\"},{\"mention_id\":\"m3\",\"mention\":\"delayed development\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"Delayed development\"},{\"mention_id\":\"m4\",\"mention\":\"acquired microcephaly\",\"node_id\":\"phenotype:HP:0000252\",\"match\":\"instance\",\"justification\":\"Acquired microcephaly is a form of microcephaly\"},{\"mention_id\":\"m5\",\"mention\":\"hypoglycorrachia\",\"node_id\":\"phenotype:HP:0011972\",\"match\":\"same\",\"justification\":\"Hypoglycorrhachia (spelling variant)\"},{\"mention_id\":\"m6\",\"mention\":\"truncation of the GLUT-1 protein\",\"node_id\":\"mech:loss-of-function\",\"match\":\"instance\",\"justification\":\"Truncation of GLUT1 abolishes function\"}]}"
+  }
+ ]
+}

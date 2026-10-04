@@ -1,0 +1,49 @@
+{
+ "pmid": "40888168",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.626Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "6ff4619d090bd826",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40888168.json",
+ "claims": [
+  {
+   "subject_mention": "CLN3",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "CLN3",
+   "object_type": "disease",
+   "quote": "The most prevalent subtype, CLN3, arises from a mutation in the CLN3 gene.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "1H-benzo[d]imidazoles",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "CLN3",
+   "object_type": "disease",
+   "quote": "Novel 1H-benzo[d]imidazoles that do not incur this metabolic liability are reported that possess enhanced protective effects in a highly phenotypic CLN3 patient-derived induced pluripotent stem cell (iPSC) model.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "compounds 9b and 38b",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "CLN3",
+   "object_type": "disease",
+   "quote": "Selected lead compounds 9b and 38b afforded significant protective effect and reduced phenotypic hallmarks of CLN3 pathology while also possessing \"drug-like\" pharmacokinetics.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "pmid": "32499600",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.580Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a2b7274f18a2f861",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/32499600.json",
+ "claims": [
+  {
+   "subject_mention": "HRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Costello syndrome",
+   "object_type": "disease",
+   "quote": "Specific activating missense HRAS variants cause Costello syndrome (CS), a RASopathy with recognizable facial features.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HRAS p.(Glu62_Arg68dup)",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "enhanced binding to RAF1, RALGDS and PLCE1",
+   "object_type": "mechanism",
+   "quote": "HRASGlu62_Arg68dup binding with effectors rapidly accelerated fibrosarcoma (RAF1), RAL guanine nucleotide dissociation stimulator (RALGDS) and phospholipase C1 (PLCE1) was enhanced.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HRAS p.Glu62_Arg68dup",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "increased MEK1/2 and ERK1/2 phosphorylation",
+   "object_type": "mechanism",
+   "quote": "Accordingly, p.Glu62_Arg68dup increased steady-state phosphorylation of MEK1/2 and ERK1/2 downstream of RAF1, whereas AKT phosphorylation downstream of PI3K was not significantly affected.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HRAS p.Glu62_Arg68dup",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "altered interaction with PIK3CA and NF1 GAP",
+   "object_type": "mechanism",
+   "quote": "Functional studies showed that the p.Glu62_Arg68dup alteration affects HRAS interaction with effector protein PIK3CA (catalytic subunit of phosphoinositide 3-kinase) and the regulator neurofibromin 1 (NF1) GTPase-activating protein (GAP).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,458 @@
+{
+ "pmid": "25239269",
+ "entries": {
+  "cc33fd13a5082bea": {
+   "mention": "Eliglustat",
+   "type": "therapy",
+   "candidates": [
+    "therapy:eliglustat",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:miglustat",
+    "therapy:statins-nf1-cognition",
+    "therapy:migalastat",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:idursulfase",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:elsunersen",
+    "therapy:aav-stxbp1-gene-replacement"
+   ],
+   "node_id": "therapy:eliglustat",
+   "match": "same",
+   "justification": "Exact drug",
+   "raw_node_id": "therapy:eliglustat",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.816Z"
+  },
+  "4041bbc28e27f911": {
+   "mention": "glucosylceramide synthase",
+   "type": "mechanism",
+   "candidates": [
+    "mech:glucose-transmembrane-transport",
+    "mech:glycosaminoglycan-catabolism",
+    "mech:synaptic-vesicle-priming",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:nmda-receptor-activity",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:mapk-cascade",
+    "mech:synaptic-vesicle-fusion",
+    "mech:glycogen-catabolism"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Enzyme target not a listed mechanism",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.816Z"
+  },
+  "b3d3eb7f8d197f4b": {
+   "mention": "Gaucher disease type 1",
+   "type": "disease",
+   "candidates": [
+    "disease:GBA1",
+    "disease:NPC1",
+    "disease:SMPD1",
+    "disease:GAA",
+    "disease:IDUA",
+    "disease:NF1",
+    "disease:PTPN11",
+    "disease:HEXA",
+    "disease:CLN3",
+    "disease:TPP1"
+   ],
+   "node_id": "disease:GBA1",
+   "match": "instance",
+   "justification": "Gaucher type 1 is a GBA1 subtype",
+   "raw_node_id": "disease:GBA1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.816Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.816Z",
+   "request_payload": {
+    "title": "Eliglustat: first global approval.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Eliglustat",
+      "declared_type": "therapy",
+      "sentence": "Eliglustat [Cerdelga™ (US, EU)], a small-molecule oral glucosylceramide analogue that inhibits the enzyme glucosylceramide synthase has been developed by Genzyme Corporation (a subsidiary of Sanofi) for the treatment of Gaucher disease type 1 in adults.",
+      "candidates": [
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:idursulfase",
+        "type": "therapy",
+        "label": "Idursulfase (enzyme replacement for MPS II)",
+        "synonyms": [
+         "Elaprase"
+        ],
+        "summary": "Intravenous recombinant iduronate-2-sulfatase for Hunter syndrome (MPS II)."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:elsunersen",
+        "type": "therapy",
+        "label": "Elsunersen (PRAX-222, SCN2A-targeting antisense oligonucleotide)",
+        "synonyms": [
+         "PRAX-222"
+        ],
+        "summary": "An antisense oligonucleotide that lowers SCN2A expression, studied in early-onset gain-of-function SCN2A DEE."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "glucosylceramide synthase",
+      "declared_type": "mechanism",
+      "sentence": "Eliglustat [Cerdelga™ (US, EU)], a small-molecule oral glucosylceramide analogue that inhibits the enzyme glucosylceramide synthase has been developed by Genzyme Corporation (a subsidiary of Sanofi) for the treatment of Gaucher disease type 1 in adults.",
+      "candidates": [
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:mapk-cascade",
+        "type": "mechanism",
+        "label": "MAPK cascade",
+        "note": "kind: process",
+        "summary": "An intracellular protein kinase cascade containing at least a MAP kinase (MAPK). It starts with the activation of a MAP3K, and the consecutive activation of a M"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "Gaucher disease type 1",
+      "declared_type": "disease",
+      "sentence": "Eliglustat [Cerdelga™ (US, EU)], a small-molecule oral glucosylceramide analogue that inhibits the enzyme glucosylceramide synthase has been developed by Genzyme Corporation (a subsidiary of Sanofi) for the treatment of Gaucher disease type 1 in adults.",
+      "candidates": [
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:NPC1",
+        "type": "disease",
+        "label": "NPC1-related disorders (Niemann-Pick disease type C)",
+        "synonyms": [
+         "Niemann-Pick disease type C",
+         "NPC",
+         "NP-C",
+         "NPC1",
+         "Niemann-Pick disease type C1",
+         "Niemann-Pick disease, type C1",
+         "type C1 Niemann-Pick disease",
+         "Niemann-Pick disease type C, classic form"
+        ],
+        "summary": "Loss of the NPC1 cholesterol transporter traps cholesterol and lipids in lysosomes: liver and spleen enlargement and a progressive neurological disease with ata"
+       },
+       {
+        "id": "disease:SMPD1",
+        "type": "disease",
+        "label": "SMPD1-related disorders (acid sphingomyelinase deficiency, Niemann-Pick A/B)",
+        "synonyms": [
+         "acid sphingomyelinase deficiency",
+         "ASMD",
+         "Niemann-Pick disease type A",
+         "Niemann-Pick disease type B",
+         "Niemann Pick disease type B",
+         "type B Niemann-Pick disease"
+        ],
+        "summary": "Deficiency of acid sphingomyelinase makes sphingomyelin build up: enlarged liver and spleen and lung disease; the infantile neurovisceral form (type A) also cau"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Eliglustat\",\"node_id\":\"therapy:eliglustat\",\"match\":\"same\",\"justification\":\"Exact drug\"},{\"mention_id\":\"m2\",\"mention\":\"glucosylceramide synthase\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Enzyme target not a listed mechanism\"},{\"mention_id\":\"m3\",\"mention\":\"Gaucher disease type 1\",\"node_id\":\"disease:GBA1\",\"match\":\"instance\",\"justification\":\"Gaucher type 1 is a GBA1 subtype\"}]}"
+  }
+ ]
+}

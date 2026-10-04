@@ -1,0 +1,396 @@
+{
+ "pmid": "42282513",
+ "entries": {
+  "8efaf853eff1b3fe": {
+   "mention": "progressive cognitive decline",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000253",
+    "phenotype:HP:0000529",
+    "phenotype:HP:0007240",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0007199",
+    "phenotype:HP:0002344",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0000718",
+    "phenotype:HP:0008762"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no cognitive decline candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.840Z"
+  },
+  "8800391d47a2c5d3": {
+   "mention": "language impairment",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000365",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0002384",
+    "phenotype:HP:0001151",
+    "phenotype:HP:0031162",
+    "phenotype:HP:0034687",
+    "phenotype:HP:0012249",
+    "phenotype:HP:0000726"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no language impairment candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.840Z"
+  },
+  "71944766f90751c5": {
+   "mention": "deficits in auditory duration mismatch negativity (MMN)",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0008765",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0004466",
+    "phenotype:HP:0008301",
+    "phenotype:HP:6000158",
+    "phenotype:HP:0002159",
+    "phenotype:HP:0002333",
+    "phenotype:HP:0000762",
+    "phenotype:HP:0007549",
+    "phenotype:HP:0002361"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no MMN candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.840Z"
+  },
+  "2cdb9ad0ce4965a8": {
+   "mention": "accumulation of storage material within neuronal lysosomes",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:lysosome-organization",
+    "mech:action-potential",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:gain-of-function",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ca-triggered-exocytosis",
+    "mech:loss-of-function",
+    "mech:lysosomal-protein-catabolism"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "neuronal lysosomal storage material",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.841Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.841Z",
+   "request_payload": {
+    "title": "Distinct Auditory Thalamocortical Pathologies Underlie Emerging Neurophysiological Dysfunction in a Cln3 Mouse Model of Batten Disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "progressive cognitive decline",
+      "declared_type": "phenotype",
+      "sentence": "CLN3 disease, the most common form of the Neuronal Ceroid Lipofuscinoses (NCLs), causes progressive cognitive decline and language impairment in humans.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000253",
+        "type": "phenotype",
+        "label": "Progressive microcephaly",
+        "note": "HPO HP:0000253"
+       },
+       {
+        "id": "phenotype:HP:0000529",
+        "type": "phenotype",
+        "label": "Progressive visual loss",
+        "note": "HPO HP:0000529"
+       },
+       {
+        "id": "phenotype:HP:0007240",
+        "type": "phenotype",
+        "label": "Progressive gait ataxia",
+        "note": "HPO HP:0007240"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0007199",
+        "type": "phenotype",
+        "label": "Progressive spastic paraparesis",
+        "note": "HPO HP:0007199"
+       },
+       {
+        "id": "phenotype:HP:0002344",
+        "type": "phenotype",
+        "label": "Progressive neurologic deterioration",
+        "note": "HPO HP:0002344"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0000718",
+        "type": "phenotype",
+        "label": "Aggressive behavior",
+        "note": "HPO HP:0000718"
+       },
+       {
+        "id": "phenotype:HP:0008762",
+        "type": "phenotype",
+        "label": "Repetitive compulsive behavior",
+        "note": "HPO HP:0008762"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "language impairment",
+      "declared_type": "phenotype",
+      "sentence": "CLN3 disease, the most common form of the Neuronal Ceroid Lipofuscinoses (NCLs), causes progressive cognitive decline and language impairment in humans.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0002384",
+        "type": "phenotype",
+        "label": "Focal impaired awareness seizure",
+        "note": "HPO HP:0002384"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       },
+       {
+        "id": "phenotype:HP:0031162",
+        "type": "phenotype",
+        "label": "Impaired oropharyngeal swallow response",
+        "note": "HPO HP:0031162"
+       },
+       {
+        "id": "phenotype:HP:0034687",
+        "type": "phenotype",
+        "label": "Impaired cerebroside sulfate hydrolysis",
+        "note": "HPO HP:0034687"
+       },
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       },
+       {
+        "id": "phenotype:HP:0000726",
+        "type": "phenotype",
+        "label": "Dementia",
+        "note": "HPO HP:0000726"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "deficits in auditory duration mismatch negativity (MMN)",
+      "declared_type": "phenotype",
+      "sentence": "We previously identified parallel deficits in auditory duration mismatch negativity (MMN), an electroencephalography (EEG)-based marker of auditory change detection, in individuals with CLN3 disease and in Cln3-/- mice.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0008765",
+        "type": "phenotype",
+        "label": "Auditory hallucination",
+        "note": "HPO HP:0008765"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0004466",
+        "type": "phenotype",
+        "label": "Delayed brainstem auditory evoked response conduction time",
+        "note": "HPO HP:0004466"
+       },
+       {
+        "id": "phenotype:HP:0008301",
+        "type": "phenotype",
+        "label": "Dermatan sulfate excretion in urine",
+        "note": "HPO HP:0008301"
+       },
+       {
+        "id": "phenotype:HP:6000158",
+        "type": "phenotype",
+        "label": "Unesterified cholesterol accumulation in cultured fibroblasts",
+        "note": "HPO HP:6000158"
+       },
+       {
+        "id": "phenotype:HP:0002159",
+        "type": "phenotype",
+        "label": "Heparan sulfate excretion in urine",
+        "note": "HPO HP:0002159"
+       },
+       {
+        "id": "phenotype:HP:0002333",
+        "type": "phenotype",
+        "label": "Motor deterioration",
+        "note": "HPO HP:0002333"
+       },
+       {
+        "id": "phenotype:HP:0000762",
+        "type": "phenotype",
+        "label": "Decreased nerve conduction velocity",
+        "note": "HPO HP:0000762"
+       },
+       {
+        "id": "phenotype:HP:0007549",
+        "type": "phenotype",
+        "label": "Desquamation of skin soon after birth",
+        "note": "HPO HP:0007549"
+       },
+       {
+        "id": "phenotype:HP:0002361",
+        "type": "phenotype",
+        "label": "Psychomotor deterioration",
+        "note": "HPO HP:0002361"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "accumulation of storage material within neuronal lysosomes",
+      "declared_type": "mechanism",
+      "sentence": "A pathological hallmark is the accumulation of storage material within neuronal lysosomes resulting from mutations in the CLN3 gene.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"progressive cognitive decline\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no cognitive decline candidate\"},{\"mention_id\":\"m2\",\"mention\":\"language impairment\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no language impairment candidate\"},{\"mention_id\":\"m3\",\"mention\":\"deficits in auditory duration mismatch negativity (MMN)\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no MMN candidate\"},{\"mention_id\":\"m4\",\"mention\":\"accumulation of storage material within neuronal lysosomes\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"neuronal lysosomal storage material\"}]}"
+  }
+ ]
+}

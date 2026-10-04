@@ -1,0 +1,85 @@
+{
+ "pmid": "24338084",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.548Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "4790d42a550c2d77",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/24338084.json",
+ "claims": [
+  {
+   "subject_mention": "Miglustat",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Niemann-Pick disease type C",
+   "object_type": "disease",
+   "quote": "Miglustat (Zavesca®, Brazaves®), a small iminosugar molecule that reversibly inhibits glycosphingolipid synthesis, is the only disease-specific drug approved for the treatment of progressive neurological manifestations of Niemann-Pick disease type C (NP-C) in adult and paediatric patients.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Miglustat",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "glycosphingolipid synthesis",
+   "object_type": "mechanism",
+   "quote": "Miglustat (Zavesca®, Brazaves®), a small iminosugar molecule that reversibly inhibits glycosphingolipid synthesis, is the only disease-specific drug approved for the treatment of progressive neurological manifestations of Niemann-Pick disease type C (NP-C) in adult and paediatric patients.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NP-C",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "impaired intracellular lipid trafficking",
+   "object_type": "mechanism",
+   "quote": "NP-C is a rare, autosomal-recessive lipid storage disorder characterized by impaired intracellular lipid trafficking and progressive neurological symptoms leading to premature death.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NP-C",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "progressive neurological symptoms",
+   "object_type": "phenotype",
+   "quote": "NP-C is a rare, autosomal-recessive lipid storage disorder characterized by impaired intracellular lipid trafficking and progressive neurological symptoms leading to premature death.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "miglustat",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NP-C",
+   "object_type": "disease",
+   "quote": "In a randomized clinical trial, long-term extension studies and a retrospective observational cohort study, treatment with oral miglustat stabilized key neurological manifestations of NP-C (including horizontal saccadic eye movement peak velocity, ambulation, manipulation, language and swallowing) in paediatric and adult patients with the disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "miglustat",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NP-C",
+   "object_type": "disease",
+   "quote": "In the absence of a cure, miglustat is a valuable agent to reduce the progression of clinically relevant neurological symptoms in paediatric and adult patients with NP-C, which is considered a significant achievement in the treatment of this disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

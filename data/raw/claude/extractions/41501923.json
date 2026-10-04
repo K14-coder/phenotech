@@ -1,0 +1,37 @@
+{
+ "pmid": "41501923",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.631Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "3d32d5f06b9740fd",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41501923.json",
+ "claims": [
+  {
+   "subject_mention": "Krabbe disease (KD)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "β-galactocerebrosidase deficiency",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Krabbe disease (KD) is a rapidly progressive neurodegenerative disorder caused by β-galactocerebrosidase deficiency.",
+   "study_type": "cohort",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HSCT",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "IKD",
+   "object_type": "disease",
+   "quote": "CONCLUSION: This study provides convincing evidence that HSCT improves quality-of-life and reduces caregiver burden in IKD.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

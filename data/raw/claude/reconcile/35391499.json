@@ -1,0 +1,300 @@
+{
+ "pmid": "35391499",
+ "entries": {
+  "d56263ab5bb83ccb": {
+   "mention": "Schwannomatosis",
+   "type": "disease",
+   "candidates": [
+    "disease:LZTR1",
+    "disease:NF1",
+    "disease:PTPN11",
+    "disease:SOS1",
+    "disease:SLC2A1",
+    "disease:ARSA",
+    "disease:IDUA",
+    "disease:GALC",
+    "disease:HEXA",
+    "disease:IDS"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "schwannomatosis in general, multi-gene",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.875Z"
+  },
+  "e78f8d65be32d694": {
+   "mention": "multiple schwannomas",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0100008",
+    "phenotype:HP:0009588",
+    "phenotype:HP:0001003",
+    "phenotype:HP:0005701",
+    "phenotype:HP:0008113",
+    "phenotype:HP:0005655",
+    "phenotype:HP:0000943",
+    "phenotype:HP:0031165",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011171"
+   ],
+   "node_id": "phenotype:HP:0100008",
+   "match": "instance",
+   "justification": "multiple schwannomas",
+   "raw_node_id": "phenotype:HP:0100008",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.875Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.875Z",
+   "request_payload": {
+    "title": "Comparison of the frequency of loss-of-function LZTR1 variants between schwannomatosis patients and the general population.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Schwannomatosis",
+      "declared_type": "disease",
+      "sentence": "Schwannomatosis is a rare tumor predisposition syndrome that causes multiple schwannomas.",
+      "candidates": [
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "multiple schwannomas",
+      "declared_type": "phenotype",
+      "sentence": "Schwannomatosis is a rare tumor predisposition syndrome that causes multiple schwannomas.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0100008",
+        "type": "phenotype",
+        "label": "Schwannoma",
+        "note": "HPO HP:0100008"
+       },
+       {
+        "id": "phenotype:HP:0009588",
+        "type": "phenotype",
+        "label": "Vestibular schwannoma",
+        "note": "HPO HP:0009588"
+       },
+       {
+        "id": "phenotype:HP:0001003",
+        "type": "phenotype",
+        "label": "Multiple lentigines",
+        "note": "HPO HP:0001003"
+       },
+       {
+        "id": "phenotype:HP:0005701",
+        "type": "phenotype",
+        "label": "Multiple enchondromatosis",
+        "note": "HPO HP:0005701"
+       },
+       {
+        "id": "phenotype:HP:0008113",
+        "type": "phenotype",
+        "label": "Multiple plantar creases",
+        "note": "HPO HP:0008113"
+       },
+       {
+        "id": "phenotype:HP:0005655",
+        "type": "phenotype",
+        "label": "Multiple digital exostoses",
+        "note": "HPO HP:0005655"
+       },
+       {
+        "id": "phenotype:HP:0000943",
+        "type": "phenotype",
+        "label": "Dysostosis multiplex",
+        "note": "HPO HP:0000943"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Schwannomatosis\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"schwannomatosis in general, multi-gene\"},{\"mention_id\":\"m2\",\"mention\":\"multiple schwannomas\",\"node_id\":\"phenotype:HP:0100008\",\"match\":\"instance\",\"justification\":\"multiple schwannomas\"}]}"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "pmid": "25725044",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.553Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "547027caf71c78b5",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/25725044.json",
+ "claims": [
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "early-infantile epileptic encephalopathy type 13",
+   "object_type": "disease",
+   "quote": "BACKGROUND: Mutations of SCN8A encoding the neuronal voltage-gated sodium channel NaV1.6 are associated with early-infantile epileptic encephalopathy type 13 (EIEE13) and intellectual disability.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A de novo mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "De novo gain-of-function and loss-of-function mutations of SCN8A in patients with intellectual disabilities and epilepsy.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A de novo mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "De novo gain-of-function and loss-of-function mutations of SCN8A in patients with intellectual disabilities and epilepsy.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "severe EIEE",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "gain-of-function mutations",
+   "object_type": "mechanism",
+   "quote": "CONCLUSIONS: Comparison of the clinical features of these patients with those in the literature suggests that gain-of-function mutations are associated with severe EIEE, while heterozygous loss-of-function mutations cause intellectual disability with or without seizures.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "intellectual disability with or without seizures",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "heterozygous loss-of-function mutations",
+   "object_type": "mechanism",
+   "quote": "CONCLUSIONS: Comparison of the clinical features of these patients with those in the literature suggests that gain-of-function mutations are associated with severe EIEE, while heterozygous loss-of-function mutations cause intellectual disability with or without seizures.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A mutant",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "RESULTS: The first mutant displayed a 10 mV hyperpolarising shift in voltage dependence of activation (gain of function), the second did not form functional channels (loss of function), while the third mutation was functionally indistinguishable from the wildtype channel.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,950 @@
+{
+ "pmid": "31548609",
+ "entries": {
+  "cc9280319379c9ee": {
+   "mention": "oxysterol binding protein (OSBP)",
+   "type": "gene",
+   "candidates": [
+    "gene:NPC1",
+    "gene:RIT1",
+    "gene:STXBP1",
+    "gene:HRAS",
+    "gene:CLN3",
+    "gene:CBL",
+    "gene:SHOC2",
+    "gene:SYNGAP1",
+    "gene:NSF",
+    "gene:UNC13A"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "OSBP not a candidate gene",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.891Z"
+  },
+  "55687f4ef0616d38": {
+   "mention": "cholesterol delivery across ER-lysosome contacts to activate mTORC1",
+   "type": "mechanism",
+   "candidates": [
+    "mech:intracellular-cholesterol-transport",
+    "mech:lysosome-organization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:lysosomal-storage",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:nmda-receptor-activity",
+    "mech:lysosomal-protein-catabolism",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:potassium-channel-activity"
+   ],
+   "node_id": "mech:intracellular-cholesterol-transport",
+   "match": "instance",
+   "justification": "ER-lysosome cholesterol delivery",
+   "raw_node_id": "mech:intracellular-cholesterol-transport",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.891Z"
+  },
+  "2d3f44205eae166a": {
+   "mention": "lysosomal cholesterol transport",
+   "type": "mechanism",
+   "candidates": [
+    "mech:intracellular-cholesterol-transport",
+    "mech:lysosomal-storage",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:glucose-transmembrane-transport",
+    "mech:lysosomal-protein-catabolism",
+    "mech:lysosome-organization",
+    "mech:ras-protein-signal-transduction",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ca-triggered-exocytosis"
+   ],
+   "node_id": "mech:intracellular-cholesterol-transport",
+   "match": "instance",
+   "justification": "lysosomal cholesterol transport",
+   "raw_node_id": "mech:intracellular-cholesterol-transport",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.891Z"
+  },
+  "26c8350b15d22178": {
+   "mention": "Niemann-Pick type C",
+   "type": "disease",
+   "candidates": [
+    "disease:NPC1",
+    "disease:SMPD1",
+    "disease:GAA",
+    "disease:SLC2A1",
+    "disease:SCN1A",
+    "disease:LZTR1",
+    "disease:NF1",
+    "disease:GBA1",
+    "disease:BRAF",
+    "disease:CACNA1A"
+   ],
+   "node_id": "disease:NPC1",
+   "match": "same",
+   "justification": "Niemann-Pick type C",
+   "raw_node_id": "disease:NPC1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.891Z"
+  },
+  "02e7ab3b35bfafa3": {
+   "mention": "aberrant growth signalling",
+   "type": "mechanism",
+   "candidates": [
+    "mech:tor-signaling",
+    "mech:ras-protein-signal-transduction",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-priming",
+    "mech:action-potential",
+    "mech:haploinsufficiency",
+    "mech:synaptic-vesicle-fusion",
+    "mech:dominant-negative"
+   ],
+   "node_id": "mech:tor-signaling",
+   "match": "instance",
+   "justification": "aberrant mTORC1 growth signalling",
+   "raw_node_id": "mech:tor-signaling",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.891Z"
+  },
+  "b3350d4e3121f88c": {
+   "mention": "inactivation of OSBP",
+   "type": "therapy",
+   "candidates": [
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:hsct-krabbe",
+    "therapy:statins-nf1-cognition",
+    "therapy:eliglustat",
+    "therapy:miglustat",
+    "therapy:4-phenylbutyrate",
+    "therapy:rapamycin-nsml",
+    "therapy:trametinib",
+    "therapy:migalastat",
+    "therapy:binimetinib"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "OSBP inactivation not a listed therapy",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.891Z"
+  },
+  "77983ffa2a4d5442": {
+   "mention": "aberrant mTORC1 signalling",
+   "type": "mechanism",
+   "candidates": [
+    "mech:tor-signaling",
+    "mech:ras-protein-signal-transduction",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-priming",
+    "mech:action-potential",
+    "mech:haploinsufficiency",
+    "mech:dominant-negative",
+    "mech:lysosomal-storage"
+   ],
+   "node_id": "mech:tor-signaling",
+   "match": "instance",
+   "justification": "aberrant mTORC1 signalling",
+   "raw_node_id": "mech:tor-signaling",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.891Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.891Z",
+   "request_payload": {
+    "title": "ER-lysosome contacts enable cholesterol sensing by mTORC1 and drive aberrant growth signalling in Niemann-Pick type C.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "oxysterol binding protein (OSBP)",
+      "declared_type": "gene",
+      "sentence": "Here, we show that oxysterol binding protein (OSBP) and its anchors at the endoplasmic reticulum (ER), VAPA and VAPB, deliver cholesterol across ER-lysosome contacts to activate mTORC1.",
+      "candidates": [
+       {
+        "id": "gene:NPC1",
+        "type": "gene",
+        "label": "NPC1",
+        "synonyms": [
+         "NPC intracellular cholesterol transporter 1",
+         "Niemann-Pick C1 protein",
+         "SLC65A1"
+        ],
+        "summary": "Intracellular cholesterol transporter which acts in concert with NPC2 and plays an important role in the egress of cholesterol from the endosomal/lysosomal comp"
+       },
+       {
+        "id": "gene:RIT1",
+        "type": "gene",
+        "label": "RIT1",
+        "synonyms": [
+         "GTP-binding protein Rit1",
+         "MGC125864",
+         "MGC125865",
+         "Ras-like protein expressed in many tissues",
+         "Ras-like without CAAX protein 1",
+         "RIBB",
+         "RIT",
+         "ROC1"
+        ],
+        "summary": "Plays a crucial role in coupling nerve growth factor (NGF) stimulation to the activation of both EPHB2 and MAPK14 signaling pathways and in NGF-dependent neuron"
+       },
+       {
+        "id": "gene:STXBP1",
+        "type": "gene",
+        "label": "STXBP1",
+        "synonyms": [
+         "Munc18-1",
+         "Munc18a",
+         "nSec1",
+         "rbSec1",
+         "hUNC18",
+         "MUNC18-1",
+         "UNC18",
+         "Syntaxin-binding protein 1"
+        ],
+        "summary": "Participates in the regulation of synaptic vesicle docking and fusion through interaction with GTP-binding proteins (By similarity). Essential for neurotransmis"
+       },
+       {
+        "id": "gene:HRAS",
+        "type": "gene",
+        "label": "HRAS",
+        "synonyms": [
+         "H-Ras",
+         "c-H-ras",
+         "HRAS1",
+         "GTPase HRas",
+         "H-Ras-1",
+         "Ha-Ras",
+         "Transforming protein p21",
+         "p21ras"
+        ],
+        "summary": "Signal transducer in the Ras-MAPK signaling pathway that regulates cell proliferation and survival (PubMed:22821884). Ras proteins bind GDP/GTP and possess intr"
+       },
+       {
+        "id": "gene:CLN3",
+        "type": "gene",
+        "label": "CLN3",
+        "synonyms": [
+         "battenin",
+         "CLN3 lysosomal/endosomal transmembrane protein",
+         "BTN1",
+         "JNCL",
+         "SLC29B1",
+         "BTS",
+         "Battenin",
+         "Batten disease protein"
+        ],
+        "summary": "Mediates microtubule-dependent, anterograde transport connecting the Golgi network, endosomes, autophagosomes, lysosomes and plasma membrane, and participates i"
+       },
+       {
+        "id": "gene:CBL",
+        "type": "gene",
+        "label": "CBL",
+        "synonyms": [
+         "c-Cbl",
+         "CBL2",
+         "RNF55",
+         "E3 ubiquitin-protein ligase CBL",
+         "Casitas B-lineage lymphoma proto-oncogene",
+         "Proto-oncogene c-Cbl",
+         "RING finger protein 55",
+         "RING-type E3 ubiquitin transferase CBL"
+        ],
+        "summary": "E3 ubiquitin-protein ligase that acts as a negative regulator of many signaling pathways by mediating ubiquitination of cell surface receptors (PubMed:10514377,"
+       },
+       {
+        "id": "gene:SHOC2",
+        "type": "gene",
+        "label": "SHOC2",
+        "synonyms": [
+         "SUR-8",
+         "SOC-2 homolog",
+         "KIAA0862",
+         "SOC2",
+         "SOC-2",
+         "SUR8",
+         "Leucine-rich repeat protein SHOC-2",
+         "Protein soc-2 homolog"
+        ],
+        "summary": "Core component of the SHOC2-MRAS-PP1c (SMP) holophosphatase complex that regulates activation of the MAPK pathway (PubMed:10783161, PubMed:16630891, PubMed:2513"
+       },
+       {
+        "id": "gene:SYNGAP1",
+        "type": "gene",
+        "label": "SYNGAP1",
+        "synonyms": [
+         "SynGAP",
+         "synaptic Ras GTPase-activating protein 1",
+         "SYNGAP",
+         "RASA5",
+         "KIAA1938",
+         "Ras/Rap GTPase-activating protein SynGAP",
+         "Neuronal RasGAP",
+         "Synaptic Ras GTPase-activating protein 1"
+        ],
+        "summary": "Major constituent of the PSD essential for postsynaptic signaling. Inhibitory regulator of the Ras-cAMP pathway. Member of the NMDAR signaling complex in excita"
+       },
+       {
+        "id": "gene:NSF",
+        "type": "gene",
+        "label": "NSF",
+        "synonyms": [
+         "N-ethylmaleimide-sensitive factor",
+         "vesicle-fusing ATPase",
+         "SKD2",
+         "SEC18",
+         "Vesicle-fusing ATPase",
+         "N-ethylmaleimide-sensitive fusion protein",
+         "NEM-sensitive fusion protein",
+         "Vesicular-fusion protein NSF"
+        ],
+        "summary": "Required for vesicle-mediated transport. Catalyzes the fusion of transport vesicles within the Golgi cisternae. Is also required for transport from the endoplas"
+       },
+       {
+        "id": "gene:UNC13A",
+        "type": "gene",
+        "label": "UNC13A",
+        "synonyms": [
+         "Munc13-1",
+         "KIAA1032",
+         "Protein unc-13 homolog A"
+        ],
+        "summary": "Plays a role in vesicle maturation during exocytosis as a target of the diacylglycerol second messenger pathway. Involved in neurotransmitter release by acting "
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "cholesterol delivery across ER-lysosome contacts to activate mTORC1",
+      "declared_type": "mechanism",
+      "sentence": "Here, we show that oxysterol binding protein (OSBP) and its anchors at the endoplasmic reticulum (ER), VAPA and VAPB, deliver cholesterol across ER-lysosome contacts to activate mTORC1.",
+      "candidates": [
+       {
+        "id": "mech:intracellular-cholesterol-transport",
+        "type": "mechanism",
+        "label": "Intracellular cholesterol transport",
+        "note": "kind: process",
+        "summary": "The directed movement of cholesterol, cholest-5-en-3-beta-ol, within cells."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "lysosomal cholesterol transport",
+      "declared_type": "mechanism",
+      "sentence": "By contrast, OSBP-mediated cholesterol trafficking drives constitutive mTORC1 activation in a disease model caused by the loss of the lysosomal cholesterol transporter, Niemann-Pick C1 (NPC1).",
+      "candidates": [
+       {
+        "id": "mech:intracellular-cholesterol-transport",
+        "type": "mechanism",
+        "label": "Intracellular cholesterol transport",
+        "note": "kind: process",
+        "summary": "The directed movement of cholesterol, cholest-5-en-3-beta-ol, within cells."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "Niemann-Pick type C",
+      "declared_type": "disease",
+      "sentence": "ER-lysosome contacts enable cholesterol sensing by mTORC1 and drive aberrant growth signalling in Niemann-Pick type C.",
+      "candidates": [
+       {
+        "id": "disease:NPC1",
+        "type": "disease",
+        "label": "NPC1-related disorders (Niemann-Pick disease type C)",
+        "synonyms": [
+         "Niemann-Pick disease type C",
+         "NPC",
+         "NP-C",
+         "NPC1",
+         "Niemann-Pick disease type C1",
+         "Niemann-Pick disease, type C1",
+         "type C1 Niemann-Pick disease",
+         "Niemann-Pick disease type C, classic form"
+        ],
+        "summary": "Loss of the NPC1 cholesterol transporter traps cholesterol and lipids in lysosomes: liver and spleen enlargement and a progressive neurological disease with ata"
+       },
+       {
+        "id": "disease:SMPD1",
+        "type": "disease",
+        "label": "SMPD1-related disorders (acid sphingomyelinase deficiency, Niemann-Pick A/B)",
+        "synonyms": [
+         "acid sphingomyelinase deficiency",
+         "ASMD",
+         "Niemann-Pick disease type A",
+         "Niemann-Pick disease type B",
+         "Niemann Pick disease type B",
+         "type B Niemann-Pick disease"
+        ],
+        "summary": "Deficiency of acid sphingomyelinase makes sphingomyelin build up: enlarged liver and spleen and lung disease; the infantile neurovisceral form (type A) also cau"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "aberrant growth signalling",
+      "declared_type": "mechanism",
+      "sentence": "ER-lysosome contacts enable cholesterol sensing by mTORC1 and drive aberrant growth signalling in Niemann-Pick type C.",
+      "candidates": [
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "inactivation of OSBP",
+      "declared_type": "therapy",
+      "sentence": "Chemical and genetic inactivation of OSBP suppresses aberrant mTORC1 signalling and restores autophagic function in cellular models of Niemann-Pick type C (NPC).",
+      "candidates": [
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:rapamycin-nsml",
+        "type": "therapy",
+        "label": "Rapamycin (sirolimus) for NSML-associated hypertrophic cardiomyopathy",
+        "synonyms": [
+         "sirolimus",
+         "mTOR inhibitor"
+        ],
+        "summary": "An approved mTOR inhibitor that reversed hypertrophic cardiomyopathy in mice carrying NSML-type (catalytically impaired) PTPN11 mutations. Human heart tissue da"
+       },
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:binimetinib",
+        "type": "therapy",
+        "label": "Binimetinib (MEK162; MEK1/2 inhibitor)",
+        "synonyms": [
+         "MEK162",
+         "ARRY-162"
+        ],
+        "summary": "A MEK inhibitor tested in NF1 plexiform neurofibromas (phase 2, completed). The first MEK-inhibitor trial in Noonan syndrome hypertrophic cardiomyopathy (2012) "
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "aberrant mTORC1 signalling",
+      "declared_type": "mechanism",
+      "sentence": "Chemical and genetic inactivation of OSBP suppresses aberrant mTORC1 signalling and restores autophagic function in cellular models of Niemann-Pick type C (NPC).",
+      "candidates": [
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"oxysterol binding protein (OSBP)\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"OSBP not a candidate gene\"},{\"mention_id\":\"m2\",\"mention\":\"cholesterol delivery across ER-lysosome contacts to activate mTORC1\",\"node_id\":\"mech:intracellular-cholesterol-transport\",\"match\":\"instance\",\"justification\":\"ER-lysosome cholesterol delivery\"},{\"mention_id\":\"m3\",\"mention\":\"lysosomal cholesterol transport\",\"node_id\":\"mech:intracellular-cholesterol-transport\",\"match\":\"instance\",\"justification\":\"lysosomal cholesterol transport\"},{\"mention_id\":\"m4\",\"mention\":\"Niemann-Pick type C\",\"node_id\":\"disease:NPC1\",\"match\":\"same\",\"justification\":\"Niemann-Pick type C\"},{\"mention_id\":\"m5\",\"mention\":\"aberrant growth signalling\",\"node_id\":\"mech:tor-signaling\",\"match\":\"instance\",\"justification\":\"aberrant mTORC1 growth signalling\"},{\"mention_id\":\"m6\",\"mention\":\"inactivation of OSBP\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"OSBP inactivation not a listed therapy\"},{\"mention_id\":\"m7\",\"mention\":\"aberrant mTORC1 signalling\",\"node_id\":\"mech:tor-signaling\",\"match\":\"instance\",\"justification\":\"aberrant mTORC1 signalling\"}]}"
+  }
+ ]
+}

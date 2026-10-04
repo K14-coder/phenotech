@@ -1,0 +1,402 @@
+{
+ "pmid": "33585982",
+ "entries": {
+  "7bc5f7a4b07ec245": {
+   "mention": "low-grade gliomas",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010795",
+    "phenotype:HP:0002162",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0002171",
+    "phenotype:HP:0003349",
+    "phenotype:HP:0003495",
+    "phenotype:HP:0020035",
+    "phenotype:HP:0006851",
+    "phenotype:HP:6001008",
+    "phenotype:HP:0007885"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No low-grade glioma term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.872Z"
+  },
+  "98107711ef45ffbc": {
+   "mention": "NF1-LGG",
+   "type": "disease",
+   "candidates": [
+    "disease:NF1",
+    "disease:RAF1",
+    "disease:ARSA",
+    "disease:BRAF",
+    "disease:CACNA1A",
+    "disease:CBL",
+    "disease:CDKL5",
+    "disease:CLN3",
+    "disease:CPLX1",
+    "disease:GAA"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Tumour in NF1, not the disorder itself",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.872Z"
+  },
+  "7232614df7edc3e6": {
+   "mention": "bi-allelic NF1 inactivation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:lysosome-organization",
+    "mech:lysosomal-storage",
+    "mech:protein-destabilization",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:protein-serine-threonine-kinase-activity"
+   ],
+   "node_id": "mech:loss-of-function",
+   "match": "instance",
+   "justification": "Biallelic NF1 inactivation",
+   "raw_node_id": "mech:loss-of-function",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.872Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.872Z",
+   "request_payload": {
+    "title": "Integrated molecular and clinical analysis of low-grade gliomas in children with neurofibromatosis type 1 (NF1).",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "low-grade gliomas",
+      "declared_type": "phenotype",
+      "sentence": "Low-grade gliomas (LGGs) are the most common childhood brain tumor in the general population and in individuals with the Neurofibromatosis type 1 (NF1) cancer predisposition syndrome.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010795",
+        "type": "phenotype",
+        "label": "Cerebellar glioma",
+        "note": "HPO HP:0010795"
+       },
+       {
+        "id": "phenotype:HP:0002162",
+        "type": "phenotype",
+        "label": "Low posterior hairline",
+        "note": "HPO HP:0002162"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0002171",
+        "type": "phenotype",
+        "label": "Gliosis",
+        "note": "HPO HP:0002171"
+       },
+       {
+        "id": "phenotype:HP:0003349",
+        "type": "phenotype",
+        "label": "Low cholesterol esterification rate",
+        "note": "HPO HP:0003349"
+       },
+       {
+        "id": "phenotype:HP:0003495",
+        "type": "phenotype",
+        "label": "GM2-ganglioside accumulation",
+        "note": "HPO HP:0003495"
+       },
+       {
+        "id": "phenotype:HP:0020035",
+        "type": "phenotype",
+        "label": "Lower limb dysmetria",
+        "note": "HPO HP:0020035"
+       },
+       {
+        "id": "phenotype:HP:0006851",
+        "type": "phenotype",
+        "label": "Symmetric spinal nerve root neurofibromas",
+        "note": "HPO HP:0006851"
+       },
+       {
+        "id": "phenotype:HP:6001008",
+        "type": "phenotype",
+        "label": "Elevated urine glucose tetrasaccharide level",
+        "note": "HPO HP:6001008"
+       },
+       {
+        "id": "phenotype:HP:0007885",
+        "type": "phenotype",
+        "label": "Slowed horizontal saccades",
+        "note": "HPO HP:0007885"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "NF1-LGG",
+      "declared_type": "disease",
+      "sentence": "Whereas, most tumors harbored bi-allelic NF1 inactivation as the only genetic abnormality, 11% had additional mutations.",
+      "candidates": [
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "bi-allelic NF1 inactivation",
+      "declared_type": "mechanism",
+      "sentence": "Whereas, most tumors harbored bi-allelic NF1 inactivation as the only genetic abnormality, 11% had additional mutations.",
+      "candidates": [
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"low-grade gliomas\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No low-grade glioma term\"},{\"mention_id\":\"m2\",\"mention\":\"NF1-LGG\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Tumour in NF1, not the disorder itself\"},{\"mention_id\":\"m3\",\"mention\":\"bi-allelic NF1 inactivation\",\"node_id\":\"mech:loss-of-function\",\"match\":\"instance\",\"justification\":\"Biallelic NF1 inactivation\"}]}"
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "pmid": "30288694",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.568Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b770098c6fca02c5",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/30288694.json",
+ "claims": [
+  {
+   "subject_mention": "CDKL5 disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epilepsy",
+   "object_type": "phenotype",
+   "quote": "CDKL5 disorder is a devastating neurodevelopmental disorder associated with epilepsy, developmental retardation, autism, and related phenotypes.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5 disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental retardation",
+   "object_type": "phenotype",
+   "quote": "CDKL5 disorder is a devastating neurodevelopmental disorder associated with epilepsy, developmental retardation, autism, and related phenotypes.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5 disorder",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "autism",
+   "object_type": "phenotype",
+   "quote": "CDKL5 disorder is a devastating neurodevelopmental disorder associated with epilepsy, developmental retardation, autism, and related phenotypes.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "CDKL5 disorder",
+   "object_type": "disease",
+   "quote": "Mutations in the CDKL5 gene, encoding CDKL5, have been identified in this disorder.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "mTOR signaling",
+   "object_type": "mechanism",
+   "quote": "Taken together, these data support a model in which loss of CDKL5 alters mTOR signaling and synaptic compositions in a neuron-type specific manner and suggest that CDKL5 may have distinct functional roles related to cellular signaling in excitatory and inhibitory neurons.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

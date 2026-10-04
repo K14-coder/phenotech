@@ -1,0 +1,73 @@
+{
+ "pmid": "20619386",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.541Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "0605b2bd1bc17a6a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/20619386.json",
+ "claims": [
+  {
+   "subject_mention": "CBL",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome-like phenotype",
+   "object_type": "disease",
+   "quote": "Heterozygous germline mutations in the CBL tumor-suppressor gene cause a Noonan syndrome-like phenotype.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CBL",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "E3 ubiquitin ligase activity",
+   "object_type": "mechanism",
+   "quote": "Here, we report that heterozygous germline mutations in CBL, a tumor-suppressor gene that is mutated in myeloid malignancies and encodes a multivalent adaptor protein with E3 ubiquitin ligase activity, can underlie a phenotype with clinical features fitting or partially overlapping Noonan syndrome (NS), the most common condition of this disease family.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CBL missense mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "impaired CBL-mediated receptor ubiquitylation",
+   "object_type": "mechanism",
+   "quote": "Mutations were shown to affect CBL-mediated receptor ubiquitylation and dysregulate signal flow through RAS.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CBL missense mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dysregulated signal flow through RAS",
+   "object_type": "mechanism",
+   "quote": "Mutations were shown to affect CBL-mediated receptor ubiquitylation and dysregulate signal flow through RAS.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CBL",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "condition that resembles NS",
+   "object_type": "disease",
+   "quote": "These findings document that germline mutations in CBL alter development to cause a clinically variable condition that resembles NS and that possibly predisposes to malignancies.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

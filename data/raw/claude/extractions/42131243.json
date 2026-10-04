@@ -1,0 +1,49 @@
+{
+ "pmid": "42131243",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.644Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "ce997985f63db546",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/42131243.json",
+ "claims": [
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "acid alpha-glucosidase deficiency",
+   "object_type": "mechanism",
+   "quote": "Pompe disease is a muscular lysosomal storage disorder characterized by autosomal recessive inheritance and caused by deficiency of the acid alpha-glucosidase (GAA) enzyme.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "enzyme replacement therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "late-onset Pompe disease",
+   "object_type": "disease",
+   "quote": "Among the 47 patients who received enzyme replacement therapy (ERT), the mortality rate was 6.4%, compared to 57.1% in the 21 patients who did not receive ERT.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LOPD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "spinal curvature abnormalities",
+   "object_type": "phenotype",
+   "quote": "The severity of muscle pathology correlated with lower body mass index (BMI), shorter 6-min walk test (6MWT) and spinal curvature abnormalities.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "pmid": "25795793",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.554Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "ab7efd2fb9dc8164",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/25795793.json",
+ "claims": [
+  {
+   "subject_mention": "SOS2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Rare variants in SOS2 and LZTR1 are associated with Noonan syndrome.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Rare variants in SOS2 and LZTR1 are associated with Noonan syndrome.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "dysregulation of the RAS/MAPK pathway",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Noonan syndrome is an autosomal dominant, multisystemic disorder caused by dysregulation of the RAS/mitogen activated protein kinase (MAPK) pathway.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SOS2",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "marked ectodermal involvement",
+   "object_type": "phenotype",
+   "quote": "Notably, SOS2 variants were identified in patients with marked ectodermal involvement, similar to patients with SOS1 mutations.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SOS2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: We identified two novel genes, SOS2 and LZTR1, associated with Noonan syndrome, thereby expanding the molecular spectrum of RASopathies.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: We identified two novel genes, SOS2 and LZTR1, associated with Noonan syndrome, thereby expanding the molecular spectrum of RASopathies.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

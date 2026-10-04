@@ -1,0 +1,536 @@
+{
+ "pmid": "25987178",
+ "entries": {
+  "c33e24f9c87f2b99": {
+   "mention": "sulfatide accumulation leading to demyelination",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-fusion",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:tor-signaling",
+    "mech:action-potential",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:lysosome-organization",
+    "mech:gain-of-function"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "sulfatide accumulation",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.816Z"
+  },
+  "6a26bb761bf10e6d": {
+   "mention": "hematopoietic stem cell transplantation",
+   "type": "therapy",
+   "candidates": [
+    "therapy:hsct-krabbe",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:statins-nf1-cognition",
+    "therapy:eliglustat",
+    "therapy:miglustat",
+    "therapy:cannabidiol",
+    "therapy:pabinafusp-alfa",
+    "therapy:tipifarnib",
+    "therapy:unc13a-splice-switching-aso"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "HSCT node is Krabbe-specific",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.816Z"
+  },
+  "2adec87304fea7a9": {
+   "mention": "enzyme replacement therapy",
+   "type": "therapy",
+   "candidates": [
+    "therapy:laronidase",
+    "therapy:idursulfase",
+    "therapy:olipudase-alfa",
+    "therapy:cerliponase-alfa",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:pabinafusp-alfa",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:miglustat"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "generic ERT, candidates disease-specific",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.816Z"
+  },
+  "91e3aa9191c05adc": {
+   "mention": "gene therapy",
+   "type": "therapy",
+   "candidates": [
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:etx101",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:eliglustat",
+    "therapy:kv7-openers",
+    "therapy:quinidine",
+    "therapy:ganaxolone",
+    "therapy:sodium-channel-blockers"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "generic gene therapy, candidates specific",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.816Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.816Z",
+   "request_payload": {
+    "title": "Metachromatic leukodystrophy: Disease spectrum and approaches for treatment.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "sulfatide accumulation leading to demyelination",
+      "declared_type": "mechanism",
+      "sentence": "Low activity of arylsulfatase A results in the accumulation of sulfatides in the central and peripheral nervous system leading to demyelination.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "hematopoietic stem cell transplantation",
+      "declared_type": "therapy",
+      "sentence": "This review discusses diagnostic process and efficacy of current and possible future therapies such as hematopoietic stem cell transplantation, enzyme replacement therapy and gene therapy.",
+      "candidates": [
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:cannabidiol",
+        "type": "therapy",
+        "label": "Cannabidiol (plant-derived, pharmaceutical)",
+        "synonyms": [
+         "EPIDIOLEX",
+         "CBD",
+         "GWP42003-P"
+        ],
+        "summary": "A purified cannabidiol oral solution with an FDA label covering seizures associated with Dravet syndrome."
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:tipifarnib",
+        "type": "therapy",
+        "label": "Tipifarnib (farnesyltransferase inhibitor)",
+        "synonyms": [
+         "R115777",
+         "Zarnestra"
+        ],
+        "summary": "Blocks RAS membrane anchoring by inhibiting farnesylation. A randomised placebo-controlled phase 2 trial in NF1 plexiform neurofibromas did not prolong time to "
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "enzyme replacement therapy",
+      "declared_type": "therapy",
+      "sentence": "This review discusses diagnostic process and efficacy of current and possible future therapies such as hematopoietic stem cell transplantation, enzyme replacement therapy and gene therapy.",
+      "candidates": [
+       {
+        "id": "therapy:laronidase",
+        "type": "therapy",
+        "label": "Laronidase (enzyme replacement for MPS I)",
+        "synonyms": [
+         "Aldurazyme"
+        ],
+        "summary": "Intravenous recombinant alpha-L-iduronidase for MPS I. It does not cross the blood-brain barrier, so it is not expected to treat the brain disease of the severe"
+       },
+       {
+        "id": "therapy:idursulfase",
+        "type": "therapy",
+        "label": "Idursulfase (enzyme replacement for MPS II)",
+        "synonyms": [
+         "Elaprase"
+        ],
+        "summary": "Intravenous recombinant iduronate-2-sulfatase for Hunter syndrome (MPS II)."
+       },
+       {
+        "id": "therapy:olipudase-alfa",
+        "type": "therapy",
+        "label": "Olipudase alfa (enzyme replacement for ASMD)",
+        "synonyms": [
+         "Xenpozyme",
+         "rhASM"
+        ],
+        "summary": "Intravenous recombinant acid sphingomyelinase, approved only for the non-brain manifestations of ASMD."
+       },
+       {
+        "id": "therapy:cerliponase-alfa",
+        "type": "therapy",
+        "label": "Cerliponase alfa (intraventricular enzyme replacement for CLN2)",
+        "synonyms": [
+         "Brineura",
+         "rhTPP1"
+        ],
+        "summary": "Recombinant TPP1 delivered straight into the fluid spaces of the brain, bypassing the blood-brain barrier. It slows the loss of walking and language in CLN2 dis"
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "gene therapy",
+      "declared_type": "therapy",
+      "sentence": "This review discusses diagnostic process and efficacy of current and possible future therapies such as hematopoietic stem cell transplantation, enzyme replacement therapy and gene therapy.",
+      "candidates": [
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:etx101",
+        "type": "therapy",
+        "label": "ETX101 (AAV9-delivered gene therapy for SCN1A Dravet syndrome)",
+        "synonyms": [
+         "ETX101"
+        ],
+        "summary": "An AAV9-delivered gene therapy in phase 1/2 for SCN1A-positive Dravet syndrome."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:ganaxolone",
+        "type": "therapy",
+        "label": "Ganaxolone",
+        "synonyms": [
+         "ZTALMY"
+        ],
+        "summary": "A neuroactive steroid with an FDA label for seizures associated with CDKL5 deficiency disorder."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"sulfatide accumulation leading to demyelination\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"sulfatide accumulation\"},{\"mention_id\":\"m2\",\"mention\":\"hematopoietic stem cell transplantation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"HSCT node is Krabbe-specific\"},{\"mention_id\":\"m3\",\"mention\":\"enzyme replacement therapy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"generic ERT, candidates disease-specific\"},{\"mention_id\":\"m4\",\"mention\":\"gene therapy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"generic gene therapy, candidates specific\"}]}"
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "pmid": "42026675",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.643Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "fde6a78c1f67844f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/42026675.json",
+ "claims": [
+  {
+   "subject_mention": "HRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Costello syndrome",
+   "object_type": "disease",
+   "quote": "BACKGROUND: Costello syndrome (CS) is a rare genetic disorder within the spectrum of RASopathies, caused by activating mutations in the HRAS gene, leading to constitutive dysregulation of the RAS/MAPK signalling pathway.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Costello syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "constitutive dysregulation of the RAS/MAPK signalling pathway",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Costello syndrome (CS) is a rare genetic disorder within the spectrum of RASopathies, caused by activating mutations in the HRAS gene, leading to constitutive dysregulation of the RAS/MAPK signalling pathway.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Costello syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "reduction in muscle force",
+   "object_type": "phenotype",
+   "quote": "Among its multisystemic manifestations, a distinctive musculoskeletal involvement is frequently observed with reduction in muscle force, pain of musculoskeletal origin and muscular hypotrophy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Costello syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pain of musculoskeletal origin",
+   "object_type": "phenotype",
+   "quote": "Among its multisystemic manifestations, a distinctive musculoskeletal involvement is frequently observed with reduction in muscle force, pain of musculoskeletal origin and muscular hypotrophy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Costello syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "muscular hypotrophy",
+   "object_type": "phenotype",
+   "quote": "Among its multisystemic manifestations, a distinctive musculoskeletal involvement is frequently observed with reduction in muscle force, pain of musculoskeletal origin and muscular hypotrophy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "fibroadipose infiltration",
+   "object_type": "phenotype",
+   "quote": "RESULTS: FAI was detected in 100% of participants in at least one muscle, most commonly in lumbar paravertebral muscles (85%) and vastus lateralis (70-75%); no grade IV involution cases occurred.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HRAS p.Gly12Ser and p.Gly13Cys",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "impaired myogenic differentiation/fusion",
+   "object_type": "mechanism",
+   "quote": "In vitro, myoblasts expressing HRAS mutants exhibited increased proliferation, impaired myogenic differentiation/fusion, and lipid droplet accumulation with elevated cholesteryl esters compared with controls.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "HRAS-mediated metabolic dysfunction",
+   "object_type": "mechanism",
+   "quote": "The pattern supports HRAS‑mediated metabolic dysfunction as a primary driver of FAI, warranting multicenter longitudinal studies with standardized quantitative metrics integrated with functional testing in the view of future therapeutic trials.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

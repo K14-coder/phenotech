@@ -1,0 +1,552 @@
+{
+ "pmid": "42131243",
+ "entries": {
+  "1ec25cb1c67e7d4c": {
+   "mention": "acid alpha-glucosidase deficiency",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:haploinsufficiency",
+    "mech:gaba-reuptake",
+    "mech:glucose-transmembrane-transport",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:nmda-receptor-activity",
+    "mech:autophagy",
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:sphingolipid-catabolism"
+   ],
+   "node_id": "mech:lysosomal-enzyme-deficiency",
+   "match": "instance",
+   "justification": "GAA deficiency",
+   "raw_node_id": "mech:lysosomal-enzyme-deficiency",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.839Z"
+  },
+  "2adec87304fea7a9": {
+   "mention": "enzyme replacement therapy",
+   "type": "therapy",
+   "candidates": [
+    "therapy:laronidase",
+    "therapy:idursulfase",
+    "therapy:olipudase-alfa",
+    "therapy:cerliponase-alfa",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:pabinafusp-alfa",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:miglustat"
+   ],
+   "node_id": "therapy:pompe-enzyme-replacement",
+   "match": "instance",
+   "justification": "ERT in Pompe cohort",
+   "raw_node_id": "therapy:pompe-enzyme-replacement",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.839Z"
+  },
+  "4e323663c2b33cf8": {
+   "mention": "late-onset Pompe disease",
+   "type": "disease",
+   "candidates": [
+    "disease:GAA",
+    "disease:GALC",
+    "disease:HEXA",
+    "disease:TPP1",
+    "disease:NPC1",
+    "disease:CLN3",
+    "disease:GLA",
+    "disease:IDUA",
+    "disease:GBA1",
+    "disease:SLC2A1"
+   ],
+   "node_id": "disease:GAA",
+   "match": "instance",
+   "justification": "late-onset Pompe",
+   "raw_node_id": "disease:GAA",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.839Z"
+  },
+  "6c835ceea23805b1": {
+   "mention": "spinal curvature abnormalities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010302",
+    "phenotype:HP:0002353",
+    "phenotype:HP:0002492",
+    "phenotype:HP:0012249",
+    "phenotype:HP:0006851",
+    "phenotype:HP:0011636",
+    "phenotype:HP:0030810",
+    "phenotype:HP:0011203",
+    "phenotype:HP:0012703",
+    "phenotype:HP:0007670"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no scoliosis candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.839Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.839Z",
+   "request_payload": {
+    "title": "Clinical, pathological and genetic features as well as follow-up of 68 patients with late-onset Pompe disease: a single-center retrospective study.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "acid alpha-glucosidase deficiency",
+      "declared_type": "mechanism",
+      "sentence": "Pompe disease is a muscular lysosomal storage disorder characterized by autosomal recessive inheritance and caused by deficiency of the acid alpha-glucosidase (GAA) enzyme.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:autophagy",
+        "type": "mechanism",
+        "label": "Autophagy",
+        "note": "kind: process",
+        "summary": "The cell's self-digestion pathway: material is wrapped in autophagosomes and delivered to lysosomes for breakdown."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "enzyme replacement therapy",
+      "declared_type": "therapy",
+      "sentence": "Among the 47 patients who received enzyme replacement therapy (ERT), the mortality rate was 6.4%, compared to 57.1% in the 21 patients who did not receive ERT.",
+      "candidates": [
+       {
+        "id": "therapy:laronidase",
+        "type": "therapy",
+        "label": "Laronidase (enzyme replacement for MPS I)",
+        "synonyms": [
+         "Aldurazyme"
+        ],
+        "summary": "Intravenous recombinant alpha-L-iduronidase for MPS I. It does not cross the blood-brain barrier, so it is not expected to treat the brain disease of the severe"
+       },
+       {
+        "id": "therapy:idursulfase",
+        "type": "therapy",
+        "label": "Idursulfase (enzyme replacement for MPS II)",
+        "synonyms": [
+         "Elaprase"
+        ],
+        "summary": "Intravenous recombinant iduronate-2-sulfatase for Hunter syndrome (MPS II)."
+       },
+       {
+        "id": "therapy:olipudase-alfa",
+        "type": "therapy",
+        "label": "Olipudase alfa (enzyme replacement for ASMD)",
+        "synonyms": [
+         "Xenpozyme",
+         "rhASM"
+        ],
+        "summary": "Intravenous recombinant acid sphingomyelinase, approved only for the non-brain manifestations of ASMD."
+       },
+       {
+        "id": "therapy:cerliponase-alfa",
+        "type": "therapy",
+        "label": "Cerliponase alfa (intraventricular enzyme replacement for CLN2)",
+        "synonyms": [
+         "Brineura",
+         "rhTPP1"
+        ],
+        "summary": "Recombinant TPP1 delivered straight into the fluid spaces of the brain, bypassing the blood-brain barrier. It slows the loss of walking and language in CLN2 dis"
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "late-onset Pompe disease",
+      "declared_type": "disease",
+      "sentence": "Among the 47 patients who received enzyme replacement therapy (ERT), the mortality rate was 6.4%, compared to 57.1% in the 21 patients who did not receive ERT.",
+      "candidates": [
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:NPC1",
+        "type": "disease",
+        "label": "NPC1-related disorders (Niemann-Pick disease type C)",
+        "synonyms": [
+         "Niemann-Pick disease type C",
+         "NPC",
+         "NP-C",
+         "NPC1",
+         "Niemann-Pick disease type C1",
+         "Niemann-Pick disease, type C1",
+         "type C1 Niemann-Pick disease",
+         "Niemann-Pick disease type C, classic form"
+        ],
+        "summary": "Loss of the NPC1 cholesterol transporter traps cholesterol and lipids in lysosomes: liver and spleen enlargement and a progressive neurological disease with ata"
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:GLA",
+        "type": "disease",
+        "label": "GLA-related disorders (Fabry disease)",
+        "synonyms": [
+         "Fabry disease",
+         "Anderson-Fabry disease",
+         "alpha-galactosidase A deficiency",
+         "Alpha-galactosidase A deficiency",
+         "FD",
+         "Fabry's disease",
+         "Fd",
+         "angiokeratoma corporis diffusum"
+        ],
+        "summary": "X-linked deficiency of alpha-galactosidase A makes globotriaosylceramide (Gb3) build up in blood vessels, kidney, heart and nerves: pain crises, kidney failure,"
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "spinal curvature abnormalities",
+      "declared_type": "phenotype",
+      "sentence": "The severity of muscle pathology correlated with lower body mass index (BMI), shorter 6-min walk test (6MWT) and spinal curvature abnormalities.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010302",
+        "type": "phenotype",
+        "label": "Spinal cord tumor",
+        "note": "HPO HP:0010302"
+       },
+       {
+        "id": "phenotype:HP:0002353",
+        "type": "phenotype",
+        "label": "EEG abnormality",
+        "note": "HPO HP:0002353"
+       },
+       {
+        "id": "phenotype:HP:0002492",
+        "type": "phenotype",
+        "label": "Abnormal corticospinal tract morphology",
+        "note": "HPO HP:0002492"
+       },
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       },
+       {
+        "id": "phenotype:HP:0006851",
+        "type": "phenotype",
+        "label": "Symmetric spinal nerve root neurofibromas",
+        "note": "HPO HP:0006851"
+       },
+       {
+        "id": "phenotype:HP:0011636",
+        "type": "phenotype",
+        "label": "Abnormal coronary artery origin",
+        "note": "HPO HP:0011636"
+       },
+       {
+        "id": "phenotype:HP:0030810",
+        "type": "phenotype",
+        "label": "Abnormal tongue physiology",
+        "note": "HPO HP:0030810"
+       },
+       {
+        "id": "phenotype:HP:0011203",
+        "type": "phenotype",
+        "label": "EEG with abnormally slow frequencies",
+        "note": "HPO HP:0011203"
+       },
+       {
+        "id": "phenotype:HP:0012703",
+        "type": "phenotype",
+        "label": "Abnormal subarachnoid space morphology",
+        "note": "HPO HP:0012703"
+       },
+       {
+        "id": "phenotype:HP:0007670",
+        "type": "phenotype",
+        "label": "Abnormal vestibulo-ocular reflex",
+        "note": "HPO HP:0007670"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"acid alpha-glucosidase deficiency\",\"node_id\":\"mech:lysosomal-enzyme-deficiency\",\"match\":\"instance\",\"justification\":\"GAA deficiency\"},{\"mention_id\":\"m2\",\"mention\":\"enzyme replacement therapy\",\"node_id\":\"therapy:pompe-enzyme-replacement\",\"match\":\"instance\",\"justification\":\"ERT in Pompe cohort\"},{\"mention_id\":\"m3\",\"mention\":\"late-onset Pompe disease\",\"node_id\":\"disease:GAA\",\"match\":\"instance\",\"justification\":\"late-onset Pompe\"},{\"mention_id\":\"m4\",\"mention\":\"spinal curvature abnormalities\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no scoliosis candidate\"}]}"
+  }
+ ]
+}

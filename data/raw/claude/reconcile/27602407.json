@@ -1,0 +1,717 @@
+{
+ "pmid": "27602407",
+ "entries": {
+  "f2d9b9d02f30ece8": {
+   "mention": "neonatal-onset epileptic encephalopathy",
+   "type": "disease",
+   "candidates": [
+    "disease:KCNQ2",
+    "disease:CACNA1A",
+    "disease:SCN1A",
+    "disease:SCN8A",
+    "disease:CDKL5",
+    "disease:SCN2A",
+    "disease:STXBP1",
+    "disease:CPLX1",
+    "disease:GRIN2B",
+    "disease:KCNT1"
+   ],
+   "node_id": "disease:KCNQ2",
+   "match": "instance",
+   "justification": "KCNQ2 neonatal-onset epileptic encephalopathy",
+   "raw_node_id": "disease:KCNQ2",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.800Z"
+  },
+  "87ebced5b4e93292": {
+   "mention": "burst suppression",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010851",
+    "phenotype:HP:0000716",
+    "phenotype:HP:0000749",
+    "phenotype:HP:0002341",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0000746",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0000822",
+    "phenotype:HP:0002344",
+    "phenotype:HP:0002202"
+   ],
+   "node_id": "phenotype:HP:0010851",
+   "match": "same",
+   "justification": "EEG burst suppression",
+   "raw_node_id": "phenotype:HP:0010851",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.800Z"
+  },
+  "df95036165751746": {
+   "mention": "epileptic spasms",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011097",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0012469",
+    "phenotype:HP:0002133",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0001257",
+    "phenotype:HP:0002313",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0002510",
+    "phenotype:HP:0011099"
+   ],
+   "node_id": "phenotype:HP:0011097",
+   "match": "same",
+   "justification": "Epileptic spasms",
+   "raw_node_id": "phenotype:HP:0011097",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.800Z"
+  },
+  "baafa6c82ac6cfe4": {
+   "mention": "developmental delay",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001263",
+    "phenotype:HP:0011344",
+    "phenotype:HP:0011343",
+    "phenotype:HP:0012736",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0001510",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0012569"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "Developmental delay",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.800Z"
+  },
+  "839e48a3ee7142df": {
+   "mention": "poison tetrameric channel functions",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:potassium-channel-activity",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:action-potential",
+    "mech:ras-protein-signal-transduction",
+    "mech:lysosomal-storage",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:synaptic-vesicle-fusion"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Poisoning tetramers implies dominant-negative, not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.800Z"
+  },
+  "63e890ab18eb634f": {
+   "mention": "EZO",
+   "type": "therapy",
+   "candidates": [
+    "therapy:kv7-openers",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:ambroxol",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:arimoclomol"
+   ],
+   "node_id": "therapy:kv7-openers",
+   "match": "same",
+   "justification": "EZO = ezogabine",
+   "raw_node_id": "therapy:kv7-openers",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.800Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.800Z",
+   "request_payload": {
+    "title": "KCNQ2 encephalopathy: Features, mutational hot spots, and ezogabine treatment of 11 patients.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "neonatal-onset epileptic encephalopathy",
+      "declared_type": "disease",
+      "sentence": "CONCLUSIONS: KCNQ2 variants cause neonatal-onset epileptic encephalopathy of widely varying severity.",
+      "candidates": [
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CACNA1A",
+        "type": "disease",
+        "label": "CACNA1A-related disorders",
+        "synonyms": [
+         "episodic ataxia type 2",
+         "EA2",
+         "FHM1",
+         "SCA6",
+         "DEE42",
+         "CaV2.1",
+         "MHP1",
+         "familial hemiplegic migraine type 1"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CACNA1A (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KCNT1",
+        "type": "disease",
+        "label": "KCNT1-related disorders",
+        "synonyms": [
+         "EIMFS",
+         "epilepsy of infancy with migrating focal seizures",
+         "DEE14",
+         "ADNFLE",
+         "ENFL5",
+         "KCNT1 autosomal dominant nocturnal frontal lobe epilepsy",
+         "autosomal dominant nocturnal frontal lobe epilepsy caused by mutation in KCNT1",
+         "autosomal dominant nocturnal frontal lobe epilepsy type 5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNT1 (4 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "burst suppression",
+      "declared_type": "phenotype",
+      "sentence": "Of the 20 EEGs obtained within a week of birth, 11 showed burst suppression.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010851",
+        "type": "phenotype",
+        "label": "EEG with burst suppression",
+        "note": "HPO HP:0010851"
+       },
+       {
+        "id": "phenotype:HP:0000716",
+        "type": "phenotype",
+        "label": "Depression",
+        "note": "HPO HP:0000716"
+       },
+       {
+        "id": "phenotype:HP:0000749",
+        "type": "phenotype",
+        "label": "Paroxysmal bursts of laughter",
+        "note": "HPO HP:0000749"
+       },
+       {
+        "id": "phenotype:HP:0002341",
+        "type": "phenotype",
+        "label": "Cervical cord compression",
+        "note": "HPO HP:0002341"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0000746",
+        "type": "phenotype",
+        "label": "Delusion",
+        "note": "HPO HP:0000746"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0000822",
+        "type": "phenotype",
+        "label": "Hypertension",
+        "note": "HPO HP:0000822"
+       },
+       {
+        "id": "phenotype:HP:0002344",
+        "type": "phenotype",
+        "label": "Progressive neurologic deterioration",
+        "note": "HPO HP:0002344"
+       },
+       {
+        "id": "phenotype:HP:0002202",
+        "type": "phenotype",
+        "label": "Pleural effusion",
+        "note": "HPO HP:0002202"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "epileptic spasms",
+      "declared_type": "phenotype",
+      "sentence": "When new seizure types appeared in infancy (15 patients), the most common were epileptic spasms (n = 8).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0012469",
+        "type": "phenotype",
+        "label": "Infantile spasms",
+        "note": "HPO HP:0012469"
+       },
+       {
+        "id": "phenotype:HP:0002133",
+        "type": "phenotype",
+        "label": "Status epilepticus",
+        "note": "HPO HP:0002133"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0001257",
+        "type": "phenotype",
+        "label": "Spasticity",
+        "note": "HPO HP:0001257"
+       },
+       {
+        "id": "phenotype:HP:0002313",
+        "type": "phenotype",
+        "label": "Spastic paraparesis",
+        "note": "HPO HP:0002313"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0002510",
+        "type": "phenotype",
+        "label": "Spastic tetraplegia",
+        "note": "HPO HP:0002510"
+       },
+       {
+        "id": "phenotype:HP:0011099",
+        "type": "phenotype",
+        "label": "Spastic hemiparesis",
+        "note": "HPO HP:0011099"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "developmental delay",
+      "declared_type": "phenotype",
+      "sentence": "Development was delayed in all, severely in 14.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0011343",
+        "type": "phenotype",
+        "label": "Moderate global developmental delay",
+        "note": "HPO HP:0011343"
+       },
+       {
+        "id": "phenotype:HP:0012736",
+        "type": "phenotype",
+        "label": "Profound global developmental delay",
+        "note": "HPO HP:0012736"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0001510",
+        "type": "phenotype",
+        "label": "Growth delay",
+        "note": "HPO HP:0001510"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0012569",
+        "type": "phenotype",
+        "label": "Delayed menarche",
+        "note": "HPO HP:0012569"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "poison tetrameric channel functions",
+      "declared_type": "mechanism",
+      "sentence": "They were clustered in 4 protein subdomains predicted to poison tetrameric channel functions.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "EZO",
+      "declared_type": "therapy",
+      "sentence": "EZO use (assessed by the treating physicians and parents) was associated with improvement in seizures and/or development in 3 of the 4 treated before 6 months of age, and 2 of the 7 treated later; no serious side effects were observed.",
+      "candidates": [
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"neonatal-onset epileptic encephalopathy\",\"node_id\":\"disease:KCNQ2\",\"match\":\"instance\",\"justification\":\"KCNQ2 neonatal-onset epileptic encephalopathy\"},{\"mention_id\":\"m2\",\"mention\":\"burst suppression\",\"node_id\":\"phenotype:HP:0010851\",\"match\":\"same\",\"justification\":\"EEG burst suppression\"},{\"mention_id\":\"m3\",\"mention\":\"epileptic spasms\",\"node_id\":\"phenotype:HP:0011097\",\"match\":\"same\",\"justification\":\"Epileptic spasms\"},{\"mention_id\":\"m4\",\"mention\":\"developmental delay\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"Developmental delay\"},{\"mention_id\":\"m5\",\"mention\":\"poison tetrameric channel functions\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Poisoning tetramers implies dominant-negative, not among candidates\"},{\"mention_id\":\"m6\",\"mention\":\"EZO\",\"node_id\":\"therapy:kv7-openers\",\"match\":\"same\",\"justification\":\"EZO = ezogabine\"}]}"
+  }
+ ]
+}

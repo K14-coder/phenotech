@@ -1,0 +1,61 @@
+{
+ "pmid": "17011223",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.533Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e4ffc7452e9d77d0",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/17011223.json",
+ "claims": [
+  {
+   "subject_mention": "laronidase",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "mucopolysaccharidosis I",
+   "object_type": "disease",
+   "quote": "Recombinant human alpha-L-iduronidase (Aldurazyme, laronidase) was approved as an enzyme replacement therapy for patients with the lysosomal storage disorder, mucopolysaccharidosis I (MPS I).",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "laronidase",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "MPS I",
+   "object_type": "disease",
+   "quote": "Overall these data represent the first evidence that laronidase can stabilize or reverse many aspects of MPS I disease during long-term therapy and that early treatment prior to the development of substantial cardiac and skeletal disease may lead to better outcomes.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MPS I",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "sleep apnea",
+   "object_type": "phenotype",
+   "quote": "Sleep apnea was decreased in four of five patients and the airway size index improved.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MPS I",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "valve disease",
+   "object_type": "phenotype",
+   "quote": "Cardiac disease evaluations showed no progression to heart failure or cor pulmonale but pre-existing significant valve disease did progress in some patients.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

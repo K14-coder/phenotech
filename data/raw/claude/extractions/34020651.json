@@ -1,0 +1,61 @@
+{
+ "pmid": "34020651",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.586Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "054d6c8f548c16bf",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/34020651.json",
+ "claims": [
+  {
+   "subject_mention": "Kv7.2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epilepsy",
+   "object_type": "disease",
+   "quote": "An epilepsy-causing mutation leads to co-translational misfolding of the Kv7.2 channel.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNQ2 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "misfolding of the encoded Kv7.2 channel",
+   "object_type": "mechanism",
+   "quote": "Mutations in the KCNQ2 gene associated with human epilepsy have been suggested to cause misfolding of the encoded Kv7.2 channel.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Kv7.2 W344R",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "decreases channel function",
+   "object_type": "mechanism",
+   "quote": "RESULTS: We report that the epilepsy W344R mutation within the IQ motif of CRD decreases channel function, but contrary to other mutations at this site, it does not impair the interaction with Calmodulin (CaM) in vitro, as monitored by multiple in vitro binding assays.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Kv7.2 W344R",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "impedes proper folding during translation",
+   "object_type": "mechanism",
+   "quote": "Binding to CaM is impaired when the mutated protein is produced in cellulo but not in vitro, suggesting that this mutation impedes proper folding during translation within the cell by forcing the nascent chain to follow a folding route that leads to a non-native configuration, and thereby generating non-functional ion channels that fail to traffic to proper neuronal compartments.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

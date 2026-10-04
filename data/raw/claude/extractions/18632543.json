@@ -1,0 +1,73 @@
+{
+ "pmid": "18632543",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.538Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "5b1e413049551a94",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/18632543.json",
+ "claims": [
+  {
+   "subject_mention": "Simvastatin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "neurofibromatosis type 1",
+   "object_type": "disease",
+   "quote": "Effect of simvastatin on cognitive functioning in children with neurofibromatosis type 1: a randomized controlled trial.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "simvastatin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NF1",
+   "object_type": "disease",
+   "quote": "CONCLUSION: In this 12-week trial, simvastatin did not improve cognitive function in children with NF1.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "statin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NF1",
+   "object_type": "disease",
+   "quote": "Recently, it was shown that statin-mediated inhibition of 3-hydroxy-3-methylglutaryl coenzyme A reductase restores the cognitive deficits in an NF1 mouse model.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "statin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "inhibition of 3-hydroxy-3-methylglutaryl coenzyme A reductase",
+   "object_type": "mechanism",
+   "quote": "Recently, it was shown that statin-mediated inhibition of 3-hydroxy-3-methylglutaryl coenzyme A reductase restores the cognitive deficits in an NF1 mouse model.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis type 1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "learning disabilities",
+   "object_type": "phenotype",
+   "quote": "CONTEXT: Neurofibromatosis type 1 (NF1) is among the most common genetic disorders that cause learning disabilities.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

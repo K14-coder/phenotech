@@ -1,0 +1,109 @@
+{
+ "pmid": "40609755",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.625Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e0ef5ef9d316bf34",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40609755.json",
+ "claims": [
+  {
+   "subject_mention": "ASM",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Acid sphingomyelinase deficiency (ASMD)",
+   "object_type": "disease",
+   "quote": "Acid sphingomyelinase deficiency (ASMD) is a rare disease caused by mutations in the gene encoding ASM, an enzyme that degrades sphingomyelin (SM).",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurovisceral ASMD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive impairment",
+   "object_type": "phenotype",
+   "quote": "In addition to SM accumulation, neuroinflammation and cognitive impairment are pathological hallmarks of neurovisceral ASMD.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "acid sphingomyelinase deficiency",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "sphingomyelin-induced glucocorticoid receptor alterations",
+   "object_type": "mechanism",
+   "quote": "Sphingomyelin-induced glucocorticoid receptor alterations lead to impaired presynaptic plasticity in acid sphingomyelinase deficient neurons.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "acid sphingomyelinase deficiency",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "impaired presynaptic plasticity",
+   "object_type": "mechanism",
+   "quote": "Sphingomyelin-induced glucocorticoid receptor alterations lead to impaired presynaptic plasticity in acid sphingomyelinase deficient neurons.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "low synapsin I expression and disorganization of synaptic vesicles",
+   "object_type": "mechanism",
+   "quote": "As a consequence, the expression of the protein, synapsin I, is low in ASMko neurons, leading to the disorganization of synaptic vesicles and to impaired presynaptic plasticity.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hydrocortisone",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "SM levels",
+   "object_type": "mechanism",
+   "quote": "Treatment with the glucocorticoid hydrocortisone diminished SM levels, increased synapsin I expression, and improved presynaptic function in neuronal cultures and hippocampal slices of ASMko mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hydrocortisone",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "synapsin I expression and presynaptic function",
+   "object_type": "mechanism",
+   "quote": "Treatment with the glucocorticoid hydrocortisone diminished SM levels, increased synapsin I expression, and improved presynaptic function in neuronal cultures and hippocampal slices of ASMko mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "hydrocortisone",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "ASMD",
+   "object_type": "disease",
+   "quote": "Treatment with the glucocorticoid hydrocortisone diminished SM levels, increased synapsin I expression, and improved presynaptic function in neuronal cultures and hippocampal slices of ASMko mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

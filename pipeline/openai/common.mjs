@@ -1,6 +1,12 @@
 /**
- * Shared helpers for the OpenAI cross-check layer (extract -> reconcile -> compare).
+ * Shared helpers for the independent-reading cross-check layer (extract -> reconcile -> compare).
  * Dependency-free Node ESM. Paths are resolved from this file, so scripts run from any cwd.
+ *
+ * READER selects whose reading this run handles; each reader keeps its own caches, fragment, crosscheck
+ * file and report, and labels its evidence `<reader>:<model>`:
+ *   READER=openai (default)  model calls via integrations/openai (Sign in with ChatGPT)
+ *   READER=claude            claims written by a Claude agent reading the same stored abstracts with the
+ *                            same instructions and schema (no API calls from these scripts)
  */
 import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -10,13 +16,23 @@ import { fileURLToPath } from 'node:url';
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const RAW_BIO_PUBMED = path.join(ROOT, 'data/raw/biology/pubmed');
 export const RAW_COMMUNITY_PUBMED = path.join(ROOT, 'data/raw/community/pubmed');
-export const OUT_RAW = path.join(ROOT, 'data/raw/openai');
+export const READERS = ['openai', 'claude'];
+export const READER = (process.env.READER ?? 'openai').toLowerCase();
+if (!READERS.includes(READER)) throw new Error(`READER must be one of ${READERS.join(', ')}`);
+export const READER_LABEL = READER === 'claude' ? 'Claude' : 'OpenAI';
+/** extracted_by prefixes of every independent-reading layer (all are excluded from the curated baseline). */
+export const isReaderEvidence = (ev) => READERS.some((r) => String(ev?.extracted_by ?? '').startsWith(`${r}:`));
+export const RAW_FAMILIES = path.join(ROOT, 'data/raw/families');
+export const FAMILY_SETS = ['dee', 'lysosomal', 'rasopathy', 'cross'];
+export const OUT_RAW = path.join(ROOT, `data/raw/${READER}`);
 export const EXTRACTIONS = path.join(OUT_RAW, 'extractions');
 export const RECONCILE_CACHE = path.join(OUT_RAW, 'reconcile');
 export const GRAPH = process.env.ATLAS_GRAPH ?? path.join(ROOT, 'data/graph.json'); // override only for tests
-export const CROSSCHECK = path.join(ROOT, 'data/build/crosscheck.json');
-export const FRAGMENT = path.join(ROOT, 'data/curated/openai_extracted.json');
-export const REPORT = path.join(ROOT, 'docs/agent-reports/openai-extraction.md');
+export const CROSSCHECK = path.join(ROOT, READER === 'openai' ? 'data/build/crosscheck.json' : `data/build/crosscheck_${READER}.json`);
+export const FRAGMENT = path.join(ROOT, `data/curated/${READER}_extracted.json`);
+export const CANDIDATES = path.join(ROOT, `data/build/${READER}_candidate_edges.json`);
+const READER_FRAGMENTS = new Set(READERS.map((r) => `${r}_extracted.json`));
+export const REPORT = path.join(ROOT, `docs/agent-reports/${READER}-extraction.md`);
 export const USAGE_LOG = path.join(OUT_RAW, 'usage_log.jsonl');
 export const RUN_STATE = path.join(OUT_RAW, 'run_state.json');
 
@@ -128,13 +144,33 @@ export function loadCommunityAbstracts() {
   return [...out.values()].sort((a, b) => a.pmid.localeCompare(b.pmid));
 }
 
-/** All abstracts keyed by PMID: biology first (they win on overlap), then community. */
+/** Stored family abstracts: data/raw/families/<family>/pubmed/<PMID>.json (same fields as biology). */
+export function loadFamilyAbstracts(family) {
+  const dir = path.join(RAW_FAMILIES, family, 'pubmed');
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => /^\d+\.json$/.test(f))
+    .sort()
+    .map((f) => {
+      const r = readJson(path.join(dir, f));
+      return {
+        pmid: String(r.pmid), title: r.title ?? '', abstract: r.abstract ?? '', year: r.year ? Number(r.year) : null,
+        journal: r.journal ?? null, pub_types: r.pub_types ?? [], url: r.url ?? `https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/`,
+        origin: `data/raw/families/${family}/pubmed/${f}`,
+      };
+    })
+    .filter((r) => r.abstract.trim());
+}
+
+/** All abstracts keyed by PMID: biology first (they win on overlap), then community, then the families. */
 export function loadAllAbstracts() {
   const map = new Map();
   for (const r of loadBiologyAbstracts()) map.set(r.pmid, { ...r, set: 'biology' });
   for (const r of loadCommunityAbstracts()) if (!map.has(r.pmid)) map.set(r.pmid, { ...r, set: 'community' });
+  for (const fam of FAMILY_SETS) for (const r of loadFamilyAbstracts(fam)) if (!map.has(r.pmid)) map.set(r.pmid, { ...r, set: fam });
   return map;
 }
+export const ALL_SETS = ['biology', 'community', ...FAMILY_SETS];
 
 export const sourceText = (rec) => `${rec.title} ${rec.abstract}`;
 
@@ -148,9 +184,9 @@ const CURATED_DIR = path.join(ROOT, 'data/curated');
  * The curated graph to compare against. Once build_graph.py has merged openai_extracted.json and
  * crosscheck.json, graph.json also contains this layer's candidate edges, evidence and synonyms (from
  * whichever fragment version was merged); comparing against those would be circular. So, independent
- * of fragment versions: keep only synonyms that some non-OpenAI curated fragment (or overrides.json)
- * gives that node, drop evidence with extracted_by "openai:*", and drop edges left with no evidence
- * that no non-OpenAI fragment defines.
+ * of fragment versions: keep only synonyms that some curated fragment other than a reader's
+ * <reader>_extracted.json (or overrides.json) gives that node, drop evidence with extracted_by
+ * "openai:*" or "claude:*", and drop edges left with no evidence that no curated fragment defines.
  */
 export function loadBaselineGraph() {
   const graph = readJson(GRAPH);
@@ -161,7 +197,7 @@ export function loadBaselineGraph() {
     curatedSyn.get(id).add(String(s).toLowerCase());
   };
   for (const f of readdirSync(CURATED_DIR)) {
-    if (!f.endsWith('.json') || f === path.basename(FRAGMENT)) continue;
+    if (!f.endsWith('.json') || READER_FRAGMENTS.has(f)) continue;
     const d = readJson(path.join(CURATED_DIR, f));
     if (f === 'overrides.json') {
       for (const [id, patch] of Object.entries(d.node_patches ?? {})) for (const s of patch?.synonyms ?? []) addSyn(id, s);
@@ -173,9 +209,8 @@ export function loadBaselineGraph() {
   graph.nodes = graph.nodes.map((n) => (n.synonyms
     ? { ...n, synonyms: n.synonyms.filter((s) => curatedSyn.get(n.id)?.has(s.toLowerCase())) }
     : n));
-  const isOpenAI = (ev) => String(ev?.extracted_by ?? '').startsWith('openai:');
   graph.edges = graph.edges
-    .map((e) => ({ ...e, evidence: (e.evidence ?? []).filter((ev) => !isOpenAI(ev)), counter_evidence: (e.counter_evidence ?? []).filter((ev) => !isOpenAI(ev)) }))
+    .map((e) => ({ ...e, evidence: (e.evidence ?? []).filter((ev) => !isReaderEvidence(ev)), counter_evidence: (e.counter_evidence ?? []).filter((ev) => !isReaderEvidence(ev)) }))
     .filter((e) => curatedEdgeIds.has(e.id) || e.evidence.length || e.counter_evidence.length);
   return graph;
 }

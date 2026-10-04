@@ -1,0 +1,573 @@
+{
+ "pmid": "42787413",
+ "entries": {
+  "fb7606841297f4f4": {
+   "mention": "Fabry disease",
+   "type": "disease",
+   "candidates": [
+    "disease:GLA",
+    "disease:CLN3",
+    "disease:TPP1",
+    "disease:GAA",
+    "disease:GALC",
+    "disease:IDUA",
+    "disease:GBA1",
+    "disease:SLC2A1",
+    "disease:HEXA",
+    "disease:NF1"
+   ],
+   "node_id": "disease:GLA",
+   "match": "same",
+   "justification": "Fabry disease",
+   "raw_node_id": "disease:GLA",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.845Z"
+  },
+  "767cc604b1fe894a": {
+   "mention": "structural hypertrophy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0005144",
+    "phenotype:HP:0001712",
+    "phenotype:HP:0001639",
+    "phenotype:HP:0002059",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0025010",
+    "phenotype:HP:0001276",
+    "phenotype:HP:0000822",
+    "phenotype:HP:0000316",
+    "phenotype:HP:0000648"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Cardiac hypertrophy type unspecified",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.845Z"
+  },
+  "6929d9106257fb56": {
+   "mention": "mechanical dysfunction",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0005609",
+    "phenotype:HP:0030147",
+    "phenotype:HP:0000073",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0000546",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0002341",
+    "phenotype:HP:0011096",
+    "phenotype:HP:0004963",
+    "phenotype:HP:0006536"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.845Z"
+  },
+  "2835614ba5faf0ad": {
+   "mention": "electrical conduction abnormalities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000762",
+    "phenotype:HP:0030467",
+    "phenotype:HP:0002353",
+    "phenotype:HP:0004466",
+    "phenotype:HP:0040296",
+    "phenotype:HP:0011636",
+    "phenotype:HP:0012249",
+    "phenotype:HP:0002492",
+    "phenotype:HP:0030810",
+    "phenotype:HP:0011203"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No cardiac conduction candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.845Z"
+  },
+  "8e6cd3d4cfe8e5a7": {
+   "mention": "increasing QRS duration",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002922",
+    "phenotype:HP:0012796",
+    "phenotype:HP:0002835",
+    "phenotype:HP:0002180",
+    "phenotype:HP:0002333",
+    "phenotype:HP:0000073",
+    "phenotype:HP:0000546",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0033567",
+    "phenotype:HP:0003575"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No QRS candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.845Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.845Z",
+   "request_payload": {
+    "title": "AI-assisted longitudinal cardiac phenotyping identifies domain-specific remodeling patterns in Fabry cardiomyopathy.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Fabry disease",
+      "declared_type": "disease",
+      "sentence": "Cardiac involvement in Fabry disease spans structural hypertrophy, mechanical dysfunction, and electrical conduction abnormalities that rarely progress in parallel.",
+      "candidates": [
+       {
+        "id": "disease:GLA",
+        "type": "disease",
+        "label": "GLA-related disorders (Fabry disease)",
+        "synonyms": [
+         "Fabry disease",
+         "Anderson-Fabry disease",
+         "alpha-galactosidase A deficiency",
+         "Alpha-galactosidase A deficiency",
+         "FD",
+         "Fabry's disease",
+         "Fd",
+         "angiokeratoma corporis diffusum"
+        ],
+        "summary": "X-linked deficiency of alpha-galactosidase A makes globotriaosylceramide (Gb3) build up in blood vessels, kidney, heart and nerves: pain crises, kidney failure,"
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "structural hypertrophy",
+      "declared_type": "phenotype",
+      "sentence": "Cardiac involvement in Fabry disease spans structural hypertrophy, mechanical dysfunction, and electrical conduction abnormalities that rarely progress in parallel.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0005144",
+        "type": "phenotype",
+        "label": "Ventricular septal hypertrophy",
+        "note": "HPO HP:0005144"
+       },
+       {
+        "id": "phenotype:HP:0001712",
+        "type": "phenotype",
+        "label": "Left ventricular hypertrophy",
+        "note": "HPO HP:0001712"
+       },
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0002059",
+        "type": "phenotype",
+        "label": "Cerebral atrophy",
+        "note": "HPO HP:0002059"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0025010",
+        "type": "phenotype",
+        "label": "Foveal atrophy",
+        "note": "HPO HP:0025010"
+       },
+       {
+        "id": "phenotype:HP:0001276",
+        "type": "phenotype",
+        "label": "Hypertonia",
+        "note": "HPO HP:0001276"
+       },
+       {
+        "id": "phenotype:HP:0000822",
+        "type": "phenotype",
+        "label": "Hypertension",
+        "note": "HPO HP:0000822"
+       },
+       {
+        "id": "phenotype:HP:0000316",
+        "type": "phenotype",
+        "label": "Hypertelorism",
+        "note": "HPO HP:0000316"
+       },
+       {
+        "id": "phenotype:HP:0000648",
+        "type": "phenotype",
+        "label": "Optic atrophy",
+        "note": "HPO HP:0000648"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "mechanical dysfunction",
+      "declared_type": "phenotype",
+      "sentence": "Cardiac involvement in Fabry disease spans structural hypertrophy, mechanical dysfunction, and electrical conduction abnormalities that rarely progress in parallel.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0005609",
+        "type": "phenotype",
+        "label": "Gallbladder dysfunction",
+        "note": "HPO HP:0005609"
+       },
+       {
+        "id": "phenotype:HP:0030147",
+        "type": "phenotype",
+        "label": "Truncal titubation",
+        "note": "HPO HP:0030147"
+       },
+       {
+        "id": "phenotype:HP:0000073",
+        "type": "phenotype",
+        "label": "Ureteral duplication",
+        "note": "HPO HP:0000073"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0002341",
+        "type": "phenotype",
+        "label": "Cervical cord compression",
+        "note": "HPO HP:0002341"
+       },
+       {
+        "id": "phenotype:HP:0011096",
+        "type": "phenotype",
+        "label": "Peripheral demyelination",
+        "note": "HPO HP:0011096"
+       },
+       {
+        "id": "phenotype:HP:0004963",
+        "type": "phenotype",
+        "label": "Calcification of the aorta",
+        "note": "HPO HP:0004963"
+       },
+       {
+        "id": "phenotype:HP:0006536",
+        "type": "phenotype",
+        "label": "Airway obstruction",
+        "note": "HPO HP:0006536"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "electrical conduction abnormalities",
+      "declared_type": "phenotype",
+      "sentence": "Cardiac involvement in Fabry disease spans structural hypertrophy, mechanical dysfunction, and electrical conduction abnormalities that rarely progress in parallel.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000762",
+        "type": "phenotype",
+        "label": "Decreased nerve conduction velocity",
+        "note": "HPO HP:0000762"
+       },
+       {
+        "id": "phenotype:HP:0030467",
+        "type": "phenotype",
+        "label": "Abnormal pattern electroretinogram",
+        "note": "HPO HP:0030467"
+       },
+       {
+        "id": "phenotype:HP:0002353",
+        "type": "phenotype",
+        "label": "EEG abnormality",
+        "note": "HPO HP:0002353"
+       },
+       {
+        "id": "phenotype:HP:0004466",
+        "type": "phenotype",
+        "label": "Delayed brainstem auditory evoked response conduction time",
+        "note": "HPO HP:0004466"
+       },
+       {
+        "id": "phenotype:HP:0040296",
+        "type": "phenotype",
+        "label": "Abnormal location of the eyebrow",
+        "note": "HPO HP:0040296"
+       },
+       {
+        "id": "phenotype:HP:0011636",
+        "type": "phenotype",
+        "label": "Abnormal coronary artery origin",
+        "note": "HPO HP:0011636"
+       },
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       },
+       {
+        "id": "phenotype:HP:0002492",
+        "type": "phenotype",
+        "label": "Abnormal corticospinal tract morphology",
+        "note": "HPO HP:0002492"
+       },
+       {
+        "id": "phenotype:HP:0030810",
+        "type": "phenotype",
+        "label": "Abnormal tongue physiology",
+        "note": "HPO HP:0030810"
+       },
+       {
+        "id": "phenotype:HP:0011203",
+        "type": "phenotype",
+        "label": "EEG with abnormally slow frequencies",
+        "note": "HPO HP:0011203"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "increasing QRS duration",
+      "declared_type": "phenotype",
+      "sentence": "During a median of 5.3 years (interquartile range, 2.8-7.1 years) follow-up, electrical remodeling showed an adverse trend, with QRS duration increasing from 128.21 ± 31.18 ms to 139.63 ± 37.95 ms (Δ + 11.42 ms, 95% CI 5.93-16.92; p < 0.001).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002922",
+        "type": "phenotype",
+        "label": "Increased CSF protein concentration",
+        "note": "HPO HP:0002922"
+       },
+       {
+        "id": "phenotype:HP:0012796",
+        "type": "phenotype",
+        "label": "Increased cup-to-disc ratio",
+        "note": "HPO HP:0012796"
+       },
+       {
+        "id": "phenotype:HP:0002835",
+        "type": "phenotype",
+        "label": "Aspiration",
+        "note": "HPO HP:0002835"
+       },
+       {
+        "id": "phenotype:HP:0002180",
+        "type": "phenotype",
+        "label": "Neurodegeneration",
+        "note": "HPO HP:0002180"
+       },
+       {
+        "id": "phenotype:HP:0002333",
+        "type": "phenotype",
+        "label": "Motor deterioration",
+        "note": "HPO HP:0002333"
+       },
+       {
+        "id": "phenotype:HP:0000073",
+        "type": "phenotype",
+        "label": "Ureteral duplication",
+        "note": "HPO HP:0000073"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0033567",
+        "type": "phenotype",
+        "label": "Right axis deviation",
+        "note": "HPO HP:0033567"
+       },
+       {
+        "id": "phenotype:HP:0003575",
+        "type": "phenotype",
+        "label": "Increased intracellular sodium",
+        "note": "HPO HP:0003575"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Fabry disease\",\"node_id\":\"disease:GLA\",\"match\":\"same\",\"justification\":\"Fabry disease\"},{\"mention_id\":\"m2\",\"mention\":\"structural hypertrophy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Cardiac hypertrophy type unspecified\"},{\"mention_id\":\"m3\",\"mention\":\"mechanical dysfunction\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No candidate\"},{\"mention_id\":\"m4\",\"mention\":\"electrical conduction abnormalities\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No cardiac conduction candidate\"},{\"mention_id\":\"m5\",\"mention\":\"increasing QRS duration\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No QRS candidate\"}]}"
+  }
+ ]
+}

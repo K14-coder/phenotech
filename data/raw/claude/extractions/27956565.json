@@ -1,0 +1,49 @@
+{
+ "pmid": "27956565",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.559Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "f794ced063360463",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/27956565.json",
+ "claims": [
+  {
+   "subject_mention": "lovastatin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "neurofibromatosis type 1",
+   "object_type": "disease",
+   "quote": "Randomized placebo-controlled study of lovastatin in children with neurofibromatosis type 1.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromatosis type 1 (NF1)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive and behavioral deficits",
+   "object_type": "phenotype",
+   "quote": "OBJECTIVE: To assess the efficacy of lovastatin on visuospatial learning and attention for treating cognitive and behavioral deficits in children with neurofibromatosis type 1 (NF1).",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "visuospatial learning or attention deficits",
+   "object_type": "phenotype",
+   "quote": "Children with NF1 aged 8-15 years were screened for visuospatial learning or attention deficits (n = 272); 146 children demonstrated deficits at baseline and were randomly assigned to lovastatin (n = 74; 40 mg/d) or placebo (n = 70).",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

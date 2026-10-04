@@ -1,0 +1,109 @@
+{
+ "pmid": "25576396",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.553Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "8af7f2a74446eca9",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/25576396.json",
+ "claims": [
+  {
+   "subject_mention": "Na(V)1.1 (SCN1A)",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "genetic epilepsies",
+   "object_type": "disease",
+   "quote": "Mutations of the voltage gated Na(+) channel Na(V)1.1 (SCN1A) are important causes of different genetic epilepsies and can also cause familial hemiplegic migraine (FHM-III).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(V)1.1 (SCN1A)",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "familial hemiplegic migraine (FHM-III)",
+   "object_type": "disease",
+   "quote": "Mutations of the voltage gated Na(+) channel Na(V)1.1 (SCN1A) are important causes of different genetic epilepsies and can also cause familial hemiplegic migraine (FHM-III).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "FHM-III Na(V)1.1 mutant",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "folding defective",
+   "object_type": "mechanism",
+   "quote": "Recently, we have identified a folding defective FHM-III Na(V)1.1 mutant that showed overall gain of function when rescued, consistent with a differential pathomechanism.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "FHM-III Na(V)1.1 mutant",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "Recently, we have identified a folding defective FHM-III Na(V)1.1 mutant that showed overall gain of function when rescued, consistent with a differential pathomechanism.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(V)1.1 epileptogenic missense mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "All the mutants showed loss of function and reduced cell surface expression, consistently with possibility of rescue.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(V)1.1 epileptogenic mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "Importantly, epileptogenic mutants showed overall loss of function even upon rescue, differently than FHM-III ones.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "phenytoin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "folding defects",
+   "object_type": "mechanism",
+   "quote": "Four of them were rescuable by incubation at low temperature and interactions with different co-expressed proteins or a pharmacological chaperone (phenytoin).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CsEI",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "folding defects",
+   "object_type": "mechanism",
+   "quote": "Notably, CsEI was able to rescue four mutants.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

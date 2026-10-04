@@ -1,0 +1,73 @@
+{
+ "pmid": "41604001",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.632Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c2eb025118a1db7d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41604001.json",
+ "claims": [
+  {
+   "subject_mention": "Globoid cell leukodystrophy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "galactocerebrosidase deficiency",
+   "object_type": "mechanism",
+   "quote": "Globoid cell leukodystrophy (GLD) is a progressive neurodegenerative disease caused by galactocerebrosidase deficiency.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HSCT",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "juvenile GLD",
+   "object_type": "disease",
+   "quote": "HSCT significantly impacts the natural history of juvenile GLD, resulting in largely optimal long-term outcomes, preserved quality of life, and minimal disability.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "juvenile GLD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "white matter disease",
+   "object_type": "phenotype",
+   "quote": "Two symptomatic patients-with extensive pre-HSCT white matter disease and specific pre-HSCT clinical features (epilepsy and cognitive impairment)-had suboptimal outcomes.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "juvenile GLD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epilepsy",
+   "object_type": "phenotype",
+   "quote": "Two symptomatic patients-with extensive pre-HSCT white matter disease and specific pre-HSCT clinical features (epilepsy and cognitive impairment)-had suboptimal outcomes.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "juvenile GLD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive impairment",
+   "object_type": "phenotype",
+   "quote": "Two symptomatic patients-with extensive pre-HSCT white matter disease and specific pre-HSCT clinical features (epilepsy and cognitive impairment)-had suboptimal outcomes.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

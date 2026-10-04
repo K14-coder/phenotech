@@ -1,0 +1,121 @@
+{
+ "pmid": "34431999",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.588Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "41b2b34f951bb1b1",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/34431999.json",
+ "claims": [
+  {
+   "subject_mention": "SCN8A variants causing developmental and epileptic encephalopathy",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "Two variants causing developmental and epileptic encephalopathy showed a strong gain-of-function (hyperpolarizing shift of steady-state activation, strongly increased neuronal firing rate) and one variant causing benign familial infantile epilepsy or intermediate epilepsy showed a mild gain-of-function (defective fast inactivation, less increased firing).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A variant causing benign familial infantile epilepsy or intermediate epilepsy",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "Two variants causing developmental and epileptic encephalopathy showed a strong gain-of-function (hyperpolarizing shift of steady-state activation, strongly increased neuronal firing rate) and one variant causing benign familial infantile epilepsy or intermediate epilepsy showed a mild gain-of-function (defective fast inactivation, less increased firing).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A variants causing generalized epilepsy",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "In contrast, all three variants causing generalized epilepsy induced a loss-of-function (reduced current amplitudes, depolarizing shift of steady-state activation, reduced neuronal firing).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "generalized epilepsy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "generalized epileptiform discharges",
+   "object_type": "phenotype",
+   "quote": "Those in Groups 1-3 presented with focal or multifocal seizures (median age of onset: 4 months) and focal epileptiform discharges, whereas the onset of seizures in patients with generalized epilepsy was later (median: 42 months) with generalized epileptiform discharges.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Generalized epilepsy with absence seizures",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "Generalized epilepsy with absence seizures is the main epilepsy phenotype of loss-of-function variant carriers and the extent of the electrophysiological dysfunction of the gain-of-function variants is a main determinant of the severity of the clinical phenotype in focal epilepsies.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "sodium channel blockers",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "Gain-of-function variant carriers responded significantly better to sodium channel blockers than to other anti-seizure medications, and the same applied for all individuals in Groups 1-3.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "sodium channel blockers",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SCN8A-related focal epilepsy",
+   "object_type": "disease",
+   "quote": "Our pharmacological data indicate that sodium channel blockers present a treatment option in SCN8A-related focal epilepsy with onset in the first year of life.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "absence seizures",
+   "object_type": "phenotype",
+   "quote": "Six different clinical subgroups were identified: Group 1, benign familial infantile epilepsy (n = 15, normal cognition, treatable seizures); Group 2, intermediate epilepsy (n = 33, mild intellectual disability, partially pharmaco-responsive); Group 3, developmental and epileptic encephalopathy (n = 177, severe intellectual disability, majority pharmaco-resistant); Group 4, generalized epilepsy (n = 20, mild to moderate intellectual disability, frequently with absence seizures); Group 5, unclassifiable epilepsy (n = 127); and Group 6, neurodevelopmental disorder without epilepsy (n = 20, mild to moderate intellectual disability).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A-related disorders",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe intellectual disability",
+   "object_type": "phenotype",
+   "quote": "Six different clinical subgroups were identified: Group 1, benign familial infantile epilepsy (n = 15, normal cognition, treatable seizures); Group 2, intermediate epilepsy (n = 33, mild intellectual disability, partially pharmaco-responsive); Group 3, developmental and epileptic encephalopathy (n = 177, severe intellectual disability, majority pharmaco-resistant); Group 4, generalized epilepsy (n = 20, mild to moderate intellectual disability, frequently with absence seizures); Group 5, unclassifiable epilepsy (n = 127); and Group 6, neurodevelopmental disorder without epilepsy (n = 20, mild to moderate intellectual disability).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

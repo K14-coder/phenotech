@@ -1,0 +1,73 @@
+{
+ "pmid": "28029918",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.560Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "f4f8d1346ccc3571",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/28029918.json",
+ "claims": [
+  {
+   "subject_mention": "Selumetinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Neurofibromatosis Type 1-Related Plexiform Neurofibromas",
+   "object_type": "disease",
+   "quote": "Activity of Selumetinib in Neurofibromatosis Type 1-Related Plexiform Neurofibromas.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "selumetinib",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "MAPK kinase (MEK) 1 and 2",
+   "object_type": "mechanism",
+   "quote": "METHODS: We conducted a phase 1 trial of selumetinib (AZD6244 or ARRY-142886), an oral selective inhibitor of MAPK kinase (MEK) 1 and 2, in children who had neurofibromatosis type 1 and inoperable plexiform neurofibromas to determine the maximum tolerated dose and to evaluate plasma pharmacokinetics.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "selumetinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "neurofibromatosis type 1-related neurofibroma",
+   "object_type": "disease",
+   "quote": "We also tested selumetinib using a mouse model of neurofibromatosis type 1-related neurofibroma.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromatosis type 1-related plexiform neurofibromas",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "elevated RAS-mitogen-activated protein kinase (MAPK) signaling",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Effective medical therapies are lacking for the treatment of neurofibromatosis type 1-related plexiform neurofibromas, which are characterized by elevated RAS-mitogen-activated protein kinase (MAPK) signaling.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "selumetinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "neurofibromatosis type 1",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: Our early-phase data suggested that children with neurofibromatosis type 1 and inoperable plexiform neurofibromas benefited from long-term dose-adjusted treatment with selumetinib without having excess toxic effects.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

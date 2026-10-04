@@ -1,0 +1,37 @@
+{
+ "pmid": "31862249",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.578Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1a83f408e599bf4a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/31862249.json",
+ "claims": [
+  {
+   "subject_mention": "fenfluramine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "INTERPRETATION: In Dravet syndrome, fenfluramine provided significantly greater reduction in convulsive seizure frequency compared with placebo and was generally well tolerated, with no observed valvular heart disease or pulmonary arterial hypertension.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Dravet syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "multiple types of frequent, disabling seizures",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: Dravet syndrome is a rare, treatment-resistant developmental epileptic encephalopathy characterised by multiple types of frequent, disabling seizures.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

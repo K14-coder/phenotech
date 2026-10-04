@@ -1,0 +1,570 @@
+{
+ "pmid": "40702562",
+ "entries": {
+  "5ad8a7559abec4bf": {
+   "mention": "Gene therapy",
+   "type": "therapy",
+   "candidates": [
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:etx101",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:eliglustat",
+    "therapy:kv7-openers",
+    "therapy:quinidine",
+    "therapy:ganaxolone",
+    "therapy:sodium-channel-blockers"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "CLN3 gene therapy not among therapy candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.830Z"
+  },
+  "9c27c89c74cf5c6f": {
+   "mention": "peripheral neuromuscular symptoms",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002068",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0011096",
+    "phenotype:HP:0100697",
+    "phenotype:HP:0031475",
+    "phenotype:HP:0005988",
+    "phenotype:HP:0006851",
+    "phenotype:HP:0007229",
+    "phenotype:HP:0002529",
+    "phenotype:HP:0005144"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Peripheral neuromuscular symptoms too broad",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.830Z"
+  },
+  "08c45ba0657ed53c": {
+   "mention": "myopathic alterations",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001639",
+    "phenotype:HP:0003445",
+    "phenotype:HP:0002180",
+    "phenotype:HP:0002835",
+    "phenotype:HP:0002333",
+    "phenotype:HP:0000073",
+    "phenotype:HP:0000546",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0001308"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Myopathic alterations not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.830Z"
+  },
+  "d43cb9fba9f50be3": {
+   "mention": "AAV9.hCLN3",
+   "type": "therapy",
+   "candidates": [
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:etx101",
+    "therapy:cerliponase-alfa",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:ambroxol",
+    "therapy:aminopyridine-presynaptic-boost"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "AAV9.hCLN3 not among therapy candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.830Z"
+  },
+  "6aed374f29313393": {
+   "mention": "terminal Schwann cell loss",
+   "type": "mechanism",
+   "candidates": [
+    "mech:loss-of-function",
+    "mech:glycosaminoglycan-catabolism",
+    "mech:lysosomal-protein-catabolism",
+    "mech:intracellular-cholesterol-transport",
+    "mech:dominant-negative",
+    "mech:lysosomal-storage",
+    "mech:glycogen-catabolism",
+    "mech:ras-protein-signal-transduction",
+    "mech:action-potential",
+    "mech:negative-regulation-of-ras-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Terminal Schwann cell loss not a candidate mechanism",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.830Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.830Z",
+   "request_payload": {
+    "title": "Gene therapy ameliorates neuromuscular pathology in CLN3 disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Gene therapy",
+      "declared_type": "therapy",
+      "sentence": "Gene therapy ameliorates neuromuscular pathology in CLN3 disease.",
+      "candidates": [
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:etx101",
+        "type": "therapy",
+        "label": "ETX101 (AAV9-delivered gene therapy for SCN1A Dravet syndrome)",
+        "synonyms": [
+         "ETX101"
+        ],
+        "summary": "An AAV9-delivered gene therapy in phase 1/2 for SCN1A-positive Dravet syndrome."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:ganaxolone",
+        "type": "therapy",
+        "label": "Ganaxolone",
+        "synonyms": [
+         "ZTALMY"
+        ],
+        "summary": "A neuroactive steroid with an FDA label for seizures associated with CDKL5 deficiency disorder."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "peripheral neuromuscular symptoms",
+      "declared_type": "phenotype",
+      "sentence": "CLN3 disease is a neuronopathic lysosomal storage disorder that severely impacts the central nervous system (CNS) while also inducing notable peripheral neuromuscular symptoms.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002068",
+        "type": "phenotype",
+        "label": "Neuromuscular dysphagia",
+        "note": "HPO HP:0002068"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0011096",
+        "type": "phenotype",
+        "label": "Peripheral demyelination",
+        "note": "HPO HP:0011096"
+       },
+       {
+        "id": "phenotype:HP:0100697",
+        "type": "phenotype",
+        "label": "Malignant peripheral nerve sheath tumor",
+        "note": "HPO HP:0100697"
+       },
+       {
+        "id": "phenotype:HP:0031475",
+        "type": "phenotype",
+        "label": "Status epilepticus without prominent motor symptoms",
+        "note": "HPO HP:0031475"
+       },
+       {
+        "id": "phenotype:HP:0005988",
+        "type": "phenotype",
+        "label": "Congenital muscular torticollis",
+        "note": "HPO HP:0005988"
+       },
+       {
+        "id": "phenotype:HP:0006851",
+        "type": "phenotype",
+        "label": "Symmetric spinal nerve root neurofibromas",
+        "note": "HPO HP:0006851"
+       },
+       {
+        "id": "phenotype:HP:0007229",
+        "type": "phenotype",
+        "label": "Intracerebral periventricular calcifications",
+        "note": "HPO HP:0007229"
+       },
+       {
+        "id": "phenotype:HP:0002529",
+        "type": "phenotype",
+        "label": "Neuronal loss in central nervous system",
+        "note": "HPO HP:0002529"
+       },
+       {
+        "id": "phenotype:HP:0005144",
+        "type": "phenotype",
+        "label": "Ventricular septal hypertrophy",
+        "note": "HPO HP:0005144"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "myopathic alterations",
+      "declared_type": "phenotype",
+      "sentence": "Similar myopathic alterations were present in a muscle biopsy from an 8-year-old human CLN3 patient shortly after diagnosis.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0003445",
+        "type": "phenotype",
+        "label": "EMG: neuropathic changes",
+        "note": "HPO HP:0003445"
+       },
+       {
+        "id": "phenotype:HP:0002180",
+        "type": "phenotype",
+        "label": "Neurodegeneration",
+        "note": "HPO HP:0002180"
+       },
+       {
+        "id": "phenotype:HP:0002835",
+        "type": "phenotype",
+        "label": "Aspiration",
+        "note": "HPO HP:0002835"
+       },
+       {
+        "id": "phenotype:HP:0002333",
+        "type": "phenotype",
+        "label": "Motor deterioration",
+        "note": "HPO HP:0002333"
+       },
+       {
+        "id": "phenotype:HP:0000073",
+        "type": "phenotype",
+        "label": "Ureteral duplication",
+        "note": "HPO HP:0000073"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0001308",
+        "type": "phenotype",
+        "label": "Tongue fasciculations",
+        "note": "HPO HP:0001308"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "AAV9.hCLN3",
+      "declared_type": "therapy",
+      "sentence": "To assess a potential therapeutic intervention, we administered intravenous gene therapy using AAV9.hCLN3 to neonatal Cln3Δex7/8 mice, which at disease endstage, entirely prevented tSC loss and NMJ abnormalities, while also averting skeletal muscle atrophy.",
+      "candidates": [
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:etx101",
+        "type": "therapy",
+        "label": "ETX101 (AAV9-delivered gene therapy for SCN1A Dravet syndrome)",
+        "synonyms": [
+         "ETX101"
+        ],
+        "summary": "An AAV9-delivered gene therapy in phase 1/2 for SCN1A-positive Dravet syndrome."
+       },
+       {
+        "id": "therapy:cerliponase-alfa",
+        "type": "therapy",
+        "label": "Cerliponase alfa (intraventricular enzyme replacement for CLN2)",
+        "synonyms": [
+         "Brineura",
+         "rhTPP1"
+        ],
+        "summary": "Recombinant TPP1 delivered straight into the fluid spaces of the brain, bypassing the blood-brain barrier. It slows the loss of walking and language in CLN2 dis"
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "terminal Schwann cell loss",
+      "declared_type": "mechanism",
+      "sentence": "To assess a potential therapeutic intervention, we administered intravenous gene therapy using AAV9.hCLN3 to neonatal Cln3Δex7/8 mice, which at disease endstage, entirely prevented tSC loss and NMJ abnormalities, while also averting skeletal muscle atrophy.",
+      "candidates": [
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:intracellular-cholesterol-transport",
+        "type": "mechanism",
+        "label": "Intracellular cholesterol transport",
+        "note": "kind: process",
+        "summary": "The directed movement of cholesterol, cholest-5-en-3-beta-ol, within cells."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Gene therapy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"CLN3 gene therapy not among therapy candidates\"},{\"mention_id\":\"m2\",\"mention\":\"peripheral neuromuscular symptoms\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Peripheral neuromuscular symptoms too broad\"},{\"mention_id\":\"m3\",\"mention\":\"myopathic alterations\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Myopathic alterations not among candidates\"},{\"mention_id\":\"m4\",\"mention\":\"AAV9.hCLN3\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"AAV9.hCLN3 not among therapy candidates\"},{\"mention_id\":\"m5\",\"mention\":\"terminal Schwann cell loss\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Terminal Schwann cell loss not a candidate mechanism\"}]}"
+  }
+ ]
+}

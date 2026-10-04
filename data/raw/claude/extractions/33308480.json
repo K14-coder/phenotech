@@ -1,0 +1,109 @@
+{
+ "pmid": "33308480",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.584Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "71338f086c54fcdd",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/33308480.json",
+ "claims": [
+  {
+   "subject_mention": "NPC1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Niemann-Pick type C",
+   "object_type": "disease",
+   "quote": "In Niemann-Pick type C (NPC), loss of the cholesterol exporter, NPC1, causes cholesterol accumulation within lysosomes, leading to mTORC1 hyperactivation, disrupted mitochondrial function, and neurodegeneration.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NPC1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "cholesterol export",
+   "object_type": "mechanism",
+   "quote": "In Niemann-Pick type C (NPC), loss of the cholesterol exporter, NPC1, causes cholesterol accumulation within lysosomes, leading to mTORC1 hyperactivation, disrupted mitochondrial function, and neurodegeneration.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Niemann-Pick type C",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "cholesterol accumulation within lysosomes",
+   "object_type": "mechanism",
+   "quote": "In Niemann-Pick type C (NPC), loss of the cholesterol exporter, NPC1, causes cholesterol accumulation within lysosomes, leading to mTORC1 hyperactivation, disrupted mitochondrial function, and neurodegeneration.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Niemann-Pick type C",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "mTORC1 hyperactivation",
+   "object_type": "mechanism",
+   "quote": "In Niemann-Pick type C (NPC), loss of the cholesterol exporter, NPC1, causes cholesterol accumulation within lysosomes, leading to mTORC1 hyperactivation, disrupted mitochondrial function, and neurodegeneration.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pharmacologic mTORC1 inhibition",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "lysosomal proteolysis",
+   "object_type": "mechanism",
+   "quote": "Genetic and pharmacologic mTORC1 inhibition restores lysosomal proteolysis without correcting cholesterol storage, implicating aberrant mTORC1 as a pathogenic driver downstream of cholesterol accumulation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pharmacologic mTORC1 inhibition",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "cholesterol storage",
+   "object_type": "mechanism",
+   "quote": "Genetic and pharmacologic mTORC1 inhibition restores lysosomal proteolysis without correcting cholesterol storage, implicating aberrant mTORC1 as a pathogenic driver downstream of cholesterol accumulation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "mTORC1 inhibition",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "mitochondrial dysfunction",
+   "object_type": "mechanism",
+   "quote": "Consistently, mTORC1 inhibition ameliorates mitochondrial dysfunction in a neuronal model of NPC.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "mTORC1 inhibition",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NPC",
+   "object_type": "disease",
+   "quote": "Consistently, mTORC1 inhibition ameliorates mitochondrial dysfunction in a neuronal model of NPC.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

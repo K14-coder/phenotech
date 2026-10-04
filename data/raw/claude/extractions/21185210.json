@@ -1,0 +1,49 @@
+{
+ "pmid": "21185210",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.544Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "43bc530da77a57e9",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/21185210.json",
+ "claims": [
+  {
+   "subject_mention": "Pyrimethamine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "β-hexosaminidase A activity",
+   "object_type": "mechanism",
+   "quote": "Pyrimethamine increases β-hexosaminidase A activity in patients with Late Onset Tay Sachs.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pyrimethamine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Late Onset Tay Sachs",
+   "object_type": "disease",
+   "quote": "Pyrimethamine increases β-hexosaminidase A activity in patients with Late Onset Tay Sachs.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PMT",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "HexA activity",
+   "object_type": "mechanism",
+   "quote": "PMT therapy can increase HexA activity in LOTS in vivo.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

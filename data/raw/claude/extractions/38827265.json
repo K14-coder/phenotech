@@ -1,0 +1,49 @@
+{
+ "pmid": "38827265",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.609Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "40d73833033ed426",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/38827265.json",
+ "claims": [
+  {
+   "subject_mention": "trametinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "RAF1-Related Obstructive Hypertrophic Cardiomyopathy",
+   "object_type": "disease",
+   "quote": "Treatment of RAF1-Related Obstructive Hypertrophic Cardiomyopathy by MEK Inhibition Using Trametinib.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RASopathies",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "upregulated mitogen-activated protein kinase activity",
+   "object_type": "mechanism",
+   "quote": "RASopathies cause nonsarcomeric hypertrophic cardiomyopathy via dysregulated signaling through RAS and upregulated mitogen-activated protein kinase activity.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "trametinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "RAF1-associated hypertrophic cardiomyopathy",
+   "object_type": "disease",
+   "quote": "We provide the first report of the successful treatment of an adult with RAF1-associated hypertrophic cardiomyopathy using trametinib, a MEK inhibitor.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

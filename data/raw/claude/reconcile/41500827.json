@@ -1,0 +1,943 @@
+{
+ "pmid": "41500827",
+ "entries": {
+  "913719b823dd4a8f": {
+   "mention": "Hexb",
+   "type": "gene",
+   "candidates": [
+    "gene:GBA1",
+    "gene:HEXA",
+    "gene:SLC2A1",
+    "gene:ARSA",
+    "gene:BRAF",
+    "gene:CACNA1A",
+    "gene:CBL",
+    "gene:CDKL5",
+    "gene:CLN3",
+    "gene:CPLX1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "HEXB not a candidate gene",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "8ae2d7dd61644b8d": {
+   "mention": "Sandhoff disease",
+   "type": "disease",
+   "candidates": [
+    "disease:GBA1",
+    "disease:CLN3",
+    "disease:TPP1",
+    "disease:GAA",
+    "disease:GLA",
+    "disease:GALC",
+    "disease:IDUA",
+    "disease:HEXA",
+    "disease:SLC2A1",
+    "disease:NF1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Sandhoff disease is HEXB, not HEXA",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "6ca4db5f3d1513ec": {
+   "mention": "Nizubaglustat",
+   "type": "therapy",
+   "candidates": [
+    "therapy:eliglustat",
+    "therapy:statins-nf1-cognition",
+    "therapy:miglustat",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:migalastat",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:hsct-krabbe",
+    "therapy:sodium-channel-blockers",
+    "therapy:ambroxol"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "nizubaglustat not a listed therapy",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "291cc797c72e8a64": {
+   "mention": "glucosylceramide synthase inhibition",
+   "type": "mechanism",
+   "candidates": [
+    "mech:glucose-transmembrane-transport",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:lysosome-organization",
+    "mech:lysosomal-storage",
+    "mech:protein-destabilization",
+    "mech:glycosaminoglycan-catabolism",
+    "mech:positive-regulation-of-ras-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "GCS inhibition not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "af2d64165c6a8267": {
+   "mention": "non-lysosomal glucocerebrosidase inhibition",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:lysosomal-protein-catabolism",
+    "mech:lysosome-organization",
+    "mech:glucose-transmembrane-transport",
+    "mech:action-potential",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ras-protein-signal-transduction",
+    "mech:gain-of-function",
+    "mech:loss-of-function"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "GBA2 inhibition not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  },
+  "26f973abf2367b72": {
+   "mention": "GM2 Gangliosidosis",
+   "type": "disease",
+   "candidates": [
+    "disease:HEXA",
+    "disease:GBA1",
+    "disease:ARSA",
+    "disease:GALC",
+    "disease:IDUA",
+    "disease:IDS",
+    "disease:LZTR1",
+    "disease:NF1",
+    "disease:PTPN11",
+    "disease:SOS1"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "GM2 gangliosidosis broader (here Sandhoff)",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.835Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.835Z",
+   "request_payload": {
+    "title": "Therapeutic Effects of Nizubaglustat in a Mouse Model of GM2 Gangliosidosis.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Hexb",
+      "declared_type": "gene",
+      "sentence": "To test the potential efficacy of nizubaglustat in a mouse model of GM2 gangliosidoses, we treated Sandhoff disease (SD) mice carrying a homozygous null mutation in the Hexb gene, as well as healthy heterozygous controls, to understand exposure versus effect under disease conditions.",
+      "candidates": [
+       {
+        "id": "gene:GBA1",
+        "type": "gene",
+        "label": "GBA1",
+        "synonyms": [
+         "glucocerebrosidase",
+         "GCase",
+         "acid beta-glucosidase",
+         "GBA",
+         "GLUC",
+         "Lysosomal acid glucosylceramidase",
+         "Acid beta-glucosidase",
+         "Alglucerase"
+        ],
+        "summary": "Glucosylceramidase that catalyzes, within the lysosomal compartment, the hydrolysis of glucosylceramides/GlcCers (such as beta-D-glucosyl-(1<->1')-N-acylsphing-"
+       },
+       {
+        "id": "gene:HEXA",
+        "type": "gene",
+        "label": "HEXA",
+        "synonyms": [
+         "beta-hexosaminidase subunit alpha",
+         "hexosaminidase A",
+         "Hex A",
+         "Beta-hexosaminidase subunit alpha",
+         "Beta-N-acetylhexosaminidase subunit alpha",
+         "Hexosaminidase subunit A",
+         "N-acetyl-beta-glucosaminidase subunit alpha"
+        ],
+        "summary": "Hydrolyzes the non-reducing end N-acetyl-D-hexosamine and/or sulfated N-acetyl-D-hexosamine of glycoconjugates, such as the oligosaccharide moieties from protei"
+       },
+       {
+        "id": "gene:SLC2A1",
+        "type": "gene",
+        "label": "SLC2A1",
+        "synonyms": [
+         "GLUT1",
+         "GLUT-1",
+         "glucose transporter 1",
+         "DYT18",
+         "DYT9",
+         "GLUT",
+         "HTLVR",
+         "CSE"
+        ],
+        "summary": "Facilitative glucose transporter, which is responsible for constitutive or basal glucose uptake (PubMed:10227690, PubMed:10954735, PubMed:18245775, PubMed:19449"
+       },
+       {
+        "id": "gene:ARSA",
+        "type": "gene",
+        "label": "ARSA",
+        "synonyms": [
+         "arylsulfatase A",
+         "ASA",
+         "Arylsulfatase A",
+         "Cerebroside-sulfatase"
+        ],
+        "summary": "Lysosomal enzyme that catalyzes the hydrolysis of cerebroside-3-sulfate (N-acyl-1-beta-D-(3-O-sulfo)-galactosyl-sphing-4-enine) into cerebroside and sulfate, a "
+       },
+       {
+        "id": "gene:BRAF",
+        "type": "gene",
+        "label": "BRAF",
+        "synonyms": [
+         "B-Raf",
+         "BRAF1",
+         "BRAF-1",
+         "Serine/threonine-protein kinase B-raf",
+         "Proto-oncogene B-Raf",
+         "p94",
+         "v-Raf murine sarcoma viral oncogene homolog B1"
+        ],
+        "summary": "Protein kinase involved in the transduction of mitogenic signals from the cell membrane to the nucleus (Probable). Phosphorylates MAP2K1, and thereby activates "
+       },
+       {
+        "id": "gene:CACNA1A",
+        "type": "gene",
+        "label": "CACNA1A",
+        "synonyms": [
+         "Cav2.1",
+         "CaV2.1",
+         "P/Q-type calcium channel alpha 1A",
+         "EA2",
+         "APCA",
+         "HPCA",
+         "FHM",
+         "CACNL1A4"
+        ],
+        "summary": "Voltage-sensitive calcium channels (VSCC) mediate the entry of calcium ions into excitable cells and are also involved in a variety of calcium-dependent process"
+       },
+       {
+        "id": "gene:CBL",
+        "type": "gene",
+        "label": "CBL",
+        "synonyms": [
+         "c-Cbl",
+         "CBL2",
+         "RNF55",
+         "E3 ubiquitin-protein ligase CBL",
+         "Casitas B-lineage lymphoma proto-oncogene",
+         "Proto-oncogene c-Cbl",
+         "RING finger protein 55",
+         "RING-type E3 ubiquitin transferase CBL"
+        ],
+        "summary": "E3 ubiquitin-protein ligase that acts as a negative regulator of many signaling pathways by mediating ubiquitination of cell surface receptors (PubMed:10514377,"
+       },
+       {
+        "id": "gene:CDKL5",
+        "type": "gene",
+        "label": "CDKL5",
+        "synonyms": [
+         "STK9",
+         "cyclin-dependent kinase-like 5",
+         "EIEE2",
+         "CFAP247",
+         "Cyclin-dependent kinase-like 5",
+         "Serine/threonine-protein kinase 9"
+        ],
+        "summary": "Mediates phosphorylation of MECP2 (PubMed:15917271, PubMed:16935860). May regulate ciliogenesis (PubMed:29420175)"
+       },
+       {
+        "id": "gene:CLN3",
+        "type": "gene",
+        "label": "CLN3",
+        "synonyms": [
+         "battenin",
+         "CLN3 lysosomal/endosomal transmembrane protein",
+         "BTN1",
+         "JNCL",
+         "SLC29B1",
+         "BTS",
+         "Battenin",
+         "Batten disease protein"
+        ],
+        "summary": "Mediates microtubule-dependent, anterograde transport connecting the Golgi network, endosomes, autophagosomes, lysosomes and plasma membrane, and participates i"
+       },
+       {
+        "id": "gene:CPLX1",
+        "type": "gene",
+        "label": "CPLX1",
+        "synonyms": [
+         "complexin-1",
+         "CPX-I",
+         "Complexin-1",
+         "Complexin I",
+         "CPX I",
+         "Synaphin-2"
+        ],
+        "summary": "Positively regulates a late step in exocytosis of various cytoplasmic vesicles, such as synaptic vesicles and other secretory vesicles (PubMed:21785414). Organi"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "Sandhoff disease",
+      "declared_type": "disease",
+      "sentence": "To test the potential efficacy of nizubaglustat in a mouse model of GM2 gangliosidoses, we treated Sandhoff disease (SD) mice carrying a homozygous null mutation in the Hexb gene, as well as healthy heterozygous controls, to understand exposure versus effect under disease conditions.",
+      "candidates": [
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       },
+       {
+        "id": "disease:GAA",
+        "type": "disease",
+        "label": "GAA-related disorders (Pompe disease)",
+        "synonyms": [
+         "Pompe disease",
+         "glycogen storage disease type II",
+         "GSD II",
+         "acid maltase deficiency",
+         "IOPD",
+         "LOPD",
+         "GSD due to acid maltase deficiency, infantile onset",
+         "GSD type 2, infantile onset"
+        ],
+        "summary": "Deficiency of acid alpha-glucosidase makes glycogen build up inside lysosomes of muscle cells, causing muscle weakness and breathing problems; the infantile for"
+       },
+       {
+        "id": "disease:GLA",
+        "type": "disease",
+        "label": "GLA-related disorders (Fabry disease)",
+        "synonyms": [
+         "Fabry disease",
+         "Anderson-Fabry disease",
+         "alpha-galactosidase A deficiency",
+         "Alpha-galactosidase A deficiency",
+         "FD",
+         "Fabry's disease",
+         "Fd",
+         "angiokeratoma corporis diffusum"
+        ],
+        "summary": "X-linked deficiency of alpha-galactosidase A makes globotriaosylceramide (Gb3) build up in blood vessels, kidney, heart and nerves: pain crises, kidney failure,"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "Nizubaglustat",
+      "declared_type": "therapy",
+      "sentence": "Nizubaglustat is a novel selective inhibitor of glucosylceramide synthase (GCS) and the non-lysosomal glucocerebrosidase (NLGase, GbA2) with brain penetrant properties.",
+      "candidates": [
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "glucosylceramide synthase inhibition",
+      "declared_type": "mechanism",
+      "sentence": "Nizubaglustat is a novel selective inhibitor of glucosylceramide synthase (GCS) and the non-lysosomal glucocerebrosidase (NLGase, GbA2) with brain penetrant properties.",
+      "candidates": [
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "non-lysosomal glucocerebrosidase inhibition",
+      "declared_type": "mechanism",
+      "sentence": "Nizubaglustat is a novel selective inhibitor of glucosylceramide synthase (GCS) and the non-lysosomal glucocerebrosidase (NLGase, GbA2) with brain penetrant properties.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "GM2 Gangliosidosis",
+      "declared_type": "disease",
+      "sentence": "Therapeutic Effects of Nizubaglustat in a Mouse Model of GM2 Gangliosidosis.",
+      "candidates": [
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Hexb\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"HEXB not a candidate gene\"},{\"mention_id\":\"m2\",\"mention\":\"Sandhoff disease\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Sandhoff disease is HEXB, not HEXA\"},{\"mention_id\":\"m3\",\"mention\":\"Nizubaglustat\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"nizubaglustat not a listed therapy\"},{\"mention_id\":\"m4\",\"mention\":\"glucosylceramide synthase inhibition\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"GCS inhibition not a candidate\"},{\"mention_id\":\"m5\",\"mention\":\"non-lysosomal glucocerebrosidase inhibition\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"GBA2 inhibition not a candidate\"},{\"mention_id\":\"m6\",\"mention\":\"GM2 Gangliosidosis\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"GM2 gangliosidosis broader (here Sandhoff)\"}]}"
+  }
+ ]
+}

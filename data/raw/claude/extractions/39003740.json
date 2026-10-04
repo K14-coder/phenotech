@@ -1,0 +1,85 @@
+{
+ "pmid": "39003740",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.610Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "0450ba4dca2e5a43",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/39003740.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Noonan syndrome patients harboring causative variants in LZTR1 are particularly at risk to develop severe and early-onset hypertrophic cardiomyopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe and early-onset hypertrophic cardiomyopathy",
+   "object_type": "phenotype",
+   "quote": "Noonan syndrome patients harboring causative variants in LZTR1 are particularly at risk to develop severe and early-onset hypertrophic cardiomyopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "recessive Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Mutation-induced LZTR1 polymerization",
+   "object_type": "mechanism",
+   "quote": "Mutation-induced LZTR1 polymerization provokes cardiac pathology in recessive Noonan syndrome.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 mutation",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "LZTR1 polymerization",
+   "object_type": "mechanism",
+   "quote": "Mutation-induced LZTR1 polymerization provokes cardiac pathology in recessive Noonan syndrome.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "MRAS degradation",
+   "object_type": "mechanism",
+   "quote": "Furthermore, our data show that cardiomyocyte-specific MRAS degradation is mediated by LZTR1 via non-proteasomal pathways, whereas RIT1 degradation is mediated by both LZTR1-dependent and LZTR1-independent pathways.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "RIT1 degradation",
+   "object_type": "mechanism",
+   "quote": "Furthermore, our data show that cardiomyocyte-specific MRAS degradation is mediated by LZTR1 via non-proteasomal pathways, whereas RIT1 degradation is mediated by both LZTR1-dependent and LZTR1-independent pathways.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

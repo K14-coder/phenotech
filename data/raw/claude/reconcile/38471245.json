@@ -1,0 +1,109 @@
+{
+ "pmid": "38471245",
+ "entries": {
+  "b770e5a0ed93fae8": {
+   "mention": "epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0002133",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0002131",
+    "phenotype:HP:0031475",
+    "phenotype:HP:0030842"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no general epilepsy candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.880Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.880Z",
+   "request_payload": {
+    "title": "Epilepsy in neurofibromatosis type 1: Prevalence, phenotype, and genotype in adults.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "CONCLUSIONS: In patients with NF1, although resolution of epilepsy over time was observed in many cases, the prevalence of epilepsy was higher among adults with NF1 than that reported in the general population.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0002133",
+        "type": "phenotype",
+        "label": "Status epilepticus",
+        "note": "HPO HP:0002133"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0002131",
+        "type": "phenotype",
+        "label": "Episodic ataxia",
+        "note": "HPO HP:0002131"
+       },
+       {
+        "id": "phenotype:HP:0031475",
+        "type": "phenotype",
+        "label": "Status epilepticus without prominent motor symptoms",
+        "note": "HPO HP:0031475"
+       },
+       {
+        "id": "phenotype:HP:0030842",
+        "type": "phenotype",
+        "label": "Choking episodes",
+        "note": "HPO HP:0030842"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"epilepsy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no general epilepsy candidate\"}]}"
+  }
+ ]
+}

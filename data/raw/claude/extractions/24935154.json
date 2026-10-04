@@ -1,0 +1,109 @@
+{
+ "pmid": "24935154",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.550Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "5e1a5e4cd3d6d4dd",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/24935154.json",
+ "claims": [
+  {
+   "subject_mention": "SHP2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome (NS)",
+   "object_type": "disease",
+   "quote": "Germline mutations in SHP2 are known to cause both Noonan syndrome (NS) and LEOPARD syndrome (LS), two clinically similar autosomal dominant developmental disorders.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHP2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "LEOPARD syndrome (LS)",
+   "object_type": "disease",
+   "quote": "Germline mutations in SHP2 are known to cause both Noonan syndrome (NS) and LEOPARD syndrome (LS), two clinically similar autosomal dominant developmental disorders.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS-associated SHP2 mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "elevated phosphatase activity",
+   "object_type": "mechanism",
+   "quote": "NS-associated SHP2 mutants display elevated phosphatase activity, while LS-associated SHP2 mutants exhibit reduced catalytic activity.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LS-associated SHP2 mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "reduced catalytic activity",
+   "object_type": "mechanism",
+   "quote": "NS-associated SHP2 mutants display elevated phosphatase activity, while LS-associated SHP2 mutants exhibit reduced catalytic activity.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LEOPARD syndrome-associated SHP2 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "Molecular basis of gain-of-function LEOPARD syndrome-associated SHP2 mutations.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LS-causing mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "weakening of the intramolecular interaction between the N-SH2 and PTP domains",
+   "object_type": "mechanism",
+   "quote": "The results reveal that LS-causing mutations not only affect SHP2 phosphatase activity but also induce a weakening of the intramolecular interaction between the N-SH2 and PTP domains, leading to mutants that are more readily activated by competing pTyr ligands.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHP2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "activation of the RAS-ERK1/2 cascade",
+   "object_type": "mechanism",
+   "quote": "The Src homology 2 (SH2) domain-containing protein tyrosine phosphatase 2 (SHP2) is a critical signal transducer downstream of growth factors that promotes the activation of the RAS-ERK1/2 cascade.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "catalytically impaired SHP2 mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain-of-function properties",
+   "object_type": "mechanism",
+   "quote": "Consequently, catalytically impaired SHP2 mutants could display gain-of-function properties because of their ability to localize to the vicinity of substrates for longer periods of time, thereby affording the opportunity for prolonged substrate turnover and sustained RAS-ERK1/2 activation.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "pmid": "38471245",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.608Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "6d16b5181d3ef4c3",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/38471245.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epilepsy",
+   "object_type": "phenotype",
+   "quote": "CONCLUSIONS: In patients with NF1, although resolution of epilepsy over time was observed in many cases, the prevalence of epilepsy was higher among adults with NF1 than that reported in the general population.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "pmid": "25383899",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.553Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "4b930673f1536de7",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/25383899.json",
+ "claims": [
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive deficits",
+   "object_type": "phenotype",
+   "quote": "In Noonan syndrome (NS) 30-50% of subjects show cognitive deficits of unknown etiology and with no known treatment.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "mitogen-activated protein kinase kinase (MEK) inhibitor",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "In addition, viral overexpression of an NS-associated allele PTPN11(D61G) in adult mouse hippocampus results in increased baseline excitatory synaptic function and deficits in LTP and spatial learning, which can be reversed by a mitogen-activated protein kinase kinase (MEK) inhibitor.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "lovastatin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "activation of the GTPase Ras-extracellular signal-related kinase (Erk) pathway",
+   "object_type": "mechanism",
+   "quote": "Furthermore, brief treatment with lovastatin reduces activation of the GTPase Ras-extracellular signal-related kinase (Erk) pathway in the brain and normalizes deficits in LTP and learning in adult Ptpn11(D61G/+) mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "lovastatin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "Furthermore, brief treatment with lovastatin reduces activation of the GTPase Ras-extracellular signal-related kinase (Erk) pathway in the brain and normalizes deficits in LTP and learning in adult Ptpn11(D61G/+) mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "increased basal Erk activity",
+   "object_type": "mechanism",
+   "quote": "Our results demonstrate that increased basal Erk activity and corresponding baseline increases in excitatory synaptic function are responsible for the LTP impairments and, consequently, the learning deficits in mouse models of NS.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "lovastatin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "These data also suggest that lovastatin or MEK inhibitors may be useful for treating the cognitive deficits in NS.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK inhibitors",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "These data also suggest that lovastatin or MEK inhibitors may be useful for treating the cognitive deficits in NS.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

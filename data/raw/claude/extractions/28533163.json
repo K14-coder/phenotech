@@ -1,0 +1,85 @@
+{
+ "pmid": "28533163",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.564Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a21f7a14df2c219f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/28533163.json",
+ "claims": [
+  {
+   "subject_mention": "GRIN2B",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epileptic encephalopathies",
+   "object_type": "disease",
+   "quote": "De novo gain of function mutations in GRIN2B encoding the GluN2B subunit of the N-methyl-d-aspartate (NMDA) receptor have been linked with epileptic encephalopathies, including infantile spasms.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GRIN2B de novo mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "De novo gain of function mutations in GRIN2B encoding the GluN2B subunit of the N-methyl-d-aspartate (NMDA) receptor have been linked with epileptic encephalopathies, including infantile spasms.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "radiprodil",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GluN2B-containing NMDA receptors",
+   "object_type": "mechanism",
+   "quote": "GRIN2B gain of function mutations are sensitive to radiprodil, a negative allosteric modulator of GluN2B-containing NMDA receptors.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "radiprodil",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GRIN2B gain of function",
+   "object_type": "mechanism",
+   "quote": "GRIN2B gain of function mutations are sensitive to radiprodil, a negative allosteric modulator of GluN2B-containing NMDA receptors.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "epileptic encephalopathies",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "The gain of function observed in the reported GRIN2B variants could be a key pathophysiological factor leading to neuronal hyper-excitability in epileptic encephalopathies.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "radiprodil",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "pediatric epileptic encephalopathies associated with GRIN2B mutations",
+   "object_type": "disease",
+   "quote": "Consequently, our data suggest that radiprodil may be a valuable therapeutic option for treatment of pediatric epileptic encephalopathies associated with GRIN2B mutations.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

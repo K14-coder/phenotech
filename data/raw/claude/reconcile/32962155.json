@@ -1,0 +1,464 @@
+{
+ "pmid": "32962155",
+ "entries": {
+  "098665f23d4153f5": {
+   "mention": "deficiency of lysosomal acid alpha-glucosidase",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:lysosomal-storage",
+    "mech:lysosomal-protein-catabolism",
+    "mech:haploinsufficiency",
+    "mech:gaba-reuptake",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:lysosome-organization",
+    "mech:positive-regulation-of-ras-signaling"
+   ],
+   "node_id": "mech:lysosomal-enzyme-deficiency",
+   "match": "instance",
+   "justification": "acid alpha-glucosidase deficiency",
+   "raw_node_id": "mech:lysosomal-enzyme-deficiency",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  },
+  "3c279149e10f8120": {
+   "mention": "progressive accumulation of glycogen",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:glycogen-catabolism",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:ca-triggered-exocytosis",
+    "mech:protein-destabilization",
+    "mech:glycosaminoglycan-catabolism"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "glycogen accumulation",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  },
+  "8cf5ea44c852d6db": {
+   "mention": "cardiac and skeletal muscle myopathy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0003725",
+    "phenotype:HP:0001639",
+    "phenotype:HP:0003554",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0025680",
+    "phenotype:HP:0033383",
+    "phenotype:HP:6000088",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0007105"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no myopathy term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  },
+  "754e64cc9f3c794c": {
+   "mention": "enzyme replacement therapy (ERT)",
+   "type": "therapy",
+   "candidates": [
+    "therapy:laronidase",
+    "therapy:idursulfase",
+    "therapy:olipudase-alfa",
+    "therapy:cerliponase-alfa",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:pabinafusp-alfa",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-hexa-hexb-gene-therapy"
+   ],
+   "node_id": "therapy:pompe-enzyme-replacement",
+   "match": "same",
+   "justification": "ERT for Pompe",
+   "raw_node_id": "therapy:pompe-enzyme-replacement",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.820Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.820Z",
+   "request_payload": {
+    "title": "Pompe Disease: New Developments in an Old Lysosomal Storage Disorder.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "deficiency of lysosomal acid alpha-glucosidase",
+      "declared_type": "mechanism",
+      "sentence": "Pompe disease, also known as glycogen storage disease type II, is caused by the lack or deficiency of a single enzyme, lysosomal acid alpha-glucosidase, leading to severe cardiac and skeletal muscle myopathy due to progressive accumulation of glycogen.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "progressive accumulation of glycogen",
+      "declared_type": "mechanism",
+      "sentence": "Pompe disease, also known as glycogen storage disease type II, is caused by the lack or deficiency of a single enzyme, lysosomal acid alpha-glucosidase, leading to severe cardiac and skeletal muscle myopathy due to progressive accumulation of glycogen.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "cardiac and skeletal muscle myopathy",
+      "declared_type": "phenotype",
+      "sentence": "Pompe disease, also known as glycogen storage disease type II, is caused by the lack or deficiency of a single enzyme, lysosomal acid alpha-glucosidase, leading to severe cardiac and skeletal muscle myopathy due to progressive accumulation of glycogen.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0003725",
+        "type": "phenotype",
+        "label": "Firm muscles",
+        "note": "HPO HP:0003725"
+       },
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0003554",
+        "type": "phenotype",
+        "label": "Type 2 muscle fiber atrophy",
+        "note": "HPO HP:0003554"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0025680",
+        "type": "phenotype",
+        "label": "Compound muscle action potential amplitude facilitation",
+        "note": "HPO HP:0025680"
+       },
+       {
+        "id": "phenotype:HP:0033383",
+        "type": "phenotype",
+        "label": "Decreased compound muscle action potential amplitude",
+        "note": "HPO HP:0033383"
+       },
+       {
+        "id": "phenotype:HP:6000088",
+        "type": "phenotype",
+        "label": "Reduced muscle alpha-1,4-glucosidase activity",
+        "note": "HPO HP:6000088"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0007105",
+        "type": "phenotype",
+        "label": "Infantile encephalopathy",
+        "note": "HPO HP:0007105"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "enzyme replacement therapy (ERT)",
+      "declared_type": "therapy",
+      "sentence": "The only disease-specific treatment available for Pompe disease patients is enzyme replacement therapy (ERT) which aims to halt the natural course of the illness.",
+      "candidates": [
+       {
+        "id": "therapy:laronidase",
+        "type": "therapy",
+        "label": "Laronidase (enzyme replacement for MPS I)",
+        "synonyms": [
+         "Aldurazyme"
+        ],
+        "summary": "Intravenous recombinant alpha-L-iduronidase for MPS I. It does not cross the blood-brain barrier, so it is not expected to treat the brain disease of the severe"
+       },
+       {
+        "id": "therapy:idursulfase",
+        "type": "therapy",
+        "label": "Idursulfase (enzyme replacement for MPS II)",
+        "synonyms": [
+         "Elaprase"
+        ],
+        "summary": "Intravenous recombinant iduronate-2-sulfatase for Hunter syndrome (MPS II)."
+       },
+       {
+        "id": "therapy:olipudase-alfa",
+        "type": "therapy",
+        "label": "Olipudase alfa (enzyme replacement for ASMD)",
+        "synonyms": [
+         "Xenpozyme",
+         "rhASM"
+        ],
+        "summary": "Intravenous recombinant acid sphingomyelinase, approved only for the non-brain manifestations of ASMD."
+       },
+       {
+        "id": "therapy:cerliponase-alfa",
+        "type": "therapy",
+        "label": "Cerliponase alfa (intraventricular enzyme replacement for CLN2)",
+        "synonyms": [
+         "Brineura",
+         "rhTPP1"
+        ],
+        "summary": "Recombinant TPP1 delivered straight into the fluid spaces of the brain, bypassing the blood-brain barrier. It slows the loss of walking and language in CLN2 dis"
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"deficiency of lysosomal acid alpha-glucosidase\",\"node_id\":\"mech:lysosomal-enzyme-deficiency\",\"match\":\"instance\",\"justification\":\"acid alpha-glucosidase deficiency\"},{\"mention_id\":\"m2\",\"mention\":\"progressive accumulation of glycogen\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"glycogen accumulation\"},{\"mention_id\":\"m3\",\"mention\":\"cardiac and skeletal muscle myopathy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no myopathy term\"},{\"mention_id\":\"m4\",\"mention\":\"enzyme replacement therapy (ERT)\",\"node_id\":\"therapy:pompe-enzyme-replacement\",\"match\":\"same\",\"justification\":\"ERT for Pompe\"}]}"
+  }
+ ]
+}

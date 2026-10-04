@@ -40,6 +40,7 @@ export interface EvalFile {
   known_collaboration_checks: Record<string, Check>;
   agreement: {
     openai_cross_check: { agree: number; pairs_both_cite: number; share: number; scope: string };
+    claude_cross_check?: { agree: number; pairs_both_cite: number; share: number; abstracts: number; scope: string };
     quote_verification: { verified: number; with_quote: number };
     dismech: { primary_mechanism_class_agrees: string; deep_compared: string[] };
     g2p_clingen_mechanism_class?: { available: boolean; diseases_with_external_class: number; agree_strict: number; agree_lenient: number };
@@ -249,6 +250,11 @@ export function AccuracySection() {
               <li>
                 Independent AI re-reading (OpenAI): {ai.agree} of {ai.pairs_both_cite} readings agree ({P(ai.share)}). One disease family, one model, abstracts only.
               </li>
+              {e.agreement.claude_cross_check && (
+                <li>
+                  Independent AI re-reading (Claude), the other three families: {e.agreement.claude_cross_check.agree} of {e.agreement.claude_cross_check.pairs_both_cite} readings agree ({P(e.agreement.claude_cross_check.share)}), over {e.agreement.claude_cross_check.abstracts} abstracts. Read blind to the curation, but parts of the atlas were curated with Claude, so this is weaker evidence than agreement between different models.
+                </li>
+              )}
               {g2p?.available && (
                 <li>
                   Disease mechanism class vs G2P and ClinGen: {g2p.agree_lenient} of {g2p.diseases_with_external_class} agree broadly, {g2p.agree_strict} exactly.

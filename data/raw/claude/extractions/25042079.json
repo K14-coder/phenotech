@@ -1,0 +1,97 @@
+{
+ "pmid": "25042079",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.551Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "fc09d21168ea981d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/25042079.json",
+ "claims": [
+  {
+   "subject_mention": "KCNT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "migrating partial seizures of infancy",
+   "object_type": "disease",
+   "quote": "The most common cause is a gain of function mutation in the potassium channel KCNT1.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1 gain of function mutation",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "The most common cause is a gain of function mutation in the potassium channel KCNT1.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "quinidine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "KCNT1",
+   "object_type": "mechanism",
+   "quote": "The antiarrhythmic drug quinidine is a partial antagonist of KCNT1 and hence may be a candidate drug for treatment of this condition.",
+   "study_type": "case_report",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "quinidine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "migrating partial seizures of infancy",
+   "object_type": "disease",
+   "quote": "The antiarrhythmic drug quinidine is a partial antagonist of KCNT1 and hence may be a candidate drug for treatment of this condition.",
+   "study_type": "case_report",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "quinidine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "migrating partial seizures of infancy",
+   "object_type": "disease",
+   "quote": "We report the case of a child with migrating partial seizures of infancy secondary to an activating mutation in KCNT1 treated with quinidine.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1 activating mutation",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "We report the case of a child with migrating partial seizures of infancy secondary to an activating mutation in KCNT1 treated with quinidine.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Migrating partial seizures of infancy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "treatment-resistant seizures",
+   "object_type": "phenotype",
+   "quote": "Migrating partial seizures of infancy is an early onset epileptic encephalopathy syndrome that is typically resistant to treatment.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

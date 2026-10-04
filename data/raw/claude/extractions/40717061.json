@@ -1,0 +1,37 @@
+{
+ "pmid": "40717061",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.626Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "22c8c6a259c3fa6e",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40717061.json",
+ "claims": [
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "interstitial lung disease-like pulmonary involvement",
+   "object_type": "phenotype",
+   "quote": "Pulmonary involvement resembles interstitial lung disease and often leads to decreased diffusion capacity of the lungs for carbon monoxide (DLCO).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "decreased DLCO",
+   "object_type": "phenotype",
+   "quote": "Pulmonary involvement resembles interstitial lung disease and often leads to decreased diffusion capacity of the lungs for carbon monoxide (DLCO).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

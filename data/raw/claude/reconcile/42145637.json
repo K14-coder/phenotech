@@ -1,0 +1,291 @@
+{
+ "pmid": "42145637",
+ "entries": {
+  "8efaf853eff1b3fe": {
+   "mention": "progressive cognitive decline",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000253",
+    "phenotype:HP:0000529",
+    "phenotype:HP:0007240",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0007199",
+    "phenotype:HP:0002344",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0000718",
+    "phenotype:HP:0008762"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Cognitive decline not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.839Z"
+  },
+  "44bc2d2d9d109870": {
+   "mention": "seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001250",
+    "phenotype:HP:0031165",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0020221",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0002349",
+    "phenotype:HP:0007359",
+    "phenotype:HP:0011153",
+    "phenotype:HP:0011167"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "same",
+   "justification": "Seizures",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.839Z"
+  },
+  "a26f0ae51c03cae3": {
+   "mention": "vision loss",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000529",
+    "phenotype:HP:0002371",
+    "phenotype:HP:0001125",
+    "phenotype:HP:0000746",
+    "phenotype:HP:0002529",
+    "phenotype:HP:0000716",
+    "phenotype:HP:0000822",
+    "phenotype:HP:0002202",
+    "phenotype:HP:0007015",
+    "phenotype:HP:0002835"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Vision loss broader than progressive visual loss",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.839Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.839Z",
+   "request_payload": {
+    "title": "Toward Early Diagnosis and Therapeutic Discovery in CLN3 Disease: A Computational Biomarker Discovery Framework.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "progressive cognitive decline",
+      "declared_type": "phenotype",
+      "sentence": "BACKGROUND: CLN3 disease, also known as juvenile neuronal ceroid lipofuscinosis, is a rare and neurodegenerative disorder characterized by the accumulation of lipopigments in the cells, progressive cognitive decline, seizures, and vision loss.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000253",
+        "type": "phenotype",
+        "label": "Progressive microcephaly",
+        "note": "HPO HP:0000253"
+       },
+       {
+        "id": "phenotype:HP:0000529",
+        "type": "phenotype",
+        "label": "Progressive visual loss",
+        "note": "HPO HP:0000529"
+       },
+       {
+        "id": "phenotype:HP:0007240",
+        "type": "phenotype",
+        "label": "Progressive gait ataxia",
+        "note": "HPO HP:0007240"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0007199",
+        "type": "phenotype",
+        "label": "Progressive spastic paraparesis",
+        "note": "HPO HP:0007199"
+       },
+       {
+        "id": "phenotype:HP:0002344",
+        "type": "phenotype",
+        "label": "Progressive neurologic deterioration",
+        "note": "HPO HP:0002344"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0000718",
+        "type": "phenotype",
+        "label": "Aggressive behavior",
+        "note": "HPO HP:0000718"
+       },
+       {
+        "id": "phenotype:HP:0008762",
+        "type": "phenotype",
+        "label": "Repetitive compulsive behavior",
+        "note": "HPO HP:0008762"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "seizures",
+      "declared_type": "phenotype",
+      "sentence": "BACKGROUND: CLN3 disease, also known as juvenile neuronal ceroid lipofuscinosis, is a rare and neurodegenerative disorder characterized by the accumulation of lipopigments in the cells, progressive cognitive decline, seizures, and vision loss.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0020221",
+        "type": "phenotype",
+        "label": "Clonic seizure",
+        "note": "HPO HP:0020221"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0002349",
+        "type": "phenotype",
+        "label": "Focal aware seizure",
+        "note": "HPO HP:0002349"
+       },
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0011167",
+        "type": "phenotype",
+        "label": "Focal tonic seizure",
+        "note": "HPO HP:0011167"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "vision loss",
+      "declared_type": "phenotype",
+      "sentence": "BACKGROUND: CLN3 disease, also known as juvenile neuronal ceroid lipofuscinosis, is a rare and neurodegenerative disorder characterized by the accumulation of lipopigments in the cells, progressive cognitive decline, seizures, and vision loss.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000529",
+        "type": "phenotype",
+        "label": "Progressive visual loss",
+        "note": "HPO HP:0000529"
+       },
+       {
+        "id": "phenotype:HP:0002371",
+        "type": "phenotype",
+        "label": "Loss of speech",
+        "note": "HPO HP:0002371"
+       },
+       {
+        "id": "phenotype:HP:0001125",
+        "type": "phenotype",
+        "label": "Transient unilateral blurring of vision",
+        "note": "HPO HP:0001125"
+       },
+       {
+        "id": "phenotype:HP:0000746",
+        "type": "phenotype",
+        "label": "Delusion",
+        "note": "HPO HP:0000746"
+       },
+       {
+        "id": "phenotype:HP:0002529",
+        "type": "phenotype",
+        "label": "Neuronal loss in central nervous system",
+        "note": "HPO HP:0002529"
+       },
+       {
+        "id": "phenotype:HP:0000716",
+        "type": "phenotype",
+        "label": "Depression",
+        "note": "HPO HP:0000716"
+       },
+       {
+        "id": "phenotype:HP:0000822",
+        "type": "phenotype",
+        "label": "Hypertension",
+        "note": "HPO HP:0000822"
+       },
+       {
+        "id": "phenotype:HP:0002202",
+        "type": "phenotype",
+        "label": "Pleural effusion",
+        "note": "HPO HP:0002202"
+       },
+       {
+        "id": "phenotype:HP:0007015",
+        "type": "phenotype",
+        "label": "Poor gross motor coordination",
+        "note": "HPO HP:0007015"
+       },
+       {
+        "id": "phenotype:HP:0002835",
+        "type": "phenotype",
+        "label": "Aspiration",
+        "note": "HPO HP:0002835"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"progressive cognitive decline\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Cognitive decline not among candidates\"},{\"mention_id\":\"m2\",\"mention\":\"seizures\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"same\",\"justification\":\"Seizures\"},{\"mention_id\":\"m3\",\"mention\":\"vision loss\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Vision loss broader than progressive visual loss\"}]}"
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "pmid": "32962155",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.582Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c413d1857f59805c",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/32962155.json",
+ "claims": [
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "deficiency of lysosomal acid alpha-glucosidase",
+   "object_type": "mechanism",
+   "quote": "Pompe disease, also known as glycogen storage disease type II, is caused by the lack or deficiency of a single enzyme, lysosomal acid alpha-glucosidase, leading to severe cardiac and skeletal muscle myopathy due to progressive accumulation of glycogen.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "progressive accumulation of glycogen",
+   "object_type": "mechanism",
+   "quote": "Pompe disease, also known as glycogen storage disease type II, is caused by the lack or deficiency of a single enzyme, lysosomal acid alpha-glucosidase, leading to severe cardiac and skeletal muscle myopathy due to progressive accumulation of glycogen.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pompe disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cardiac and skeletal muscle myopathy",
+   "object_type": "phenotype",
+   "quote": "Pompe disease, also known as glycogen storage disease type II, is caused by the lack or deficiency of a single enzyme, lysosomal acid alpha-glucosidase, leading to severe cardiac and skeletal muscle myopathy due to progressive accumulation of glycogen.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "enzyme replacement therapy (ERT)",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Pompe disease",
+   "object_type": "disease",
+   "quote": "The only disease-specific treatment available for Pompe disease patients is enzyme replacement therapy (ERT) which aims to halt the natural course of the illness.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,200 @@
+{
+ "pmid": "40267638",
+ "entries": {
+  "b226364dd9fca929": {
+   "mention": "hepatic involvement",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:6000976",
+    "phenotype:HP:0002487",
+    "phenotype:HP:0007704",
+    "phenotype:HP:0002240",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0000726",
+    "phenotype:HP:0000514",
+    "phenotype:HP:0000365",
+    "phenotype:HP:0001433",
+    "phenotype:HP:0004879"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "hepatic involvement broad",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.827Z"
+  },
+  "157aad8b53d66031": {
+   "mention": "liver fibrosis",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011974",
+    "phenotype:HP:0006583",
+    "phenotype:HP:0000169",
+    "phenotype:HP:0000508",
+    "phenotype:HP:0000975",
+    "phenotype:HP:0002171",
+    "phenotype:HP:0000709",
+    "phenotype:HP:0002650",
+    "phenotype:HP:0030426",
+    "phenotype:HP:0009736"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no liver fibrosis term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.827Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.827Z",
+   "request_payload": {
+    "title": "The value of MR spectroscopy and MR elastography in assessing hepatic involvement of chronic visceral acid sphingomyelinase deficiency in adults.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "hepatic involvement",
+      "declared_type": "phenotype",
+      "sentence": "Hepatic involvement is one of the main visceral manifestations of Acid Sphingomyelinase Deficiency (ASMD).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:6000976",
+        "type": "phenotype",
+        "label": "Intrahepatic inclusion bodies",
+        "note": "HPO HP:6000976"
+       },
+       {
+        "id": "phenotype:HP:0002487",
+        "type": "phenotype",
+        "label": "Hyperkinetic movements",
+        "note": "HPO HP:0002487"
+       },
+       {
+        "id": "phenotype:HP:0007704",
+        "type": "phenotype",
+        "label": "Paroxysmal involuntary eye movements",
+        "note": "HPO HP:0007704"
+       },
+       {
+        "id": "phenotype:HP:0002240",
+        "type": "phenotype",
+        "label": "Hepatomegaly",
+        "note": "HPO HP:0002240"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0000726",
+        "type": "phenotype",
+        "label": "Dementia",
+        "note": "HPO HP:0000726"
+       },
+       {
+        "id": "phenotype:HP:0000514",
+        "type": "phenotype",
+        "label": "Slow saccadic eye movements",
+        "note": "HPO HP:0000514"
+       },
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0001433",
+        "type": "phenotype",
+        "label": "Hepatosplenomegaly",
+        "note": "HPO HP:0001433"
+       },
+       {
+        "id": "phenotype:HP:0004879",
+        "type": "phenotype",
+        "label": "Intermittent hyperventilation",
+        "note": "HPO HP:0004879"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "liver fibrosis",
+      "declared_type": "phenotype",
+      "sentence": "It can lead to liver fibrosis and liver failure in a subset of patients.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011974",
+        "type": "phenotype",
+        "label": "Myelofibrosis",
+        "note": "HPO HP:0011974"
+       },
+       {
+        "id": "phenotype:HP:0006583",
+        "type": "phenotype",
+        "label": "Fatal liver failure in infancy",
+        "note": "HPO HP:0006583"
+       },
+       {
+        "id": "phenotype:HP:0000169",
+        "type": "phenotype",
+        "label": "Gingival fibromatosis",
+        "note": "HPO HP:0000169"
+       },
+       {
+        "id": "phenotype:HP:0000508",
+        "type": "phenotype",
+        "label": "Ptosis",
+        "note": "HPO HP:0000508"
+       },
+       {
+        "id": "phenotype:HP:0000975",
+        "type": "phenotype",
+        "label": "Hyperhidrosis",
+        "note": "HPO HP:0000975"
+       },
+       {
+        "id": "phenotype:HP:0002171",
+        "type": "phenotype",
+        "label": "Gliosis",
+        "note": "HPO HP:0002171"
+       },
+       {
+        "id": "phenotype:HP:0000709",
+        "type": "phenotype",
+        "label": "Psychosis",
+        "note": "HPO HP:0000709"
+       },
+       {
+        "id": "phenotype:HP:0002650",
+        "type": "phenotype",
+        "label": "Scoliosis",
+        "note": "HPO HP:0002650"
+       },
+       {
+        "id": "phenotype:HP:0030426",
+        "type": "phenotype",
+        "label": "Ossifying fibroma",
+        "note": "HPO HP:0030426"
+       },
+       {
+        "id": "phenotype:HP:0009736",
+        "type": "phenotype",
+        "label": "Tibial pseudarthrosis",
+        "note": "HPO HP:0009736"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"hepatic involvement\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"hepatic involvement broad\"},{\"mention_id\":\"m2\",\"mention\":\"liver fibrosis\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no liver fibrosis term\"}]}"
+  }
+ ]
+}

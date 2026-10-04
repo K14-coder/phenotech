@@ -94,8 +94,10 @@ export interface Evidence {
   verified?: boolean;
   /** YYYY-MM-DD */
   retrieved: string;
-  /** an independent OpenAI re-reading of this source */
+  /** an independent AI re-reading of this source ("openai:<model>" or "claude:<how>") */
   cross_checked?: { by: string; agrees: boolean; date: string };
+  /** further independent readers of the same item (a second reader never overwrites the first stamp) */
+  cross_checked_also?: { by: string; agrees: boolean; date: string }[];
   /** a contradiction found only by the OpenAI cross-check; not "contested" until a human confirms it */
   needs_review?: boolean;
 }

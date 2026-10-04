@@ -1,0 +1,73 @@
+{
+ "pmid": "40414757",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.618Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "955aebaff1df0e70",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40414757.json",
+ "claims": [
+  {
+   "subject_mention": "SMPD1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Acid sphingomyelinase deficiency",
+   "object_type": "disease",
+   "quote": "It is an inherited autosomal recessive disease, linked to mutations in the SMPD1 gene.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Acid sphingomyelinase deficiency",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "accumulation of sphingomyelin mainly in macrophages",
+   "object_type": "mechanism",
+   "quote": "It is a lysosomal storage disease that leads to the accumulation of sphingomyelin mainly in macrophages, resulting in a multisystemic phenotype, primarily manifesting as hepatosplenomegaly and pulmonary involvement.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Acid sphingomyelinase deficiency",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hepatosplenomegaly",
+   "object_type": "phenotype",
+   "quote": "It is a lysosomal storage disease that leads to the accumulation of sphingomyelin mainly in macrophages, resulting in a multisystemic phenotype, primarily manifesting as hepatosplenomegaly and pulmonary involvement.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Acid sphingomyelinase deficiency",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pulmonary involvement",
+   "object_type": "phenotype",
+   "quote": "It is a lysosomal storage disease that leads to the accumulation of sphingomyelin mainly in macrophages, resulting in a multisystemic phenotype, primarily manifesting as hepatosplenomegaly and pulmonary involvement.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "enzyme replacement therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Acid sphingomyelinase deficiency",
+   "object_type": "disease",
+   "quote": "Knowing and recognizing this disease is important, especially since there is an effective specific treatment through enzyme replacement therapy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

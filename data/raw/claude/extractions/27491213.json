@@ -1,0 +1,73 @@
+{
+ "pmid": "27491213",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.557Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e7393201616efaba",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/27491213.json",
+ "claims": [
+  {
+   "subject_mention": "CLN3",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Juvenile NCL",
+   "object_type": "disease",
+   "quote": "Caused by mutations in the CLN3 gene on chromosome 16p12, the precise functions of the encoded protein remain unclear.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Juvenile Neuronal Ceroid Lipofuscinosis",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "intracellular accumulation of autofluorescent storage material",
+   "object_type": "mechanism",
+   "quote": "Abstract Juvenile Neuronal Ceroid Lipofuscinosis is a lysosomal storage disease characterized pathologically by intracellular accumulation of autofluorescent storage material and neurodegeneration.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "immunosuppressants",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Juvenile NCL",
+   "object_type": "disease",
+   "quote": "Yet, recent preclinical discovery has established new therapeutic targets in development, including immunosuppressants, anti-inflammatories, and gene replacement therapies.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "anti-inflammatories",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Juvenile NCL",
+   "object_type": "disease",
+   "quote": "Yet, recent preclinical discovery has established new therapeutic targets in development, including immunosuppressants, anti-inflammatories, and gene replacement therapies.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "gene replacement therapies",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Juvenile NCL",
+   "object_type": "disease",
+   "quote": "Yet, recent preclinical discovery has established new therapeutic targets in development, including immunosuppressants, anti-inflammatories, and gene replacement therapies.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

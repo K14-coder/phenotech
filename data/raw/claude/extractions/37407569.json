@@ -1,0 +1,49 @@
+{
+ "pmid": "37407569",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.605Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "78c581f934a463bf",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/37407569.json",
+ "claims": [
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "We collected structural brain MRI and cognitive-behavioral data from 40 pre-pubertal children with Noonan syndrome (NS), caused by PTPN11 (n = 30) or SOS1 (n = 10) variants (age 8.53 ± 2.15, 25 females), and compared them to 40 age- and sex-matched typically developing controls (9.24 ± 1.62, 27 females).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SOS1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "We collected structural brain MRI and cognitive-behavioral data from 40 pre-pubertal children with Noonan syndrome (NS), caused by PTPN11 (n = 30) or SOS1 (n = 10) variants (age 8.53 ± 2.15, 25 females), and compared them to 40 age- and sex-matched typically developing controls (9.24 ± 1.62, 27 females).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "smaller volumes of bilateral striatum",
+   "object_type": "phenotype",
+   "quote": "In NS, we observed smaller volumes of bilateral striatum, precentral gyri, and primary visual area (d's < -0.8), and extensive effects on SA (d's > |0.8|) and CT (d's > |0.5|) relative to controls.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

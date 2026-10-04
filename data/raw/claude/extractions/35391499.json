@@ -1,0 +1,37 @@
+{
+ "pmid": "35391499",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.594Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "f4796c735b7d05e4",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/35391499.json",
+ "claims": [
+  {
+   "subject_mention": "Schwannomatosis",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "multiple schwannomas",
+   "object_type": "phenotype",
+   "quote": "Schwannomatosis is a rare tumor predisposition syndrome that causes multiple schwannomas.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "schwannomatosis",
+   "object_type": "disease",
+   "quote": "Using current classification guidelines, 64/71 LoF LZTR1 variants reported in schwannomatosis patients in the literature were classified as pathogenic/likely pathogenic, and their frequency in probands 64/359 (17.8%) was significantly higher than the frequency of potential LoF variants identified in the general population (0.36%; p < 0.0001).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

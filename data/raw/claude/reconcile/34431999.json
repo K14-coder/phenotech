@@ -1,0 +1,714 @@
+{
+ "pmid": "34431999",
+ "entries": {
+  "9ce17a7c83765c78": {
+   "mention": "generalized epilepsy",
+   "type": "disease",
+   "candidates": [
+    "disease:SCN8A",
+    "disease:SCN1A",
+    "disease:STX1B",
+    "disease:SLC2A1",
+    "disease:CDKL5",
+    "disease:KCNT1",
+    "disease:SLC6A1",
+    "disease:SYNGAP1",
+    "disease:CPLX1",
+    "disease:KCNQ2"
+   ],
+   "node_id": "disease:SCN8A",
+   "match": "instance",
+   "justification": "Generalized epilepsy subgroup of SCN8A cohort (title)",
+   "raw_node_id": "disease:SCN8A",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.805Z"
+  },
+  "9ee068659ef47d57": {
+   "mention": "generalized epileptiform discharges",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011198",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0001290",
+    "phenotype:HP:0040160",
+    "phenotype:HP:0007034",
+    "phenotype:HP:0010818",
+    "phenotype:HP:0011169",
+    "phenotype:HP:0002123",
+    "phenotype:HP:0002197",
+    "phenotype:HP:0011170"
+   ],
+   "node_id": "phenotype:HP:0011198",
+   "match": "same",
+   "justification": "Generalized epileptiform discharges",
+   "raw_node_id": "phenotype:HP:0011198",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.805Z"
+  },
+  "9286961be2ae14fd": {
+   "mention": "Generalized epilepsy with absence seizures",
+   "type": "disease",
+   "candidates": [
+    "disease:SCN1A",
+    "disease:STX1B",
+    "disease:SLC2A1",
+    "disease:SLC6A1",
+    "disease:SYNGAP1",
+    "disease:SCN8A",
+    "disease:KCNQ2",
+    "disease:KCNT1",
+    "disease:CDKL5",
+    "disease:UNC13A"
+   ],
+   "node_id": "disease:SCN8A",
+   "match": "instance",
+   "justification": "Phenotype of SCN8A loss-of-function carriers",
+   "raw_node_id": "disease:SCN8A",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.805Z"
+  },
+  "e2c8202a9d9d02bc": {
+   "mention": "sodium channel blockers",
+   "type": "therapy",
+   "candidates": [
+    "therapy:quinidine",
+    "therapy:sodium-channel-blockers",
+    "therapy:4-phenylbutyrate",
+    "therapy:kv7-openers",
+    "therapy:hsct-krabbe",
+    "therapy:migalastat",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:munc18-1-pharmacological-chaperone",
+    "therapy:pyrimethamine",
+    "therapy:ambroxol"
+   ],
+   "node_id": "therapy:sodium-channel-blockers",
+   "match": "same",
+   "justification": "Sodium channel blockers",
+   "raw_node_id": "therapy:sodium-channel-blockers",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.805Z"
+  },
+  "620b59ad26b27763": {
+   "mention": "absence seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011150",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0002121",
+    "phenotype:HP:0031165",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0020221",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0002349",
+    "phenotype:HP:0011171"
+   ],
+   "node_id": "phenotype:HP:0002121",
+   "match": "same",
+   "justification": "Absence seizures",
+   "raw_node_id": "phenotype:HP:0002121",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.805Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.805Z",
+   "request_payload": {
+    "title": "Genotype-phenotype correlations in SCN8A-related disorders reveal prognostic and therapeutic implications.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "generalized epilepsy",
+      "declared_type": "disease",
+      "sentence": "Those in Groups 1-3 presented with focal or multifocal seizures (median age of onset: 4 months) and focal epileptiform discharges, whereas the onset of seizures in patients with generalized epilepsy was later (median: 42 months) with generalized epileptiform discharges.",
+      "candidates": [
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KCNT1",
+        "type": "disease",
+        "label": "KCNT1-related disorders",
+        "synonyms": [
+         "EIMFS",
+         "epilepsy of infancy with migrating focal seizures",
+         "DEE14",
+         "ADNFLE",
+         "ENFL5",
+         "KCNT1 autosomal dominant nocturnal frontal lobe epilepsy",
+         "autosomal dominant nocturnal frontal lobe epilepsy caused by mutation in KCNT1",
+         "autosomal dominant nocturnal frontal lobe epilepsy type 5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNT1 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CPLX1",
+        "type": "disease",
+        "label": "CPLX1-related disorders",
+        "synonyms": [
+         "DEE63",
+         "complexin-1 deficiency",
+         "EIEE63",
+         "developmental and epileptic encephalopathy 63",
+         "epileptic encephalopathy, early infantile, 63",
+         "Myoclonic epilepsy of infancy"
+        ],
+        "summary": "Rare recessive changes in CPLX1 (complexin-1) have been reported in severe infantile myoclonic epilepsy with intellectual disability. The evidence base is small"
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "generalized epileptiform discharges",
+      "declared_type": "phenotype",
+      "sentence": "Those in Groups 1-3 presented with focal or multifocal seizures (median age of onset: 4 months) and focal epileptiform discharges, whereas the onset of seizures in patients with generalized epilepsy was later (median: 42 months) with generalized epileptiform discharges.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0001290",
+        "type": "phenotype",
+        "label": "Generalized hypotonia",
+        "note": "HPO HP:0001290"
+       },
+       {
+        "id": "phenotype:HP:0040160",
+        "type": "phenotype",
+        "label": "Generalized osteoporosis",
+        "note": "HPO HP:0040160"
+       },
+       {
+        "id": "phenotype:HP:0007034",
+        "type": "phenotype",
+        "label": "Generalized hyperreflexia",
+        "note": "HPO HP:0007034"
+       },
+       {
+        "id": "phenotype:HP:0010818",
+        "type": "phenotype",
+        "label": "Generalized tonic seizure",
+        "note": "HPO HP:0010818"
+       },
+       {
+        "id": "phenotype:HP:0011169",
+        "type": "phenotype",
+        "label": "Generalized clonic seizure",
+        "note": "HPO HP:0011169"
+       },
+       {
+        "id": "phenotype:HP:0002123",
+        "type": "phenotype",
+        "label": "Generalized myoclonic seizure",
+        "note": "HPO HP:0002123"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       },
+       {
+        "id": "phenotype:HP:0011170",
+        "type": "phenotype",
+        "label": "Generalized myoclonic-atonic seizure",
+        "note": "HPO HP:0011170"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "Generalized epilepsy with absence seizures",
+      "declared_type": "disease",
+      "sentence": "Generalized epilepsy with absence seizures is the main epilepsy phenotype of loss-of-function variant carriers and the extent of the electrophysiological dysfunction of the gain-of-function variants is a main determinant of the severity of the clinical phenotype in focal epilepsies.",
+      "candidates": [
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:STX1B",
+        "type": "disease",
+        "label": "STX1B-related epilepsies",
+        "synonyms": [
+         "GEFS+9",
+         "GEFSP9",
+         "fever-associated epilepsy syndrome",
+         "FASES",
+         "STX1B generalised epilepsy with febrile seizures plus",
+         "STX1B generalized epilepsy with febrile seizures plus",
+         "STX1b generalised epilepsy with febrile seizures plus",
+         "STX1b generalized epilepsy with febrile seizures plus"
+        ],
+        "summary": "Changes in STX1B cause fever-associated epilepsies, from simple febrile seizures to severe epileptic encephalopathy, including generalized epilepsy with febrile"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KCNQ2",
+        "type": "disease",
+        "label": "KCNQ2-related disorders",
+        "synonyms": [
+         "KCNQ2-DEE",
+         "DEE7",
+         "self-limited familial neonatal epilepsy",
+         "Kv7.2",
+         "BFNS1",
+         "KCNQ2 benign neonatal seizures",
+         "benign neonatal seizures caused by mutation in KCNQ2",
+         "myokymia"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNQ2 (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:KCNT1",
+        "type": "disease",
+        "label": "KCNT1-related disorders",
+        "synonyms": [
+         "EIMFS",
+         "epilepsy of infancy with migrating focal seizures",
+         "DEE14",
+         "ADNFLE",
+         "ENFL5",
+         "KCNT1 autosomal dominant nocturnal frontal lobe epilepsy",
+         "autosomal dominant nocturnal frontal lobe epilepsy caused by mutation in KCNT1",
+         "autosomal dominant nocturnal frontal lobe epilepsy type 5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in KCNT1 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:UNC13A",
+        "type": "disease",
+        "label": "UNC13A-related disorders",
+        "synonyms": [
+         "Munc13-1-related disorder",
+         "UNC13A-related congenital neurodevelopmental disorder with epilepsy",
+         "UNC13A-related neurodevelopmental disorder with seizures and movement disorder",
+         "Autosomal recessive congenital myasthenic syndrome due to defective synaptic vesicles exocytosis"
+        ],
+        "summary": "Changes in UNC13A (Munc13-1) cause neurodevelopmental syndromes with epilepsy, movement problems and, in recessive truncating cases, fatal myasthenia. Separatel"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "sodium channel blockers",
+      "declared_type": "therapy",
+      "sentence": "Gain-of-function variant carriers responded significantly better to sodium channel blockers than to other anti-seizure medications, and the same applied for all individuals in Groups 1-3.",
+      "candidates": [
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:munc18-1-pharmacological-chaperone",
+        "type": "therapy",
+        "label": "Structure-based pharmacological chaperones for Munc18-1",
+        "synonyms": [
+         "Munc18-1 pharmacochaperone"
+        ],
+        "summary": "Small molecules designed from the Munc18-1 structure to bind and stabilize the protein. Intended to replace generic chemical chaperones, which need high doses."
+       },
+       {
+        "id": "therapy:pyrimethamine",
+        "type": "therapy",
+        "label": "Pyrimethamine (pharmacological chaperone for hexosaminidase A)",
+        "synonyms": [
+         "PMT"
+        ],
+        "summary": "An old antiparasitic drug that partly rescues misfolded hexosaminidase A; it raised enzyme activity in late-onset Tay-Sachs patients, but higher doses caused si"
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "absence seizures",
+      "declared_type": "phenotype",
+      "sentence": "Six different clinical subgroups were identified: Group 1, benign familial infantile epilepsy (n = 15, normal cognition, treatable seizures); Group 2, intermediate epilepsy (n = 33, mild intellectual disability, partially pharmaco-responsive); Group 3, developmental and epileptic encephalopathy (n = 177, severe intellectual disability, majority pharmaco-resistant); Group 4, generalized epilepsy (n = 20, mild to moderate intellectual disability, frequently with absence seizures); Group 5, unclassifiable epilepsy (n = 127); and Group 6, neurodevelopmental disorder without epilepsy (n = 20, mild to moderate intellectual disability).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011150",
+        "type": "phenotype",
+        "label": "Myoclonic absence seizure",
+        "note": "HPO HP:0011150"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0002121",
+        "type": "phenotype",
+        "label": "Generalized non-motor (absence) seizure",
+        "note": "HPO HP:0002121"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0020221",
+        "type": "phenotype",
+        "label": "Clonic seizure",
+        "note": "HPO HP:0020221"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0002349",
+        "type": "phenotype",
+        "label": "Focal aware seizure",
+        "note": "HPO HP:0002349"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"generalized epilepsy\",\"node_id\":\"disease:SCN8A\",\"match\":\"instance\",\"justification\":\"Generalized epilepsy subgroup of SCN8A cohort (title)\"},{\"mention_id\":\"m2\",\"mention\":\"generalized epileptiform discharges\",\"node_id\":\"phenotype:HP:0011198\",\"match\":\"same\",\"justification\":\"Generalized epileptiform discharges\"},{\"mention_id\":\"m3\",\"mention\":\"Generalized epilepsy with absence seizures\",\"node_id\":\"disease:SCN8A\",\"match\":\"instance\",\"justification\":\"Phenotype of SCN8A loss-of-function carriers\"},{\"mention_id\":\"m4\",\"mention\":\"sodium channel blockers\",\"node_id\":\"therapy:sodium-channel-blockers\",\"match\":\"same\",\"justification\":\"Sodium channel blockers\"},{\"mention_id\":\"m5\",\"mention\":\"absence seizures\",\"node_id\":\"phenotype:HP:0002121\",\"match\":\"same\",\"justification\":\"Absence seizures\"}]}"
+  }
+ ]
+}

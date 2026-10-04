@@ -1,0 +1,356 @@
+{
+ "pmid": "18632543",
+ "entries": {
+  "6c3cfbdf05404cb9": {
+   "mention": "statin",
+   "type": "therapy",
+   "candidates": [
+    "therapy:statins-nf1-cognition",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:zorevunersen",
+    "therapy:sodium-channel-blockers",
+    "therapy:stiripentol",
+    "therapy:eliglustat",
+    "therapy:hsct-krabbe",
+    "therapy:miglustat",
+    "therapy:migalastat",
+    "therapy:trametinib"
+   ],
+   "node_id": "therapy:statins-nf1-cognition",
+   "match": "same",
+   "justification": "Statins for NF1 cognition",
+   "raw_node_id": "therapy:statins-nf1-cognition",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.854Z"
+  },
+  "ebc47ed1cf01a6f8": {
+   "mention": "inhibition of 3-hydroxy-3-methylglutaryl coenzyme A reductase",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:loss-of-function",
+    "mech:ca-triggered-exocytosis",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:ras-protein-signal-transduction",
+    "mech:lysosome-organization",
+    "mech:lysosomal-storage"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "HMG-CoA reductase inhibition not a candidate mechanism",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.854Z"
+  },
+  "84645c532d1e8eb9": {
+   "mention": "learning disabilities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001249",
+    "phenotype:HP:0011968",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0002187",
+    "phenotype:HP:0006889",
+    "phenotype:HP:0000737",
+    "phenotype:HP:0002540",
+    "phenotype:HP:0002013",
+    "phenotype:HP:0000712",
+    "phenotype:HP:0025336"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Learning disability is not intellectual disability",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.854Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.854Z",
+   "request_payload": {
+    "title": "Effect of simvastatin on cognitive functioning in children with neurofibromatosis type 1: a randomized controlled trial.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "statin",
+      "declared_type": "therapy",
+      "sentence": "Recently, it was shown that statin-mediated inhibition of 3-hydroxy-3-methylglutaryl coenzyme A reductase restores the cognitive deficits in an NF1 mouse model.",
+      "candidates": [
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:zorevunersen",
+        "type": "therapy",
+        "label": "Zorevunersen (STK-001, SCN1A TANGO antisense oligonucleotide)",
+        "synonyms": [
+         "STK-001",
+         "TANGO ASO"
+        ],
+        "summary": "An antisense oligonucleotide designed to raise productive SCN1A (NaV1.1) expression; in phase 3 for Dravet syndrome."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:stiripentol",
+        "type": "therapy",
+        "label": "Stiripentol",
+        "synonyms": [
+         "DIACOMIT"
+        ],
+        "summary": "An anti-seizure medicine with an FDA label for seizures associated with Dravet syndrome in patients taking clobazam."
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "inhibition of 3-hydroxy-3-methylglutaryl coenzyme A reductase",
+      "declared_type": "mechanism",
+      "sentence": "Recently, it was shown that statin-mediated inhibition of 3-hydroxy-3-methylglutaryl coenzyme A reductase restores the cognitive deficits in an NF1 mouse model.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "learning disabilities",
+      "declared_type": "phenotype",
+      "sentence": "CONTEXT: Neurofibromatosis type 1 (NF1) is among the most common genetic disorders that cause learning disabilities.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       },
+       {
+        "id": "phenotype:HP:0011968",
+        "type": "phenotype",
+        "label": "Feeding difficulties",
+        "note": "HPO HP:0011968"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0002187",
+        "type": "phenotype",
+        "label": "Profound intellectual disability",
+        "note": "HPO HP:0002187"
+       },
+       {
+        "id": "phenotype:HP:0006889",
+        "type": "phenotype",
+        "label": "Borderline intellectual disability",
+        "note": "HPO HP:0006889"
+       },
+       {
+        "id": "phenotype:HP:0000737",
+        "type": "phenotype",
+        "label": "Irritability",
+        "note": "HPO HP:0000737"
+       },
+       {
+        "id": "phenotype:HP:0002540",
+        "type": "phenotype",
+        "label": "Inability to walk",
+        "note": "HPO HP:0002540"
+       },
+       {
+        "id": "phenotype:HP:0002013",
+        "type": "phenotype",
+        "label": "Vomiting",
+        "note": "HPO HP:0002013"
+       },
+       {
+        "id": "phenotype:HP:0000712",
+        "type": "phenotype",
+        "label": "Emotional lability",
+        "note": "HPO HP:0000712"
+       },
+       {
+        "id": "phenotype:HP:0025336",
+        "type": "phenotype",
+        "label": "Delayed ability to sit",
+        "note": "HPO HP:0025336"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"statin\",\"node_id\":\"therapy:statins-nf1-cognition\",\"match\":\"same\",\"justification\":\"Statins for NF1 cognition\"},{\"mention_id\":\"m2\",\"mention\":\"inhibition of 3-hydroxy-3-methylglutaryl coenzyme A reductase\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"HMG-CoA reductase inhibition not a candidate mechanism\"},{\"mention_id\":\"m3\",\"mention\":\"learning disabilities\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Learning disability is not intellectual disability\"}]}"
+  }
+ ]
+}

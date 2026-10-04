@@ -1,0 +1,73 @@
+{
+ "pmid": "35188187",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.593Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "68a5d4c9b5c0777f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/35188187.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Neurofibromatosis type 1",
+   "object_type": "disease",
+   "quote": "Neurofibromatosis type 1 is a rare neurogenetic syndrome, characterized by pigmentary abnormalities, learning and social deficits, and a predisposition for benign and malignant tumor formation caused by germline mutations in the NF1 gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis type 1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pigmentary abnormalities",
+   "object_type": "phenotype",
+   "quote": "Neurofibromatosis type 1 is a rare neurogenetic syndrome, characterized by pigmentary abnormalities, learning and social deficits, and a predisposition for benign and malignant tumor formation caused by germline mutations in the NF1 gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis type 1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "learning and social deficits",
+   "object_type": "phenotype",
+   "quote": "Neurofibromatosis type 1 is a rare neurogenetic syndrome, characterized by pigmentary abnormalities, learning and social deficits, and a predisposition for benign and malignant tumor formation caused by germline mutations in the NF1 gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis type 1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "predisposition for benign and malignant tumor formation",
+   "object_type": "phenotype",
+   "quote": "Neurofibromatosis type 1 is a rare neurogenetic syndrome, characterized by pigmentary abnormalities, learning and social deficits, and a predisposition for benign and malignant tumor formation caused by germline mutations in the NF1 gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromin",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "negative regulation of RAS activity",
+   "object_type": "mechanism",
+   "quote": "With the cloning of the NF1 gene and the recognition that the encoded protein, neurofibromin, largely functions as a negative regulator of RAS activity, attention has mainly focused on RAS and canonical RAS effector pathway signaling relevant to disease pathogenesis and treatment.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

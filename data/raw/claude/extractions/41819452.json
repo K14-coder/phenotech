@@ -1,0 +1,109 @@
+{
+ "pmid": "41819452",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.634Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "31fddc9b3e273f95",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41819452.json",
+ "claims": [
+  {
+   "subject_mention": "HEXA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Tay-Sachs disease (TSD) is a neurodegenerative disorder caused by mutations in the HEXA gene, encoding the α-subunit of β-hexosaminidase A.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HexA deficiency",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "impaired degradation and accumulation of GM2 ganglioside",
+   "object_type": "mechanism",
+   "quote": "HexA deficiency leads to impaired degradation and accumulation of GM2 ganglioside, causing progressive neurodegeneration in patients.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HexA deficiency",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "progressive neurodegeneration",
+   "object_type": "phenotype",
+   "quote": "HexA deficiency leads to impaired degradation and accumulation of GM2 ganglioside, causing progressive neurodegeneration in patients.",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neu3",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "GM2 ganglioside degradation",
+   "object_type": "mechanism",
+   "quote": "Abnormal GM2 accumulation was revealed in the brains of Hexa-/-Neu3-/- mice using thin-layer chromatography and mass spectrometric analyses.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "human Neu3",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GM2 accumulation",
+   "object_type": "mechanism",
+   "quote": "Treatment with human Neu3 and Istradefylline extended lifespan to 28 weeks, improved body weight, and reduced GM2 accumulation.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Istradefylline",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GM2 accumulation",
+   "object_type": "mechanism",
+   "quote": "Treatment with human Neu3 and Istradefylline extended lifespan to 28 weeks, improved body weight, and reduced GM2 accumulation.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AAV-mediated human Neu3 expression",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "TSD",
+   "object_type": "disease",
+   "quote": "Our results provide the first in vivo evidence that AAV-mediated human Neu3 expression and Istradefylline may slow disease progression, reduce neuropathology, and lessen motor deficits in the Hexa-/-Neu3-/- mouse model of TSD.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Istradefylline",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "TSD",
+   "object_type": "disease",
+   "quote": "Our results provide the first in vivo evidence that AAV-mediated human Neu3 expression and Istradefylline may slow disease progression, reduce neuropathology, and lessen motor deficits in the Hexa-/-Neu3-/- mouse model of TSD.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

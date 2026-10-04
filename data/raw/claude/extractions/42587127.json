@@ -1,0 +1,109 @@
+{
+ "pmid": "42587127",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.649Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a6d98e6e5792526a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/42587127.json",
+ "claims": [
+  {
+   "subject_mention": "smpd1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "acid sphingomyelinase deficiency (ASMD)",
+   "object_type": "disease",
+   "quote": "Loss-of-function mutations in the smpd1 gene cause acid sphingomyelinase deficiency (ASMD).",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "smpd1 loss-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "Loss-of-function mutations in the smpd1 gene cause acid sphingomyelinase deficiency (ASMD).",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "infantile neurovisceral form (type A)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "early neurodegeneration",
+   "object_type": "phenotype",
+   "quote": "Early neurodegeneration and lethality characterize its infantile neurovisceral form (type A).",
+   "study_type": "animal_model",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "acid sphingomyelinase deficiency",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "compromised oligodendrocyte maturation driven by aberrant sphingomyelin-mediated signaling",
+   "object_type": "mechanism",
+   "quote": "We show that early-onset dysmyelination results from compromised oligodendrocyte maturation driven by aberrant sphingomyelin-mediated signaling.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "verbascoside",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "CD44",
+   "object_type": "mechanism",
+   "quote": "Pharmacological inhibition of CD44 with verbascoside rescued oligodendroglial maturation in primary culture.",
+   "study_type": "animal_model",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "verbascoside",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "oligodendroglial maturation",
+   "object_type": "mechanism",
+   "quote": "Pharmacological inhibition of CD44 with verbascoside rescued oligodendroglial maturation in primary culture.",
+   "study_type": "animal_model",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Verbascoside",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "myelin integrity",
+   "object_type": "mechanism",
+   "quote": "Verbascoside administration in vivo restored myelin integrity and improved motor behavior.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Verbascoside",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "acid sphingomyelinase deficiency",
+   "object_type": "disease",
+   "quote": "Targeting CD44 reverses sphingomyelin-induced oligodendrocyte maturation arrest in acid sphingomyelinase deficiency.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

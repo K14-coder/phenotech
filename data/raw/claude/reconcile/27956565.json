@@ -1,0 +1,391 @@
+{
+ "pmid": "27956565",
+ "entries": {
+  "038f85c95d8c2dca": {
+   "mention": "neurofibromatosis type 1 (NF1)",
+   "type": "disease",
+   "candidates": [
+    "disease:NF1",
+    "disease:IDUA",
+    "disease:HEXA",
+    "disease:LZTR1",
+    "disease:SOS1",
+    "disease:PTPN11",
+    "disease:BRAF",
+    "disease:SLC2A1",
+    "disease:CLN3",
+    "disease:TPP1"
+   ],
+   "node_id": "disease:NF1",
+   "match": "same",
+   "justification": "NF1",
+   "raw_node_id": "disease:NF1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.860Z"
+  },
+  "93ab97b838ed9cbe": {
+   "mention": "cognitive and behavioral deficits",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0008762",
+    "phenotype:HP:0000718",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0000708",
+    "phenotype:HP:0000729",
+    "phenotype:HP:0025152",
+    "phenotype:HP:0100716",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0001631"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "compound deficits",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.860Z"
+  },
+  "f95d7f6096c5bd8b": {
+   "mention": "visuospatial learning or attention deficits",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0007018",
+    "phenotype:HP:0004879",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0007928",
+    "phenotype:HP:0001125",
+    "phenotype:HP:0025680",
+    "phenotype:HP:0002207",
+    "phenotype:HP:0033383",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0002883"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "compound deficits",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.860Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.860Z",
+   "request_payload": {
+    "title": "Randomized placebo-controlled study of lovastatin in children with neurofibromatosis type 1.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "neurofibromatosis type 1 (NF1)",
+      "declared_type": "disease",
+      "sentence": "OBJECTIVE: To assess the efficacy of lovastatin on visuospatial learning and attention for treating cognitive and behavioral deficits in children with neurofibromatosis type 1 (NF1).",
+      "candidates": [
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CLN3",
+        "type": "disease",
+        "label": "CLN3-related disorders (CLN3 disease, juvenile Batten disease)",
+        "synonyms": [
+         "juvenile Batten disease",
+         "juvenile neuronal ceroid lipofuscinosis",
+         "JNCL",
+         "CLN3 disease",
+         "CLN3",
+         "CLN3 disease, juvenile",
+         "CLN3 neuronal ceroid lipofuscinosis",
+         "Juvenile CLN3 Disease"
+        ],
+        "summary": "Changes in CLN3, a lysosomal membrane protein of uncertain function, cause childhood vision loss followed by seizures, cognitive and motor decline (juvenile neu"
+       },
+       {
+        "id": "disease:TPP1",
+        "type": "disease",
+        "label": "TPP1-related disorders (CLN2 disease)",
+        "synonyms": [
+         "CLN2 disease",
+         "late-infantile neuronal ceroid lipofuscinosis",
+         "TPP1 deficiency",
+         "SCAR7",
+         "CLN2",
+         "CLN2 disease, juvenile (subtype)",
+         "CLN2 disease, late infantile (subtype)",
+         "TPP1 neuronal ceroid lipofuscinosis"
+        ],
+        "summary": "Deficiency of the lysosomal enzyme tripeptidyl peptidase 1 causes CLN2 disease (late-infantile Batten disease): language delay, seizures, loss of walking and vi"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "cognitive and behavioral deficits",
+      "declared_type": "phenotype",
+      "sentence": "OBJECTIVE: To assess the efficacy of lovastatin on visuospatial learning and attention for treating cognitive and behavioral deficits in children with neurofibromatosis type 1 (NF1).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0008762",
+        "type": "phenotype",
+        "label": "Repetitive compulsive behavior",
+        "note": "HPO HP:0008762"
+       },
+       {
+        "id": "phenotype:HP:0000718",
+        "type": "phenotype",
+        "label": "Aggressive behavior",
+        "note": "HPO HP:0000718"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0000708",
+        "type": "phenotype",
+        "label": "Atypical behavior",
+        "note": "HPO HP:0000708"
+       },
+       {
+        "id": "phenotype:HP:0000729",
+        "type": "phenotype",
+        "label": "Autistic behavior",
+        "note": "HPO HP:0000729"
+       },
+       {
+        "id": "phenotype:HP:0025152",
+        "type": "phenotype",
+        "label": "Poor visual behavior for age",
+        "note": "HPO HP:0025152"
+       },
+       {
+        "id": "phenotype:HP:0100716",
+        "type": "phenotype",
+        "label": "Self-injurious behavior",
+        "note": "HPO HP:0100716"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0001631",
+        "type": "phenotype",
+        "label": "Atrial septal defect",
+        "note": "HPO HP:0001631"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "visuospatial learning or attention deficits",
+      "declared_type": "phenotype",
+      "sentence": "Children with NF1 aged 8-15 years were screened for visuospatial learning or attention deficits (n = 272); 146 children demonstrated deficits at baseline and were randomly assigned to lovastatin (n = 74; 40 mg/d) or placebo (n = 70).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0004879",
+        "type": "phenotype",
+        "label": "Intermittent hyperventilation",
+        "note": "HPO HP:0004879"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0007928",
+        "type": "phenotype",
+        "label": "Abnormal flash visual evoked potentials",
+        "note": "HPO HP:0007928"
+       },
+       {
+        "id": "phenotype:HP:0001125",
+        "type": "phenotype",
+        "label": "Transient unilateral blurring of vision",
+        "note": "HPO HP:0001125"
+       },
+       {
+        "id": "phenotype:HP:0025680",
+        "type": "phenotype",
+        "label": "Compound muscle action potential amplitude facilitation",
+        "note": "HPO HP:0025680"
+       },
+       {
+        "id": "phenotype:HP:0002207",
+        "type": "phenotype",
+        "label": "Diffuse reticular or finely nodular infiltrations",
+        "note": "HPO HP:0002207"
+       },
+       {
+        "id": "phenotype:HP:0033383",
+        "type": "phenotype",
+        "label": "Decreased compound muscle action potential amplitude",
+        "note": "HPO HP:0033383"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0002883",
+        "type": "phenotype",
+        "label": "Hyperventilation",
+        "note": "HPO HP:0002883"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"neurofibromatosis type 1 (NF1)\",\"node_id\":\"disease:NF1\",\"match\":\"same\",\"justification\":\"NF1\"},{\"mention_id\":\"m2\",\"mention\":\"cognitive and behavioral deficits\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"compound deficits\"},{\"mention_id\":\"m3\",\"mention\":\"visuospatial learning or attention deficits\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"compound deficits\"}]}"
+  }
+ ]
+}

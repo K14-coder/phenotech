@@ -1,0 +1,810 @@
+{
+ "pmid": "30524313",
+ "entries": {
+  "31e88e37afc3589e": {
+   "mention": "GM2 ganglioside accumulation in lysosomes of nerve cells",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:lysosome-organization",
+    "mech:gain-of-function",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:loss-of-function",
+    "mech:ca-triggered-exocytosis",
+    "mech:lysosomal-protein-catabolism",
+    "mech:lysosomal-enzyme-deficiency"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "GM2 ganglioside lysosomal accumulation",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.819Z"
+  },
+  "ab5662b4f4051845": {
+   "mention": "muscle weakness",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0003473",
+    "phenotype:HP:0003725",
+    "phenotype:HP:0003554",
+    "phenotype:HP:6000088",
+    "phenotype:HP:0025680",
+    "phenotype:HP:0033383",
+    "phenotype:HP:0001612",
+    "phenotype:HP:0033850",
+    "phenotype:HP:0000618",
+    "phenotype:HP:0001621"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no muscle weakness term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.819Z"
+  },
+  "19e02bf88d1b7c2e": {
+   "mention": "speech disorders",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002465",
+    "phenotype:HP:0012075",
+    "phenotype:HP:0001344",
+    "phenotype:HP:0002168",
+    "phenotype:HP:0002371",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0006889",
+    "phenotype:HP:0001288",
+    "phenotype:HP:0010302"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "specific speech terms narrower",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.819Z"
+  },
+  "f6eafe5c3233e0f0": {
+   "mention": "mental disorders",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0012075",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0001263",
+    "phenotype:HP:0011343",
+    "phenotype:HP:0006889",
+    "phenotype:HP:0011344",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0012736"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no mental disorder term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.819Z"
+  },
+  "d6a4a72f9a464cc2": {
+   "mention": "miglustat",
+   "type": "therapy",
+   "candidates": [
+    "therapy:miglustat",
+    "therapy:eliglustat",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:migalastat",
+    "therapy:statins-nf1-cognition",
+    "therapy:arimoclomol",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:hsct-krabbe",
+    "therapy:mirdametinib"
+   ],
+   "node_id": "therapy:miglustat",
+   "match": "same",
+   "justification": "miglustat",
+   "raw_node_id": "therapy:miglustat",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.819Z"
+  },
+  "6a26bb761bf10e6d": {
+   "mention": "hematopoietic stem cell transplantation",
+   "type": "therapy",
+   "candidates": [
+    "therapy:hsct-krabbe",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:statins-nf1-cognition",
+    "therapy:eliglustat",
+    "therapy:miglustat",
+    "therapy:cannabidiol",
+    "therapy:pabinafusp-alfa",
+    "therapy:tipifarnib",
+    "therapy:unc13a-splice-switching-aso"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "HSCT node is Krabbe-specific",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.819Z"
+  },
+  "541e5fd13bf9722b": {
+   "mention": "adeno-associated virus gene therapy",
+   "type": "therapy",
+   "candidates": [
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:etx101",
+    "therapy:rapamycin-nsml",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:eliglustat",
+    "therapy:kv7-openers",
+    "therapy:quinidine",
+    "therapy:ganaxolone"
+   ],
+   "node_id": "therapy:aav-hexa-hexb-gene-therapy",
+   "match": "same",
+   "justification": "AAV HEXA/HEXB gene therapy for Tay-Sachs",
+   "raw_node_id": "therapy:aav-hexa-hexb-gene-therapy",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.819Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.819Z",
+   "request_payload": {
+    "title": "New Approaches to Tay-Sachs Disease Therapy.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "GM2 ganglioside accumulation in lysosomes of nerve cells",
+      "declared_type": "mechanism",
+      "sentence": "This disease is caused by β-hexosaminidase A (HexA) enzyme deficiency due to various mutations in α-subunit gene of this enzyme, resulting in GM2 ganglioside accumulation predominantly in lysosomes of nerve cells.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "muscle weakness",
+      "declared_type": "phenotype",
+      "sentence": "The typical features of Tay-Sachs disease are muscle weakness, ataxia, speech, and mental disorders.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0003473",
+        "type": "phenotype",
+        "label": "Fatigable weakness",
+        "note": "HPO HP:0003473"
+       },
+       {
+        "id": "phenotype:HP:0003725",
+        "type": "phenotype",
+        "label": "Firm muscles",
+        "note": "HPO HP:0003725"
+       },
+       {
+        "id": "phenotype:HP:0003554",
+        "type": "phenotype",
+        "label": "Type 2 muscle fiber atrophy",
+        "note": "HPO HP:0003554"
+       },
+       {
+        "id": "phenotype:HP:6000088",
+        "type": "phenotype",
+        "label": "Reduced muscle alpha-1,4-glucosidase activity",
+        "note": "HPO HP:6000088"
+       },
+       {
+        "id": "phenotype:HP:0025680",
+        "type": "phenotype",
+        "label": "Compound muscle action potential amplitude facilitation",
+        "note": "HPO HP:0025680"
+       },
+       {
+        "id": "phenotype:HP:0033383",
+        "type": "phenotype",
+        "label": "Decreased compound muscle action potential amplitude",
+        "note": "HPO HP:0033383"
+       },
+       {
+        "id": "phenotype:HP:0001612",
+        "type": "phenotype",
+        "label": "Weak cry",
+        "note": "HPO HP:0001612"
+       },
+       {
+        "id": "phenotype:HP:0033850",
+        "type": "phenotype",
+        "label": "Coldness",
+        "note": "HPO HP:0033850"
+       },
+       {
+        "id": "phenotype:HP:0000618",
+        "type": "phenotype",
+        "label": "Blindness",
+        "note": "HPO HP:0000618"
+       },
+       {
+        "id": "phenotype:HP:0001621",
+        "type": "phenotype",
+        "label": "Weak voice",
+        "note": "HPO HP:0001621"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "speech disorders",
+      "declared_type": "phenotype",
+      "sentence": "The typical features of Tay-Sachs disease are muscle weakness, ataxia, speech, and mental disorders.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002465",
+        "type": "phenotype",
+        "label": "Poor speech",
+        "note": "HPO HP:0002465"
+       },
+       {
+        "id": "phenotype:HP:0012075",
+        "type": "phenotype",
+        "label": "Personality disorder",
+        "note": "HPO HP:0012075"
+       },
+       {
+        "id": "phenotype:HP:0001344",
+        "type": "phenotype",
+        "label": "Absent speech",
+        "note": "HPO HP:0001344"
+       },
+       {
+        "id": "phenotype:HP:0002168",
+        "type": "phenotype",
+        "label": "Scanning speech",
+        "note": "HPO HP:0002168"
+       },
+       {
+        "id": "phenotype:HP:0002371",
+        "type": "phenotype",
+        "label": "Loss of speech",
+        "note": "HPO HP:0002371"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0006889",
+        "type": "phenotype",
+        "label": "Borderline intellectual disability",
+        "note": "HPO HP:0006889"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       },
+       {
+        "id": "phenotype:HP:0010302",
+        "type": "phenotype",
+        "label": "Spinal cord tumor",
+        "note": "HPO HP:0010302"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "mental disorders",
+      "declared_type": "phenotype",
+      "sentence": "The typical features of Tay-Sachs disease are muscle weakness, ataxia, speech, and mental disorders.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0012075",
+        "type": "phenotype",
+        "label": "Personality disorder",
+        "note": "HPO HP:0012075"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0011343",
+        "type": "phenotype",
+        "label": "Moderate global developmental delay",
+        "note": "HPO HP:0011343"
+       },
+       {
+        "id": "phenotype:HP:0006889",
+        "type": "phenotype",
+        "label": "Borderline intellectual disability",
+        "note": "HPO HP:0006889"
+       },
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0012736",
+        "type": "phenotype",
+        "label": "Profound global developmental delay",
+        "note": "HPO HP:0012736"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "miglustat",
+      "declared_type": "therapy",
+      "sentence": "There are also clinical reports of substrate reduction therapy using miglustat and bone marrow or hematopoietic stem cell transplantation.",
+      "candidates": [
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:mirdametinib",
+        "type": "therapy",
+        "label": "Mirdametinib (MEK1/2 inhibitor; Gomekli)",
+        "synonyms": [
+         "Gomekli",
+         "PD-0325901"
+        ],
+        "summary": "An oral MEK inhibitor, FDA-approved for symptomatic plexiform neurofibromas in NF1 in adults and children 2 years and older; the second approved MEK inhibitor i"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "hematopoietic stem cell transplantation",
+      "declared_type": "therapy",
+      "sentence": "There are also clinical reports of substrate reduction therapy using miglustat and bone marrow or hematopoietic stem cell transplantation.",
+      "candidates": [
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:cannabidiol",
+        "type": "therapy",
+        "label": "Cannabidiol (plant-derived, pharmaceutical)",
+        "synonyms": [
+         "EPIDIOLEX",
+         "CBD",
+         "GWP42003-P"
+        ],
+        "summary": "A purified cannabidiol oral solution with an FDA label covering seizures associated with Dravet syndrome."
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:tipifarnib",
+        "type": "therapy",
+        "label": "Tipifarnib (farnesyltransferase inhibitor)",
+        "synonyms": [
+         "R115777",
+         "Zarnestra"
+        ],
+        "summary": "Blocks RAS membrane anchoring by inhibiting farnesylation. A randomised placebo-controlled phase 2 trial in NF1 plexiform neurofibromas did not prolong time to "
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "adeno-associated virus gene therapy",
+      "declared_type": "therapy",
+      "sentence": "At the development stage there are methods of Tay-Sachs disease gene therapy using adeno- or adeno-associated viruses as vectors for the delivery of cDNA encoding α and β HexA subunit genes.",
+      "candidates": [
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:etx101",
+        "type": "therapy",
+        "label": "ETX101 (AAV9-delivered gene therapy for SCN1A Dravet syndrome)",
+        "synonyms": [
+         "ETX101"
+        ],
+        "summary": "An AAV9-delivered gene therapy in phase 1/2 for SCN1A-positive Dravet syndrome."
+       },
+       {
+        "id": "therapy:rapamycin-nsml",
+        "type": "therapy",
+        "label": "Rapamycin (sirolimus) for NSML-associated hypertrophic cardiomyopathy",
+        "synonyms": [
+         "sirolimus",
+         "mTOR inhibitor"
+        ],
+        "summary": "An approved mTOR inhibitor that reversed hypertrophic cardiomyopathy in mice carrying NSML-type (catalytically impaired) PTPN11 mutations. Human heart tissue da"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:ganaxolone",
+        "type": "therapy",
+        "label": "Ganaxolone",
+        "synonyms": [
+         "ZTALMY"
+        ],
+        "summary": "A neuroactive steroid with an FDA label for seizures associated with CDKL5 deficiency disorder."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"GM2 ganglioside accumulation in lysosomes of nerve cells\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"GM2 ganglioside lysosomal accumulation\"},{\"mention_id\":\"m2\",\"mention\":\"muscle weakness\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no muscle weakness term\"},{\"mention_id\":\"m3\",\"mention\":\"speech disorders\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"specific speech terms narrower\"},{\"mention_id\":\"m4\",\"mention\":\"mental disorders\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no mental disorder term\"},{\"mention_id\":\"m5\",\"mention\":\"miglustat\",\"node_id\":\"therapy:miglustat\",\"match\":\"same\",\"justification\":\"miglustat\"},{\"mention_id\":\"m6\",\"mention\":\"hematopoietic stem cell transplantation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"HSCT node is Krabbe-specific\"},{\"mention_id\":\"m7\",\"mention\":\"adeno-associated virus gene therapy\",\"node_id\":\"therapy:aav-hexa-hexb-gene-therapy\",\"match\":\"same\",\"justification\":\"AAV HEXA/HEXB gene therapy for Tay-Sachs\"}]}"
+  }
+ ]
+}

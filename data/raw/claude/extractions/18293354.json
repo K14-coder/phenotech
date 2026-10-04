@@ -1,0 +1,109 @@
+{
+ "pmid": "18293354",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.537Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1161d7fbf7e8b73a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/18293354.json",
+ "claims": [
+  {
+   "subject_mention": "CACNA1A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Episodic ataxia type 2",
+   "object_type": "disease",
+   "quote": "Patients have CACNA1A gene mutations resulting in truncation or single amino acid changes in the pore-forming subunit of Ca(v)2.1 (P/Q-type) Ca(2+) channels.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Ca(v)2.1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "synaptic neurotransmitter release",
+   "object_type": "mechanism",
+   "quote": "These neuronal channels mediate synaptic neurotransmitter release.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "EA2",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "loss-of-function of Ca(v)2.1 channels",
+   "object_type": "mechanism",
+   "quote": "EA2 symptoms are thought to result from disturbed neurotransmission at cerebellar and neuromuscular synapses, caused by loss-of-function of Ca(v)2.1 channels.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "EA2",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "disturbed neurotransmission at cerebellar and neuromuscular synapses",
+   "object_type": "mechanism",
+   "quote": "EA2 symptoms are thought to result from disturbed neurotransmission at cerebellar and neuromuscular synapses, caused by loss-of-function of Ca(v)2.1 channels.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "acetazolamide",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "EA2",
+   "object_type": "disease",
+   "quote": "EA2 is treated with acetazolamide (AZA), but the pharmacotherapeutic mechanism is unknown.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AZA",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "function of presynaptic (mutant) Ca(v)2.1 channels",
+   "object_type": "mechanism",
+   "quote": "Furthermore, AZA does not exert an acute, direct influence on the function of presynaptic (mutant) Ca(v)2.1 channels.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "Ln-mutated Ca(v)2.1 channels",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "reduced function",
+   "object_type": "mechanism",
+   "quote": "Our results indicate that Ln-mutated Ca(v)2.1 channels at Ln/wt NMJs are either normally inserted in the presynaptic membrane but have reduced function, or that they inhibit wild-type channels by hampering their expression, trafficking, membrane insertion and/or function.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "Ln-mutated Ca(v)2.1 channels",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "inhibit wild-type channels",
+   "object_type": "mechanism",
+   "quote": "Our results indicate that Ln-mutated Ca(v)2.1 channels at Ln/wt NMJs are either normally inserted in the presynaptic membrane but have reduced function, or that they inhibit wild-type channels by hampering their expression, trafficking, membrane insertion and/or function.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

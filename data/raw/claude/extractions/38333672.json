@@ -1,0 +1,97 @@
+{
+ "pmid": "38333672",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.607Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "9c4ff49d16c6a4c5",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/38333672.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Gene variants in LZTR1 are implicated to cause Noonan syndrome associated with a severe and early-onset hypertrophic cardiomyopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe and early-onset hypertrophic cardiomyopathy",
+   "object_type": "phenotype",
+   "quote": "Gene variants in LZTR1 are implicated to cause Noonan syndrome associated with a severe and early-onset hypertrophic cardiomyopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "RAS-MAPK signaling hyperactivity",
+   "object_type": "mechanism",
+   "quote": "Mechanistically, LZTR1 deficiency results in accumulation of RAS GTPases and, as a consequence, in RAS-MAPK signaling hyperactivity, thereby causing the Noonan syndrome-associated phenotype.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "LZTR1 deficiency",
+   "object_type": "mechanism",
+   "quote": "Mechanistically, LZTR1 deficiency results in accumulation of RAS GTPases and, as a consequence, in RAS-MAPK signaling hyperactivity, thereby causing the Noonan syndrome-associated phenotype.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CRISPR-Cas9 gene therapies",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Preclinical evaluation of CRISPR-based therapies for Noonan syndrome caused by deep-intronic LZTR1 variants.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "small Cas9 orthologs targeting a deep-intronic LZTR1 variant",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "In this study, by utilizing a patient-specific screening platform based on iPSC-derived cardiomyocytes from two Noonan syndrome patients, we evaluated different clinically translatable therapeutic approaches using small Cas9 orthologs targeting a deep-intronic LZTR1 variant to cure the disease-associated molecular pathology.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CRISPR-Cas9 editing",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "LZTR1 function",
+   "object_type": "mechanism",
+   "quote": "While editing in iPSCs rescued the phenotype, the same editing approaches did not robustly restore LZTR1 function in cardiomyocytes, indicating critical differences in the activity of DNA double-strand break repair mechanisms between proliferative and non-proliferative cell types and highlighting the importance of cell type-specific screens for testing CRISPR-Cas9 gene therapies.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  }
+ ]
+}

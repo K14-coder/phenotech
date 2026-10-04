@@ -1,0 +1,73 @@
+{
+ "pmid": "41189054",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.628Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "8bba052ca36105bd",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41189054.json",
+ "claims": [
+  {
+   "subject_mention": "CLN3",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "CLN3 Batten disease",
+   "object_type": "disease",
+   "quote": "CLN3 Batten disease is a lethal pediatric neurodegenerative disease caused by mutations in the CLN3 gene.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CLN3 Batten disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "vision loss",
+   "object_type": "phenotype",
+   "quote": "Typically, the disease manifests as vision loss in early childhood and progresses to neurological dysfunction and death in young adulthood.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "splice-switching antisense oligonucleotide (ASO)",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "CLN3 disease",
+   "object_type": "disease",
+   "quote": "We have previously shown that a splice-switching antisense oligonucleotide (ASO) delivered to the central nervous system can reduce neurological disease burden in mouse models of CLN3 disease.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASO",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "exon skipping",
+   "object_type": "mechanism",
+   "quote": "A single intravitreal injection of ASO induces robust exon skipping in the retina for up to 12 months.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASO-based approach",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "CLN3 Batten disease",
+   "object_type": "disease",
+   "quote": "Our findings demonstrate the utility of an ASO-based approach to treat retinal dysfunction in CLN3 Batten disease and support broader ASO applications for treating ocular diseases.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

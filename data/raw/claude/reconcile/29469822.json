@@ -1,0 +1,384 @@
+{
+ "pmid": "29469822",
+ "entries": {
+  "c2d0caf6f84d9c2d": {
+   "mention": "Noonan syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:LZTR1",
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:PTPN11",
+    "disease:RAF1",
+    "disease:RIT1",
+    "disease:SOS1",
+    "disease:NF1",
+    "disease:CBL",
+    "disease:HRAS"
+   ],
+   "node_id": "disease:LZTR1",
+   "match": "instance",
+   "justification": "Recessive Noonan syndrome from biallelic LZTR1 per title",
+   "raw_node_id": "disease:LZTR1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.861Z"
+  },
+  "9b3d8e04ba6fb81c": {
+   "mention": "cardiac disease",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001639",
+    "phenotype:HP:0006191",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0012511",
+    "phenotype:HP:0012796",
+    "phenotype:HP:0001288",
+    "phenotype:HP:0002862",
+    "phenotype:HP:0034203",
+    "phenotype:HP:0001869",
+    "phenotype:HP:0012075"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Generic cardiac disease",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.861Z"
+  },
+  "6eea4efcc0d6a37f": {
+   "mention": "leukemia",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0004836",
+    "phenotype:HP:0006721",
+    "phenotype:HP:0012209",
+    "phenotype:HP:0002411",
+    "phenotype:HP:0002521",
+    "phenotype:HP:0001251",
+    "phenotype:HP:0004308",
+    "phenotype:HP:0000726",
+    "phenotype:HP:0001332",
+    "phenotype:HP:0034863"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Generic leukemia broader than candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.861Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.861Z",
+   "request_payload": {
+    "title": "Autosomal recessive Noonan syndrome associated with biallelic LZTR1 variants.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Noonan syndrome",
+      "declared_type": "disease",
+      "sentence": "The phenotypic range included mildly affected patients, but it was lethal in some, with cardiac disease and leukemia.",
+      "candidates": [
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "cardiac disease",
+      "declared_type": "phenotype",
+      "sentence": "The phenotypic range included mildly affected patients, but it was lethal in some, with cardiac disease and leukemia.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0006191",
+        "type": "phenotype",
+        "label": "Deep palmar crease",
+        "note": "HPO HP:0006191"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0012511",
+        "type": "phenotype",
+        "label": "Temporal optic disc pallor",
+        "note": "HPO HP:0012511"
+       },
+       {
+        "id": "phenotype:HP:0012796",
+        "type": "phenotype",
+        "label": "Increased cup-to-disc ratio",
+        "note": "HPO HP:0012796"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       },
+       {
+        "id": "phenotype:HP:0002862",
+        "type": "phenotype",
+        "label": "Bladder carcinoma",
+        "note": "HPO HP:0002862"
+       },
+       {
+        "id": "phenotype:HP:0034203",
+        "type": "phenotype",
+        "label": "Decreased iduronate sulfatase level",
+        "note": "HPO HP:0034203"
+       },
+       {
+        "id": "phenotype:HP:0001869",
+        "type": "phenotype",
+        "label": "Deep plantar creases",
+        "note": "HPO HP:0001869"
+       },
+       {
+        "id": "phenotype:HP:0012075",
+        "type": "phenotype",
+        "label": "Personality disorder",
+        "note": "HPO HP:0012075"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "leukemia",
+      "declared_type": "phenotype",
+      "sentence": "The phenotypic range included mildly affected patients, but it was lethal in some, with cardiac disease and leukemia.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0004836",
+        "type": "phenotype",
+        "label": "Acute promyelocytic leukemia",
+        "note": "HPO HP:0004836"
+       },
+       {
+        "id": "phenotype:HP:0006721",
+        "type": "phenotype",
+        "label": "Acute lymphoblastic leukemia",
+        "note": "HPO HP:0006721"
+       },
+       {
+        "id": "phenotype:HP:0012209",
+        "type": "phenotype",
+        "label": "Juvenile myelomonocytic leukemia",
+        "note": "HPO HP:0012209"
+       },
+       {
+        "id": "phenotype:HP:0002411",
+        "type": "phenotype",
+        "label": "Myokymia",
+        "note": "HPO HP:0002411"
+       },
+       {
+        "id": "phenotype:HP:0002521",
+        "type": "phenotype",
+        "label": "Hypsarrhythmia",
+        "note": "HPO HP:0002521"
+       },
+       {
+        "id": "phenotype:HP:0001251",
+        "type": "phenotype",
+        "label": "Ataxia",
+        "note": "HPO HP:0001251"
+       },
+       {
+        "id": "phenotype:HP:0004308",
+        "type": "phenotype",
+        "label": "Ventricular arrhythmia",
+        "note": "HPO HP:0004308"
+       },
+       {
+        "id": "phenotype:HP:0000726",
+        "type": "phenotype",
+        "label": "Dementia",
+        "note": "HPO HP:0000726"
+       },
+       {
+        "id": "phenotype:HP:0001332",
+        "type": "phenotype",
+        "label": "Dystonia",
+        "note": "HPO HP:0001332"
+       },
+       {
+        "id": "phenotype:HP:0034863",
+        "type": "phenotype",
+        "label": "Reduced leukocyte arylsulfatase A activity",
+        "note": "HPO HP:0034863"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Noonan syndrome\",\"node_id\":\"disease:LZTR1\",\"match\":\"instance\",\"justification\":\"Recessive Noonan syndrome from biallelic LZTR1 per title\"},{\"mention_id\":\"m2\",\"mention\":\"cardiac disease\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Generic cardiac disease\"},{\"mention_id\":\"m3\",\"mention\":\"leukemia\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Generic leukemia broader than candidates\"}]}"
+  }
+ ]
+}

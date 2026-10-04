@@ -1,0 +1,109 @@
+{
+ "pmid": "35052347",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.591Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a62c96ba8c75c43f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/35052347.json",
+ "claims": [
+  {
+   "subject_mention": "MEK Inhibition",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "RAF1-Associated Noonan Syndrome",
+   "object_type": "disease",
+   "quote": "MEK Inhibition in a Newborn with RAF1-Associated Noonan Syndrome Ameliorates Hypertrophic Cardiomyopathy but Is Insufficient to Revert Pulmonary Vascular Disease.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Trametinib",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "MEK",
+   "object_type": "mechanism",
+   "quote": "Trametinib, a MEK-inhibitor approved for treatment of RAS/MAPK-mutated cancers, is an emerging treatment option for HCM in NS.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Trametinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "HCM in NS",
+   "object_type": "disease",
+   "quote": "Trametinib, a MEK-inhibitor approved for treatment of RAS/MAPK-mutated cancers, is an emerging treatment option for HCM in NS.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Trametinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "HCM",
+   "object_type": "disease",
+   "quote": "Trametinib was introduced (0.022 mg/kg/day) with prompt clinical improvement and subsequent amelioration of HCM at ultrasound.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RAF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome (NS)",
+   "object_type": "disease",
+   "quote": "The RAF1:p.Ser257Leu variant is associated with severe Noonan syndrome (NS), progressive hypertrophic cardiomyopathy (HCM), and pulmonary hypertension.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome (NS)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "progressive hypertrophic cardiomyopathy (HCM)",
+   "object_type": "phenotype",
+   "quote": "The RAF1:p.Ser257Leu variant is associated with severe Noonan syndrome (NS), progressive hypertrophic cardiomyopathy (HCM), and pulmonary hypertension.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome (NS)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pulmonary hypertension",
+   "object_type": "phenotype",
+   "quote": "The RAF1:p.Ser257Leu variant is associated with severe Noonan syndrome (NS), progressive hypertrophic cardiomyopathy (HCM), and pulmonary hypertension.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RAF1-associated NS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pulmonary vascular disease",
+   "object_type": "phenotype",
+   "quote": "Our findings highlight a previously unappreciated connection between pulmonary vascular disease and the severe outcome already reported in patients with RAF1-associated NS.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

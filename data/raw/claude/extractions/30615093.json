@@ -1,0 +1,73 @@
+{
+ "pmid": "30615093",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.572Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "3efdbc1d9ad1da62",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/30615093.json",
+ "claims": [
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epilepsy",
+   "object_type": "disease",
+   "quote": "Neuronal mechanisms of mutations in SCN8A causing epilepsy or intellectual disability.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "intellectual disability",
+   "object_type": "disease",
+   "quote": "Neuronal mechanisms of mutations in SCN8A causing epilepsy or intellectual disability.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autism",
+   "object_type": "disease",
+   "quote": "We first studied the biophysical and neurophysiological consequences of four mutations in the human Na+ channel gene SCN8A causing either mild (E1483K) or severe epilepsy (R1872W), or intellectual disability and autism without epilepsy (R1620L, A1622D).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A R1872W",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "The E1483K mutation causing mild epilepsy showed no significant biophysical changes, whereas the R1872W mutation causing severe epilepsy induced clear gain-of-function biophysical changes in neuroblastoma cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A R1620L",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "In contrast, the R1620L mutation associated with intellectual disability and autism-but not epilepsy-reduced Na+ current density in neuroblastoma cells and expectedly decreased neuronal firing.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

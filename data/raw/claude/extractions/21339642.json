@@ -1,0 +1,121 @@
+{
+ "pmid": "21339642",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.544Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c04e30c63b884382",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/21339642.json",
+ "claims": [
+  {
+   "subject_mention": "RAF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "Germline mutations in RAF1 (which encodes the serine-threonine kinase RAF1) account for approximately 3%-5% of cases of NS.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RAF1 mutations that confer increased kinase activity",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "increased kinase activity",
+   "object_type": "mechanism",
+   "quote": "Unlike other NS alleles, RAF1 mutations that confer increased kinase activity are highly associated with HCM.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "short stature",
+   "object_type": "phenotype",
+   "quote": "Like NS patients, mice heterozygous for this mutation (referred to herein as L613V/+ mice) had short stature, craniofacial dysmorphia, and hematologic abnormalities.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "craniofacial dysmorphia",
+   "object_type": "phenotype",
+   "quote": "Like NS patients, mice heterozygous for this mutation (referred to herein as L613V/+ mice) had short stature, craniofacial dysmorphia, and hematologic abnormalities.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hematologic abnormalities",
+   "object_type": "phenotype",
+   "quote": "Like NS patients, mice heterozygous for this mutation (referred to herein as L613V/+ mice) had short stature, craniofacial dysmorphia, and hematologic abnormalities.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK-ERK pathway modulation",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "MEK-ERK pathway modulation ameliorates disease phenotypes in a mouse model of Noonan syndrome associated with the Raf1(L613V) mutation.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK inhibition",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "MEK-ERK activation",
+   "object_type": "mechanism",
+   "quote": "Agonist-evoked MEK-ERK activation was enhanced in multiple cell types, and postnatal MEK inhibition normalized the growth, facial, and cardiac defects in L613V/+ mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RAF1-mutant NS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "enhanced MEK-ERK activity",
+   "object_type": "mechanism",
+   "quote": "These data show that different NS genes have intrinsically distinct pathological effects, demonstrate that enhanced MEK-ERK activity is critical for causing HCM and other RAF1-mutant NS phenotypes, and suggest a mutation-specific approach to the treatment of RASopathies.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Raf1(L613V)",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "enhanced MEK-ERK activation",
+   "object_type": "mechanism",
+   "quote": "Agonist-evoked MEK-ERK activation was enhanced in multiple cell types, and postnatal MEK inhibition normalized the growth, facial, and cardiac defects in L613V/+ mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

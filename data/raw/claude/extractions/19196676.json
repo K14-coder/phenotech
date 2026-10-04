@@ -1,0 +1,37 @@
+{
+ "pmid": "19196676",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.540Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "d8d9dca4dfa1192a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/19196676.json",
+ "claims": [
+  {
+   "subject_mention": "SYNGAP1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autosomal dominant nonsyndromic mental retardation",
+   "object_type": "disease",
+   "quote": "These results indicate that SYNGAP1 disruption is a cause of autosomal dominant nonsyndromic mental retardation.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "SYNGAP1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "synapse function",
+   "object_type": "mechanism",
+   "quote": "We sequenced the autosomal gene SYNGAP1, which encodes a ras GTPase-activating protein that is critical for cognition and synapse function, in 94 patients with nonsyndromic mental retardation.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

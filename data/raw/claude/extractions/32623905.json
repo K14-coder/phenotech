@@ -1,0 +1,109 @@
+{
+ "pmid": "32623905",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.581Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "bd5bfbb5ca93439f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/32623905.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "METHODS: Here, we present a family with two siblings displaying an autosomal recessive form of NS with massive hypertrophic cardiomyopathy as clinically the most prevalent symptom caused by biallelic mutations within the leucine zipper-like transcription regulator 1 (LZTR1).",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hypertrophic cardiomyopathy",
+   "object_type": "phenotype",
+   "quote": "METHODS: Here, we present a family with two siblings displaying an autosomal recessive form of NS with massive hypertrophic cardiomyopathy as clinically the most prevalent symptom caused by biallelic mutations within the leucine zipper-like transcription regulator 1 (LZTR1).",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "gain-of-function of the RAS-mitogen-activated protein kinase signaling pathway",
+   "object_type": "mechanism",
+   "quote": "The underlying mechanism is a gain-of-function of the RAS-mitogen-activated protein kinase signaling pathway.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "RAS-MAPK signaling",
+   "object_type": "mechanism",
+   "quote": "RESULTS: Patients' induced pluripotent stem cell-derived cardiomyocytes recapitulated the hypertrophic phenotype and uncovered a so-far-not-described causal link between LZTR1 dysfunction, RAS-mitogen-activated protein kinase signaling hyperactivity, hypertrophic gene response and cellular hypertrophy.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK inhibition",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "Calcium channel blockade and MEK inhibition could prevent some of the disease characteristics, providing a molecular underpinning for the clinical use of these drugs in patients with NS, but might not be a sustainable therapeutic option.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Calcium channel blockade",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "Calcium channel blockade and MEK inhibition could prevent some of the disease characteristics, providing a molecular underpinning for the clinical use of these drugs in patients with NS, but might not be a sustainable therapeutic option.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "intronic CRISPR repair",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NS-associated hypertrophic cardiomyopathy",
+   "object_type": "disease",
+   "quote": "In a proof-of-concept approach, we explored a clinically translatable intronic CRISPR (clustered regularly interspaced short palindromic repeats) repair and demonstrated a rescue of the hypertrophic phenotype.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "intronic CRISPR repair",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NS-associated hypertrophic cardiomyopathy",
+   "object_type": "disease",
+   "quote": "In addition, we identified the intronic CRISPR repair as a personalized and in our view clinically translatable therapeutic strategy to treat NS-associated hypertrophic cardiomyopathy.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

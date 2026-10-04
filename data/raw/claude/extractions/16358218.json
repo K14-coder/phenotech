@@ -1,0 +1,61 @@
+{
+ "pmid": "16358218",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.528Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "8905a70897646a82",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/16358218.json",
+ "claims": [
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Germline mutations in PTPN11, the gene encoding the protein tyrosine phosphatase SHP-2, cause Noonan syndrome (NS) and the clinically related LEOPARD syndrome (LS), whereas somatic mutations in the same gene contribute to leukemogenesis.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "LEOPARD syndrome",
+   "object_type": "disease",
+   "quote": "Germline mutations in PTPN11, the gene encoding the protein tyrosine phosphatase SHP-2, cause Noonan syndrome (NS) and the clinically related LEOPARD syndrome (LS), whereas somatic mutations in the same gene contribute to leukemogenesis.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS-causative PTPN11 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "SHP-2 gain of function",
+   "object_type": "mechanism",
+   "quote": "Our results document a strict correlation between the identity of the lesion and disease and demonstrate that NS-causative mutations have less potency for promoting SHP-2 gain of function than do leukemia-associated ones.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11 Y279C and T468M",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of SHP-2 catalytic activity",
+   "object_type": "mechanism",
+   "quote": "Furthermore, we show that the recurrent LS-causing Y279C and T468M amino acid substitutions engender loss of SHP-2 catalytic activity, identifying a previously unrecognized behavior for this class of missense PTPN11 mutations.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "pmid": "41780062",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.633Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "d75e57ed88f9a2e5",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/41780062.json",
+ "claims": [
+  {
+   "subject_mention": "SCN1A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "BACKGROUND: Dravet syndrome is a severe developmental and epileptic encephalopathy caused primarily by SCN1A haploinsufficiency.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Dravet syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "SCN1A haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Dravet syndrome is a severe developmental and epileptic encephalopathy caused primarily by SCN1A haploinsufficiency.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "zorevunersen",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "up-regulate NaV1.1 sodium channels",
+   "object_type": "mechanism",
+   "quote": "The effects of zorevunersen, an antisense oligonucleotide designed to up-regulate NaV1.1 sodium channels, in patients with Dravet syndrome are not known.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "zorevunersen",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: The safety profile and initial clinical improvement support the continued development of zorevunersen as a potential disease-modifying treatment for Dravet syndrome.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Dravet syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "sudden unexpected death in epilepsy",
+   "object_type": "phenotype",
+   "quote": "Risks of sudden unexpected death in epilepsy and cognitive deficits are higher among patients with this syndrome than in the general population with epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Dravet syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive deficits",
+   "object_type": "phenotype",
+   "quote": "Risks of sudden unexpected death in epilepsy and cognitive deficits are higher among patients with this syndrome than in the general population with epilepsy.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

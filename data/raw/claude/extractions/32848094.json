@@ -1,0 +1,85 @@
+{
+ "pmid": "32848094",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.582Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "87f386a8945da925",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/32848094.json",
+ "claims": [
+  {
+   "subject_mention": "SCN1A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "Dravet syndrome (DS) is an intractable developmental and epileptic encephalopathy caused largely by de novo variants in the SCN1A gene, resulting in haploinsufficiency of the voltage-gated sodium channel α subunit NaV1.1.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Dravet syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "haploinsufficiency of the voltage-gated sodium channel α subunit NaV1.1",
+   "object_type": "mechanism",
+   "quote": "Dravet syndrome (DS) is an intractable developmental and epileptic encephalopathy caused largely by de novo variants in the SCN1A gene, resulting in haploinsufficiency of the voltage-gated sodium channel α subunit NaV1.1.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Antisense oligonucleotides",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "Antisense oligonucleotides increase Scn1a expression and reduce seizures and SUDEP incidence in a mouse model of Dravet syndrome.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Antisense oligonucleotides",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "Scn1a expression",
+   "object_type": "mechanism",
+   "quote": "Antisense oligonucleotides increase Scn1a expression and reduce seizures and SUDEP incidence in a mouse model of Dravet syndrome.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "antisense oligonucleotides (ASOs)",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "expression of productive Scn1a transcript",
+   "object_type": "mechanism",
+   "quote": "We identified antisense oligonucleotides (ASOs) that specifically increase the expression of productive Scn1a transcript in human cell lines, as well as in mouse brain.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TANGO",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "DS",
+   "object_type": "disease",
+   "quote": "Our results suggest that TANGO may provide a unique, gene-specific approach for the treatment of DS.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "pmid": "34893157",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.590Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c6600bc70d92cafc",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/34893157.json",
+ "claims": [
+  {
+   "subject_mention": "IDS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "MPS II",
+   "object_type": "disease",
+   "quote": "MPS II symptoms are caused by mutations in the lysosomal iduronate-2-sulfatase (IDS) gene.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "IDS mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "The mutations cause a loss of enzymatic performance and result in the accumulation of glycosaminoglycans (GAGs), heparan sulfate and dermatan sulfate, which are no longer degradable.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MPS II",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "accumulation of glycosaminoglycans (GAGs)",
+   "object_type": "mechanism",
+   "quote": "The mutations cause a loss of enzymatic performance and result in the accumulation of glycosaminoglycans (GAGs), heparan sulfate and dermatan sulfate, which are no longer degradable.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "pmid": "36184070",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.602Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c78d0d6eb45db6bd",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/36184070.json",
+ "claims": [
+  {
+   "subject_mention": "MEK-inhibition",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "RIT1-related Noonan Syndrome",
+   "object_type": "disease",
+   "quote": "Succesful MEK-inhibition of severe hypertrophic cardiomyopathy in RIT1-related Noonan Syndrome.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan Syndrome",
+   "object_type": "disease",
+   "quote": "In this case report we describe a child with Noonan Syndrome caused by a pathogenic RIT1 variant, who developed severe early-onset hypertrophic cardiomyopathy and pulmonary valve stenosis.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan Syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hypertrophic cardiomyopathy",
+   "object_type": "phenotype",
+   "quote": "In this case report we describe a child with Noonan Syndrome caused by a pathogenic RIT1 variant, who developed severe early-onset hypertrophic cardiomyopathy and pulmonary valve stenosis.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan Syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pulmonary valve stenosis",
+   "object_type": "phenotype",
+   "quote": "In this case report we describe a child with Noonan Syndrome caused by a pathogenic RIT1 variant, who developed severe early-onset hypertrophic cardiomyopathy and pulmonary valve stenosis.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "trametinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan Syndrome",
+   "object_type": "disease",
+   "quote": "She received off-label treatment with the MEK-inhibitor trametinib which resulted in complete remission of the cardiac hypertrophy and a significant improvement of the pulmonary valve stenosis.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

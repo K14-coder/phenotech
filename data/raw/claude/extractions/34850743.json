@@ -1,0 +1,61 @@
+{
+ "pmid": "34850743",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.590Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "8bcdb7b189dda15d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/34850743.json",
+ "claims": [
+  {
+   "subject_mention": "early seizure onset developmental and epileptic encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Biophysical gain of function in SCN2A",
+   "object_type": "mechanism",
+   "quote": "Biophysical gain of function in SCN2A is seen in some patients with early seizure onset developmental and epileptic encephalopathy (DEE).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Antisense oligonucleotide therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SCN2A gain-of-function epilepsy",
+   "object_type": "disease",
+   "quote": "Antisense oligonucleotide therapy reduces seizures and extends life span in an SCN2A gain-of-function epilepsy model.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "gapmer antisense oligonucleotide (ASO)",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "Scn2a mRNA",
+   "object_type": "mechanism",
+   "quote": "We tested this theory by central administration of a gapmer antisense oligonucleotide (ASO) targeting Scn2a mRNA in a mouse model of Scn2a early seizure onset DEE (Q/+ mice).",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "human SCN2A gapmer ASO",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SCN2A gain-of-function DEE",
+   "object_type": "disease",
+   "quote": "A human SCN2A gapmer ASO could likewise impact the lives of patients with SCN2A gain-of-function DEE.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

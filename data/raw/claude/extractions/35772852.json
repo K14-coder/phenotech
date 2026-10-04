@@ -1,0 +1,49 @@
+{
+ "pmid": "35772852",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.598Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "5a9d4d122408eb50",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/35772852.json",
+ "claims": [
+  {
+   "subject_mention": "cerliponase alfa",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "CLN2 disease",
+   "object_type": "disease",
+   "quote": "Ongoing retinal degeneration despite intraventricular enzyme replacement therapy with cerliponase alfa in late-infantile neuronal ceroid lipofuscinosis type 2 (CLN2 disease).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CLN2",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "blinding",
+   "object_type": "phenotype",
+   "quote": "Late-infantile neuronal ceroid lipofuscinosis type 2 (CLN2) is a neurodegenerative, blinding lysosomal storage disorder.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CLN2",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "retinal degeneration",
+   "object_type": "phenotype",
+   "quote": "Despite intraventricular ERT, retinal degeneration progressed in patients with CLN2 and was particularly pronounced between 56 and 80 months of age.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

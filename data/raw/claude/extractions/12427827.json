@@ -1,0 +1,49 @@
+{
+ "pmid": "12427827",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.525Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "d48924079a7215f8",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/12427827.json",
+ "claims": [
+  {
+   "subject_mention": "SynGAP",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "ERK/MAPK signaling",
+   "object_type": "mechanism",
+   "quote": "SynGAP regulates ERK/MAPK signaling, synaptic plasticity, and learning in the complex with postsynaptic density 95 and NMDA receptor.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SynGAP",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "synaptic plasticity",
+   "object_type": "mechanism",
+   "quote": "SynGAP regulates ERK/MAPK signaling, synaptic plasticity, and learning in the complex with postsynaptic density 95 and NMDA receptor.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SynGAP",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "NMDAR-dependent activation of Ras signaling pathways",
+   "object_type": "mechanism",
+   "quote": "The close association of SynGAP and NMDARs suggests that SynGAP may have an important role in NMDAR-dependent activation of Ras signaling pathways, such as the MAP kinase pathway, and in synaptic plasticity.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

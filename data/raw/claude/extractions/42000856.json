@@ -1,0 +1,61 @@
+{
+ "pmid": "42000856",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.643Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "fccdb7fe487190c4",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/42000856.json",
+ "claims": [
+  {
+   "subject_mention": "GLA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "cardiac-type Fabry disease",
+   "object_type": "disease",
+   "quote": "The IVS4+919G>A mutation in the GLA gene, prevalent in East Asian populations, causes cardiac-type Fabry disease by creating an abnormal splice site.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GLA IVS4+919G>A",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function (truncated, non-functional α-Gal A protein)",
+   "object_type": "mechanism",
+   "quote": "This results in the insertion of a 57-nucleotide segment between exon 4 and exon 5, introducing a premature stop codon and leading to a truncated, non-functional α-Gal A protein.",
+   "study_type": "functional_study",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "adenine base editing",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "cryptic splicing",
+   "object_type": "mechanism",
+   "quote": "These findings demonstrate in vitro splice rescue of a deep intronic, cardiac-type Fabry disease variant by adenine base editing and suggest that bystander edits in non-coding sequence can further enhance correction by suppressing cryptic splicing, with concordant improvements in α-Gal A activity and Gb3 signals.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "adenine base editing",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "cardiac-type Fabry disease",
+   "object_type": "disease",
+   "quote": "These findings demonstrate in vitro splice rescue of a deep intronic, cardiac-type Fabry disease variant by adenine base editing and suggest that bystander edits in non-coding sequence can further enhance correction by suppressing cryptic splicing, with concordant improvements in α-Gal A activity and Gb3 signals.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

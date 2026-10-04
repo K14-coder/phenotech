@@ -1,0 +1,37 @@
+{
+ "pmid": "32187457",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.579Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "2103760386089493",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/32187457.json",
+ "claims": [
+  {
+   "subject_mention": "Selumetinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Inoperable Plexiform Neurofibromas",
+   "object_type": "disease",
+   "quote": "Selumetinib in Children with Inoperable Plexiform Neurofibromas.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "selumetinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "neurofibromatosis type 1",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: In this phase 2 trial, most children with neurofibromatosis type 1 and inoperable plexiform neurofibromas had durable tumor shrinkage and clinical benefit from selumetinib.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

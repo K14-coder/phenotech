@@ -1,0 +1,392 @@
+{
+ "pmid": "35188187",
+ "entries": {
+  "b81bb316677cf9d7": {
+   "mention": "pigmentary abnormalities",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0012249",
+    "phenotype:HP:0002353",
+    "phenotype:HP:0011636",
+    "phenotype:HP:0011203",
+    "phenotype:HP:0030810",
+    "phenotype:HP:0007928",
+    "phenotype:HP:0007670",
+    "phenotype:HP:0040296",
+    "phenotype:HP:0002453",
+    "phenotype:HP:0030467"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no pigmentary term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.875Z"
+  },
+  "37e17cbe06684a09": {
+   "mention": "learning and social deficits",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0012760",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001631",
+    "phenotype:HP:0012171",
+    "phenotype:HP:0030939",
+    "phenotype:HP:0100023",
+    "phenotype:HP:6000367",
+    "phenotype:HP:0033235",
+    "phenotype:HP:0001041"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "compound learning/social deficits",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.875Z"
+  },
+  "3a5bcdbcb3e48cb2": {
+   "mention": "predisposition for benign and malignant tumor formation",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0100697",
+    "phenotype:HP:0001518",
+    "phenotype:HP:0007099",
+    "phenotype:HP:0001520",
+    "phenotype:HP:0010302",
+    "phenotype:HP:0025152",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0040296",
+    "phenotype:HP:0007549",
+    "phenotype:HP:0012059"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "tumor predisposition broad",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.875Z"
+  },
+  "41a7010c72c943a5": {
+   "mention": "negative regulation of RAS activity",
+   "type": "mechanism",
+   "candidates": [
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:dominant-negative",
+    "mech:nmda-receptor-activity",
+    "mech:gain-of-function",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:potassium-channel-activity",
+    "mech:loss-of-function",
+    "mech:voltage-gated-sodium-channel-activity"
+   ],
+   "node_id": "mech:negative-regulation-of-ras-signaling",
+   "match": "same",
+   "justification": "negative regulation of RAS",
+   "raw_node_id": "mech:negative-regulation-of-ras-signaling",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.875Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.875Z",
+   "request_payload": {
+    "title": "RAS and beyond: the many faces of the neurofibromatosis type 1 protein.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "pigmentary abnormalities",
+      "declared_type": "phenotype",
+      "sentence": "Neurofibromatosis type 1 is a rare neurogenetic syndrome, characterized by pigmentary abnormalities, learning and social deficits, and a predisposition for benign and malignant tumor formation caused by germline mutations in the NF1 gene.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0012249",
+        "type": "phenotype",
+        "label": "Abnormal ST segment",
+        "note": "HPO HP:0012249"
+       },
+       {
+        "id": "phenotype:HP:0002353",
+        "type": "phenotype",
+        "label": "EEG abnormality",
+        "note": "HPO HP:0002353"
+       },
+       {
+        "id": "phenotype:HP:0011636",
+        "type": "phenotype",
+        "label": "Abnormal coronary artery origin",
+        "note": "HPO HP:0011636"
+       },
+       {
+        "id": "phenotype:HP:0011203",
+        "type": "phenotype",
+        "label": "EEG with abnormally slow frequencies",
+        "note": "HPO HP:0011203"
+       },
+       {
+        "id": "phenotype:HP:0030810",
+        "type": "phenotype",
+        "label": "Abnormal tongue physiology",
+        "note": "HPO HP:0030810"
+       },
+       {
+        "id": "phenotype:HP:0007928",
+        "type": "phenotype",
+        "label": "Abnormal flash visual evoked potentials",
+        "note": "HPO HP:0007928"
+       },
+       {
+        "id": "phenotype:HP:0007670",
+        "type": "phenotype",
+        "label": "Abnormal vestibulo-ocular reflex",
+        "note": "HPO HP:0007670"
+       },
+       {
+        "id": "phenotype:HP:0040296",
+        "type": "phenotype",
+        "label": "Abnormal location of the eyebrow",
+        "note": "HPO HP:0040296"
+       },
+       {
+        "id": "phenotype:HP:0002453",
+        "type": "phenotype",
+        "label": "Abnormal globus pallidus morphology",
+        "note": "HPO HP:0002453"
+       },
+       {
+        "id": "phenotype:HP:0030467",
+        "type": "phenotype",
+        "label": "Abnormal pattern electroretinogram",
+        "note": "HPO HP:0030467"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "learning and social deficits",
+      "declared_type": "phenotype",
+      "sentence": "Neurofibromatosis type 1 is a rare neurogenetic syndrome, characterized by pigmentary abnormalities, learning and social deficits, and a predisposition for benign and malignant tumor formation caused by germline mutations in the NF1 gene.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0012760",
+        "type": "phenotype",
+        "label": "Reduced social responsiveness",
+        "note": "HPO HP:0012760"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001631",
+        "type": "phenotype",
+        "label": "Atrial septal defect",
+        "note": "HPO HP:0001631"
+       },
+       {
+        "id": "phenotype:HP:0012171",
+        "type": "phenotype",
+        "label": "Stereotypical hand wringing",
+        "note": "HPO HP:0012171"
+       },
+       {
+        "id": "phenotype:HP:0030939",
+        "type": "phenotype",
+        "label": "Palpebral thickening",
+        "note": "HPO HP:0030939"
+       },
+       {
+        "id": "phenotype:HP:0100023",
+        "type": "phenotype",
+        "label": "Recurrent hand flapping",
+        "note": "HPO HP:0100023"
+       },
+       {
+        "id": "phenotype:HP:6000367",
+        "type": "phenotype",
+        "label": "Central thinning of the outer nuclear layer of the retina",
+        "note": "HPO HP:6000367"
+       },
+       {
+        "id": "phenotype:HP:0033235",
+        "type": "phenotype",
+        "label": "Difficulty descending stairs",
+        "note": "HPO HP:0033235"
+       },
+       {
+        "id": "phenotype:HP:0001041",
+        "type": "phenotype",
+        "label": "Facial erythema",
+        "note": "HPO HP:0001041"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "predisposition for benign and malignant tumor formation",
+      "declared_type": "phenotype",
+      "sentence": "Neurofibromatosis type 1 is a rare neurogenetic syndrome, characterized by pigmentary abnormalities, learning and social deficits, and a predisposition for benign and malignant tumor formation caused by germline mutations in the NF1 gene.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0100697",
+        "type": "phenotype",
+        "label": "Malignant peripheral nerve sheath tumor",
+        "note": "HPO HP:0100697"
+       },
+       {
+        "id": "phenotype:HP:0001518",
+        "type": "phenotype",
+        "label": "Small for gestational age",
+        "note": "HPO HP:0001518"
+       },
+       {
+        "id": "phenotype:HP:0007099",
+        "type": "phenotype",
+        "label": "Chiari type I malformation",
+        "note": "HPO HP:0007099"
+       },
+       {
+        "id": "phenotype:HP:0001520",
+        "type": "phenotype",
+        "label": "Large for gestational age",
+        "note": "HPO HP:0001520"
+       },
+       {
+        "id": "phenotype:HP:0010302",
+        "type": "phenotype",
+        "label": "Spinal cord tumor",
+        "note": "HPO HP:0010302"
+       },
+       {
+        "id": "phenotype:HP:0025152",
+        "type": "phenotype",
+        "label": "Poor visual behavior for age",
+        "note": "HPO HP:0025152"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0040296",
+        "type": "phenotype",
+        "label": "Abnormal location of the eyebrow",
+        "note": "HPO HP:0040296"
+       },
+       {
+        "id": "phenotype:HP:0007549",
+        "type": "phenotype",
+        "label": "Desquamation of skin soon after birth",
+        "note": "HPO HP:0007549"
+       },
+       {
+        "id": "phenotype:HP:0012059",
+        "type": "phenotype",
+        "label": "Lentigo maligna melanoma",
+        "note": "HPO HP:0012059"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "negative regulation of RAS activity",
+      "declared_type": "mechanism",
+      "sentence": "With the cloning of the NF1 gene and the recognition that the encoded protein, neurofibromin, largely functions as a negative regulator of RAS activity, attention has mainly focused on RAS and canonical RAS effector pathway signaling relevant to disease pathogenesis and treatment.",
+      "candidates": [
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"pigmentary abnormalities\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no pigmentary term\"},{\"mention_id\":\"m2\",\"mention\":\"learning and social deficits\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"compound learning/social deficits\"},{\"mention_id\":\"m3\",\"mention\":\"predisposition for benign and malignant tumor formation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"tumor predisposition broad\"},{\"mention_id\":\"m4\",\"mention\":\"negative regulation of RAS activity\",\"node_id\":\"mech:negative-regulation-of-ras-signaling\",\"match\":\"same\",\"justification\":\"negative regulation of RAS\"}]}"
+  }
+ ]
+}

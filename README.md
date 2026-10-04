@@ -80,7 +80,7 @@ This is the core design principle, enforced in code rather than promised:
 - **Every literature claim carries a verbatim quote,** string-matched against the stored source text. A quote that doesn't match is rejected, never "fixed".
 - **Evidence levels** separate clinical proof, curated databases, experimental work, observational reports, links the atlas inferred, and hypotheses. Hypotheses are drawn dashed and capped at confidence 0.25.
 - **Contradicting evidence is shown, not hidden.** A link with counter-evidence is marked *contested*.
-- **An independent OpenAI re-reading** of the cited papers cross-checks the curated links. Disagreements are flagged for expert review.
+- **Independent AI re-readings** of the cited papers cross-check the curated links, blind to the curation: OpenAI for the SNAREopathies (78 abstracts), Claude for the other three families and the cross-family links (256 abstracts), with the same instructions, schema and quote check. Disagreements are flagged for expert review. New links the readers propose wait for review before they enter the graph (Claude) or enter only as *unverified* (OpenAI).
 - **Review is labelled for what it is.** An independent AI review (not a human expert) went through the expert review sheet. A biochemist's review is still open. AI reviews are never shown as human ones.
 - **Gaps are first-class data.** Each records what was searched and how to find out more.
 
@@ -90,9 +90,10 @@ Current build of the deep graph (live numbers on `/method` and in `data/build/re
 |---|---|
 | Nodes / links | 1,412 / 2,977 |
 | Links with at least one source | 2,977 / 2,977 |
-| Quotes string-verified against the stored source | 2,130 / 2,130 |
+| Quotes string-verified against the stored source | 2,404 / 2,404 |
 | Contested links shown with their counter-evidence | 75 |
-| Agreement between the OpenAI re-reading and the curators, on papers both cite | 60 / 68 (88%) |
+| Agreement between the OpenAI re-reading and the curators, on papers both cite (SNAREopathies) | 60 / 68 (88%) |
+| Agreement between the Claude re-reading and the curators, on papers both cite (other 3 families + cross-family) | 172 / 179 (96%) |
 | Links independently reviewed by AI (not a human expert) | 63 |
 | Diseases with a specific mechanism link to another family | 29 / 45 |
 | Gaps recorded, each with the searches behind it | 63 |
@@ -130,7 +131,7 @@ The milestone: a small patient group starts contributing natural history data a 
 | **Reconcile** | Resolves names and synonyms (protein names, older disease names) to one stable node, choosing only from candidate nodes. |
 | **Cross-check** | Compares its reading with the curated links: agreements stamp the evidence, disagreements go to review (88% agreement on the SNAREopathy papers). |
 | **Explain** | Turns a path through the graph into plain language a family can follow. Every sentence cites the links that support it. |
-| **Draft** | Writes sourced collaboration proposals, outreach emails and experiment plans from a disease's neighbours, shared assets, partners and gaps. 66 drafts are precomputed in `data/ai/`. |
+| **Draft** | Writes sourced collaboration proposals, outreach emails and experiment plans from a disease's neighbours, shared assets, partners and gaps. 66 drafts by OpenAI are precomputed in `data/ai/`; 42 more outreach drafts were written by Claude through the same evidence packs and citation validator (`web/scripts/agent-ai.mjs`) and say so. |
 | **Research queue** | Volunteers' OpenAI (or Claude) extractions for breadth diseases, re-verified by the server. |
 
 Model output is constrained to the evidence it is given. Citations that point outside it are dropped. Sentences without a source are shown muted as "AI framing, no direct source".

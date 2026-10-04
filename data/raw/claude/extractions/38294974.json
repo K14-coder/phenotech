@@ -1,0 +1,49 @@
+{
+ "pmid": "38294974",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.606Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "7d8d94998359a0f9",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/38294974.json",
+ "claims": [
+  {
+   "subject_mention": "N-acetyl-l-leucine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Niemann-Pick disease type C",
+   "object_type": "disease",
+   "quote": "We evaluated the safety and efficacy of N-acetyl-l-leucine (NALL), an agent that potentially ameliorates lysosomal and metabolic dysfunction, for the treatment of Niemann-Pick disease type C.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "N-acetyl-l-leucine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "lysosomal and metabolic dysfunction",
+   "object_type": "mechanism",
+   "quote": "We evaluated the safety and efficacy of N-acetyl-l-leucine (NALL), an agent that potentially ameliorates lysosomal and metabolic dysfunction, for the treatment of Niemann-Pick disease type C.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "NALL",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Niemann-Pick disease type C",
+   "object_type": "disease",
+   "quote": "Among patients with Niemann-Pick disease type C, treatment with NALL for 12 weeks led to better neurologic status than placebo.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

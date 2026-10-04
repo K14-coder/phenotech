@@ -1,0 +1,305 @@
+{
+ "pmid": "30288694",
+ "entries": {
+  "b770e5a0ed93fae8": {
+   "mention": "epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0002133",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0002131",
+    "phenotype:HP:0031475",
+    "phenotype:HP:0030842"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "epilepsy broader than candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.890Z"
+  },
+  "2d79e6f97c6c1c06": {
+   "mention": "developmental retardation",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0001263",
+    "phenotype:HP:0011344",
+    "phenotype:HP:0011343",
+    "phenotype:HP:0012736",
+    "phenotype:HP:0001268",
+    "phenotype:HP:0000546",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001653"
+   ],
+   "node_id": "phenotype:HP:0001263",
+   "match": "same",
+   "justification": "developmental retardation = developmental delay",
+   "raw_node_id": "phenotype:HP:0001263",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.890Z"
+  },
+  "f230717df14ff2c2": {
+   "mention": "mTOR signaling",
+   "type": "mechanism",
+   "candidates": [
+    "mech:tor-signaling",
+    "mech:ras-protein-signal-transduction",
+    "mech:protein-destabilization",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:synaptic-vesicle-priming",
+    "mech:nmda-receptor-activity",
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:haploinsufficiency"
+   ],
+   "node_id": "mech:tor-signaling",
+   "match": "same",
+   "justification": "mTOR signaling",
+   "raw_node_id": "mech:tor-signaling",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.890Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.890Z",
+   "request_payload": {
+    "title": "Neuron-Type Specific Loss of CDKL5 Leads to Alterations in mTOR Signaling and Synaptic Markers.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "CDKL5 disorder is a devastating neurodevelopmental disorder associated with epilepsy, developmental retardation, autism, and related phenotypes.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0002133",
+        "type": "phenotype",
+        "label": "Status epilepticus",
+        "note": "HPO HP:0002133"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0002131",
+        "type": "phenotype",
+        "label": "Episodic ataxia",
+        "note": "HPO HP:0002131"
+       },
+       {
+        "id": "phenotype:HP:0031475",
+        "type": "phenotype",
+        "label": "Status epilepticus without prominent motor symptoms",
+        "note": "HPO HP:0031475"
+       },
+       {
+        "id": "phenotype:HP:0030842",
+        "type": "phenotype",
+        "label": "Choking episodes",
+        "note": "HPO HP:0030842"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "developmental retardation",
+      "declared_type": "phenotype",
+      "sentence": "CDKL5 disorder is a devastating neurodevelopmental disorder associated with epilepsy, developmental retardation, autism, and related phenotypes.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0011343",
+        "type": "phenotype",
+        "label": "Moderate global developmental delay",
+        "note": "HPO HP:0011343"
+       },
+       {
+        "id": "phenotype:HP:0012736",
+        "type": "phenotype",
+        "label": "Profound global developmental delay",
+        "note": "HPO HP:0012736"
+       },
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001653",
+        "type": "phenotype",
+        "label": "Mitral regurgitation",
+        "note": "HPO HP:0001653"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "mTOR signaling",
+      "declared_type": "mechanism",
+      "sentence": "Taken together, these data support a model in which loss of CDKL5 alters mTOR signaling and synaptic compositions in a neuron-type specific manner and suggest that CDKL5 may have distinct functional roles related to cellular signaling in excitatory and inhibitory neurons.",
+      "candidates": [
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"epilepsy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"epilepsy broader than candidates\"},{\"mention_id\":\"m2\",\"mention\":\"developmental retardation\",\"node_id\":\"phenotype:HP:0001263\",\"match\":\"same\",\"justification\":\"developmental retardation = developmental delay\"},{\"mention_id\":\"m3\",\"mention\":\"mTOR signaling\",\"node_id\":\"mech:tor-signaling\",\"match\":\"same\",\"justification\":\"mTOR signaling\"}]}"
+  }
+ ]
+}

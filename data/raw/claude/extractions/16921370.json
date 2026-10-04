@@ -1,0 +1,61 @@
+{
+ "pmid": "16921370",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.533Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b5495f13b967d8f0",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/16921370.json",
+ "claims": [
+  {
+   "subject_mention": "Na(V)1.1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "severe myoclonic epilepsy in infancy",
+   "object_type": "disease",
+   "quote": "Heterozygous loss-of-function mutations in Na(V)1.1 channels cause severe myoclonic epilepsy in infancy (SMEI).",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Na(V)1.1 heterozygous loss-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "Heterozygous loss-of-function mutations in Na(V)1.1 channels cause severe myoclonic epilepsy in infancy (SMEI).",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Scn1a",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "sodium current in GABAergic inhibitory interneurons",
+   "object_type": "mechanism",
+   "quote": "The sodium current density was, however, substantially reduced in inhibitory interneurons of Scn1a+/- and Scn1a-/- mice but not in their excitatory pyramidal neurons.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SMEI",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "reduced sodium currents in GABAergic inhibitory interneurons",
+   "object_type": "mechanism",
+   "quote": "Our results indicate that reduced sodium currents in GABAergic inhibitory interneurons in Scn1a+/- heterozygotes may cause the hyperexcitability that leads to epilepsy in patients with SMEI.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

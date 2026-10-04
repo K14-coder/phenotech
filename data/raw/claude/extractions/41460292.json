@@ -1,0 +1,121 @@
+{
+ "pmid": "41460292",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.630Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "52d52f678b303182",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41460292.json",
+ "claims": [
+  {
+   "subject_mention": "HEXA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Tay-Sachs disease is a rare neurodegenerative disorder caused by mutations in the HEXA gene.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HEXA",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "degradation of GM2 ganglioside",
+   "object_type": "mechanism",
+   "quote": "The HEXA gene encodes the α-subunit of the enzyme β-hexosaminidase A, which degrades GM2 ganglioside.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Tay-Sachs disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "impaired autophagy",
+   "object_type": "mechanism",
+   "quote": "Previously, we identified impaired autophagy in the brains of a mouse model of Tay-Sachs disease, which exhibited neuropathological and clinical abnormalities.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "lithium",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "autophagosome clearance",
+   "object_type": "mechanism",
+   "quote": "Moreover, we demonstrated autophagosome clearance in Tay-Sachs cells under lithium-induced conditions.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Tay-Sachs",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "altered N-glycan and O-glycan profiles",
+   "object_type": "mechanism",
+   "quote": "We demonstrated higher levels of high mannose and lower levels of complex types of N-glycans, along with increased O-glycan levels in Tay-Sachs cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Tay-Sachs",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "endoplasmic reticulum (ER) stress",
+   "object_type": "mechanism",
+   "quote": "Compared to control groups, we observed upregulated expression of endoplasmic reticulum (ER) stress-related markers, CHOP and ATF-6, in Tay-Sachs cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "autophagy induction",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "accumulated high-mannose N-glycans and O-glycans",
+   "object_type": "mechanism",
+   "quote": "Our study demonstrated that autophagy induction causes the degradation of accumulated high-mannose N-glycans and O-glycans, which is associated with the downregulation of ER stress-related genes in Tay-Sachs cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Tay-Sachs",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "ER stress-mediated autophagy",
+   "object_type": "mechanism",
+   "quote": "Our study is the first to show this phenomenon in Tay-Sachs cells and suggests the presence of ER stress-mediated autophagy.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "autophagy induction",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Therefore, targeting glycans through autophagy induction could offer therapeutic benefits to patients with Tay-Sachs disease in future studies.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

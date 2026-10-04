@@ -1,0 +1,109 @@
+{
+ "pmid": "16439621",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.531Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "26cec0dd6023fee1",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/16439621.json",
+ "claims": [
+  {
+   "subject_mention": "BRAF",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "CFC syndrome",
+   "object_type": "disease",
+   "quote": "The majority of cases (18 out of 23) are caused by mutations in BRAF, a gene frequently mutated in cancer.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "CFC syndrome",
+   "object_type": "disease",
+   "quote": "Furthermore, three of five individuals without BRAF mutations had missense mutations in either MEK1 or MEK2, downstream effectors of B-Raf.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "CFC syndrome",
+   "object_type": "disease",
+   "quote": "Furthermore, three of five individuals without BRAF mutations had missense mutations in either MEK1 or MEK2, downstream effectors of B-Raf.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "characteristic craniofacial features",
+   "object_type": "phenotype",
+   "quote": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cardiac defects",
+   "object_type": "phenotype",
+   "quote": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "ectodermal abnormalities",
+   "object_type": "phenotype",
+   "quote": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Cardio-facio-cutaneous (CFC) syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Cardio-facio-cutaneous (CFC) syndrome is a sporadic developmental disorder involving characteristic craniofacial features, cardiac defects, ectodermal abnormalities, and developmental delay.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "BRAF CFC mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "B-Raf activation",
+   "object_type": "mechanism",
+   "quote": "Of the 11 mutations identified, two result in amino acid substitutions that occur in tumors, but most are unique and suggest previously unknown mechanisms of B-Raf activation.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

@@ -459,6 +459,32 @@ def external_mechanism_agreement(idx):
                                   "atlas": r["atlas_incl_variant_groups"]} for r in missed]}
 
 
+def claude_cross_check(rep, grab):
+    """Same numbers for the independent Claude reading (READER=claude), when it has been run."""
+    path = ROOT / "docs" / "agent-reports" / "claude-extraction.md"
+    if not path.exists():
+        return {}
+    cl = path.read_text()
+    agree, both = grab(r"\*\*Agreement\*\* on \(edge, PMID\) pairs both extractors cite \| \*\*(\d+)/(\d+)", cl)
+    refound, curated = grab(r"Curated \(edge, PMID\) pairs for these abstracts re-found independently \| (\d+)/(\d+)", cl)
+    abstracts, = grab(r"Abstracts processed \| \*\*(\d+)\*\*", cl)
+    by_type = {}
+    for m in re.finditer(r"^\| `(\w+)` \| (\d+) \| (\d+) \| (\d+) \|", cl, re.M):
+        t, n, a, dis = m.group(1), *map(int, m.groups()[1:])
+        if n:
+            by_type[t] = {"pairs": n, "agree": a, "share": r3(a / n)}
+    reread, = grab(r"Claude cross-check: (\d+) cited sources re-read", rep)
+    disagree_rep, = grab(r"Cited sources where the Claude reading disagrees with the curators: (\d+)", rep)
+    return {"claude_cross_check": {
+        "agree": agree, "pairs_both_cite": both, "share": r3(agree / both) if both else None,
+        "curated_pairs_refound": refound, "curated_pairs": curated, "share_refound": r3(refound / curated) if curated else None,
+        "abstracts": abstracts, "by_edge_type": by_type,
+        "sources_reread_in_build": reread, "sources_disagreeing_in_build": disagree_rep,
+        "scope": "DEE, lysosomal, RASopathy and cross-family abstracts cited by the graph; Claude agent reading, "
+                 "blind to the curated graph, same instructions and schema as the OpenAI reader; abstracts only",
+        "sources": ["docs/agent-reports/claude-extraction.md", "data/build/report.md"]}}
+
+
 def agreement(idx):
     rep = (ROOT / "data" / "build" / "report.md").read_text()
     oa = (ROOT / "docs" / "agent-reports" / "openai-extraction.md").read_text()
@@ -487,6 +513,7 @@ def agreement(idx):
             "sources_reread_in_build": reread, "sources_disagreeing_in_build": disagree_rep,
             "scope": "SNARE slice only (biology 62/62 abstracts + community 16); model gpt-6-astra; one model, abstracts only",
             "sources": ["docs/agent-reports/openai-extraction.md", "data/build/report.md"]},
+        **claude_cross_check(rep, grab),
         "quote_verification": {"verified": q_ok, "with_quote": q_tot, "source": "data/build/report.md"},
         "dismech": {
             "atlas_umbrellas_linked_by_mondo": 32, "atlas_umbrellas": 45, "mondo_links": 72,

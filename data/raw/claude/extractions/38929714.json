@@ -1,0 +1,61 @@
+{
+ "pmid": "38929714",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.609Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e2eb068a38866c3d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/38929714.json",
+ "claims": [
+  {
+   "subject_mention": "MEKi",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "RASopathies",
+   "object_type": "disease",
+   "quote": "In conclusion, while MEKi holds promise in managing life-threatening complications of RASopathies, dedicated clinical trials are required to establish standardized treatment protocols tailored to take into account the individual needs of each patient and favor a personalized treatment.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "RASopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "congenital heart defects",
+   "object_type": "phenotype",
+   "quote": "These syndromes show overlapping though distinct clinical presentations and share congenital heart defects, hypertrophic cardiomyopathy (HCM), and lymphatic dysplasia as major clinical features, with highly variable prevalence and severity.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RASopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hypertrophic cardiomyopathy (HCM)",
+   "object_type": "phenotype",
+   "quote": "These syndromes show overlapping though distinct clinical presentations and share congenital heart defects, hypertrophic cardiomyopathy (HCM), and lymphatic dysplasia as major clinical features, with highly variable prevalence and severity.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RASopathies",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "lymphatic dysplasia",
+   "object_type": "phenotype",
+   "quote": "These syndromes show overlapping though distinct clinical presentations and share congenital heart defects, hypertrophic cardiomyopathy (HCM), and lymphatic dysplasia as major clinical features, with highly variable prevalence and severity.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "pmid": "30348783",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.569Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c9fff90bd4ab1df1",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/30348783.json",
+ "claims": [
+  {
+   "subject_mention": "MRAS",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "dephosphorylation of the S259 RAF site",
+   "object_type": "mechanism",
+   "quote": "The MRAS GTPase, a close relative of RAS oncoproteins, interacts with SHOC2 and protein phosphatase 1 (PP1) to form a heterotrimeric holoenzyme that dephosphorylates this S259 RAF site.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHOC2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "dephosphorylation of the S259 RAF site",
+   "object_type": "mechanism",
+   "quote": "The MRAS GTPase, a close relative of RAS oncoproteins, interacts with SHOC2 and protein phosphatase 1 (PP1) to form a heterotrimeric holoenzyme that dephosphorylates this S259 RAF site.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "protein phosphatase 1 (PP1)",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "dephosphorylation of the S259 RAF site",
+   "object_type": "mechanism",
+   "quote": "The MRAS GTPase, a close relative of RAS oncoproteins, interacts with SHOC2 and protein phosphatase 1 (PP1) to form a heterotrimeric holoenzyme that dephosphorylates this S259 RAF site.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MRAS",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "ERK pathway regulation",
+   "object_type": "mechanism",
+   "quote": "MRAS also functions as a targeting subunit as membrane localization is required for efficient RAF dephosphorylation and ERK pathway regulation in cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "MRAS, SHOC2, and PPP1CB are mutated in Noonan syndrome, and we show that syndromic mutations invariably promote complex formation with each other, but not necessarily with other interactors.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHOC2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "MRAS, SHOC2, and PPP1CB are mutated in Noonan syndrome, and we show that syndromic mutations invariably promote complex formation with each other, but not necessarily with other interactors.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PPP1CB",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "MRAS, SHOC2, and PPP1CB are mutated in Noonan syndrome, and we show that syndromic mutations invariably promote complex formation with each other, but not necessarily with other interactors.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MRAS, SHOC2, and PPP1CB syndromic mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "promote complex formation",
+   "object_type": "mechanism",
+   "quote": "MRAS, SHOC2, and PPP1CB are mutated in Noonan syndrome, and we show that syndromic mutations invariably promote complex formation with each other, but not necessarily with other interactors.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "enhanced ternary complex formation",
+   "object_type": "mechanism",
+   "quote": "Thus, Noonan syndrome in individuals with SHOC2, MRAS, or PPPC1B mutations is likely driven at the biochemical level by enhanced ternary complex formation and highlights the crucial role of this phosphatase holoenzyme in RAF S259 dephosphorylation, ERK pathway dynamics, and normal human development.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

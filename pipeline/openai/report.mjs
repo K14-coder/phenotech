@@ -1,6 +1,11 @@
-/** Writes docs/agent-reports/openai-extraction.md from the compare.mjs results. */
+/** Writes docs/agent-reports/<reader>-extraction.md from the compare.mjs results. */
 import { writeFileSync } from 'node:fs';
-import { REPORT } from './common.mjs';
+import path from 'node:path';
+import { ALL_SETS, CROSSCHECK, FRAGMENT, READER, READER_LABEL, REPORT, ROOT } from './common.mjs';
+
+const CC = path.relative(ROOT, CROSSCHECK);
+const FRAG = path.relative(ROOT, FRAGMENT);
+const RAW = `data/raw/${READER}`;
 
 const pct = (a, b) => (b ? `${((100 * a) / b).toFixed(1)}%` : 'n/a');
 const esc = (s) => String(s ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ');
@@ -36,8 +41,8 @@ function curatedQuotes(edge, pmid) {
 export function writeReport(ctx) {
   const { edgeById, model, verifiedFile, rec, claimStats, decisions, fragEdges, fragment, negativeNoEdge, curatedPairs, usage, runState, abstracts } = ctx;
   const vs = verifiedFile.stats;
-  const allBio = [...abstracts.values()].filter((r) => r.set === 'biology').length;
-  const allCom = [...abstracts.values()].filter((r) => r.set === 'community').length;
+  const setLine = ALL_SETS.filter((st) => vs.by_set[st]?.abstracts)
+    .map((st) => `${st} ${vs.by_set[st].abstracts}/${[...abstracts.values()].filter((r) => r.set === st).length}`).join('; ');
   const a = decisions.filter((d) => d.case === 'a');
   const aAgree = a.filter((d) => d.agrees);
   const b = decisions.filter((d) => d.case === 'b');
@@ -60,17 +65,20 @@ export function writeReport(ctx) {
   const L = [];
   const p = (...lines) => L.push(...lines);
 
-  p('# OpenAI extraction: an independent second reading of the literature',
+  const how = READER === 'claude'
+    ? `Reader: **Claude** (\`${model}\`): a Claude agent read each stored title + abstract **blind to the curated graph**, with the same extraction instructions and JSON schema the OpenAI reader used (\`EXTRACT_INSTRUCTIONS\`, \`CLAIM_SCHEMA\` in \`extract.mjs\`; hash in each cache file). Mentions the deterministic index could not resolve were answered by a Claude agent with the same reconciliation instructions and candidate lists (\`reconcile.mjs --dump-pending / --apply-answers\`). No API calls are made by these scripts. Verification, reconciliation rules and comparison are the same code as for OpenAI. Nothing here was typed by hand: every number below is recomputed by \`READER=claude node pipeline/openai/compare.mjs\`.`
+    : `Model: **\`${model}\`** (as returned by the API), via Sign in with ChatGPT (plan usage), structured outputs (\`json_schema\`, strict). Nothing here was typed by hand: every number below is recomputed by \`node pipeline/openai/compare.mjs\`.`;
+  p(`# ${READER_LABEL} extraction: an independent second reading of the literature`,
     '',
-    `Generated ${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC by \`pipeline/openai/\`. Model: **\`${model}\`** (as returned by the API), via Sign in with ChatGPT (plan usage), structured outputs (\`json_schema\`, strict). Nothing here was typed by hand: every number below is recomputed by \`node pipeline/openai/compare.mjs\`.`,
+    `Generated ${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC by \`pipeline/openai/\` (READER=${READER}). ${how}`,
     '',
-    'The curated graph was built by agent curation with string-verified quotes. This layer reads the same stored abstracts **independently** with OpenAI, keeps only claims whose quote is a verbatim sentence of the stored abstract, maps them onto graph nodes, and compares. The evidence story becomes: **two independent extractors, verbatim quotes, disagreements flagged for human review.**',
+    `The curated graph was built by agent curation with string-verified quotes. This layer reads the same stored abstracts **independently** with ${READER_LABEL}, keeps only claims whose quote is a verbatim sentence of the stored abstract, maps them onto graph nodes, and compares. The evidence story becomes: **two independent extractors, verbatim quotes, disagreements flagged for human review.**`,
     '',
     '## Headline numbers',
     '',
     `| | |`,
     `|---|---|`,
-    `| Abstracts processed | **${vs.abstracts_with_extraction}** (biology ${vs.by_set.biology.abstracts}/${allBio}; community ${vs.by_set.community.abstracts}/${allCom} with abstracts) |`,
+    `| Abstracts processed | **${vs.abstracts_with_extraction}** (${setLine} with abstracts) |`,
     `| Claims extracted | ${vs.claims} |`,
     `| Quote-verified (verbatim substring of stored title + abstract) | **${vs.verified} (${vs.verified_pct}%)**; ${vs.rejected} rejected, none edited${vs.verified_but_multi_sentence ? ` (${vs.verified_but_multi_sentence} verified quotes span more than one sentence)` : ''} |`,
     `| Reconciled (both endpoints mapped to an existing node) | ${claimStats.reconciled} (${pct(claimStats.reconciled, claimStats.verified)} of verified) |`,
@@ -91,7 +99,7 @@ export function writeReport(ctx) {
     '');
 
   p('## Agreement by relation type', '',
-    'A pair is one graph edge and one PMID. "Agree" means the OpenAI claim has the same polarity as the curators\' filing of that PMID on that edge (supporting evidence vs. counter-evidence). Coverage is how many curated pairs for the processed abstracts the model found on its own.',
+    `A pair is one graph edge and one PMID. "Agree" means the ${READER_LABEL} claim has the same polarity as the curators' filing of that PMID on that edge (supporting evidence vs. counter-evidence). Coverage is how many curated pairs for the processed abstracts the model found on its own.`,
     '',
     '| Edge type | Pairs both cite | Agree | Disagree | Agreement | Curated pairs re-found | New supporting (b) | New contradicting (d) |',
     '|---|---|---|---|---|---|---|---|');
@@ -116,36 +124,36 @@ export function writeReport(ctx) {
       : c.negated ? 'says the relation does **not** hold' : 'reports the **opposite effect class** for this gene';
     const same = sameSentence(d, edge);
     const why = d.case === 'a'
-      ? `Both cite PMID:${d.pmid}. Curators filed it as **${d.curated_polarity.includes(1) ? 'supporting' : 'contradicting'}**; the OpenAI reading ${modelReading}.${same ? ' **Same sentence, filed differently:** both extractors quote it; the curators treat it as a limiting or mixed finding (counter-evidence), the model as plain support. A reviewer decides which filing fits.' : ''}`
+      ? `Both cite PMID:${d.pmid}. Curators filed it as **${d.curated_polarity.includes(1) ? 'supporting' : 'contradicting'}**; the ${READER_LABEL} reading ${modelReading}.${same ? ' **Same sentence, filed differently:** both extractors quote it; the curators treat it as a limiting or mixed finding (counter-evidence), the model as plain support. A reviewer decides which filing fits.' : ''}`
       : d.pick.via === 'opposite_effect'
-        ? `New source: the OpenAI reading of PMID:${d.pmid} reports the **opposite effect class** for this gene, and the graph has no edge for that effect.`
-        : `New source: the OpenAI reading of PMID:${d.pmid} states the relation does **not** hold (negated).`;
+        ? `New source: the ${READER_LABEL} reading of PMID:${d.pmid} reports the **opposite effect class** for this gene, and the graph has no edge for that effect.`
+        : `New source: the ${READER_LABEL} reading of PMID:${d.pmid} states the relation does **not** hold (negated).`;
     p(`### ${i + 1}. \`${d.edge_id}\``, '',
       `${why} Edge: ${edge.status}, confidence ${edge.confidence}, ${edge.evidence_level}. Claim: ${c.subject_mention} → *${c.relation}* → ${c.object_mention} (${c.certainty}, ${c.study_type}${c.species ? `, ${c.species}` : ''}${c.negated ? ', negated' : ''}${d.mixed ? '; the same paper also yields the opposite reading' : ''}).`,
       '');
     for (const ev of curatedQuotes(edge, d.pmid)) {
       p(`- Curated (${ev.ref}, ${ev.side}): "${esc(ev.quote ?? `(no quote: ${ev.source} record)`)}"`);
     }
-    p(`- OpenAI (PMID:${d.pmid}${d.pick.via === 'opposite_effect' ? ', opposite effect' : ''}): "${esc(c.quote)}"`, '');
+    p(`- ${READER_LABEL} (PMID:${d.pmid}${d.pick.via === 'opposite_effect' ? ', opposite effect' : ''}): "${esc(c.quote)}"`, '');
   });
-  if (disagreements.length > 40) p(`…and ${disagreements.length - 40} more in \`data/build/crosscheck.json\` (items with \`agrees: false\`).`, '');
+  if (disagreements.length > 40) p(`…and ${disagreements.length - 40} more in \`${CC}\` (items with \`agrees: false\`).`, '');
 
   p('## New supporting sources for existing edges (b)', '',
-    `${b.length} (edge, PMID) pairs where the model found support for an existing edge in a paper the curators did not cite on that edge. \`build_graph.py\` adds them as evidence with \`extracted_by: openai:${model}\`, \`verified: true\`.`, '',
+    `${b.length} (edge, PMID) pairs where the model found support for an existing edge in a paper the curators did not cite on that edge. \`build_graph.py\` adds them as evidence with \`extracted_by: ${READER}:${model}\`, \`verified: true\`.`, '',
     '| Edge type | New supporting sources |', '|---|---|',
     ...[...new Set(b.map((d) => d.edge_type))].sort().map((t) => `| \`${t}\` | ${b.filter((d) => d.edge_type === t).length} |`), '');
   const bTop = [...b].sort((x, y) => (y.edge_type === 'has_phenotype' ? 0 : 1) - (x.edge_type === 'has_phenotype' ? 0 : 1) || x.edge_id.localeCompare(y.edge_id)).slice(0, 25);
   for (const d of bTop) p(`- \`${d.edge_id}\` ← PMID:${d.pmid} (${d.pick.claim.certainty}, ${d.pick.claim.study_type}): "${esc(d.pick.claim.quote)}"`);
-  if (b.length > 25) p(`- …${b.length - 25} more in \`data/build/crosscheck.json\` (\`case: "b"\`).`);
+  if (b.length > 25) p(`- …${b.length - 25} more in \`${CC}\` (\`case: "b"\`).`);
   p('');
 
   p('## Candidate new edges (c)', '',
-    `${fragEdges.length} edges whose endpoints both exist but which the graph lacks. Written to \`data/curated/openai_extracted.json\` with \`status: "unverified"\`, confidence ≤ 0.5, evidence level from the study type (trial → clinical; functional/animal → experimental; case report/series/cohort/review → observational) and a verbatim, string-verified quote per PMID.`, '',
+    `${fragEdges.length} edges whose endpoints both exist but which the graph lacks. ${READER === 'openai' ? `Written to \`${FRAG}\`` : `Written to \`data/build/${READER}_candidate_edges.json\` for review and **not merged into the graph** until a person accepts them, each`} with \`status: "unverified"\`, confidence ≤ 0.5, evidence level from the study type (trial → clinical; functional/animal → experimental; case report/series/cohort/review → observational) and a verbatim, string-verified quote per PMID.`, '',
     '| Candidate edge | PMIDs | Level | Confidence | Certainty |', '|---|---|---|---|---|',
     ...fragEdges.map((e) => `| \`${e.id}\` | ${e.evidence.map((ev) => ev.ref.slice(5)).join(', ')} | ${e.evidence_level} | ${e.confidence} | ${e.attrs.certainty} |`), '');
 
   p('## Synonyms added', '',
-    `${synCount} names on ${fragment.nodes.length} nodes. A synonym is proposed only when the OpenAI reconciliation step judged the mention to be **another name for exactly that node** ("same", not a narrower or descriptive mention), the id came from the mention's candidate list, and the mention appears literally in the abstract. They are node stubs (id, type, label, synonyms) that the merge step unions.`, '',
+    `${synCount} names on ${fragment.nodes.length} nodes. A synonym is proposed only when the ${READER_LABEL} reconciliation step judged the mention to be **another name for exactly that node** ("same", not a narrower or descriptive mention), the id came from the mention's candidate list, and the mention appears literally in the abstract. They are node stubs (id, type, label, synonyms) that the merge step unions.`, '',
     '| Node | Synonym | PMID(s) | Model\'s justification |', '|---|---|---|---|',
     ...rec.synonym_proposals.map((s) => `| \`${s.node_id}\` (${esc(s.node_label)}) | ${esc(s.synonym)} | ${s.pmids.join(', ')} | ${esc(s.justification)} |`), '',
     (rec.synonym_rejected ?? []).length
@@ -153,7 +161,7 @@ export function writeReport(ctx) {
       : '', '');
 
   p('## Reconciliation', '',
-    `${mention.total} distinct mentions (per abstract and type): ${mention.deterministic} resolved by the deterministic index, ${mention.openai} by the OpenAI step, ${mention.unresolved} unresolved (no matching node, or the model answered "none"), ${mention.generic} generic ("patients", "neurons"…) skipped, ${mention.not_in_graph ?? 0} gene symbols outside the slice. OpenAI picks outside the candidate list rejected: ${mention.openai_rejected_not_in_candidates}.`, '',
+    `${mention.total} distinct mentions (per abstract and type): ${mention.deterministic} resolved by the deterministic index, ${mention.reader ?? mention.openai} by the ${READER_LABEL} step, ${mention.unresolved} unresolved (no matching node, or the model answered "none"), ${mention.generic} generic ("patients", "neurons"…) skipped, ${mention.not_in_graph ?? 0} gene symbols outside the slice. ${READER_LABEL} picks outside the candidate list rejected: ${mention.reader_rejected_not_in_candidates ?? mention.openai_rejected_not_in_candidates}.`, '',
     '| Method | Mentions |', '|---|---|',
     ...Object.entries(rec.stats.methods).sort((x, y) => y[1] - x[1]).map(([k, v]) => `| ${k} | ${v} |`), '',
     ...((rec.duplicate_node_suspects ?? []).length ? [
@@ -168,6 +176,24 @@ export function writeReport(ctx) {
     p('## Negative findings with no edge', '', 'Negated claims whose relation is not in the graph (nothing to contradict, kept for context):', '');
     for (const x of negativeNoEdge.slice(0, 15)) p(`- \`${x.edge_id}\` (PMID:${x.claim.pmid}): "${esc(x.claim.quote)}"`);
     p('');
+  }
+
+  if (READER === 'claude') {
+    p('## How to re-run', '',
+      '```bash',
+      'READER=claude node pipeline/openai/extract.mjs           # no calls: stamp provenance + verify every quote',
+      'READER=claude node pipeline/openai/reconcile.mjs --dump-pending pending.json   # mentions the index cannot resolve',
+      'READER=claude node pipeline/openai/reconcile.mjs --apply-answers answers.json  # agent answers, same accept rules',
+      'READER=claude node pipeline/openai/compare.mjs           # crosscheck_claude.json, claude_extracted.json, this report',
+      'python3 pipeline/build_graph.py                          # applies both readers\' crosscheck files',
+      '```', '',
+      `Caches: \`${RAW}/extractions/<PMID>.json\` (claims, source file, input and instructions hashes), \`${RAW}/reconcile/<PMID>.json\` (payload and answers).`, '');
+    p('## Caveats', '',
+      '- Claude reads the abstract only, like the OpenAI reader. A disagreement is a prompt to look, not a verdict.',
+      '- The curated graph was itself built by agents (some of them Claude). The reading here was done blind to it, but it is the same model family, so agreement with Claude-curated edges is weaker evidence than agreement between different models.',
+      '- Only abstracts the curated graph cites were read; candidate edges and synonyms are proposals (`status: "unverified"`, `attrs.needs_review: true`, confidence ≤ 0.5).', '');
+    writeFileSync(REPORT, `${L.join('\n')}\n`);
+    return;
   }
 
   p('## Usage consumed', '',

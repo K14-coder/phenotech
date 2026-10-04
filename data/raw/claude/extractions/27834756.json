@@ -1,0 +1,61 @@
+{
+ "pmid": "27834756",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.559Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "2591000f41aaf8ae",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/27834756.json",
+ "claims": [
+  {
+   "subject_mention": "GLA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Fabry disease",
+   "object_type": "disease",
+   "quote": "Fabry disease is an X-linked lysosomal storage disorder caused by GLA mutations, resulting in α-galactosidase (α-Gal) deficiency and accumulation of lysosomal substrates.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Fabry disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "α-galactosidase deficiency",
+   "object_type": "mechanism",
+   "quote": "Fabry disease is an X-linked lysosomal storage disorder caused by GLA mutations, resulting in α-galactosidase (α-Gal) deficiency and accumulation of lysosomal substrates.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Migalastat",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "stabilisation of amenable mutant α-Gal",
+   "object_type": "mechanism",
+   "quote": "Migalastat, an oral pharmacological chaperone being developed as an alternative to intravenous enzyme replacement therapy (ERT), stabilises specific mutant (amenable) forms of α-Gal to facilitate normal lysosomal trafficking.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Migalastat",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Fabry disease",
+   "object_type": "disease",
+   "quote": "Migalastat offers promise as a first-in-class oral monotherapy alternative treatment to intravenous ERT for patients with Fabry disease and amenable mutations.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

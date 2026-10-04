@@ -1,0 +1,73 @@
+{
+ "pmid": "35605646",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.595Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "ce38c978871bc4cf",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/35605646.json",
+ "claims": [
+  {
+   "subject_mention": "trametinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Trametinib for Refractory Chylous Effusions and Systemic Complications in Children with Noonan Syndrome.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "trametinib",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "RAS-MAPK pathway",
+   "object_type": "mechanism",
+   "quote": "OBJECTIVE: To evaluate the effect of the RAS-MAPK pathway inhibitor trametinib on medically refractory chylous effusions in 3 hospitalized patients with Noonan syndrome.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "refractory chylous effusions",
+   "object_type": "phenotype",
+   "quote": "We describe our experience with 3 patients with Noonan syndrome (owing to variants in 3 distinct genes) and refractory chylous effusions treated successfully with MEK inhibition.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK inhibition",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "We describe our experience with 3 patients with Noonan syndrome (owing to variants in 3 distinct genes) and refractory chylous effusions treated successfully with MEK inhibition.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK1/2 inhibition",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: Improvements in a variety of quantifiable measurements highlight the potential utility of MEK1/2 inhibition in patients with Noonan syndrome and life-threatening lymphatic disease.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 /**
- * Step 4: compare the independent OpenAI reading with the curated graph.
+ * Step 4: compare an independent reading (READER=openai or claude) with the curated graph.
  *
  *   node pipeline/openai/compare.mjs     # no model calls
  *
@@ -13,14 +13,16 @@
  *      the same gene)                                     -> contradiction flagged for human review
  * One record per (edge, PMID). Outputs:
  *   data/build/crosscheck.json            (a, b, d; applied by pipeline/build_graph.py)
- *   data/curated/openai_extracted.json    (c as unverified edges, plus synonym stubs)
- *   data/raw/openai/compare_details.json  (every assertion and decision, for audit)
- *   docs/agent-reports/openai-extraction.md
+ *   data/curated/<reader>_extracted.json    (c as unverified edges, plus synonym stubs)
+ *   data/raw/<reader>/compare_details.json  (every assertion and decision, for audit)
+ *   docs/agent-reports/<reader>-extraction.md
+ * (READER=openai keeps the original names: data/build/crosscheck.json, openai_extracted.json.)
  */
 import path from 'node:path';
 import { existsSync } from 'node:fs';
 import {
-  CROSSCHECK, FRAGMENT, OUT_RAW, RUN_STATE, loadAllAbstracts, loadBaselineGraph, readJson, readUsageLog, today, writeJson,
+  READER, READER_LABEL,
+  CANDIDATES, CROSSCHECK, FRAGMENT, OUT_RAW, RUN_STATE, loadAllAbstracts, loadBaselineGraph, readJson, readUsageLog, today, writeJson,
 } from './common.mjs';
 import { writeReport } from './report.mjs';
 
@@ -54,7 +56,7 @@ function main() {
   const abstracts = loadAllAbstracts();
   const models = verifiedFile.models;
   const model = models.length === 1 ? models[0] : models.join('+');
-  const by = `openai:${model}`;
+  const by = `${READER}:${model}`;
 
   const geneOf = (id) => {
     if (!id) return null;
@@ -245,18 +247,18 @@ function main() {
     const ns = picks.map((c) => c.species).filter(Boolean);
     fragEdges.push({
       id, source: cand.s, target: cand.o, type: cand.t, label: LABELS[cand.t],
-      explanation: `${who} ${verb} that ${what}. Found by automated extraction with OpenAI; not yet reviewed by a person.`,
+      explanation: `${who} ${verb} that ${what}. ${READER === 'openai' ? 'Found by automated extraction with OpenAI' : `Found by an independent ${READER_LABEL} reading`}; not yet reviewed by a person.`,
       evidence_level: level,
       status: 'unverified',
       confidence,
       evidence: picks.map((c) => ({
         source: 'PubMed', ref: `PMID:${c.pmid}`, url: `https://pubmed.ncbi.nlm.nih.gov/${c.pmid}/`,
         title: ref(c.pmid)?.title ?? c.title, year: ref(c.pmid)?.year ?? c.year ?? undefined, quote: c.quote,
-        kind: 'publication', study_type: c.study_type, supports: true, extracted_by: `openai:${c.model}`,
+        kind: 'publication', study_type: c.study_type, supports: true, extracted_by: `${READER}:${c.model}`,
         verified: true, retrieved: today(),
       })),
       attrs: {
-        extraction: 'openai', needs_review: true, certainty: topCert,
+        extraction: READER, needs_review: true, certainty: topCert,
         species: [...new Set(ns)], claim_ids: cand.claims.map((c) => c.claim_id),
       },
     });
@@ -268,8 +270,15 @@ function main() {
     if (!stubs.has(n.id)) stubs.set(n.id, { id: n.id, type: n.type, label: n.label, synonyms: [] });
     if (!stubs.get(n.id).synonyms.includes(p.synonym)) stubs.get(n.id).synonyms.push(p.synonym);
   }
-  const fragment = { nodes: [...stubs.values()].sort((a, b) => a.id.localeCompare(b.id)), edges: fragEdges, clusters: [], gaps: [] };
+  // READER=openai merges its candidate edges as unverified (the original behaviour). Other readers' candidate
+  // edges wait in data/build/<reader>_candidate_edges.json until a person reviews them: unreviewed AI edges in
+  // the graph would also become test cases and features of the therapy-transfer benchmark.
+  const mergeCandidates = READER === 'openai';
+  const fragment = { nodes: [...stubs.values()].sort((a, b) => a.id.localeCompare(b.id)), edges: mergeCandidates ? fragEdges : [], clusters: [], gaps: [] };
   writeJson(FRAGMENT, fragment);
+  if (!mergeCandidates) {
+    writeJson(CANDIDATES, { generated_at: new Date().toISOString(), reader: READER, note: 'Not merged into the graph. Review, then move accepted edges into a curated fragment.', edges: fragEdges });
+  }
 
   // ---- 5. audit file + report
   const curatedPairs = [];

@@ -1,0 +1,73 @@
+{
+ "pmid": "42779792",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.653Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "70ce77c1a192d752",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/42779792.json",
+ "claims": [
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "selective autophagy of protein aggregates via SINTBAD and TBK1",
+   "object_type": "mechanism",
+   "quote": "Here, we identify the neurodevelopmental kinase CDKL5 as an upstream regulator of a signaling pathway involving the TBK1 adaptor SINTBAD and the selective autophagy receptors p62 and TAX1BP1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "SINTBAD Ser504 phosphorylation",
+   "object_type": "mechanism",
+   "quote": "Mechanistically, CDKL5 kinase activity is required for SINTBAD Ser504 phosphorylation, a SINTBAD modification that promotes TBK1 activation, resulting in p62 Ser403/405 phosphorylation and TAX1BP1-dependent aggregate clearance.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SINTBAD",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "TBK1 activation",
+   "object_type": "mechanism",
+   "quote": "Mechanistically, CDKL5 kinase activity is required for SINTBAD Ser504 phosphorylation, a SINTBAD modification that promotes TBK1 activation, resulting in p62 Ser403/405 phosphorylation and TAX1BP1-dependent aggregate clearance.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5 deficiency",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "impaired TBK1-mediated autophagy and clearance of neuronal protein aggregates",
+   "object_type": "mechanism",
+   "quote": "CDKL5 deficiency impairs TBK1-mediated autophagy and clearance of neuronal protein aggregates.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Phosphomimetic SINTBAD",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "TBK1-mediated autophagy",
+   "object_type": "mechanism",
+   "quote": "Phosphomimetic SINTBAD rescues these responses in CDKL5-deficient cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

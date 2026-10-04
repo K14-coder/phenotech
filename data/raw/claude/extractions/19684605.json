@@ -1,0 +1,73 @@
+{
+ "pmid": "19684605",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.540Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b99bcc962d5c0627",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/19684605.json",
+ "claims": [
+  {
+   "subject_mention": "SHOC2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan-like syndrome with loose anagen hair",
+   "object_type": "disease",
+   "quote": "Mutation of SHOC2 promotes aberrant protein N-myristoylation and causes Noonan-like syndrome with loose anagen hair.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan-like syndrome with loose anagen hair",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "aberrant protein N-myristoylation",
+   "object_type": "mechanism",
+   "quote": "Mutation of SHOC2 promotes aberrant protein N-myristoylation and causes Noonan-like syndrome with loose anagen hair.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHOC2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "RAS-MAPK signal flow",
+   "object_type": "mechanism",
+   "quote": "We show that aberrantly acquired N-myristoylation of SHOC2, a leucine-rich repeat-containing protein that positively modulates RAS-MAPK signal flow, underlies a clinically distinctive condition of the neuro-cardio-facial-cutaneous disorders family.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHOC2(S2G)",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "enhanced MAPK activation",
+   "object_type": "mechanism",
+   "quote": "Expression of SHOC2(S2G) in vitro enhanced MAPK activation in a cell type-specific fashion.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHOC2 4A>G missense change (S2G)",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "aberrant targeting of SHOC2 to the plasma membrane",
+   "object_type": "mechanism",
+   "quote": "Twenty-five subjects with a relatively consistent phenotype previously termed Noonan-like syndrome with loose anagen hair (MIM607721) shared the 4A>G missense change in SHOC2 (producing an S2G amino acid substitution) that introduces an N-myristoylation site, resulting in aberrant targeting of SHOC2 to the plasma membrane and impaired translocation to the nucleus upon growth factor stimulation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

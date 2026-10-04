@@ -1,0 +1,73 @@
+{
+ "pmid": "26369628",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.556Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "92b4e9e8ca2b7b8f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/26369628.json",
+ "claims": [
+  {
+   "subject_mention": "KCNT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "drug-resistant epilepsy",
+   "object_type": "disease",
+   "quote": "We report 2 patients with drug-resistant epilepsy caused by KCNT1 mutations who were treated with quinidine.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "quinidine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "KCNT1 drug-resistant epilepsy",
+   "object_type": "disease",
+   "quote": "We report 2 patients with drug-resistant epilepsy caused by KCNT1 mutations who were treated with quinidine.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "Both mutations manifested gain of function in vitro, showing increased current that was reduced by quinidine.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "quinidine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "increased KCNT1 current",
+   "object_type": "mechanism",
+   "quote": "Both mutations manifested gain of function in vitro, showing increased current that was reduced by quinidine.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "quinidine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "epilepsy of infancy with migrating focal seizures",
+   "object_type": "disease",
+   "quote": "One, who had epilepsy of infancy with migrating focal seizures, had 80% reduction in seizure frequency as recorded in seizure diaries, and partially validated by objective seizure evaluation on EEG.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

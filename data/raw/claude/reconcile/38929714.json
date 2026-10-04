@@ -1,0 +1,620 @@
+{
+ "pmid": "38929714",
+ "entries": {
+  "17d9c3e818f9e442": {
+   "mention": "MEKi",
+   "type": "therapy",
+   "candidates": [
+    "therapy:trametinib",
+    "therapy:binimetinib",
+    "therapy:mirdametinib",
+    "therapy:selumetinib",
+    "therapy:sodium-channel-blockers",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "MEK inhibitor class broader than any one drug",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.881Z"
+  },
+  "ed39371cbe473d86": {
+   "mention": "RASopathies",
+   "type": "disease",
+   "candidates": [
+    "disease:KRAS",
+    "disease:BRAF",
+    "disease:PTPN11",
+    "disease:SCN8A",
+    "disease:GRIN2B",
+    "disease:STXBP1",
+    "disease:GBA1",
+    "disease:RAF1",
+    "disease:SCN1A",
+    "disease:CDKL5"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "RASopathies span many genes",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.881Z"
+  },
+  "6c3335b0151a0fa6": {
+   "mention": "congenital heart defects",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0005988",
+    "phenotype:HP:0001631",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0002421",
+    "phenotype:HP:0000524",
+    "phenotype:HP:0006579",
+    "phenotype:HP:0001537",
+    "phenotype:HP:0008802",
+    "phenotype:HP:0000365",
+    "phenotype:HP:0000546"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Generic congenital heart defects",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.881Z"
+  },
+  "e8e63ea8442150f9": {
+   "mention": "hypertrophic cardiomyopathy (HCM)",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001639",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0001712",
+    "phenotype:HP:0005144",
+    "phenotype:HP:0003445",
+    "phenotype:HP:0001276",
+    "phenotype:HP:0000822",
+    "phenotype:HP:0000316",
+    "phenotype:HP:0000648",
+    "phenotype:HP:0007133"
+   ],
+   "node_id": "phenotype:HP:0001639",
+   "match": "same",
+   "justification": "HCM",
+   "raw_node_id": "phenotype:HP:0001639",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.881Z"
+  },
+  "751b732bb25a6e9a": {
+   "mention": "lymphatic dysplasia",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001093",
+    "phenotype:HP:6001124",
+    "phenotype:HP:0006989",
+    "phenotype:HP:0031842",
+    "phenotype:HP:0006721",
+    "phenotype:HP:0001004",
+    "phenotype:HP:0100660",
+    "phenotype:HP:0010463",
+    "phenotype:HP:0002068",
+    "phenotype:HP:0001332"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Lymphatic dysplasia broader than lymphedema/lymphangiectasis",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.881Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.881Z",
+   "request_payload": {
+    "title": "Exploring New Drug Repurposing Opportunities for MEK Inhibitors in RASopathies: A Comprehensive Review of Safety, Efficacy, and Future Perspectives of Trametinib and Selumetinib.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "MEKi",
+      "declared_type": "therapy",
+      "sentence": "In conclusion, while MEKi holds promise in managing life-threatening complications of RASopathies, dedicated clinical trials are required to establish standardized treatment protocols tailored to take into account the individual needs of each patient and favor a personalized treatment.",
+      "candidates": [
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       },
+       {
+        "id": "therapy:binimetinib",
+        "type": "therapy",
+        "label": "Binimetinib (MEK162; MEK1/2 inhibitor)",
+        "synonyms": [
+         "MEK162",
+         "ARRY-162"
+        ],
+        "summary": "A MEK inhibitor tested in NF1 plexiform neurofibromas (phase 2, completed). The first MEK-inhibitor trial in Noonan syndrome hypertrophic cardiomyopathy (2012) "
+       },
+       {
+        "id": "therapy:mirdametinib",
+        "type": "therapy",
+        "label": "Mirdametinib (MEK1/2 inhibitor; Gomekli)",
+        "synonyms": [
+         "Gomekli",
+         "PD-0325901"
+        ],
+        "summary": "An oral MEK inhibitor, FDA-approved for symptomatic plexiform neurofibromas in NF1 in adults and children 2 years and older; the second approved MEK inhibitor i"
+       },
+       {
+        "id": "therapy:selumetinib",
+        "type": "therapy",
+        "label": "Selumetinib (MEK1/2 inhibitor; Koselugo)",
+        "synonyms": [
+         "Koselugo",
+         "AZD6244",
+         "ARRY-142886"
+        ],
+        "summary": "An oral MEK1/2 inhibitor. FDA-approved for symptomatic, inoperable plexiform neurofibromas in neurofibromatosis type 1; the first approved drug that acts on the"
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "RASopathies",
+      "declared_type": "disease",
+      "sentence": "In conclusion, while MEKi holds promise in managing life-threatening complications of RASopathies, dedicated clinical trials are required to establish standardized treatment protocols tailored to take into account the individual needs of each patient and favor a personalized treatment.",
+      "candidates": [
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:SCN8A",
+        "type": "disease",
+        "label": "SCN8A-related disorders",
+        "synonyms": [
+         "SCN8A-DEE",
+         "DEE13",
+         "NaV1.6",
+         "EIEE13",
+         "SCN8A early infantile epileptic encephalopathy",
+         "SCN8A encephalopathy",
+         "SCN8A epilepsy",
+         "developmental and epileptic encephalopathy 13"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN8A (7 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:STXBP1",
+        "type": "disease",
+        "label": "STXBP1-related disorders",
+        "synonyms": [
+         "DEE4",
+         "EIEE4",
+         "Ohtahara syndrome (STXBP1)",
+         "STXBP1 encephalopathy",
+         "Munc18-1 encephalopathy",
+         "STXBP1 early infantile epileptic encephalopathy",
+         "STXBP1-related early-onset encephalopathy",
+         "STXBP1-related encephalopathy"
+        ],
+        "summary": "Severe epilepsy and developmental delay caused by changes in STXBP1, the gene for Munc18-1. Most children have seizures starting in the first year and significa"
+       },
+       {
+        "id": "disease:GBA1",
+        "type": "disease",
+        "label": "GBA1-related disorders (Gaucher disease)",
+        "synonyms": [
+         "Gaucher disease",
+         "GD1",
+         "GD2",
+         "GD3",
+         "glucocerebrosidase deficiency",
+         "Gaucher disease collodion type",
+         "Gaucher disease perinatal lethal",
+         "Gaucher disease, collodion type"
+        ],
+        "summary": "Deficiency of the enzyme glucocerebrosidase makes a fatty substance (glucosylceramide) build up, mainly in macrophages: enlarged liver and spleen, low blood cou"
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "congenital heart defects",
+      "declared_type": "phenotype",
+      "sentence": "These syndromes show overlapping though distinct clinical presentations and share congenital heart defects, hypertrophic cardiomyopathy (HCM), and lymphatic dysplasia as major clinical features, with highly variable prevalence and severity.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0005988",
+        "type": "phenotype",
+        "label": "Congenital muscular torticollis",
+        "note": "HPO HP:0005988"
+       },
+       {
+        "id": "phenotype:HP:0001631",
+        "type": "phenotype",
+        "label": "Atrial septal defect",
+        "note": "HPO HP:0001631"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0002421",
+        "type": "phenotype",
+        "label": "Poor head control",
+        "note": "HPO HP:0002421"
+       },
+       {
+        "id": "phenotype:HP:0000524",
+        "type": "phenotype",
+        "label": "Conjunctival telangiectasia",
+        "note": "HPO HP:0000524"
+       },
+       {
+        "id": "phenotype:HP:0006579",
+        "type": "phenotype",
+        "label": "Prolonged neonatal jaundice",
+        "note": "HPO HP:0006579"
+       },
+       {
+        "id": "phenotype:HP:0001537",
+        "type": "phenotype",
+        "label": "Umbilical hernia",
+        "note": "HPO HP:0001537"
+       },
+       {
+        "id": "phenotype:HP:0008802",
+        "type": "phenotype",
+        "label": "Hypoplasia of the femoral head",
+        "note": "HPO HP:0008802"
+       },
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "hypertrophic cardiomyopathy (HCM)",
+      "declared_type": "phenotype",
+      "sentence": "These syndromes show overlapping though distinct clinical presentations and share congenital heart defects, hypertrophic cardiomyopathy (HCM), and lymphatic dysplasia as major clinical features, with highly variable prevalence and severity.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0001712",
+        "type": "phenotype",
+        "label": "Left ventricular hypertrophy",
+        "note": "HPO HP:0001712"
+       },
+       {
+        "id": "phenotype:HP:0005144",
+        "type": "phenotype",
+        "label": "Ventricular septal hypertrophy",
+        "note": "HPO HP:0005144"
+       },
+       {
+        "id": "phenotype:HP:0003445",
+        "type": "phenotype",
+        "label": "EMG: neuropathic changes",
+        "note": "HPO HP:0003445"
+       },
+       {
+        "id": "phenotype:HP:0001276",
+        "type": "phenotype",
+        "label": "Hypertonia",
+        "note": "HPO HP:0001276"
+       },
+       {
+        "id": "phenotype:HP:0000822",
+        "type": "phenotype",
+        "label": "Hypertension",
+        "note": "HPO HP:0000822"
+       },
+       {
+        "id": "phenotype:HP:0000316",
+        "type": "phenotype",
+        "label": "Hypertelorism",
+        "note": "HPO HP:0000316"
+       },
+       {
+        "id": "phenotype:HP:0000648",
+        "type": "phenotype",
+        "label": "Optic atrophy",
+        "note": "HPO HP:0000648"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "lymphatic dysplasia",
+      "declared_type": "phenotype",
+      "sentence": "These syndromes show overlapping though distinct clinical presentations and share congenital heart defects, hypertrophic cardiomyopathy (HCM), and lymphatic dysplasia as major clinical features, with highly variable prevalence and severity.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001093",
+        "type": "phenotype",
+        "label": "Optic nerve dysplasia",
+        "note": "HPO HP:0001093"
+       },
+       {
+        "id": "phenotype:HP:6001124",
+        "type": "phenotype",
+        "label": "Sphenoid wing dysplasia",
+        "note": "HPO HP:6001124"
+       },
+       {
+        "id": "phenotype:HP:0006989",
+        "type": "phenotype",
+        "label": "Dysplastic corpus callosum",
+        "note": "HPO HP:0006989"
+       },
+       {
+        "id": "phenotype:HP:0031842",
+        "type": "phenotype",
+        "label": "Lymphangiectasis",
+        "note": "HPO HP:0031842"
+       },
+       {
+        "id": "phenotype:HP:0006721",
+        "type": "phenotype",
+        "label": "Acute lymphoblastic leukemia",
+        "note": "HPO HP:0006721"
+       },
+       {
+        "id": "phenotype:HP:0001004",
+        "type": "phenotype",
+        "label": "Lymphedema",
+        "note": "HPO HP:0001004"
+       },
+       {
+        "id": "phenotype:HP:0100660",
+        "type": "phenotype",
+        "label": "Dyskinesia",
+        "note": "HPO HP:0100660"
+       },
+       {
+        "id": "phenotype:HP:0010463",
+        "type": "phenotype",
+        "label": "Aplasia of the ovary",
+        "note": "HPO HP:0010463"
+       },
+       {
+        "id": "phenotype:HP:0002068",
+        "type": "phenotype",
+        "label": "Neuromuscular dysphagia",
+        "note": "HPO HP:0002068"
+       },
+       {
+        "id": "phenotype:HP:0001332",
+        "type": "phenotype",
+        "label": "Dystonia",
+        "note": "HPO HP:0001332"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"MEKi\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"MEK inhibitor class broader than any one drug\"},{\"mention_id\":\"m2\",\"mention\":\"RASopathies\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"RASopathies span many genes\"},{\"mention_id\":\"m3\",\"mention\":\"congenital heart defects\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Generic congenital heart defects\"},{\"mention_id\":\"m4\",\"mention\":\"hypertrophic cardiomyopathy (HCM)\",\"node_id\":\"phenotype:HP:0001639\",\"match\":\"same\",\"justification\":\"HCM\"},{\"mention_id\":\"m5\",\"mention\":\"lymphatic dysplasia\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Lymphatic dysplasia broader than lymphedema/lymphangiectasis\"}]}"
+  }
+ ]
+}

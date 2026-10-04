@@ -1,0 +1,85 @@
+{
+ "pmid": "39352760",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.611Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "06e047369502a6db",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/39352760.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "RAS proteostasis",
+   "object_type": "mechanism",
+   "quote": "Leucine-zipper-like posttranslational regulator 1 (LZTR1) is a member of the BTB-Kelch superfamily, which regulates the RAS proteostasis.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Autosomal dominant (AD) mutations in LZTR1 have been identified in patients with Noonan syndrome (NS), a congenital anomaly syndrome.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 AD mutants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dominant-negative",
+   "object_type": "mechanism",
+   "quote": "LZTR1 AD mutants did not interact with RIT1 and functioned as dominant-negative forms of WT LZTR1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "trametinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Treatment with the MEK inhibitor trametinib ameliorated cardiac hypertrophy in mutant male mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "trametinib",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "MEK",
+   "object_type": "mechanism",
+   "quote": "Treatment with the MEK inhibitor trametinib ameliorated cardiac hypertrophy in mutant male mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS-like phenotype",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "dysfunction of RAS proteostasis",
+   "object_type": "mechanism",
+   "quote": "These results suggest that the MEK/ERK pathway is a therapeutic target for the NS-like phenotype resulting from dysfunction of RAS proteostasis by LZTR1 AD mutations.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

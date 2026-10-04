@@ -1,0 +1,109 @@
+{
+ "pmid": "41981306",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.642Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e769d5c422b1deb3",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/41981306.json",
+ "claims": [
+  {
+   "subject_mention": "KCNT1-related epileptic encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "refractory seizures",
+   "object_type": "phenotype",
+   "quote": "KCNT1-related epileptic encephalopathy, including epilepsy of infancy with migrating focal seizures, is a severe neurodevelopmental disorder associated with refractory seizures, profound neurologic impairment and premature death.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1-related epileptic encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "profound neurologic impairment",
+   "object_type": "phenotype",
+   "quote": "KCNT1-related epileptic encephalopathy, including epilepsy of infancy with migrating focal seizures, is a severe neurodevelopmental disorder associated with refractory seizures, profound neurologic impairment and premature death.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1-related epileptic encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "premature death",
+   "object_type": "phenotype",
+   "quote": "KCNT1-related epileptic encephalopathy, including epilepsy of infancy with migrating focal seizures, is a severe neurodevelopmental disorder associated with refractory seizures, profound neurologic impairment and premature death.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "modulation of neuronal firing patterns and excitability",
+   "object_type": "mechanism",
+   "quote": "It is caused by de novo genetic variants in KCNT1 that alter the function of Slack, an evolutionarily conserved sodium-gated potassium channel that modulates neuronal firing patterns and excitability.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pathogenic KCNT1 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "Pathogenic KCNT1 variants lead to overactive Slack channels, boosting total neuronal potassium currents by up to 40%, driving cortical hyperexcitability and causing seizures.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1-targeting antisense oligonucleotide",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "epilepsy of infancy with migrating focal seizures",
+   "object_type": "disease",
+   "quote": "Here we investigate antisense oligonucleotide-mediated KCNT1 knockdown as a therapeutic strategy for patients with epilepsy of infancy with migrating focal seizures.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "KCNT1-related epileptic encephalopathy",
+   "object_type": "disease",
+   "quote": "It is caused by de novo genetic variants in KCNT1 that alter the function of Slack, an evolutionarily conserved sodium-gated potassium channel that modulates neuronal firing patterns and excitability.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1-targeting antisense oligonucleotide",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "KCNT1 knockdown",
+   "object_type": "mechanism",
+   "quote": "Here we investigate antisense oligonucleotide-mediated KCNT1 knockdown as a therapeutic strategy for patients with epilepsy of infancy with migrating focal seizures.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

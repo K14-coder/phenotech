@@ -1,0 +1,61 @@
+{
+ "pmid": "37917202",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.605Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "ff535d7d338bdd68",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/37917202.json",
+ "claims": [
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "virophagy",
+   "object_type": "mechanism",
+   "quote": "Here, we identified cyclin-dependent kinase-like 5 (CDKL5), known to function in neurodevelopment, as an essential regulator of virophagy.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "severe neurodevelopmental encephalopathy",
+   "object_type": "disease",
+   "quote": "Loss-of-function mutations in CDKL5 are associated with a severe neurodevelopmental encephalopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5 loss-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "Loss-of-function mutations in CDKL5 are associated with a severe neurodevelopmental encephalopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "p62-mediated selective autophagy",
+   "object_type": "mechanism",
+   "quote": "Mechanistic studies demonstrated that CDKL5 directly binds the canonical selective autophagy receptor p62 and phosphorylates p62 at T269/S272 to promote its interaction with viral capsid aggregates.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

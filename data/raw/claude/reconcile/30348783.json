@@ -1,0 +1,814 @@
+{
+ "pmid": "30348783",
+ "entries": {
+  "2ce19a7ab01cd22c": {
+   "mention": "dephosphorylation of the S259 RAF site",
+   "type": "mechanism",
+   "candidates": [
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:gain-of-function",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:loss-of-function",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:lysosomal-storage",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:protein-destabilization",
+    "mech:dominant-negative"
+   ],
+   "node_id": "mech:positive-regulation-of-ras-signaling",
+   "match": "instance",
+   "justification": "RAF S259 dephosphorylation promotes Ras-RAF signaling",
+   "raw_node_id": "mech:positive-regulation-of-ras-signaling",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "00edfb3cdc09cd9a": {
+   "mention": "protein phosphatase 1 (PP1)",
+   "type": "gene",
+   "candidates": [
+    "gene:PTPN11",
+    "gene:SHOC2",
+    "gene:BRAF",
+    "gene:RAF1",
+    "gene:STXBP1",
+    "gene:TPP1",
+    "gene:CLN3",
+    "gene:RIT1",
+    "gene:SYNGAP1",
+    "gene:SCN1A"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "PP1 not a candidate gene",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "0d4bbc36f957e731": {
+   "mention": "ERK pathway regulation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:lysosomal-storage",
+    "mech:lysosome-organization",
+    "mech:protein-destabilization",
+    "mech:ca-triggered-exocytosis",
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:loss-of-function"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no MAPK regulation node",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "da48c4f0a7403764": {
+   "mention": "Noonan syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:BRAF",
+    "disease:RAF1",
+    "disease:KRAS",
+    "disease:LZTR1",
+    "disease:PTPN11",
+    "disease:RIT1",
+    "disease:SOS1",
+    "disease:SHOC2",
+    "disease:NF1",
+    "disease:CBL"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Noonan across MRAS/SHOC2/PPP1CB; SHOC2 node is Mazzanti",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "7ebdddc95a808424": {
+   "mention": "promote complex formation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly",
+    "mech:protein-destabilization",
+    "mech:ras-protein-signal-transduction",
+    "mech:lysosomal-storage",
+    "mech:action-potential",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:gain-of-function",
+    "mech:lysosome-organization"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no complex formation mechanism",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "06cacf2c28d6c02e": {
+   "mention": "enhanced ternary complex formation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:snare-complex-assembly",
+    "mech:snare-complex-disassembly",
+    "mech:lysosome-organization",
+    "mech:lysosomal-storage",
+    "mech:protein-destabilization",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:negative-regulation-of-ras-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no complex formation mechanism",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.862Z",
+   "request_payload": {
+    "title": "SHOC2-MRAS-PP1 complex positively regulates RAF activity and contributes to Noonan syndrome pathogenesis.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "dephosphorylation of the S259 RAF site",
+      "declared_type": "mechanism",
+      "sentence": "The MRAS GTPase, a close relative of RAS oncoproteins, interacts with SHOC2 and protein phosphatase 1 (PP1) to form a heterotrimeric holoenzyme that dephosphorylates this S259 RAF site.",
+      "candidates": [
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "protein phosphatase 1 (PP1)",
+      "declared_type": "gene",
+      "sentence": "The MRAS GTPase, a close relative of RAS oncoproteins, interacts with SHOC2 and protein phosphatase 1 (PP1) to form a heterotrimeric holoenzyme that dephosphorylates this S259 RAF site.",
+      "candidates": [
+       {
+        "id": "gene:PTPN11",
+        "type": "gene",
+        "label": "PTPN11",
+        "synonyms": [
+         "SHP2",
+         "SHP-2",
+         "PTP2C",
+         "BPTP3",
+         "SH-PTP2",
+         "NS1",
+         "Tyrosine-protein phosphatase non-receptor type 11",
+         "Protein-tyrosine phosphatase 1D"
+        ],
+        "summary": "Acts downstream of various receptor and cytoplasmic protein tyrosine kinases to participate in the signal transduction from the cell surface to the nucleus (Pub"
+       },
+       {
+        "id": "gene:SHOC2",
+        "type": "gene",
+        "label": "SHOC2",
+        "synonyms": [
+         "SUR-8",
+         "SOC-2 homolog",
+         "KIAA0862",
+         "SOC2",
+         "SOC-2",
+         "SUR8",
+         "Leucine-rich repeat protein SHOC-2",
+         "Protein soc-2 homolog"
+        ],
+        "summary": "Core component of the SHOC2-MRAS-PP1c (SMP) holophosphatase complex that regulates activation of the MAPK pathway (PubMed:10783161, PubMed:16630891, PubMed:2513"
+       },
+       {
+        "id": "gene:BRAF",
+        "type": "gene",
+        "label": "BRAF",
+        "synonyms": [
+         "B-Raf",
+         "BRAF1",
+         "BRAF-1",
+         "Serine/threonine-protein kinase B-raf",
+         "Proto-oncogene B-Raf",
+         "p94",
+         "v-Raf murine sarcoma viral oncogene homolog B1"
+        ],
+        "summary": "Protein kinase involved in the transduction of mitogenic signals from the cell membrane to the nucleus (Probable). Phosphorylates MAP2K1, and thereby activates "
+       },
+       {
+        "id": "gene:RAF1",
+        "type": "gene",
+        "label": "RAF1",
+        "synonyms": [
+         "CRAF",
+         "C-RAF",
+         "c-Raf-1",
+         "Raf-1",
+         "c-Raf",
+         "RAF proto-oncogene serine/threonine-protein kinase",
+         "Proto-oncogene c-RAF",
+         "cRaf"
+        ],
+        "summary": "Serine/threonine-protein kinase that acts as a regulatory link between the membrane-associated Ras GTPases and the MAPK/ERK cascade, and this critical regulator"
+       },
+       {
+        "id": "gene:STXBP1",
+        "type": "gene",
+        "label": "STXBP1",
+        "synonyms": [
+         "Munc18-1",
+         "Munc18a",
+         "nSec1",
+         "rbSec1",
+         "hUNC18",
+         "MUNC18-1",
+         "UNC18",
+         "Syntaxin-binding protein 1"
+        ],
+        "summary": "Participates in the regulation of synaptic vesicle docking and fusion through interaction with GTP-binding proteins (By similarity). Essential for neurotransmis"
+       },
+       {
+        "id": "gene:TPP1",
+        "type": "gene",
+        "label": "TPP1",
+        "synonyms": [
+         "tripeptidyl peptidase 1",
+         "TPP-1 (CLN2 protein)",
+         "CLN2",
+         "LPIC",
+         "TPP-1",
+         "SCAR7",
+         "Tripeptidyl-peptidase 1",
+         "Cell growth-inhibiting gene 1 protein"
+        ],
+        "summary": "Lysosomal serine protease with tripeptidyl-peptidase I activity (PubMed:11054422, PubMed:19038966, PubMed:19038967). May act as a non-specific lysosomal peptida"
+       },
+       {
+        "id": "gene:CLN3",
+        "type": "gene",
+        "label": "CLN3",
+        "synonyms": [
+         "battenin",
+         "CLN3 lysosomal/endosomal transmembrane protein",
+         "BTN1",
+         "JNCL",
+         "SLC29B1",
+         "BTS",
+         "Battenin",
+         "Batten disease protein"
+        ],
+        "summary": "Mediates microtubule-dependent, anterograde transport connecting the Golgi network, endosomes, autophagosomes, lysosomes and plasma membrane, and participates i"
+       },
+       {
+        "id": "gene:RIT1",
+        "type": "gene",
+        "label": "RIT1",
+        "synonyms": [
+         "GTP-binding protein Rit1",
+         "MGC125864",
+         "MGC125865",
+         "Ras-like protein expressed in many tissues",
+         "Ras-like without CAAX protein 1",
+         "RIBB",
+         "RIT",
+         "ROC1"
+        ],
+        "summary": "Plays a crucial role in coupling nerve growth factor (NGF) stimulation to the activation of both EPHB2 and MAPK14 signaling pathways and in NGF-dependent neuron"
+       },
+       {
+        "id": "gene:SYNGAP1",
+        "type": "gene",
+        "label": "SYNGAP1",
+        "synonyms": [
+         "SynGAP",
+         "synaptic Ras GTPase-activating protein 1",
+         "SYNGAP",
+         "RASA5",
+         "KIAA1938",
+         "Ras/Rap GTPase-activating protein SynGAP",
+         "Neuronal RasGAP",
+         "Synaptic Ras GTPase-activating protein 1"
+        ],
+        "summary": "Major constituent of the PSD essential for postsynaptic signaling. Inhibitory regulator of the Ras-cAMP pathway. Member of the NMDAR signaling complex in excita"
+       },
+       {
+        "id": "gene:SCN1A",
+        "type": "gene",
+        "label": "SCN1A",
+        "synonyms": [
+         "Nav1.1",
+         "NaV1.1",
+         "sodium channel alpha subunit 1",
+         "GEFSP2",
+         "HBSCI",
+         "NAC1",
+         "SMEI",
+         "SCN1"
+        ],
+        "summary": "Pore-forming subunit of Nav1.1, a voltage-gated sodium (Nav) channel that directly mediates the depolarizing phase of action potentials in excitable membranes. "
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "ERK pathway regulation",
+      "declared_type": "mechanism",
+      "sentence": "MRAS also functions as a targeting subunit as membrane localization is required for efficient RAF dephosphorylation and ERK pathway regulation in cells.",
+      "candidates": [
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "Noonan syndrome",
+      "declared_type": "disease",
+      "sentence": "MRAS, SHOC2, and PPP1CB are mutated in Noonan syndrome, and we show that syndromic mutations invariably promote complex formation with each other, but not necessarily with other interactors.",
+      "candidates": [
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:SHOC2",
+        "type": "disease",
+        "label": "SHOC2-related disorders (Mazzanti syndrome)",
+        "synonyms": [
+         "Mazzanti syndrome",
+         "NSLAH1",
+         "Noonan-like syndrome with loose anagen hair",
+         "NSLH",
+         "NSLH1",
+         "Noonan syndrome-like disorder with loose anagen hair 1",
+         "Noonan syndrome-like with loose anagen hair 1"
+        ],
+        "summary": "A recurrent SHOC2 change causes Noonan syndrome-like disorder with loose anagen hair (Mazzanti syndrome)."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "promote complex formation",
+      "declared_type": "mechanism",
+      "sentence": "MRAS, SHOC2, and PPP1CB are mutated in Noonan syndrome, and we show that syndromic mutations invariably promote complex formation with each other, but not necessarily with other interactors.",
+      "candidates": [
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "enhanced ternary complex formation",
+      "declared_type": "mechanism",
+      "sentence": "Thus, Noonan syndrome in individuals with SHOC2, MRAS, or PPPC1B mutations is likely driven at the biochemical level by enhanced ternary complex formation and highlights the crucial role of this phosphatase holoenzyme in RAF S259 dephosphorylation, ERK pathway dynamics, and normal human development.",
+      "candidates": [
+       {
+        "id": "mech:snare-complex-assembly",
+        "type": "mechanism",
+        "label": "SNARE complex assembly",
+        "note": "kind: process",
+        "summary": "The aggregation, arrangement and bonding together of a set of components to form a SNARE complex, a protein complex involved in membrane fusion; a stable ternar"
+       },
+       {
+        "id": "mech:snare-complex-disassembly",
+        "type": "mechanism",
+        "label": "SNARE complex disassembly",
+        "note": "kind: process",
+        "summary": "The disaggregation of the SNARE protein complex into its constituent components. The SNARE complex is a protein complex involved in membrane fusion; a stable te"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"dephosphorylation of the S259 RAF site\",\"node_id\":\"mech:positive-regulation-of-ras-signaling\",\"match\":\"instance\",\"justification\":\"RAF S259 dephosphorylation promotes Ras-RAF signaling\"},{\"mention_id\":\"m2\",\"mention\":\"protein phosphatase 1 (PP1)\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"PP1 not a candidate gene\"},{\"mention_id\":\"m3\",\"mention\":\"ERK pathway regulation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no MAPK regulation node\"},{\"mention_id\":\"m4\",\"mention\":\"Noonan syndrome\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Noonan across MRAS/SHOC2/PPP1CB; SHOC2 node is Mazzanti\"},{\"mention_id\":\"m5\",\"mention\":\"promote complex formation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no complex formation mechanism\"},{\"mention_id\":\"m6\",\"mention\":\"enhanced ternary complex formation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no complex formation mechanism\"}]}"
+  }
+ ]
+}

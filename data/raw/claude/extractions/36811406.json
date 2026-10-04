@@ -1,0 +1,49 @@
+{
+ "pmid": "36811406",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.603Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b864e6ce033360fb",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/36811406.json",
+ "claims": [
+  {
+   "subject_mention": "Metachromatic leukodystrophy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "arylsulfatase A deficiency",
+   "object_type": "mechanism",
+   "quote": "Metachromatic leukodystrophy (MLD) is a rare autosomal recessive disorder of sphingolipid metabolism, due to a deficiency of the enzyme arylsulfatase A (ARSA).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MLD",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "central and peripheral nervous system demyelination",
+   "object_type": "mechanism",
+   "quote": "The main clinical signs of the disease are secondary to central and peripheral nervous system demyelination.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "atidarsagene autotemcel",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "early-onset MLD",
+   "object_type": "disease",
+   "quote": "Here, we review the preclinical and clinical studies that facilitated the approval of the ex vivo gene therapy atidarsagene autotemcel for early-onset MLD by the European Medicines Agency (EMA) in December 2020.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

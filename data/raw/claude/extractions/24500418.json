@@ -1,0 +1,49 @@
+{
+ "pmid": "24500418",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.549Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1f35582ee9ea362d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/24500418.json",
+ "claims": [
+  {
+   "subject_mention": "tipifarnib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "neurofibromatosis type 1",
+   "object_type": "disease",
+   "quote": "Phase 2 randomized, flexible crossover, double-blinded, placebo-controlled trial of the farnesyltransferase inhibitor tipifarnib in children and young adults with neurofibromatosis type 1 and progressive plexiform neurofibromas.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "tipifarnib",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "RAS farnesylation",
+   "object_type": "mechanism",
+   "quote": "The activity of tipifarnib, which blocks RAS signaling by inhibiting its farnesylation, was tested in children and young adults with NF1 and progressive PNs.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromatosis type 1 (NF1) related plexiform neurofibromas",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "RAS dysregulation",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: RAS is dysregulated in neurofibromatosis type 1 (NF1) related plexiform neurofibromas (PNs).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "pmid": "40263630",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.615Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "49cccbd6a020b830",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/40263630.json",
+ "claims": [
+  {
+   "subject_mention": "SCN2A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "early-onset SCN2A developmental and epileptic encephalopathy",
+   "object_type": "disease",
+   "quote": "Early-onset SCN2A developmental and epileptic encephalopathy is caused by SCN2A gain-of-function variants.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "early-onset SCN2A developmental and epileptic encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "SCN2A gain-of-function variants",
+   "object_type": "mechanism",
+   "quote": "Early-onset SCN2A developmental and epileptic encephalopathy is caused by SCN2A gain-of-function variants.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "elsunersen",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "early-onset SCN2A developmental and epileptic encephalopathy",
+   "object_type": "disease",
+   "quote": "Here we describe the clinical experience with intrathecally administered elsunersen, a gapmer antisense oligonucleotide targeting SCN2A, in a female preterm infant with early-onset SCN2A developmental and epileptic encephalopathy, in an expanded access program.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "elsunersen",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "SCN2A",
+   "object_type": "mechanism",
+   "quote": "Here we describe the clinical experience with intrathecally administered elsunersen, a gapmer antisense oligonucleotide targeting SCN2A, in a female preterm infant with early-onset SCN2A developmental and epileptic encephalopathy, in an expanded access program.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "early-onset SCN2A developmental and epileptic encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "status epilepticus",
+   "object_type": "phenotype",
+   "quote": "Before elsunersen treatement, the patient was in status epilepticus for 7 weeks with a seizure frequency of 20-25 per hour.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "early-onset SCN2A developmental and epileptic encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "gain-of-function mechanism",
+   "object_type": "mechanism",
+   "quote": "Voltage-clamp experiments confirmed impaired channel inactivation and increased persistent current consistent with a gain-of-function mechanism.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

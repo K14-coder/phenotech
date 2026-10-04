@@ -1,0 +1,61 @@
+{
+ "pmid": "29196578",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.565Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "0e64dde673e9ccb3",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/29196578.json",
+ "claims": [
+  {
+   "subject_mention": "KCNT1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "OBJECTIVE: To evaluate quinidine as a precision therapy for severe epilepsy due to gain of function mutations in the potassium channel gene KCNT1.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "quinidine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "autosomal dominant nocturnal frontal lobe epilepsy (ADNFLE)",
+   "object_type": "disease",
+   "quote": "METHODS: A single-center, inpatient, order-randomized, blinded, placebo-controlled, crossover trial of oral quinidine included 6 patients with severe autosomal dominant nocturnal frontal lobe epilepsy (ADNFLE) due to KCNT1 mutation.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autosomal dominant nocturnal frontal lobe epilepsy (ADNFLE)",
+   "object_type": "disease",
+   "quote": "METHODS: A single-center, inpatient, order-randomized, blinded, placebo-controlled, crossover trial of oral quinidine included 6 patients with severe autosomal dominant nocturnal frontal lobe epilepsy (ADNFLE) due to KCNT1 mutation.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "quinidine",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "severe epilepsy due to gain of function mutations in the potassium channel gene KCNT1",
+   "object_type": "disease",
+   "quote": "CLASSIFICATION OF EVIDENCE: This study provides Class II evidence that for persons with severe epilepsy due to gain of function mutations in the potassium channel gene KCNT1, quinidine does not significantly reduce seizure frequency.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,520 @@
+{
+ "pmid": "9596203",
+ "entries": {
+  "74da2d6940ad612d": {
+   "mention": "SME",
+   "type": "disease",
+   "candidates": [
+    "disease:CDKL5",
+    "disease:SCN2A",
+    "disease:CBL",
+    "disease:HRAS",
+    "disease:GRIN2B",
+    "disease:SCN1A",
+    "disease:SLC6A1",
+    "disease:SYNGAP1",
+    "disease:IDS",
+    "disease:IDUA"
+   ],
+   "node_id": "disease:SCN1A",
+   "match": "instance",
+   "justification": "SME = Dravet syndrome",
+   "raw_node_id": "disease:SCN1A",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.810Z"
+  },
+  "dcb4e2d30292cb0a": {
+   "mention": "drug-resistant focal and generalized seizure types",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010818",
+    "phenotype:HP:0011169",
+    "phenotype:HP:0002123",
+    "phenotype:HP:0002197",
+    "phenotype:HP:0011170",
+    "phenotype:HP:0002349",
+    "phenotype:HP:0002121",
+    "phenotype:HP:0011153",
+    "phenotype:HP:0011167",
+    "phenotype:HP:0002266"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "compound seizure types",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.810Z"
+  },
+  "49f7992e99a1a79e": {
+   "mention": "LTG",
+   "type": "therapy",
+   "candidates": [
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:ambroxol",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:arimoclomol",
+    "therapy:atidarsagene-autotemcel"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "lamotrigine not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.810Z"
+  },
+  "f2ca1dedbb283f6f": {
+   "mention": "Myoclonic seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0032794",
+    "phenotype:HP:0011150",
+    "phenotype:HP:0002123",
+    "phenotype:HP:0011170",
+    "phenotype:HP:0020221",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0002266",
+    "phenotype:HP:0006813"
+   ],
+   "node_id": "phenotype:HP:0032794",
+   "match": "same",
+   "justification": "myoclonic seizures",
+   "raw_node_id": "phenotype:HP:0032794",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.810Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.810Z",
+   "request_payload": {
+    "title": "Lamotrigine and seizure aggravation in severe myoclonic epilepsy.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "SME",
+      "declared_type": "disease",
+      "sentence": "In severe myoclonic epilepsy of infancy (SME), multiple drug-resistant focal and generalized seizure types occur.",
+      "candidates": [
+       {
+        "id": "disease:CDKL5",
+        "type": "disease",
+        "label": "CDKL5 deficiency disorder",
+        "synonyms": [
+         "CDD",
+         "DEE2",
+         "CDKL5-related disorders",
+         "CDKL5 early infantile epileptic encephalopathy",
+         "EIEE2",
+         "developmental and epileptic encephalopathy 2, X-linked dominant",
+         "developmental and epileptic encephalopathy, 2",
+         "early infantile epileptic encephalopathy caused by mutation in CDKL5"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in CDKL5 (4 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN2A",
+        "type": "disease",
+        "label": "SCN2A-related disorders",
+        "synonyms": [
+         "SCN2A-DEE",
+         "DEE11",
+         "BFNIS",
+         "NaV1.2",
+         "BFIS3",
+         "SCN2A benign familial infantile epilepsy",
+         "benign familial infantile convulsions",
+         "benign familial infantile epilepsy caused by mutation in SCN2A"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN2A (9 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       },
+       {
+        "id": "disease:GRIN2B",
+        "type": "disease",
+        "label": "GRIN2B-related disorders",
+        "synonyms": [
+         "GRIN2B-NDD",
+         "DEE27",
+         "GluN2B",
+         "GRIN2B autosomal dominant non-syndromic intellectual disability",
+         "GRIN2B encephalopathy",
+         "GRIN2B-related developmental delay, intellectual disability and autism spectrum disorder",
+         "GRIN2B-related neurodevelopmental disorder",
+         "MRD6"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in GRIN2B (3 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SCN1A",
+        "type": "disease",
+        "label": "SCN1A-related disorders (incl. Dravet syndrome)",
+        "synonyms": [
+         "Dravet syndrome",
+         "DEE6A",
+         "GEFS+2",
+         "FHM3",
+         "NaV1.1",
+         "GEFS+, type 2",
+         "GEFSP2",
+         "SCN1A febrile seizures, familial"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SCN1A (11 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:SLC6A1",
+        "type": "disease",
+        "label": "SLC6A1-related disorders",
+        "synonyms": [
+         "MAE",
+         "myoclonic-atonic epilepsy",
+         "Doose syndrome (SLC6A1)",
+         "GAT-1 deficiency",
+         "epilepsy with myoclonic atonic seizures",
+         "Doose syndrome",
+         "EMAS",
+         "EMAtS"
+        ],
+        "summary": "Changes in SLC6A1, the GAT-1 GABA transporter, cause epilepsy with myoclonic-atonic seizures and, more broadly, developmental delay with or without autism. SLC6"
+       },
+       {
+        "id": "disease:SYNGAP1",
+        "type": "disease",
+        "label": "SYNGAP1-related disorders",
+        "synonyms": [
+         "SYNGAP1-ID",
+         "MRD5",
+         "SynGAP",
+         "SYNGAP1 autosomal dominant non-syndromic intellectual disability",
+         "SYNGAP1 gene mutation linked to intellectual disability, schizophrenia and autism",
+         "SYNGAP1 syndrome",
+         "SYNGAP1-related NSID",
+         "SYNGAP1-related developmental and epileptic encephalopathy"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SYNGAP1 (2 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "drug-resistant focal and generalized seizure types",
+      "declared_type": "phenotype",
+      "sentence": "In severe myoclonic epilepsy of infancy (SME), multiple drug-resistant focal and generalized seizure types occur.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010818",
+        "type": "phenotype",
+        "label": "Generalized tonic seizure",
+        "note": "HPO HP:0010818"
+       },
+       {
+        "id": "phenotype:HP:0011169",
+        "type": "phenotype",
+        "label": "Generalized clonic seizure",
+        "note": "HPO HP:0011169"
+       },
+       {
+        "id": "phenotype:HP:0002123",
+        "type": "phenotype",
+        "label": "Generalized myoclonic seizure",
+        "note": "HPO HP:0002123"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       },
+       {
+        "id": "phenotype:HP:0011170",
+        "type": "phenotype",
+        "label": "Generalized myoclonic-atonic seizure",
+        "note": "HPO HP:0011170"
+       },
+       {
+        "id": "phenotype:HP:0002349",
+        "type": "phenotype",
+        "label": "Focal aware seizure",
+        "note": "HPO HP:0002349"
+       },
+       {
+        "id": "phenotype:HP:0002121",
+        "type": "phenotype",
+        "label": "Generalized non-motor (absence) seizure",
+        "note": "HPO HP:0002121"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0011167",
+        "type": "phenotype",
+        "label": "Focal tonic seizure",
+        "note": "HPO HP:0011167"
+       },
+       {
+        "id": "phenotype:HP:0002266",
+        "type": "phenotype",
+        "label": "Focal clonic seizure",
+        "note": "HPO HP:0002266"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "LTG",
+      "declared_type": "therapy",
+      "sentence": "LTG treatment seems inappropriate in SME.",
+      "candidates": [
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:ambroxol",
+        "type": "therapy",
+        "label": "Ambroxol (repurposed pharmacological chaperone for glucocerebrosidase)",
+        "synonyms": [
+         "ambroxol hydrochloride"
+        ],
+        "summary": "A cough medicine that also acts as a chaperone for misfolded glucocerebrosidase and crosses the blood-brain barrier; studied in neuronopathic Gaucher disease. W"
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "Myoclonic seizures",
+      "declared_type": "phenotype",
+      "sentence": "Myoclonic seizures worsened in six (33%) of 18 patients.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0011150",
+        "type": "phenotype",
+        "label": "Myoclonic absence seizure",
+        "note": "HPO HP:0011150"
+       },
+       {
+        "id": "phenotype:HP:0002123",
+        "type": "phenotype",
+        "label": "Generalized myoclonic seizure",
+        "note": "HPO HP:0002123"
+       },
+       {
+        "id": "phenotype:HP:0011170",
+        "type": "phenotype",
+        "label": "Generalized myoclonic-atonic seizure",
+        "note": "HPO HP:0011170"
+       },
+       {
+        "id": "phenotype:HP:0020221",
+        "type": "phenotype",
+        "label": "Clonic seizure",
+        "note": "HPO HP:0020221"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0002266",
+        "type": "phenotype",
+        "label": "Focal clonic seizure",
+        "note": "HPO HP:0002266"
+       },
+       {
+        "id": "phenotype:HP:0006813",
+        "type": "phenotype",
+        "label": "Focal hemiclonic seizure",
+        "note": "HPO HP:0006813"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"SME\",\"node_id\":\"disease:SCN1A\",\"match\":\"instance\",\"justification\":\"SME = Dravet syndrome\"},{\"mention_id\":\"m2\",\"mention\":\"drug-resistant focal and generalized seizure types\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"compound seizure types\"},{\"mention_id\":\"m3\",\"mention\":\"LTG\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"lamotrigine not among candidates\"},{\"mention_id\":\"m4\",\"mention\":\"Myoclonic seizures\",\"node_id\":\"phenotype:HP:0032794\",\"match\":\"same\",\"justification\":\"myoclonic seizures\"}]}"
+  }
+ ]
+}

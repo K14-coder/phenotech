@@ -1,0 +1,49 @@
+{
+ "pmid": "18984165",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.539Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a7cf2b250702a0af",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/18984165.json",
+ "claims": [
+  {
+   "subject_mention": "neurofibromin",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "ERK/synapsin I-dependent GABA release",
+   "object_type": "mechanism",
+   "quote": "Our results demonstrate that neurofibromin modulates ERK/synapsin I-dependent GABA release, which in turn modulates hippocampal LTP and learning.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromatosis type I",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "disruption of ERK signaling in GABA release",
+   "object_type": "mechanism",
+   "quote": "We uncovered a role for ERK signaling in GABA release, long-term potentiation (LTP), and learning, and show that disruption of this mechanism accounts for the learning deficits in a mouse model for learning disabilities in neurofibromatosis type I (NF1).",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GABA(A) antagonist",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Nf1 mutation",
+   "object_type": "disease",
+   "quote": "Importantly, the learning deficits associated with the Nf1 mutation were rescued by a subthreshold dose of a GABA(A) antagonist.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

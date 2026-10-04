@@ -1,0 +1,61 @@
+{
+ "pmid": "30442766",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.570Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "96fee194d07e5608",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/30442766.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "RAS ubiquitination",
+   "object_type": "mechanism",
+   "quote": "LZTR1 is a regulator of RAS ubiquitination and signaling.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "MAPK pathway activation",
+   "object_type": "mechanism",
+   "quote": "We propose that LZTR1 acts as a conserved regulator of RAS ubiquitination and MAPK pathway activation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "ubiquitination of endogenous KRAS",
+   "object_type": "mechanism",
+   "quote": "Inactivation of LZTR1 led to decreased ubiquitination and enhanced plasma membrane localization of endogenous KRAS (V-Ki-ras2 Kirsten rat sarcoma viral oncogene homolog).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 disease mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "Because LZTR1 disease mutations failed to revert loss-of-function phenotypes, our findings provide a molecular rationale for LZTR1 involvement in a variety of inherited and acquired human disorders.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

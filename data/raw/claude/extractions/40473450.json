@@ -1,0 +1,49 @@
+{
+ "pmid": "40473450",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.619Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "f337a3f1758d870a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/40473450.json",
+ "claims": [
+  {
+   "subject_mention": "selumetinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "neurofibromatosis type 1",
+   "object_type": "disease",
+   "quote": "Efficacy and safety of selumetinib in adults with neurofibromatosis type 1 and symptomatic, inoperable plexiform neurofibromas (KOMET): a multicentre, international, randomised, placebo-controlled, parallel, double-blind, phase 3 study.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "selumetinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NF1-plexiform neurofibromas",
+   "object_type": "disease",
+   "quote": "INTERPRETATION: In the first international, randomised, placebo-controlled trial in adults with NF1-plexiform neurofibromas, selumetinib achieved a significant objective response rate versus placebo.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "selumetinib",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "plexiform neurofibromas in adults with NF1",
+   "object_type": "disease",
+   "quote": "The observations of reduction in tumour volume by cycle 16, reduction in chronic and spike pain, reduction in analgesia, and decrease in pain interference over placebo show that selumetinib is effective at treating plexiform neurofibromas in adults with NF1.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

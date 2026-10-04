@@ -1,0 +1,25 @@
+{
+ "pmid": "42748083",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.652Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "6c76fbea667eb81f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/42748083.json",
+ "claims": [
+  {
+   "subject_mention": "Fabry disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cardiomyopathy",
+   "object_type": "phenotype",
+   "quote": "For the majority of individuals identified using the broader sequencing techniques cardiomyopathy is the presenting and only symptom of the disorder, in contrast to the multisystem classical Fabry disease phenotype.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

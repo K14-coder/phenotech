@@ -1,0 +1,109 @@
+{
+ "pmid": "27602407",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.558Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "54cebac78f50247b",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/27602407.json",
+ "claims": [
+  {
+   "subject_mention": "KCNQ2",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "neonatal-onset epileptic encephalopathy",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: KCNQ2 variants cause neonatal-onset epileptic encephalopathy of widely varying severity.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNQ2 encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "burst suppression",
+   "object_type": "phenotype",
+   "quote": "Of the 20 EEGs obtained within a week of birth, 11 showed burst suppression.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNQ2 encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "epileptic spasms",
+   "object_type": "phenotype",
+   "quote": "When new seizure types appeared in infancy (15 patients), the most common were epileptic spasms (n = 8).",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNQ2 encephalopathy",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Development was delayed in all, severely in 14.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "KCNQ2 variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "poison tetrameric channel functions",
+   "object_type": "mechanism",
+   "quote": "They were clustered in 4 protein subdomains predicted to poison tetrameric channel functions.",
+   "study_type": "case_series",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "EZO",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "KCNQ2 encephalopathy",
+   "object_type": "disease",
+   "quote": "EZO use (assessed by the treating physicians and parents) was associated with improvement in seizures and/or development in 3 of the 4 treated before 6 months of age, and 2 of the 7 treated later; no serious side effects were observed.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "EZO",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "KCNQ2 encephalopathy",
+   "object_type": "disease",
+   "quote": "CLASSIFICATION OF EVIDENCE: This study provides Class IV evidence that EZO is effective for refractory seizures in patients with epilepsy due to KCNQ2 encephalopathy.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "EZO",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "KCNQ2 channel loss of function",
+   "object_type": "mechanism",
+   "quote": "For variants causing KCNQ2 channel loss of function, EZO appeared well tolerated and potentially beneficial against refractory seizures when started early.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

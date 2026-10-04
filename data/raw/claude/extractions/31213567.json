@@ -1,0 +1,109 @@
+{
+ "pmid": "31213567",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.575Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c11a265c08e145ed",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/31213567.json",
+ "claims": [
+  {
+   "subject_mention": "GRIN2B",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "severe encephalopathy",
+   "object_type": "disease",
+   "quote": "Autosomal dominant mutations in GRIN2B are associated with severe encephalopathy, but little is known about the pathophysiological outcomes and any potential therapeutic interventions.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GRIN2B P553T",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "reduced glutamate affinity",
+   "object_type": "mechanism",
+   "quote": "Electrophysiological recordings in a HEK-293T cell line expressing the mutated subunit confirmed this prediction and showed an associated reduced glutamate affinity.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GluN2B(P553T)",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "reduced NMDA-evoked currents",
+   "object_type": "mechanism",
+   "quote": "Moreover, GluN2B(P553T)-expressing primary murine hippocampal neurons showed decreased spine density, concomitant with reduced NMDA-evoked currents and impaired NMDAR-dependent insertion of the AMPA receptor subunit GluA1 at stimulated synapses.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "d-serine",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GluN2B(P553T)-containing NMDARs function",
+   "object_type": "mechanism",
+   "quote": "Furthermore, the naturally occurring coagonist d-serine restored function to GluN2B(P553T)-containing NMDARs.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "L-Serine dietary supplementation",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "loss-of-function GRIN2B-related pediatric encephalopathy",
+   "object_type": "disease",
+   "quote": "L-Serine dietary supplementation is associated with clinical improvement of loss-of-function GRIN2B-related pediatric encephalopathy.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "l-serine supplementation",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "GRIN2B-related severe encephalopathy",
+   "object_type": "disease",
+   "quote": "Our data suggest that l-serine supplementation might ameliorate GRIN2B-related severe encephalopathy and other neurological conditions caused by glutamatergic signaling deficiency.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "GRIN2B-related severe encephalopathy",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "glutamatergic signaling deficiency",
+   "object_type": "mechanism",
+   "quote": "Our data suggest that l-serine supplementation might ameliorate GRIN2B-related severe encephalopathy and other neurological conditions caused by glutamatergic signaling deficiency.",
+   "study_type": "case_report",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "GRIN2B",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "Rett-like syndrome",
+   "object_type": "phenotype",
+   "quote": "Here, we evaluated a missense mutation in GRIN2B, causing a proline-to-threonine switch (P553T) in the GluN2B subunit of NMDAR, which was found in a 5-year-old patient with Rett-like syndrome with severe encephalopathy.",
+   "study_type": "case_report",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

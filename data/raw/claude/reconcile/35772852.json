@@ -1,0 +1,252 @@
+{
+ "pmid": "35772852",
+ "entries": {
+  "497c870b99b7ac89": {
+   "mention": "cerliponase alfa",
+   "type": "therapy",
+   "candidates": [
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:cerliponase-alfa",
+    "therapy:olipudase-alfa",
+    "therapy:pabinafusp-alfa",
+    "therapy:eliglustat",
+    "therapy:idursulfase",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:arimoclomol"
+   ],
+   "node_id": "therapy:cerliponase-alfa",
+   "match": "same",
+   "justification": "cerliponase alfa",
+   "raw_node_id": "therapy:cerliponase-alfa",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.822Z"
+  },
+  "a3720812a3c5010f": {
+   "mention": "blinding",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000618",
+    "phenotype:HP:0002013",
+    "phenotype:HP:0033235",
+    "phenotype:HP:0011968",
+    "phenotype:HP:0001845",
+    "phenotype:HP:0002168",
+    "phenotype:HP:0000242",
+    "phenotype:HP:0030842",
+    "phenotype:HP:0100703",
+    "phenotype:HP:0030426"
+   ],
+   "node_id": "phenotype:HP:0000618",
+   "match": "same",
+   "justification": "blinding = blindness",
+   "raw_node_id": "phenotype:HP:0000618",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.822Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.822Z",
+   "request_payload": {
+    "title": "Ongoing retinal degeneration despite intraventricular enzyme replacement therapy with cerliponase alfa in late-infantile neuronal ceroid lipofuscinosis type 2 (CLN2 disease).",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "cerliponase alfa",
+      "declared_type": "therapy",
+      "sentence": "Ongoing retinal degeneration despite intraventricular enzyme replacement therapy with cerliponase alfa in late-infantile neuronal ceroid lipofuscinosis type 2 (CLN2 disease).",
+      "candidates": [
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:cerliponase-alfa",
+        "type": "therapy",
+        "label": "Cerliponase alfa (intraventricular enzyme replacement for CLN2)",
+        "synonyms": [
+         "Brineura",
+         "rhTPP1"
+        ],
+        "summary": "Recombinant TPP1 delivered straight into the fluid spaces of the brain, bypassing the blood-brain barrier. It slows the loss of walking and language in CLN2 dis"
+       },
+       {
+        "id": "therapy:olipudase-alfa",
+        "type": "therapy",
+        "label": "Olipudase alfa (enzyme replacement for ASMD)",
+        "synonyms": [
+         "Xenpozyme",
+         "rhASM"
+        ],
+        "summary": "Intravenous recombinant acid sphingomyelinase, approved only for the non-brain manifestations of ASMD."
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:idursulfase",
+        "type": "therapy",
+        "label": "Idursulfase (enzyme replacement for MPS II)",
+        "synonyms": [
+         "Elaprase"
+        ],
+        "summary": "Intravenous recombinant iduronate-2-sulfatase for Hunter syndrome (MPS II)."
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "blinding",
+      "declared_type": "phenotype",
+      "sentence": "Late-infantile neuronal ceroid lipofuscinosis type 2 (CLN2) is a neurodegenerative, blinding lysosomal storage disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000618",
+        "type": "phenotype",
+        "label": "Blindness",
+        "note": "HPO HP:0000618"
+       },
+       {
+        "id": "phenotype:HP:0002013",
+        "type": "phenotype",
+        "label": "Vomiting",
+        "note": "HPO HP:0002013"
+       },
+       {
+        "id": "phenotype:HP:0033235",
+        "type": "phenotype",
+        "label": "Difficulty descending stairs",
+        "note": "HPO HP:0033235"
+       },
+       {
+        "id": "phenotype:HP:0011968",
+        "type": "phenotype",
+        "label": "Feeding difficulties",
+        "note": "HPO HP:0011968"
+       },
+       {
+        "id": "phenotype:HP:0001845",
+        "type": "phenotype",
+        "label": "Overlapping toe",
+        "note": "HPO HP:0001845"
+       },
+       {
+        "id": "phenotype:HP:0002168",
+        "type": "phenotype",
+        "label": "Scanning speech",
+        "note": "HPO HP:0002168"
+       },
+       {
+        "id": "phenotype:HP:0000242",
+        "type": "phenotype",
+        "label": "Parietal bossing",
+        "note": "HPO HP:0000242"
+       },
+       {
+        "id": "phenotype:HP:0030842",
+        "type": "phenotype",
+        "label": "Choking episodes",
+        "note": "HPO HP:0030842"
+       },
+       {
+        "id": "phenotype:HP:0100703",
+        "type": "phenotype",
+        "label": "Tongue thrusting",
+        "note": "HPO HP:0100703"
+       },
+       {
+        "id": "phenotype:HP:0030426",
+        "type": "phenotype",
+        "label": "Ossifying fibroma",
+        "note": "HPO HP:0030426"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"cerliponase alfa\",\"node_id\":\"therapy:cerliponase-alfa\",\"match\":\"same\",\"justification\":\"cerliponase alfa\"},{\"mention_id\":\"m2\",\"mention\":\"blinding\",\"node_id\":\"phenotype:HP:0000618\",\"match\":\"same\",\"justification\":\"blinding = blindness\"}]}"
+  }
+ ]
+}

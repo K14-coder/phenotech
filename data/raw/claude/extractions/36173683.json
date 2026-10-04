@@ -1,0 +1,85 @@
+{
+ "pmid": "36173683",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.601Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e0346d71fe3bbeb1",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/36173683.json",
+ "claims": [
+  {
+   "subject_mention": "KCNT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "EIMFS",
+   "object_type": "disease",
+   "quote": "De novo variants in ion channels, including gain-of-function variants in KCNT1, which encodes for sodium activated potassium channel protein KNa1.1, have been found to play a major role in the etiology of EIMFS.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "EIMFS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "gain-of-function variants in KCNT1",
+   "object_type": "mechanism",
+   "quote": "De novo variants in ion channels, including gain-of-function variants in KCNT1, which encodes for sodium activated potassium channel protein KNa1.1, have been found to play a major role in the etiology of EIMFS.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Antisense oligonucleotide therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "KCNT1 encephalopathy",
+   "object_type": "disease",
+   "quote": "Antisense oligonucleotide therapy for KCNT1 encephalopathy.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Kcnt1 gapmer ASO",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "KCNT1-associated DEE",
+   "object_type": "disease",
+   "quote": "After a single intracerebroventricular bolus injection of a Kcnt1 gapmer ASO in symptomatic mice at postnatal day 40, seizure frequency was significantly reduced, behavioral abnormalities improved, and overall survival was extended compared with mice treated with a control ASO (nonhybridizing sequence).",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASO-based gene silencing",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "KCNT1-associated epilepsies",
+   "object_type": "disease",
+   "quote": "The data presented here provide proof of concept for ASO-based gene silencing as a promising therapeutic approach in KCNT1-associated epilepsies.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "gene-silencing antisense oligonucleotide (ASO)",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "gene silencing",
+   "object_type": "mechanism",
+   "quote": "Here, we test a potential precision therapeutic approach in KCNT1-associated DEE using a gene-silencing antisense oligonucleotide (ASO) approach.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "speculative",
+   "negated": false
+  }
+ ]
+}

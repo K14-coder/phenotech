@@ -1,0 +1,133 @@
+{
+ "pmid": "15937108",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.526Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "53d0bf974a3c3a7c",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/15937108.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "neurofibromatosis type I",
+   "object_type": "disease",
+   "quote": "Loss-of-function mutations in the NF1 tumor suppressor gene underlie the familial cancer syndrome neurofibromatosis type I (NF1).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1 loss-of-function mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "Loss-of-function mutations in the NF1 tumor suppressor gene underlie the familial cancer syndrome neurofibromatosis type I (NF1).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromin",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "Ras-GTPase activating protein (RasGAP) activity",
+   "object_type": "mechanism",
+   "quote": "The NF1-encoded protein, neurofibromin, functions as a Ras-GTPase activating protein (RasGAP).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "deregulation of Ras",
+   "object_type": "mechanism",
+   "quote": "Accordingly, deregulation of Ras is thought to contribute to NF1 development.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromin",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "mTOR pathway",
+   "object_type": "mechanism",
+   "quote": "We show here that the mTOR pathway is tightly regulated by neurofibromin.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "TSC2 and mTOR regulation",
+   "object_type": "mechanism",
+   "quote": "The NF1 tumor suppressor critically regulates TSC2 and mTOR.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "constitutive mTOR signaling",
+   "object_type": "mechanism",
+   "quote": "Furthermore, while we show that the activation of endogenous Ras leads to constitutive mTOR signaling in this disease state, we also demonstrate that in normal cells Ras is differentially required for mTOR signaling in response to various growth factors.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rapamycin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NF1",
+   "object_type": "disease",
+   "quote": "Importantly, tumor cell lines derived from NF1 patients, and a genetically engineered cell system that requires Nf1-deficiency for transformation, are highly sensitive to the mTOR inhibitor rapamycin.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rapamycin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "mTOR",
+   "object_type": "mechanism",
+   "quote": "Importantly, tumor cell lines derived from NF1 patients, and a genetically engineered cell system that requires Nf1-deficiency for transformation, are highly sensitive to the mTOR inhibitor rapamycin.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rapamycin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NF1",
+   "object_type": "disease",
+   "quote": "Finally, these data suggest that rapamycin, or its derivatives, may represent a viable therapy for NF1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

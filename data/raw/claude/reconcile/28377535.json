@@ -1,0 +1,604 @@
+{
+ "pmid": "28377535",
+ "entries": {
+  "1f58432e29f2ff1e": {
+   "mention": "movement disorder",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0012075",
+    "phenotype:HP:0002487",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0007941",
+    "phenotype:HP:0000514",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0007704",
+    "phenotype:HP:0000726",
+    "phenotype:HP:0006889",
+    "phenotype:HP:0001288"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Generic movement disorder broader than candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.801Z"
+  },
+  "510fe6e94cd75c16": {
+   "mention": "cortical visual impairment",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0100704",
+    "phenotype:HP:0000365",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0000529",
+    "phenotype:HP:0025152",
+    "phenotype:HP:0007928",
+    "phenotype:HP:0002384",
+    "phenotype:HP:0002341",
+    "phenotype:HP:0020216",
+    "phenotype:HP:0001151"
+   ],
+   "node_id": "phenotype:HP:0100704",
+   "match": "same",
+   "justification": "Cortical/cerebral visual impairment",
+   "raw_node_id": "phenotype:HP:0100704",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.801Z"
+  },
+  "2ca8695dac4c3171": {
+   "mention": "cerebral volume loss",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002181",
+    "phenotype:HP:0100021",
+    "phenotype:HP:0002059",
+    "phenotype:HP:0006808",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0011445",
+    "phenotype:HP:0012762",
+    "phenotype:HP:0012430",
+    "phenotype:HP:0012695",
+    "phenotype:HP:0002371"
+   ],
+   "node_id": "phenotype:HP:0002059",
+   "match": "same",
+   "justification": "Cerebral volume loss = cerebral atrophy",
+   "raw_node_id": "phenotype:HP:0002059",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.801Z"
+  },
+  "b770e5a0ed93fae8": {
+   "mention": "epilepsy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0033258",
+    "phenotype:HP:0011097",
+    "phenotype:HP:0002133",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0032660",
+    "phenotype:HP:0010841",
+    "phenotype:HP:0011198",
+    "phenotype:HP:0002131",
+    "phenotype:HP:0031475",
+    "phenotype:HP:0030842"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Only specific epilepsy subtypes offered",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.801Z"
+  },
+  "38efc8598aa6beee": {
+   "mention": "malformation of cortical development (MCD)",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0007099",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0004963",
+    "phenotype:HP:0040296",
+    "phenotype:HP:0007759",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0000750",
+    "phenotype:HP:0001263",
+    "phenotype:HP:0011344",
+    "phenotype:HP:0007549"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No MCD term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.801Z"
+  },
+  "1cc8ac3c9d2b32f9": {
+   "mention": "memantine",
+   "type": "therapy",
+   "candidates": [
+    "therapy:kv7-openers",
+    "therapy:quinidine",
+    "therapy:sodium-channel-blockers",
+    "therapy:fenfluramine",
+    "therapy:3-4-diaminopyridine",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:acetylcholinesterase-inhibitor-cms",
+    "therapy:levacetylleucine",
+    "therapy:binimetinib",
+    "therapy:relutrigine"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Memantine not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.801Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.801Z",
+   "request_payload": {
+    "title": "GRIN2B encephalopathy: novel findings on phenotype, variant clustering, functional consequences and treatment aspects.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "movement disorder",
+      "declared_type": "phenotype",
+      "sentence": "Patients presented with neurodevelopmental disorders and a spectrum of hypotonia, movement disorder, cortical visual impairment, cerebral volume loss and epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0012075",
+        "type": "phenotype",
+        "label": "Personality disorder",
+        "note": "HPO HP:0012075"
+       },
+       {
+        "id": "phenotype:HP:0002487",
+        "type": "phenotype",
+        "label": "Hyperkinetic movements",
+        "note": "HPO HP:0002487"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0007941",
+        "type": "phenotype",
+        "label": "Limited extraocular movements",
+        "note": "HPO HP:0007941"
+       },
+       {
+        "id": "phenotype:HP:0000514",
+        "type": "phenotype",
+        "label": "Slow saccadic eye movements",
+        "note": "HPO HP:0000514"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0007704",
+        "type": "phenotype",
+        "label": "Paroxysmal involuntary eye movements",
+        "note": "HPO HP:0007704"
+       },
+       {
+        "id": "phenotype:HP:0000726",
+        "type": "phenotype",
+        "label": "Dementia",
+        "note": "HPO HP:0000726"
+       },
+       {
+        "id": "phenotype:HP:0006889",
+        "type": "phenotype",
+        "label": "Borderline intellectual disability",
+        "note": "HPO HP:0006889"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "cortical visual impairment",
+      "declared_type": "phenotype",
+      "sentence": "Patients presented with neurodevelopmental disorders and a spectrum of hypotonia, movement disorder, cortical visual impairment, cerebral volume loss and epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0000529",
+        "type": "phenotype",
+        "label": "Progressive visual loss",
+        "note": "HPO HP:0000529"
+       },
+       {
+        "id": "phenotype:HP:0025152",
+        "type": "phenotype",
+        "label": "Poor visual behavior for age",
+        "note": "HPO HP:0025152"
+       },
+       {
+        "id": "phenotype:HP:0007928",
+        "type": "phenotype",
+        "label": "Abnormal flash visual evoked potentials",
+        "note": "HPO HP:0007928"
+       },
+       {
+        "id": "phenotype:HP:0002384",
+        "type": "phenotype",
+        "label": "Focal impaired awareness seizure",
+        "note": "HPO HP:0002384"
+       },
+       {
+        "id": "phenotype:HP:0002341",
+        "type": "phenotype",
+        "label": "Cervical cord compression",
+        "note": "HPO HP:0002341"
+       },
+       {
+        "id": "phenotype:HP:0020216",
+        "type": "phenotype",
+        "label": "Visually-induced seizure",
+        "note": "HPO HP:0020216"
+       },
+       {
+        "id": "phenotype:HP:0001151",
+        "type": "phenotype",
+        "label": "Impaired horizontal smooth pursuit",
+        "note": "HPO HP:0001151"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "cerebral volume loss",
+      "declared_type": "phenotype",
+      "sentence": "Patients presented with neurodevelopmental disorders and a spectrum of hypotonia, movement disorder, cortical visual impairment, cerebral volume loss and epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002181",
+        "type": "phenotype",
+        "label": "Cerebral edema",
+        "note": "HPO HP:0002181"
+       },
+       {
+        "id": "phenotype:HP:0100021",
+        "type": "phenotype",
+        "label": "Cerebral palsy",
+        "note": "HPO HP:0100021"
+       },
+       {
+        "id": "phenotype:HP:0002059",
+        "type": "phenotype",
+        "label": "Cerebral atrophy",
+        "note": "HPO HP:0002059"
+       },
+       {
+        "id": "phenotype:HP:0006808",
+        "type": "phenotype",
+        "label": "Cerebral hypomyelination",
+        "note": "HPO HP:0006808"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0011445",
+        "type": "phenotype",
+        "label": "Athetoid cerebral palsy",
+        "note": "HPO HP:0011445"
+       },
+       {
+        "id": "phenotype:HP:0012762",
+        "type": "phenotype",
+        "label": "Cerebral white matter atrophy",
+        "note": "HPO HP:0012762"
+       },
+       {
+        "id": "phenotype:HP:0012430",
+        "type": "phenotype",
+        "label": "Cerebral white matter hypoplasia",
+        "note": "HPO HP:0012430"
+       },
+       {
+        "id": "phenotype:HP:0012695",
+        "type": "phenotype",
+        "label": "Decreased thalamic volume",
+        "note": "HPO HP:0012695"
+       },
+       {
+        "id": "phenotype:HP:0002371",
+        "type": "phenotype",
+        "label": "Loss of speech",
+        "note": "HPO HP:0002371"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "epilepsy",
+      "declared_type": "phenotype",
+      "sentence": "Patients presented with neurodevelopmental disorders and a spectrum of hypotonia, movement disorder, cortical visual impairment, cerebral volume loss and epilepsy.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0011097",
+        "type": "phenotype",
+        "label": "Epileptic spasm",
+        "note": "HPO HP:0011097"
+       },
+       {
+        "id": "phenotype:HP:0002133",
+        "type": "phenotype",
+        "label": "Status epilepticus",
+        "note": "HPO HP:0002133"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0032660",
+        "type": "phenotype",
+        "label": "Convulsive status epilepticus",
+        "note": "HPO HP:0032660"
+       },
+       {
+        "id": "phenotype:HP:0010841",
+        "type": "phenotype",
+        "label": "Multifocal epileptiform discharges",
+        "note": "HPO HP:0010841"
+       },
+       {
+        "id": "phenotype:HP:0011198",
+        "type": "phenotype",
+        "label": "EEG with generalized epileptiform discharges",
+        "note": "HPO HP:0011198"
+       },
+       {
+        "id": "phenotype:HP:0002131",
+        "type": "phenotype",
+        "label": "Episodic ataxia",
+        "note": "HPO HP:0002131"
+       },
+       {
+        "id": "phenotype:HP:0031475",
+        "type": "phenotype",
+        "label": "Status epilepticus without prominent motor symptoms",
+        "note": "HPO HP:0031475"
+       },
+       {
+        "id": "phenotype:HP:0030842",
+        "type": "phenotype",
+        "label": "Choking episodes",
+        "note": "HPO HP:0030842"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "malformation of cortical development (MCD)",
+      "declared_type": "phenotype",
+      "sentence": "Six patients presented with a consistent malformation of cortical development (MCD) intermediate between tubulinopathies and polymicrogyria.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0007099",
+        "type": "phenotype",
+        "label": "Chiari type I malformation",
+        "note": "HPO HP:0007099"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0004963",
+        "type": "phenotype",
+        "label": "Calcification of the aorta",
+        "note": "HPO HP:0004963"
+       },
+       {
+        "id": "phenotype:HP:0040296",
+        "type": "phenotype",
+        "label": "Abnormal location of the eyebrow",
+        "note": "HPO HP:0040296"
+       },
+       {
+        "id": "phenotype:HP:0007759",
+        "type": "phenotype",
+        "label": "Opacification of the corneal stroma",
+        "note": "HPO HP:0007759"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0000750",
+        "type": "phenotype",
+        "label": "Delayed speech and language development",
+        "note": "HPO HP:0000750"
+       },
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0007549",
+        "type": "phenotype",
+        "label": "Desquamation of skin soon after birth",
+        "note": "HPO HP:0007549"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "memantine",
+      "declared_type": "therapy",
+      "sentence": "Functional consequences and response to memantine treatment were investigated in vitro and eventually translated into patient care.",
+      "candidates": [
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:fenfluramine",
+        "type": "therapy",
+        "label": "Fenfluramine"
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:acetylcholinesterase-inhibitor-cms",
+        "type": "therapy",
+        "label": "Acetylcholinesterase inhibitors (e.g. pyridostigmine)",
+        "synonyms": [
+         "pyridostigmine"
+        ],
+        "summary": "Drugs that make each released packet of acetylcholine act for longer at the neuromuscular junction. Reported to improve strength in SYT2-related presynaptic con"
+       },
+       {
+        "id": "therapy:levacetylleucine",
+        "type": "therapy",
+        "label": "Levacetylleucine (N-acetyl-L-leucine)",
+        "synonyms": [
+         "NALL",
+         "N-acetyl-L-leucine",
+         "IB1001",
+         "Aqneursa"
+        ],
+        "summary": "An oral modified amino acid that improved ataxia scores versus placebo in a 12-week crossover trial in NPC; it is also being trialled in GM2 gangliosidoses."
+       },
+       {
+        "id": "therapy:binimetinib",
+        "type": "therapy",
+        "label": "Binimetinib (MEK162; MEK1/2 inhibitor)",
+        "synonyms": [
+         "MEK162",
+         "ARRY-162"
+        ],
+        "summary": "A MEK inhibitor tested in NF1 plexiform neurofibromas (phase 2, completed). The first MEK-inhibitor trial in Noonan syndrome hypertrophic cardiomyopathy (2012) "
+       },
+       {
+        "id": "therapy:relutrigine",
+        "type": "therapy",
+        "label": "Relutrigine (PRAX-562)",
+        "synonyms": [
+         "PRAX-562"
+        ],
+        "summary": "An investigational small molecule in a trial for early-onset SCN2A and SCN8A DEE that excludes loss-of-function variants."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"movement disorder\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Generic movement disorder broader than candidates\"},{\"mention_id\":\"m2\",\"mention\":\"cortical visual impairment\",\"node_id\":\"phenotype:HP:0100704\",\"match\":\"same\",\"justification\":\"Cortical/cerebral visual impairment\"},{\"mention_id\":\"m3\",\"mention\":\"cerebral volume loss\",\"node_id\":\"phenotype:HP:0002059\",\"match\":\"same\",\"justification\":\"Cerebral volume loss = cerebral atrophy\"},{\"mention_id\":\"m4\",\"mention\":\"epilepsy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Only specific epilepsy subtypes offered\"},{\"mention_id\":\"m5\",\"mention\":\"malformation of cortical development (MCD)\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No MCD term\"},{\"mention_id\":\"m6\",\"mention\":\"memantine\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Memantine not a candidate\"}]}"
+  }
+ ]
+}

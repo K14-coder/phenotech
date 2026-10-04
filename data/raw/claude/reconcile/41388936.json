@@ -1,0 +1,678 @@
+{
+ "pmid": "41388936",
+ "entries": {
+  "389bf188d68480dd": {
+   "mention": "Noonan syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:RIT1",
+    "disease:BRAF",
+    "disease:KRAS",
+    "disease:LZTR1",
+    "disease:PTPN11",
+    "disease:RAF1",
+    "disease:SOS1",
+    "disease:NF1",
+    "disease:MAP2K1",
+    "disease:CBL"
+   ],
+   "node_id": "disease:RIT1",
+   "match": "instance",
+   "justification": "Noonan with RIT1 mutations (NS8)",
+   "raw_node_id": "disease:RIT1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.883Z"
+  },
+  "83bc3728de2eb742": {
+   "mention": "lymphatic disorders",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0012075",
+    "phenotype:HP:0007018",
+    "phenotype:HP:0031842",
+    "phenotype:HP:0001004",
+    "phenotype:HP:0006721",
+    "phenotype:HP:0012511",
+    "phenotype:HP:0006889",
+    "phenotype:HP:0001659",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0009697"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "specific lymphatic terms narrower",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.883Z"
+  },
+  "7ac84827cfceb1f0": {
+   "mention": "distinctive craniofacial features",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000280",
+    "phenotype:HP:0001041",
+    "phenotype:HP:0004442",
+    "phenotype:HP:0005876",
+    "phenotype:HP:0001788",
+    "phenotype:HP:0002643",
+    "phenotype:HP:0006979",
+    "phenotype:HP:0012760",
+    "phenotype:HP:0001288",
+    "phenotype:HP:0031165"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no craniofacial term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.883Z"
+  },
+  "08ea0caa80204a99": {
+   "mention": "congenital heart disease",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0005988",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0005684",
+    "phenotype:HP:0002421",
+    "phenotype:HP:0009697",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0005655",
+    "phenotype:HP:0006579",
+    "phenotype:HP:0002643",
+    "phenotype:HP:0001288"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no congenital heart term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.883Z"
+  },
+  "cf8935077715b22f": {
+   "mention": "Dysregulation of the RAS/mitogen-activated protein kinase (MAPK) pathway",
+   "type": "mechanism",
+   "candidates": [
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:gain-of-function",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:ras-protein-signal-transduction",
+    "mech:dominant-negative",
+    "mech:protein-destabilization",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:ca-triggered-exocytosis",
+    "mech:lysosomal-protein-catabolism"
+   ],
+   "node_id": "mech:ras-protein-signal-transduction",
+   "match": "instance",
+   "justification": "dysregulated RAS/MAPK signaling",
+   "raw_node_id": "mech:ras-protein-signal-transduction",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.884Z"
+  },
+  "8a00a2c975ea6128": {
+   "mention": "MEK1/2",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-fusion",
+    "mech:action-potential",
+    "mech:autophagy",
+    "mech:ca-triggered-exocytosis",
+    "mech:dominant-negative",
+    "mech:gaba-reuptake",
+    "mech:gain-of-function",
+    "mech:glucose-transmembrane-transport",
+    "mech:glycogen-catabolism",
+    "mech:glycosaminoglycan-catabolism"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no MEK node",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.884Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.884Z",
+   "request_payload": {
+    "title": "Phenotypic Analysis of Embryos in a Noonan Syndrome Model Mouse With the Rit1 A57G Mutation.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Noonan syndrome",
+      "declared_type": "disease",
+      "sentence": "Germline mutations in RIT1 have also been identified in patients with Noonan syndrome.",
+      "candidates": [
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:MAP2K1",
+        "type": "disease",
+        "label": "MAP2K1-related disorders (cardiofaciocutaneous syndrome 3)",
+        "synonyms": [
+         "CFC3",
+         "cardiofaciocutaneous syndrome 3",
+         "MEK1",
+         "MAP2K1 cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in MAP2K1",
+         "cardiofaciocutaneous syndrome type 3"
+        ],
+        "summary": "Germline MAP2K1 (MEK1) changes cause cardiofaciocutaneous syndrome."
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "lymphatic disorders",
+      "declared_type": "phenotype",
+      "sentence": "Patients with RIT1 mutations frequently exhibit cardiovascular abnormalities such as hypertrophic cardiomyopathy and lymphatic disorders.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0012075",
+        "type": "phenotype",
+        "label": "Personality disorder",
+        "note": "HPO HP:0012075"
+       },
+       {
+        "id": "phenotype:HP:0007018",
+        "type": "phenotype",
+        "label": "Attention deficit hyperactivity disorder",
+        "note": "HPO HP:0007018"
+       },
+       {
+        "id": "phenotype:HP:0031842",
+        "type": "phenotype",
+        "label": "Lymphangiectasis",
+        "note": "HPO HP:0031842"
+       },
+       {
+        "id": "phenotype:HP:0001004",
+        "type": "phenotype",
+        "label": "Lymphedema",
+        "note": "HPO HP:0001004"
+       },
+       {
+        "id": "phenotype:HP:0006721",
+        "type": "phenotype",
+        "label": "Acute lymphoblastic leukemia",
+        "note": "HPO HP:0006721"
+       },
+       {
+        "id": "phenotype:HP:0012511",
+        "type": "phenotype",
+        "label": "Temporal optic disc pallor",
+        "note": "HPO HP:0012511"
+       },
+       {
+        "id": "phenotype:HP:0006889",
+        "type": "phenotype",
+        "label": "Borderline intellectual disability",
+        "note": "HPO HP:0006889"
+       },
+       {
+        "id": "phenotype:HP:0001659",
+        "type": "phenotype",
+        "label": "Aortic regurgitation",
+        "note": "HPO HP:0001659"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0009697",
+        "type": "phenotype",
+        "label": "Contracture of the distal interphalangeal joint of the fingers",
+        "note": "HPO HP:0009697"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "distinctive craniofacial features",
+      "declared_type": "phenotype",
+      "sentence": "BACKGROUND: Noonan syndrome is a congenital genetic disorder characterized by distinctive craniofacial features, short stature, and congenital heart disease.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000280",
+        "type": "phenotype",
+        "label": "Coarse facial features",
+        "note": "HPO HP:0000280"
+       },
+       {
+        "id": "phenotype:HP:0001041",
+        "type": "phenotype",
+        "label": "Facial erythema",
+        "note": "HPO HP:0001041"
+       },
+       {
+        "id": "phenotype:HP:0004442",
+        "type": "phenotype",
+        "label": "Sagittal craniosynostosis",
+        "note": "HPO HP:0004442"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       },
+       {
+        "id": "phenotype:HP:0001788",
+        "type": "phenotype",
+        "label": "Premature rupture of membranes",
+        "note": "HPO HP:0001788"
+       },
+       {
+        "id": "phenotype:HP:0002643",
+        "type": "phenotype",
+        "label": "Neonatal respiratory distress",
+        "note": "HPO HP:0002643"
+       },
+       {
+        "id": "phenotype:HP:0006979",
+        "type": "phenotype",
+        "label": "Sleep-wake cycle disturbance",
+        "note": "HPO HP:0006979"
+       },
+       {
+        "id": "phenotype:HP:0012760",
+        "type": "phenotype",
+        "label": "Reduced social responsiveness",
+        "note": "HPO HP:0012760"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "congenital heart disease",
+      "declared_type": "phenotype",
+      "sentence": "BACKGROUND: Noonan syndrome is a congenital genetic disorder characterized by distinctive craniofacial features, short stature, and congenital heart disease.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0005988",
+        "type": "phenotype",
+        "label": "Congenital muscular torticollis",
+        "note": "HPO HP:0005988"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0005684",
+        "type": "phenotype",
+        "label": "Distal arthrogryposis",
+        "note": "HPO HP:0005684"
+       },
+       {
+        "id": "phenotype:HP:0002421",
+        "type": "phenotype",
+        "label": "Poor head control",
+        "note": "HPO HP:0002421"
+       },
+       {
+        "id": "phenotype:HP:0009697",
+        "type": "phenotype",
+        "label": "Contracture of the distal interphalangeal joint of the fingers",
+        "note": "HPO HP:0009697"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0005655",
+        "type": "phenotype",
+        "label": "Multiple digital exostoses",
+        "note": "HPO HP:0005655"
+       },
+       {
+        "id": "phenotype:HP:0006579",
+        "type": "phenotype",
+        "label": "Prolonged neonatal jaundice",
+        "note": "HPO HP:0006579"
+       },
+       {
+        "id": "phenotype:HP:0002643",
+        "type": "phenotype",
+        "label": "Neonatal respiratory distress",
+        "note": "HPO HP:0002643"
+       },
+       {
+        "id": "phenotype:HP:0001288",
+        "type": "phenotype",
+        "label": "Gait disturbance",
+        "note": "HPO HP:0001288"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "Dysregulation of the RAS/mitogen-activated protein kinase (MAPK) pathway",
+      "declared_type": "mechanism",
+      "sentence": "Dysregulation of the RAS/mitogen-activated protein kinase (MAPK) pathway is a common molecular mechanism underlying the pathogenesis of these disorders.",
+      "candidates": [
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "MEK1/2",
+      "declared_type": "mechanism",
+      "sentence": "Maternal intraperitoneal injection of PD0325901, a MEK1/2 inhibitor, prevented cardiac hypertrophy in Rit1A57G/+ embryos.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:autophagy",
+        "type": "mechanism",
+        "label": "Autophagy",
+        "note": "kind: process",
+        "summary": "The cell's self-digestion pathway: material is wrapped in autophagosomes and delivered to lysosomes for breakdown."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Noonan syndrome\",\"node_id\":\"disease:RIT1\",\"match\":\"instance\",\"justification\":\"Noonan with RIT1 mutations (NS8)\"},{\"mention_id\":\"m2\",\"mention\":\"lymphatic disorders\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"specific lymphatic terms narrower\"},{\"mention_id\":\"m3\",\"mention\":\"distinctive craniofacial features\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no craniofacial term\"},{\"mention_id\":\"m4\",\"mention\":\"congenital heart disease\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no congenital heart term\"},{\"mention_id\":\"m5\",\"mention\":\"Dysregulation of the RAS/mitogen-activated protein kinase (MAPK) pathway\",\"node_id\":\"mech:ras-protein-signal-transduction\",\"match\":\"instance\",\"justification\":\"dysregulated RAS/MAPK signaling\"},{\"mention_id\":\"m6\",\"mention\":\"MEK1/2\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no MEK node\"}]}"
+  }
+ ]
+}

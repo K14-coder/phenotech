@@ -1,0 +1,109 @@
+{
+ "pmid": "32601904",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.581Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "234d24b89d727ff1",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/32601904.json",
+ "claims": [
+  {
+   "subject_mention": "Neurofibromatosis type 1 (NF1)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "café-au-lait maculae (CALM)",
+   "object_type": "phenotype",
+   "quote": "INTRODUCTION: Neurofibromatosis type 1 (NF1) is a frequent autosomal dominant disorder characterised by café-au-lait maculae (CALM), skinfold freckling, iris Lisch nodules and benign peripheral nerve sheath tumours (neurofibromas).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis type 1 (NF1)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "skinfold freckling",
+   "object_type": "phenotype",
+   "quote": "INTRODUCTION: Neurofibromatosis type 1 (NF1) is a frequent autosomal dominant disorder characterised by café-au-lait maculae (CALM), skinfold freckling, iris Lisch nodules and benign peripheral nerve sheath tumours (neurofibromas).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis type 1 (NF1)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "iris Lisch nodules",
+   "object_type": "phenotype",
+   "quote": "INTRODUCTION: Neurofibromatosis type 1 (NF1) is a frequent autosomal dominant disorder characterised by café-au-lait maculae (CALM), skinfold freckling, iris Lisch nodules and benign peripheral nerve sheath tumours (neurofibromas).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis type 1 (NF1)",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "benign peripheral nerve sheath tumours (neurofibromas)",
+   "object_type": "phenotype",
+   "quote": "INTRODUCTION: Neurofibromatosis type 1 (NF1) is a frequent autosomal dominant disorder characterised by café-au-lait maculae (CALM), skinfold freckling, iris Lisch nodules and benign peripheral nerve sheath tumours (neurofibromas).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "tumour suppression",
+   "object_type": "mechanism",
+   "quote": "MECHANISM: The NF1 gene is a tumour suppressor gene and NF1 individuals have an increased risk for a long list of tumours, all resulting from a second hit in the normal copy of the NF1 gene.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "second hit in the normal copy of the NF1 gene",
+   "object_type": "mechanism",
+   "quote": "MECHANISM: The NF1 gene is a tumour suppressor gene and NF1 individuals have an increased risk for a long list of tumours, all resulting from a second hit in the normal copy of the NF1 gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Germline mutations inactivating the NF1 gene",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "inactivating",
+   "object_type": "mechanism",
+   "quote": "Germline mutations inactivating the NF1 gene show a large variability in genetic mechanisms ranging from single-nucleotide substitutions and somatic mosaicism to large deletions affecting neighbouring genes.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MEK inhibitors",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "plexiform neurofibromas",
+   "object_type": "disease",
+   "quote": "In the last years, targeted therapy with MEK inhibitors has shown promise to treat unresectable and symptomatic plexiform neurofibromas.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "pmid": "29469822",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.566Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "99b91888226bf979",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/29469822.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Autosomal recessive Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Autosomal recessive Noonan syndrome associated with biallelic LZTR1 variants.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cardiac disease",
+   "object_type": "phenotype",
+   "quote": "The phenotypic range included mildly affected patients, but it was lethal in some, with cardiac disease and leukemia.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "leukemia",
+   "object_type": "phenotype",
+   "quote": "The phenotypic range included mildly affected patients, but it was lethal in some, with cardiac disease and leukemia.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Sequencing analyses of 21 live-born patients and a stillbirth identified biallelic pathogenic variants in LZTR1, including putative loss-of-function, missense, and canonical and noncanonical splicing variants in the affected children, with heterozygous, clinically unaffected parents and heterozygous or normal genotypes in unaffected siblings.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "CONCLUSION: These clinical and genetic data confirm the existence of a form of Noonan syndrome that is inherited in an autosomal recessive pattern and identify biallelic mutations in LZTR1.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "pmid": "41642117",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.633Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "3037d884172f3a8d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/41642117.json",
+ "claims": [
+  {
+   "subject_mention": "SCN2A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "epilepsy",
+   "object_type": "disease",
+   "quote": "OBJECTIVE: SCN2A loss-of-function (LoF) variants are associated with epilepsy (onset age ≥ 3 months), intellectual disability (ID), and autism spectrum disorder (ASD).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "intellectual disability (ID)",
+   "object_type": "disease",
+   "quote": "OBJECTIVE: SCN2A loss-of-function (LoF) variants are associated with epilepsy (onset age ≥ 3 months), intellectual disability (ID), and autism spectrum disorder (ASD).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autism spectrum disorder (ASD)",
+   "object_type": "disease",
+   "quote": "OBJECTIVE: SCN2A loss-of-function (LoF) variants are associated with epilepsy (onset age ≥ 3 months), intellectual disability (ID), and autism spectrum disorder (ASD).",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A L1650P",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "A novel LoF-associated phenotype-episodic ataxia with or without developmental delay or ID-was identified in five of six individuals with the L1650P variant.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "L1650P",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "episodic ataxia",
+   "object_type": "phenotype",
+   "quote": "A novel LoF-associated phenotype-episodic ataxia with or without developmental delay or ID-was identified in five of six individuals with the L1650P variant.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

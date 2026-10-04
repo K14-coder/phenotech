@@ -1,0 +1,85 @@
+{
+ "pmid": "42660282",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.651Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "90680b851091eb2e",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/42660282.json",
+ "claims": [
+  {
+   "subject_mention": "Tay-Sachs disease (TSD)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "neuronal GM2 ganglioside accumulation",
+   "object_type": "mechanism",
+   "quote": "Tay-Sachs disease (TSD) is a fatal lysosomal storage disorder characterized by neuronal GM2 ganglioside accumulation and progressive neurodegeneration.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Tay-Sachs disease (TSD)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Neuroinflammation",
+   "object_type": "mechanism",
+   "quote": "Neuroinflammation and oxidative stress are increasingly seen as key factors in disease progression.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Tay-Sachs disease (TSD)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "oxidative stress",
+   "object_type": "mechanism",
+   "quote": "Neuroinflammation and oxidative stress are increasingly seen as key factors in disease progression.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "istradefylline",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "TSD",
+   "object_type": "disease",
+   "quote": "In this study, we evaluated the effects of istradefylline, a selective adenosine A2A receptor antagonist, in the Hexa-/-Neu3-/- mouse model, which closely recapitulates the neuropathological features of human TSD.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "istradefylline",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "neuroinflammatory and glial alterations",
+   "object_type": "mechanism",
+   "quote": "Overall, istradefylline attenuated selected neuroinflammatory and glial alterations and modulated antioxidant-response markers in Hexa-/-Neu3-/- mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Istradefylline",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GM2 accumulation",
+   "object_type": "mechanism",
+   "quote": "Istradefylline did not substantially reduce GM2 accumulation or restore neuronal density, indicating that it did not correct the primary storage pathology or prevent associated neuronal loss.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": true
+  }
+ ]
+}

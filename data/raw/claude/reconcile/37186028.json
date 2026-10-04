@@ -1,0 +1,210 @@
+{
+ "pmid": "37186028",
+ "entries": {
+  "14c00818a5fcf9d2": {
+   "mention": "NF1 deep intronic variants flanking the alternatively spliced NF1 exon 31 [23a]",
+   "type": "variant_group",
+   "candidates": [
+    "vg:NF1:splice",
+    "vg:ARSA:splice",
+    "vg:BRAF:splice",
+    "vg:CACNA1A:splice",
+    "vg:CBL:splice",
+    "vg:CDKL5:splice",
+    "vg:CLN3:splice",
+    "vg:GAA:splice",
+    "vg:GALC:splice",
+    "vg:GBA1:splice"
+   ],
+   "node_id": "vg:NF1:splice",
+   "match": "instance",
+   "justification": "NF1 deep intronic splice-affecting variants",
+   "raw_node_id": "vg:NF1:splice",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.879Z"
+  },
+  "506a2b983ba22a4a": {
+   "mention": "altering predominantly NF1 isoform type II",
+   "type": "mechanism",
+   "candidates": [
+    "mech:dominant-negative",
+    "mech:synaptic-vesicle-priming",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:protein-destabilization",
+    "mech:tor-signaling",
+    "mech:haploinsufficiency",
+    "mech:sphingolipid-catabolism",
+    "mech:action-potential",
+    "mech:glycosaminoglycan-catabolism",
+    "mech:ca-triggered-exocytosis"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "isoform-specific effect, no matching candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.879Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.879Z",
+   "request_payload": {
+    "title": "Analysis of 200 unrelated individuals with a constitutional NF1 deep intronic pathogenic variant reveals that variants flanking the alternatively spliced NF1 exon 31 [23a] cause a classical neurofibromatosis type 1 phenotype while altering predominantly NF1 isoform type II.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "NF1 deep intronic variants flanking the alternatively spliced NF1 exon 31 [23a]",
+      "declared_type": "variant_group",
+      "sentence": "Analysis of 200 unrelated individuals with a constitutional NF1 deep intronic pathogenic variant reveals that variants flanking the alternatively spliced NF1 exon 31 [23a] cause a classical neurofibromatosis type 1 phenotype while altering predominantly NF1 isoform type II.",
+      "candidates": [
+       {
+        "id": "vg:NF1:splice",
+        "type": "variant_group",
+        "label": "NF1: Splice-site variants",
+        "summary": "909 of 5978 pathogenic or likely-pathogenic ClinVar records for NF1 fall in this group."
+       },
+       {
+        "id": "vg:ARSA:splice",
+        "type": "variant_group",
+        "label": "ARSA: Splice-site variants",
+        "summary": "37 of 530 pathogenic or likely-pathogenic ClinVar records for ARSA fall in this group."
+       },
+       {
+        "id": "vg:BRAF:splice",
+        "type": "variant_group",
+        "label": "BRAF: Splice-site variants",
+        "summary": "1 of 180 pathogenic or likely-pathogenic ClinVar records for BRAF fall in this group."
+       },
+       {
+        "id": "vg:CACNA1A:splice",
+        "type": "variant_group",
+        "label": "CACNA1A: Splice-site variants",
+        "summary": "84 of 652 pathogenic/likely-pathogenic ClinVar records for CACNA1A fall in this group."
+       },
+       {
+        "id": "vg:CBL:splice",
+        "type": "variant_group",
+        "label": "CBL: Splice-site variants",
+        "summary": "11 of 69 pathogenic or likely-pathogenic ClinVar records for CBL fall in this group."
+       },
+       {
+        "id": "vg:CDKL5:splice",
+        "type": "variant_group",
+        "label": "CDKL5: Splice-site variants",
+        "summary": "75 of 881 pathogenic/likely-pathogenic ClinVar records for CDKL5 fall in this group."
+       },
+       {
+        "id": "vg:CLN3:splice",
+        "type": "variant_group",
+        "label": "CLN3: Splice-site variants",
+        "summary": "74 of 328 pathogenic or likely-pathogenic ClinVar records for CLN3 fall in this group."
+       },
+       {
+        "id": "vg:GAA:splice",
+        "type": "variant_group",
+        "label": "GAA: Splice-site variants",
+        "summary": "129 of 898 pathogenic or likely-pathogenic ClinVar records for GAA fall in this group."
+       },
+       {
+        "id": "vg:GALC:splice",
+        "type": "variant_group",
+        "label": "GALC: Splice-site variants",
+        "summary": "64 of 436 pathogenic or likely-pathogenic ClinVar records for GALC fall in this group."
+       },
+       {
+        "id": "vg:GBA1:splice",
+        "type": "variant_group",
+        "label": "GBA1: Splice-site variants",
+        "summary": "46 of 385 pathogenic or likely-pathogenic ClinVar records for GBA1 fall in this group."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "altering predominantly NF1 isoform type II",
+      "declared_type": "mechanism",
+      "sentence": "Analysis of 200 unrelated individuals with a constitutional NF1 deep intronic pathogenic variant reveals that variants flanking the alternatively spliced NF1 exon 31 [23a] cause a classical neurofibromatosis type 1 phenotype while altering predominantly NF1 isoform type II.",
+      "candidates": [
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"NF1 deep intronic variants flanking the alternatively spliced NF1 exon 31 [23a]\",\"node_id\":\"vg:NF1:splice\",\"match\":\"instance\",\"justification\":\"NF1 deep intronic splice-affecting variants\"},{\"mention_id\":\"m2\",\"mention\":\"altering predominantly NF1 isoform type II\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"isoform-specific effect, no matching candidate\"}]}"
+  }
+ ]
+}

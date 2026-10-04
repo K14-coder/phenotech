@@ -1,0 +1,200 @@
+{
+ "pmid": "35429480",
+ "entries": {
+  "0fe1fad79b99c696": {
+   "mention": "severe global developmental impairment",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011344",
+    "phenotype:HP:0001263",
+    "phenotype:HP:0011343",
+    "phenotype:HP:0012736",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0000365",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0006520"
+   ],
+   "node_id": "phenotype:HP:0011344",
+   "match": "same",
+   "justification": "Severe global developmental delay",
+   "raw_node_id": "phenotype:HP:0011344",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.805Z"
+  },
+  "5e2a08a6c31e52c7": {
+   "mention": "treatment-refractory seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001250",
+    "phenotype:HP:0031165",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0020221",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0011153",
+    "phenotype:HP:0020208",
+    "phenotype:HP:0002349",
+    "phenotype:HP:0007359"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "instance",
+   "justification": "Refractory seizures",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.805Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.805Z",
+   "request_payload": {
+    "title": "Safety and efficacy of ganaxolone in patients with CDKL5 deficiency disorder: results from the double-blind phase of a randomised, placebo-controlled, phase 3 trial.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "severe global developmental impairment",
+      "declared_type": "phenotype",
+      "sentence": "BACKGROUND: CDKL5 deficiency disorder (CDD) is a rare, X-linked, developmental and epileptic encephalopathy characterised by severe global developmental impairment and seizures that can begin in the first few months after birth and are often treatment refractory.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0011343",
+        "type": "phenotype",
+        "label": "Moderate global developmental delay",
+        "note": "HPO HP:0011343"
+       },
+       {
+        "id": "phenotype:HP:0012736",
+        "type": "phenotype",
+        "label": "Profound global developmental delay",
+        "note": "HPO HP:0012736"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "treatment-refractory seizures",
+      "declared_type": "phenotype",
+      "sentence": "BACKGROUND: CDKL5 deficiency disorder (CDD) is a rare, X-linked, developmental and epileptic encephalopathy characterised by severe global developmental impairment and seizures that can begin in the first few months after birth and are often treatment refractory.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0020221",
+        "type": "phenotype",
+        "label": "Clonic seizure",
+        "note": "HPO HP:0020221"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0020208",
+        "type": "phenotype",
+        "label": "Eating-induced seizure",
+        "note": "HPO HP:0020208"
+       },
+       {
+        "id": "phenotype:HP:0002349",
+        "type": "phenotype",
+        "label": "Focal aware seizure",
+        "note": "HPO HP:0002349"
+       },
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"severe global developmental impairment\",\"node_id\":\"phenotype:HP:0011344\",\"match\":\"same\",\"justification\":\"Severe global developmental delay\"},{\"mention_id\":\"m2\",\"mention\":\"treatment-refractory seizures\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"instance\",\"justification\":\"Refractory seizures\"}]}"
+  }
+ ]
+}

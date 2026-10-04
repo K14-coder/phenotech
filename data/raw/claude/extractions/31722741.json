@@ -1,0 +1,73 @@
+{
+ "pmid": "31722741",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.578Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1da8b8df4dc9e441",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/31722741.json",
+ "claims": [
+  {
+   "subject_mention": "rapamycin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "mTOR pathway",
+   "object_type": "mechanism",
+   "quote": "BACKGROUND: Animal studies suggested that blocking the activation of the mammalian target of rapamycin (mTOR) pathway might be effective to treat cardiac hypertrophy in LEOPARD syndrome (LS) caused by PTPN11 mutations.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "speculative",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "LEOPARD syndrome",
+   "object_type": "disease",
+   "quote": "BACKGROUND: Animal studies suggested that blocking the activation of the mammalian target of rapamycin (mTOR) pathway might be effective to treat cardiac hypertrophy in LEOPARD syndrome (LS) caused by PTPN11 mutations.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11 p.Y279C",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "LS",
+   "object_type": "disease",
+   "quote": "The two patients with LS had p.Y279C and p.T468 M mutations of the PTPN11 gene, respectively.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "attenuated mTOR complex 1 pathway activity",
+   "object_type": "mechanism",
+   "quote": "Although PTPN11 mutation showed initially positive regulation on phosphoinositide 3-kinase, overall the mTOR complex 1 pathway showed widely attenuated activity in LS.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "attenuated mTOR signaling",
+   "object_type": "mechanism",
+   "quote": "CONCLUSIONS: In LS, the mTOR signaling pathway shows similar activity to HCM and is attenuated compared with normal controls.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

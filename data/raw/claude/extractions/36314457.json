@@ -1,0 +1,49 @@
+{
+ "pmid": "36314457",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.602Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "ea11ac5612ff3e9c",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/36314457.json",
+ "claims": [
+  {
+   "subject_mention": "phenytoin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "We describe four patients with Dravet syndrome in whom long-term phenytoin therapy reduced seizure frequency and duration.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "phenytoin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "Reintroducing phenytoin improved seizure control, suggesting phenytoin is beneficial in some patients with Dravet syndrome.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Dravet syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "status epilepticus",
+   "object_type": "phenotype",
+   "quote": "There is, however, considerable debate about the sodium-channel blocker phenytoin, which is often used for status epilepticus, a frequent feature of Dravet syndrome.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

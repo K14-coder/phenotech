@@ -1,0 +1,121 @@
+{
+ "pmid": "29726066",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.566Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "c110308b6d4499fb",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/29726066.json",
+ "claims": [
+  {
+   "subject_mention": "familial isolated myoclonus",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "partial loss-of-function of sodium channel SCN8A",
+   "object_type": "mechanism",
+   "quote": "Partial loss-of-function of sodium channel SCN8A in familial isolated myoclonus.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "familial isolated myoclonus",
+   "object_type": "disease",
+   "quote": "Partial loss-of-function of sodium channel SCN8A in familial isolated myoclonus.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A p.Pro1719Arg",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "greatly reduced Nav 1.6 channel activity",
+   "object_type": "mechanism",
+   "quote": "Functional analysis of the p.Pro1719Arg variant in transfected neuron-derived cells demonstrated greatly reduced Nav 1.6 channel activity without altered gating properties.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Early infantile epileptic encephalopathy type 13",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "de novo gain-of-function mutations",
+   "object_type": "mechanism",
+   "quote": "Early infantile epileptic encephalopathy type 13 results from de novo gain-of-function mutations that alter the biophysical properties of the channel.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "isolated intellectual disability",
+   "object_type": "disease",
+   "quote": "Complete loss-of-function variants of SCN8A have been identified in cases of isolated intellectual disability.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "upper limb isolated myoclonus",
+   "object_type": "phenotype",
+   "quote": "We now report a novel heterozygous SCN8A variant, p.Pro1719Arg, in a small pedigree with five family members affected with autosomal dominant upper limb isolated myoclonus without seizures or cognitive impairment.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "seizures",
+   "object_type": "phenotype",
+   "quote": "We now report a novel heterozygous SCN8A variant, p.Pro1719Arg, in a small pedigree with five family members affected with autosomal dominant upper limb isolated myoclonus without seizures or cognitive impairment.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cognitive impairment",
+   "object_type": "phenotype",
+   "quote": "We now report a novel heterozygous SCN8A variant, p.Pro1719Arg, in a small pedigree with five family members affected with autosomal dominant upper limb isolated myoclonus without seizures or cognitive impairment.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "SCN8A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "inherited nonepileptic isolated myoclonus",
+   "object_type": "disease",
+   "quote": "This study expands the phenotypic and functional spectrum of SCN8A variants to include inherited nonepileptic isolated myoclonus.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

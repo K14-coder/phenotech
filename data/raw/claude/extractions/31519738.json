@@ -1,0 +1,109 @@
+{
+ "pmid": "31519738",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.576Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "ca09a268f953472c",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/31519738.json",
+ "claims": [
+  {
+   "subject_mention": "GBA1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Gaucher's disease",
+   "object_type": "disease",
+   "quote": "Bi-allelic GBA1 mutations cause Gaucher's disease (GD), the most common lysosomal storage disorder.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "neurodegeneration",
+   "object_type": "phenotype",
+   "quote": "Neuronopathic manifestations in GD include neurodegeneration, which can be severe and rapidly progressive.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "GBA1-associated neurodegeneration",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "dysfunction of the autophagy-lysosomal pathway",
+   "object_type": "mechanism",
+   "quote": "Dysfunction of the autophagy-lysosomal pathway represents a key pathogenic event in GBA1-associated neurodegeneration.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher's disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "mTOR hyperactivity",
+   "object_type": "mechanism",
+   "quote": "mTOR hyperactivity mediates lysosomal dysfunction in Gaucher's disease iPSC-neuronal cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TFEB",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "coordinated expression of autophagy and lysosomal genes",
+   "object_type": "mechanism",
+   "quote": "TFEB controls the coordinated expression of autophagy and lysosomal genes and is negatively regulated by the mammalian target of rapamycin complex 1 (mTORC1).",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pharmacological inhibition of glucosylceramide synthase enzyme",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "mTORC1 hyperactivation",
+   "object_type": "mechanism",
+   "quote": "We also found that pharmacological inhibition of glucosylceramide synthase enzyme reversed mTORC1 hyperactivation, suggesting that increased mTORC1 activity is mediated by the abnormal accumulation of glycosphingolipids in the mutant cells.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Torin1",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "mTOR hyperactivation",
+   "object_type": "mechanism",
+   "quote": "Treatment with the mTOR inhibitor Torin1 upregulated lysosomal biogenesis and enhanced autophagic clearance in GD neurons, confirming that lysosomal dysfunction is mediated by mTOR hyperactivation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Torin1",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "GD",
+   "object_type": "disease",
+   "quote": "Treatment with the mTOR inhibitor Torin1 upregulated lysosomal biogenesis and enhanced autophagic clearance in GD neurons, confirming that lysosomal dysfunction is mediated by mTOR hyperactivation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

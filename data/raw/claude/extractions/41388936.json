@@ -1,0 +1,121 @@
+{
+ "pmid": "41388936",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.629Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "4d02317c89f3bc08",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/41388936.json",
+ "claims": [
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Germline mutations in RIT1 have also been identified in patients with Noonan syndrome.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hypertrophic cardiomyopathy",
+   "object_type": "phenotype",
+   "quote": "Patients with RIT1 mutations frequently exhibit cardiovascular abnormalities such as hypertrophic cardiomyopathy and lymphatic disorders.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "lymphatic disorders",
+   "object_type": "phenotype",
+   "quote": "Patients with RIT1 mutations frequently exhibit cardiovascular abnormalities such as hypertrophic cardiomyopathy and lymphatic disorders.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "distinctive craniofacial features",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: Noonan syndrome is a congenital genetic disorder characterized by distinctive craniofacial features, short stature, and congenital heart disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "short stature",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: Noonan syndrome is a congenital genetic disorder characterized by distinctive craniofacial features, short stature, and congenital heart disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "congenital heart disease",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: Noonan syndrome is a congenital genetic disorder characterized by distinctive craniofacial features, short stature, and congenital heart disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Dysregulation of the RAS/mitogen-activated protein kinase (MAPK) pathway",
+   "object_type": "mechanism",
+   "quote": "Dysregulation of the RAS/mitogen-activated protein kinase (MAPK) pathway is a common molecular mechanism underlying the pathogenesis of these disorders.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PD0325901",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan Syndrome",
+   "object_type": "disease",
+   "quote": "Maternal intraperitoneal injection of PD0325901, a MEK1/2 inhibitor, prevented cardiac hypertrophy in Rit1A57G/+ embryos.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PD0325901",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "MEK1/2",
+   "object_type": "mechanism",
+   "quote": "Maternal intraperitoneal injection of PD0325901, a MEK1/2 inhibitor, prevented cardiac hypertrophy in Rit1A57G/+ embryos.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

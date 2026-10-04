@@ -1,0 +1,109 @@
+{
+ "pmid": "38148154",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.606Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "00ab994d49edaf7d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/38148154.json",
+ "claims": [
+  {
+   "subject_mention": "SCN2A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "developmental and epileptic encephalopathies (DEE)",
+   "object_type": "disease",
+   "quote": "SCN2A encodes NaV1.2, an excitatory neuron voltage-gated sodium channel and a major monogenic cause of neurodevelopmental disorders, including developmental and epileptic encephalopathies (DEE) and autism.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autism",
+   "object_type": "disease",
+   "quote": "SCN2A encodes NaV1.2, an excitatory neuron voltage-gated sodium channel and a major monogenic cause of neurodevelopmental disorders, including developmental and epileptic encephalopathies (DEE) and autism.",
+   "study_type": "functional_study",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A GoF",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pre- or peri-natal seizures",
+   "object_type": "phenotype",
+   "quote": "Clinical presentation and pharmocosensitivity vary with the nature of SCN2A variant dysfunction and can be divided into gain-of-function (GoF) cases with pre- or peri-natal seizures and loss-of-function (LoF) patients typically having infantile spasms after 6 months of age.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A LoF",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "infantile spasms after 6 months of age",
+   "object_type": "phenotype",
+   "quote": "Clinical presentation and pharmocosensitivity vary with the nature of SCN2A variant dysfunction and can be divided into gain-of-function (GoF) cases with pre- or peri-natal seizures and loss-of-function (LoF) patients typically having infantile spasms after 6 months of age.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A R1882Q",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "We established and assessed patient induced pluripotent stem cell (iPSC) - derived neuronal models for two recurrent SCN2A DEE variants with GoF R1882Q and LoF R853Q associated with early- and late-onset DEE, respectively.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SCN2A R853Q",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "We established and assessed patient induced pluripotent stem cell (iPSC) - derived neuronal models for two recurrent SCN2A DEE variants with GoF R1882Q and LoF R853Q associated with early- and late-onset DEE, respectively.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "phenytoin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "neuronal excitability in R1882Q neurons",
+   "object_type": "mechanism",
+   "quote": "Consistent with the reported efficacy in some GoF SCN2A patients, phenytoin (sodium channel blocker) reduced the excitability of neurons to the control levels in R1882Q neuronal cultures.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "phenytoin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "GoF SCN2A",
+   "object_type": "disease",
+   "quote": "Consistent with the reported efficacy in some GoF SCN2A patients, phenytoin (sodium channel blocker) reduced the excitability of neurons to the control levels in R1882Q neuronal cultures.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

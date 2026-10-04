@@ -1,0 +1,49 @@
+{
+ "pmid": "9596203",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.655Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "55582c7b7e303a14",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/9596203.json",
+ "claims": [
+  {
+   "subject_mention": "SME",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "drug-resistant focal and generalized seizure types",
+   "object_type": "phenotype",
+   "quote": "In severe myoclonic epilepsy of infancy (SME), multiple drug-resistant focal and generalized seizure types occur.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LTG",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "SME",
+   "object_type": "disease",
+   "quote": "LTG treatment seems inappropriate in SME.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": true
+  },
+  {
+   "subject_mention": "SME",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "Myoclonic seizures",
+   "object_type": "phenotype",
+   "quote": "Myoclonic seizures worsened in six (33%) of 18 patients.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

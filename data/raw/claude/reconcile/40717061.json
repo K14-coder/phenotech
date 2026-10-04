@@ -1,0 +1,200 @@
+{
+ "pmid": "40717061",
+ "entries": {
+  "202871b2f02bd7fd": {
+   "mention": "interstitial lung disease-like pulmonary involvement",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0006520",
+    "phenotype:HP:0006510",
+    "phenotype:HP:0007704",
+    "phenotype:HP:0001558",
+    "phenotype:HP:0006610",
+    "phenotype:HP:0009697",
+    "phenotype:HP:0002074",
+    "phenotype:HP:0001249",
+    "phenotype:HP:0003463",
+    "phenotype:HP:0004879"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "ILD-like pulmonary involvement not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.831Z"
+  },
+  "21c5ec8b3af5ab43": {
+   "mention": "decreased DLCO",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001558",
+    "phenotype:HP:0012695",
+    "phenotype:HP:0034203",
+    "phenotype:HP:0000762",
+    "phenotype:HP:0003656",
+    "phenotype:HP:0034300",
+    "phenotype:HP:0034864",
+    "phenotype:HP:0033383",
+    "phenotype:HP:0006191",
+    "phenotype:HP:0001869"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Decreased DLCO not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.831Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.831Z",
+   "request_payload": {
+    "title": "Exploring Exhaled Breath Analysis in Adults With Chronic Visceral Acid Sphingomyelinase Deficiency to Identify Potential Biomarkers of Pulmonary Involvement.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "interstitial lung disease-like pulmonary involvement",
+      "declared_type": "phenotype",
+      "sentence": "Pulmonary involvement resembles interstitial lung disease and often leads to decreased diffusion capacity of the lungs for carbon monoxide (DLCO).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0006510",
+        "type": "phenotype",
+        "label": "Chronic pulmonary obstruction",
+        "note": "HPO HP:0006510"
+       },
+       {
+        "id": "phenotype:HP:0007704",
+        "type": "phenotype",
+        "label": "Paroxysmal involuntary eye movements",
+        "note": "HPO HP:0007704"
+       },
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0006610",
+        "type": "phenotype",
+        "label": "Wide intermamillary distance",
+        "note": "HPO HP:0006610"
+       },
+       {
+        "id": "phenotype:HP:0009697",
+        "type": "phenotype",
+        "label": "Contracture of the distal interphalangeal joint of the fingers",
+        "note": "HPO HP:0009697"
+       },
+       {
+        "id": "phenotype:HP:0002074",
+        "type": "phenotype",
+        "label": "Increased neuronal autofluorescent lipopigment",
+        "note": "HPO HP:0002074"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       },
+       {
+        "id": "phenotype:HP:0003463",
+        "type": "phenotype",
+        "label": "Increased extraneuronal autofluorescent lipopigment",
+        "note": "HPO HP:0003463"
+       },
+       {
+        "id": "phenotype:HP:0004879",
+        "type": "phenotype",
+        "label": "Intermittent hyperventilation",
+        "note": "HPO HP:0004879"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "decreased DLCO",
+      "declared_type": "phenotype",
+      "sentence": "Pulmonary involvement resembles interstitial lung disease and often leads to decreased diffusion capacity of the lungs for carbon monoxide (DLCO).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001558",
+        "type": "phenotype",
+        "label": "Decreased fetal movement",
+        "note": "HPO HP:0001558"
+       },
+       {
+        "id": "phenotype:HP:0012695",
+        "type": "phenotype",
+        "label": "Decreased thalamic volume",
+        "note": "HPO HP:0012695"
+       },
+       {
+        "id": "phenotype:HP:0034203",
+        "type": "phenotype",
+        "label": "Decreased iduronate sulfatase level",
+        "note": "HPO HP:0034203"
+       },
+       {
+        "id": "phenotype:HP:0000762",
+        "type": "phenotype",
+        "label": "Decreased nerve conduction velocity",
+        "note": "HPO HP:0000762"
+       },
+       {
+        "id": "phenotype:HP:0003656",
+        "type": "phenotype",
+        "label": "Decreased beta-glucocerebrosidase level",
+        "note": "HPO HP:0003656"
+       },
+       {
+        "id": "phenotype:HP:0034300",
+        "type": "phenotype",
+        "label": "Decreased acid sphingomyelinase activity",
+        "note": "HPO HP:0034300"
+       },
+       {
+        "id": "phenotype:HP:0034864",
+        "type": "phenotype",
+        "label": "Decreased alpha-galactosidase A activity",
+        "note": "HPO HP:0034864"
+       },
+       {
+        "id": "phenotype:HP:0033383",
+        "type": "phenotype",
+        "label": "Decreased compound muscle action potential amplitude",
+        "note": "HPO HP:0033383"
+       },
+       {
+        "id": "phenotype:HP:0006191",
+        "type": "phenotype",
+        "label": "Deep palmar crease",
+        "note": "HPO HP:0006191"
+       },
+       {
+        "id": "phenotype:HP:0001869",
+        "type": "phenotype",
+        "label": "Deep plantar creases",
+        "note": "HPO HP:0001869"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"interstitial lung disease-like pulmonary involvement\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"ILD-like pulmonary involvement not among candidates\"},{\"mention_id\":\"m2\",\"mention\":\"decreased DLCO\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Decreased DLCO not among candidates\"}]}"
+  }
+ ]
+}

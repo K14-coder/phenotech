@@ -1,0 +1,473 @@
+{
+ "pmid": "16170316",
+ "entries": {
+  "5acefd6f91f3d20e": {
+   "mention": "coarse face",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000280",
+    "phenotype:HP:0001041",
+    "phenotype:HP:0025680",
+    "phenotype:HP:0001308",
+    "phenotype:HP:0006380",
+    "phenotype:HP:0001929",
+    "phenotype:HP:0006466",
+    "phenotype:HP:0004841",
+    "phenotype:HP:0003125",
+    "phenotype:HP:0008357"
+   ],
+   "node_id": "phenotype:HP:0000280",
+   "match": "same",
+   "justification": "Coarse face = coarse facial features",
+   "raw_node_id": "phenotype:HP:0000280",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.846Z"
+  },
+  "abb7e685c326be8c": {
+   "mention": "loose skin",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0000974",
+    "phenotype:HP:0040169",
+    "phenotype:HP:0007549",
+    "phenotype:HP:0100660",
+    "phenotype:HP:0000414",
+    "phenotype:HP:0007166",
+    "phenotype:HP:0007308",
+    "phenotype:HP:0001816",
+    "phenotype:HP:0046505",
+    "phenotype:HP:0012532"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Loose skin is not hyperextensible skin",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.846Z"
+  },
+  "68f9b1fd1c5b0187": {
+   "mention": "cardiomyopathy",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001639",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0000741",
+    "phenotype:HP:0007105",
+    "phenotype:HP:0200134",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0003445",
+    "phenotype:HP:0002859",
+    "phenotype:HP:0002862",
+    "phenotype:HP:0002756"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Cardiomyopathy broader than hypertrophic cardiomyopathy",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.846Z"
+  },
+  "f51c9528f1a5f049": {
+   "mention": "predisposition to tumors",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010302",
+    "phenotype:HP:0002540",
+    "phenotype:HP:0025336",
+    "phenotype:HP:0100697",
+    "phenotype:HP:0031936",
+    "phenotype:HP:0025335",
+    "phenotype:HP:0012796",
+    "phenotype:HP:0003403",
+    "phenotype:HP:0006915",
+    "phenotype:HP:0005946"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Tumor predisposition not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.846Z"
+  },
+  "539ce60f628c25dc": {
+   "mention": "mental retardation",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001268",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0000546",
+    "phenotype:HP:0001653",
+    "phenotype:HP:0000073",
+    "phenotype:HP:0002883",
+    "phenotype:HP:0002835",
+    "phenotype:HP:0030147",
+    "phenotype:HP:0001659"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No intellectual disability candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.846Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.846Z",
+   "request_payload": {
+    "title": "Germline mutations in HRAS proto-oncogene cause Costello syndrome.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "coarse face",
+      "declared_type": "phenotype",
+      "sentence": "Costello syndrome is a multiple congenital anomaly and mental retardation syndrome characterized by coarse face, loose skin, cardiomyopathy and predisposition to tumors.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000280",
+        "type": "phenotype",
+        "label": "Coarse facial features",
+        "note": "HPO HP:0000280"
+       },
+       {
+        "id": "phenotype:HP:0001041",
+        "type": "phenotype",
+        "label": "Facial erythema",
+        "note": "HPO HP:0001041"
+       },
+       {
+        "id": "phenotype:HP:0025680",
+        "type": "phenotype",
+        "label": "Compound muscle action potential amplitude facilitation",
+        "note": "HPO HP:0025680"
+       },
+       {
+        "id": "phenotype:HP:0001308",
+        "type": "phenotype",
+        "label": "Tongue fasciculations",
+        "note": "HPO HP:0001308"
+       },
+       {
+        "id": "phenotype:HP:0006380",
+        "type": "phenotype",
+        "label": "Knee flexion contracture",
+        "note": "HPO HP:0006380"
+       },
+       {
+        "id": "phenotype:HP:0001929",
+        "type": "phenotype",
+        "label": "Reduced factor XI activity",
+        "note": "HPO HP:0001929"
+       },
+       {
+        "id": "phenotype:HP:0006466",
+        "type": "phenotype",
+        "label": "Ankle flexion contracture",
+        "note": "HPO HP:0006466"
+       },
+       {
+        "id": "phenotype:HP:0004841",
+        "type": "phenotype",
+        "label": "Reduced factor XII activity",
+        "note": "HPO HP:0004841"
+       },
+       {
+        "id": "phenotype:HP:0003125",
+        "type": "phenotype",
+        "label": "Reduced factor VIII activity",
+        "note": "HPO HP:0003125"
+       },
+       {
+        "id": "phenotype:HP:0008357",
+        "type": "phenotype",
+        "label": "Reduced factor XIII activity",
+        "note": "HPO HP:0008357"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "loose skin",
+      "declared_type": "phenotype",
+      "sentence": "Costello syndrome is a multiple congenital anomaly and mental retardation syndrome characterized by coarse face, loose skin, cardiomyopathy and predisposition to tumors.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0000974",
+        "type": "phenotype",
+        "label": "Hyperextensible skin",
+        "note": "HPO HP:0000974"
+       },
+       {
+        "id": "phenotype:HP:0040169",
+        "type": "phenotype",
+        "label": "Loose anagen hair",
+        "note": "HPO HP:0040169"
+       },
+       {
+        "id": "phenotype:HP:0007549",
+        "type": "phenotype",
+        "label": "Desquamation of skin soon after birth",
+        "note": "HPO HP:0007549"
+       },
+       {
+        "id": "phenotype:HP:0100660",
+        "type": "phenotype",
+        "label": "Dyskinesia",
+        "note": "HPO HP:0100660"
+       },
+       {
+        "id": "phenotype:HP:0000414",
+        "type": "phenotype",
+        "label": "Bulbous nose",
+        "note": "HPO HP:0000414"
+       },
+       {
+        "id": "phenotype:HP:0007166",
+        "type": "phenotype",
+        "label": "Paroxysmal dyskinesia",
+        "note": "HPO HP:0007166"
+       },
+       {
+        "id": "phenotype:HP:0007308",
+        "type": "phenotype",
+        "label": "Extrapyramidal dyskinesia",
+        "note": "HPO HP:0007308"
+       },
+       {
+        "id": "phenotype:HP:0001816",
+        "type": "phenotype",
+        "label": "Thin nail",
+        "note": "HPO HP:0001816"
+       },
+       {
+        "id": "phenotype:HP:0046505",
+        "type": "phenotype",
+        "label": "Hand pain",
+        "note": "HPO HP:0046505"
+       },
+       {
+        "id": "phenotype:HP:0012532",
+        "type": "phenotype",
+        "label": "Chronic pain",
+        "note": "HPO HP:0012532"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "cardiomyopathy",
+      "declared_type": "phenotype",
+      "sentence": "Costello syndrome is a multiple congenital anomaly and mental retardation syndrome characterized by coarse face, loose skin, cardiomyopathy and predisposition to tumors.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0000741",
+        "type": "phenotype",
+        "label": "Apathy",
+        "note": "HPO HP:0000741"
+       },
+       {
+        "id": "phenotype:HP:0007105",
+        "type": "phenotype",
+        "label": "Infantile encephalopathy",
+        "note": "HPO HP:0007105"
+       },
+       {
+        "id": "phenotype:HP:0200134",
+        "type": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "note": "HPO HP:0200134"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0003445",
+        "type": "phenotype",
+        "label": "EMG: neuropathic changes",
+        "note": "HPO HP:0003445"
+       },
+       {
+        "id": "phenotype:HP:0002859",
+        "type": "phenotype",
+        "label": "Rhabdomyosarcoma",
+        "note": "HPO HP:0002859"
+       },
+       {
+        "id": "phenotype:HP:0002862",
+        "type": "phenotype",
+        "label": "Bladder carcinoma",
+        "note": "HPO HP:0002862"
+       },
+       {
+        "id": "phenotype:HP:0002756",
+        "type": "phenotype",
+        "label": "Pathologic fracture",
+        "note": "HPO HP:0002756"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "predisposition to tumors",
+      "declared_type": "phenotype",
+      "sentence": "Costello syndrome is a multiple congenital anomaly and mental retardation syndrome characterized by coarse face, loose skin, cardiomyopathy and predisposition to tumors.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010302",
+        "type": "phenotype",
+        "label": "Spinal cord tumor",
+        "note": "HPO HP:0010302"
+       },
+       {
+        "id": "phenotype:HP:0002540",
+        "type": "phenotype",
+        "label": "Inability to walk",
+        "note": "HPO HP:0002540"
+       },
+       {
+        "id": "phenotype:HP:0025336",
+        "type": "phenotype",
+        "label": "Delayed ability to sit",
+        "note": "HPO HP:0025336"
+       },
+       {
+        "id": "phenotype:HP:0100697",
+        "type": "phenotype",
+        "label": "Malignant peripheral nerve sheath tumor",
+        "note": "HPO HP:0100697"
+       },
+       {
+        "id": "phenotype:HP:0031936",
+        "type": "phenotype",
+        "label": "Delayed ability to walk",
+        "note": "HPO HP:0031936"
+       },
+       {
+        "id": "phenotype:HP:0025335",
+        "type": "phenotype",
+        "label": "Delayed ability to stand",
+        "note": "HPO HP:0025335"
+       },
+       {
+        "id": "phenotype:HP:0012796",
+        "type": "phenotype",
+        "label": "Increased cup-to-disc ratio",
+        "note": "HPO HP:0012796"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       },
+       {
+        "id": "phenotype:HP:0006915",
+        "type": "phenotype",
+        "label": "Inability to walk by childhood/adolescence",
+        "note": "HPO HP:0006915"
+       },
+       {
+        "id": "phenotype:HP:0005946",
+        "type": "phenotype",
+        "label": "Ventilator dependence with inability to wean",
+        "note": "HPO HP:0005946"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "mental retardation",
+      "declared_type": "phenotype",
+      "sentence": "Costello syndrome is a multiple congenital anomaly and mental retardation syndrome characterized by coarse face, loose skin, cardiomyopathy and predisposition to tumors.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001268",
+        "type": "phenotype",
+        "label": "Mental deterioration",
+        "note": "HPO HP:0001268"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       },
+       {
+        "id": "phenotype:HP:0001653",
+        "type": "phenotype",
+        "label": "Mitral regurgitation",
+        "note": "HPO HP:0001653"
+       },
+       {
+        "id": "phenotype:HP:0000073",
+        "type": "phenotype",
+        "label": "Ureteral duplication",
+        "note": "HPO HP:0000073"
+       },
+       {
+        "id": "phenotype:HP:0002883",
+        "type": "phenotype",
+        "label": "Hyperventilation",
+        "note": "HPO HP:0002883"
+       },
+       {
+        "id": "phenotype:HP:0002835",
+        "type": "phenotype",
+        "label": "Aspiration",
+        "note": "HPO HP:0002835"
+       },
+       {
+        "id": "phenotype:HP:0030147",
+        "type": "phenotype",
+        "label": "Truncal titubation",
+        "note": "HPO HP:0030147"
+       },
+       {
+        "id": "phenotype:HP:0001659",
+        "type": "phenotype",
+        "label": "Aortic regurgitation",
+        "note": "HPO HP:0001659"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"coarse face\",\"node_id\":\"phenotype:HP:0000280\",\"match\":\"same\",\"justification\":\"Coarse face = coarse facial features\"},{\"mention_id\":\"m2\",\"mention\":\"loose skin\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Loose skin is not hyperextensible skin\"},{\"mention_id\":\"m3\",\"mention\":\"cardiomyopathy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Cardiomyopathy broader than hypertrophic cardiomyopathy\"},{\"mention_id\":\"m4\",\"mention\":\"predisposition to tumors\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Tumor predisposition not among candidates\"},{\"mention_id\":\"m5\",\"mention\":\"mental retardation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No intellectual disability candidate\"}]}"
+  }
+ ]
+}

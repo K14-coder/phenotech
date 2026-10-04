@@ -1,0 +1,938 @@
+{
+ "pmid": "27491217",
+ "entries": {
+  "1ff857c5aa2ca750": {
+   "mention": "deficiency in the lysosomal enzyme galactocerebrosidase (GALC)",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:lysosomal-storage",
+    "mech:lysosomal-protein-catabolism",
+    "mech:haploinsufficiency",
+    "mech:lysosome-organization",
+    "mech:dominant-negative",
+    "mech:gain-of-function",
+    "mech:synaptic-vesicle-fusion",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:positive-regulation-of-ras-signaling"
+   ],
+   "node_id": "mech:lysosomal-enzyme-deficiency",
+   "match": "instance",
+   "justification": "GALC deficiency",
+   "raw_node_id": "mech:lysosomal-enzyme-deficiency",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.817Z"
+  },
+  "c45740f6d44327c5": {
+   "mention": "galactosylceramide degradation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-destabilization",
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:lysosome-organization",
+    "mech:lysosomal-storage",
+    "mech:loss-of-function",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ras-protein-signal-transduction"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "sphingolipid catabolism not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.817Z"
+  },
+  "ce6b0092f516ce9b": {
+   "mention": "degradation of galactosylsphingosine (psychosine)",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:ca-triggered-exocytosis",
+    "mech:sphingolipid-catabolism",
+    "mech:protein-destabilization",
+    "mech:action-potential",
+    "mech:lysosome-organization"
+   ],
+   "node_id": "mech:sphingolipid-catabolism",
+   "match": "instance",
+   "justification": "psychosine degradation is sphingolipid catabolism",
+   "raw_node_id": "mech:sphingolipid-catabolism",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.817Z"
+  },
+  "4f8f3ed2a5ce1247": {
+   "mention": "psychosine accumulation that kills oligodendrocytes and Schwann cells",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ca-triggered-exocytosis",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:synaptic-vesicle-fusion",
+    "mech:action-potential",
+    "mech:loss-of-function",
+    "mech:lysosome-organization"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "psychosine substrate accumulation",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.817Z"
+  },
+  "32f14fb1ee1866be": {
+   "mention": "motor dysfunction",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0005609",
+    "phenotype:HP:0002333",
+    "phenotype:HP:0000733",
+    "phenotype:HP:0007015",
+    "phenotype:HP:0011153",
+    "phenotype:HP:0002361",
+    "phenotype:HP:0002121",
+    "phenotype:HP:0031475",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0006536"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no matching motor dysfunction term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.817Z"
+  },
+  "93b31e60697df165": {
+   "mention": "cognitive decline",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0008762",
+    "phenotype:HP:0004482",
+    "phenotype:HP:0000762",
+    "phenotype:HP:0002162",
+    "phenotype:HP:0002213",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0002870",
+    "phenotype:HP:0034300",
+    "phenotype:HP:0001598",
+    "phenotype:HP:0003403"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no cognitive decline term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.817Z"
+  },
+  "f6b6dfb37e11e60a": {
+   "mention": "intractable seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001250",
+    "phenotype:HP:0031165",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0020221",
+    "phenotype:HP:0032794",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0002349",
+    "phenotype:HP:0011150",
+    "phenotype:HP:0007359"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "instance",
+   "justification": "intractable seizures are seizures",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.818Z"
+  },
+  "5d99c391e3320e55": {
+   "mention": "premature death",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001788",
+    "phenotype:HP:0033258",
+    "phenotype:HP:0000790",
+    "phenotype:HP:0004322",
+    "phenotype:HP:0003502",
+    "phenotype:HP:0002756",
+    "phenotype:HP:0000280",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0000964",
+    "phenotype:HP:0020208"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no premature death term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.818Z"
+  },
+  "6a26bb761bf10e6d": {
+   "mention": "hematopoietic stem cell transplantation",
+   "type": "therapy",
+   "candidates": [
+    "therapy:hsct-krabbe",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:statins-nf1-cognition",
+    "therapy:eliglustat",
+    "therapy:miglustat",
+    "therapy:cannabidiol",
+    "therapy:pabinafusp-alfa",
+    "therapy:tipifarnib",
+    "therapy:unc13a-splice-switching-aso"
+   ],
+   "node_id": "therapy:hsct-krabbe",
+   "match": "same",
+   "justification": "HSCT for Krabbe",
+   "raw_node_id": "therapy:hsct-krabbe",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.818Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.818Z",
+   "request_payload": {
+    "title": "Insights into the Pathogenesis and Treatment of Krabbe Disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "deficiency in the lysosomal enzyme galactocerebrosidase (GALC)",
+      "declared_type": "mechanism",
+      "sentence": "Krabbe disease (globoid cell leukodystrophy, GLD) is an inherited disease caused by a deficiency in the lysosomal enzyme galactocerebrosidase (GALC).",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "galactosylceramide degradation",
+      "declared_type": "mechanism",
+      "sentence": "The major galactosylated lipid degraded by GALC is galactosylceramide.",
+      "candidates": [
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "degradation of galactosylsphingosine (psychosine)",
+      "declared_type": "mechanism",
+      "sentence": "However, GALC is also responsible for the degradation of galactosylsphingosine (psychosine), a highly cytotoxic glycolipid.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "psychosine accumulation that kills oligodendrocytes and Schwann cells",
+      "declared_type": "mechanism",
+      "sentence": "It has been hypothesized that GALC-deficiency leads to psychosine accumulation that preferentially kills oligodendrocytes in the central nervous system and Schwann cells in the peripheral nervous system.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "motor dysfunction",
+      "declared_type": "phenotype",
+      "sentence": "Children affected with infantile Krabbe disease present with motor dysfunction, cognitive decline, intractable seizures, and premature death between two to five years of age.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0005609",
+        "type": "phenotype",
+        "label": "Gallbladder dysfunction",
+        "note": "HPO HP:0005609"
+       },
+       {
+        "id": "phenotype:HP:0002333",
+        "type": "phenotype",
+        "label": "Motor deterioration",
+        "note": "HPO HP:0002333"
+       },
+       {
+        "id": "phenotype:HP:0000733",
+        "type": "phenotype",
+        "label": "Motor stereotypy",
+        "note": "HPO HP:0000733"
+       },
+       {
+        "id": "phenotype:HP:0007015",
+        "type": "phenotype",
+        "label": "Poor gross motor coordination",
+        "note": "HPO HP:0007015"
+       },
+       {
+        "id": "phenotype:HP:0011153",
+        "type": "phenotype",
+        "label": "Focal motor seizure",
+        "note": "HPO HP:0011153"
+       },
+       {
+        "id": "phenotype:HP:0002361",
+        "type": "phenotype",
+        "label": "Psychomotor deterioration",
+        "note": "HPO HP:0002361"
+       },
+       {
+        "id": "phenotype:HP:0002121",
+        "type": "phenotype",
+        "label": "Generalized non-motor (absence) seizure",
+        "note": "HPO HP:0002121"
+       },
+       {
+        "id": "phenotype:HP:0031475",
+        "type": "phenotype",
+        "label": "Status epilepticus without prominent motor symptoms",
+        "note": "HPO HP:0031475"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0006536",
+        "type": "phenotype",
+        "label": "Airway obstruction",
+        "note": "HPO HP:0006536"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "cognitive decline",
+      "declared_type": "phenotype",
+      "sentence": "Children affected with infantile Krabbe disease present with motor dysfunction, cognitive decline, intractable seizures, and premature death between two to five years of age.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0008762",
+        "type": "phenotype",
+        "label": "Repetitive compulsive behavior",
+        "note": "HPO HP:0008762"
+       },
+       {
+        "id": "phenotype:HP:0004482",
+        "type": "phenotype",
+        "label": "Relative macrocephaly",
+        "note": "HPO HP:0004482"
+       },
+       {
+        "id": "phenotype:HP:0000762",
+        "type": "phenotype",
+        "label": "Decreased nerve conduction velocity",
+        "note": "HPO HP:0000762"
+       },
+       {
+        "id": "phenotype:HP:0002162",
+        "type": "phenotype",
+        "label": "Low posterior hairline",
+        "note": "HPO HP:0002162"
+       },
+       {
+        "id": "phenotype:HP:0002213",
+        "type": "phenotype",
+        "label": "Fine hair",
+        "note": "HPO HP:0002213"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0002870",
+        "type": "phenotype",
+        "label": "Obstructive sleep apnea",
+        "note": "HPO HP:0002870"
+       },
+       {
+        "id": "phenotype:HP:0034300",
+        "type": "phenotype",
+        "label": "Decreased acid sphingomyelinase activity",
+        "note": "HPO HP:0034300"
+       },
+       {
+        "id": "phenotype:HP:0001598",
+        "type": "phenotype",
+        "label": "Concave nail",
+        "note": "HPO HP:0001598"
+       },
+       {
+        "id": "phenotype:HP:0003403",
+        "type": "phenotype",
+        "label": "EMG: decremental response of compound muscle action potential to repetitive nerve stimulation",
+        "note": "HPO HP:0003403"
+       }
+      ]
+     },
+     {
+      "mention_id": "m7",
+      "mention": "intractable seizures",
+      "declared_type": "phenotype",
+      "sentence": "Children affected with infantile Krabbe disease present with motor dysfunction, cognitive decline, intractable seizures, and premature death between two to five years of age.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0020221",
+        "type": "phenotype",
+        "label": "Clonic seizure",
+        "note": "HPO HP:0020221"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0002349",
+        "type": "phenotype",
+        "label": "Focal aware seizure",
+        "note": "HPO HP:0002349"
+       },
+       {
+        "id": "phenotype:HP:0011150",
+        "type": "phenotype",
+        "label": "Myoclonic absence seizure",
+        "note": "HPO HP:0011150"
+       },
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       }
+      ]
+     },
+     {
+      "mention_id": "m8",
+      "mention": "premature death",
+      "declared_type": "phenotype",
+      "sentence": "Children affected with infantile Krabbe disease present with motor dysfunction, cognitive decline, intractable seizures, and premature death between two to five years of age.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001788",
+        "type": "phenotype",
+        "label": "Premature rupture of membranes",
+        "note": "HPO HP:0001788"
+       },
+       {
+        "id": "phenotype:HP:0033258",
+        "type": "phenotype",
+        "label": "Sudden unexpected death in epilepsy",
+        "note": "HPO HP:0033258"
+       },
+       {
+        "id": "phenotype:HP:0000790",
+        "type": "phenotype",
+        "label": "Hematuria",
+        "note": "HPO HP:0000790"
+       },
+       {
+        "id": "phenotype:HP:0004322",
+        "type": "phenotype",
+        "label": "Short stature",
+        "note": "HPO HP:0004322"
+       },
+       {
+        "id": "phenotype:HP:0003502",
+        "type": "phenotype",
+        "label": "Mild short stature",
+        "note": "HPO HP:0003502"
+       },
+       {
+        "id": "phenotype:HP:0002756",
+        "type": "phenotype",
+        "label": "Pathologic fracture",
+        "note": "HPO HP:0002756"
+       },
+       {
+        "id": "phenotype:HP:0000280",
+        "type": "phenotype",
+        "label": "Coarse facial features",
+        "note": "HPO HP:0000280"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0000964",
+        "type": "phenotype",
+        "label": "Eczematoid dermatitis",
+        "note": "HPO HP:0000964"
+       },
+       {
+        "id": "phenotype:HP:0020208",
+        "type": "phenotype",
+        "label": "Eating-induced seizure",
+        "note": "HPO HP:0020208"
+       }
+      ]
+     },
+     {
+      "mention_id": "m9",
+      "mention": "hematopoietic stem cell transplantation",
+      "declared_type": "therapy",
+      "sentence": "Although there is no cure for Krabbe disease, hematopoietic stem cell transplantation can slow the progression of disease.",
+      "candidates": [
+       {
+        "id": "therapy:hsct-krabbe",
+        "type": "therapy",
+        "label": "Haematopoietic stem cell transplantation (early, for Krabbe disease)",
+        "synonyms": [
+         "HSCT",
+         "umbilical cord blood transplantation"
+        ],
+        "summary": "Donor blood stem cells that supply galactocerebrosidase. The only disease-modifying option for Krabbe disease, and only effective when done very early."
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:statins-nf1-cognition",
+        "type": "therapy",
+        "label": "Statins (lovastatin, simvastatin) for RASopathy cognition",
+        "synonyms": [
+         "lovastatin",
+         "simvastatin",
+         "HMG-CoA reductase inhibitor"
+        ],
+        "summary": "Cholesterol-lowering drugs that reduce RAS-MAPK activity and rescued learning in Nf1+/- mice. Randomised trials in children with NF1 did not improve cognition: "
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:miglustat",
+        "type": "therapy",
+        "label": "Miglustat (substrate reduction; also an enzyme stabilizer)",
+        "synonyms": [
+         "Zavesca",
+         "Opfolda",
+         "N-butyl-deoxynojirimycin",
+         "NB-DNJ"
+        ],
+        "summary": "An oral iminosugar that slows glycosphingolipid production and crosses the blood-brain barrier. Approved for type 1 Gaucher disease and (outside the US) for the"
+       },
+       {
+        "id": "therapy:cannabidiol",
+        "type": "therapy",
+        "label": "Cannabidiol (plant-derived, pharmaceutical)",
+        "synonyms": [
+         "EPIDIOLEX",
+         "CBD",
+         "GWP42003-P"
+        ],
+        "summary": "A purified cannabidiol oral solution with an FDA label covering seizures associated with Dravet syndrome."
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:tipifarnib",
+        "type": "therapy",
+        "label": "Tipifarnib (farnesyltransferase inhibitor)",
+        "synonyms": [
+         "R115777",
+         "Zarnestra"
+        ],
+        "summary": "Blocks RAS membrane anchoring by inhibiting farnesylation. A randomised placebo-controlled phase 2 trial in NF1 plexiform neurofibromas did not prolong time to "
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"deficiency in the lysosomal enzyme galactocerebrosidase (GALC)\",\"node_id\":\"mech:lysosomal-enzyme-deficiency\",\"match\":\"instance\",\"justification\":\"GALC deficiency\"},{\"mention_id\":\"m2\",\"mention\":\"galactosylceramide degradation\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"sphingolipid catabolism not among candidates\"},{\"mention_id\":\"m3\",\"mention\":\"degradation of galactosylsphingosine (psychosine)\",\"node_id\":\"mech:sphingolipid-catabolism\",\"match\":\"instance\",\"justification\":\"psychosine degradation is sphingolipid catabolism\"},{\"mention_id\":\"m4\",\"mention\":\"psychosine accumulation that kills oligodendrocytes and Schwann cells\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"psychosine substrate accumulation\"},{\"mention_id\":\"m5\",\"mention\":\"motor dysfunction\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no matching motor dysfunction term\"},{\"mention_id\":\"m6\",\"mention\":\"cognitive decline\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no cognitive decline term\"},{\"mention_id\":\"m7\",\"mention\":\"intractable seizures\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"instance\",\"justification\":\"intractable seizures are seizures\"},{\"mention_id\":\"m8\",\"mention\":\"premature death\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no premature death term\"},{\"mention_id\":\"m9\",\"mention\":\"hematopoietic stem cell transplantation\",\"node_id\":\"therapy:hsct-krabbe\",\"match\":\"same\",\"justification\":\"HSCT for Krabbe\"}]}"
+  }
+ ]
+}

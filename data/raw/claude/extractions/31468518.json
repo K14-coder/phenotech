@@ -1,0 +1,97 @@
+{
+ "pmid": "31468518",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.576Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "8d058c923ebdd3b5",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/31468518.json",
+ "claims": [
+  {
+   "subject_mention": "CACNA1A",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "severe developmental epileptic encephalopathies",
+   "object_type": "disease",
+   "quote": "Both gain-of-function and loss-of-function de novo CACNA1A mutations cause severe developmental epileptic encephalopathies in the spectrum of Lennox-Gastaut syndrome.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "developmental epileptic encephalopathies",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "gain-of-function",
+   "object_type": "mechanism",
+   "quote": "Both gain-of-function and loss-of-function de novo CACNA1A mutations cause severe developmental epileptic encephalopathies in the spectrum of Lennox-Gastaut syndrome.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "developmental epileptic encephalopathies",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "Both gain-of-function and loss-of-function de novo CACNA1A mutations cause severe developmental epileptic encephalopathies in the spectrum of Lennox-Gastaut syndrome.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CACNA1A G230V",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "RESULTS: We find that the G230V and I1357S mutations result in loss-of-function effects with reduced whole-cell current densities and decreased channel expression at the cell membrane.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CACNA1A I1357S",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "RESULTS: We find that the G230V and I1357S mutations result in loss-of-function effects with reduced whole-cell current densities and decreased channel expression at the cell membrane.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CACNA1A A713T",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "By contrast, the A713T and V1396M variants resulted in gain-of-function effects with increased whole-cell currents and facilitated current activation (hyperpolarized shift).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CACNA1A V1396M",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "gain of function",
+   "object_type": "mechanism",
+   "quote": "By contrast, the A713T and V1396M variants resulted in gain-of-function effects with increased whole-cell currents and facilitated current activation (hyperpolarized shift).",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

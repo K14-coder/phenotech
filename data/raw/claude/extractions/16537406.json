@@ -1,0 +1,49 @@
+{
+ "pmid": "16537406",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.532Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "cd84e4ea2220dd72",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/16537406.json",
+ "claims": [
+  {
+   "subject_mention": "SynGAP",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "AMPAR trafficking",
+   "object_type": "mechanism",
+   "quote": "Here, we report that SynGAP, an excitatory synapse-specific RasGAP, regulates AMPAR trafficking, silent synapse number, and excitatory synaptic transmission in hippocampal and cortical cultured neurons.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SynGAP",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "excitatory synaptic transmission",
+   "object_type": "mechanism",
+   "quote": "Here, we report that SynGAP, an excitatory synapse-specific RasGAP, regulates AMPAR trafficking, silent synapse number, and excitatory synaptic transmission in hippocampal and cortical cultured neurons.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SynGAP",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "regulation of neuronal MAPK signaling",
+   "object_type": "mechanism",
+   "quote": "Taken together, these data suggest that SynGAP plays a critical role in the regulation of neuronal MAPK signaling, AMPAR membrane trafficking, and excitatory synaptic transmission.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

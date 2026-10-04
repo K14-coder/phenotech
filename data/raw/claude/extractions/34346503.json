@@ -1,0 +1,121 @@
+{
+ "pmid": "34346503",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.587Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b59d74dc6643eb4f",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/34346503.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Neurofibromatosis 1 (NF1)",
+   "object_type": "disease",
+   "quote": "Neurofibromatosis 1 (NF1) is a disorder characterized by variable expressivity caused by loss-of-function variants in NF1, encoding neurofibromin, a protein negatively controlling RAS signaling.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis 1 (NF1)",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "loss-of-function variants in NF1",
+   "object_type": "mechanism",
+   "quote": "Neurofibromatosis 1 (NF1) is a disorder characterized by variable expressivity caused by loss-of-function variants in NF1, encoding neurofibromin, a protein negatively controlling RAS signaling.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "neurofibromin",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "negatively controlling RAS signaling",
+   "object_type": "mechanism",
+   "quote": "Neurofibromatosis 1 (NF1) is a disorder characterized by variable expressivity caused by loss-of-function variants in NF1, encoding neurofibromin, a protein negatively controlling RAS signaling.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SHP2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "positive regulator of RAS signaling",
+   "object_type": "mechanism",
+   "quote": "Parallel sequencing of a RASopathy gene panel in 138 individuals with molecularly confirmed clinical diagnosis of NF1 identified missense variants in PTPN11, encoding SHP2, a positive regulator of RAS signaling, in four subjects from three unrelated families.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Three subjects were heterozygous for a gain-of-function variant and showed a severe expression of NF1 (developmental delay, multiple cerebral neoplasms and peculiar cortical MRI findings), and features resembling Noonan syndrome (a RASopathy caused by activating variants in PTPN11).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Three subjects were heterozygous for a gain-of-function variant and showed a severe expression of NF1 (developmental delay, multiple cerebral neoplasms and peculiar cortical MRI findings), and features resembling Noonan syndrome (a RASopathy caused by activating variants in PTPN11).",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "multiple cerebral neoplasms",
+   "object_type": "phenotype",
+   "quote": "Three subjects were heterozygous for a gain-of-function variant and showed a severe expression of NF1 (developmental delay, multiple cerebral neoplasms and peculiar cortical MRI findings), and features resembling Noonan syndrome (a RASopathy caused by activating variants in PTPN11).",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "previously unreported PTPN11 variant",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "hypomorphic behavior",
+   "object_type": "mechanism",
+   "quote": "Conversely, the fourth subject, who showed an attenuated presentation, carried a previously unreported PTPN11 variant that had a hypomorphic behavior in vitro.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "targeting of SHP2 function",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NF1",
+   "object_type": "disease",
+   "quote": "We also suggest targeting of SHP2 function as an approach to treat evolutive complications of NF1.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

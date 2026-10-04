@@ -1,0 +1,49 @@
+{
+ "pmid": "41739308",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.633Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "0065a4d76dfeebd9",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41739308.json",
+ "claims": [
+  {
+   "subject_mention": "HEXA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Tay-Sachs disease is a lysosomal storage disorder caused by mutations in the HEXA gene, which encodes the α-subunit of β-hexosaminidase A-an enzyme that breaks down GM2 ganglioside.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "intrathecal AAVrh10-mHexa combined with anti-inflammatory treatment",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "early-onset Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Intrathecal delivery of AAVrh10-mHexa combined with anti-inflammatory treatment reduces neuropathological markers and extends the lifespan of mice with early-onset Tay-Sachs disease.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "AAVrh10-based intrathecal delivery combined with istradefylline",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "These results suggest that AAVrh10-based intrathecal delivery combined with istradefylline provides a promising therapeutic strategy for treating Tay-Sachs disease.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

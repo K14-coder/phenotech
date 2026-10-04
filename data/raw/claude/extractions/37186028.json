@@ -1,0 +1,49 @@
+{
+ "pmid": "37186028",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.604Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a12b1e6cd4d66c03",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/37186028.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Neurofibromatosis type 1",
+   "object_type": "disease",
+   "quote": "Neurofibromatosis type 1 results from loss-of-function NF1 pathogenic variants (PVs).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Neurofibromatosis type 1",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "loss-of-function NF1 pathogenic variants",
+   "object_type": "mechanism",
+   "quote": "Neurofibromatosis type 1 results from loss-of-function NF1 pathogenic variants (PVs).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1 deep intronic variants flanking the alternatively spliced NF1 exon 31 [23a]",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "altering predominantly NF1 isoform type II",
+   "object_type": "mechanism",
+   "quote": "Analysis of 200 unrelated individuals with a constitutional NF1 deep intronic pathogenic variant reveals that variants flanking the alternatively spliced NF1 exon 31 [23a] cause a classical neurofibromatosis type 1 phenotype while altering predominantly NF1 isoform type II.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

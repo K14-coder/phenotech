@@ -1,0 +1,61 @@
+{
+ "pmid": "36175670",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.602Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "a8c773366303f72c",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/36175670.json",
+ "claims": [
+  {
+   "subject_mention": "SHOC2",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "dephosphorylating a specific phosphoserine on RAF kinases",
+   "object_type": "mechanism",
+   "quote": "SHOC2 forms a heterotrimeric complex with MRAS and PP1C that is essential for regulating RAF and MAPK-pathway activation by dephosphorylating a specific phosphoserine on RAF kinases.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "MRAS",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "dephosphorylating a specific phosphoserine on RAF kinases",
+   "object_type": "mechanism",
+   "quote": "SHOC2 forms a heterotrimeric complex with MRAS and PP1C that is essential for regulating RAF and MAPK-pathway activation by dephosphorylating a specific phosphoserine on RAF kinases.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PP1C",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "dephosphorylating a specific phosphoserine on RAF kinases",
+   "object_type": "mechanism",
+   "quote": "SHOC2 forms a heterotrimeric complex with MRAS and PP1C that is essential for regulating RAF and MAPK-pathway activation by dephosphorylating a specific phosphoserine on RAF kinases.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "enhanced SHOC2-MRAS-PP1C complex formation",
+   "object_type": "mechanism",
+   "quote": "Our results provide structural insights into the role of the SMP complex in RAF activation and how mutations found in Noonan syndrome enhance complex formation, and reveal new avenues for therapeutic interventions.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

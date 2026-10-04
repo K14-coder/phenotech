@@ -1,0 +1,61 @@
+{
+ "pmid": "41803330",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.634Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "bd1773e9c5ed6a1a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/41803330.json",
+ "claims": [
+  {
+   "subject_mention": "HEXA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Tay-Sachs disease",
+   "object_type": "disease",
+   "quote": "Tay-Sachs disease is a severe neurodegenerative disorder caused by mutations in the HEXA gene, which encodes the α-subunit of the β-hexosaminidase A (HexA) enzyme.",
+   "study_type": "animal_model",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "B4Galnt1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "lipid biosynthesis",
+   "object_type": "mechanism",
+   "quote": "B4Galnt1 (ß-1,4-N-acetyl-galactosaminyltransferase 1) is involved in lipid biosynthesis in mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "B4Galnt1 Deficiency",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Tay-Sachs Disease",
+   "object_type": "disease",
+   "quote": "B4Galnt1 Deficiency Reverses Severe Neurological Symptoms in a Mouse Model of Tay-Sachs Disease.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "knocking out B4Galnt1",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GM2 ganglioside accumulation",
+   "object_type": "mechanism",
+   "quote": "Our findings suggest that knocking out B4Galnt1 to block GM2 ganglioside accumulation may reverse disease symptoms in the DKO mouse model, indicating a promising, safe target for substrate-reduction therapy via siRNA silencing.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "pmid": "35764878",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.598Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "f367409e04513d03",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/35764878.json",
+ "claims": [
+  {
+   "subject_mention": "HRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Costello syndrome (CS)",
+   "object_type": "disease",
+   "quote": "Costello syndrome (CS) is caused by heterozygous HRAS germline mutations.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HRASPhe156Leu",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "increased downstream signaling activation",
+   "object_type": "mechanism",
+   "quote": "Functional studies revealed enhanced effector-binding, increased downstream signaling activation and impaired growth factor-induced signaling dynamics in cells expressing HRASPhe156Leu.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "severe feeding difficulties",
+   "object_type": "phenotype",
+   "quote": "Both had severe feeding difficulties, airway obstruction and developmental delay, which are typical findings in CS.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "airway obstruction",
+   "object_type": "phenotype",
+   "quote": "Both had severe feeding difficulties, airway obstruction and developmental delay, which are typical findings in CS.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "developmental delay",
+   "object_type": "phenotype",
+   "quote": "Both had severe feeding difficulties, airway obstruction and developmental delay, which are typical findings in CS.",
+   "study_type": "case_series",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

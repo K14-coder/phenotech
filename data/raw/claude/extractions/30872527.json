@@ -1,0 +1,73 @@
+{
+ "pmid": "30872527",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.573Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "400ddd0bba1c1d8e",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/30872527.json",
+ "claims": [
+  {
+   "subject_mention": "RIT1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "RIT1 oncoproteins have emerged as an etiologic factor in Noonan syndrome and cancer.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "RIT1 oncoproteins",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "escape LZTR1-mediated proteolysis",
+   "object_type": "mechanism",
+   "quote": "RIT1 oncoproteins escape LZTR1-mediated proteolysis.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "protein degradation",
+   "object_type": "mechanism",
+   "quote": "By mass spectrometry, we detected a RIT1 interactor, leucine zipper-like transcription regulator 1 (LZTR1), that acts as an adaptor for protein degradation.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pathogenic mutations affecting RIT1",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "incomplete degradation of RIT1",
+   "object_type": "mechanism",
+   "quote": "Pathogenic mutations affecting either RIT1 or LZTR1 resulted in incomplete degradation of RIT1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pathogenic mutations affecting LZTR1",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "incomplete degradation of RIT1",
+   "object_type": "mechanism",
+   "quote": "Pathogenic mutations affecting either RIT1 or LZTR1 resulted in incomplete degradation of RIT1.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

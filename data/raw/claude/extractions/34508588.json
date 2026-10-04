@@ -1,0 +1,97 @@
+{
+ "pmid": "34508588",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.589Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "0ac1017d83ecc43d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/34508588.json",
+ "claims": [
+  {
+   "subject_mention": "HRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Costello syndrome",
+   "object_type": "disease",
+   "quote": "Germline-activating mutations in HRAS cause Costello syndrome (CS), a cancer prone multisystem disorder characterized by reduced postnatal growth.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Costello syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "reduced postnatal growth",
+   "object_type": "phenotype",
+   "quote": "Germline-activating mutations in HRAS cause Costello syndrome (CS), a cancer prone multisystem disorder characterized by reduced postnatal growth.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "constitutive GLUT4 translocation and activation",
+   "object_type": "mechanism",
+   "quote": "Here, we show that constitutive plasma membrane translocation and activation of the GLUT4 glucose transporter, via reactive oxygen species-dependent AMP-activated protein kinase α and p38 hyperactivation, occurs in primary fibroblasts of CS patients, resulting in accelerated glycolysis and increased fatty acid synthesis and storage as lipid droplets.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "accelerated autophagic flux",
+   "object_type": "mechanism",
+   "quote": "An accelerated autophagic flux was also identified as contributing to the increased energetic expenditure in CS.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "wortmannin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "p38 and PI3K signaling",
+   "object_type": "mechanism",
+   "quote": "Concomitant inhibition of p38 and PI3K signaling by wortmannin was able to rescue both the dysregulated glucose intake and accelerated autophagic flux.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "wortmannin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "dysregulated glucose intake",
+   "object_type": "mechanism",
+   "quote": "Concomitant inhibition of p38 and PI3K signaling by wortmannin was able to rescue both the dysregulated glucose intake and accelerated autophagic flux.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "wortmannin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "accelerated autophagic flux",
+   "object_type": "mechanism",
+   "quote": "Concomitant inhibition of p38 and PI3K signaling by wortmannin was able to rescue both the dysregulated glucose intake and accelerated autophagic flux.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

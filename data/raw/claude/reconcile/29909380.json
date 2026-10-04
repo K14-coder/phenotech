@@ -1,0 +1,573 @@
+{
+ "pmid": "29909380",
+ "entries": {
+  "b10d61c866e3b0fc": {
+   "mention": "schwannomatosis",
+   "type": "disease",
+   "candidates": [
+    "disease:LZTR1",
+    "disease:NF1",
+    "disease:PTPN11",
+    "disease:SOS1",
+    "disease:SLC2A1",
+    "disease:ARSA",
+    "disease:IDUA",
+    "disease:GALC",
+    "disease:HEXA",
+    "disease:IDS"
+   ],
+   "node_id": "disease:LZTR1",
+   "match": "instance",
+   "justification": "LZTR1-associated schwannomatosis",
+   "raw_node_id": "disease:LZTR1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "bab27226584971ab": {
+   "mention": "unilateral vestibular schwannoma",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0009588",
+    "phenotype:HP:0100008",
+    "phenotype:HP:0001125",
+    "phenotype:HP:0007670",
+    "phenotype:HP:0001488",
+    "phenotype:HP:0002069",
+    "phenotype:HP:0005144",
+    "phenotype:HP:0007334",
+    "phenotype:HP:0010795",
+    "phenotype:HP:0000073"
+   ],
+   "node_id": "phenotype:HP:0009588",
+   "match": "instance",
+   "justification": "unilateral vestibular schwannoma",
+   "raw_node_id": "phenotype:HP:0009588",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "d52e796438224d89": {
+   "mention": "peripheral and spinal nerve schwannomas",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0100697",
+    "phenotype:HP:0006851",
+    "phenotype:HP:0100008",
+    "phenotype:HP:0011096",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0009588",
+    "phenotype:HP:0010302",
+    "phenotype:HP:0010726",
+    "phenotype:HP:0001093",
+    "phenotype:HP:0000762"
+   ],
+   "node_id": "phenotype:HP:0100008",
+   "match": "instance",
+   "justification": "peripheral/spinal schwannomas",
+   "raw_node_id": "phenotype:HP:0100008",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "3f66afbd47a9d2d2": {
+   "mention": "pain",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0046505",
+    "phenotype:HP:0012532",
+    "phenotype:HP:0000980",
+    "phenotype:HP:0002283",
+    "phenotype:HP:0001816",
+    "phenotype:HP:0001085",
+    "phenotype:HP:0001283",
+    "phenotype:HP:0100021",
+    "phenotype:HP:0000242",
+    "phenotype:HP:0003645"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "general pain",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  },
+  "4096f4ce8c209e73": {
+   "mention": "schwannomas of mainly spinal and peripheral nerves",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0100697",
+    "phenotype:HP:0006851",
+    "phenotype:HP:0100008",
+    "phenotype:HP:0011096",
+    "phenotype:HP:0009588",
+    "phenotype:HP:0007133",
+    "phenotype:HP:0010302",
+    "phenotype:HP:0011194",
+    "phenotype:HP:0009852",
+    "phenotype:HP:0009908"
+   ],
+   "node_id": "phenotype:HP:0100008",
+   "match": "instance",
+   "justification": "spinal/peripheral schwannomas",
+   "raw_node_id": "phenotype:HP:0100008",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.862Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.862Z",
+   "request_payload": {
+    "title": "Schwannomatosis: a genetic and epidemiological study.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "schwannomatosis",
+      "declared_type": "disease",
+      "sentence": "LZTR1-associated schwannomatosis also causes a small number of cases that are misdiagnosed with NF2 (1%-2%), due to the occurrence of a unilateral vestibular schwannoma.",
+      "candidates": [
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:SLC2A1",
+        "type": "disease",
+        "label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+        "synonyms": [
+         "Glut1DS",
+         "GLUT1 deficiency",
+         "G1D",
+         "De Vivo disease",
+         "ChC type 2",
+         "SDCHCN",
+         "cryohydrocytosis, stomatin-deficient, with mental retardation, seizures, cataracts, and massive hepatosplenomegaly",
+         "hereditary cryohydrocytosis type 2"
+        ],
+        "summary": "Gene-defined umbrella for conditions caused by variants in SLC2A1 (8 curated clinical entities in OMIM/Orphanet)."
+       },
+       {
+        "id": "disease:ARSA",
+        "type": "disease",
+        "label": "ARSA-related disorders (metachromatic leukodystrophy)",
+        "synonyms": [
+         "metachromatic leukodystrophy",
+         "MLD",
+         "arylsulfatase A deficiency",
+         "ARSA deficiency",
+         "MLD, juvenile form",
+         "arylsulfatase A deficiency, juvenile form",
+         "cerebral sclerosis diffuse metachromatic form",
+         "cerebroside sulfatase deficiency"
+        ],
+        "summary": "Deficiency of arylsulfatase A makes sulfatides build up and destroys myelin in the brain and nerves, causing loss of motor and cognitive skills."
+       },
+       {
+        "id": "disease:IDUA",
+        "type": "disease",
+        "label": "IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie)",
+        "synonyms": [
+         "MPS I",
+         "Hurler syndrome",
+         "Hurler-Scheie syndrome",
+         "Scheie syndrome",
+         "Hurler disease",
+         "MPS I H",
+         "MPS1-H",
+         "MPS1H"
+        ],
+        "summary": "Deficiency of alpha-L-iduronidase makes dermatan and heparan sulfate build up in many organs: coarse facial features, skeletal disease, heart and airway problem"
+       },
+       {
+        "id": "disease:GALC",
+        "type": "disease",
+        "label": "GALC-related disorders (Krabbe disease)",
+        "synonyms": [
+         "Krabbe disease",
+         "globoid cell leukodystrophy",
+         "galactocerebrosidase deficiency",
+         "GALC deficiency",
+         "GALC enzyme deficiency",
+         "GLD",
+         "Krabbe leukodystrophy",
+         "Krabbe's leukodystrophy"
+        ],
+        "summary": "Deficiency of galactocerebrosidase leads to toxic psychosine build-up that kills myelin-forming cells; the infantile form is rapidly fatal."
+       },
+       {
+        "id": "disease:HEXA",
+        "type": "disease",
+        "label": "HEXA-related disorders (Tay-Sachs disease)",
+        "synonyms": [
+         "Tay-Sachs disease",
+         "GM2 gangliosidosis type B",
+         "hexosaminidase A deficiency",
+         "late-onset Tay-Sachs",
+         "B variant GM2 gangliosidosis",
+         "GM2 gangliosidosis, B, B1 variant",
+         "GM2 gangliosidosis, type 1",
+         "GM2-gangliosidosis, several forms"
+        ],
+        "summary": "Deficiency of hexosaminidase A makes GM2 ganglioside build up in nerve cells: infants lose skills and develop seizures and blindness; later-onset forms progress"
+       },
+       {
+        "id": "disease:IDS",
+        "type": "disease",
+        "label": "IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+        "synonyms": [
+         "MPS II",
+         "Hunter syndrome",
+         "iduronate-2-sulfatase deficiency",
+         "Hunter's syndrome",
+         "I2S deficiency",
+         "IDS deficiency",
+         "MPS 2",
+         "MPS with skin involvement"
+        ],
+        "summary": "X-linked deficiency of iduronate-2-sulfatase makes heparan and dermatan sulfate build up; the neuronopathic form also causes progressive cognitive decline."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "unilateral vestibular schwannoma",
+      "declared_type": "phenotype",
+      "sentence": "LZTR1-associated schwannomatosis also causes a small number of cases that are misdiagnosed with NF2 (1%-2%), due to the occurrence of a unilateral vestibular schwannoma.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0009588",
+        "type": "phenotype",
+        "label": "Vestibular schwannoma",
+        "note": "HPO HP:0009588"
+       },
+       {
+        "id": "phenotype:HP:0100008",
+        "type": "phenotype",
+        "label": "Schwannoma",
+        "note": "HPO HP:0100008"
+       },
+       {
+        "id": "phenotype:HP:0001125",
+        "type": "phenotype",
+        "label": "Transient unilateral blurring of vision",
+        "note": "HPO HP:0001125"
+       },
+       {
+        "id": "phenotype:HP:0007670",
+        "type": "phenotype",
+        "label": "Abnormal vestibulo-ocular reflex",
+        "note": "HPO HP:0007670"
+       },
+       {
+        "id": "phenotype:HP:0001488",
+        "type": "phenotype",
+        "label": "Bilateral ptosis",
+        "note": "HPO HP:0001488"
+       },
+       {
+        "id": "phenotype:HP:0002069",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure",
+        "note": "HPO HP:0002069"
+       },
+       {
+        "id": "phenotype:HP:0005144",
+        "type": "phenotype",
+        "label": "Ventricular septal hypertrophy",
+        "note": "HPO HP:0005144"
+       },
+       {
+        "id": "phenotype:HP:0007334",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure with focal onset",
+        "note": "HPO HP:0007334"
+       },
+       {
+        "id": "phenotype:HP:0010795",
+        "type": "phenotype",
+        "label": "Cerebellar glioma",
+        "note": "HPO HP:0010795"
+       },
+       {
+        "id": "phenotype:HP:0000073",
+        "type": "phenotype",
+        "label": "Ureteral duplication",
+        "note": "HPO HP:0000073"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "peripheral and spinal nerve schwannomas",
+      "declared_type": "phenotype",
+      "sentence": "Patients with schwannomatosis had lower numbers of non-vestibular cranial schwannomas, but more peripheral and spinal nerve schwannomas with pain as a predominant presenting symptom.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0100697",
+        "type": "phenotype",
+        "label": "Malignant peripheral nerve sheath tumor",
+        "note": "HPO HP:0100697"
+       },
+       {
+        "id": "phenotype:HP:0006851",
+        "type": "phenotype",
+        "label": "Symmetric spinal nerve root neurofibromas",
+        "note": "HPO HP:0006851"
+       },
+       {
+        "id": "phenotype:HP:0100008",
+        "type": "phenotype",
+        "label": "Schwannoma",
+        "note": "HPO HP:0100008"
+       },
+       {
+        "id": "phenotype:HP:0011096",
+        "type": "phenotype",
+        "label": "Peripheral demyelination",
+        "note": "HPO HP:0011096"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0009588",
+        "type": "phenotype",
+        "label": "Vestibular schwannoma",
+        "note": "HPO HP:0009588"
+       },
+       {
+        "id": "phenotype:HP:0010302",
+        "type": "phenotype",
+        "label": "Spinal cord tumor",
+        "note": "HPO HP:0010302"
+       },
+       {
+        "id": "phenotype:HP:0010726",
+        "type": "phenotype",
+        "label": "Prominent corneal nerve fibers",
+        "note": "HPO HP:0010726"
+       },
+       {
+        "id": "phenotype:HP:0001093",
+        "type": "phenotype",
+        "label": "Optic nerve dysplasia",
+        "note": "HPO HP:0001093"
+       },
+       {
+        "id": "phenotype:HP:0000762",
+        "type": "phenotype",
+        "label": "Decreased nerve conduction velocity",
+        "note": "HPO HP:0000762"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "pain",
+      "declared_type": "phenotype",
+      "sentence": "Patients with schwannomatosis had lower numbers of non-vestibular cranial schwannomas, but more peripheral and spinal nerve schwannomas with pain as a predominant presenting symptom.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0046505",
+        "type": "phenotype",
+        "label": "Hand pain",
+        "note": "HPO HP:0046505"
+       },
+       {
+        "id": "phenotype:HP:0012532",
+        "type": "phenotype",
+        "label": "Chronic pain",
+        "note": "HPO HP:0012532"
+       },
+       {
+        "id": "phenotype:HP:0000980",
+        "type": "phenotype",
+        "label": "Pallor",
+        "note": "HPO HP:0000980"
+       },
+       {
+        "id": "phenotype:HP:0002283",
+        "type": "phenotype",
+        "label": "Global brain atrophy",
+        "note": "HPO HP:0002283"
+       },
+       {
+        "id": "phenotype:HP:0001816",
+        "type": "phenotype",
+        "label": "Thin nail",
+        "note": "HPO HP:0001816"
+       },
+       {
+        "id": "phenotype:HP:0001085",
+        "type": "phenotype",
+        "label": "Papilledema",
+        "note": "HPO HP:0001085"
+       },
+       {
+        "id": "phenotype:HP:0001283",
+        "type": "phenotype",
+        "label": "Bulbar palsy",
+        "note": "HPO HP:0001283"
+       },
+       {
+        "id": "phenotype:HP:0100021",
+        "type": "phenotype",
+        "label": "Cerebral palsy",
+        "note": "HPO HP:0100021"
+       },
+       {
+        "id": "phenotype:HP:0000242",
+        "type": "phenotype",
+        "label": "Parietal bossing",
+        "note": "HPO HP:0000242"
+       },
+       {
+        "id": "phenotype:HP:0003645",
+        "type": "phenotype",
+        "label": "Prolonged partial thromboplastin time",
+        "note": "HPO HP:0003645"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "schwannomas of mainly spinal and peripheral nerves",
+      "declared_type": "phenotype",
+      "sentence": "OBJECTIVES: Schwannomatosis is a dominantly inherited condition predisposing to schwannomas of mainly spinal and peripheral nerves with some diagnostic overlap with neurofibromatosis-2 (NF2), but the underlying epidemiology is poorly understood.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0100697",
+        "type": "phenotype",
+        "label": "Malignant peripheral nerve sheath tumor",
+        "note": "HPO HP:0100697"
+       },
+       {
+        "id": "phenotype:HP:0006851",
+        "type": "phenotype",
+        "label": "Symmetric spinal nerve root neurofibromas",
+        "note": "HPO HP:0006851"
+       },
+       {
+        "id": "phenotype:HP:0100008",
+        "type": "phenotype",
+        "label": "Schwannoma",
+        "note": "HPO HP:0100008"
+       },
+       {
+        "id": "phenotype:HP:0011096",
+        "type": "phenotype",
+        "label": "Peripheral demyelination",
+        "note": "HPO HP:0011096"
+       },
+       {
+        "id": "phenotype:HP:0009588",
+        "type": "phenotype",
+        "label": "Vestibular schwannoma",
+        "note": "HPO HP:0009588"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       },
+       {
+        "id": "phenotype:HP:0010302",
+        "type": "phenotype",
+        "label": "Spinal cord tumor",
+        "note": "HPO HP:0010302"
+       },
+       {
+        "id": "phenotype:HP:0011194",
+        "type": "phenotype",
+        "label": "EEG with series of focal spikes",
+        "note": "HPO HP:0011194"
+       },
+       {
+        "id": "phenotype:HP:0009852",
+        "type": "phenotype",
+        "label": "Broad proximal phalanges of the hand",
+        "note": "HPO HP:0009852"
+       },
+       {
+        "id": "phenotype:HP:0009908",
+        "type": "phenotype",
+        "label": "Anterior creases of earlobe",
+        "note": "HPO HP:0009908"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"schwannomatosis\",\"node_id\":\"disease:LZTR1\",\"match\":\"instance\",\"justification\":\"LZTR1-associated schwannomatosis\"},{\"mention_id\":\"m2\",\"mention\":\"unilateral vestibular schwannoma\",\"node_id\":\"phenotype:HP:0009588\",\"match\":\"instance\",\"justification\":\"unilateral vestibular schwannoma\"},{\"mention_id\":\"m3\",\"mention\":\"peripheral and spinal nerve schwannomas\",\"node_id\":\"phenotype:HP:0100008\",\"match\":\"instance\",\"justification\":\"peripheral/spinal schwannomas\"},{\"mention_id\":\"m4\",\"mention\":\"pain\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"general pain\"},{\"mention_id\":\"m5\",\"mention\":\"schwannomas of mainly spinal and peripheral nerves\",\"node_id\":\"phenotype:HP:0100008\",\"match\":\"instance\",\"justification\":\"spinal/peripheral schwannomas\"}]}"
+  }
+ ]
+}

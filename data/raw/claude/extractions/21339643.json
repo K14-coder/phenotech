@@ -1,0 +1,121 @@
+{
+ "pmid": "21339643",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.545Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "b7c863fa93e8b58d",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/21339643.json",
+ "claims": [
+  {
+   "subject_mention": "rapamycin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "LEOPARD syndrome",
+   "object_type": "disease",
+   "quote": "Rapamycin reverses hypertrophic cardiomyopathy in a mouse model of LEOPARD syndrome-associated PTPN11 mutation.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LEOPARD syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "congenital heart disease",
+   "object_type": "phenotype",
+   "quote": "LEOPARD syndrome (LS) is an autosomal dominant \"RASopathy\" that manifests with congenital heart disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "LS",
+   "object_type": "disease",
+   "quote": "Nearly all cases of LS are caused by catalytically inactivating mutations in the protein tyrosine phosphatase (PTP), non-receptor type 11 (PTPN11) gene that encodes the SH2 domain-containing PTP-2 (SHP2).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11 catalytically inactivating mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss of function",
+   "object_type": "mechanism",
+   "quote": "Nearly all cases of LS are caused by catalytically inactivating mutations in the protein tyrosine phosphatase (PTP), non-receptor type 11 (PTPN11) gene that encodes the SH2 domain-containing PTP-2 (SHP2).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Ptpn11 Y279C",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "decreased Shp2 catalytic activity",
+   "object_type": "mechanism",
+   "quote": "Heart and/or cardiomyocyte lysates from LS/+ mice showed enhanced binding of Shp2 to Irs1, decreased Shp2 catalytic activity, and abrogated agonist-evoked Erk/Mapk signaling.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "rapamycin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "mTOR",
+   "object_type": "mechanism",
+   "quote": "The cardiac defects in LS/+ mice were completely reversed by treatment with rapamycin, an inhibitor of mTOR.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LS mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dominant-negative",
+   "object_type": "mechanism",
+   "quote": "Our results demonstrate that LS mutations have dominant-negative effects in vivo, identify enhanced mTOR activity as critical for causing LS-associated HCM, and suggest that TOR inhibitors be considered for treatment of HCM in LS patients.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LS-associated HCM",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "enhanced mTOR activity",
+   "object_type": "mechanism",
+   "quote": "Our results demonstrate that LS mutations have dominant-negative effects in vivo, identify enhanced mTOR activity as critical for causing LS-associated HCM, and suggest that TOR inhibitors be considered for treatment of HCM in LS patients.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "TOR inhibitors",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "HCM in LS",
+   "object_type": "disease",
+   "quote": "Our results demonstrate that LS mutations have dominant-negative effects in vivo, identify enhanced mTOR activity as critical for causing LS-associated HCM, and suggest that TOR inhibitors be considered for treatment of HCM in LS patients.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

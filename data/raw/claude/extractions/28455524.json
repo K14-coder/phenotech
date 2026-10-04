@@ -1,0 +1,85 @@
+{
+ "pmid": "28455524",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.563Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "4f3cc142b732ca83",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/28455524.json",
+ "claims": [
+  {
+   "subject_mention": "HRAS",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Costello syndrome",
+   "object_type": "disease",
+   "quote": "Costello syndrome (CS) is a rare RASopathy caused by activating mutations in the HRAS gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "HRAS activating mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "activating",
+   "object_type": "mechanism",
+   "quote": "Costello syndrome (CS) is a rare RASopathy caused by activating mutations in the HRAS gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "lovastatin",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "ERK signaling",
+   "object_type": "mechanism",
+   "quote": "Treatment with lovastatin, a HMG-CoA-Reductase inhibitor which has been shown to rescue the behavioral phenotypes of mouse models of NF1 and Noonan syndrome, was unable to restore ERK signaling and the cognitive deficits of HRas G12V/G12V mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "lovastatin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NF1",
+   "object_type": "disease",
+   "quote": "Treatment with lovastatin, a HMG-CoA-Reductase inhibitor which has been shown to rescue the behavioral phenotypes of mouse models of NF1 and Noonan syndrome, was unable to restore ERK signaling and the cognitive deficits of HRas G12V/G12V mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "lovastatin",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Treatment with lovastatin, a HMG-CoA-Reductase inhibitor which has been shown to rescue the behavioral phenotypes of mouse models of NF1 and Noonan syndrome, was unable to restore ERK signaling and the cognitive deficits of HRas G12V/G12V mice.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "mitogen-activated protein kinase (MEK) inhibitor",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "ERK upregulation",
+   "object_type": "mechanism",
+   "quote": "Administration of a potent mitogen-activated protein kinase (MEK) inhibitor rescued the ERK upregulation and the mGluR-LTD deficit of HRas G12V/G12V mice, but failed to rescue the cognitive deficits.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

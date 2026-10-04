@@ -1,0 +1,61 @@
+{
+ "pmid": "23236174",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.547Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "2b6a0d1c39e982a3",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/23236174.json",
+ "claims": [
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "atypical Rett syndrome",
+   "object_type": "disease",
+   "quote": "Mutations in the X-linked cyclin-dependent kinase-like 5 (CDKL5) gene have been identified in neurodevelopmental disorders including atypical Rett syndrome (RTT), autism spectrum disorders (ASDs), and early infantile epileptic encephalopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "autism spectrum disorders",
+   "object_type": "disease",
+   "quote": "Mutations in the X-linked cyclin-dependent kinase-like 5 (CDKL5) gene have been identified in neurodevelopmental disorders including atypical Rett syndrome (RTT), autism spectrum disorders (ASDs), and early infantile epileptic encephalopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "early infantile epileptic encephalopathy",
+   "object_type": "disease",
+   "quote": "Mutations in the X-linked cyclin-dependent kinase-like 5 (CDKL5) gene have been identified in neurodevelopmental disorders including atypical Rett syndrome (RTT), autism spectrum disorders (ASDs), and early infantile epileptic encephalopathy.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CDKL5",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "AKT-mammalian target of rapamycin (mTOR) cascade",
+   "object_type": "mechanism",
+   "quote": "Moreover, kinome profiling uncovers disruption of multiple signal transduction pathways, including the AKT-mammalian target of rapamycin (mTOR) cascade, upon Cdkl5 loss-of-function.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

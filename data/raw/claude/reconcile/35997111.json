@@ -1,0 +1,497 @@
+{
+ "pmid": "35997111",
+ "entries": {
+  "ac47d9156a79ff57": {
+   "mention": "infantile onset, drug-resistant seizures",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0007359",
+    "phenotype:HP:0002197",
+    "phenotype:HP:0012469",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0007105",
+    "phenotype:HP:0031165",
+    "phenotype:HP:0007334",
+    "phenotype:HP:0011171",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819"
+   ],
+   "node_id": "phenotype:HP:0001250",
+   "match": "instance",
+   "justification": "drug-resistant infantile seizures",
+   "raw_node_id": "phenotype:HP:0001250",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.806Z"
+  },
+  "d06c4e3dbe76c517": {
+   "mention": "severe neurodevelopmental impairment",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0011344",
+    "phenotype:HP:0100704",
+    "phenotype:HP:0000365",
+    "phenotype:HP:0006520",
+    "phenotype:HP:0001263",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0002376",
+    "phenotype:HP:0007281",
+    "phenotype:HP:0025162",
+    "phenotype:HP:0011343"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "not equivalent to severe GDD",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.806Z"
+  },
+  "cc18382d694e419b": {
+   "mention": "profound lifelong disability",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002187",
+    "phenotype:HP:0001249",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0006889",
+    "phenotype:HP:0012736",
+    "phenotype:HP:0000737",
+    "phenotype:HP:0025335",
+    "phenotype:HP:0002540",
+    "phenotype:HP:0000712",
+    "phenotype:HP:0025336"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no disability term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.806Z"
+  },
+  "0bfa27cd709235f1": {
+   "mention": "phosphorylation events in neuronal network development",
+   "type": "mechanism",
+   "candidates": [
+    "mech:action-potential",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:protein-destabilization",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:ras-protein-signal-transduction",
+    "mech:lysosomal-storage",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:gain-of-function",
+    "mech:ca-triggered-exocytosis",
+    "mech:lysosome-organization"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "kinase activity not among candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.806Z"
+  },
+  "86581b9246b3866c": {
+   "mention": "loss of CDKL5 catalytic activity",
+   "type": "mechanism",
+   "candidates": [
+    "mech:loss-of-function",
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:potassium-channel-activity",
+    "mech:nmda-receptor-activity",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:gain-of-function",
+    "mech:ca-triggered-exocytosis",
+    "mech:negative-regulation-of-ras-signaling"
+   ],
+   "node_id": "mech:loss-of-function",
+   "match": "instance",
+   "justification": "loss of CDKL5 catalytic activity",
+   "raw_node_id": "mech:loss-of-function",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.806Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.806Z",
+   "request_payload": {
+    "title": "CDKL5 deficiency disorder: molecular insights and mechanisms of pathogenicity to fast-track therapeutic development.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "infantile onset, drug-resistant seizures",
+      "declared_type": "phenotype",
+      "sentence": "Individuals with CDD suffer infantile onset, drug-resistant seizures, severe neurodevelopmental impairment and profound lifelong disability.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0007359",
+        "type": "phenotype",
+        "label": "Focal-onset seizure",
+        "note": "HPO HP:0007359"
+       },
+       {
+        "id": "phenotype:HP:0002197",
+        "type": "phenotype",
+        "label": "Generalized-onset seizure",
+        "note": "HPO HP:0002197"
+       },
+       {
+        "id": "phenotype:HP:0012469",
+        "type": "phenotype",
+        "label": "Infantile spasms",
+        "note": "HPO HP:0012469"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0007105",
+        "type": "phenotype",
+        "label": "Infantile encephalopathy",
+        "note": "HPO HP:0007105"
+       },
+       {
+        "id": "phenotype:HP:0031165",
+        "type": "phenotype",
+        "label": "Multifocal seizures",
+        "note": "HPO HP:0031165"
+       },
+       {
+        "id": "phenotype:HP:0007334",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure with focal onset",
+        "note": "HPO HP:0007334"
+       },
+       {
+        "id": "phenotype:HP:0011171",
+        "type": "phenotype",
+        "label": "Simple febrile seizure",
+        "note": "HPO HP:0011171"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "severe neurodevelopmental impairment",
+      "declared_type": "phenotype",
+      "sentence": "Individuals with CDD suffer infantile onset, drug-resistant seizures, severe neurodevelopmental impairment and profound lifelong disability.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0100704",
+        "type": "phenotype",
+        "label": "Cerebral visual impairment",
+        "note": "HPO HP:0100704"
+       },
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0006520",
+        "type": "phenotype",
+        "label": "Progressive pulmonary function impairment",
+        "note": "HPO HP:0006520"
+       },
+       {
+        "id": "phenotype:HP:0001263",
+        "type": "phenotype",
+        "label": "Global developmental delay",
+        "note": "HPO HP:0001263"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0002376",
+        "type": "phenotype",
+        "label": "Developmental regression",
+        "note": "HPO HP:0002376"
+       },
+       {
+        "id": "phenotype:HP:0007281",
+        "type": "phenotype",
+        "label": "Developmental stagnation",
+        "note": "HPO HP:0007281"
+       },
+       {
+        "id": "phenotype:HP:0025162",
+        "type": "phenotype",
+        "label": "Severe temper tantrums",
+        "note": "HPO HP:0025162"
+       },
+       {
+        "id": "phenotype:HP:0011343",
+        "type": "phenotype",
+        "label": "Moderate global developmental delay",
+        "note": "HPO HP:0011343"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "profound lifelong disability",
+      "declared_type": "phenotype",
+      "sentence": "Individuals with CDD suffer infantile onset, drug-resistant seizures, severe neurodevelopmental impairment and profound lifelong disability.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002187",
+        "type": "phenotype",
+        "label": "Profound intellectual disability",
+        "note": "HPO HP:0002187"
+       },
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0006889",
+        "type": "phenotype",
+        "label": "Borderline intellectual disability",
+        "note": "HPO HP:0006889"
+       },
+       {
+        "id": "phenotype:HP:0012736",
+        "type": "phenotype",
+        "label": "Profound global developmental delay",
+        "note": "HPO HP:0012736"
+       },
+       {
+        "id": "phenotype:HP:0000737",
+        "type": "phenotype",
+        "label": "Irritability",
+        "note": "HPO HP:0000737"
+       },
+       {
+        "id": "phenotype:HP:0025335",
+        "type": "phenotype",
+        "label": "Delayed ability to stand",
+        "note": "HPO HP:0025335"
+       },
+       {
+        "id": "phenotype:HP:0002540",
+        "type": "phenotype",
+        "label": "Inability to walk",
+        "note": "HPO HP:0002540"
+       },
+       {
+        "id": "phenotype:HP:0000712",
+        "type": "phenotype",
+        "label": "Emotional lability",
+        "note": "HPO HP:0000712"
+       },
+       {
+        "id": "phenotype:HP:0025336",
+        "type": "phenotype",
+        "label": "Delayed ability to sit",
+        "note": "HPO HP:0025336"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "phosphorylation events in neuronal network development",
+      "declared_type": "mechanism",
+      "sentence": "The CDKL5 protein is a kinase that regulates key phosphorylation events vital to the development of the complex neuronal network of the brain.",
+      "candidates": [
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "loss of CDKL5 catalytic activity",
+      "declared_type": "mechanism",
+      "sentence": "Pathogenic variants identified in patients may either result in loss of CDKL5 catalytic activity or are hypomorphic leading to partial loss of function.",
+      "candidates": [
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:potassium-channel-activity",
+        "type": "mechanism",
+        "label": "Potassium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the energy-independent facilitated diffusion of a potassium ion through a transmembrane aqueous pore or channel."
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"infantile onset, drug-resistant seizures\",\"node_id\":\"phenotype:HP:0001250\",\"match\":\"instance\",\"justification\":\"drug-resistant infantile seizures\"},{\"mention_id\":\"m2\",\"mention\":\"severe neurodevelopmental impairment\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"not equivalent to severe GDD\"},{\"mention_id\":\"m3\",\"mention\":\"profound lifelong disability\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no disability term\"},{\"mention_id\":\"m4\",\"mention\":\"phosphorylation events in neuronal network development\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"kinase activity not among candidates\"},{\"mention_id\":\"m5\",\"mention\":\"loss of CDKL5 catalytic activity\",\"node_id\":\"mech:loss-of-function\",\"match\":\"instance\",\"justification\":\"loss of CDKL5 catalytic activity\"}]}"
+  }
+ ]
+}

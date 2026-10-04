@@ -3,6 +3,13 @@
  *
  *   node pipeline/openai/reconcile.mjs              # deterministic index, then OpenAI for the rest
  *   node pipeline/openai/reconcile.mjs --no-llm     # deterministic only (no calls)
+ *   READER=claude node pipeline/openai/reconcile.mjs --dump-pending pending.json
+ *   READER=claude node pipeline/openai/reconcile.mjs --apply-answers answers.json
+ *       The Claude reader never calls a model from here: --dump-pending writes, per abstract, the same
+ *       payload the OpenAI step would send (mentions, sentences, candidate nodes); a Claude agent answers
+ *       it with RECONCILE_INSTRUCTIONS as {pmid: {resolutions: [{mention_id, mention, node_id, match,
+ *       justification}]}}; --apply-answers caches them under the same accept rules (id must be one of
+ *       that mention's candidates, mention text must match).
  *
  * 1. A deterministic index built from data/graph.json (labels, synonyms, xrefs, gene symbols, protein
  *    names, GO names, disease subtype names, HPO labels) resolves what it can, conservatively:
@@ -23,7 +30,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { complete } from '../../integrations/openai/llm.mjs';
 import {
-  FATAL_KINDS, OUT_RAW, RECONCILE_CACHE, RUN_STATE, errorInfo, loadAllAbstracts, loadBaselineGraph, logUsage, norm, parseArgs,
+  FATAL_KINDS, OUT_RAW, READER, RECONCILE_CACHE, RUN_STATE, errorInfo, loadAllAbstracts, loadBaselineGraph, logUsage, norm, parseArgs,
   readJson, runPool, sha1, sourceText, writeJson,
 } from './common.mjs';
 
@@ -356,10 +363,31 @@ async function main() {
   const cacheFile = (pmid) => path.join(RECONCILE_CACHE, `${pmid}.json`);
   const loadCache = (pmid) => (existsSync(cacheFile(pmid)) ? readJson(cacheFile(pmid)) : { pmid, entries: {} });
   const concurrency = Math.min(2, Number(args.concurrency ?? 2) || 1); // hard cap: 2 in flight
+  const answers = args['apply-answers'] ? readJson(String(args['apply-answers'])) : null;
+  const dump = {};
+  let applied = 0;
+  const record = (cache, todo, resolutions, model) => {
+    const byId = new Map((resolutions ?? []).map((r) => [r.mention_id, r]));
+    todo.forEach(([sig, m], i) => {
+      const r = byId.get(`m${i + 1}`);
+      if (answers && r && r.mention !== undefined && norm(r.mention) !== norm(m.mention)) return; // stale answer
+      if (answers && !r) return;
+      const accepted = r && r.node_id !== 'none' && r.match !== 'none' && m.candidates.includes(r.node_id);
+      cache.entries[sig] = {
+        mention: m.mention, type: m.type, candidates: m.candidates,
+        node_id: accepted ? r.node_id : null, match: r?.match ?? 'missing', justification: r?.justification ?? null,
+        raw_node_id: r?.node_id ?? null, rejected_not_in_candidates: Boolean(r && r.node_id !== 'none' && !m.candidates.includes(r.node_id)),
+        model, generated_at: new Date().toISOString(),
+      };
+      applied += 1;
+    });
+  };
   await runPool(work, concurrency, async ({ pmid, ms }) => {
     const cache = loadCache(pmid);
     const todo = [...ms.entries()].filter(([, m]) => !findCached(cache, m.type, m.mention));
-    if (!todo.length || !useLlm) return;
+    if (!todo.length) return;
+    const wantPayload = args['dump-pending'] || answers || (useLlm && READER === 'openai');
+    if (!wantPayload) return;
     const rec = abstracts.get(pmid);
     const payload = {
       title: rec.title,
@@ -368,21 +396,22 @@ async function main() {
         candidates: m.candidates.map((id) => describeNode(index, id)),
       })),
     };
+    if (args['dump-pending']) {
+      dump[pmid] = payload;
+      return;
+    }
+    if (answers) {
+      if (!answers[pmid]) return;
+      record(cache, todo, answers[pmid].resolutions, 'agent-reading');
+      cache.calls = [...(cache.calls ?? []), { model: 'agent-reading', reader: READER, generated_at: new Date().toISOString(), request_payload: payload, raw_response: JSON.stringify(answers[pmid]) }];
+      writeJson(cacheFile(pmid), cache);
+      return;
+    }
     const started = Date.now();
     try {
       const out = await complete({ instructions: RECONCILE_INSTRUCTIONS, input: JSON.stringify(payload), schema: RECONCILE_SCHEMA, schemaName: 'resolutions', authMode: 'chatgpt' });
       calls += 1;
-      const byId = new Map((out.json?.resolutions ?? []).map((r) => [r.mention_id, r]));
-      todo.forEach(([sig, m], i) => {
-        const r = byId.get(`m${i + 1}`);
-        const accepted = r && r.node_id !== 'none' && r.match !== 'none' && m.candidates.includes(r.node_id);
-        cache.entries[sig] = {
-          mention: m.mention, type: m.type, candidates: m.candidates,
-          node_id: accepted ? r.node_id : null, match: r?.match ?? 'missing', justification: r?.justification ?? null,
-          raw_node_id: r?.node_id ?? null, rejected_not_in_candidates: Boolean(r && r.node_id !== 'none' && !m.candidates.includes(r.node_id)),
-          model: out.model, generated_at: new Date().toISOString(),
-        };
-      });
+      record(cache, todo, out.json?.resolutions, out.model);
       cache.calls = [...(cache.calls ?? []), { model: out.model, generated_at: new Date().toISOString(), usage: out.usage, request_payload: payload, raw_response: out.text }];
       writeJson(cacheFile(pmid), cache);
       logUsage({ script: 'reconcile', pmid, model: out.model, auth_path: out.authPath, structured_mode: out.structuredMode, usage: out.usage, ms: Date.now() - started, ok: true, mentions: todo.length });
@@ -394,7 +423,12 @@ async function main() {
       if (FATAL_KINDS.has(info.kind)) stop = info;
     }
   }, () => Boolean(stop));
-  if (useLlm) {
+  if (args['dump-pending']) {
+    writeJson(String(args['dump-pending']), dump);
+    console.log(`[reconcile] wrote ${Object.keys(dump).length} abstracts with pending mentions to ${args['dump-pending']}`);
+  }
+  if (answers) console.log(`[reconcile] applied ${applied} answered mentions`);
+  if (useLlm && READER === 'openai' && !args['dump-pending'] && !answers) {
     const state = existsSync(RUN_STATE) ? readJson(RUN_STATE) : {};
     state.reconcile = { at: new Date().toISOString(), calls, stopped: stop };
     writeJson(RUN_STATE, state);
@@ -409,7 +443,7 @@ async function main() {
   };
   const synonymProposals = new Map(); // node id -> Map(lower -> {synonym, pmids, justification})
   const synonymRejected = [];
-  const mentionStats = { total: 0, generic: 0, deterministic: 0, openai: 0, unresolved: 0, openai_rejected_not_in_candidates: 0 };
+  const mentionStats = { total: 0, generic: 0, deterministic: 0, reader: 0, unresolved: 0, reader_rejected_not_in_candidates: 0 };
   const methodCounts = {};
   const resolveSide = (c, side) => {
     const mention = c[`${side}_mention`];
@@ -419,9 +453,9 @@ async function main() {
     if (r.method !== 'pending') return r;
     const e = findCached(cacheOf(c.pmid), type, mention);
     if (!e) return { id: null, method: 'unresolved(no-llm-answer)' };
-    if (!e.node_id) return { id: null, method: e.rejected_not_in_candidates ? 'openai:rejected-not-in-candidates' : 'openai:none', justification: e.justification };
-    if (!index.nodes.has(e.node_id)) return { id: null, method: 'openai:stale-node', justification: e.justification };
-    return { id: e.node_id, method: `openai:${e.match}`, justification: e.justification };
+    if (!e.node_id) return { id: null, method: e.rejected_not_in_candidates ? `${READER}:rejected-not-in-candidates` : `${READER}:none`, justification: e.justification };
+    if (!index.nodes.has(e.node_id)) return { id: null, method: `${READER}:stale-node`, justification: e.justification };
+    return { id: e.node_id, method: `${READER}:${e.match}`, justification: e.justification };
   };
 
   const seenMention = new Set();
@@ -440,13 +474,13 @@ async function main() {
         if (r.method === 'generic') mentionStats.generic += 1;
         else if (r.method === 'not-in-graph') mentionStats.not_in_graph = (mentionStats.not_in_graph ?? 0) + 1;
         else if (r.method.startsWith('skipped')) mentionStats.skipped_model_only_phenotype = (mentionStats.skipped_model_only_phenotype ?? 0) + 1;
-        else if (r.method.startsWith('openai:') && r.id) mentionStats.openai += 1;
+        else if (r.method.startsWith(`${READER}:`) && r.id) mentionStats.reader += 1;
         else if (r.id) mentionStats.deterministic += 1;
         else mentionStats.unresolved += 1;
-        if (r.method === 'openai:rejected-not-in-candidates') mentionStats.openai_rejected_not_in_candidates += 1;
+        if (r.method === `${READER}:rejected-not-in-candidates`) mentionStats.reader_rejected_not_in_candidates += 1;
       }
       // Synonym proposal: OpenAI said "same", the mention literally appears in the abstract, and it is new.
-      if (r.method === 'openai:same' && r.id && !r.id.startsWith('vg:') && !r.id.startsWith('gene_level:')) {
+      if (r.method === `${READER}:same` && r.id && !r.id.startsWith('vg:') && !r.id.startsWith('gene_level:')) {
         const mention = norm(c[`${side}_mention`]);
         const text = norm(sourceText(abstracts.get(c.pmid)));
         let literal = text.includes(mention) ? mention : null;

@@ -1,0 +1,133 @@
+{
+ "pmid": "23622393",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.547Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "8f83946a3af8f1d1",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/23622393.json",
+ "claims": [
+  {
+   "subject_mention": "GBA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Gaucher disease",
+   "object_type": "disease",
+   "quote": "It is due to mutations mostly in the GBA gene, although saposine C deficiency is due to mutations in the PSAP gene.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PSAP",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "saposine C deficiency",
+   "object_type": "disease",
+   "quote": "It is due to mutations mostly in the GBA gene, although saposine C deficiency is due to mutations in the PSAP gene.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "glucocerebrosidase deficiency",
+   "object_type": "mechanism",
+   "quote": "Gaucher disease is an autosomal recessive condition due to glucocerebrosidase deficiency responsible for the lysosomal accumulation of glucosylceramide, a complex lipid derived from cell membranes, mainly in macrophages.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "lysosomal accumulation of glucosylceramide",
+   "object_type": "mechanism",
+   "quote": "Gaucher disease is an autosomal recessive condition due to glucocerebrosidase deficiency responsible for the lysosomal accumulation of glucosylceramide, a complex lipid derived from cell membranes, mainly in macrophages.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "Splenomegaly",
+   "object_type": "phenotype",
+   "quote": "Splenomegaly, blood cytopenia, and bone involvement are the main manifestations of Gaucher disease, but nervous system degeneration is observed in about 5-10% of patients.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "blood cytopenia",
+   "object_type": "phenotype",
+   "quote": "Splenomegaly, blood cytopenia, and bone involvement are the main manifestations of Gaucher disease, but nervous system degeneration is observed in about 5-10% of patients.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "bone involvement",
+   "object_type": "phenotype",
+   "quote": "Splenomegaly, blood cytopenia, and bone involvement are the main manifestations of Gaucher disease, but nervous system degeneration is observed in about 5-10% of patients.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "nervous system degeneration",
+   "object_type": "phenotype",
+   "quote": "Splenomegaly, blood cytopenia, and bone involvement are the main manifestations of Gaucher disease, but nervous system degeneration is observed in about 5-10% of patients.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "accumulation in neurons of glucosylceramide and its derivative, psychosine",
+   "object_type": "mechanism",
+   "quote": "The accumulation in neurons of glucosylceramide and its derivative, psychosine, are thought to underlie neuronal dysfunction and death, although Gaucher cells that mostly accumulate such substances are mainly macrophages.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "Enzyme replacement therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Gaucher disease",
+   "object_type": "disease",
+   "quote": "Enzyme replacement therapy dramatically improves the outcome of patients because of its extreme efficacy in the treatment of the systemic involvement.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

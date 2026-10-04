@@ -1,0 +1,685 @@
+{
+ "pmid": "17603482",
+ "entries": {
+  "5d21ff0586e46449": {
+   "mention": "Noonan syndrome",
+   "type": "disease",
+   "candidates": [
+    "disease:KRAS",
+    "disease:PTPN11",
+    "disease:RAF1",
+    "disease:SOS1",
+    "disease:BRAF",
+    "disease:LZTR1",
+    "disease:RIT1",
+    "disease:NF1",
+    "disease:CBL",
+    "disease:HRAS"
+   ],
+   "node_id": "disease:RAF1",
+   "match": "instance",
+   "justification": "Noonan syndrome caused by RAF1 mutations",
+   "raw_node_id": "disease:RAF1",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.852Z"
+  },
+  "312e28f26bd87f22": {
+   "mention": "increased in vitro kinase and ERK activation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:protein-serine-threonine-kinase-activity",
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:gain-of-function",
+    "mech:protein-destabilization",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:voltage-gated-sodium-channel-activity",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:voltage-gated-calcium-channel-activity",
+    "mech:synaptic-vesicle-fusion"
+   ],
+   "node_id": "mech:gain-of-function",
+   "match": "instance",
+   "justification": "Increased kinase and ERK activation from activating RAF1 mutations",
+   "raw_node_id": "mech:gain-of-function",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.852Z"
+  },
+  "e8e63ea8442150f9": {
+   "mention": "hypertrophic cardiomyopathy (HCM)",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001639",
+    "phenotype:HP:0005157",
+    "phenotype:HP:0001712",
+    "phenotype:HP:0005144",
+    "phenotype:HP:0003445",
+    "phenotype:HP:0001276",
+    "phenotype:HP:0000822",
+    "phenotype:HP:0000316",
+    "phenotype:HP:0000648",
+    "phenotype:HP:0007133"
+   ],
+   "node_id": "phenotype:HP:0001639",
+   "match": "same",
+   "justification": "HCM",
+   "raw_node_id": "phenotype:HP:0001639",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.852Z"
+  },
+  "35f6381006373a1d": {
+   "mention": "facial dysmorphia",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001041",
+    "phenotype:HP:0000280",
+    "phenotype:HP:0002268",
+    "phenotype:HP:0007166",
+    "phenotype:HP:0001310",
+    "phenotype:HP:0001332",
+    "phenotype:HP:0007308",
+    "phenotype:HP:0001260",
+    "phenotype:HP:0100660",
+    "phenotype:HP:0020035"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No facial dysmorphism term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.852Z"
+  },
+  "6c3335b0151a0fa6": {
+   "mention": "congenital heart defects",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0005988",
+    "phenotype:HP:0001631",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0002421",
+    "phenotype:HP:0000524",
+    "phenotype:HP:0006579",
+    "phenotype:HP:0001537",
+    "phenotype:HP:0008802",
+    "phenotype:HP:0000365",
+    "phenotype:HP:0000546"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Generic congenital heart defects broader than candidates",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.852Z"
+  },
+  "bc6a691f93568641": {
+   "mention": "development of normal myocardial structure and function",
+   "type": "mechanism",
+   "candidates": [
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:ca-triggered-exocytosis",
+    "mech:ras-protein-signal-transduction",
+    "mech:protein-destabilization"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Developmental process not listed",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.852Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.852Z",
+   "request_payload": {
+    "title": "Germline gain-of-function mutations in RAF1 cause Noonan syndrome.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Noonan syndrome",
+      "declared_type": "disease",
+      "sentence": "Germline gain-of-function mutations in RAF1 cause Noonan syndrome.",
+      "candidates": [
+       {
+        "id": "disease:KRAS",
+        "type": "disease",
+        "label": "KRAS-related RASopathies",
+        "synonyms": [
+         "Noonan syndrome 3",
+         "NS3",
+         "CFC2",
+         "KRAS Noonan syndrome",
+         "KRAS gene related Noonan syndrome",
+         "Noonan syndrome caused by mutation in KRAS",
+         "Noonan syndrome type 3",
+         "KRAS cardiofaciocutaneous syndrome"
+        ],
+        "summary": "Germline KRAS changes cause Noonan syndrome or cardiofaciocutaneous syndrome; the same gene is a common cancer driver when changed in tumours."
+       },
+       {
+        "id": "disease:PTPN11",
+        "type": "disease",
+        "label": "PTPN11-related disorders",
+        "synonyms": [
+         "Noonan syndrome 1",
+         "NS1",
+         "LEOPARD syndrome 1",
+         "NSML",
+         "metachondromatosis",
+         "Noonan syndrome type 1",
+         "LEOPARD syndrome type 1",
+         "LPRD1"
+        ],
+        "summary": "Changes in PTPN11 (SHP2) are the most common cause of Noonan syndrome (short stature, heart defects, typical facial features). Different PTPN11 changes cause No"
+       },
+       {
+        "id": "disease:RAF1",
+        "type": "disease",
+        "label": "RAF1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 5",
+         "NS5",
+         "LEOPARD syndrome 2",
+         "Noonan syndrome caused by mutation in RAF1",
+         "Noonan syndrome type 5",
+         "RAF1 Noonan syndrome",
+         "RAF1 gene related Noonan syndrome",
+         "LPRD2"
+        ],
+        "summary": "Activating RAF1 changes cause Noonan syndrome (and NSML) with a very high rate of hypertrophic cardiomyopathy; other RAF1 changes are linked to dilated cardiomy"
+       },
+       {
+        "id": "disease:SOS1",
+        "type": "disease",
+        "label": "SOS1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 4",
+         "NS4",
+         "gingival fibromatosis 1",
+         "Noonan syndrome caused by mutation in SOS1",
+         "Noonan syndrome type 4",
+         "SOS1 Noonan syndrome",
+         "SOS1 gene related Noonan syndrome",
+         "GGF1"
+        ],
+        "summary": "Activating SOS1 changes cause Noonan syndrome, often with skin and hair features and normal development; a different SOS1 change causes hereditary gingival fibr"
+       },
+       {
+        "id": "disease:BRAF",
+        "type": "disease",
+        "label": "BRAF-related RASopathies (cardiofaciocutaneous syndrome)",
+        "synonyms": [
+         "CFC1",
+         "cardiofaciocutaneous syndrome 1",
+         "Noonan syndrome 7",
+         "LEOPARD syndrome 3",
+         "BRAF cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome",
+         "cardiofaciocutaneous syndrome caused by mutation in BRAF",
+         "cardiofaciocutaneous syndrome type 1"
+        ],
+        "summary": "Germline BRAF changes mostly cause cardiofaciocutaneous (CFC) syndrome: heart defects, skin and hair changes and developmental delay; some cause Noonan syndrome"
+       },
+       {
+        "id": "disease:LZTR1",
+        "type": "disease",
+        "label": "LZTR1-related disorders",
+        "synonyms": [
+         "Noonan syndrome 10",
+         "Noonan syndrome 2",
+         "schwannomatosis 2",
+         "LZTR1 Noonan syndrome",
+         "NS10",
+         "Noonan syndrome caused by mutation in LZTR1",
+         "Noonan syndrome type 10",
+         "NS2"
+        ],
+        "summary": "LZTR1 changes cause dominant or recessive Noonan syndrome, and loss of one LZTR1 copy predisposes to schwannomatosis or isolated cafe-au-lait spots."
+       },
+       {
+        "id": "disease:RIT1",
+        "type": "disease",
+        "label": "RIT1-related Noonan syndrome",
+        "synonyms": [
+         "Noonan syndrome 8",
+         "NS8",
+         "Noonan syndrome caused by mutation in RIT1",
+         "Noonan syndrome type 8",
+         "RIT1 Noonan syndrome"
+        ],
+        "summary": "Activating RIT1 changes cause Noonan syndrome with a high rate of hypertrophic cardiomyopathy."
+       },
+       {
+        "id": "disease:NF1",
+        "type": "disease",
+        "label": "NF1-related disorders (neurofibromatosis type 1)",
+        "synonyms": [
+         "neurofibromatosis type 1",
+         "von Recklinghausen disease",
+         "NF1",
+         "neurofibromatosis-Noonan syndrome",
+         "Watson syndrome",
+         "Neurofibromatosis 1",
+         "Nf1-Microdeletion syndrome",
+         "Recklinghausen's disease"
+        ],
+        "summary": "Loss of one NF1 copy causes neurofibromatosis type 1: cafe-au-lait spots, nerve-sheath tumours (neurofibromas, plexiform neurofibromas) and learning difficultie"
+       },
+       {
+        "id": "disease:CBL",
+        "type": "disease",
+        "label": "CBL-related disorder",
+        "synonyms": [
+         "NSLL",
+         "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+         "CBL-related disorder",
+         "Cbl syndrome",
+         "Noonan syndrome-like disorder with JMML",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukaemia",
+         "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+        ],
+        "summary": "Germline CBL changes cause a Noonan syndrome-like disorder with a predisposition to juvenile myelomonocytic leukaemia."
+       },
+       {
+        "id": "disease:HRAS",
+        "type": "disease",
+        "label": "HRAS-related disorders (Costello syndrome)",
+        "synonyms": [
+         "Costello syndrome",
+         "faciocutaneoskeletal syndrome",
+         "CSTLO",
+         "FCS syndrome",
+         "congenital myopathy with excess of muscle spindles"
+        ],
+        "summary": "Germline activating HRAS changes cause Costello syndrome: feeding problems, loose skin, heart disease, developmental delay and a raised tumour risk."
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "increased in vitro kinase and ERK activation",
+      "declared_type": "mechanism",
+      "sentence": "Cells transfected with constructs containing Noonan syndrome-associated RAF1 mutations showed increased in vitro kinase and ERK activation, and zebrafish embryos with morpholino knockdown of raf1 demonstrated the need for raf1 for the development of normal myocardial structure and function.",
+      "candidates": [
+       {
+        "id": "mech:protein-serine-threonine-kinase-activity",
+        "type": "mechanism",
+        "label": "Protein serine/threonine kinase activity",
+        "note": "kind: process",
+        "summary": "Catalysis of the reactions: ATP + protein serine = ADP + protein serine phosphate, and ATP + protein threonine = ADP + protein threonine phosphate."
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:voltage-gated-sodium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated sodium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a sodium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltage"
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:voltage-gated-calcium-channel-activity",
+        "type": "mechanism",
+        "label": "Voltage-gated calcium channel activity",
+        "note": "kind: process",
+        "summary": "Enables the transmembrane transfer of a calcium ion by a voltage-gated channel. A voltage-gated channel is a channel whose open state is dependent on the voltag"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "hypertrophic cardiomyopathy (HCM)",
+      "declared_type": "phenotype",
+      "sentence": "We have identified five different mutations in RAF1 in ten individuals with Noonan syndrome; those with any of four mutations causing changes in the CR2 domain of RAF1 had hypertrophic cardiomyopathy (HCM), whereas affected individuals with mutations leading to changes in the CR3 domain did not.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001639",
+        "type": "phenotype",
+        "label": "Hypertrophic cardiomyopathy",
+        "note": "HPO HP:0001639"
+       },
+       {
+        "id": "phenotype:HP:0005157",
+        "type": "phenotype",
+        "label": "Concentric hypertrophic cardiomyopathy",
+        "note": "HPO HP:0005157"
+       },
+       {
+        "id": "phenotype:HP:0001712",
+        "type": "phenotype",
+        "label": "Left ventricular hypertrophy",
+        "note": "HPO HP:0001712"
+       },
+       {
+        "id": "phenotype:HP:0005144",
+        "type": "phenotype",
+        "label": "Ventricular septal hypertrophy",
+        "note": "HPO HP:0005144"
+       },
+       {
+        "id": "phenotype:HP:0003445",
+        "type": "phenotype",
+        "label": "EMG: neuropathic changes",
+        "note": "HPO HP:0003445"
+       },
+       {
+        "id": "phenotype:HP:0001276",
+        "type": "phenotype",
+        "label": "Hypertonia",
+        "note": "HPO HP:0001276"
+       },
+       {
+        "id": "phenotype:HP:0000822",
+        "type": "phenotype",
+        "label": "Hypertension",
+        "note": "HPO HP:0000822"
+       },
+       {
+        "id": "phenotype:HP:0000316",
+        "type": "phenotype",
+        "label": "Hypertelorism",
+        "note": "HPO HP:0000316"
+       },
+       {
+        "id": "phenotype:HP:0000648",
+        "type": "phenotype",
+        "label": "Optic atrophy",
+        "note": "HPO HP:0000648"
+       },
+       {
+        "id": "phenotype:HP:0007133",
+        "type": "phenotype",
+        "label": "Progressive peripheral neuropathy",
+        "note": "HPO HP:0007133"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "facial dysmorphia",
+      "declared_type": "phenotype",
+      "sentence": "Noonan syndrome is characterized by short stature, facial dysmorphia and a wide spectrum of congenital heart defects.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001041",
+        "type": "phenotype",
+        "label": "Facial erythema",
+        "note": "HPO HP:0001041"
+       },
+       {
+        "id": "phenotype:HP:0000280",
+        "type": "phenotype",
+        "label": "Coarse facial features",
+        "note": "HPO HP:0000280"
+       },
+       {
+        "id": "phenotype:HP:0002268",
+        "type": "phenotype",
+        "label": "Paroxysmal dystonia",
+        "note": "HPO HP:0002268"
+       },
+       {
+        "id": "phenotype:HP:0007166",
+        "type": "phenotype",
+        "label": "Paroxysmal dyskinesia",
+        "note": "HPO HP:0007166"
+       },
+       {
+        "id": "phenotype:HP:0001310",
+        "type": "phenotype",
+        "label": "Dysmetria",
+        "note": "HPO HP:0001310"
+       },
+       {
+        "id": "phenotype:HP:0001332",
+        "type": "phenotype",
+        "label": "Dystonia",
+        "note": "HPO HP:0001332"
+       },
+       {
+        "id": "phenotype:HP:0007308",
+        "type": "phenotype",
+        "label": "Extrapyramidal dyskinesia",
+        "note": "HPO HP:0007308"
+       },
+       {
+        "id": "phenotype:HP:0001260",
+        "type": "phenotype",
+        "label": "Dysarthria",
+        "note": "HPO HP:0001260"
+       },
+       {
+        "id": "phenotype:HP:0100660",
+        "type": "phenotype",
+        "label": "Dyskinesia",
+        "note": "HPO HP:0100660"
+       },
+       {
+        "id": "phenotype:HP:0020035",
+        "type": "phenotype",
+        "label": "Lower limb dysmetria",
+        "note": "HPO HP:0020035"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "congenital heart defects",
+      "declared_type": "phenotype",
+      "sentence": "Noonan syndrome is characterized by short stature, facial dysmorphia and a wide spectrum of congenital heart defects.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0005988",
+        "type": "phenotype",
+        "label": "Congenital muscular torticollis",
+        "note": "HPO HP:0005988"
+       },
+       {
+        "id": "phenotype:HP:0001631",
+        "type": "phenotype",
+        "label": "Atrial septal defect",
+        "note": "HPO HP:0001631"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0002421",
+        "type": "phenotype",
+        "label": "Poor head control",
+        "note": "HPO HP:0002421"
+       },
+       {
+        "id": "phenotype:HP:0000524",
+        "type": "phenotype",
+        "label": "Conjunctival telangiectasia",
+        "note": "HPO HP:0000524"
+       },
+       {
+        "id": "phenotype:HP:0006579",
+        "type": "phenotype",
+        "label": "Prolonged neonatal jaundice",
+        "note": "HPO HP:0006579"
+       },
+       {
+        "id": "phenotype:HP:0001537",
+        "type": "phenotype",
+        "label": "Umbilical hernia",
+        "note": "HPO HP:0001537"
+       },
+       {
+        "id": "phenotype:HP:0008802",
+        "type": "phenotype",
+        "label": "Hypoplasia of the femoral head",
+        "note": "HPO HP:0008802"
+       },
+       {
+        "id": "phenotype:HP:0000365",
+        "type": "phenotype",
+        "label": "Hearing impairment",
+        "note": "HPO HP:0000365"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "development of normal myocardial structure and function",
+      "declared_type": "mechanism",
+      "sentence": "Cells transfected with constructs containing Noonan syndrome-associated RAF1 mutations showed increased in vitro kinase and ERK activation, and zebrafish embryos with morpholino knockdown of raf1 demonstrated the need for raf1 for the development of normal myocardial structure and function.",
+      "candidates": [
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Noonan syndrome\",\"node_id\":\"disease:RAF1\",\"match\":\"instance\",\"justification\":\"Noonan syndrome caused by RAF1 mutations\"},{\"mention_id\":\"m2\",\"mention\":\"increased in vitro kinase and ERK activation\",\"node_id\":\"mech:gain-of-function\",\"match\":\"instance\",\"justification\":\"Increased kinase and ERK activation from activating RAF1 mutations\"},{\"mention_id\":\"m3\",\"mention\":\"hypertrophic cardiomyopathy (HCM)\",\"node_id\":\"phenotype:HP:0001639\",\"match\":\"same\",\"justification\":\"HCM\"},{\"mention_id\":\"m4\",\"mention\":\"facial dysmorphia\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No facial dysmorphism term\"},{\"mention_id\":\"m5\",\"mention\":\"congenital heart defects\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Generic congenital heart defects broader than candidates\"},{\"mention_id\":\"m6\",\"mention\":\"development of normal myocardial structure and function\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Developmental process not listed\"}]}"
+  }
+ ]
+}

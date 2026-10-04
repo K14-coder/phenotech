@@ -1,0 +1,61 @@
+{
+ "pmid": "16380919",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.530Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "cfeca5e943f42ee9",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/16380919.json",
+ "claims": [
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "neurofibromatosis-Noonan syndrome",
+   "object_type": "disease",
+   "quote": "NF1 gene mutations represent the major molecular event underlying neurofibromatosis-Noonan syndrome.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NFNS",
+   "object_type": "disease",
+   "quote": "Heterozygous NF1 defects were identified in 16 of the 17 unrelated subjects included in the study, which provides evidence that mutations in NF1 represent the major molecular event underlying this condition.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PTPN11",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NFNS",
+   "object_type": "disease",
+   "quote": "On the other hand, no defect in PTPN11 was observed, and no lesion affecting exons 11-27 of the NF1 gene was identified in 100 PTPN11 mutation-negative subjects with NS, which provides further evidence that NFNS and NS are genetically distinct disorders.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "NF1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NFNS",
+   "object_type": "disease",
+   "quote": "These results support the view that NFNS represents a variant of NF1 and is caused by mutations of the NF1 gene, some of which have been demonstrated to cause classic NF1 in other individuals.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

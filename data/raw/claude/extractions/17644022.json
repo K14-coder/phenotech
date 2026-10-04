@@ -1,0 +1,61 @@
+{
+ "pmid": "17644022",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.536Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e8a408a368d3215a",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/17644022.json",
+ "claims": [
+  {
+   "subject_mention": "Gaucher disease beta-glucocerebrosidase common mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "ER-associated degradation of misfolded enzyme",
+   "object_type": "mechanism",
+   "quote": "The common mutations found in the lysosomal enzyme deficient in Gaucher disease, beta-glucocerebrosidase, earmark these proteins for destruction by the endoplasmic reticulum-localised protein folding machinery, resulting in enzyme insufficiency, lysosomal glycolipid storage and subsequent pathology.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "beta-glucocerebrosidase enzyme insufficiency",
+   "object_type": "mechanism",
+   "quote": "The common mutations found in the lysosomal enzyme deficient in Gaucher disease, beta-glucocerebrosidase, earmark these proteins for destruction by the endoplasmic reticulum-localised protein folding machinery, resulting in enzyme insufficiency, lysosomal glycolipid storage and subsequent pathology.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Gaucher disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "lysosomal glycolipid storage",
+   "object_type": "mechanism",
+   "quote": "The common mutations found in the lysosomal enzyme deficient in Gaucher disease, beta-glucocerebrosidase, earmark these proteins for destruction by the endoplasmic reticulum-localised protein folding machinery, resulting in enzyme insufficiency, lysosomal glycolipid storage and subsequent pathology.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "pharmacological chaperones",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "beta-glucocerebrosidase misfolding",
+   "object_type": "mechanism",
+   "quote": "However, many of these mutants can be rescued from global misfolding to preserve glycolipid substrate binding and eventual catalysis in the lysosome, by the addition of subinhibitory concentrations of pharmacologically active small molecules.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

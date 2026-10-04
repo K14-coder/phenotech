@@ -1,0 +1,649 @@
+{
+ "pmid": "41430350",
+ "entries": {
+  "58a7cb7fe2fef34b": {
+   "mention": "Severe gastrointestinal (GI) symptoms",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0010864",
+    "phenotype:HP:0025162",
+    "phenotype:HP:0011344",
+    "phenotype:HP:0004389",
+    "phenotype:HP:0031475",
+    "phenotype:HP:0011471",
+    "phenotype:HP:0033680",
+    "phenotype:HP:0000546",
+    "phenotype:HP:0006851",
+    "phenotype:HP:0040080"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No GI symptom candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  },
+  "8667cfad4e083246": {
+   "mention": "loss of enteric neurons",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002371",
+    "phenotype:HP:0002529",
+    "phenotype:HP:0009908",
+    "phenotype:HP:0000529",
+    "phenotype:HP:0000749",
+    "phenotype:HP:0007333",
+    "phenotype:HP:0000915",
+    "phenotype:HP:0011194",
+    "phenotype:HP:0001125",
+    "phenotype:HP:0002344"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "Enteric not CNS neuronal loss",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  },
+  "aa152e995ee365da": {
+   "mention": "neurodegeneration in the enteric nervous system (ENS)",
+   "type": "mechanism",
+   "candidates": [
+    "mech:synaptic-vesicle-fusion",
+    "mech:gain-of-function",
+    "mech:dominant-negative",
+    "mech:action-potential",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:lysosomal-storage",
+    "mech:protein-destabilization",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:ca-triggered-exocytosis",
+    "mech:lysosome-organization"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No neurodegeneration mechanism candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  },
+  "84509b8bd25c7123": {
+   "mention": "damage to enteric neurons and glia",
+   "type": "mechanism",
+   "candidates": [
+    "mech:action-potential",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:lysosomal-storage",
+    "mech:glucose-transmembrane-transport",
+    "mech:glycogen-catabolism",
+    "mech:gaba-reuptake",
+    "mech:nmda-receptor-activity",
+    "mech:glycosaminoglycan-catabolism",
+    "mech:tor-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No matching mechanism",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  },
+  "f55701c7fef0cb26": {
+   "mention": "AAV9.hCLN3 gene therapy",
+   "type": "therapy",
+   "candidates": [
+    "therapy:etx101",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:atidarsagene-autotemcel",
+    "therapy:aav-stxbp1-gene-replacement",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:eliglustat",
+    "therapy:kv7-openers",
+    "therapy:quinidine",
+    "therapy:ganaxolone",
+    "therapy:sodium-channel-blockers"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No CLN3 gene therapy candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  },
+  "8a378a9d15f6a9ee": {
+   "mention": "enteric neuron and glia degeneration",
+   "type": "mechanism",
+   "candidates": [
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:protein-destabilization",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:lysosome-organization",
+    "mech:ca-triggered-exocytosis",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:glycogen-catabolism"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "No matching mechanism",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.833Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.833Z",
+   "request_payload": {
+    "title": "Enteric nervous system degeneration in human and murine CLN3 disease, is ameliorated by gene therapy in mice.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "Severe gastrointestinal (GI) symptoms",
+      "declared_type": "phenotype",
+      "sentence": "Severe gastrointestinal (GI) symptoms occur in people with CLN3 disease, a neurodegenerative disorder.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0025162",
+        "type": "phenotype",
+        "label": "Severe temper tantrums",
+        "note": "HPO HP:0025162"
+       },
+       {
+        "id": "phenotype:HP:0011344",
+        "type": "phenotype",
+        "label": "Severe global developmental delay",
+        "note": "HPO HP:0011344"
+       },
+       {
+        "id": "phenotype:HP:0004389",
+        "type": "phenotype",
+        "label": "Intestinal pseudo-obstruction",
+        "note": "HPO HP:0004389"
+       },
+       {
+        "id": "phenotype:HP:0031475",
+        "type": "phenotype",
+        "label": "Status epilepticus without prominent motor symptoms",
+        "note": "HPO HP:0031475"
+       },
+       {
+        "id": "phenotype:HP:0011471",
+        "type": "phenotype",
+        "label": "Gastrostomy tube feeding in infancy",
+        "note": "HPO HP:0011471"
+       },
+       {
+        "id": "phenotype:HP:0033680",
+        "type": "phenotype",
+        "label": "Pilocytic astrocytoma",
+        "note": "HPO HP:0033680"
+       },
+       {
+        "id": "phenotype:HP:0000546",
+        "type": "phenotype",
+        "label": "Retinal degeneration",
+        "note": "HPO HP:0000546"
+       },
+       {
+        "id": "phenotype:HP:0006851",
+        "type": "phenotype",
+        "label": "Symmetric spinal nerve root neurofibromas",
+        "note": "HPO HP:0006851"
+       },
+       {
+        "id": "phenotype:HP:0040080",
+        "type": "phenotype",
+        "label": "Anteverted ears",
+        "note": "HPO HP:0040080"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "loss of enteric neurons",
+      "declared_type": "phenotype",
+      "sentence": "Human CLN3 bowel displayed a profound loss of enteric neurons and their neurites, with pathological effects upon enteric glia.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002371",
+        "type": "phenotype",
+        "label": "Loss of speech",
+        "note": "HPO HP:0002371"
+       },
+       {
+        "id": "phenotype:HP:0002529",
+        "type": "phenotype",
+        "label": "Neuronal loss in central nervous system",
+        "note": "HPO HP:0002529"
+       },
+       {
+        "id": "phenotype:HP:0009908",
+        "type": "phenotype",
+        "label": "Anterior creases of earlobe",
+        "note": "HPO HP:0009908"
+       },
+       {
+        "id": "phenotype:HP:0000529",
+        "type": "phenotype",
+        "label": "Progressive visual loss",
+        "note": "HPO HP:0000529"
+       },
+       {
+        "id": "phenotype:HP:0000749",
+        "type": "phenotype",
+        "label": "Paroxysmal bursts of laughter",
+        "note": "HPO HP:0000749"
+       },
+       {
+        "id": "phenotype:HP:0007333",
+        "type": "phenotype",
+        "label": "Hypoplasia of the frontal lobes",
+        "note": "HPO HP:0007333"
+       },
+       {
+        "id": "phenotype:HP:0000915",
+        "type": "phenotype",
+        "label": "Pectus excavatum of inferior sternum",
+        "note": "HPO HP:0000915"
+       },
+       {
+        "id": "phenotype:HP:0011194",
+        "type": "phenotype",
+        "label": "EEG with series of focal spikes",
+        "note": "HPO HP:0011194"
+       },
+       {
+        "id": "phenotype:HP:0001125",
+        "type": "phenotype",
+        "label": "Transient unilateral blurring of vision",
+        "note": "HPO HP:0001125"
+       },
+       {
+        "id": "phenotype:HP:0002344",
+        "type": "phenotype",
+        "label": "Progressive neurologic deterioration",
+        "note": "HPO HP:0002344"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "neurodegeneration in the enteric nervous system (ENS)",
+      "declared_type": "mechanism",
+      "sentence": "We hypothesized GI symptoms in CLN3 disease are at least partially due to neurodegeneration in the enteric nervous system (ENS), the master regulator of bowel function.",
+      "candidates": [
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "damage to enteric neurons and glia",
+      "declared_type": "mechanism",
+      "sentence": "Our findings demonstrate that CLN3 deficiency profoundly damages enteric neurons and glia in both murine and human CLN3 disease, contributing to GI dysfunction.",
+      "candidates": [
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:glucose-transmembrane-transport",
+        "type": "mechanism",
+        "label": "Glucose transmembrane transport",
+        "note": "kind: process",
+        "summary": "The process in which D-glucose is transported across a membrane."
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:nmda-receptor-activity",
+        "type": "mechanism",
+        "label": "NMDA glutamate receptor activity",
+        "note": "kind: process",
+        "summary": "A cation channel that opens in response to binding by extracellular glutmate, but only if glycine or D-serine is also bound and the membrane is depolarized. Vol"
+       },
+       {
+        "id": "mech:glycosaminoglycan-catabolism",
+        "type": "mechanism",
+        "label": "Glycosaminoglycan breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycosaminoglycans, any one of a group of linear polysaccharides composed of repeating disacch"
+       },
+       {
+        "id": "mech:tor-signaling",
+        "type": "mechanism",
+        "label": "TOR (mTOR) signaling",
+        "note": "kind: process",
+        "summary": "The series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that "
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "AAV9.hCLN3 gene therapy",
+      "declared_type": "therapy",
+      "sentence": "Degenerative changes in Cln3Δex7/8 mouse enteric neurons and glia were largely prevented by systemic neonatal delivery of AAV9.hCLN3 gene therapy, preventing bowel distention at disease endstage.",
+      "candidates": [
+       {
+        "id": "therapy:etx101",
+        "type": "therapy",
+        "label": "ETX101 (AAV9-delivered gene therapy for SCN1A Dravet syndrome)",
+        "synonyms": [
+         "ETX101"
+        ],
+        "summary": "An AAV9-delivered gene therapy in phase 1/2 for SCN1A-positive Dravet syndrome."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:atidarsagene-autotemcel",
+        "type": "therapy",
+        "label": "Atidarsagene autotemcel (stem-cell gene therapy for MLD)",
+        "synonyms": [
+         "arsa-cel",
+         "Libmeldy",
+         "Lenmeldy",
+         "OTL-200"
+        ],
+        "summary": "The child's own blood stem cells are given a working ARSA gene and returned; their descendants supply the enzyme in the nervous system. Approved for pre-symptom"
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:eliglustat",
+        "type": "therapy",
+        "label": "Eliglustat (substrate reduction)",
+        "synonyms": [
+         "Cerdelga",
+         "Genz-112638"
+        ],
+        "summary": "An oral drug that slows production of the lipid that builds up in Gaucher disease (substrate reduction)."
+       },
+       {
+        "id": "therapy:kv7-openers",
+        "type": "therapy",
+        "label": "Kv7 potassium channel openers (ezogabine / retigabine, XEN496)",
+        "synonyms": [
+         "ezogabine",
+         "retigabine",
+         "XEN496"
+        ],
+        "summary": "Drugs that open KCNQ2/KCNQ3 (Kv7) potassium channels, studied in KCNQ2 encephalopathy due to loss-of-function variants."
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:ganaxolone",
+        "type": "therapy",
+        "label": "Ganaxolone",
+        "synonyms": [
+         "ZTALMY"
+        ],
+        "summary": "A neuroactive steroid with an FDA label for seizures associated with CDKL5 deficiency disorder."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       }
+      ]
+     },
+     {
+      "mention_id": "m6",
+      "mention": "enteric neuron and glia degeneration",
+      "declared_type": "mechanism",
+      "sentence": "Degenerative changes in Cln3Δex7/8 mouse enteric neurons and glia were largely prevented by systemic neonatal delivery of AAV9.hCLN3 gene therapy, preventing bowel distention at disease endstage.",
+      "candidates": [
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:glycogen-catabolism",
+        "type": "mechanism",
+        "label": "Glycogen breakdown",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"Severe gastrointestinal (GI) symptoms\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No GI symptom candidate\"},{\"mention_id\":\"m2\",\"mention\":\"loss of enteric neurons\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"Enteric not CNS neuronal loss\"},{\"mention_id\":\"m3\",\"mention\":\"neurodegeneration in the enteric nervous system (ENS)\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No neurodegeneration mechanism candidate\"},{\"mention_id\":\"m4\",\"mention\":\"damage to enteric neurons and glia\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No matching mechanism\"},{\"mention_id\":\"m5\",\"mention\":\"AAV9.hCLN3 gene therapy\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No CLN3 gene therapy candidate\"},{\"mention_id\":\"m6\",\"mention\":\"enteric neuron and glia degeneration\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"No matching mechanism\"}]}"
+  }
+ ]
+}

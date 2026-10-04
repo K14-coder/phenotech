@@ -1,0 +1,681 @@
+{
+ "pmid": "41803330",
+ "entries": {
+  "0a99820e7957f916": {
+   "mention": "B4Galnt1",
+   "type": "gene",
+   "candidates": [
+    "gene:HEXA",
+    "gene:KCNT1",
+    "gene:GALC",
+    "gene:GLA",
+    "gene:RIT1",
+    "gene:SLC6A1",
+    "gene:SYT1",
+    "gene:SLC2A1",
+    "gene:GBA1",
+    "gene:ARSA"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "B4GALNT1 not a candidate gene",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.836Z"
+  },
+  "722487be7d2798f6": {
+   "mention": "lipid biosynthesis",
+   "type": "mechanism",
+   "candidates": [
+    "mech:sphingolipid-catabolism",
+    "mech:synaptic-vesicle-priming",
+    "mech:synaptic-vesicle-fusion",
+    "mech:ca-triggered-exocytosis",
+    "mech:gaba-reuptake",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:gain-of-function",
+    "mech:haploinsufficiency",
+    "mech:dominant-negative",
+    "mech:action-potential"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "lipid biosynthesis not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.836Z"
+  },
+  "4f3e04d6826db259": {
+   "mention": "B4Galnt1 Deficiency",
+   "type": "therapy",
+   "candidates": [
+    "therapy:kcnt1-aso",
+    "therapy:migalastat",
+    "therapy:quinidine",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:sodium-channel-blockers",
+    "therapy:3-4-diaminopyridine",
+    "therapy:4-phenylbutyrate",
+    "therapy:aav-hexa-hexb-gene-therapy",
+    "therapy:aav-slc6a1-gene-replacement",
+    "therapy:aav-stxbp1-gene-replacement"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "not a listed therapy",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.836Z"
+  },
+  "89fa57f51ad039ca": {
+   "mention": "knocking out B4Galnt1",
+   "type": "therapy",
+   "candidates": [
+    "therapy:kcnt1-aso",
+    "therapy:sodium-channel-blockers",
+    "therapy:quinidine",
+    "therapy:migalastat",
+    "therapy:trametinib",
+    "therapy:unc13a-splice-switching-aso",
+    "therapy:fabry-enzyme-replacement",
+    "therapy:scn8a-aso",
+    "therapy:elsunersen",
+    "therapy:arimoclomol"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "not a listed therapy",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.836Z"
+  },
+  "066871c285d6f83c": {
+   "mention": "GM2 ganglioside accumulation",
+   "type": "mechanism",
+   "candidates": [
+    "mech:lysosomal-storage",
+    "mech:lysosome-organization",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:action-potential",
+    "mech:gain-of-function",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:protein-destabilization",
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:loss-of-function",
+    "mech:ras-protein-signal-transduction"
+   ],
+   "node_id": "mech:lysosomal-storage",
+   "match": "instance",
+   "justification": "GM2 accumulation",
+   "raw_node_id": "mech:lysosomal-storage",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.836Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.836Z",
+   "request_payload": {
+    "title": "B4Galnt1 Deficiency Reverses Severe Neurological Symptoms in a Mouse Model of Tay-Sachs Disease.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "B4Galnt1",
+      "declared_type": "gene",
+      "sentence": "B4Galnt1 (ß-1,4-N-acetyl-galactosaminyltransferase 1) is involved in lipid biosynthesis in mice.",
+      "candidates": [
+       {
+        "id": "gene:HEXA",
+        "type": "gene",
+        "label": "HEXA",
+        "synonyms": [
+         "beta-hexosaminidase subunit alpha",
+         "hexosaminidase A",
+         "Hex A",
+         "Beta-hexosaminidase subunit alpha",
+         "Beta-N-acetylhexosaminidase subunit alpha",
+         "Hexosaminidase subunit A",
+         "N-acetyl-beta-glucosaminidase subunit alpha"
+        ],
+        "summary": "Hydrolyzes the non-reducing end N-acetyl-D-hexosamine and/or sulfated N-acetyl-D-hexosamine of glycoconjugates, such as the oligosaccharide moieties from protei"
+       },
+       {
+        "id": "gene:KCNT1",
+        "type": "gene",
+        "label": "KCNT1",
+        "synonyms": [
+         "KNa1.1",
+         "Slack",
+         "SLO2.2",
+         "KCa4.1",
+         "KIAA1422",
+         "SLACK",
+         "Slo2.2",
+         "Potassium channel subfamily T member 1"
+        ],
+        "summary": "Sodium-activated K(+) channel (PubMed:37494189). Acts as an important mediator of neuronal membrane excitability (PubMed:37494189). Contributes to the delayed o"
+       },
+       {
+        "id": "gene:GALC",
+        "type": "gene",
+        "label": "GALC",
+        "synonyms": [
+         "galactosylceramidase",
+         "galactocerebrosidase",
+         "Galactocerebrosidase",
+         "Galactocerebroside beta-galactosidase",
+         "Galactosylceramidase",
+         "Galactosylceramide beta-galactosidase",
+         "GALCERase"
+        ],
+        "summary": "Hydrolyzes the galactose ester bonds of glycolipids such as galactosylceramide and galactosylsphingosine (PubMed:8281145, PubMed:8399327). Enzyme with very low "
+       },
+       {
+        "id": "gene:GLA",
+        "type": "gene",
+        "label": "GLA",
+        "synonyms": [
+         "alpha-galactosidase A",
+         "alpha-Gal A",
+         "GALA",
+         "Alpha-galactosidase A",
+         "Alpha-D-galactosidase A",
+         "Alpha-D-galactoside galactohydrolase",
+         "Galactosylgalactosylglucosylceramidase GLA",
+         "Melibiase"
+        ],
+        "summary": "Catalyzes the hydrolysis of glycosphingolipids and participates in their degradation in the lysosome"
+       },
+       {
+        "id": "gene:RIT1",
+        "type": "gene",
+        "label": "RIT1",
+        "synonyms": [
+         "GTP-binding protein Rit1",
+         "MGC125864",
+         "MGC125865",
+         "Ras-like protein expressed in many tissues",
+         "Ras-like without CAAX protein 1",
+         "RIBB",
+         "RIT",
+         "ROC1"
+        ],
+        "summary": "Plays a crucial role in coupling nerve growth factor (NGF) stimulation to the activation of both EPHB2 and MAPK14 signaling pathways and in NGF-dependent neuron"
+       },
+       {
+        "id": "gene:SLC6A1",
+        "type": "gene",
+        "label": "SLC6A1",
+        "synonyms": [
+         "GAT-1",
+         "GAT1",
+         "GABA transporter 1",
+         "GABATR",
+         "GABATHG",
+         "hGAT-1",
+         "Sodium- and chloride-dependent GABA transporter 1",
+         "Solute carrier family 6 member 1"
+        ],
+        "summary": "Mediates transport of gamma-aminobutyric acid (GABA) together with sodium and chloride and is responsible for the reuptake of GABA from the synapse (PubMed:3013"
+       },
+       {
+        "id": "gene:SYT1",
+        "type": "gene",
+        "label": "SYT1",
+        "synonyms": [
+         "synaptotagmin-1",
+         "Syt1",
+         "P65",
+         "SYT",
+         "SVP65",
+         "Synaptotagmin-1",
+         "Synaptotagmin I",
+         "SytI"
+        ],
+        "summary": "Calcium sensor that participates in triggering neurotransmitter release at the synapse (By similarity). May have a regulatory role in the membrane interactions "
+       },
+       {
+        "id": "gene:SLC2A1",
+        "type": "gene",
+        "label": "SLC2A1",
+        "synonyms": [
+         "GLUT1",
+         "GLUT-1",
+         "glucose transporter 1",
+         "DYT18",
+         "DYT9",
+         "GLUT",
+         "HTLVR",
+         "CSE"
+        ],
+        "summary": "Facilitative glucose transporter, which is responsible for constitutive or basal glucose uptake (PubMed:10227690, PubMed:10954735, PubMed:18245775, PubMed:19449"
+       },
+       {
+        "id": "gene:GBA1",
+        "type": "gene",
+        "label": "GBA1",
+        "synonyms": [
+         "glucocerebrosidase",
+         "GCase",
+         "acid beta-glucosidase",
+         "GBA",
+         "GLUC",
+         "Lysosomal acid glucosylceramidase",
+         "Acid beta-glucosidase",
+         "Alglucerase"
+        ],
+        "summary": "Glucosylceramidase that catalyzes, within the lysosomal compartment, the hydrolysis of glucosylceramides/GlcCers (such as beta-D-glucosyl-(1<->1')-N-acylsphing-"
+       },
+       {
+        "id": "gene:ARSA",
+        "type": "gene",
+        "label": "ARSA",
+        "synonyms": [
+         "arylsulfatase A",
+         "ASA",
+         "Arylsulfatase A",
+         "Cerebroside-sulfatase"
+        ],
+        "summary": "Lysosomal enzyme that catalyzes the hydrolysis of cerebroside-3-sulfate (N-acyl-1-beta-D-(3-O-sulfo)-galactosyl-sphing-4-enine) into cerebroside and sulfate, a "
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "lipid biosynthesis",
+      "declared_type": "mechanism",
+      "sentence": "B4Galnt1 (ß-1,4-N-acetyl-galactosaminyltransferase 1) is involved in lipid biosynthesis in mice.",
+      "candidates": [
+       {
+        "id": "mech:sphingolipid-catabolism",
+        "type": "mechanism",
+        "label": "Sphingolipid breakdown (sphingolipid catabolic process)",
+        "note": "kind: process",
+        "summary": "The chemical reactions and pathways resulting in the breakdown of sphingolipids, any of a class of lipids containing the long-chain amine diol sphingosine or a "
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:gaba-reuptake",
+        "type": "mechanism",
+        "label": "GABA reuptake",
+        "note": "kind: process",
+        "summary": "The uptake of gamma-aminobutyric acid (GABA, 4-aminobutyrate) by neurons or glial cells. This process leads to inactivation and recycling of neurotransmitters."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:haploinsufficiency",
+        "type": "mechanism",
+        "label": "Haploinsufficiency (one working copy is not enough)",
+        "note": "kind: effect",
+        "summary": "One of the two gene copies is lost or inactive, so the cell makes too little of a protein it needs. The remaining copy cannot cover the shortfall."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "B4Galnt1 Deficiency",
+      "declared_type": "therapy",
+      "sentence": "B4Galnt1 Deficiency Reverses Severe Neurological Symptoms in a Mouse Model of Tay-Sachs Disease.",
+      "candidates": [
+       {
+        "id": "therapy:kcnt1-aso",
+        "type": "therapy",
+        "label": "KCNT1-targeting antisense oligonucleotide (knockdown)",
+        "synonyms": [
+         "Kcnt1 gapmer ASO"
+        ],
+        "summary": "Antisense oligonucleotides that lower KCNT1 expression; tested in mice and given investigationally to two infants."
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:3-4-diaminopyridine",
+        "type": "therapy",
+        "label": "3,4-Diaminopyridine (amifampridine)",
+        "synonyms": [
+         "3,4-DAP",
+         "amifampridine"
+        ],
+        "summary": "A potassium-channel blocker that lengthens the nerve signal so more neurotransmitter is released. Used in presynaptic congenital myasthenic syndromes; reported "
+       },
+       {
+        "id": "therapy:4-phenylbutyrate",
+        "type": "therapy",
+        "label": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone)",
+        "synonyms": [
+         "4-PBA",
+         "glycerol phenylbutyrate",
+         "PBA",
+         "Ravicti",
+         "sodium phenylbutyrate"
+        ],
+        "summary": "An FDA-approved drug (for urea-cycle disorders) that acts as a chemical chaperone, helping unstable or misfolded proteins fold and reach their working location."
+       },
+       {
+        "id": "therapy:aav-hexa-hexb-gene-therapy",
+        "type": "therapy",
+        "label": "Intrathecal AAVrh8-HEXA/HEXB gene therapy (Tay-Sachs)",
+        "synonyms": [
+         "AXO-AAV-GM2",
+         "AAVrh8-HEXA/HEXB"
+        ],
+        "summary": "AAV vectors carrying working HEXA and HEXB genes given into the spinal fluid; first tested in two children with infantile Tay-Sachs disease under expanded acces"
+       },
+       {
+        "id": "therapy:aav-slc6a1-gene-replacement",
+        "type": "therapy",
+        "label": "scAAV9.P546.SLC6A1 intrathecal gene replacement",
+        "synonyms": [
+         "scAAV9.P546.SLC6A1"
+        ],
+        "summary": "A virus-delivered extra copy of SLC6A1, given into the spinal fluid, to restore GABA re-uptake. First-in-human trial is open by invitation."
+       },
+       {
+        "id": "therapy:aav-stxbp1-gene-replacement",
+        "type": "therapy",
+        "label": "AAV STXBP1 gene supplementation",
+        "synonyms": [
+         "AAV-STXBP1",
+         "CAP-002"
+        ],
+        "summary": "A virus-delivered extra copy of STXBP1, aimed at raising Munc18-1 back toward normal levels. Preclinical work set a transduction threshold; the first human tria"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "knocking out B4Galnt1",
+      "declared_type": "therapy",
+      "sentence": "Our findings suggest that knocking out B4Galnt1 to block GM2 ganglioside accumulation may reverse disease symptoms in the DKO mouse model, indicating a promising, safe target for substrate-reduction therapy via siRNA silencing.",
+      "candidates": [
+       {
+        "id": "therapy:kcnt1-aso",
+        "type": "therapy",
+        "label": "KCNT1-targeting antisense oligonucleotide (knockdown)",
+        "synonyms": [
+         "Kcnt1 gapmer ASO"
+        ],
+        "summary": "Antisense oligonucleotides that lower KCNT1 expression; tested in mice and given investigationally to two infants."
+       },
+       {
+        "id": "therapy:sodium-channel-blockers",
+        "type": "therapy",
+        "label": "Sodium channel blocking anti-seizure medicines (class)",
+        "synonyms": [
+         "carbamazepine",
+         "oxcarbazepine",
+         "phenytoin",
+         "lamotrigine",
+         "lacosamide",
+         "SCBs"
+        ],
+        "summary": "A class of established anti-seizure medicines that reduce sodium channel activity. Published responses differ by gene and by variant mechanism."
+       },
+       {
+        "id": "therapy:quinidine",
+        "type": "therapy",
+        "label": "Quinidine (KCNT1 channel blocker, repurposed)",
+        "synonyms": [
+         "quinidine"
+        ],
+        "summary": "An antiarrhythmic drug and partial KCNT1 antagonist tried in KCNT1 gain-of-function epilepsies, with mixed results."
+       },
+       {
+        "id": "therapy:migalastat",
+        "type": "therapy",
+        "label": "Migalastat (pharmacological chaperone)",
+        "synonyms": [
+         "Galafold",
+         "AT1001",
+         "1-deoxygalactonojirimycin"
+        ],
+        "summary": "The first approved pharmacological chaperone: an oral small molecule that binds misfolded but 'amenable' alpha-galactosidase A variants, stabilizes them and let"
+       },
+       {
+        "id": "therapy:trametinib",
+        "type": "therapy",
+        "label": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies",
+        "synonyms": [
+         "Mekinist",
+         "GSK1120212"
+        ],
+        "summary": "A MEK inhibitor approved for BRAF-mutant cancers. Used off-label for life-threatening hypertrophic cardiomyopathy and lymphatic disease in Noonan syndrome and r"
+       },
+       {
+        "id": "therapy:unc13a-splice-switching-aso",
+        "type": "therapy",
+        "label": "UNC13A cryptic-exon splice-switching ASO",
+        "synonyms": [
+         "UNC13A ASO"
+        ],
+        "summary": "An antisense oligonucleotide that blocks a cryptic exon so the cell makes full-length UNC13A protein again. Developed for TDP-43-related ALS, not for the Mendel"
+       },
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:scn8a-aso",
+        "type": "therapy",
+        "label": "Scn8a-lowering antisense oligonucleotide (preclinical)",
+        "synonyms": [
+         "Scn8a ASO"
+        ],
+        "summary": "An antisense oligonucleotide that lowers Scn8a; protective in mouse models of SCN8A encephalopathy and of Dravet syndrome."
+       },
+       {
+        "id": "therapy:elsunersen",
+        "type": "therapy",
+        "label": "Elsunersen (PRAX-222, SCN2A-targeting antisense oligonucleotide)",
+        "synonyms": [
+         "PRAX-222"
+        ],
+        "summary": "An antisense oligonucleotide that lowers SCN2A expression, studied in early-onset gain-of-function SCN2A DEE."
+       },
+       {
+        "id": "therapy:arimoclomol",
+        "type": "therapy",
+        "label": "Arimoclomol (heat-shock response amplifier)",
+        "synonyms": [
+         "Miplyffa"
+        ],
+        "summary": "An oral drug that amplifies the cell's heat-shock (protein-folding) response. FDA-approved with miglustat for the neurological manifestations of NPC; the label "
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "GM2 ganglioside accumulation",
+      "declared_type": "mechanism",
+      "sentence": "Our findings suggest that knocking out B4Galnt1 to block GM2 ganglioside accumulation may reverse disease symptoms in the DKO mouse model, indicating a promising, safe target for substrate-reduction therapy via siRNA silencing.",
+      "candidates": [
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosome-organization",
+        "type": "mechanism",
+        "label": "Lysosome organization",
+        "note": "kind: process",
+        "summary": "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a lysosome. A lysosome is"
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"B4Galnt1\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"B4GALNT1 not a candidate gene\"},{\"mention_id\":\"m2\",\"mention\":\"lipid biosynthesis\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"lipid biosynthesis not a candidate\"},{\"mention_id\":\"m3\",\"mention\":\"B4Galnt1 Deficiency\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"not a listed therapy\"},{\"mention_id\":\"m4\",\"mention\":\"knocking out B4Galnt1\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"not a listed therapy\"},{\"mention_id\":\"m5\",\"mention\":\"GM2 ganglioside accumulation\",\"node_id\":\"mech:lysosomal-storage\",\"match\":\"instance\",\"justification\":\"GM2 accumulation\"}]}"
+  }
+ ]
+}

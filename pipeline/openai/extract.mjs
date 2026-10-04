@@ -6,6 +6,12 @@
  *   node pipeline/openai/extract.mjs --set community --limit 40   # community records with abstracts, in priority order
  *   node pipeline/openai/extract.mjs --pmids 18469812,29538625
  *   node pipeline/openai/extract.mjs --verify-only         # no calls: re-verify every cached extraction
+ *   READER=claude node pipeline/openai/extract.mjs         # no calls: stamp + verify the Claude agent
+ *                                                          # reading in data/raw/claude/extractions/
+ *
+ * READER=claude: a Claude agent reads the same stored title + abstract with EXTRACT_INSTRUCTIONS and
+ * CLAIM_SCHEMA below and writes {pmid, claims} per PMID. This script adds the provenance fields (set,
+ * source file, input and instructions hashes) and then applies exactly the same code-side verification.
  *
  * Calls go through integrations/openai/llm.mjs on the ChatGPT-plan path only (authMode "chatgpt";
  * OPENAI_API_KEY is never used). At most 2 requests in flight. Each response is cached per PMID in
@@ -16,12 +22,12 @@
  * Unicode/whitespace normalisation (common.mjs norm()). Non-matching claims are rejected and
  * counted. Quotes are never edited. Output: data/raw/openai/claims_verified.json
  */
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { complete } from '../../integrations/openai/llm.mjs';
 import {
-  EXTRACTIONS, FATAL_KINDS, OUT_RAW, RUN_STATE, errorInfo, isVerbatim, loadAllAbstracts, loadBaselineGraph, logUsage, norm,
-  parseArgs, readJson, runPool, sha1, sourceText, writeJson,
+  ALL_SETS, EXTRACTIONS, FATAL_KINDS, OUT_RAW, READER, RUN_STATE, errorInfo, isVerbatim, loadAllAbstracts, loadBaselineGraph, logUsage,
+  norm, parseArgs, readJson, runPool, sha1, sourceText, writeJson,
 } from './common.mjs';
 
 export const NODE_TYPES = ['gene', 'disease', 'variant_group', 'mechanism', 'phenotype', 'therapy'];
@@ -138,7 +144,7 @@ export function verifyAll(abstracts) {
       claims: total, verified, rejected: total - verified,
       verified_pct: total ? Math.round((1000 * verified) / total) / 10 : null,
       verified_but_multi_sentence: claims.filter((c) => c.verified && c.multi_sentence).length,
-      by_set: Object.fromEntries(['biology', 'community'].map((s) => {
+      by_set: Object.fromEntries(ALL_SETS.map((s) => {
         const cs = claims.filter((c) => c.set === s);
         const extracted = Object.keys(perPmid).filter((p) => abstracts.get(p)?.set === s);
         return [s, {
@@ -154,8 +160,35 @@ export function verifyAll(abstracts) {
   return out;
 }
 
+/** READER=claude: add provenance to agent-written caches. Claims are never touched. */
+export const CLAUDE_MODEL = 'agent-reading';
+function stampAgentReading(abstracts) {
+  if (!existsSync(EXTRACTIONS)) return 0;
+  let stamped = 0;
+  for (const f of readdirSync(EXTRACTIONS).filter((x) => /^\d+\.json$/.test(x))) {
+    const file = path.join(EXTRACTIONS, f);
+    const cached = readJson(file);
+    const rec = abstracts.get(String(cached.pmid));
+    if (!rec || (cached.input_sha1 && cached.instructions_sha1)) continue;
+    writeJson(file, {
+      pmid: rec.pmid, set: rec.set, model: CLAUDE_MODEL, generated_at: cached.generated_at ?? new Date().toISOString(),
+      reader: 'claude', how: 'Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA',
+      input_sha1: sha1(inputFor(rec)), instructions_sha1: INSTRUCTIONS_SHA, source: rec.origin, claims: cached.claims ?? [],
+    });
+    stamped += 1;
+  }
+  return stamped;
+}
+
 async function main() {
   const args = parseArgs();
+  if (READER === 'claude') {
+    const abstracts = loadAllAbstracts();
+    console.log(`[extract] READER=claude: no model calls; stamped ${stampAgentReading(abstracts)} new agent extractions`);
+    const v = verifyAll(abstracts);
+    console.log(`[verify] ${v.stats.abstracts_with_extraction} abstracts, ${v.stats.claims} claims, ${v.stats.verified} verbatim (${v.stats.verified_pct}%), ${v.stats.rejected} rejected`);
+    return;
+  }
   const concurrency = Math.min(2, Number(args.concurrency ?? 2) || 1); // hard cap: 2 in flight
   const abstracts = loadAllAbstracts();
   const set = args.set ?? 'biology';

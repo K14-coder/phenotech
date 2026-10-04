@@ -1,0 +1,85 @@
+{
+ "pmid": "30875019",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.573Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "27205987f70e2f40",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/30875019.json",
+ "claims": [
+  {
+   "subject_mention": "GLA",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Fabry disease",
+   "object_type": "disease",
+   "quote": "Fabry disease is a rare lysosomal disorder characterized by deficient or absent α-galactosidase A activity resulting from mutations in the GLA gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Fabry disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "deficient or absent α-galactosidase A activity",
+   "object_type": "mechanism",
+   "quote": "Fabry disease is a rare lysosomal disorder characterized by deficient or absent α-galactosidase A activity resulting from mutations in the GLA gene.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Migalastat",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "stabilization and trafficking of amenable mutant α-galactosidase A from the endoplasmic reticulum to lysosomes",
+   "object_type": "mechanism",
+   "quote": "Migalastat (Galafold™), a pharmacological chaperone, stabilizes and facilitates trafficking of amenable mutant forms of α-galactosidase A enzyme from the endoplasmic reticulum to lysosomes and increases its lysosomal activity.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Oral migalastat",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Fabry disease",
+   "object_type": "disease",
+   "quote": "Oral migalastat is the first pharmacological chaperone approved for treating patients [aged ≥ 18 years (USA and Canada) or ≥ 16 years in other countries] with Fabry disease who have a migalastat-amenable GLA mutation.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "migalastat",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "GL-3 inclusions",
+   "object_type": "mechanism",
+   "quote": "In the modified ITT population (i.e. patients with migalastat-amenable GLA mutations), relative to placebo, migalastat treatment significantly reduced the mean number of GL-3 inclusions/KIC and plasma lyso-globotriaosylsphingosine levels at 6 months.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "migalastat",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Fabry disease",
+   "object_type": "disease",
+   "quote": "Given its convenient oral regimen and the limited therapeutic options available, migalastat is an important treatment option for Fabry disease in patients with migalastat-amenable GLA mutations.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "pmid": "39669638",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.612Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "9831c201c7cac724",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/39669638.json",
+ "claims": [
+  {
+   "subject_mention": "SMPD1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Acid sphingomyelinase deficiency",
+   "object_type": "disease",
+   "quote": "Acid sphingomyelinase deficiency (ASMD) is a rare progressive genetic disorder caused by pathogenic variants in the SMPD1 gene causing low or absent activity of the enzyme acid sphingomyelinase, resulting in subsequent accumulation of its substrate, sphingomyelin.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Acid sphingomyelinase deficiency",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "sphingomyelin accumulation",
+   "object_type": "mechanism",
+   "quote": "Acid sphingomyelinase deficiency (ASMD) is a rare progressive genetic disorder caused by pathogenic variants in the SMPD1 gene causing low or absent activity of the enzyme acid sphingomyelinase, resulting in subsequent accumulation of its substrate, sphingomyelin.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hepatosplenomegaly",
+   "object_type": "phenotype",
+   "quote": "Signs and symptoms of excessive lysosomal sphingomyelin storage, such as hepatosplenomegaly and pulmonary impairment, and in a subset of patients, progressive neurological manifestations, have long been recognized as hallmarks of the disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pulmonary impairment",
+   "object_type": "phenotype",
+   "quote": "Signs and symptoms of excessive lysosomal sphingomyelin storage, such as hepatosplenomegaly and pulmonary impairment, and in a subset of patients, progressive neurological manifestations, have long been recognized as hallmarks of the disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "olipudase alfa",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "sphingomyelin clearance",
+   "object_type": "mechanism",
+   "quote": "The relationship between the diverse manifestations of ASMD and sphingomyelin accumulation and the connections between sphingomyelin clearance and reversal of the noncentral nervous system manifestations by olipudase alfa therapy also are described.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "olipudase alfa",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "ASMD",
+   "object_type": "disease",
+   "quote": "The relationship between the diverse manifestations of ASMD and sphingomyelin accumulation and the connections between sphingomyelin clearance and reversal of the noncentral nervous system manifestations by olipudase alfa therapy also are described.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

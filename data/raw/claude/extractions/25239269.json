@@ -1,0 +1,37 @@
+{
+ "pmid": "25239269",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.552Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "852610d0e1f0c10b",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/25239269.json",
+ "claims": [
+  {
+   "subject_mention": "Eliglustat",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "glucosylceramide synthase",
+   "object_type": "mechanism",
+   "quote": "Eliglustat [Cerdelga™ (US, EU)], a small-molecule oral glucosylceramide analogue that inhibits the enzyme glucosylceramide synthase has been developed by Genzyme Corporation (a subsidiary of Sanofi) for the treatment of Gaucher disease type 1 in adults.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Eliglustat",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Gaucher disease type 1",
+   "object_type": "disease",
+   "quote": "Eliglustat [Cerdelga™ (US, EU)], a small-molecule oral glucosylceramide analogue that inhibits the enzyme glucosylceramide synthase has been developed by Genzyme Corporation (a subsidiary of Sanofi) for the treatment of Gaucher disease type 1 in adults.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "pmid": "17586837",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.534Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "1db3d64bc73c91fc",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/17586837.json",
+ "claims": [
+  {
+   "subject_mention": "SOS1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "SOS1 is the second most common Noonan gene but plays no major role in cardio-facio-cutaneous syndrome.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SOS1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "cardio-facio-cutaneous syndrome",
+   "object_type": "disease",
+   "quote": "SOS1 is the second most common Noonan gene but plays no major role in cardio-facio-cutaneous syndrome.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "SOS1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "guanine nucleotide exchange for Ras",
+   "object_type": "mechanism",
+   "quote": "Mutations of SOS1, the gene encoding a guanine nucleotide exchange factor for Ras, have been the most recent discoveries in patients with NS, but this gene has not been studied in patients with CFCS.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SOS1 missense mutations",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "Missense mutations of SOS1 were discovered in 28% of patients with NS.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SOS1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "CFCS",
+   "object_type": "disease",
+   "quote": "In contrast, none of the patients classified as having CFCS was found to carry a pathogenic sequence change in this gene.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "SOS1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "NS",
+   "object_type": "disease",
+   "quote": "CONCLUSION: We have confirmed SOS1 as the second major gene for NS.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SOS1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "keratosis pilaris",
+   "object_type": "phenotype",
+   "quote": "Patients carrying mutations in this gene have a distinctive phenotype with frequent ectodermal anomalies such as keratosis pilaris and curly hair.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "SOS1",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "curly hair",
+   "object_type": "phenotype",
+   "quote": "Patients carrying mutations in this gene have a distinctive phenotype with frequent ectodermal anomalies such as keratosis pilaris and curly hair.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "NS",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "gain-of-function mutations in Ras-MAPK pathway",
+   "object_type": "mechanism",
+   "quote": "These findings corroborate that, despite being caused by gain-of-function mutations in molecules belonging to the same pathway, NS and CFCS scarcely overlap genotypically.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

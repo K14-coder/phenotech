@@ -1,0 +1,37 @@
+{
+ "pmid": "34418116",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.587Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "f41f52d6baee4410",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/34418116.json",
+ "claims": [
+  {
+   "subject_mention": "arimoclomol",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "NPC protein misfolding",
+   "object_type": "mechanism",
+   "quote": "We investigated the safety and efficacy of arimoclomol, which amplifies the heat shock response to target NPC protein misfolding and improve lysosomal function, in patients with NPC.",
+   "study_type": "clinical_trial",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "arimoclomol",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "NPC",
+   "object_type": "disease",
+   "quote": "Arimoclomol provided a significant and clinically meaningful treatment effect in NPC and was well tolerated.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

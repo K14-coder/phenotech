@@ -1,0 +1,73 @@
+{
+ "pmid": "34964690",
+ "set": "cross",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.591Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "6f75a29d526c60c4",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/cross/pubmed/34964690.json",
+ "claims": [
+  {
+   "subject_mention": "CLN3",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "juvenile neuronal ceroid lipofuscinosis",
+   "object_type": "disease",
+   "quote": "Mutations in CLN3 are causative for juvenile neuronal ceroid lipofuscinosis, a rare lysosomal storage disorder considered the most common neurodegenerative disease in children.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PSENEN",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "γ-secretase activity",
+   "object_type": "mechanism",
+   "quote": "Following previous studies, we demonstrate that PSENEN is essential for forming a functional γ-secretase complex and is indispensable for γ-secretase activity.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CLN3",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "γ-secretase activity",
+   "object_type": "mechanism",
+   "quote": "In contrast, CLN3 does not modulate γ-secretase activity to a significant degree.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": true
+  },
+  {
+   "subject_mention": "PSENEN",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "autophagy-lysosome system",
+   "object_type": "mechanism",
+   "quote": "Our study strongly suggests converging roles of PSENEN and CLN3 in the autophagy-lysosome system in a γ-secretase activity-independent manner, supporting the idea of common cytopathological processes underlying different neurodegenerative diseases.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  },
+  {
+   "subject_mention": "CLN3",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "autophagy-lysosome system",
+   "object_type": "mechanism",
+   "quote": "Our study strongly suggests converging roles of PSENEN and CLN3 in the autophagy-lysosome system in a γ-secretase activity-independent manner, supporting the idea of common cytopathological processes underlying different neurodegenerative diseases.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "suggested",
+   "negated": false
+  }
+ ]
+}

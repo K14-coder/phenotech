@@ -1,0 +1,85 @@
+{
+ "pmid": "39140257",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.610Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "53fe97ba61a66cc4",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/39140257.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "isolated multiple café-au-lait macules",
+   "object_type": "disease",
+   "quote": "Heterozygosity for loss-of-function variants in LZTR1 is associated with isolated multiple café-au-lait macules.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "schwannomatosis",
+   "object_type": "disease",
+   "quote": "PURPOSE: Pathogenic LZTR1 variants cause schwannomatosis and dominant/recessive Noonan syndrome (NS).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "Noonan syndrome",
+   "object_type": "disease",
+   "quote": "PURPOSE: Pathogenic LZTR1 variants cause schwannomatosis and dominant/recessive Noonan syndrome (NS).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 truncating variants",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "loss-of-function",
+   "object_type": "mechanism",
+   "quote": "The molecular spectrum mainly consisted of truncating variants, indicating loss-of-function.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 missense variants and small in-frame deletions",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "accelerated protein degradation",
+   "object_type": "mechanism",
+   "quote": "Functional characterization showed accelerated protein degradation or mislocalization, and failure to downregulate mitogen-activated protein kinase signaling.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 missense variants and small in-frame deletions",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "failure to downregulate MAPK signaling",
+   "object_type": "mechanism",
+   "quote": "Functional characterization showed accelerated protein degradation or mislocalization, and failure to downregulate mitogen-activated protein kinase signaling.",
+   "study_type": "functional_study",
+   "species": "in_vitro",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "pmid": "18929906",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.539Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "3f13c8564f1dfe01",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/18929906.json",
+ "claims": [
+  {
+   "subject_mention": "Pompe's disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "acid alpha-glucosidase deficiency leading to lysosomal glycogen storage",
+   "object_type": "mechanism",
+   "quote": "It is a pan-ethnic autosomal recessive trait characterised by acid alpha-glucosidase deficiency leading to lysosomal glycogen storage.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "classic infantile Pompe's disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "cardiac hypertrophy",
+   "object_type": "phenotype",
+   "quote": "Cardiac hypertrophy is a key feature of classic infantile Pompe's disease.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Pompe's disease",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "respiratory problems",
+   "object_type": "phenotype",
+   "quote": "Pompe's disease is also regarded as a muscular disorder, but the generalised storage of glycogen causes more than mobility and respiratory problems.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "alglucosidase alfa",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Pompe's disease",
+   "object_type": "disease",
+   "quote": "We also discuss the developments that led to the approval of enzyme replacement therapy with recombinant human alpha-glucosidase from Chinese hamster ovary cells (alglucosidase alfa) by the US Food and Drug Administration and European Medicines Agency in 2006, and review clinical practice.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

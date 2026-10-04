@@ -1,0 +1,61 @@
+{
+ "pmid": "40430919",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.619Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "11be4f919cfcdea1",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40430919.json",
+ "claims": [
+  {
+   "subject_mention": "Tay-Sachs disease",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "β-hexosaminidase A deficiency with GM2 ganglioside accumulation",
+   "object_type": "mechanism",
+   "quote": "Tay-Sachs disease (TSD) is a neurodegenerative disorder caused by a deficiency in β-hexosaminidase A (HexA), which accumulates GM2 gangliosides, primarily in neurons.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PP6D5-mediated CRISPR/nCas9 gene therapy",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "HexA activity",
+   "object_type": "mechanism",
+   "quote": "In TSD fibroblasts, transfection with both HEXA and HEXB cDNAs increased the HexA activity levels by up to 7.4-fold, compared to a 3.2-fold increase in cells transfected only with HEXA cDNA after 15 days post-transfection.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "PP6D5-mediated CRISPR/nCas9 genome editing",
+   "subject_type": "therapy",
+   "relation": "targets",
+   "object_mention": "lysosomal mass",
+   "object_type": "mechanism",
+   "quote": "Additionally, PP6D5-mediated CRISPR/nCas9-based genome editing led to a significant reduction in the lysosomal mass of TSD fibroblasts.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "CRISPR/nCas9-based gene therapy",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "TSD",
+   "object_type": "disease",
+   "quote": "This study provides promising evidence for the use of the PP6D5 polymer as a non-viral vector for delivering CRISPR/nCas9-based gene therapy in TSD.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

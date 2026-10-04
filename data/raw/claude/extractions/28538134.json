@@ -1,0 +1,37 @@
+{
+ "pmid": "28538134",
+ "set": "dee",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.565Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "7c2283f588640f90",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/dee/pubmed/28538134.json",
+ "claims": [
+  {
+   "subject_mention": "cannabidiol",
+   "subject_type": "therapy",
+   "relation": "developed_for",
+   "object_mention": "Dravet syndrome",
+   "object_type": "disease",
+   "quote": "CONCLUSIONS: Among patients with the Dravet syndrome, cannabidiol resulted in a greater reduction in convulsive-seizure frequency than placebo and was associated with higher rates of adverse events.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Dravet syndrome",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "drug-resistant seizures",
+   "object_type": "phenotype",
+   "quote": "BACKGROUND: The Dravet syndrome is a complex childhood epilepsy disorder that is associated with drug-resistant seizures and a high mortality rate.",
+   "study_type": "clinical_trial",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

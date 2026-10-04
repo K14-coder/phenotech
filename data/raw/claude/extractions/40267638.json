@@ -1,0 +1,37 @@
+{
+ "pmid": "40267638",
+ "set": "lysosomal",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.617Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "3c8ad368215cdb72",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/lysosomal/pubmed/40267638.json",
+ "claims": [
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "hepatic involvement",
+   "object_type": "phenotype",
+   "quote": "Hepatic involvement is one of the main visceral manifestations of Acid Sphingomyelinase Deficiency (ASMD).",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "ASMD",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "liver fibrosis",
+   "object_type": "phenotype",
+   "quote": "It can lead to liver fibrosis and liver failure in a subset of patients.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

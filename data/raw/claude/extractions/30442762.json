@@ -1,0 +1,97 @@
+{
+ "pmid": "30442762",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.570Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "e72adbed2cb2a86e",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/30442762.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "cullin 3 (CUL3) ubiquitin ligase complex",
+   "object_type": "mechanism",
+   "quote": "The leucine zipper-like transcriptional regulator 1 (LZTR1) protein, an adaptor for cullin 3 (CUL3) ubiquitin ligase complex, is implicated in human disease, yet its mechanism of action remains unknown.",
+   "study_type": "review",
+   "species": null,
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Lztr1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "Ras ubiquitination at lysine-170",
+   "object_type": "mechanism",
+   "quote": "Ubiquitome analysis showed that loss of Lztr1 abrogated Ras ubiquitination at lysine-170.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "RAS ubiquitination",
+   "object_type": "mechanism",
+   "quote": "LZTR1-mediated ubiquitination inhibited RAS signaling by attenuating its association with the membrane.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "participates_in",
+   "object_mention": "inhibition of RAS signaling",
+   "object_type": "mechanism",
+   "quote": "LZTR1-mediated ubiquitination inhibited RAS signaling by attenuating its association with the membrane.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Noonan syndrome",
+   "subject_type": "disease",
+   "relation": "driven_by",
+   "object_mention": "Lztr1 haploinsufficiency",
+   "object_type": "mechanism",
+   "quote": "We found that Lztr1 haploinsufficiency in mice recapitulates Noonan syndrome phenotypes, whereas LZTR1 loss in Schwann cells drives dedifferentiation and proliferation.",
+   "study_type": "animal_model",
+   "species": "mouse",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Disease-associated LZTR1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "disrupted LZTR1-CUL3 complex formation or interaction with RAS",
+   "object_type": "mechanism",
+   "quote": "Disease-associated LZTR1 mutations disrupted either LZTR1-CUL3 complex formation or its interaction with RAS proteins.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1 mutations",
+   "subject_type": "variant_group",
+   "relation": "has_effect",
+   "object_mention": "dysregulating RAS ubiquitination",
+   "object_type": "mechanism",
+   "quote": "Mutations in LZTR1 drive human disease by dysregulating RAS ubiquitination.",
+   "study_type": "functional_study",
+   "species": "cell",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

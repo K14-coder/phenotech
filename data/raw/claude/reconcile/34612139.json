@@ -1,0 +1,505 @@
+{
+ "pmid": "34612139",
+ "entries": {
+  "ca671d1f49f51aea": {
+   "mention": "dysregulation of the Ras pathway",
+   "type": "mechanism",
+   "candidates": [
+    "mech:negative-regulation-of-ras-signaling",
+    "mech:positive-regulation-of-ras-signaling",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:gain-of-function",
+    "mech:loss-of-function",
+    "mech:ras-protein-signal-transduction",
+    "mech:ca-triggered-exocytosis",
+    "mech:lysosomal-storage",
+    "mech:synaptic-vesicle-fusion",
+    "mech:dominant-negative"
+   ],
+   "node_id": "mech:ras-protein-signal-transduction",
+   "match": "instance",
+   "justification": "Ras pathway dysregulation",
+   "raw_node_id": "mech:ras-protein-signal-transduction",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.874Z"
+  },
+  "a631353f21d6695e": {
+   "mention": "lack of stereopsis",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0002371",
+    "phenotype:HP:0000749",
+    "phenotype:HP:0000915",
+    "phenotype:HP:0009908",
+    "phenotype:HP:0000733",
+    "phenotype:HP:0007549",
+    "phenotype:HP:0010463",
+    "phenotype:HP:0004963",
+    "phenotype:HP:0007759",
+    "phenotype:HP:0001788"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no stereopsis term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.874Z"
+  },
+  "4d9bca359e54474f": {
+   "mention": "refractive errors",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0004482",
+    "phenotype:HP:0002870",
+    "phenotype:HP:0001929",
+    "phenotype:HP:0004841",
+    "phenotype:HP:0003125",
+    "phenotype:HP:0008357",
+    "phenotype:HP:0012664",
+    "phenotype:HP:0008762",
+    "phenotype:HP:0002756",
+    "phenotype:HP:0005876"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no refractive error term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.874Z"
+  },
+  "dcbe43aad4e35d88": {
+   "mention": "optic nerve hypoplasia or pallor",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001093",
+    "phenotype:HP:0012511",
+    "phenotype:HP:0000980",
+    "phenotype:HP:0002079",
+    "phenotype:HP:0008802",
+    "phenotype:HP:0007333",
+    "phenotype:HP:0012430",
+    "phenotype:HP:0000648",
+    "phenotype:HP:0005278",
+    "phenotype:HP:0005281"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "compound hypoplasia or pallor; ambiguous",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.874Z"
+  },
+  "07fab9e19445a962": {
+   "mention": "visual system development",
+   "type": "mechanism",
+   "candidates": [
+    "mech:action-potential",
+    "mech:lysosomal-storage",
+    "mech:lysosomal-enzyme-deficiency",
+    "mech:protein-destabilization",
+    "mech:synaptic-vesicle-priming",
+    "mech:lysosomal-protein-catabolism",
+    "mech:ras-protein-signal-transduction",
+    "mech:regulation-of-synaptic-plasticity",
+    "mech:intracellular-cholesterol-transport",
+    "mech:negative-regulation-of-ras-signaling"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "visual development not a candidate",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.874Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.874Z",
+   "request_payload": {
+    "title": "Ophthalmic manifestations in Costello syndrome caused by Ras pathway dysregulation during development.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "dysregulation of the Ras pathway",
+      "declared_type": "mechanism",
+      "sentence": "BACKGROUND: Costello syndrome (CS) is a multisystem developmental disorder caused by germline pathogenic variants in HRAS resulting in dysregulation of the Ras pathway.",
+      "candidates": [
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:positive-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Positive regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that activates or increases the frequency, rate or extent of Ras protein signal transduction."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:gain-of-function",
+        "type": "mechanism",
+        "label": "Gain of function (the protein does too much)",
+        "note": "kind: effect",
+        "summary": "The variant protein is overactive: in these disorders that usually means synaptic vesicles fuse too readily, or neurotransmitter is released when it should not "
+       },
+       {
+        "id": "mech:loss-of-function",
+        "type": "mechanism",
+        "label": "Loss of function",
+        "note": "kind: effect",
+        "summary": "The variant protein cannot do its normal job. Used where the evidence shows loss of activity without specifying whether the cause is reduced dose, instability o"
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:ca-triggered-exocytosis",
+        "type": "mechanism",
+        "label": "Ca2+-triggered neurotransmitter exocytosis",
+        "note": "kind: process",
+        "summary": "The release of a neurotransmitter into the synaptic cleft by exocytosis of synaptic vesicles, where the release step is dependent on a rise in cytosolic calcium"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:synaptic-vesicle-fusion",
+        "type": "mechanism",
+        "label": "Synaptic vesicle fusion with the active zone membrane",
+        "note": "kind: process",
+        "summary": "Fusion of the membrane of a synaptic vesicle with the presynaptic active zone membrane, thereby releasing its cargo neurotransmitters into the synaptic cleft."
+       },
+       {
+        "id": "mech:dominant-negative",
+        "type": "mechanism",
+        "label": "Dominant-negative effect (the altered protein blocks the good one)",
+        "note": "kind: effect",
+        "summary": "The altered protein is still present and actively interferes with the normal protein or the machine it belongs to, so the damage is worse than simply having hal"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "lack of stereopsis",
+      "declared_type": "phenotype",
+      "sentence": "The most common ophthalmic manifestations in the cross-sectional study were lack of stereopsis (96%), refractive errors (83%), strabismus (72%), nystagmus (69%), optic nerve hypoplasia or pallor (55%) and ptosis (13.7%) with higher prevalence than in the retrospective data (refractive errors (41%), strabismus (44%), nystagmus (26%), optic nerve hypoplasia or pallor (7%) and ptosis (11%)).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0002371",
+        "type": "phenotype",
+        "label": "Loss of speech",
+        "note": "HPO HP:0002371"
+       },
+       {
+        "id": "phenotype:HP:0000749",
+        "type": "phenotype",
+        "label": "Paroxysmal bursts of laughter",
+        "note": "HPO HP:0000749"
+       },
+       {
+        "id": "phenotype:HP:0000915",
+        "type": "phenotype",
+        "label": "Pectus excavatum of inferior sternum",
+        "note": "HPO HP:0000915"
+       },
+       {
+        "id": "phenotype:HP:0009908",
+        "type": "phenotype",
+        "label": "Anterior creases of earlobe",
+        "note": "HPO HP:0009908"
+       },
+       {
+        "id": "phenotype:HP:0000733",
+        "type": "phenotype",
+        "label": "Motor stereotypy",
+        "note": "HPO HP:0000733"
+       },
+       {
+        "id": "phenotype:HP:0007549",
+        "type": "phenotype",
+        "label": "Desquamation of skin soon after birth",
+        "note": "HPO HP:0007549"
+       },
+       {
+        "id": "phenotype:HP:0010463",
+        "type": "phenotype",
+        "label": "Aplasia of the ovary",
+        "note": "HPO HP:0010463"
+       },
+       {
+        "id": "phenotype:HP:0004963",
+        "type": "phenotype",
+        "label": "Calcification of the aorta",
+        "note": "HPO HP:0004963"
+       },
+       {
+        "id": "phenotype:HP:0007759",
+        "type": "phenotype",
+        "label": "Opacification of the corneal stroma",
+        "note": "HPO HP:0007759"
+       },
+       {
+        "id": "phenotype:HP:0001788",
+        "type": "phenotype",
+        "label": "Premature rupture of membranes",
+        "note": "HPO HP:0001788"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "refractive errors",
+      "declared_type": "phenotype",
+      "sentence": "The most common ophthalmic manifestations in the cross-sectional study were lack of stereopsis (96%), refractive errors (83%), strabismus (72%), nystagmus (69%), optic nerve hypoplasia or pallor (55%) and ptosis (13.7%) with higher prevalence than in the retrospective data (refractive errors (41%), strabismus (44%), nystagmus (26%), optic nerve hypoplasia or pallor (7%) and ptosis (11%)).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0004482",
+        "type": "phenotype",
+        "label": "Relative macrocephaly",
+        "note": "HPO HP:0004482"
+       },
+       {
+        "id": "phenotype:HP:0002870",
+        "type": "phenotype",
+        "label": "Obstructive sleep apnea",
+        "note": "HPO HP:0002870"
+       },
+       {
+        "id": "phenotype:HP:0001929",
+        "type": "phenotype",
+        "label": "Reduced factor XI activity",
+        "note": "HPO HP:0001929"
+       },
+       {
+        "id": "phenotype:HP:0004841",
+        "type": "phenotype",
+        "label": "Reduced factor XII activity",
+        "note": "HPO HP:0004841"
+       },
+       {
+        "id": "phenotype:HP:0003125",
+        "type": "phenotype",
+        "label": "Reduced factor VIII activity",
+        "note": "HPO HP:0003125"
+       },
+       {
+        "id": "phenotype:HP:0008357",
+        "type": "phenotype",
+        "label": "Reduced factor XIII activity",
+        "note": "HPO HP:0008357"
+       },
+       {
+        "id": "phenotype:HP:0012664",
+        "type": "phenotype",
+        "label": "Reduced left ventricular ejection fraction",
+        "note": "HPO HP:0012664"
+       },
+       {
+        "id": "phenotype:HP:0008762",
+        "type": "phenotype",
+        "label": "Repetitive compulsive behavior",
+        "note": "HPO HP:0008762"
+       },
+       {
+        "id": "phenotype:HP:0002756",
+        "type": "phenotype",
+        "label": "Pathologic fracture",
+        "note": "HPO HP:0002756"
+       },
+       {
+        "id": "phenotype:HP:0005876",
+        "type": "phenotype",
+        "label": "Progressive flexion contractures",
+        "note": "HPO HP:0005876"
+       }
+      ]
+     },
+     {
+      "mention_id": "m4",
+      "mention": "optic nerve hypoplasia or pallor",
+      "declared_type": "phenotype",
+      "sentence": "The most common ophthalmic manifestations in the cross-sectional study were lack of stereopsis (96%), refractive errors (83%), strabismus (72%), nystagmus (69%), optic nerve hypoplasia or pallor (55%) and ptosis (13.7%) with higher prevalence than in the retrospective data (refractive errors (41%), strabismus (44%), nystagmus (26%), optic nerve hypoplasia or pallor (7%) and ptosis (11%)).",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001093",
+        "type": "phenotype",
+        "label": "Optic nerve dysplasia",
+        "note": "HPO HP:0001093"
+       },
+       {
+        "id": "phenotype:HP:0012511",
+        "type": "phenotype",
+        "label": "Temporal optic disc pallor",
+        "note": "HPO HP:0012511"
+       },
+       {
+        "id": "phenotype:HP:0000980",
+        "type": "phenotype",
+        "label": "Pallor",
+        "note": "HPO HP:0000980"
+       },
+       {
+        "id": "phenotype:HP:0002079",
+        "type": "phenotype",
+        "label": "Hypoplasia of the corpus callosum",
+        "note": "HPO HP:0002079"
+       },
+       {
+        "id": "phenotype:HP:0008802",
+        "type": "phenotype",
+        "label": "Hypoplasia of the femoral head",
+        "note": "HPO HP:0008802"
+       },
+       {
+        "id": "phenotype:HP:0007333",
+        "type": "phenotype",
+        "label": "Hypoplasia of the frontal lobes",
+        "note": "HPO HP:0007333"
+       },
+       {
+        "id": "phenotype:HP:0012430",
+        "type": "phenotype",
+        "label": "Cerebral white matter hypoplasia",
+        "note": "HPO HP:0012430"
+       },
+       {
+        "id": "phenotype:HP:0000648",
+        "type": "phenotype",
+        "label": "Optic atrophy",
+        "note": "HPO HP:0000648"
+       },
+       {
+        "id": "phenotype:HP:0005278",
+        "type": "phenotype",
+        "label": "Hypoplastic nasal tip",
+        "note": "HPO HP:0005278"
+       },
+       {
+        "id": "phenotype:HP:0005281",
+        "type": "phenotype",
+        "label": "Hypoplastic nasal bridge",
+        "note": "HPO HP:0005281"
+       }
+      ]
+     },
+     {
+      "mention_id": "m5",
+      "mention": "visual system development",
+      "declared_type": "mechanism",
+      "sentence": "CONCLUSION: Majority of individuals with CS have refractive errors, strabismus, nystagmus, absent stereopsis, and optic nerve abnormalities suggesting that HRAS and the Ras pathway play a vital role in visual system development.",
+      "candidates": [
+       {
+        "id": "mech:action-potential",
+        "type": "mechanism",
+        "label": "Action potential (neuronal firing)",
+        "note": "kind: process",
+        "summary": "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarizat"
+       },
+       {
+        "id": "mech:lysosomal-storage",
+        "type": "mechanism",
+        "label": "Lysosomal substrate accumulation (storage)",
+        "synonyms": [
+         "lysosomal storage",
+         "substrate accumulation"
+        ],
+        "note": "kind: process",
+        "summary": "Material that the lysosome should break down or export piles up inside it (the 'storage'), damaging the cell. The stored material differs by disease: lipids, su"
+       },
+       {
+        "id": "mech:lysosomal-enzyme-deficiency",
+        "type": "mechanism",
+        "label": "Lysosomal enzyme deficiency",
+        "synonyms": [
+         "enzyme deficiency",
+         "lysosomal hydrolase deficiency"
+        ],
+        "note": "kind: effect",
+        "summary": "One of the lysosome's digestive enzymes is missing or barely active, so its substrate cannot be broken down. A specific kind of loss of function; most lysosomal"
+       },
+       {
+        "id": "mech:protein-destabilization",
+        "type": "mechanism",
+        "label": "Protein destabilization / misfolding",
+        "note": "kind: effect",
+        "summary": "The variant protein is made but is unstable or misfolds, so it is degraded, aggregates, or is retained inside the cell instead of reaching its working location."
+       },
+       {
+        "id": "mech:synaptic-vesicle-priming",
+        "type": "mechanism",
+        "label": "Synaptic vesicle priming",
+        "note": "kind: process",
+        "summary": "A process that converts synaptic vesicles to a state of competence for calcium triggered fusion with the active zone membrane by bringing the two membranes into"
+       },
+       {
+        "id": "mech:lysosomal-protein-catabolism",
+        "type": "mechanism",
+        "label": "Lysosomal protein breakdown",
+        "note": "kind: process",
+        "summary": "Any cellular protein catabolic process that takes place in a lysosome."
+       },
+       {
+        "id": "mech:ras-protein-signal-transduction",
+        "type": "mechanism",
+        "label": "Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "An intracellular signaling cassette in which a small monomeric GTPase of the Ras subfamily relays a signal."
+       },
+       {
+        "id": "mech:regulation-of-synaptic-plasticity",
+        "type": "mechanism",
+        "label": "Regulation of synaptic plasticity",
+        "note": "kind: process",
+        "summary": "A process that modulates synaptic plasticity, the ability of synapses to change as circumstances require. They may alter function, such as increasing or decreas"
+       },
+       {
+        "id": "mech:intracellular-cholesterol-transport",
+        "type": "mechanism",
+        "label": "Intracellular cholesterol transport",
+        "note": "kind: process",
+        "summary": "The directed movement of cholesterol, cholest-5-en-3-beta-ol, within cells."
+       },
+       {
+        "id": "mech:negative-regulation-of-ras-signaling",
+        "type": "mechanism",
+        "label": "Negative regulation of Ras protein signal transduction",
+        "note": "kind: process",
+        "summary": "Any process that stops, prevents, or reduces the frequency, rate or extent of Ras protein signal transduction."
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"dysregulation of the Ras pathway\",\"node_id\":\"mech:ras-protein-signal-transduction\",\"match\":\"instance\",\"justification\":\"Ras pathway dysregulation\"},{\"mention_id\":\"m2\",\"mention\":\"lack of stereopsis\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no stereopsis term\"},{\"mention_id\":\"m3\",\"mention\":\"refractive errors\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no refractive error term\"},{\"mention_id\":\"m4\",\"mention\":\"optic nerve hypoplasia or pallor\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"compound hypoplasia or pallor; ambiguous\"},{\"mention_id\":\"m5\",\"mention\":\"visual system development\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"visual development not a candidate\"}]}"
+  }
+ ]
+}

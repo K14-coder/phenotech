@@ -1,0 +1,73 @@
+{
+ "pmid": "29909380",
+ "set": "rasopathy",
+ "model": "agent-reading",
+ "generated_at": "2026-10-04T05:05:01.567Z",
+ "reader": "claude",
+ "how": "Claude agent reading of the stored title + abstract, blind to the curated graph, with EXTRACT_INSTRUCTIONS and CLAIM_SCHEMA",
+ "input_sha1": "973ae8c1e8867b47",
+ "instructions_sha1": "79dda9c7f8564aa5",
+ "source": "data/raw/families/rasopathy/pubmed/29909380.json",
+ "claims": [
+  {
+   "subject_mention": "LZTR1",
+   "subject_type": "gene",
+   "relation": "causes",
+   "object_mention": "schwannomatosis",
+   "object_type": "disease",
+   "quote": "LZTR1-associated schwannomatosis also causes a small number of cases that are misdiagnosed with NF2 (1%-2%), due to the occurrence of a unilateral vestibular schwannoma.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "LZTR1-associated schwannomatosis",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "unilateral vestibular schwannoma",
+   "object_type": "phenotype",
+   "quote": "LZTR1-associated schwannomatosis also causes a small number of cases that are misdiagnosed with NF2 (1%-2%), due to the occurrence of a unilateral vestibular schwannoma.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "schwannomatosis",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "peripheral and spinal nerve schwannomas",
+   "object_type": "phenotype",
+   "quote": "Patients with schwannomatosis had lower numbers of non-vestibular cranial schwannomas, but more peripheral and spinal nerve schwannomas with pain as a predominant presenting symptom.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "schwannomatosis",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "pain",
+   "object_type": "phenotype",
+   "quote": "Patients with schwannomatosis had lower numbers of non-vestibular cranial schwannomas, but more peripheral and spinal nerve schwannomas with pain as a predominant presenting symptom.",
+   "study_type": "cohort",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  },
+  {
+   "subject_mention": "Schwannomatosis",
+   "subject_type": "disease",
+   "relation": "has_phenotype",
+   "object_mention": "schwannomas of mainly spinal and peripheral nerves",
+   "object_type": "phenotype",
+   "quote": "OBJECTIVES: Schwannomatosis is a dominantly inherited condition predisposing to schwannomas of mainly spinal and peripheral nerves with some diagnostic overlap with neurofibromatosis-2 (NF2), but the underlying epidemiology is poorly understood.",
+   "study_type": "review",
+   "species": "human",
+   "certainty": "established",
+   "negated": false
+  }
+ ]
+}

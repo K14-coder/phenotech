@@ -1,0 +1,342 @@
+{
+ "pmid": "40236726",
+ "entries": {
+  "0653558984e23f42": {
+   "mention": "olipudase alfa",
+   "type": "therapy",
+   "candidates": [
+    "therapy:fabry-enzyme-replacement",
+    "therapy:pompe-enzyme-replacement",
+    "therapy:olipudase-alfa",
+    "therapy:gaucher-enzyme-replacement",
+    "therapy:cerliponase-alfa",
+    "therapy:pabinafusp-alfa",
+    "therapy:idursulfase",
+    "therapy:aminopyridine-presynaptic-boost",
+    "therapy:pyrimethamine",
+    "therapy:laronidase"
+   ],
+   "node_id": "therapy:olipudase-alfa",
+   "match": "same",
+   "justification": "olipudase alfa",
+   "raw_node_id": "therapy:olipudase-alfa",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.826Z"
+  },
+  "9d16564a4441d255": {
+   "mention": "interstitial lung disease (ILD)",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001249",
+    "phenotype:HP:0006610",
+    "phenotype:HP:0010864",
+    "phenotype:HP:0002372",
+    "phenotype:HP:0005165",
+    "phenotype:HP:0002187",
+    "phenotype:HP:0009697",
+    "phenotype:HP:0006889",
+    "phenotype:HP:0004389",
+    "phenotype:HP:0009908"
+   ],
+   "node_id": null,
+   "match": "none",
+   "justification": "no ILD term",
+   "raw_node_id": "none",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.826Z"
+  },
+  "6557649fb53ddcb9": {
+   "mention": "growth failure",
+   "type": "phenotype",
+   "candidates": [
+    "phenotype:HP:0001510",
+    "phenotype:HP:0006583",
+    "phenotype:HP:0009805",
+    "phenotype:HP:0001250",
+    "phenotype:HP:0004322",
+    "phenotype:HP:0032792",
+    "phenotype:HP:0010819",
+    "phenotype:HP:0020221",
+    "phenotype:HP:0007334",
+    "phenotype:HP:0032794"
+   ],
+   "node_id": "phenotype:HP:0001510",
+   "match": "same",
+   "justification": "growth failure = growth delay",
+   "raw_node_id": "phenotype:HP:0001510",
+   "rejected_not_in_candidates": false,
+   "model": "agent-reading",
+   "generated_at": "2026-10-04T05:10:37.826Z"
+  }
+ },
+ "calls": [
+  {
+   "model": "agent-reading",
+   "reader": "claude",
+   "generated_at": "2026-10-04T05:10:37.826Z",
+   "request_payload": {
+    "title": "Benefits of early intervention with olipudase alfa in symptomatic children with acid sphingomyelinase deficiency: A sibling case-comparison study.",
+    "mentions": [
+     {
+      "mention_id": "m1",
+      "mention": "olipudase alfa",
+      "declared_type": "therapy",
+      "sentence": "Non-neurological manifestations of this disease are amenable to enzyme replacement therapy (ERT) with olipudase alfa in both adult and pediatric patients.",
+      "candidates": [
+       {
+        "id": "therapy:fabry-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Fabry disease (agalsidase beta, pegunigalsidase alfa)",
+        "synonyms": [
+         "agalsidase beta",
+         "Fabrazyme",
+         "pegunigalsidase alfa",
+         "Elfabrio",
+         "agalsidase alfa"
+        ],
+        "summary": "Intravenous replacement of alpha-galactosidase A for people with Fabry disease."
+       },
+       {
+        "id": "therapy:pompe-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Pompe disease (alglucosidase alfa, avalglucosidase alfa, cipaglucosidase alfa)",
+        "synonyms": [
+         "alglucosidase alfa",
+         "Lumizyme",
+         "Myozyme",
+         "avalglucosidase alfa",
+         "Nexviazyme",
+         "cipaglucosidase alfa",
+         "Pombiliti"
+        ],
+        "summary": "Intravenous replacement of acid alpha-glucosidase, the only disease-specific treatment class for Pompe disease."
+       },
+       {
+        "id": "therapy:olipudase-alfa",
+        "type": "therapy",
+        "label": "Olipudase alfa (enzyme replacement for ASMD)",
+        "synonyms": [
+         "Xenpozyme",
+         "rhASM"
+        ],
+        "summary": "Intravenous recombinant acid sphingomyelinase, approved only for the non-brain manifestations of ASMD."
+       },
+       {
+        "id": "therapy:gaucher-enzyme-replacement",
+        "type": "therapy",
+        "label": "Enzyme replacement for Gaucher disease (imiglucerase, velaglucerase alfa, taliglucerase alfa)",
+        "synonyms": [
+         "imiglucerase",
+         "Cerezyme",
+         "velaglucerase alfa",
+         "VPRIV",
+         "taliglucerase alfa",
+         "Elelyso",
+         "ERT"
+        ],
+        "summary": "Intravenous replacement of the missing glucocerebrosidase enzyme. Approved for the body (non-brain) manifestations of Gaucher disease; it does not treat the bra"
+       },
+       {
+        "id": "therapy:cerliponase-alfa",
+        "type": "therapy",
+        "label": "Cerliponase alfa (intraventricular enzyme replacement for CLN2)",
+        "synonyms": [
+         "Brineura",
+         "rhTPP1"
+        ],
+        "summary": "Recombinant TPP1 delivered straight into the fluid spaces of the brain, bypassing the blood-brain barrier. It slows the loss of walking and language in CLN2 dis"
+       },
+       {
+        "id": "therapy:pabinafusp-alfa",
+        "type": "therapy",
+        "label": "Pabinafusp alfa (brain-penetrant enzyme replacement for MPS II)",
+        "synonyms": [
+         "JR-141",
+         "Izcargo"
+        ],
+        "summary": "Iduronate-2-sulfatase fused to an antibody that ferries it across the blood-brain barrier via the transferrin receptor, aimed at the neurological form of MPS II"
+       },
+       {
+        "id": "therapy:idursulfase",
+        "type": "therapy",
+        "label": "Idursulfase (enzyme replacement for MPS II)",
+        "synonyms": [
+         "Elaprase"
+        ],
+        "summary": "Intravenous recombinant iduronate-2-sulfatase for Hunter syndrome (MPS II)."
+       },
+       {
+        "id": "therapy:aminopyridine-presynaptic-boost",
+        "type": "therapy",
+        "label": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost",
+        "synonyms": [
+         "4-aminopyridine",
+         "4-AP",
+         "dalfampridine"
+        ],
+        "summary": "The same class of potassium-channel blockers, used to push more neurotransmitter release when a SNARE-machinery variant has weakened it. Reported for VAMP2 and "
+       },
+       {
+        "id": "therapy:pyrimethamine",
+        "type": "therapy",
+        "label": "Pyrimethamine (pharmacological chaperone for hexosaminidase A)",
+        "synonyms": [
+         "PMT"
+        ],
+        "summary": "An old antiparasitic drug that partly rescues misfolded hexosaminidase A; it raised enzyme activity in late-onset Tay-Sachs patients, but higher doses caused si"
+       },
+       {
+        "id": "therapy:laronidase",
+        "type": "therapy",
+        "label": "Laronidase (enzyme replacement for MPS I)",
+        "synonyms": [
+         "Aldurazyme"
+        ],
+        "summary": "Intravenous recombinant alpha-L-iduronidase for MPS I. It does not cross the blood-brain barrier, so it is not expected to treat the brain disease of the severe"
+       }
+      ]
+     },
+     {
+      "mention_id": "m2",
+      "mention": "interstitial lung disease (ILD)",
+      "declared_type": "phenotype",
+      "sentence": "Acid sphingomyelinase deficiency (ASMD) is a lysosomal storage disease with multisystem complications including neurodegeneration, hepatosplenomegaly, interstitial lung disease (ILD), bone marrow disease, and growth failure.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001249",
+        "type": "phenotype",
+        "label": "Intellectual disability",
+        "note": "HPO HP:0001249"
+       },
+       {
+        "id": "phenotype:HP:0006610",
+        "type": "phenotype",
+        "label": "Wide intermamillary distance",
+        "note": "HPO HP:0006610"
+       },
+       {
+        "id": "phenotype:HP:0010864",
+        "type": "phenotype",
+        "label": "Severe intellectual disability",
+        "note": "HPO HP:0010864"
+       },
+       {
+        "id": "phenotype:HP:0002372",
+        "type": "phenotype",
+        "label": "Normal interictal EEG",
+        "note": "HPO HP:0002372"
+       },
+       {
+        "id": "phenotype:HP:0005165",
+        "type": "phenotype",
+        "label": "Shortened PR interval",
+        "note": "HPO HP:0005165"
+       },
+       {
+        "id": "phenotype:HP:0002187",
+        "type": "phenotype",
+        "label": "Profound intellectual disability",
+        "note": "HPO HP:0002187"
+       },
+       {
+        "id": "phenotype:HP:0009697",
+        "type": "phenotype",
+        "label": "Contracture of the distal interphalangeal joint of the fingers",
+        "note": "HPO HP:0009697"
+       },
+       {
+        "id": "phenotype:HP:0006889",
+        "type": "phenotype",
+        "label": "Borderline intellectual disability",
+        "note": "HPO HP:0006889"
+       },
+       {
+        "id": "phenotype:HP:0004389",
+        "type": "phenotype",
+        "label": "Intestinal pseudo-obstruction",
+        "note": "HPO HP:0004389"
+       },
+       {
+        "id": "phenotype:HP:0009908",
+        "type": "phenotype",
+        "label": "Anterior creases of earlobe",
+        "note": "HPO HP:0009908"
+       }
+      ]
+     },
+     {
+      "mention_id": "m3",
+      "mention": "growth failure",
+      "declared_type": "phenotype",
+      "sentence": "Acid sphingomyelinase deficiency (ASMD) is a lysosomal storage disease with multisystem complications including neurodegeneration, hepatosplenomegaly, interstitial lung disease (ILD), bone marrow disease, and growth failure.",
+      "candidates": [
+       {
+        "id": "phenotype:HP:0001510",
+        "type": "phenotype",
+        "label": "Growth delay",
+        "note": "HPO HP:0001510"
+       },
+       {
+        "id": "phenotype:HP:0006583",
+        "type": "phenotype",
+        "label": "Fatal liver failure in infancy",
+        "note": "HPO HP:0006583"
+       },
+       {
+        "id": "phenotype:HP:0009805",
+        "type": "phenotype",
+        "label": "Low-output congestive heart failure",
+        "note": "HPO HP:0009805"
+       },
+       {
+        "id": "phenotype:HP:0001250",
+        "type": "phenotype",
+        "label": "Seizure",
+        "note": "HPO HP:0001250"
+       },
+       {
+        "id": "phenotype:HP:0004322",
+        "type": "phenotype",
+        "label": "Short stature",
+        "note": "HPO HP:0004322"
+       },
+       {
+        "id": "phenotype:HP:0032792",
+        "type": "phenotype",
+        "label": "Tonic seizure",
+        "note": "HPO HP:0032792"
+       },
+       {
+        "id": "phenotype:HP:0010819",
+        "type": "phenotype",
+        "label": "Atonic seizure",
+        "note": "HPO HP:0010819"
+       },
+       {
+        "id": "phenotype:HP:0020221",
+        "type": "phenotype",
+        "label": "Clonic seizure",
+        "note": "HPO HP:0020221"
+       },
+       {
+        "id": "phenotype:HP:0007334",
+        "type": "phenotype",
+        "label": "Bilateral tonic-clonic seizure with focal onset",
+        "note": "HPO HP:0007334"
+       },
+       {
+        "id": "phenotype:HP:0032794",
+        "type": "phenotype",
+        "label": "Myoclonic seizure",
+        "note": "HPO HP:0032794"
+       }
+      ]
+     }
+    ]
+   },
+   "raw_response": "{\"resolutions\":[{\"mention_id\":\"m1\",\"mention\":\"olipudase alfa\",\"node_id\":\"therapy:olipudase-alfa\",\"match\":\"same\",\"justification\":\"olipudase alfa\"},{\"mention_id\":\"m2\",\"mention\":\"interstitial lung disease (ILD)\",\"node_id\":\"none\",\"match\":\"none\",\"justification\":\"no ILD term\"},{\"mention_id\":\"m3\",\"mention\":\"growth failure\",\"node_id\":\"phenotype:HP:0001510\",\"match\":\"same\",\"justification\":\"growth failure = growth delay\"}]}"
+  }
+ ]
+}
