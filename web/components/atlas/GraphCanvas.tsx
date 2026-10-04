@@ -60,6 +60,10 @@ export interface GraphCanvasProps {
   showMechsim?: boolean;
   /** factor lens: draw only one factor's disease-disease links (or all of them, coloured by factor) */
   lens?: string | null;
+  /** relation types whose links are hidden */
+  hiddenEdgeTypes?: Set<string>;
+  /** right-click / long-press on a node: (id, x, y) in container pixels */
+  onNodeMenu?: (id: string, x: number, y: number) => void;
   onSelectNode: (id: string | null) => void;
   onSelectEdge: (id: string) => void;
 }
@@ -125,7 +129,7 @@ function buildElements(idx: GraphIndex): ElementDefinition[] {
     els.push({
       group: "edges",
       data: { id: e.id, source: e.source, target: e.target, conf: e.confidence, fscore, fcolor: factor ? FACTOR_COLOR[factor] : "#7a5ea8", rel: bridge ? `Bridge across clusters · ${rel}` : rel },
-      classes: `lvl-${e.evidence_level}${e.status === "contested" ? " contested" : ""}${e.type === "candidate_for" ? " idea" : ""}${(e.attrs as { contributed?: unknown } | undefined)?.contributed ? " contrib" : ""}${bridge ? " bridge" : ""}${mechsim ? " mechsim" : ""}${factor ? ` f-${factor}` : ""}`,
+      classes: `lvl-${e.evidence_level}${e.status === "contested" ? " contested" : ""}${e.type === "candidate_for" ? " idea" : ""}${(e.attrs as { contributed?: unknown } | undefined)?.contributed ? " contrib" : ""}${bridge ? " bridge" : ""}${mechsim ? " mechsim" : ""}${factor ? ` f-${factor}` : ""} r-${e.type}`,
     });
   }
   return els;
@@ -262,6 +266,7 @@ function stylesheet(fontFamily: string): cytoscape.StylesheetJson {
     { selector: "edge.lens-on", style: { "line-style": "solid", "line-color": "data(fcolor)", width: "mapData(fscore, 0, 1, 1.6, 7)", opacity: 1 } },
     { selector: "edge.mechsim", style: { "line-style": "dashed", "line-dash-pattern": [2, 4], "line-color": "#7a5ea8", opacity: 0.55 } },
     { selector: ".hidden", style: { display: "none" } },
+    { selector: "edge.rhide", style: { display: "none" } },
   ] as unknown as cytoscape.StylesheetJson;
 }
 
@@ -321,6 +326,12 @@ export default function GraphCanvas(props: GraphCanvasProps) {
 
     cy.on("tap", "node", (e) => cbRef.current.onSelectNode(e.target.id()));
     cy.on("tap", "edge", (e) => cbRef.current.onSelectEdge(e.target.id()));
+    const menu = (e: cytoscape.EventObject) => {
+      const p = e.renderedPosition ?? e.target.renderedPosition();
+      cbRef.current.onNodeMenu?.(e.target.id(), p.x, p.y);
+    };
+    cy.on("cxttap", "node", menu);
+    cy.on("taphold", "node", menu);
     cy.on("tap", (e) => {
       if (e.target === cy) cbRef.current.onSelectNode(null);
     });
@@ -343,7 +354,25 @@ export default function GraphCanvas(props: GraphCanvasProps) {
       container.style.cursor = "";
     });
 
+    // Cytoscape caches the container's page offset and only refreshes it on window resize/scroll. When the page
+    // above the map changes height (the view chooser closing, a banner), clicks would land on the wrong spot.
+    // Refresh the cached offset right before Cytoscape handles a pointer event (capture phase on the parent).
+    const parent = container.parentElement ?? container;
+    let lastTop = NaN;
+    let lastLeft = NaN;
+    const refresh = () => {
+      const r = container.getBoundingClientRect();
+      if (r.top !== lastTop || r.left !== lastLeft) {
+        lastTop = r.top;
+        lastLeft = r.left;
+        cy.resize();
+      }
+    };
+    const evs = ["mousedown", "touchstart", "mousemove", "pointerdown"] as const;
+    evs.forEach((t) => parent.addEventListener(t, refresh, { capture: true, passive: true }));
+
     return () => {
+      evs.forEach((t) => parent.removeEventListener(t, refresh, { capture: true }));
       cy.destroy();
       cyRef.current = null;
     };
@@ -428,6 +457,19 @@ export default function GraphCanvas(props: GraphCanvasProps) {
       });
     });
   }, [props.showMechsim, props.lens]);
+
+  // link types the user hid (class "rhide" so it never fights the lens / mechsim "hidden" toggles)
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy) return;
+    const hide = props.hiddenEdgeTypes ?? EMPTY_SET;
+    cy.batch(() => {
+      cy.edges().forEach((e) => {
+        const t = (e.classes() as string[]).find((c) => c.startsWith("r-"))?.slice(2) ?? "";
+        e.toggleClass("rhide", hide.has(t));
+      });
+    });
+  }, [props.hiddenEdgeTypes]);
 
   // scope changes: fit everything visible, centred on the focus node if there is one
   useEffect(() => {
