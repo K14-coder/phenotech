@@ -57,6 +57,18 @@ export interface Email {
   tag: string;
 }
 
+/** Dry-run writer: web/.data/outbox/<time>-<tag>.json (from, to, subject, headers, text) and .html. Returns the base path. */
+export async function writeOutbox(e: Email, name?: string): Promise<string> {
+  const subject = e.subject.replace(/[\r\n]+/g, " ").slice(0, 200);
+  const headers: Record<string, string> = e.unsubscribe ? { "List-Unsubscribe": `<${e.unsubscribe.post}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } : {};
+  const dir = path.join(process.cwd(), ".data", "outbox");
+  await mkdir(dir, { recursive: true });
+  const base = name ?? `${new Date().toISOString().replace(/[:.]/g, "-")}-${e.tag}`;
+  await writeFile(path.join(dir, `${base}.json`), JSON.stringify({ from: fromAddress(), to: e.to, subject, headers, text: e.text }, null, 2));
+  await writeFile(path.join(dir, `${base}.html`), e.html);
+  return path.join(".data", "outbox", base);
+}
+
 let smtp: Transporter | null = null;
 let smtpKey = "";
 function smtpTransport(): Transporter {
@@ -98,11 +110,7 @@ export async function sendEmail(e: Email): Promise<SendResult> {
   }
   if (mode === "dry-run") {
     try {
-      const dir = path.join(process.cwd(), ".data", "outbox");
-      await mkdir(dir, { recursive: true });
-      const base = `${new Date().toISOString().replace(/[:.]/g, "-")}-${e.tag}`;
-      await writeFile(path.join(dir, `${base}.json`), JSON.stringify({ from: fromAddress(), to: e.to, subject, headers, text: e.text }, null, 2));
-      await writeFile(path.join(dir, `${base}.html`), e.html);
+      await writeOutbox(e);
       return { sent: true, mode };
     } catch {
       console.error(`email dry run could not write the outbox (${e.tag})`);
@@ -141,8 +149,8 @@ export function testEmail(to: string): Email {
     subject,
     tag: "test",
     ...render(subject, {
-      paragraphs: ["This is a test email from Tasukeru.", `It was sent with the ${emailMode()} transport on ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC.`],
-      why: "You are receiving this because you asked for a test email on the Tasukeru admin page.",
+      paragraphs: ["Good news: email from Tasukeru reaches you.", `This test went out through the ${emailMode()} transport on ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC. Nothing else to do.`],
+      why: "you asked for a test email on the Tasukeru admin page.",
     }),
   };
 }
@@ -161,33 +169,98 @@ interface Block {
   items?: { label: string; title: string; url: string; meta?: string }[];
   why: string;
   unsubscribe?: Unsub;
+  /** "Hi there," unless a name is known */
+  name?: string | null;
 }
 
+/** Site origin for the logo and privacy links: from a link in the email, else APP_URL / the production URL. */
+function originOf(b: Block): string {
+  const u = b.button?.url ?? b.unsubscribe?.page ?? b.items?.[0]?.url;
+  try {
+    if (u && !/clinicaltrials\.gov|reporter\.nih\.gov/.test(u)) return new URL(u).origin;
+  } catch {
+    /* fall through */
+  }
+  return baseUrl();
+}
+
+// Palette: warm paper background, white card, the site's accent blue. The <style> block only adds dark-mode
+// and phone tweaks; everything that matters is inline, so clients that drop <style> still render it well.
+const C = { bg: "#f6f1ea", card: "#ffffff", line: "#ece4d8", ink: "#1d2027", ink2: "#3f4550", muted: "#857b6e", accent: "#1f5a96", quote: "#f8f5f0" };
+const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif";
+
 function render(subject: string, b: Block): { html: string; text: string } {
-  const p = (t: string) => `<p style="margin:0 0 14px;font-size:16px;line-height:1.5;color:#16181d">${esc(t)}</p>`;
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>${esc(subject)}</title></head>
-<body style="margin:0;padding:0;background:#f7f8f9;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f7f8f9;padding:24px 12px"><tr><td align="center">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:28px">
-<tr><td>
-<p style="margin:0 0 18px;font-size:15px;font-weight:600;color:#1f5a96">Tasukeru <span style="font-weight:400;color:#5f6672">· a rare-disease atlas</span></p>
+  const origin = originOf(b);
+  const greet = b.name ? `Hi ${b.name},` : "Hi there,";
+  const p = (t: string) => `<p class="ink2" style="margin:0 0 16px;font-family:${FONT};font-size:16px;line-height:1.6;color:${C.ink2}">${esc(t)}</p>`;
+  const quote = b.quote
+    ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:4px 0 22px"><tr><td class="quote" style="background:${C.quote};border-left:3px solid ${C.accent};border-radius:10px;padding:16px 18px">${
+        b.quote.title ? `<p class="ink" style="margin:0 0 8px;font-family:${FONT};font-size:16px;font-weight:600;line-height:1.4;color:${C.ink}">${esc(b.quote.title)}</p>` : ""
+      }${b.quote.lines.map((l) => `<p class="ink2" style="margin:0 0 6px;font-family:${FONT};font-size:15px;line-height:1.55;color:${C.ink2}">${esc(l)}</p>`).join("")}</td></tr></table>`
+    : "";
+  const items = b.items?.length
+    ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:4px 0 22px">${b.items
+        .map(
+          (i) =>
+            `<tr><td class="quote" style="background:${C.quote};border-radius:10px;padding:14px 16px"><p class="muted" style="margin:0 0 4px;font-family:${FONT};font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:${C.muted}">${esc(i.label)}</p><p style="margin:0;font-family:${FONT};font-size:16px;line-height:1.4"><a class="link" href="${esc(i.url)}" style="color:${C.accent};font-weight:600;text-decoration:none">${esc(i.title)}</a></p>${
+              i.meta ? `<p class="muted" style="margin:4px 0 0;font-family:${FONT};font-size:14px;color:${C.muted}">${esc(i.meta)}</p>` : ""
+            }</td></tr><tr><td style="height:10px;line-height:10px;font-size:10px">&nbsp;</td></tr>`,
+        )
+        .join("")}</table>`
+    : "";
+  const button = b.button
+    ? `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 14px"><tr><td class="btn" bgcolor="${C.accent}" style="background:${C.accent};border-radius:12px"><a href="${esc(b.button.url)}" style="display:inline-block;padding:15px 28px;font-family:${FONT};font-size:17px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:12px">${esc(b.button.label)}</a></td></tr></table>
+<p class="muted" style="margin:0 0 22px;font-family:${FONT};font-size:13px;line-height:1.5;color:${C.muted};word-break:break-all">Button not working? Copy this link into your browser:<br><a class="link" href="${esc(b.button.url)}" style="color:${C.accent}">${esc(b.button.url)}</a></p>`
+    : "";
+  const preheader = b.paragraphs[0] ?? subject;
+  const html = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><title>${esc(subject)}</title>
+<style>
+@media (prefers-color-scheme: dark) {
+  .bg { background:#17191d !important; }
+  .card { background:#23262c !important; border-color:#33373e !important; }
+  .ink { color:#eef0f3 !important; }
+  .ink2 { color:#cfd3d9 !important; }
+  .muted { color:#a3a9b3 !important; }
+  .quote { background:#2c3037 !important; }
+  .btn { background:#3d7fc4 !important; }
+  a.link { color:#9cc3ec !important; }
+  .rule { border-color:#3a3e46 !important; }
+}
+@media (max-width:600px) { .pad { padding:28px 22px !important; } }
+</style></head>
+<body class="bg" style="margin:0;padding:0;background:${C.bg};-webkit-text-size-adjust:100%">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent">${esc(preheader)}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="bg" bgcolor="${C.bg}" style="background:${C.bg}"><tr><td align="center" style="padding:32px 12px 40px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%">
+<tr><td align="center" style="padding:0 0 20px"><a href="${esc(origin)}" style="text-decoration:none"><img src="${esc(origin)}/email/logo.png" width="120" height="32" alt="Tasukeru" style="display:block;border:0;outline:none;width:120px;height:32px"></a></td></tr>
+<tr><td class="card pad" bgcolor="${C.card}" style="background:${C.card};border:1px solid ${C.line};border-radius:18px;padding:40px 40px 32px">
+<p class="ink" style="margin:0 0 18px;font-family:${FONT};font-size:18px;font-weight:600;color:${C.ink}">${esc(greet)}</p>
 ${b.paragraphs.map(p).join("\n")}
-${b.quote ? `<div style="margin:6px 0 18px;padding:14px 16px;background:#f7f8f9;border-radius:8px">${b.quote.title ? `<p style="margin:0 0 8px;font-size:16px;font-weight:600;color:#16181d">${esc(b.quote.title)}</p>` : ""}${b.quote.lines.map((l) => `<p style="margin:0 0 6px;font-size:15px;line-height:1.5;color:#3f4550">${esc(l)}</p>`).join("")}</div>` : ""}
-${b.items?.length ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 18px">${b.items.map((i) => `<tr><td style="padding:10px 0;border-top:1px solid #eff1f3"><p style="margin:0 0 2px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#5f6672">${esc(i.label)}</p><p style="margin:0;font-size:16px;line-height:1.4"><a href="${esc(i.url)}" style="color:#1f5a96;font-weight:600;text-decoration:none">${esc(i.title)}</a></p>${i.meta ? `<p style="margin:2px 0 0;font-size:14px;color:#5f6672">${esc(i.meta)}</p>` : ""}</td></tr>`).join("")}</table>` : ""}
-${b.button ? `<p style="margin:8px 0 22px"><a href="${esc(b.button.url)}" style="display:inline-block;background:#1f5a96;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:12px 18px;border-radius:8px">${esc(b.button.label)}</a></p><p style="margin:0 0 18px;font-size:13px;color:#5f6672;word-break:break-all">Or open this link: ${esc(b.button.url)}</p>` : ""}
-<p style="margin:18px 0 0;padding-top:14px;border-top:1px solid #eff1f3;font-size:13px;line-height:1.5;color:#5f6672">${esc(b.why)}${b.unsubscribe ? ` <a href="${esc(b.unsubscribe.page)}" style="color:#5f6672">Unsubscribe in one click</a>.` : ""}<br>Tasukeru (助ける, “to help”) · a rare-disease atlas</p>
-</td></tr></table></td></tr></table></body></html>`;
+${quote}${items}${button}
+<p class="muted rule" style="margin:18px 0 0;padding-top:16px;border-top:1px solid ${C.line};font-family:${FONT};font-size:13px;line-height:1.55;color:${C.muted}"><strong style="font-weight:600">Why you’re getting this:</strong> ${esc(b.why)}</p>
+</td></tr>
+<tr><td align="center" class="muted" style="padding:22px 16px 0;font-family:${FONT};font-size:12px;line-height:1.7;color:${C.muted}">
+With care, the Tasukeru team<br>Tasukeru (助ける) means “to help” in Japanese.<br>
+${b.unsubscribe ? `<a class="link" href="${esc(b.unsubscribe.page)}" style="color:${C.muted};text-decoration:underline">Unsubscribe in one click</a> &nbsp;·&nbsp; ` : ""}<a class="link" href="${esc(origin)}/privacy" style="color:${C.muted};text-decoration:underline">Privacy</a>
+</td></tr>
+</table></td></tr></table></body></html>`;
   const text = [
-    "Tasukeru · a rare-disease atlas",
+    "Tasukeru",
+    "",
+    greet,
     "",
     ...b.paragraphs.flatMap((t) => [t, ""]),
     ...(b.quote ? [...(b.quote.title ? [b.quote.title] : []), ...b.quote.lines, ""] : []),
     ...(b.items ?? []).flatMap((i) => [`${i.label}: ${i.title}`, ...(i.meta ? [i.meta] : []), i.url, ""]),
     ...(b.button ? [`${b.button.label}: ${b.button.url}`, ""] : []),
+    `Why you're getting this: ${b.why}`,
+    "",
     "--",
-    b.why,
-    "Tasukeru (助ける, \"to help\") · a rare-disease atlas",
+    "With care, the Tasukeru team",
+    "Tasukeru (助ける) means \"to help\" in Japanese.",
     ...(b.unsubscribe ? [`Unsubscribe in one click: ${b.unsubscribe.page}`] : []),
+    `Privacy: ${origin}/privacy`,
   ].join("\n");
   return { html, text };
 }
@@ -199,9 +272,9 @@ export function verificationEmail(to: string, url: string): Email {
     subject,
     tag: "verify",
     ...render(subject, {
-      paragraphs: ["Thank you for joining Tasukeru, the rare-disease atlas.", "Please confirm this is your email address. The link works for 7 days."],
+      paragraphs: ["Welcome to Tasukeru. We’re really glad you’re here.", "One small step left: please confirm this is your email address, so we can send you the updates you asked for. The button works for 7 days."],
       button: { label: "Confirm my email", url },
-      why: "You are receiving this because someone used this address to create an account. If it wasn't you, ignore this email and nothing will happen.",
+      why: "this address was used to create a Tasukeru account. If that wasn’t you, just ignore this email and nothing will happen.",
     }),
   };
 }
@@ -213,9 +286,9 @@ export function resetEmail(to: string, url: string): Email {
     subject,
     tag: "reset",
     ...render(subject, {
-      paragraphs: ["Someone asked to reset the password for your Tasukeru account.", "The link works once, for one hour."],
+      paragraphs: ["We got a request to reset the password for your Tasukeru account.", "Choose a new one with the button below. It works once, for one hour."],
       button: { label: "Choose a new password", url },
-      why: "You are receiving this because a password reset was requested for this address. If it wasn't you, ignore this email; your password stays the same.",
+      why: "someone asked to reset the password for this address. If that wasn’t you, you can ignore this email; your password stays the same.",
     }),
   };
 }
@@ -234,10 +307,10 @@ export function announcementEmail(
     tag: "announcement",
     unsubscribe,
     ...render(subject, {
-      paragraphs: [`${a.organisation} has announced a study for ${diseases}. Our team checked the announcement before sending it.`],
+      paragraphs: [`There’s a new study for ${diseases}, from ${a.organisation}.`, "A person on our team read it before it reached you. Taking part is always your choice, and there is no rush."],
       quote: { title: a.title, lines: [a.summary, `Who can take part: ${a.eligibility}`, `How to get in touch: ${a.contact}`, `Ethics approval: ${a.ethics}`] },
       button: { label: "See it in my atlas", url: meUrl },
-      why: `You are receiving this because you follow ${diseases} and asked to hear about studies. Taking part is always your choice.`,
+      why: `you follow ${diseases} and asked to hear about studies.`,
       unsubscribe,
     }),
   };
@@ -252,12 +325,12 @@ export function contactEmail(to: string, organisation: string, message: string, 
     unsubscribe,
     ...render(subject, {
       paragraphs: [
-        `A researcher at ${organisation} sent this message to families who follow ${diseases}. They do not know your email address, and they will only hear from you if you choose to get in touch.`,
+        `A researcher at ${organisation} wrote to families who follow ${diseases}. They don’t know your email address, and they only hear from you if you decide to reply.`,
         verified ? "Their account uses an institutional email address." : "Their account is not verified yet, so please be careful.",
       ],
       quote: { lines: [message] },
       button: { label: "Read it in my atlas", url: meUrl },
-      why: "You are receiving this because you said researchers may contact you through the atlas. You can turn this off in My atlas.",
+      why: "you said researchers may contact you through Tasukeru. You can turn this off anytime in My atlas.",
       unsubscribe,
     }),
   };
@@ -280,10 +353,10 @@ export function trialsEmail(to: string, items: { disease: string; title: string;
     ...render(subject, {
       paragraphs: [
         weekly
-          ? "Here is what is new this week for the diseases you follow."
+          ? "Here’s what’s new this week for the diseases you follow."
           : grantsOnly
-            ? "Newly funded research projects name a gene behind a disease you follow. It means more researchers are working on it."
-            : "We found new recruiting studies, or newly funded research, for diseases you follow.",
+            ? "Good news: new research has been funded on a gene behind a disease you follow. More people are working on it."
+            : "We found something new for the diseases you follow: studies looking for participants, or newly funded research.",
         grantsOnly
           ? "Each link opens the public project page at NIH RePORTER, with the institution doing the work."
           : "Ages, places and how to join are on each study page. A doctor can help you decide whether a study fits.",
@@ -291,9 +364,44 @@ export function trialsEmail(to: string, items: { disease: string; title: string;
       items: items.map((i) => ({ label: i.disease, title: i.title, url: i.url, meta: i.meta })),
       button: { label: "Open my atlas", url: meUrl },
       why: weekly
-        ? "You are receiving this weekly summary because you follow these diseases and chose a weekly summary."
-        : "You are receiving this because you follow these diseases and asked to hear about new studies and research.",
+        ? "you follow these diseases and chose a weekly summary."
+        : "you follow these diseases and asked to hear about new studies and research.",
       unsubscribe,
     }),
   };
+}
+
+/** Every template with made-up sample data, for the admin preview (nothing is sent). */
+export function sampleEmails(base: string): { name: string; email: Email }[] {
+  const to = "family@example.org";
+  const unsub: Unsub = { page: `${base}/unsubscribe?t=SAMPLE`, post: `${base}/api/account/unsubscribe?t=SAMPLE` };
+  const items = [
+    { disease: "STXBP1-related disorders", title: "A Multicentric European Study to Promote Clinical Trial Readiness for STXBP1-related Disorders", url: "https://clinicaltrials.gov/study/NCT06625112", meta: "recruiting · European STXBP1 Consortium" },
+    { disease: "New research · SCN2A-related disorders", title: "Dual-AAV gene replacement for SCN2A disorders", url: "https://reporter.nih.gov/project-details/11594149", meta: "Purdue University · NIH, fiscal year 2026 · mentions SCN2A" },
+  ];
+  return [
+    { name: "Confirm your email", email: verificationEmail(to, `${base}/verify?t=SAMPLE`) },
+    { name: "Reset your password", email: resetEmail(to, `${base}/reset?t=SAMPLE`) },
+    {
+      name: "Study announcement",
+      email: announcementEmail(
+        to,
+        {
+          title: "Sleep and seizures in SCN2A: a home study",
+          summary: "We are studying sleep in children with SCN2A changes, using a small wrist monitor at home for two weeks.",
+          eligibility: "Children aged 2 to 12 with a confirmed SCN2A variant.",
+          contact: "Study team via the hospital research office web form",
+          ethics: "REC 24/LO/0001 (example)",
+          organisation: "Example University Hospital",
+        },
+        "SCN2A-related disorders",
+        `${base}/me`,
+        unsub,
+      ),
+    },
+    { name: "Researcher message", email: contactEmail(to, "Example University Hospital", "We would like to hear how sleep affects your family. If you are interested, reply through Tasukeru.", "SCN2A-related disorders", true, `${base}/me`, unsub) },
+    { name: "Study notice", email: trialsEmail(to, items, false, `${base}/me`, unsub) },
+    { name: "Weekly summary", email: trialsEmail(to, items, true, `${base}/me`, unsub) },
+    { name: "Admin test", email: { ...testEmail(to), ...render("Tasukeru: test email", { paragraphs: ["Good news: email from Tasukeru reaches you.", "This test went out through the smtp transport. Nothing else to do."], button: { label: "Open Tasukeru", url: base }, why: "you asked for a test email on the Tasukeru admin page." }) } },
+  ];
 }

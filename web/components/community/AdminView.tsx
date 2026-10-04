@@ -103,6 +103,11 @@ export function AdminView() {
   return (
     <div className="mx-auto w-full max-w-[760px] space-y-6 px-4 pb-24 pt-10">
       <h1 className="text-[26px] font-semibold text-ink">Moderation: study announcements</h1>
+      <p className="text-sm">
+        <a href="/admin/emails" className="text-accent-700 hover:underline">
+          Email previews →
+        </a>
+      </p>
       <form
         className="flex flex-wrap gap-2"
         onSubmit={(e) => {

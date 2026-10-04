@@ -1031,3 +1031,35 @@ The landscape step is gone from impact.json, and the "awaiting expert figure" co
 **UI:** at 1440 and 390 px, `/`, `/method`, `/privacy`, `/disease/STXBP1` and `/admin` show the new titles and OG site name, with no sideways scroll and no console errors. The test button appears after the queue loads.
 
 **Checks:** `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Logo assets and friendlier emails
+
+### Logo and icons
+The header already had a mark: three connected dots in the site's accent colours. It is rendered with sharp to:
+- **`web/public/email/logo.png`:** 240×64 at 2x, shown at 120×32. The mark plus the "Tasukeru" wordmark sit on a baked-in white rounded tile, so the dark wordmark stays readable when a mail app forces dark mode.
+- **`web/public/email/icon.png`:** 128×128, a 2x square icon on a soft tile.
+- **Site icons:**
+  - `app/favicon.ico` (32 and 48 px PNGs inside an ICO) replaces the create-next-app default;
+  - `app/icon.png` (512) and `app/apple-icon.png` (180) are new;
+  - Next serves them as icon and apple-touch-icon links.
+
+### Template (`lib/server/email.ts` `render`)
+- **Layout:** table-based with inline CSS, a warm paper background and a centred white card (18 px radius, generous padding), max width 560 px and fluid. A `<style>` block adds only phone padding and a `prefers-color-scheme: dark` palette. The page declares `color-scheme`/`supported-color-schemes` and has a hidden preheader.
+- **Content, in order:**
+  1. the logo, from the site origin + `/email/logo.png`, with alt "Tasukeru" and a width and height;
+  2. the greeting "Hi there,";
+  3. short paragraphs;
+  4. one big button, with "Button not working? Copy this link…" as a fallback;
+  5. "Why you're getting this: …";
+  6. a footer: "With care, the Tasukeru team", "Tasukeru (助ける) means 'to help' in Japanese", the unsubscribe link where relevant, and the privacy link.
+- **Text version:** follows the same order.
+- **Copy:** rewritten to be shorter and kinder for all 7 emails: confirmation, reset, announcement, researcher message, study notice, weekly summary and admin test.
+
+### Preview
+- **`/admin/emails`:** needs the `ADMIN_TOKEN`, typed on the page and never stored; it is also linked from /admin. It renders every template with sample data in a sandboxed iframe, with Desktop (600), Phone (390) and Plain text views. Nothing is sent.
+- **API:** `POST /api/admin/email-preview`. With `{"outbox": true}` on a local server (refused on Vercel), it also writes `web/.data/outbox/sample-0N-<tag>.{html,json}` for verify, reset, announcement, contact, trials, digest and test.
+
+### Checks
+- The sample HTML was rendered in Chromium at 600 px and 390 px, light and dark: the logo loads, there is no sideways scroll, and the dark palette applies (the divider was softened for dark mode).
+- The preview page lists 7 templates at 390 and 1440 px, with no console errors, and returns 401 without the token.
+- `tsc` and `eslint` are clean; one `npm run build` passed.
