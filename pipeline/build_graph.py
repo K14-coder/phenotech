@@ -37,7 +37,7 @@ NODE_TYPES = {
 EDGE_TYPES = {
     "causes", "variant_in", "has_effect", "participates_in", "driven_by", "has_phenotype",
     "shares_mechanism", "similar_phenotype", "serves", "maintains", "covers", "studies", "tests",
-    "targets", "developed_for", "candidate_for", "works_on", "authored", "funds", "about",
+    "targets", "developed_for", "candidate_for", "part_of", "works_on", "authored", "funds", "about",
 }
 LEVEL_RANK = {"hypothesis": 1, "inferred": 2, "observational": 3, "experimental": 4, "curated": 5, "clinical": 6}
 NEEDS_QUOTE = {"PubMed", "Website"}

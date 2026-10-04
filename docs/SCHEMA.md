@@ -81,6 +81,7 @@ Type-specific `attrs`:
 | variant_group → gene | `variant_in` |
 | variant_group → mechanism (effect) | `has_effect` |
 | gene → mechanism (process) | `participates_in` |
+| mechanism → mechanism (GO is_a / part_of / regulates hierarchy) | `part_of` |
 | disease → mechanism | `driven_by` |
 | disease → phenotype | `has_phenotype` |
 | disease → disease (computed) | `shares_mechanism`, `similar_phenotype` |
