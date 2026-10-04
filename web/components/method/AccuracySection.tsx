@@ -36,6 +36,8 @@ export interface EvalFile {
     design: { n_cases_main: number; n_therapy_classes: number; n_cases_with_context: number };
     results: Record<"all_developed_for" | "transfer_context_nonempty", Record<string, Metrics>>;
     recommended_scorer: string;
+    links?: { includes_ai_reviewed: boolean; ai_reviewed_links: number };
+    curated_only?: { n_cases: number } & Record<string, Metrics | number>;
   };
   known_collaboration_checks: Record<string, Check>;
   agreement: {
@@ -103,8 +105,15 @@ export function AccuracySection() {
   const mig = checks.find(([k]) => /miglustat/i.test(k))?.[1];
   const rk = (x: Loo) => x.rank[best];
 
+  const lk = e.transfer_benchmark.links;
+  const curM = e.transfer_benchmark.curated_only?.[best] as Metrics | undefined;
+  const aiLinks = lk?.includes_ai_reviewed && lk.ai_reviewed_links && curM ? { n: lk.ai_reviewed_links, cur: curM["recall@5"] } : null;
   const tiles = [
-    { big: P(m["recall@5"]), label: "hidden disease in the top 5", body: `Out of ${d.n_cases_main} tests. Random guessing: ${P(rnd["recall@5"])}.` },
+    {
+      big: P(m["recall@5"]),
+      label: "hidden disease in the top 5",
+      body: `Out of ${d.n_cases_main} tests. Random guessing: ${P(rnd["recall@5"])}.${aiLinks ? ` Includes ${aiLinks.n} AI-reviewed links (not reviewed by a human expert); curated links only: ${P(aiLinks.cur)}.` : ""}`,
+    },
     { big: P(m["recall@1"]), label: "hidden disease ranked first", body: `Random guessing: ${P(rnd["recall@1"])}.` },
     { big: P(t["recall@5"]), label: "in the top 5 when the therapy already helps another disease", body: `${t.n} of the tests.` },
     { big: `${ai.agree} / ${ai.pairs_both_cite}`, label: "readings agree with an independent AI", body: `${P(ai.share)}. One disease family, abstracts only.` },
@@ -113,7 +122,7 @@ export function AccuracySection() {
   const summary = [
     `The atlas links all ${c.components.diseases_in_giant} diseases in one network. Many of those links run through broad labels such as “loss of function”, which about ${Math.round(c.mechanism_links.share_pairs_generic * 10)} in 10 disease pairs share. Through specific biology, ${c.mechanism_links.specific_mechanism} of ${c.mechanism_links.diseases} diseases connect to another disease, and only ${c.mechanism_links.specific_mechanism_cross_family} connect to a disease in a different family.`,
     `To test whether the atlas can spot how progress on one disease could help another, we hid each of ${d.n_cases_main} known therapy–disease links, one at a time, and asked it to rank all ${c.components.diseases} diseases for that therapy.`,
-    `Combining shared symptoms with shared specific mechanisms, it put the hidden disease first in ${P(m["recall@1"])} of tests and in its top 5 in ${P(m["recall@5"])} (random guessing: ${P(rnd["recall@1"])} and ${P(rnd["recall@5"])}). When the therapy already had another known disease to learn from, the top-5 rate rose to ${P(t["recall@5"])}.`,
+    `Combining shared symptoms with shared specific mechanisms, it put the hidden disease first in ${P(m["recall@1"])} of tests and in its top 5 in ${P(m["recall@5"])} (random guessing: ${P(rnd["recall@1"])} and ${P(rnd["recall@5"])}). When the therapy already had another known disease to learn from, the top-5 rate rose to ${P(t["recall@5"])}.${aiLinks ? ` These figures include ${aiLinks.n} links found by an independent AI reading and accepted by an AI review, not yet by a human expert; on curated links alone the top-5 rate is ${P(aiLinks.cur)}.` : ""}`,
     "It recovered real cross-disease connections: 4-phenylbutyrate between STXBP1 and SLC6A1 in both directions, MEK inhibitors across the RASopathies, and miglustat within the lysosomal diseases, though less sharply. But the test is small, and the same literature built both the graph and the test, so read a high rank as a reason to look, not as proof.",
     `Every link shows its sources: ${(c.counter_evidence.share * 100).toFixed(1)}% of links carry contradicting evidence, shown rather than hidden, and an independent AI re-reading of the same papers agreed with the curators on ${ai.agree} of ${ai.pairs_both_cite} (${P(ai.share)}) readings of the same paper and link.`,
   ];

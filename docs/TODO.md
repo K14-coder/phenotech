@@ -91,6 +91,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- Published benchmark includes the 142 AI-reviewed links (top-5 0.79, MRR 0.50; curated-only 0.73 / 0.48 shown beside it on /method). Weighting searches rerun on the larger graph: nothing beats pheno+mech (eval.md section 9) (vibrant-babbage).
 - Mechanism weighting search (1,024 settings, nested CV): no weighting beats the default pheno+mech (0.725 / 0.483); the benchmark is insensitive to per-mechanism weights because 45/56 therapies have one target mechanism. `pipeline/eval/mech_weight_eval.py`, eval.md section 8 (vibrant-babbage).
 - Mutation type means the kind of DNA change: the "Mutation type" factor shows substitution / deletion / duplication / insertion / indel / inversion / translocation / copy-number / repeat shares per gene (ClinVar Type, `pipeline/ingest/clinvar_types.py`, all 13,292 genes), pair words say "both mostly deletions" instead of a similarity %, gene-level similarity uses types (as mechsim), and /sequence tags every change with its DNA type; protein effect kept as a secondary line (vibrant-babbage).
 - Smooth guided tour: a single overlay across steps and pages, gliding spotlight and fading caption, smooth scroll with settle detection, loading skeleton and prefetch between pages, 3 s fallback with Skip, reduced-motion cross-fades, Esc / arrow keys (commit 2488f6b).

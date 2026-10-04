@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import itertools
 import json
+import os
 import math
 import pathlib
 import random
@@ -109,7 +110,7 @@ def r3(x):
 
 def main():
     g = load_graph()
-    idx = TransferIndex(g, family=families({n["id"]: n for n in g["nodes"]}))
+    idx = TransferIndex(g, family=families({n["id"]: n for n in g["nodes"]}), include_ai_reviewed=os.environ.get("EVAL_CURATED_ONLY") != "1")
     cases = build_cases(idx)
     S = Scorer(idx, cases)
     settings = [dict(zip(GRID, v)) for v in itertools.product(*GRID.values())]

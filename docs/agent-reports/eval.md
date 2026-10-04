@@ -528,3 +528,21 @@ Reading: the ranking of methods does not change (pheno+mech and combined stay on
 - **What matters:** keep pathway chains (dropping them costs 0.07 top-5), keep generic classes (dropping them costs 0.02), and keep the phenotype term between 0.25 and 0.65 of the mix (mechanism alone: 0.63 / 0.41).
 - **With the AI-reviewed links included** (58 cases, more multi-target therapies) the in-sample best (IDF^2, w_pheno 0.25: MRR 0.509) does not survive nested CV (0.482 vs default 0.500): overfitting. The default stays.
 - To separate the weightings, the benchmark needs therapies with several target mechanisms, which means more curated `targets` edges, not more tuning.
+
+## 9. Published benchmark now includes the AI-reviewed links (2026-10-04, team decision)
+
+`transfer_eval.py` now counts the 142 AI-reviewed links (labelled on `/method`: "Includes 142 AI-reviewed links (not reviewed by a human expert); curated links only: 73%"). `data/derived/eval.json` carries both: `results` (58 cases, pheno+mech top-5 0.793, MRR 0.500) and `curated_only` (56 cases, 0.725, 0.483). `EVAL_CURATED_ONLY=1` reruns everything on curated links only. `TransferIndex` itself still defaults to curated links (hypotheses.py is unaffected).
+
+Weighting searches rerun on the larger graph (nested CV grouped by therapy class):
+
+| Method | top-5 | MRR |
+|---|---|---|
+| **pheno+mech (site)** | **0.793** | **0.500** |
+| mechanism grid, nested (1,024 settings) | 0.793 | 0.482 |
+| 12 extra features, equal weight | 0.707 | 0.486 |
+| grid tuner, nested | 0.638 | 0.434 |
+| logit tuner, nested | 0.725 | 0.494 |
+| anchored tuner, nested | 0.742 | 0.507 (Δ CI −0.019 to 0.035) |
+| best in-sample refits (optimistic) | 0.776 | 0.516–0.526 |
+
+Nothing beats the site's scorer once tuned honestly; the gain from 0.725 to 0.793 comes from the extra mechanism links, not from weights. `data/derived/eval_features.json` and `eval_mech_weights.json` now reflect the larger graph.

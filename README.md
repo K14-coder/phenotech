@@ -104,7 +104,9 @@ Current build of the deep graph (live numbers on `/method` and in `data/build/re
 
 | Benchmark | Cases | Method | Top-5 recall | MRR | Random (top-5 / MRR) |
 |---|---|---|---|---|---|
-| Curated leave-one-out (`pipeline/eval/transfer_eval.py`) | 56 | Symptoms + specific mechanism | 73% | 0.48 | 12% / 0.10 |
+| Curated leave-one-out (`pipeline/eval/transfer_eval.py`) | 58 | Symptoms + specific mechanism | 79% (73% on curated links only) | 0.50 (0.48) | 12% / 0.10 |
+
+The leave-one-out figures include 142 links found by an independent AI reading and accepted by an AI review, not by a human expert; the curated-only figures are in brackets. Weighting searches (mechanism weights and 12 extra features, nested cross-validation) found nothing better than the site's scorer.
 | PrimeKG external (`pipeline/eval/primekg_eval.py`) | 1,300, pool of 256 diseases | Symptoms + 0.5·genes + 0.5·pathways | 49% | 0.37 | 2% / 0.02 |
 
 What they taught us (details in [docs/agent-reports/eval.md](docs/agent-reports/eval.md) and [docs/KNOWLEDGE.md](docs/KNOWLEDGE.md)):

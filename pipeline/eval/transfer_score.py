@@ -63,8 +63,6 @@ def load_graph(path=GRAPH):
 
 
 def _ai_proposed_ai_reviewed(e):
-    if os.environ.get("EVAL_INCLUDE_AI_REVIEWED") == "1":   # sensitivity run: count them like curated links
-        return False
     by = str((e.get("review") or {}).get("by", ""))
     return (by.startswith("ai-review:") and (e.get("attrs") or {}).get("extraction") == "claude"
             and all(str(ev.get("extracted_by", "")).startswith("claude:") for ev in e.get("evidence", [])))
@@ -73,7 +71,11 @@ def _ai_proposed_ai_reviewed(e):
 class TransferIndex:
     """Precomputed disease profiles. `classes` maps class id -> member therapy ids."""
 
-    def __init__(self, graph, classes=EQUIVALENCE, exclude_levels=("hypothesis",), family=None):
+    def __init__(self, graph, classes=EQUIVALENCE, exclude_levels=("hypothesis",), family=None, include_ai_reviewed=None):
+        # AI-proposed, AI-reviewed links (claude_reviewed.json): off by default here (hypotheses.py and other
+        # users stay on curated links); the published benchmark (transfer_eval.py) turns them on and labels it.
+        if include_ai_reviewed is None:
+            include_ai_reviewed = os.environ.get("EVAL_INCLUDE_AI_REVIEWED") == "1"
         self.g = graph
         self.family = family or {}
         self.nodes = {n["id"]: n for n in graph["nodes"]}
@@ -82,7 +84,9 @@ class TransferIndex:
         # stay out of the benchmark until a person reviews them: AI-found, AI-reviewed links from the same literature
         # would otherwise raise the score on their own (top-5 0.73 -> 0.79 when included).
         self.edges = [e for e in graph["edges"] if e["evidence_level"] not in ex and e["type"] != "candidate_for"
-                      and not _ai_proposed_ai_reviewed(e)]
+                      and (include_ai_reviewed or not _ai_proposed_ai_reviewed(e))]
+        self.n_ai_reviewed = sum(1 for e in graph["edges"] if _ai_proposed_ai_reviewed(e))
+        self.include_ai_reviewed = include_ai_reviewed
         self.diseases = sorted(n for n, v in self.nodes.items() if v["type"] == "disease")
         N = len(self.diseases)
         by = defaultdict(list)

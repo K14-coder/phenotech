@@ -66,7 +66,7 @@ Every literature quote is string-verified against a stored source. Every automat
 - **Families:** `biology.json` and `community.json` (SNAREopathies, 11), plus `family_dee.json`, `family_lysosomal.json` and `family_rasopathy.json` (34).
 - **Also merged:** `openai_extracted.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `contributions.json`, the colleague's mechsim edges, and `overrides.json` (human decisions).
 - **Breadth:** `data/derived/global/` has 11,456 diseases sharded by `djb2(MONDO) % 64` (see its README), plus `groups.json`, `mechanism/`, `clusters.json`, `dismech/` and `dismech_evidence/` (the latter isn't deployed).
-- **Evaluation:** `pipeline/eval/` (leave-one-out therapy transfer). Phenotype + specific mechanism gives top-5 recall 0.73 and MRR 0.49. Richer features (tissue, families, pathways, mutation type) did not beat it under nested cross-validation. See `docs/agent-reports/eval.md`.
+- **Evaluation:** `pipeline/eval/` (leave-one-out therapy transfer). Phenotype + specific mechanism gives top-5 recall 0.79 and MRR 0.50 including the 142 AI-reviewed links (published, labelled on /method), 0.73 / 0.48 on curated links only (`EVAL_CURATED_ONLY=1`). Richer features (tissue, families, pathways, mutation type) did not beat it under nested cross-validation. See `docs/agent-reports/eval.md`.
 - **Layer reports:** `docs/agent-reports/*.md`.
 
 ## Status

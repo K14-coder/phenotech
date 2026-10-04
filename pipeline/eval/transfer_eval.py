@@ -20,6 +20,7 @@ resamples therapy classes (cases of one therapy are correlated), 2,000 draws, fi
 from __future__ import annotations
 
 import json
+import os
 import math
 import pathlib
 import random
@@ -543,13 +544,18 @@ def table(res, scorers):
 def main():
     g = load_graph()
     fam = families({n["id"]: n for n in g["nodes"]})
-    idx = TransferIndex(g, family=fam)
+    # published benchmark: curated + AI-reviewed links (labelled); EVAL_CURATED_ONLY=1 for curated links only
+    curated_only = os.environ.get("EVAL_CURATED_ONLY") == "1"
+    idx = TransferIndex(g, family=fam, include_ai_reviewed=not curated_only)
     scorers = [s for s, _l, _x in SCORERS]
     conn = connectivity(g, idx, fam)
     main_cases, ext_cases, results, per_case = benchmark(idx, scorers)
 
     # node-level sensitivity: no therapy equivalence classes
-    idx_node = TransferIndex(g, classes={}, family=fam)
+    idx_node = TransferIndex(g, classes={}, family=fam, include_ai_reviewed=not curated_only)
+    # the same benchmark on curated links only, shown next to the published figure
+    idx_cur = TransferIndex(g, family=fam, include_ai_reviewed=False)
+    cur_main, _ce, res_cur, _pc = benchmark(idx_cur, [RECOMMENDED, "random", "hypotheses-rule"])
     _m, _e, res_node, _p = benchmark(idx_node, scorers)
 
     # combination-weight sensitivity (post hoc; NOT used to pick the method)
@@ -630,6 +636,11 @@ def main():
                                        for s in scorers},
             "combination_weight_sensitivity_post_hoc": sens,
             "recommended_scorer": RECOMMENDED,
+            "links": {"includes_ai_reviewed": idx.include_ai_reviewed, "ai_reviewed_links": idx.n_ai_reviewed,
+                      "note": "AI-reviewed = proposed by an independent Claude reading and accepted by an AI review, not "
+                              "by a human expert (data/curated/claude_reviewed.json)"},
+            "curated_only": {"n_cases": len(cur_main),
+                             **{s: {k: (r3(v) if isinstance(v, (int, float)) else v) for k, v in res_cur["all_developed_for"][s].items()} for s in (RECOMMENDED, "random")}},
             "candidate_set_sizes": cand_sizes,
             "by_family_of_held_out": by_family,
             "per_case_ranks": per_case,
