@@ -54,7 +54,8 @@ Several Claude agents and people work in parallel. Follow this every time:
   - [ ] Follow-up: still not cross-linked: KCNT1, SCN2A, SCN8A, SLC2A1, ARSA, GALC, IDS, IDUA, SMPD1, TPP1, CPLX1, NSF, SNAP25, STX1A, STX1B, UNC13A. Candidates: non-IEA evidence for SNAP25/STX1B in Ca2+-triggered exocytosis, an HCN/excitability node for NF1, UPR markers in DEE/SNARE iPSC neurons.
 - [~] (claimed by web agent, 2026-10-04 06:35 CEST) Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
 - [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:40 CEST) Direction coverage: add MONDO:0100135 (Dravet) to the G2P/ClinGen join (obsolete id MONDO:0011794). Get directions for relutrigine and NBI-921352 (Nav1.6 inhibitors; ChEMBL has no mechanism record for them).
-- [ ] Recompute hypotheses (`pipeline/derive/run.sh`) after the cross-family and direction work lands, then precompute `experiment` AI drafts for the new top ideas.
+- [x] Hypotheses recomputed with the cross-family links (10 ideas, now including 4-PBA → SCN1A and rapamycin → NF1).
+- [ ] Precompute `experiment` AI drafts for the new top ideas (dev server plus signed-in ChatGPT: `node web/scripts/precompute-ai.mjs --only experiment`).
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
 - [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:32 CEST) The STXBP1 enrollment total in the Research view includes multi-disease Simons Searchlight. Exclude multi-disease registries from the sum.

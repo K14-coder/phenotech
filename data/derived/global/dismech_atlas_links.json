@@ -7,8 +7,29 @@
  "kind_rule": "single_gene: DisMech's contributing genes are exactly the umbrella gene; multi_gene_lists_gene: DisMech lists several contributing genes including it (e.g. Dravet); group_gene_not_listed: a clinical group our node lists as a subtype but whose DisMech entry does not name the gene. Show only the first two kinds on a gene page by default.",
  "gene_only_rule": "Weaker, listed separately: a DisMech disorder with no MONDO match whose curated genetic section names the umbrella gene as a contributing, non-somatic gene, with at most 3 contributing genes, excluding neoplasms by name. Not an identity match: each is a lead for a missing MONDO xref on our node, to be checked by a person.",
  "atlas_diseases": 45,
- "atlas_diseases_linked": 32,
+ "atlas_diseases_linked": 35,
  "links": [
+  {
+   "atlas_id": "disease:ARSA",
+   "atlas_label": "ARSA-related disorders (metachromatic leukodystrophy)",
+   "mondo": "MONDO:0018868",
+   "joined_by": "xref",
+   "kind": "multi_gene_lists_gene",
+   "dismech_genes": [
+    "ARSA",
+    "PSAP"
+   ],
+   "dismech_file": "Metachromatic_Leukodystrophy.yaml",
+   "dismech_name": "Metachromatic Leukodystrophy",
+   "mondo_label": "metachromatic leukodystrophy",
+   "bucket": 43,
+   "mech_steps": 6,
+   "steps": 14,
+   "evidence": 34,
+   "refute": 0,
+   "page_url": "https://dismech.monarchinitiative.org/pages/disorders/Metachromatic_Leukodystrophy.html",
+   "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/Metachromatic_Leukodystrophy.yaml"
+  },
   {
    "atlas_id": "disease:CACNA1A",
    "atlas_label": "CACNA1A-related disorders",
@@ -110,6 +131,26 @@
    "refute": 0,
    "page_url": "https://dismech.monarchinitiative.org/pages/disorders/Infantile_Spasms.html",
    "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/Infantile_Spasms.yaml"
+  },
+  {
+   "atlas_id": "disease:CDKL5",
+   "atlas_label": "CDKL5 deficiency disorder",
+   "mondo": "MONDO:0100039",
+   "joined_by": "xref",
+   "kind": "single_gene",
+   "dismech_genes": [
+    "CDKL5"
+   ],
+   "dismech_file": "CDKL5_Deficiency_Disorder.yaml",
+   "dismech_name": "CDKL5 Deficiency Disorder",
+   "mondo_label": "CDKL5 disorder",
+   "bucket": 25,
+   "mech_steps": 24,
+   "steps": 46,
+   "evidence": 111,
+   "refute": 6,
+   "page_url": "https://dismech.monarchinitiative.org/pages/disorders/CDKL5_Deficiency_Disorder.html",
+   "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/CDKL5_Deficiency_Disorder.yaml"
   },
   {
    "atlas_id": "disease:CDKL5",
@@ -259,6 +300,26 @@
    "refute": 2,
    "page_url": "https://dismech.monarchinitiative.org/pages/disorders/Krabbe_Disease.html",
    "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/Krabbe_Disease.yaml"
+  },
+  {
+   "atlas_id": "disease:GBA1",
+   "atlas_label": "GBA1-related disorders (Gaucher disease)",
+   "mondo": "MONDO:0018150",
+   "joined_by": "xref",
+   "kind": "single_gene",
+   "dismech_genes": [
+    "GBA"
+   ],
+   "dismech_file": "Gaucher_Disease.yaml",
+   "dismech_name": "Gaucher Disease",
+   "mondo_label": "Gaucher disease",
+   "bucket": 59,
+   "mech_steps": 21,
+   "steps": 48,
+   "evidence": 144,
+   "refute": 0,
+   "page_url": "https://dismech.monarchinitiative.org/pages/disorders/Gaucher_Disease.html",
+   "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/Gaucher_Disease.yaml"
   },
   {
    "atlas_id": "disease:GLA",
@@ -638,6 +699,27 @@
    "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/Neurofibromatosis_Type_1.yaml"
   },
   {
+   "atlas_id": "disease:NPC1",
+   "atlas_label": "NPC1-related disorders (Niemann-Pick disease type C)",
+   "mondo": "MONDO:0018982",
+   "joined_by": "xref",
+   "kind": "multi_gene_lists_gene",
+   "dismech_genes": [
+    "NPC1",
+    "NPC2"
+   ],
+   "dismech_file": "Niemann_Pick_Disease_Type_C.yaml",
+   "dismech_name": "Niemann-Pick Disease Type C",
+   "mondo_label": "Niemann-Pick disease type C",
+   "bucket": 40,
+   "mech_steps": 10,
+   "steps": 34,
+   "evidence": 65,
+   "refute": 0,
+   "page_url": "https://dismech.monarchinitiative.org/pages/disorders/Niemann_Pick_Disease_Type_C.html",
+   "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/Niemann_Pick_Disease_Type_C.yaml"
+  },
+  {
    "atlas_id": "disease:RAF1",
    "atlas_label": "RAF1-related disorders",
    "mondo": "MONDO:0014396",
@@ -794,7 +876,7 @@
    "atlas_id": "disease:SCN1A",
    "atlas_label": "SCN1A-related disorders (incl. Dravet syndrome)",
    "mondo": "MONDO:0100135",
-   "joined_by": "xref (obsolete MONDO:0011794 replaced_by)",
+   "joined_by": "xref",
    "kind": "multi_gene_lists_gene",
    "dismech_genes": [
     "SCN1A",
@@ -923,7 +1005,7 @@
    "atlas_id": "disease:SCN2A",
    "atlas_label": "SCN2A-related disorders",
    "mondo": "MONDO:0100135",
-   "joined_by": "xref (obsolete MONDO:0011794 replaced_by)",
+   "joined_by": "xref",
    "kind": "multi_gene_lists_gene",
    "dismech_genes": [
     "SCN1A",
@@ -1071,6 +1153,26 @@
    "refute": 0,
    "page_url": "https://dismech.monarchinitiative.org/pages/disorders/Undetermined_Early_Onset_Epileptic_Encephalopathy.html",
    "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/Undetermined_Early_Onset_Epileptic_Encephalopathy.yaml"
+  },
+  {
+   "atlas_id": "disease:SLC2A1",
+   "atlas_label": "SLC2A1-related disorders (GLUT1 deficiency syndrome)",
+   "mondo": "MONDO:0000188",
+   "joined_by": "xref",
+   "kind": "single_gene",
+   "dismech_genes": [
+    "SLC2A1"
+   ],
+   "dismech_file": "GLUT1_Deficiency_Syndrome.yaml",
+   "dismech_name": "GLUT1 Deficiency Syndrome",
+   "mondo_label": "GLUT1 deficiency syndrome",
+   "bucket": 29,
+   "mech_steps": 9,
+   "steps": 32,
+   "evidence": 140,
+   "refute": 4,
+   "page_url": "https://dismech.monarchinitiative.org/pages/disorders/GLUT1_Deficiency_Syndrome.html",
+   "file_url": "https://github.com/monarch-initiative/dismech/blob/332cbfdc00c4d49d5c9ed8aa45b14abb20e2f1bb/kb/disorders/GLUT1_Deficiency_Syndrome.yaml"
   },
   {
    "atlas_id": "disease:SLC2A1",
@@ -1562,15 +1664,6 @@
  ],
  "gene_only": [
   {
-   "atlas_id": "disease:ARSA",
-   "mondo": "MONDO:0018868",
-   "dismech_file": "Metachromatic_Leukodystrophy.yaml",
-   "dismech_name": "Metachromatic Leukodystrophy",
-   "bucket": 43,
-   "gene_association": "Pathogenic Mutations",
-   "n_contributing_genes": 2
-  },
-  {
    "atlas_id": "disease:BRAF",
    "mondo": "MONDO:0018153",
    "dismech_file": "Erdheim-Chester_Disease.yaml",
@@ -1607,24 +1700,6 @@
    "n_contributing_genes": 2
   },
   {
-   "atlas_id": "disease:CDKL5",
-   "mondo": "MONDO:0100039",
-   "dismech_file": "CDKL5_Deficiency_Disorder.yaml",
-   "dismech_name": "CDKL5 Deficiency Disorder",
-   "bucket": 25,
-   "gene_association": null,
-   "n_contributing_genes": 1
-  },
-  {
-   "atlas_id": "disease:GBA1",
-   "mondo": "MONDO:0018150",
-   "dismech_file": "Gaucher_Disease.yaml",
-   "dismech_name": "Gaucher Disease",
-   "bucket": 59,
-   "gene_association": "Causative",
-   "n_contributing_genes": 1
-  },
-  {
    "atlas_id": "disease:LZTR1",
    "mondo": "MONDO:0002546",
    "dismech_file": "Schwannoma.yaml",
@@ -1652,15 +1727,6 @@
    "n_contributing_genes": 1
   },
   {
-   "atlas_id": "disease:NPC1",
-   "mondo": "MONDO:0018982",
-   "dismech_file": "Niemann_Pick_Disease_Type_C.yaml",
-   "dismech_name": "Niemann-Pick Disease Type C",
-   "bucket": 40,
-   "gene_association": "Causative",
-   "n_contributing_genes": 2
-  },
-  {
    "atlas_id": "disease:SCN1A",
    "mondo": "MONDO:0019485",
    "dismech_file": "Hemiconvulsion-Hemiplegia-Epilepsy_Syndrome.yaml",
@@ -1677,15 +1743,6 @@
    "bucket": 40,
    "gene_association": "Pathogenic Variants",
    "n_contributing_genes": 2
-  },
-  {
-   "atlas_id": "disease:SLC2A1",
-   "mondo": "MONDO:0000188",
-   "dismech_file": "GLUT1_Deficiency_Syndrome.yaml",
-   "dismech_name": "GLUT1 Deficiency Syndrome",
-   "bucket": 29,
-   "gene_association": "Causative",
-   "n_contributing_genes": 1
   },
   {
    "atlas_id": "disease:SMPD1",

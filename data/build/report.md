@@ -1,12 +1,12 @@
 # Graph build report
 
-Built 2026-10-04T04:34:03+00:00 from `biology.json`, `community.json`, `contributions.json`, `cross_family.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
+Built 2026-10-04T04:36:02+00:00 from `biology.json`, `community.json`, `contributions.json`, `cross_family.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
 
 ## Summary
 
 - **1412 nodes, 2977 edges, 17 clusters, 63 gaps**
 - Edges with at least one source: **2977/2977**
-- Evidence items with a verbatim quote: 2012/4203; quotes string-verified against the stored source: **2012/2012**
+- Evidence items with a verbatim quote: 2012/4201; quotes string-verified against the stored source: **2012/2012**
 - Contested edges (with counter-evidence): 75
 - OpenAI cross-check: 73 cited sources re-read and stamped; 108 new supporting and 0 new contradicting sources added (contradictions wait for human review)
 - Cited sources where the OpenAI reading disagrees with the curators: 12
