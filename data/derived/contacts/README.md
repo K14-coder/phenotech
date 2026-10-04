@@ -152,3 +152,7 @@ python3 pipeline/contacts/people.py            # add --no-fetch to use only cach
 python3 pipeline/contacts/validate.py          # re-checks orgs.json, trials.json and people.json
 ```
 <!-- people:end -->
+
+## Contact-role filter
+
+After `people.py`, run `python3 pipeline/contacts/filter_people.py`. It keeps only people shown in a contact role (family support, director, founder, coordinator and similar) and drops board members and advisors without a contact role (team decision, 2026-10-04).

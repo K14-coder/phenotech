@@ -2,9 +2,20 @@
 
 Keep this file current: tick items when done (with the commit), and add new ones at the right priority. Items marked **(you)** need a human; everything else an agent can do. Read `CLAUDE.md` and `docs/KNOWLEDGE.md` first.
 
+## How to work on this list without duplicating work
+
+Several Claude agents and people work in parallel. Follow this every time:
+
+1. `git pull` first, then read this file.
+2. **Claim** an open item before starting. Change `- [ ]` to `- [~] (claimed by <name/agent>, <YYYY-MM-DD HH:MM CEST>)`, then commit and push that one-line change immediately. If the push is rejected, pull and re-check that nobody else claimed it.
+3. Never start an item marked `[~]` unless its claim is more than 3 hours old with no related commits. In that case, take it over and note this in the claim.
+4. **Stay inside the files your item needs.** Generated files (`data/graph.json`, `web/public/data/**`) are rebuilt with `python3 pipeline/build_graph.py && node web/scripts/sync-data.mjs`; never hand-edit them. On a merge conflict in a generated file, take either side and rebuild.
+5. When done: run `npm run build` in `web/` if you touched `web/`, commit with a clear message, then `git pull --no-rebase && git push`. Change the item to `- [x]` and add a line under "Done". Deploy with `cd web && npx vercel deploy --prod` only if you have Vercel access.
+6. Write what you learned that isn't obvious into `docs/KNOWLEDGE.md`, and new follow-ups into this list.
+
 ## P0: submission blockers
 
-- [ ] **(you)** Decide how judges get the source code. The GitHub repo `K14-coder/rare-disease-atlas` is private. Either make it public, or share it the way Hack-Nation asks. Run a final secret scan before making it public (see KNOWLEDGE.md → "Secret scan").
+- [ ] **(you, later)** Make the repo public before submission (team decision: later). The GitHub repo `K14-coder/rare-disease-atlas` is private for now. Either make it public, or share it the way Hack-Nation asks. Run a final secret scan before making it public (see KNOWLEDGE.md → "Secret scan").
 - [ ] Refresh `README.md` for the current product:
   - the name Tasukeru;
   - the four views;
@@ -25,11 +36,11 @@ Keep this file current: tick items when done (with the commit), and add new ones
 
 ## P1: model and evidence quality
 
-- [ ] **Direction-aware therapy matching** (agent running): disease too-little vs too-much function × drug increases vs decreases. Evaluate on PrimeKG indications and contraindications plus the sodium-channel cases → `docs/agent-reports/eval.md`, `data/derived/eval_direction.json`. Adopt it in production only if it helps; then update `/method` and the hypotheses ranking.
-- [ ] **Independent AI review of the review sheet** (agent running) → `docs/review/ai-review-2026-10-04.md` and patches in `data/curated/overrides.json`. Review records use `by: "ai-review:claude"`.
+- [~] (claimed by main-session agent "direction", 2026-10-04) **Direction-aware therapy matching**: disease too-little vs too-much function × drug increases vs decreases. Evaluate on PrimeKG indications and contraindications plus the sodium-channel cases → `docs/agent-reports/eval.md`, `data/derived/eval_direction.json`. Adopt it in production only if it helps; then update `/method` and the hypotheses ranking.
+- [~] (claimed by main-session agent "ai-review", 2026-10-04) **Independent AI review of the review sheet** → `docs/review/ai-review-2026-10-04.md` and patches in `data/curated/overrides.json`. Review records use `by: "ai-review:claude"`.
   - [ ] Web: render ai-review records as "Independently reviewed by AI (not a human expert)". Human reviews keep "Reviewed by a biochemist".
   - [ ] **(you, optional)** A human expert works through the "needs-human" list from that report.
-- [ ] **Cross-family biology** (agent running): the RAS → MAPK link for LZTR1/RIT1/SOS1, SYNGAP1 ↔ RAS/ERK, misfolding/ER stress, lysosomal/autophagy and synaptic-release links → `data/curated/cross_family.json`. Target: well above 11 of 45 diseases with a specific cross-family link. Re-run the eval.
+- [~] (claimed by main-session agent "cross-family", 2026-10-04) **Cross-family biology**: the RAS → MAPK link for LZTR1/RIT1/SOS1, SYNGAP1 ↔ RAS/ERK, misfolding/ER stress, lysosomal/autophagy and synaptic-release links → `data/curated/cross_family.json`. Target: well above 11 of 45 diseases with a specific cross-family link. Re-run the eval.
 - [ ] Recompute hypotheses (`pipeline/derive/run.sh`) after the cross-family and direction work lands, then precompute `experiment` AI drafts for the new top ideas.
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
@@ -37,7 +48,7 @@ Keep this file current: tick items when done (with the commit), and add new ones
 
 ## P2: contacts and community
 
-- [ ] Decide whether to show board members who list their own email (5 orgs show 12–19 people). Option: filter `people.json` to contact roles (family support, executive director, founder, president). See `pipeline/contacts/people_review.json`.
+- [x] Contact people only: `pipeline/contacts/filter_people.py` keeps contact roles (66 people at 20 orgs) and drops board members and advisors.
 
 - [x] Named contact persons published by organisations (112, `data/derived/contacts/people.json`), Call/Email buttons in every view, "Report or remove a contact" form on /privacy, handled in /admin.
 - [ ] Email: works via Infomaniak SMTP (`no-reply@mehro.ch`, sender "Tasukeru"). Watch the deliverability of the first real alerts. Optionally add SPF/DKIM/DMARC checks for mehro.ch.
