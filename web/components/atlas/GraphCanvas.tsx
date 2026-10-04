@@ -6,6 +6,10 @@
 // filters only hide/show nodes. Nodes that become visible for the first time are placed next to
 // their visible neighbours (ring around a single anchor, or the centroid of several); only a large
 // reveal (e.g. "show all symptoms") runs an incremental fcose with every existing node pinned.
+import { FACTORS } from "@/lib/factors";
+import { FACTOR_COLOR } from "../factors/FactorBits";
+
+const FACTOR_OF_EDGE: Record<string, (typeof FACTORS)[number]["key"]> = Object.fromEntries(FACTORS.map((f) => [f.edge, f.key]));
 import cytoscape, { type Core, type ElementDefinition, type Collection, type NodeSingular } from "cytoscape";
 import fcose from "cytoscape-fcose";
 import { useEffect, useRef } from "react";
@@ -54,6 +58,8 @@ export interface GraphCanvasProps {
   dimOnSelect?: boolean;
   /** draw the computed mechanistic-similarity links (off by default; they never shape the layout) */
   showMechsim?: boolean;
+  /** factor lens: draw only one factor's disease-disease links (or all of them, coloured by factor) */
+  lens?: string | null;
   onSelectNode: (id: string | null) => void;
   onSelectEdge: (id: string) => void;
 }
@@ -112,10 +118,14 @@ function buildElements(idx: GraphIndex): ElementDefinition[] {
     const rel = e.label ?? relationName(e.type);
     const bridge = bridges.has(e.id);
     const mechsim = MECHSIM_RELATIONS.includes(e.type);
+    const factor = FACTOR_OF_EDGE[e.type];
+    const ea = (e.attrs ?? {}) as { score?: number; ic_weighted_jaccard?: number };
+    // similarity on that factor (0-1) for the lens line width; symptom links use the IC-weighted Jaccard (x2, capped)
+    const fscore = factor === "symptoms" ? Math.min(1, (ea.ic_weighted_jaccard ?? 0.25) * 2) : (ea.score ?? e.confidence);
     els.push({
       group: "edges",
-      data: { id: e.id, source: e.source, target: e.target, conf: e.confidence, rel: bridge ? `Bridge across clusters · ${rel}` : rel },
-      classes: `lvl-${e.evidence_level}${e.status === "contested" ? " contested" : ""}${e.type === "candidate_for" ? " idea" : ""}${(e.attrs as { contributed?: unknown } | undefined)?.contributed ? " contrib" : ""}${bridge ? " bridge" : ""}${mechsim ? " mechsim" : ""}`,
+      data: { id: e.id, source: e.source, target: e.target, conf: e.confidence, fscore, fcolor: factor ? FACTOR_COLOR[factor] : "#7a5ea8", rel: bridge ? `Bridge across clusters · ${rel}` : rel },
+      classes: `lvl-${e.evidence_level}${e.status === "contested" ? " contested" : ""}${e.type === "candidate_for" ? " idea" : ""}${(e.attrs as { contributed?: unknown } | undefined)?.contributed ? " contrib" : ""}${bridge ? " bridge" : ""}${mechsim ? " mechsim" : ""}${factor ? ` f-${factor}` : ""}`,
     });
   }
   return els;
@@ -247,6 +257,9 @@ function stylesheet(fontFamily: string): cytoscape.StylesheetJson {
     { selector: "edge.bridge.dim", style: { "underlay-opacity": 0.1 } },
     { selector: "node:selected", style: { "border-width": 3, "border-color": "#153e67", "border-opacity": 1 } },
     { selector: "edge:selected", style: { "line-color": "#1f5a96", width: 3, opacity: 1 } },
+    // factor lens last, so it wins over bridge / hover styles
+    { selector: "edge.lens-off", style: { opacity: 0.06 } },
+    { selector: "edge.lens-on", style: { "line-style": "solid", "line-color": "data(fcolor)", width: "mapData(fscore, 0, 1, 1.6, 7)", opacity: 1 } },
     { selector: "edge.mechsim", style: { "line-style": "dashed", "line-dash-pattern": [2, 4], "line-color": "#7a5ea8", opacity: 0.55 } },
     { selector: ".hidden", style: { display: "none" } },
   ] as unknown as cytoscape.StylesheetJson;
@@ -398,16 +411,23 @@ export default function GraphCanvas(props: GraphCanvasProps) {
     emphasize();
   }, [hiddenNodeIds]);
 
-  // computed mechanistic links: shown only when switched on
+  // computed mechanistic links: shown only when switched on; the factor lens keeps one factor's links
   useEffect(() => {
     const cy = cyRef.current;
     if (!cy) return;
+    const lens = props.lens ?? null;
     cy.batch(() => {
-      cy.edges(".mechsim").forEach((e) => {
-        e.toggleClass("hidden", !props.showMechsim);
+      cy.edges().forEach((e) => {
+        const factorClass = (e.classes() as string[]).find((c) => c.startsWith("f-"));
+        const factor = factorClass?.slice(2) ?? null;
+        const isMech = e.hasClass("mechsim");
+        const keep = lens === "all" ? !!factor || !isMech : lens ? factor === lens : true;
+        e.toggleClass("hidden", isMech && (!props.showMechsim || (lens !== "all" && lens !== null && factor !== lens)));
+        e.toggleClass("lens-on", !!lens && !!factor && (lens === "all" || factor === lens) && keep);
+        e.toggleClass("lens-off", !!lens && lens !== "all" && factor !== lens);
       });
     });
-  }, [props.showMechsim]);
+  }, [props.showMechsim, props.lens]);
 
   // scope changes: fit everything visible, centred on the focus node if there is one
   useEffect(() => {

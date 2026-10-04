@@ -1,5 +1,8 @@
 "use client";
 
+import { FACTORS, type FactorKey } from "@/lib/factors";
+import { FACTOR_COLOR } from "../factors/FactorBits";
+import { WeightsPanel } from "../factors/WeightsPanel";
 import { clusterSlot, type GraphIndex } from "@/lib/graph";
 import { bridgesOf } from "@/lib/bridges";
 import { clusterColor, NO_CLUSTER_COLOR } from "@/lib/style";
@@ -24,6 +27,9 @@ export function LeftRail({
   onSelectCluster,
   showMechsim = false,
   onShowMechsim,
+  lens = null,
+  onLens,
+  weightsFor,
 }: {
   idx: GraphIndex;
   hiddenClusters: Set<string>;
@@ -38,8 +44,17 @@ export function LeftRail({
   onSelectCluster: (id: string | null) => void;
   showMechsim?: boolean;
   onShowMechsim?: (on: boolean) => void;
+  /** factor lens: null = off, "all" = every computed factor link, else one factor */
+  lens?: FactorKey | "all" | null;
+  onLens?: (l: FactorKey | "all" | null) => void;
+  /** Research view: show the weights panel for this disease (undefined = hidden) */
+  weightsFor?: string | null;
 }) {
   const mechsimCount = idx.graph.edges.filter((e) => MECHSIM_RELATIONS.includes(e.type)).length;
+  const lensCounts: Record<string, number> = Object.fromEntries(FACTORS.map((f) => [f.key, idx.graph.edges.filter((e) => e.type === f.edge).length]));
+  void mechsimCount;
+  void showMechsim;
+  void onShowMechsim;
   const typeCounts = new Map<NodeType, number>();
   for (const n of idx.graph.nodes) typeCounts.set(n.type, (typeCounts.get(n.type) ?? 0) + 1);
   const clusters = idx.graph.clusters;
@@ -47,6 +62,36 @@ export function LeftRail({
 
   return (
     <aside aria-label="Map filters" className="panel-scroll h-full overflow-y-auto border-r border-line px-5 py-5">
+      {onLens && (
+        <section aria-labelledby="lens-h" className="mb-7">
+          <h2 id="lens-h" className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-3">
+            Factor lens
+          </h2>
+          <p className="mt-1.5 text-xs leading-relaxed text-ink-3">Which diseases share a pathway, a tissue, a structure…? Pick a factor to draw only its links.</p>
+          <div className="mt-2 space-y-1" role="radiogroup" aria-label="Factor lens">
+            {([["none", "Off (curated map)"], ["all", "All factors"], ...FACTORS.map((f) => [f.key, f.label])] as [string, string][]).map(([k, l]) => {
+              const on = (lens ?? "none") === k;
+              return (
+                <label key={k} className={`flex cursor-pointer items-center gap-2 rounded px-1.5 py-1 text-sm ${on ? "bg-accent-50 text-ink" : "text-ink-2 hover:bg-subtle"}`}>
+                  <input type="radio" name="lens" checked={on} onChange={() => onLens(k === "none" ? null : (k as FactorKey | "all"))} className="accent-[#1f5a96]" />
+                  {k !== "none" && k !== "all" && <span className="h-2.5 w-2.5 rounded-sm" style={{ background: FACTOR_COLOR[k as FactorKey] }} aria-hidden="true" />}
+                  <span>{l}</span>
+                  {k !== "none" && k !== "all" && <span className="ml-auto text-[11px] tabular-nums text-ink-3">{lensCounts[k] ?? 0}</span>}
+                </label>
+              );
+            })}
+          </div>
+          {lens && (
+            <p className="mt-2 text-xs leading-relaxed text-ink-3">
+              {lens === "all" ? "Each colour is one factor." : "Line width = how alike the two diseases are on this factor."} Computed from public data
+              (above each factor’s 95th–98th percentile), not curated; symptoms are the curated-symptom similarity links.{" "}
+              <Link href="/mechanisms" className="text-accent-700 hover:underline">
+                Compare all factors
+              </Link>
+            </p>
+          )}
+        </section>
+      )}
       <section aria-labelledby="clusters-h">
         <div className="flex items-baseline justify-between">
           <h2 id="clusters-h" className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-3">
@@ -160,26 +205,7 @@ export function LeftRail({
         </p>
       </section>
 
-      {onShowMechsim && mechsimCount > 0 && (
-        <section aria-labelledby="mechsim-h" className="mt-7">
-          <h2 id="mechsim-h" className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-3">
-            Mechanistic links
-          </h2>
-          <label className="mt-2.5 flex cursor-pointer items-start gap-2 text-sm text-ink-2">
-            <input type="checkbox" className="mt-0.5" checked={showMechsim} onChange={(e) => onShowMechsim(e.target.checked)} />
-            <span>
-              Show {mechsimCount} computed links (same genes, pathway, tissue, mutation types, protein fate, protein structure, shared
-              compounds)
-            </span>
-          </label>
-          <p className="mt-2 text-xs leading-relaxed text-ink-3">
-            Drawn as purple dotted lines. Inferred by the atlas from public data, not curated.{" "}
-            <Link href="/mechanisms" className="text-accent-700 hover:underline">
-              Compare all six axes
-            </Link>
-          </p>
-        </section>
-      )}
+      {weightsFor !== undefined && <WeightsPanel idx={idx} diseaseId={weightsFor} />}
 
       <section aria-labelledby="lines-h" className="mt-7">
         <h2 id="lines-h" className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-3">

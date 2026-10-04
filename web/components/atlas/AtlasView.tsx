@@ -10,6 +10,8 @@ import { ClusterPanel, NodePanel, OverviewPanel } from "./AtlasPanels";
 import { clustersOf, clusterSlot, neighbors, type GraphIndex } from "@/lib/graph";
 import { clusterColor } from "@/lib/style";
 import { MECHSIM_RELATIONS, type AtlasNode, type NodeType } from "@/lib/types";
+import { FACTORS, type FactorKey } from "@/lib/factors";
+import { usePersona } from "@/lib/persona";
 
 const GraphCanvas = dynamic(() => import("./GraphCanvas"), {
   ssr: false,
@@ -63,7 +65,14 @@ function Atlas({ idx }: { idx: GraphIndex }) {
   const [scope, setScope] = useState<Scope>(() => (validFocus && !viewAll ? { mode: "focus", id: validFocus } : { mode: "all" }));
   const [centerRequest, setCenterRequest] = useState<{ id: string; n: number } | null>(() => (validFocus ? { id: validFocus, n: 1 } : null));
   const [fitKey, setFitKey] = useState(1);
-  const [showMechsim, setShowMechsim] = useState(params.get("links") === "mechanistic");
+  // factor lens (null = curated map only); ?links=mechanistic opens it on "all", ?lens=<factor> on one factor
+  const [lens, setLens] = useState<FactorKey | "all" | null>(() => {
+    const l = params.get("lens");
+    if (l && FACTORS.some((f) => f.key === l)) return l as FactorKey;
+    return params.get("links") === "mechanistic" || l === "all" ? "all" : null;
+  });
+  const showMechsim = lens !== null;
+  const persona = usePersona();
 
   const distinctive = useMemo(() => distinctiveSharedSymptoms(idx), [idx]);
 
@@ -250,8 +259,9 @@ function Atlas({ idx }: { idx: GraphIndex }) {
         distinctiveCount={distinctive.size}
         selectedClusterId={selectedCluster?.id ?? null}
         onSelectCluster={selectCluster}
-        showMechsim={showMechsim}
-        onShowMechsim={setShowMechsim}
+        lens={lens}
+        onLens={setLens}
+        weightsFor={persona === "researcher" ? (selectedNode?.type === "disease" ? selectedNode.id : null) : undefined}
       />
       <div className="relative min-w-0 bg-white">
         <h1 className="sr-only">Atlas map</h1>
@@ -267,6 +277,7 @@ function Atlas({ idx }: { idx: GraphIndex }) {
           fitKey={fitKey}
           dimOnSelect={!(scope.mode === "focus" && selectedNode?.id === scope.id)}
           showMechsim={showMechsim}
+          lens={lens}
           onSelectNode={(id) => selectNode(id)}
           onSelectEdge={(id) => openEdge(id)}
         />

@@ -377,7 +377,11 @@ const writeShards = (dir, entries) => {
     const am = readJson(join(idir, "alphamissense_gene.json"));
     if (cons || spec || am) {
       const CF = Object.fromEntries((cons?.f ?? []).map((k, i) => [k, i]));
-      const genesAll = new Set([...Object.keys(cons?.genes ?? {}), ...Object.keys(spec?.genes ?? {}), ...Object.keys(am?.genes ?? {})]);
+      // seven-factor view: protein family (UniProt/InterPro/Pfam/PANTHER) and tissue (HPA) per gene, in the same shards
+      const fam = readJson(join(dataRoot, "derived", "features", "gene_families.json"));
+      const tis = readJson(join(dataRoot, "derived", "features", "gene_tissue.json"));
+      const FF = Object.fromEntries((fam?.f ?? []).map((k, i) => [k, i]));
+      const genesAll = new Set([...Object.keys(cons?.genes ?? {}), ...Object.keys(spec?.genes ?? {}), ...Object.keys(am?.genes ?? {}), ...Object.keys(fam?.genes ?? {}), ...Object.keys(tis?.genes ?? {})]);
       const r3 = (x) => (typeof x === "number" ? Math.round(x * 1000) / 1000 : null);
       writeShards(
         join(webRoot, "public", "data", "derived", "web", "factors"),
@@ -385,10 +389,43 @@ const writeShards = (dir, entries) => {
           const c = cons?.genes?.[g];
           const sp = spec?.genes?.[g];
           const a = am?.genes?.[g];
-          return [g, { pli: c ? r3(c[CF.pLI]) : null, loeuf: c ? r3(c[CF.LOEUF]) : null, misz: c ? r3(c[CF.mis_z]) : null, am: a ? r3(a[0]) : null, n: sp?.n ?? 0, c: sp?.c ?? null }];
+          const f = fam?.genes?.[g];
+          const t = tis?.genes?.[g];
+          return [
+            g,
+            {
+              pli: c ? r3(c[CF.pLI]) : null,
+              loeuf: c ? r3(c[CF.LOEUF]) : null,
+              misz: c ? r3(c[CF.mis_z]) : null,
+              am: a ? r3(a[0]) : null,
+              n: sp?.n ?? 0,
+              c: sp?.c ?? null,
+              ...(f ? { uni: f[FF.uniprot] ?? null, len: f[FF.length] ?? null, panther: f[FF.panther_family] ?? [], ipr: f[FF.interpro_family] ?? [], pfam: f[FF.pfam] ?? [] } : {}),
+              ...(t ? { hpa: t[0] ?? null, tis: t[1] ?? {} } : {}),
+            },
+          ];
         }),
       );
       console.log(`[sync-data] wrote web/factors shards for ${genesAll.size} genes`);
+    }
+    {
+      const mdir = join(webRoot, "public", "data", "derived", "global", "mechanism");
+      const gd = readJson(join(dataRoot, "derived", "direction", "gene_direction.json"));
+      const cls = {};
+      if (existsSync(mdir))
+        for (const f of readdirSync(mdir).filter((x) => x.endsWith(".json"))) {
+          const sh = readJson(join(mdir, f));
+          for (const [id, e] of Object.entries(sh?.d ?? {})) {
+            const c = [...new Set((e.mechanisms ?? []).map((m) => m.class).filter(Boolean))];
+            if (c.length) cls[id] = { c };
+          }
+        }
+      for (const [id, genes] of Object.entries(gd?.by_disease ?? {})) {
+        const dirs = [...new Set(Object.values(genes).map((x) => x.direction).filter(Boolean))];
+        if (dirs.length) (cls[id] ??= {}).d = dirs.length === 1 ? dirs[0] : "mixed";
+      }
+      writeFileSync(join(webRoot, "public", "data", "derived", "web", "mechclass.json"), JSON.stringify(cls));
+      console.log(`[sync-data] wrote web/mechclass.json (${Object.keys(cls).length} diseases with a mechanism class or direction)`);
     }
     if (existsSync(join(idir, "primekg_eval.json"))) copyJson(idir, join(webRoot, "public", "data", "derived", "ingest"), ["primekg_eval.json"]);
   }

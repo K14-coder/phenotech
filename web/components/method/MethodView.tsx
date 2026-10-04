@@ -8,6 +8,7 @@ import { AccuracySection } from "./AccuracySection";
 import { CollectionList } from "./CollectionList";
 import { PrimeKgSection } from "./PrimeKgSection";
 import { DirectionNote } from "./DirectionNote";
+import { SevenFactors } from "./SevenFactors";
 import { EvidenceLegend } from "../evidence/EvidenceBits";
 import { CounterexampleCard } from "../disease/DerivedSections";
 import { useDerived, type Counterexample } from "@/lib/derived";
@@ -108,6 +109,7 @@ function Method({ idx }: { idx: GraphIndex }) {
       </section>
 
       <AccuracySection />
+      <SevenFactors />
       <PrimeKgSection />
       <DirectionNote />
 
