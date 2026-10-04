@@ -51,6 +51,8 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 
 ## Data traps
 
+- **Direction flag in the web app** (`web/lib/direction.ts`, data slimmed by sync to `web/public/data/derived/web/direction.json`): it fires only when a curated therapy's `targets` (from `drug_direction.json` `curated`, not the graph's `target_genes`, which lists disease genes) include the disease gene. Gene-level "mixed" diseases (SCN2A, SCN8A, CACNA1A, GRIN2B, STX1B, UNC13A) fall back to per-variant-group flags. Cross-disease ideas (4-PBA → VAMP2) never get a flag, by design. `gene_direction.json` labels PTPN11 as LoF, although Noonan PTPN11 is usually GoF; no curated therapy targets PTPN11, so no flag shows, but check it before using that label elsewhere.
+
 - **Cross-family links come from the literature, not GO.** QuickGO over all 45 genes found no TOR-signalling or ER-stress annotation at all, and MAPK cascade only for the core RAF/MEK/RAS genes. LZTR1, RIT1, SOS1, CBL and SYNGAP1 reach the MAPK cascade only through functional papers (`data/curated/cross_family.json`).
 - **The connectivity metric ignores `part_of` (mechanism → mechanism) edges.** `transfer_eval.py` links diseases only through `driven_by`, gene `participates_in` and variant-group `has_effect` edges to the *same* node. A hierarchy edge does not create a cross-family link; a gene-level edge does.
 - **One bridge edge can carry a whole family.** SYNGAP1 → MAPK cascade alone makes 8 RASopathies "cross-family". Report bridge counts per edge, not only per disease.

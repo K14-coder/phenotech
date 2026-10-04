@@ -38,7 +38,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 - [x] **Direction-aware therapy matching** (done 2026-10-04): neutral on PrimeKG, no contraindication shift, atlas gain = target leakage → keep it as a flag only. See eval.md section 6.
 - [x] (done 2026-10-04, commit 19be6ce) **Independent AI review of the review sheet** → `docs/review/ai-review-2026-10-04.md` and patches in `data/curated/overrides.json`. Review records use `by: "ai-review:claude"`.
-  - [~] (claimed by web agent, 2026-10-04 06:35 CEST) Web: render ai-review records as "Independently reviewed by AI (not a human expert)". Human reviews keep "Reviewed by a biochemist".
+  - [x] (web agent, commit 2a3070c) Web: render ai-review records as "Independently reviewed by AI (not a human expert)". Human reviews keep "Reviewed by a biochemist".
   - [ ] **(you, optional)** A human expert works through the "needs-human" list from that report.
     - SYT1 → gain of function (P401L: the authors call it dominant-negative, i.e. loss of clamping): keep or reject?
     - VAMP2 → protein destabilization (really SNARE-complex instability): reject? Same for `vg:VAMP2:missense|has_effect|mech:protein-destabilization`.
@@ -52,7 +52,7 @@ Several Claude agents and people work in parallel. Follow this every time:
   - [ ] Follow-up: close `gap:ras-to-mapk-hierarchy` in `data/curated/mechanism_hierarchy.json` (answered at gene level by cross_family.json).
   - [ ] Follow-up: find PTPN11 → mTOR evidence independent of PMID 21339643 (the rapamycin-NSML paper; using it would leak into the benchmark).
   - [ ] Follow-up: still not cross-linked: KCNT1, SCN2A, SCN8A, SLC2A1, ARSA, GALC, IDS, IDUA, SMPD1, TPP1, CPLX1, NSF, SNAP25, STX1A, STX1B, UNC13A. Candidates: non-IEA evidence for SNAP25/STX1B in Ca2+-triggered exocytosis, an HCN/excitability node for NF1, UPR markers in DEE/SNARE iPSC neurons.
-- [~] (claimed by web agent, 2026-10-04 06:35 CEST) Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
+- [x] (web agent, commit 2a3070c) Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
 - [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:40 CEST) Direction coverage: add MONDO:0100135 (Dravet) to the G2P/ClinGen join (obsolete id MONDO:0011794). Get directions for relutrigine and NBI-921352 (Nav1.6 inhibitors; ChEMBL has no mechanism record for them).
 - [x] Hypotheses recomputed with the cross-family links (10 ideas, now including 4-PBA → SCN1A and rapamycin → NF1).
 - [ ] Precompute `experiment` AI drafts for the new top ideas (dev server plus signed-in ChatGPT: `node web/scripts/precompute-ai.mjs --only experiment`).
@@ -84,6 +84,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- Web: direction flag ("Direction fits" / "Direction mismatch", direct target only, per variant group where a gene mixes directions) on disease therapy evidence, idea cards, /approach programmes, /variant and /sequence; AI reviews labelled "Independently reviewed by AI (not a human expert)" and counted separately on /method; direction result on /method (commit 2a3070c).
 - Cross-family biology: RAS → MAPK (LZTR1, RIT1, SOS1, CBL), SYNGAP1 ↔ MAPK/mTOR, mTOR, synaptic plasticity, misfolding (SCN1A, KCNQ2), autophagy; 11/45 → 29/45 diseases cross-linked by a specific mechanism. `docs/agent-reports/cross-family.md`.
 - Independent AI review (Claude, not a human expert): 63 links, 31 confirmed, 26 corrected, 6 needs-human; MONDO umbrella ids for CDKL5/SLC2A1/GBA1/NPC1/ARSA; Dravet MONDO:0011794 → MONDO:0100135 on SCN1A and SCN2A. `docs/review/ai-review-2026-10-04.md`.
 - Direction layer (`data/derived/direction/`, `DirectionIndex` in `transfer_score.py`) and evaluation (`data/derived/eval_direction.json`, eval.md section 6). Not adopted in ranking.
