@@ -12,6 +12,7 @@ const PATHS = {
   counterexamples: "/data/derived/counterexamples.json",
   impact: "/data/curated/impact.json",
   mechsim: "/data/derived/mechsim.json",
+  research: "/data/derived/research_recs.json",
 } as const;
 export type DerivedName = keyof typeof PATHS;
 
@@ -113,4 +114,76 @@ export interface OpportunityPair {
   lacks_model?: string;
   lacks_model_label?: string;
   [k: string]: unknown;
+}
+
+// ---------- research recommendations (data/derived/research_recs.json) ----------
+
+export interface ResearchMarker {
+  raw: number;
+  pct: number;
+  a?: string | null;
+  b?: string | null;
+  model_a?: string;
+  model_b?: string;
+}
+
+export interface ResearchDelivery {
+  class: string;
+  target_tissue: string | null;
+  options: string[];
+  cds_length_bp: number | null;
+  aav_cds_fits: boolean | null;
+}
+
+export interface ResearchRecDisease {
+  gene: string;
+  label: string;
+  family: string | null;
+  structure_model: {
+    kind: "experimental_mutant" | "alphafold_wt";
+    label: string;
+    pdb_entity?: string;
+    mutations?: string[];
+    engineered_mutations?: string[];
+    residues?: [number, number];
+    mutant_model?: string;
+    note: string | null;
+  };
+  delivery: ResearchDelivery;
+  funders: string[];
+  cluster?: { members: string[]; size: number };
+  top: Record<"mechanistic" | "funding" | "tissue" | "symptoms", [string, number][]>;
+  best: {
+    mechanistic?: {
+      partner: string;
+      partner_label: string;
+      score: number;
+      markers: Partial<Record<"mutation" | "fate" | "structure", ResearchMarker>>;
+      missing: string[];
+      weights: Record<"mutation" | "fate" | "structure", number>;
+      explanation: string;
+    };
+    funding?: {
+      partner: string;
+      partner_label: string;
+      score: number;
+      shared_pathways: { id: string; name: string }[];
+      partner_funders_missing: { funder: string; n: number; records: { id: string; title: string | null; url: string | null }[] }[];
+      funders_via_pathway_partners: { funder: string; via: string[] }[];
+      explanation: string;
+    };
+    tissue?: { partner: string; partner_label: string; score: number; same_delivery_class: boolean; explanation: string };
+    symptoms?: {
+      partner: string;
+      partner_label: string;
+      score: number;
+      shared_distinctive: { id: string; name: string; ic: number }[];
+      explanation: string;
+    };
+  };
+}
+
+export interface ResearchRecsData {
+  meta: { cluster_min: number; not_advice: string; clusters: string[][] };
+  diseases: Record<string, ResearchRecDisease>;
 }
