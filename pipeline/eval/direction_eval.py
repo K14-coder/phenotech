@@ -434,6 +434,26 @@ def atlas():
             sc = idx.score_direction(c["cls"], c["context"], cands, bonus=b, penalty=p)
             ms.append(te.tie_metrics({d: round(v, 9) for d, v in sc.items()}, c["held_out"]))
         res[name] = {k: round(v, 4) for k, v in te.agg(ms).items()}
+    # leakage control: the same bonus for "therapy target gene == candidate's gene", direction ignored
+    def und_targets(cls):
+        tg = set()
+        for t in idx.members.get(cls, [cls]):
+            v = idx.ther_dir.get(t)
+            if v:
+                tg |= set(v["targets"])
+        return tg
+    for b in (0.5,):
+        ms = []
+        for c in cases:
+            cands = [d for d in idx.diseases if d not in set(c["context"])]
+            base = TransferIndex.score(idx, "pheno+mech", c["cls"], c["context"], cands)
+            tg = und_targets(c["cls"])
+            sc = {d: base[d] + (b if idx.gene_of.get(d) in tg else 0) for d in cands}
+            ms.append(te.tie_metrics({d: round(v, 9) for d, v in sc.items()}, c["held_out"]))
+        res[f"pheno+mech+UNDIRECTED target-gene bonus {b} (leakage control)"] = {k: round(v, 4) for k, v in te.agg(ms).items()}
+    # where do the curated targets come from? share of held-out diseases whose gene is a listed target
+    out["coverage"]["cases_heldout_gene_is_listed_target"] = sum(
+        1 for c in cases if idx.gene_of.get(c["held_out"]) in und_targets(c["cls"]))
     out["benchmark"] = res
     # sodium channel and other contested pairs (counter_evidence)
     dee = json.load(open(ROOT / "data/curated/family_dee.json"))
@@ -463,15 +483,7 @@ def atlas():
     # automated (MONDO-level) direction for the sodium-channel subtypes, and ChEMBL sodium-channel blockers
     by_dis = gdir["by_disease"]
     index = json.load(open(ROOT / "data/derived/global/index.json"))
-    names = {}
-    try:
-        cols = index.get("cols") or index.get("fields")
-        for r in index.get("rows", index.get("d", [])):
-            if isinstance(r, list) and cols:
-                rr = dict(zip(cols, r))
-                names[rr.get("id") or rr.get("mondo")] = rr.get("name") or rr.get("label")
-    except Exception:
-        pass
+    names = {r[0]: r[1] for r in index["rows"]}
     sub = []
     for m, gs in by_dis.items():
         for gname in ("SCN1A", "SCN2A", "SCN8A"):

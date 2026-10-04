@@ -369,3 +369,122 @@ Only two features carry the score: removing `mechanism_target` or `symptoms` cos
   - The families themselves are biology-defined: gene-family, Reactome and compartment similarity largely re-derive "same family". The same-family baseline is MRR 0.26.
 - **Unknowns count as negatives**, as before. Reactome's sphingolipidosis ranking for miglustat is penalised, because GALC, GLA and SMPD1 are not labelled positives.
 - **Coverage gaps.** Reactome is missing for 4 genes; HPA enriched tissues for 22; G2P / ClinGen for 4. Two features are degenerate or near-degenerate: `shared_gene` (constant) and `tissue`.
+
+## 6. Direction-aware matching (added 2026-10-04)
+
+**Question.** The coarse mechanism class ("loss of function") made ranking worse, and similarity puts contraindicated drugs mid-pool. Does encoding *direction* help? A drug that lowers its target's function should suit a disease with too much function (gain of function), and a drug that raises function should suit a disease with too little (loss of function, haploinsufficiency, destabilisation). The opposite pairing should be penalised.
+
+```bash
+# downloads (gitignored, ~7 MB): Open Targets drug_mechanism_of_action + drug_molecule parquet, see the script docstring
+uv run -q --with pyarrow --with pandas python3 pipeline/ingest/direction_build.py   # data/derived/direction/, ~2 s
+uv run -q --with numpy --with scipy python3 pipeline/eval/direction_eval.py         # data/derived/eval_direction.json, ~30 s
+```
+
+### Plain summary
+
+1. We labelled which way each rare disease pushes its gene: too little function or too much. We also labelled which way each drug pushes its target: up or down. Then we rewarded drug–disease pairs that point the right way and penalised pairs that point the wrong way.
+2. On 1,300 external PrimeKG drug–disease cases the change makes no measurable difference: MRR 0.375 → 0.379, with an interval that includes zero. A drug's target is a gene of the held-out disease in only 8 of 1,300 cases, and none of the 417 contraindications had a usable direction signal, so contraindications do not move.
+3. Direction is right where it applies: the labelled pairs agree with real indications 8 of 8 times, and it gets the sodium-channel cases right at the subtype level. But it is too rarely applicable to change rankings. We show it as an explanation and a warning flag, not as part of the score.
+
+### What was built
+
+- **`data/derived/direction/gene_direction.json`** (1.2 MB). It holds 3,461 disease × gene direction calls over 3,244 MONDO ids: LoF 3,010, GoF 198, mixed 51, and 202 with too little evidence.
+  - **Sources, weighted:** G2P mechanism class (1.0; 0.6 if the support is "inferred"), ClinGen HI 3 (0.6, or 0.4 when it is a gene-level score copied onto a disease entry), DisMech step labels that name the gene, keyword-classified (0.8 per step, at most 2; the matched label and keyword are kept as the basis; regexes are in the file), and gnomAD LOEUF < 0.35 (0.2). gnomAD only tips the ratio and never sets a direction on its own.
+  - **Rule:** a side is called when it has at least twice the other side's weight and at least 0.5.
+  - **Also in the file:** the 45 atlas diseases (from `driven_by` and variant-group `has_effect` edges, weighted by evidence level), and per-variant-group sides, for example SCN2A missense-gof vs truncating.
+- **`data/derived/direction/drug_direction.json`** (1.0 MB). It covers 2,954 DrugBank drugs, from **ChEMBL mechanism-of-action action types via the Open Targets Platform bulk parquet**. The ChEMBL REST API returned HTTP 500 during the build, and the ChEMBL MCP needed authorisation. 2,867 of those drugs have at least one directed action.
+  - Decrease: inhibitor, antagonist, blocker, negative modulator, ASO/RNAi inhibitor, inverse agonist, degrader.
+  - Increase: agonist, activator, opener, positive modulator, stabiliser, exogenous protein or gene.
+  - Neutral: modulator, binding agent, enzyme, substrate.
+  - The 47 curated atlas therapies are classified from modality and summary, with ChEMBL by name as a fallback; 39 get a direction. Each one records its basis. 8 target overrides are documented in the script: the graph's `target_genes` lists the *disease* genes, not the drug's target. For example, the AChE inhibitor targets ACHE (not SYT2), MEK inhibitors target MAP2K1/2, and the SCN8A ASO targets SCN8A.
+- **`transfer_score.py`:** new `direction_compat()` and `DirectionIndex(TransferIndex)` (scorer `"pheno+mech+direction"`, `s_direction`, `score_direction(bonus, penalty)`, and `explain()` gains a `direction` block). The existing APIs are unchanged.
+
+**Score.** `base + bonus·[match] − penalty·[mismatch]`, where `base` = phenotype + 0.5·genes + 0.5·pathway_full (the production global scorer).
+- *direct* means a drug target is a directed causal gene of the candidate disease.
+- *direct+pathway* adds ±0.5 when a target shares a small lowest-level Reactome pathway (≤ 60 genes) with a directed disease gene.
+- **Control:** an *undirected* bonus for "drug target is a disease gene" with direction ignored. It separates the value of direction from the value of target identity.
+
+### (a) PrimeKG indications (n = 1,300, pool 256, 95 drug groups, 2,000 drug-group bootstraps)
+
+| Scorer | MRR [CI] | R@1 | R@5 [CI] | R@10 | Δ MRR vs base [CI] |
+|---|---|---|---|---|---|
+| base (phen + 0.5 genes + 0.5 pathway) | 0.375 [0.25–0.56] | 0.260 | 0.520 [0.39–0.67] | 0.642 | — |
+| **nested direction-aware** (variant, bonus, penalty tuned in 5-fold CV) | 0.379 [0.26–0.56] | 0.264 | 0.524 [0.39–0.68] | 0.645 | +0.004 [−0.001, +0.013], P(better) 0.94 |
+| nested undirected target bonus (control) | 0.375 [0.25–0.56] | 0.259 | 0.519 | 0.643 | +0.000 [−0.001, +0.002] |
+| fixed direct 0.5 / 0.5 | 0.377 | 0.261 | 0.523 | 0.645 | +0.002 [−0.000, +0.005] |
+| fixed direct+pathway 0.5 / 0.5 | 0.377 | 0.261 | 0.526 | 0.644 | +0.002 [−0.001, +0.005] |
+| penalty only (direct, 0 / 1) | 0.375 | 0.260 | 0.520 | 0.642 | 0.000 |
+| *gene-level fallback labels, nested* | *0.377* | *0.264* | *0.522* | *0.642* | *+0.002 [−0.003, +0.012]* |
+
+- **Fold choices.** Bonus 1.0 in all folds; penalty 0.5 in 4 folds and 0.1 in 1. The penalty never fires on a held-out indication.
+- **Direction minus the undirected control:** +0.004 [−0.000, +0.012].
+- **Coverage, which is the binding limit:**
+  - 158 of 257 drugs have a directed ChEMBL action.
+  - 68 of 256 pool diseases have a directed gene (167 with the gene-level fallback).
+  - But the drug's target is a directed gene of the held-out disease in only **8 of 1,300 cases**, all 8 matches. Examples: testosterone → androgen insensitivity (AR LoF / agonist), diazoxide → familial hyperinsulinism (KCNJ11 LoF / opener), migalastat → Fabry (GLA LoF / stabiliser), ruxolitinib → polycythemia vera (JAK2 GoF / inhibitor).
+  - Over all 65,792 drug × pool pairs, 17 are non-zero (15 match, 2 mismatch).
+  - The pathway extension reaches 17 held-out cases (16 match, 1 mismatch), but over all pairs it is 117 match vs 96 mismatch. **Pathway-level direction is close to a coin flip**, because "inhibit a neighbour of a LoF gene" has no fixed meaning.
+
+### (b) PrimeKG contraindications (417 pairs; context = all indications)
+
+| Scorer | Mean percentile before → after (0 = top) | Shift toward bottom [CI] | Pairs with a direction signal |
+|---|---|---|---|
+| direct 0.5 / 0.5 | 0.480 → 0.480 | 0.000 [0, 0] | **0** |
+| direct 1 / 1 and the nested refit | 0.480 → 0.480 | 0.000 [0, 0] | 0 |
+| direct+pathway 0.5 / 0.5 | 0.480 → 0.479 | −0.002 [−0.007, +0.001] | 2, both "match", so they move *up* |
+| gene-level fallback, direct+pathway | 0.480 → 0.479 | −0.001 [−0.010, +0.005] | 8, all "match" |
+
+- **Contraindications do not move toward the bottom.** No contraindicated disease has a drug target among its directed genes.
+- PrimeKG contraindications are mostly clinical: hypertension, glaucoma, pregnancy-adjacent and organ-failure states, not "wrong direction on the disease gene".
+- The textbook case is missing from PrimeKG: it has no phenytoin, carbamazepine or lamotrigine contraindication for Dravet syndrome. It links Dravet only to cannabidiol and stiripentol, as indications.
+
+### (c) Atlas: sodium-channel cases and the 56-case benchmark
+
+**Contested pairs** (`family_dee.json` counter_evidence). Two levels of labels are compared: gene-level labels from the graph, and variant-group (subtype) labels.
+
+| Therapy → disease | Drug | Gene-level label → compat | Subtype compat |
+|---|---|---|---|
+| sodium-channel blockers → SCN1A (Dravet) | decrease | LoF → **−1 (mismatch, correct)** | missense-gof +1; truncating / splice / deletion −1 |
+| sodium-channel blockers → SCN2A | decrease | mixed → 0 | missense-gof **+1**; missense-lof / truncating −1 |
+| sodium-channel blockers → SCN8A | decrease | mixed → 0 | missense-gof **+1**; missense-lof / truncating −1 |
+| zorevunersen (SCN1A upregulating ASO) → SCN1A | increase | LoF → +1 | missense-gof −1 (the phase 3 trial excludes GoF: correct) |
+| Kv7 openers → KCNQ2 | increase | LoF → +1 | missense-gof −1 (the trial excluded GoF: correct) |
+| KCNT1 ASO, quinidine → KCNT1 | decrease | GoF → +1 | missense +1 |
+| relutrigine, NBI-921352 → SCN2A / SCN8A | none (no ChEMBL MoA, summary silent) | 0 | — |
+
+- **Subtype level.** There the rule reproduces every curated counter-evidence statement: blockers help GoF and harm LoF, and upregulators exclude GoF.
+- **Gene level.** There SCN2A and SCN8A are "mixed", so they are neutral, because one atlas disease node covers both allelic directions.
+- **Automated MONDO-level labels miss the GoF subtypes:**
+  - SCN2A DEE11 (MONDO:0013388) gets only a gene-level ClinGen HI score: too weak, so no call.
+  - SCN8A DEE13 (MONDO:0013801) is "mixed": G2P says dominant negative, DisMech says GoF.
+  - Dravet (MONDO:0100135) has no G2P / ClinGen / DisMech entry under the current id. This is the obsolete-id issue already in CLAUDE.md.
+- **ChEMBL agrees on the drug side:** phenytoin, carbamazepine, lamotrigine, oxcarbazepine, lacosamide, rufinamide and zonisamide are all BLOCKERs of SCN1A/2A/3A….
+
+**56-case benchmark (eval.md section 2, production `pheno+mech`).**
+
+| Scorer | R@1 | R@3 | R@5 | MRR |
+|---|---|---|---|---|
+| pheno+mech (production) | 0.293 | 0.602 | 0.731 | 0.491 |
+| + direction, bonus = penalty ∈ {0.25, 0.5, 1} | 0.565 | 0.792 | 0.857 | 0.696 |
+| + direction, penalty only 0.5 | 0.293 | 0.602 | 0.731 | 0.491 |
+| **+ undirected "target gene = disease gene" bonus 0.5 (leakage control)** | **0.630** | **0.843** | **0.896** | **0.750** |
+
+**This jump is leakage, not direction.**
+- The curated therapies' targets are the genes of the diseases they were developed for. In 32 of the 56 cases the held-out disease's gene is a listed target.
+- So any target bonus "finds" the hidden disease. The undirected control scores even higher than the direction-aware one.
+- Coverage: 22 of 56 held-out cases get a non-zero direction (21 match, 1 mismatch). The penalty never fires on a held-out positive, so it changes nothing.
+
+### Recommendation
+
+1. **Do not add direction to the ranking score.** It is neutral on PrimeKG, with a gain of +0.004 whose interval includes 0, and it is circular on the atlas benchmark.
+2. **Use it as a flag next to a candidate.** Show "direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function (G2P / ClinGen / atlas edges)" as a caution, and "direction match" as an explanation. Use `DirectionIndex.explain()["direction"]` or `direction_compat()`.
+   - The flag is reliable when it fires: 8/8 indications match, and the sodium-channel, Kv7 and KCNT1 subtype cases are all correct.
+   - It fires only when the drug's target is the disease gene. Keep pathway-level direction out: it is about 55/45.
+3. **Apply it at subtype (variant-group) level, not gene level.** One gene-level disease node mixes GoF and LoF in SCN2A, SCN8A, KCNQ2, STXBP1 and CACNA1A. The variant-aware VCF checker is the natural place: missense-gof vs truncating.
+4. **Contraindications still need their own field from the label** (ingest.md section 5). Direction does not recover them from PrimeKG.
+
+### Limitations
+
+- Disease direction comes from keyword and class rules. DisMech keywords on gene-named steps can misfire, and the basis text is kept so a reviewer can check. G2P's "dominant negative" is counted as LoF.
+- ChEMBL MoA covers mostly approved drugs. 99 of the 257 benchmark drugs have no directed action, mainly corticosteroids, cytotoxics and biologics against non-gene targets.
+- The evaluation was designed once and not re-tuned. The gene-level fallback and the pathway variant are reported as sensitivity analyses, not as the primary result.

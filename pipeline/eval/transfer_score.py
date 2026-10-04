@@ -450,3 +450,80 @@ if __name__ == "__main__":
     for d, s, ex in idx.rank_candidates(t, top=8):
         print(f"{s:6.3f}  {d:22s} mech={[m['mechanism'] for m in ex['mechanisms']]} "
               f"clusters={ex['clusters']} near={ex['nearest_known_by_phenotype']}")
+
+
+# ====================================================================== direction-aware matching
+# Built by pipeline/ingest/direction_build.py; evaluated by pipeline/eval/direction_eval.py
+# (data/derived/eval_direction.json, docs/agent-reports/eval.md "Direction-aware matching").
+DIRECTION_DIR = ROOT / "data" / "derived" / "direction"
+
+
+def direction_compat(drug_direction, drug_targets, disease_gene_directions):
+    """+1 if the drug pushes a disease gene's function the right way (decrease + GoF, increase + LoF),
+    -1 if the wrong way, 0 if unknown, unrelated, or both. disease_gene_directions: {gene: 'LoF'|'GoF'}."""
+    if drug_direction not in ("increase", "decrease"):
+        return 0
+    pos = neg = 0
+    for g, gd in disease_gene_directions.items():
+        if g in drug_targets and gd in ("LoF", "GoF"):
+            good = (drug_direction == "decrease") == (gd == "GoF")
+            pos += good
+            neg += not good
+    return 1 if pos and not neg else -1 if neg and not pos else 0
+
+
+class DirectionIndex(TransferIndex):
+    """TransferIndex plus a direction-compatibility term. Disease directions come from the graph's
+    driven_by / variant_group has_effect edges (gene_direction.json `atlas_graph`); therapy directions from
+    drug_direction.json `curated` (modality + summary, ChEMBL by name as fallback).
+    Scorer "pheno+mech+direction" = pheno+mech + bonus * match - penalty * mismatch (default 0, 0.5)."""
+
+    def __init__(self, graph, direction_dir=DIRECTION_DIR, bonus=0.0, penalty=0.5, **kw):
+        super().__init__(graph, **kw)
+        gd = json.loads((pathlib.Path(direction_dir) / "gene_direction.json").read_text())
+        dd = json.loads((pathlib.Path(direction_dir) / "drug_direction.json").read_text())
+        self.dis_dir = {d: v["direction"] for d, v in gd["atlas_graph"].items()}
+        self.ther_dir = dd["curated"]
+        self.gene_of = {e["target"]: e["source"].replace("gene:", "") for e in self.edges if e["type"] == "causes"}
+        self.bonus, self.penalty = bonus, penalty
+
+    def disease_direction(self, d):
+        return self.dis_dir.get(d)
+
+    def class_direction(self, cls):
+        ds, tg = set(), set()
+        for t in self.members.get(cls, [cls]):
+            v = self.ther_dir.get(t)
+            if v and v["direction"]:
+                ds.add(v["direction"])
+                tg |= set(v["targets"])
+        return (ds.pop() if len(ds) == 1 else None), tg
+
+    def s_direction(self, cls, context, d):
+        dr, tg = self.class_direction(cls)
+        gene, gd = self.gene_of.get(d), self.dis_dir.get(d)
+        if not gene or gd not in ("LoF", "GoF"):
+            return 0
+        return direction_compat(dr, tg, {gene: gd})
+
+    def score_direction(self, cls, context, candidates, bonus=None, penalty=None):
+        b = self.bonus if bonus is None else bonus
+        p = self.penalty if penalty is None else penalty
+        base = TransferIndex.score(self, "pheno+mech", cls, context, candidates)
+        out = {}
+        for d in candidates:
+            c = self.s_direction(cls, context, d)
+            out[d] = base[d] + b * max(c, 0) - p * max(-c, 0)
+        return out
+
+    def score(self, scorer, cls, context, candidates):
+        if scorer == "pheno+mech+direction":
+            return self.score_direction(cls, context, candidates)
+        return super().score(scorer, cls, context, candidates)
+
+    def explain(self, cls, known, d):
+        out = super().explain(cls, known, d)
+        dr, tg = self.class_direction(cls)
+        out["direction"] = {"therapy": dr, "therapy_targets": sorted(tg), "disease": self.dis_dir.get(d),
+                            "compat": self.s_direction(cls, known, d)}
+        return out

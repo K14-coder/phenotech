@@ -1,0 +1,1824 @@
+{
+ "generated": "2026-10-04",
+ "script": "pipeline/eval/direction_eval.py",
+ "inputs": [
+  "data/derived/direction/gene_direction.json",
+  "data/derived/direction/drug_direction.json",
+  "data/derived/ingest/primekg_benchmark.json",
+  "data/graph.json",
+  "data/curated/family_dee.json"
+ ],
+ "grid": [
+  0.0,
+  0.1,
+  0.25,
+  0.5,
+  1.0,
+  2.0
+ ],
+ "pathway_max_genes": 60,
+ "primekg": {
+  "results": {
+   "base (phen + 0.5 genes + 0.5 pathway)": {
+    "rr": 0.3752,
+    "rr_ci": [
+     0.2507,
+     0.5592
+    ],
+    "r@1": 0.26,
+    "r@1_ci": [
+     0.1217,
+     0.4651
+    ],
+    "r@3": 0.407,
+    "r@3_ci": [
+     0.2544,
+     0.5979
+    ],
+    "r@5": 0.52,
+    "r@5_ci": [
+     0.3902,
+     0.6732
+    ],
+    "r@10": 0.6416,
+    "r@10_ci": [
+     0.5481,
+     0.7392
+    ]
+   },
+   "nested direction-aware": {
+    "rr": 0.3791,
+    "rr_ci": [
+     0.255,
+     0.5618
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1252,
+     0.4673
+    ],
+    "r@3": 0.4116,
+    "r@3_ci": [
+     0.2593,
+     0.6037
+    ],
+    "r@5": 0.5239,
+    "r@5_ci": [
+     0.3927,
+     0.676
+    ],
+    "r@10": 0.6455,
+    "r@10_ci": [
+     0.553,
+     0.7416
+    ]
+   },
+   "nested undirected target bonus (control)": {
+    "rr": 0.3753,
+    "rr_ci": [
+     0.2512,
+     0.5576
+    ],
+    "r@1": 0.2585,
+    "r@1_ci": [
+     0.1214,
+     0.4626
+    ],
+    "r@3": 0.41,
+    "r@3_ci": [
+     0.2574,
+     0.6015
+    ],
+    "r@5": 0.5193,
+    "r@5_ci": [
+     0.3907,
+     0.6745
+    ],
+    "r@10": 0.6432,
+    "r@10_ci": [
+     0.5517,
+     0.7417
+    ]
+   },
+   "nested direction-aware, direct only": {
+    "rr": 0.3791,
+    "rr_ci": [
+     0.255,
+     0.5618
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1252,
+     0.4673
+    ],
+    "r@3": 0.4116,
+    "r@3_ci": [
+     0.2593,
+     0.6037
+    ],
+    "r@5": 0.5239,
+    "r@5_ci": [
+     0.3927,
+     0.676
+    ],
+    "r@10": 0.6455,
+    "r@10_ci": [
+     0.553,
+     0.7416
+    ]
+   },
+   "fixed dir direct bonus 0.5 penalty 0.5": {
+    "rr": 0.3768,
+    "rr_ci": [
+     0.2528,
+     0.559
+    ],
+    "r@1": 0.2608,
+    "r@1_ci": [
+     0.1229,
+     0.4663
+    ],
+    "r@3": 0.4108,
+    "r@3_ci": [
+     0.2593,
+     0.603
+    ],
+    "r@5": 0.5231,
+    "r@5_ci": [
+     0.3924,
+     0.6754
+    ],
+    "r@10": 0.6455,
+    "r@10_ci": [
+     0.553,
+     0.7416
+    ]
+   },
+   "fixed dir direct+pathway bonus 0.5 penalty 0.5": {
+    "rr": 0.3768,
+    "rr_ci": [
+     0.2532,
+     0.5586
+    ],
+    "r@1": 0.2608,
+    "r@1_ci": [
+     0.1229,
+     0.4663
+    ],
+    "r@3": 0.4077,
+    "r@3_ci": [
+     0.257,
+     0.6009
+    ],
+    "r@5": 0.5262,
+    "r@5_ci": [
+     0.4035,
+     0.6747
+    ],
+    "r@10": 0.6439,
+    "r@10_ci": [
+     0.5518,
+     0.7414
+    ]
+   },
+   "fixed dir direct bonus 1.0 penalty 1.0": {
+    "rr": 0.3791,
+    "rr_ci": [
+     0.255,
+     0.5618
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1252,
+     0.4673
+    ],
+    "r@3": 0.4116,
+    "r@3_ci": [
+     0.2593,
+     0.6037
+    ],
+    "r@5": 0.5239,
+    "r@5_ci": [
+     0.3927,
+     0.676
+    ],
+    "r@10": 0.6455,
+    "r@10_ci": [
+     0.553,
+     0.7416
+    ]
+   },
+   "fixed dir direct bonus 0.0 penalty 1.0": {
+    "rr": 0.3752,
+    "rr_ci": [
+     0.2507,
+     0.5592
+    ],
+    "r@1": 0.26,
+    "r@1_ci": [
+     0.1217,
+     0.4651
+    ],
+    "r@3": 0.407,
+    "r@3_ci": [
+     0.2544,
+     0.5979
+    ],
+    "r@5": 0.52,
+    "r@5_ci": [
+     0.3902,
+     0.6732
+    ],
+    "r@10": 0.6416,
+    "r@10_ci": [
+     0.5481,
+     0.7392
+    ]
+   },
+   "fixed dir direct bonus 1.0 penalty 0.0": {
+    "rr": 0.3791,
+    "rr_ci": [
+     0.255,
+     0.5618
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1252,
+     0.4673
+    ],
+    "r@3": 0.4116,
+    "r@3_ci": [
+     0.2593,
+     0.6037
+    ],
+    "r@5": 0.5239,
+    "r@5_ci": [
+     0.3927,
+     0.676
+    ],
+    "r@10": 0.6455,
+    "r@10_ci": [
+     0.553,
+     0.7416
+    ]
+   },
+   "fixed und direct bonus 0.5 penalty 0.0": {
+    "rr": 0.3767,
+    "rr_ci": [
+     0.2528,
+     0.5595
+    ],
+    "r@1": 0.26,
+    "r@1_ci": [
+     0.1225,
+     0.4663
+    ],
+    "r@3": 0.4108,
+    "r@3_ci": [
+     0.2593,
+     0.603
+    ],
+    "r@5": 0.52,
+    "r@5_ci": [
+     0.3914,
+     0.674
+    ],
+    "r@10": 0.6447,
+    "r@10_ci": [
+     0.5537,
+     0.7428
+    ]
+   },
+   "in-sample best ('dir', 'direct', 1.0, 0.5) (optimistic)": {
+    "rr": 0.3791,
+    "rr_ci": [
+     0.255,
+     0.5618
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1252,
+     0.4673
+    ],
+    "r@3": 0.4116,
+    "r@3_ci": [
+     0.2593,
+     0.6037
+    ],
+    "r@5": 0.5239,
+    "r@5_ci": [
+     0.3927,
+     0.676
+    ],
+    "r@10": 0.6455,
+    "r@10_ci": [
+     0.553,
+     0.7416
+    ]
+   }
+  },
+  "paired_vs_base": {
+   "nested direction-aware": {
+    "diff": 0.004,
+    "ci": [
+     -0.0007,
+     0.013
+    ],
+    "p_better": 0.936
+   },
+   "nested undirected target bonus (control)": {
+    "diff": 0.0001,
+    "ci": [
+     -0.0013,
+     0.0017
+    ],
+    "p_better": 0.597
+   },
+   "nested direction-aware, direct only": {
+    "diff": 0.004,
+    "ci": [
+     -0.0007,
+     0.013
+    ],
+    "p_better": 0.936
+   },
+   "fixed dir direct bonus 0.5 penalty 0.5": {
+    "diff": 0.0017,
+    "ci": [
+     -0.0002,
+     0.0051
+    ],
+    "p_better": 0.958
+   },
+   "fixed dir direct+pathway bonus 0.5 penalty 0.5": {
+    "diff": 0.0016,
+    "ci": [
+     -0.0007,
+     0.005
+    ],
+    "p_better": 0.907
+   },
+   "fixed dir direct bonus 1.0 penalty 1.0": {
+    "diff": 0.004,
+    "ci": [
+     -0.0007,
+     0.013
+    ],
+    "p_better": 0.936
+   },
+   "fixed dir direct bonus 0.0 penalty 1.0": {
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "p_better": 0.866
+   },
+   "fixed dir direct bonus 1.0 penalty 0.0": {
+    "diff": 0.004,
+    "ci": [
+     -0.0007,
+     0.013
+    ],
+    "p_better": 0.935
+   },
+   "fixed und direct bonus 0.5 penalty 0.0": {
+    "diff": 0.0015,
+    "ci": [
+     -0.0006,
+     0.0045
+    ],
+    "p_better": 0.918
+   },
+   "in-sample best ('dir', 'direct', 1.0, 0.5) (optimistic)": {
+    "diff": 0.004,
+    "ci": [
+     -0.0007,
+     0.013
+    ],
+    "p_better": 0.936
+   },
+   "nested direction-aware minus undirected control": {
+    "diff": 0.0038,
+    "ci": [
+     -0.0003,
+     0.012
+    ],
+    "p_better": 0.957
+   }
+  },
+  "coverage": {
+   "benchmark_drugs": 257,
+   "drugs_with_directed_chembl_action": 158,
+   "drugs_in_chembl_moa_at_all": 160,
+   "pool_diseases": 256,
+   "pool_diseases_with_directed_gene": 68,
+   "cases": 1300,
+   "cases_heldout_direct_nonzero": 8,
+   "cases_heldout_direct_match": 8,
+   "cases_heldout_direct_mismatch": 0,
+   "cases_heldout_path_nonzero": 17,
+   "cases_heldout_path_match": 16,
+   "cases_heldout_path_mismatch": 1,
+   "candidate_pairs_direct_nonzero_frac": 0.0001,
+   "candidate_pairs_direct_match_frac": 0.0001,
+   "candidate_pairs_direct_mismatch_frac": 0.0,
+   "cases_heldout_undirected_target_hit": 39
+  },
+  "nested_choices_direction": [
+   [
+    "dir",
+    "direct",
+    "1.0",
+    "0.5"
+   ],
+   [
+    "dir",
+    "direct",
+    "1.0",
+    "0.1"
+   ],
+   [
+    "dir",
+    "direct",
+    "1.0",
+    "0.5"
+   ],
+   [
+    "dir",
+    "direct",
+    "1.0",
+    "0.5"
+   ],
+   [
+    "dir",
+    "direct",
+    "1.0",
+    "0.5"
+   ]
+  ],
+  "nested_choices_undirected": [
+   [
+    "und",
+    "direct",
+    "0.5",
+    "0.0"
+   ],
+   [
+    "und",
+    "direct+pathway",
+    "0.1",
+    "0.0"
+   ],
+   [
+    "und",
+    "direct",
+    "0.5",
+    "0.0"
+   ],
+   [
+    "und",
+    "direct",
+    "0.5",
+    "0.0"
+   ],
+   [
+    "und",
+    "direct",
+    "0.5",
+    "0.0"
+   ]
+  ],
+  "contraindications": {
+   "fixed direct bonus 0.5 penalty 0.5": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4803,
+    "mean_shift_toward_bottom": 0.0,
+    "shift_ci": [
+     0.0,
+     0.0
+    ],
+    "pairs_with_direction_signal": 0,
+    "pairs_mismatch": 0,
+    "pairs_match": 0,
+    "shift_on_signal_pairs": null,
+    "before_on_signal_pairs": null,
+    "after_on_signal_pairs": null
+   },
+   "fixed direct+pathway bonus 0.5 penalty 0.5": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4788,
+    "mean_shift_toward_bottom": -0.0016,
+    "shift_ci": [
+     -0.0072,
+     0.0011
+    ],
+    "pairs_with_direction_signal": 2,
+    "pairs_mismatch": 0,
+    "pairs_match": 2,
+    "shift_on_signal_pairs": -0.4513,
+    "before_on_signal_pairs": 0.6083,
+    "after_on_signal_pairs": 0.157
+   },
+   "fixed direct bonus 1 penalty 1": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4803,
+    "mean_shift_toward_bottom": 0.0,
+    "shift_ci": [
+     0.0,
+     0.0
+    ],
+    "pairs_with_direction_signal": 0,
+    "pairs_mismatch": 0,
+    "pairs_match": 0,
+    "shift_on_signal_pairs": null,
+    "before_on_signal_pairs": null,
+    "after_on_signal_pairs": null
+   },
+   "refit ('dir', 'direct', 1.0, 0.5)": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4803,
+    "mean_shift_toward_bottom": 0.0,
+    "shift_ci": [
+     0.0,
+     0.0
+    ],
+    "pairs_with_direction_signal": 0,
+    "pairs_mismatch": 0,
+    "pairs_match": 0,
+    "shift_on_signal_pairs": null,
+    "before_on_signal_pairs": null,
+    "after_on_signal_pairs": null
+   },
+   "undirected target bonus 0.5 (control)": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4804,
+    "mean_shift_toward_bottom": 0.0001,
+    "shift_ci": [
+     0.0,
+     0.0003
+    ],
+    "pairs_with_direction_signal": 0,
+    "pairs_mismatch": 0,
+    "pairs_match": 0,
+    "shift_on_signal_pairs": null,
+    "before_on_signal_pairs": null,
+    "after_on_signal_pairs": null
+   }
+  },
+  "sign_agreement": {
+   "direct": {
+    "indications": {
+     "n": 1300,
+     "nonzero": 8,
+     "match": 8,
+     "mismatch": 0
+    },
+    "contraindications": {
+     "n": 417,
+     "nonzero": 0,
+     "match": 0,
+     "mismatch": 0
+    },
+    "all_drug_x_pool_pairs": {
+     "n": 65792,
+     "nonzero": 17,
+     "match": 15,
+     "mismatch": 2
+    }
+   },
+   "direct+pathway": {
+    "indications": {
+     "n": 1300,
+     "nonzero": 17,
+     "match": 16,
+     "mismatch": 1
+    },
+    "contraindications": {
+     "n": 417,
+     "nonzero": 2,
+     "match": 2,
+     "mismatch": 0
+    },
+    "all_drug_x_pool_pairs": {
+     "n": 65792,
+     "nonzero": 213,
+     "match": 117,
+     "mismatch": 96
+    }
+   }
+  },
+  "examples": {
+   "contraindication_pairs_with_signal": [],
+   "indications_scored_mismatch": [],
+   "indications_scored_match": [
+    {
+     "drug": "Testosterone",
+     "disease": "androgen insensitivity syndrome",
+     "basis": [
+      "AR LoF / drug increase"
+     ]
+    },
+    {
+     "drug": "Diazoxide",
+     "disease": "hyperinsulinemic hypoglycemia, familial",
+     "basis": [
+      "KCNJ11 LoF / drug increase"
+     ]
+    },
+    {
+     "drug": "Fluoxymesterone",
+     "disease": "androgen insensitivity syndrome",
+     "basis": [
+      "AR LoF / drug increase"
+     ]
+    },
+    {
+     "drug": "Testosterone propionate",
+     "disease": "androgen insensitivity syndrome",
+     "basis": [
+      "AR LoF / drug increase"
+     ]
+    },
+    {
+     "drug": "Migalastat",
+     "disease": "Fabry disease",
+     "basis": [
+      "GLA LoF / drug increase"
+     ]
+    },
+    {
+     "drug": "Ruxolitinib",
+     "disease": "acquired polycythemia vera",
+     "basis": [
+      "JAK2 GoF / drug decrease"
+     ]
+    },
+    {
+     "drug": "Testosterone cypionate",
+     "disease": "androgen insensitivity syndrome",
+     "basis": [
+      "AR LoF / drug increase"
+     ]
+    },
+    {
+     "drug": "Testosterone enanthate",
+     "disease": "androgen insensitivity syndrome",
+     "basis": [
+      "AR LoF / drug increase"
+     ]
+    }
+   ]
+  }
+ },
+ "primekg_gene_fallback_sensitivity": {
+  "results": {
+   "base (phen + 0.5 genes + 0.5 pathway)": {
+    "rr": 0.3752,
+    "rr_ci": [
+     0.2507,
+     0.5592
+    ],
+    "r@1": 0.26,
+    "r@1_ci": [
+     0.1217,
+     0.4651
+    ],
+    "r@3": 0.407,
+    "r@3_ci": [
+     0.2544,
+     0.5979
+    ],
+    "r@5": 0.52,
+    "r@5_ci": [
+     0.3902,
+     0.6732
+    ],
+    "r@10": 0.6416,
+    "r@10_ci": [
+     0.5481,
+     0.7392
+    ]
+   },
+   "nested direction-aware": {
+    "rr": 0.3774,
+    "rr_ci": [
+     0.2542,
+     0.5613
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1263,
+     0.4673
+    ],
+    "r@3": 0.4046,
+    "r@3_ci": [
+     0.2538,
+     0.6028
+    ],
+    "r@5": 0.5216,
+    "r@5_ci": [
+     0.3921,
+     0.6751
+    ],
+    "r@10": 0.6424,
+    "r@10_ci": [
+     0.5503,
+     0.741
+    ]
+   },
+   "nested undirected target bonus (control)": {
+    "rr": 0.3753,
+    "rr_ci": [
+     0.2512,
+     0.5576
+    ],
+    "r@1": 0.2585,
+    "r@1_ci": [
+     0.1214,
+     0.4626
+    ],
+    "r@3": 0.41,
+    "r@3_ci": [
+     0.2574,
+     0.6015
+    ],
+    "r@5": 0.5193,
+    "r@5_ci": [
+     0.3907,
+     0.6745
+    ],
+    "r@10": 0.6432,
+    "r@10_ci": [
+     0.5517,
+     0.7417
+    ]
+   },
+   "nested direction-aware, direct only": {
+    "rr": 0.3774,
+    "rr_ci": [
+     0.2542,
+     0.5613
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1263,
+     0.4673
+    ],
+    "r@3": 0.4046,
+    "r@3_ci": [
+     0.2538,
+     0.6028
+    ],
+    "r@5": 0.5216,
+    "r@5_ci": [
+     0.3921,
+     0.6751
+    ],
+    "r@10": 0.6424,
+    "r@10_ci": [
+     0.5503,
+     0.741
+    ]
+   },
+   "fixed dir direct bonus 0.5 penalty 0.5": {
+    "rr": 0.3767,
+    "rr_ci": [
+     0.2522,
+     0.5585
+    ],
+    "r@1": 0.2608,
+    "r@1_ci": [
+     0.1223,
+     0.4663
+    ],
+    "r@3": 0.4093,
+    "r@3_ci": [
+     0.257,
+     0.603
+    ],
+    "r@5": 0.5224,
+    "r@5_ci": [
+     0.3927,
+     0.676
+    ],
+    "r@10": 0.6439,
+    "r@10_ci": [
+     0.5529,
+     0.741
+    ]
+   },
+   "fixed dir direct+pathway bonus 0.5 penalty 0.5": {
+    "rr": 0.374,
+    "rr_ci": [
+     0.2501,
+     0.5563
+    ],
+    "r@1": 0.2585,
+    "r@1_ci": [
+     0.1214,
+     0.4644
+    ],
+    "r@3": 0.4046,
+    "r@3_ci": [
+     0.2525,
+     0.6016
+    ],
+    "r@5": 0.5247,
+    "r@5_ci": [
+     0.4027,
+     0.6746
+    ],
+    "r@10": 0.6332,
+    "r@10_ci": [
+     0.5414,
+     0.7377
+    ]
+   },
+   "fixed dir direct bonus 1.0 penalty 1.0": {
+    "rr": 0.3774,
+    "rr_ci": [
+     0.2542,
+     0.5613
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1263,
+     0.4673
+    ],
+    "r@3": 0.4046,
+    "r@3_ci": [
+     0.2538,
+     0.6028
+    ],
+    "r@5": 0.5216,
+    "r@5_ci": [
+     0.3921,
+     0.6751
+    ],
+    "r@10": 0.6424,
+    "r@10_ci": [
+     0.5503,
+     0.741
+    ]
+   },
+   "fixed dir direct bonus 0.0 penalty 1.0": {
+    "rr": 0.3752,
+    "rr_ci": [
+     0.2507,
+     0.5592
+    ],
+    "r@1": 0.26,
+    "r@1_ci": [
+     0.1217,
+     0.4651
+    ],
+    "r@3": 0.407,
+    "r@3_ci": [
+     0.2544,
+     0.5979
+    ],
+    "r@5": 0.52,
+    "r@5_ci": [
+     0.3902,
+     0.6732
+    ],
+    "r@10": 0.6416,
+    "r@10_ci": [
+     0.5481,
+     0.7392
+    ]
+   },
+   "fixed dir direct bonus 1.0 penalty 0.0": {
+    "rr": 0.3774,
+    "rr_ci": [
+     0.2542,
+     0.5613
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1263,
+     0.4673
+    ],
+    "r@3": 0.4046,
+    "r@3_ci": [
+     0.2538,
+     0.6028
+    ],
+    "r@5": 0.5216,
+    "r@5_ci": [
+     0.3921,
+     0.6751
+    ],
+    "r@10": 0.6424,
+    "r@10_ci": [
+     0.5503,
+     0.741
+    ]
+   },
+   "fixed und direct bonus 0.5 penalty 0.0": {
+    "rr": 0.3767,
+    "rr_ci": [
+     0.2528,
+     0.5595
+    ],
+    "r@1": 0.26,
+    "r@1_ci": [
+     0.1225,
+     0.4663
+    ],
+    "r@3": 0.4108,
+    "r@3_ci": [
+     0.2593,
+     0.603
+    ],
+    "r@5": 0.52,
+    "r@5_ci": [
+     0.3914,
+     0.674
+    ],
+    "r@10": 0.6447,
+    "r@10_ci": [
+     0.5537,
+     0.7428
+    ]
+   },
+   "in-sample best ('dir', 'direct', 1.0, 0.5) (optimistic)": {
+    "rr": 0.3774,
+    "rr_ci": [
+     0.2542,
+     0.5613
+    ],
+    "r@1": 0.2639,
+    "r@1_ci": [
+     0.1263,
+     0.4673
+    ],
+    "r@3": 0.4046,
+    "r@3_ci": [
+     0.2538,
+     0.6028
+    ],
+    "r@5": 0.5216,
+    "r@5_ci": [
+     0.3921,
+     0.6751
+    ],
+    "r@10": 0.6424,
+    "r@10_ci": [
+     0.5503,
+     0.741
+    ]
+   }
+  },
+  "paired_vs_base": {
+   "nested direction-aware": {
+    "diff": 0.0022,
+    "ci": [
+     -0.0033,
+     0.0119
+    ],
+    "p_better": 0.733
+   },
+   "nested undirected target bonus (control)": {
+    "diff": 0.0001,
+    "ci": [
+     -0.0013,
+     0.0017
+    ],
+    "p_better": 0.597
+   },
+   "nested direction-aware, direct only": {
+    "diff": 0.0022,
+    "ci": [
+     -0.0033,
+     0.0119
+    ],
+    "p_better": 0.733
+   },
+   "fixed dir direct bonus 0.5 penalty 0.5": {
+    "diff": 0.0015,
+    "ci": [
+     -0.0007,
+     0.0054
+    ],
+    "p_better": 0.881
+   },
+   "fixed dir direct+pathway bonus 0.5 penalty 0.5": {
+    "diff": -0.0011,
+    "ci": [
+     -0.0047,
+     0.0037
+    ],
+    "p_better": 0.295
+   },
+   "fixed dir direct bonus 1.0 penalty 1.0": {
+    "diff": 0.0022,
+    "ci": [
+     -0.0033,
+     0.0119
+    ],
+    "p_better": 0.733
+   },
+   "fixed dir direct bonus 0.0 penalty 1.0": {
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "p_better": 0.866
+   },
+   "fixed dir direct bonus 1.0 penalty 0.0": {
+    "diff": 0.0022,
+    "ci": [
+     -0.0033,
+     0.0119
+    ],
+    "p_better": 0.733
+   },
+   "fixed und direct bonus 0.5 penalty 0.0": {
+    "diff": 0.0015,
+    "ci": [
+     -0.0006,
+     0.0045
+    ],
+    "p_better": 0.918
+   },
+   "in-sample best ('dir', 'direct', 1.0, 0.5) (optimistic)": {
+    "diff": 0.0022,
+    "ci": [
+     -0.0033,
+     0.0119
+    ],
+    "p_better": 0.733
+   },
+   "nested direction-aware minus undirected control": {
+    "diff": 0.0021,
+    "ci": [
+     -0.0034,
+     0.0115
+    ],
+    "p_better": 0.727
+   }
+  },
+  "coverage": {
+   "benchmark_drugs": 257,
+   "drugs_with_directed_chembl_action": 158,
+   "drugs_in_chembl_moa_at_all": 160,
+   "pool_diseases": 256,
+   "pool_diseases_with_directed_gene": 167,
+   "cases": 1300,
+   "cases_heldout_direct_nonzero": 13,
+   "cases_heldout_direct_match": 12,
+   "cases_heldout_direct_mismatch": 1,
+   "cases_heldout_path_nonzero": 42,
+   "cases_heldout_path_match": 28,
+   "cases_heldout_path_mismatch": 14,
+   "candidate_pairs_direct_nonzero_frac": 0.0006,
+   "candidate_pairs_direct_match_frac": 0.0006,
+   "candidate_pairs_direct_mismatch_frac": 0.0001,
+   "cases_heldout_undirected_target_hit": 39
+  },
+  "contraindications": {
+   "fixed direct bonus 0.5 penalty 0.5": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4803,
+    "mean_shift_toward_bottom": 0.0,
+    "shift_ci": [
+     0.0,
+     0.0
+    ],
+    "pairs_with_direction_signal": 0,
+    "pairs_mismatch": 0,
+    "pairs_match": 0,
+    "shift_on_signal_pairs": null,
+    "before_on_signal_pairs": null,
+    "after_on_signal_pairs": null
+   },
+   "fixed direct+pathway bonus 0.5 penalty 0.5": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.479,
+    "mean_shift_toward_bottom": -0.0013,
+    "shift_ci": [
+     -0.0101,
+     0.0048
+    ],
+    "pairs_with_direction_signal": 8,
+    "pairs_mismatch": 0,
+    "pairs_match": 8,
+    "shift_on_signal_pairs": -0.2647,
+    "before_on_signal_pairs": 0.3804,
+    "after_on_signal_pairs": 0.1156
+   },
+   "fixed direct bonus 1 penalty 1": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4803,
+    "mean_shift_toward_bottom": 0.0,
+    "shift_ci": [
+     0.0,
+     0.0
+    ],
+    "pairs_with_direction_signal": 0,
+    "pairs_mismatch": 0,
+    "pairs_match": 0,
+    "shift_on_signal_pairs": null,
+    "before_on_signal_pairs": null,
+    "after_on_signal_pairs": null
+   },
+   "refit ('dir', 'direct', 1.0, 0.5)": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4803,
+    "mean_shift_toward_bottom": 0.0,
+    "shift_ci": [
+     0.0,
+     0.0
+    ],
+    "pairs_with_direction_signal": 0,
+    "pairs_mismatch": 0,
+    "pairs_match": 0,
+    "shift_on_signal_pairs": null,
+    "before_on_signal_pairs": null,
+    "after_on_signal_pairs": null
+   },
+   "undirected target bonus 0.5 (control)": {
+    "n_pairs": 417,
+    "mean_percentile_before": 0.4803,
+    "mean_percentile_after": 0.4804,
+    "mean_shift_toward_bottom": 0.0001,
+    "shift_ci": [
+     0.0,
+     0.0003
+    ],
+    "pairs_with_direction_signal": 0,
+    "pairs_mismatch": 0,
+    "pairs_match": 0,
+    "shift_on_signal_pairs": null,
+    "before_on_signal_pairs": null,
+    "after_on_signal_pairs": null
+   }
+  },
+  "sign_agreement": {
+   "direct": {
+    "indications": {
+     "n": 1300,
+     "nonzero": 13,
+     "match": 12,
+     "mismatch": 1
+    },
+    "contraindications": {
+     "n": 417,
+     "nonzero": 0,
+     "match": 0,
+     "mismatch": 0
+    },
+    "all_drug_x_pool_pairs": {
+     "n": 65792,
+     "nonzero": 55,
+     "match": 49,
+     "mismatch": 6
+    }
+   },
+   "direct+pathway": {
+    "indications": {
+     "n": 1300,
+     "nonzero": 42,
+     "match": 28,
+     "mismatch": 14
+    },
+    "contraindications": {
+     "n": 417,
+     "nonzero": 8,
+     "match": 8,
+     "mismatch": 0
+    },
+    "all_drug_x_pool_pairs": {
+     "n": 65792,
+     "nonzero": 802,
+     "match": 521,
+     "mismatch": 281
+    }
+   }
+  }
+ },
+ "atlas": {
+  "n_cases": 56,
+  "coverage": {
+   "diseases": 45,
+   "diseases_by_direction": {
+    "LoF": 30,
+    "GoF": 9,
+    "mixed": 6,
+    "null": 0
+   },
+   "therapy_classes_with_direction": 35,
+   "therapy_classes": 43,
+   "cases_heldout_nonzero": 22,
+   "cases_heldout_match": 21,
+   "cases_heldout_mismatch": 1,
+   "cases_heldout_gene_is_listed_target": 32
+  },
+  "benchmark": {
+   "pheno+mech (production, eval.md d)": {
+    "n": 56,
+    "recall@1": 0.2934,
+    "recall@3": 0.6015,
+    "recall@5": 0.7311,
+    "mrr": 0.4912,
+    "median_rank": 3.75,
+    "mean_candidates": 42.9107
+   },
+   "pheno+mech+direction 0.5/0.5": {
+    "n": 56,
+    "recall@1": 0.565,
+    "recall@3": 0.7916,
+    "recall@5": 0.8574,
+    "mrr": 0.696,
+    "median_rank": 1.0,
+    "mean_candidates": 42.9107
+   },
+   "pheno+mech+direction 1/1": {
+    "n": 56,
+    "recall@1": 0.565,
+    "recall@3": 0.7916,
+    "recall@5": 0.8574,
+    "mrr": 0.696,
+    "median_rank": 1.0,
+    "mean_candidates": 42.9107
+   },
+   "pheno+mech+direction 0.25/0.25": {
+    "n": 56,
+    "recall@1": 0.565,
+    "recall@3": 0.7916,
+    "recall@5": 0.8574,
+    "mrr": 0.696,
+    "median_rank": 1.0,
+    "mean_candidates": 42.9107
+   },
+   "pheno+mech+direction penalty only 0.5": {
+    "n": 56,
+    "recall@1": 0.2934,
+    "recall@3": 0.6015,
+    "recall@5": 0.7311,
+    "mrr": 0.4912,
+    "median_rank": 3.75,
+    "mean_candidates": 42.9107
+   },
+   "pheno+mech+UNDIRECTED target-gene bonus 0.5 (leakage control)": {
+    "n": 56,
+    "recall@1": 0.6299,
+    "recall@3": 0.8432,
+    "recall@5": 0.8957,
+    "mrr": 0.7502,
+    "median_rank": 1.0,
+    "mean_candidates": 42.9107
+   }
+  },
+  "contested_pairs": [
+   {
+    "therapy": "therapy:cannabidiol",
+    "disease": "disease:SCN1A",
+    "drug_direction": "decrease",
+    "drug_targets": [
+     "CNR1"
+    ],
+    "gene_level_direction": "LoF",
+    "gene_level_compat": 0,
+    "subtype_compat": [],
+    "explanation": "FDA-labelled for seizures in Dravet syndrome (syndrome-level indication).",
+    "counter_evidence": [
+     "PMID:28538134"
+    ]
+   },
+   {
+    "therapy": "therapy:kcnt1-aso",
+    "disease": "disease:KCNT1",
+    "drug_direction": "decrease",
+    "drug_targets": [
+     "KCNT1"
+    ],
+    "gene_level_direction": "GoF",
+    "gene_level_compat": 1,
+    "subtype_compat": [
+     [
+      "missense",
+      "GoF",
+      1
+     ],
+     [
+      "splice",
+      "LoF",
+      -1
+     ],
+     [
+      "truncating",
+      "LoF",
+      -1
+     ]
+    ],
+    "explanation": "Mouse proof of concept and two treated infants; both infants developed ventricular enlargement or hydrocephalus.",
+    "counter_evidence": [
+     "PMID:41981306"
+    ]
+   },
+   {
+    "therapy": "therapy:kv7-openers",
+    "disease": "disease:KCNQ2",
+    "drug_direction": "increase",
+    "drug_targets": [
+     "KCNQ2"
+    ],
+    "gene_level_direction": "LoF",
+    "gene_level_compat": 1,
+    "subtype_compat": [
+     [
+      "missense-gof",
+      "GoF",
+      -1
+     ],
+     [
+      "missense-lof",
+      "LoF",
+      1
+     ],
+     [
+      "splice",
+      "LoF",
+      1
+     ],
+     [
+      "truncating",
+      "LoF",
+      1
+     ],
+     [
+      "whole-gene-deletion",
+      "LoF",
+      1
+     ]
+    ],
+    "explanation": "Retrospective support in loss-of-function KCNQ2; the phase 3 trial was terminated by the sponsor and excluded gain-of-function variants.",
+    "counter_evidence": [
+     "NCT04639310",
+     "NCT04639310",
+     "PMID:28139826"
+    ]
+   },
+   {
+    "therapy": "therapy:nbi-921352",
+    "disease": "disease:SCN8A",
+    "drug_direction": null,
+    "drug_targets": [],
+    "gene_level_direction": "mixed",
+    "gene_level_compat": 0,
+    "subtype_compat": [],
+    "explanation": "Phase 2 in SCN8A-DEE, terminated by sponsor decision.",
+    "counter_evidence": [
+     "NCT04873869"
+    ]
+   },
+   {
+    "therapy": "therapy:quinidine",
+    "disease": "disease:KCNT1",
+    "drug_direction": "decrease",
+    "drug_targets": [
+     "KCNT1"
+    ],
+    "gene_level_direction": "GoF",
+    "gene_level_compat": 1,
+    "subtype_compat": [
+     [
+      "missense",
+      "GoF",
+      1
+     ],
+     [
+      "splice",
+      "LoF",
+      -1
+     ],
+     [
+      "truncating",
+      "LoF",
+      -1
+     ]
+    ],
+    "explanation": "Case reports describe seizure reduction; a small randomized crossover trial in ADNFLE found no efficacy and cardiac side effects.",
+    "counter_evidence": [
+     "PMID:29196578",
+     "PMID:29196578",
+     "PMID:26369628"
+    ]
+   },
+   {
+    "therapy": "therapy:relutrigine",
+    "disease": "disease:SCN2A",
+    "drug_direction": null,
+    "drug_targets": [],
+    "gene_level_direction": "mixed",
+    "gene_level_compat": 0,
+    "subtype_compat": [],
+    "explanation": "Trial enrols early-onset SCN2A; loss-of-function variants are an exclusion criterion.",
+    "counter_evidence": [
+     "NCT05818553"
+    ]
+   },
+   {
+    "therapy": "therapy:relutrigine",
+    "disease": "disease:SCN8A",
+    "drug_direction": null,
+    "drug_targets": [],
+    "gene_level_direction": "mixed",
+    "gene_level_compat": 0,
+    "subtype_compat": [],
+    "explanation": "Same trial enrols SCN8A-DEE; loss-of-function variants are an exclusion criterion.",
+    "counter_evidence": [
+     "NCT05818553"
+    ]
+   },
+   {
+    "therapy": "therapy:sodium-channel-blockers",
+    "disease": "disease:KCNQ2",
+    "drug_direction": "decrease",
+    "drug_targets": [
+     "SCN1A",
+     "SCN2A",
+     "SCN8A"
+    ],
+    "gene_level_direction": "LoF",
+    "gene_level_compat": 0,
+    "subtype_compat": [],
+    "explanation": "Reported most effective in KCNQ2 loss-of-function groups, although KCNQ2 is a potassium channel.",
+    "counter_evidence": [
+     "PMID:42610455"
+    ]
+   },
+   {
+    "therapy": "therapy:sodium-channel-blockers",
+    "disease": "disease:SCN1A",
+    "drug_direction": "decrease",
+    "drug_targets": [
+     "SCN1A",
+     "SCN2A",
+     "SCN8A"
+    ],
+    "gene_level_direction": "LoF",
+    "gene_level_compat": -1,
+    "subtype_compat": [
+     [
+      "missense-gof",
+      "GoF",
+      1
+     ],
+     [
+      "splice",
+      "LoF",
+      -1
+     ],
+     [
+      "truncating",
+      "LoF",
+      -1
+     ],
+     [
+      "whole-gene-deletion",
+      "LoF",
+      -1
+     ]
+    ],
+    "explanation": "Supporting evidence concerns rare SCN1A gain-of-function variants; the counter-evidence concerns loss-of-function Dravet syndrome.",
+    "counter_evidence": [
+     "PMID:9596203",
+     "PMID:36314457",
+     "PMID:41515912"
+    ]
+   },
+   {
+    "therapy": "therapy:sodium-channel-blockers",
+    "disease": "disease:SCN2A",
+    "drug_direction": "decrease",
+    "drug_targets": [
+     "SCN1A",
+     "SCN2A",
+     "SCN8A"
+    ],
+    "gene_level_direction": "mixed",
+    "gene_level_compat": 0,
+    "subtype_compat": [
+     [
+      "missense-gof",
+      "GoF",
+      1
+     ],
+     [
+      "missense-lof",
+      "LoF",
+      -1
+     ],
+     [
+      "splice",
+      "LoF",
+      -1
+     ],
+     [
+      "truncating",
+      "LoF",
+      -1
+     ],
+     [
+      "whole-gene-deletion",
+      "LoF",
+      -1
+     ]
+    ],
+    "explanation": "Source reports response in early-onset (gain-of-function) cases and rare effectiveness with occasional worsening in later-onset (loss-of-function) cases.",
+    "counter_evidence": [
+     "PMID:28379373"
+    ]
+   },
+   {
+    "therapy": "therapy:sodium-channel-blockers",
+    "disease": "disease:SCN8A",
+    "drug_direction": "decrease",
+    "drug_targets": [
+     "SCN1A",
+     "SCN2A",
+     "SCN8A"
+    ],
+    "gene_level_direction": "mixed",
+    "gene_level_compat": 0,
+    "subtype_compat": [
+     [
+      "missense-gof",
+      "GoF",
+      1
+     ],
+     [
+      "missense-lof",
+      "LoF",
+      -1
+     ],
+     [
+      "splice",
+      "LoF",
+      -1
+     ],
+     [
+      "truncating",
+      "LoF",
+      -1
+     ],
+     [
+      "whole-gene-deletion",
+      "LoF",
+      -1
+     ]
+    ],
+    "explanation": "Source reports better response in gain-of-function carriers; a review states the class is contraindicated in loss-of-function cases.",
+    "counter_evidence": [
+     "PMID:41515912"
+    ]
+   },
+   {
+    "therapy": "therapy:stiripentol",
+    "disease": "disease:SCN1A",
+    "drug_direction": null,
+    "drug_targets": [],
+    "gene_level_direction": "LoF",
+    "gene_level_compat": 0,
+    "subtype_compat": [],
+    "explanation": "FDA-labelled for seizures in Dravet syndrome with clobazam; the label states no data support monotherapy.",
+    "counter_evidence": [
+     "FDA-label:DIACOMIT"
+    ]
+   },
+   {
+    "therapy": "therapy:zorevunersen",
+    "disease": "disease:SCN1A",
+    "drug_direction": "increase",
+    "drug_targets": [
+     "SCN1A"
+    ],
+    "gene_level_direction": "LoF",
+    "gene_level_compat": 1,
+    "subtype_compat": [
+     [
+      "missense-gof",
+      "GoF",
+      -1
+     ],
+     [
+      "splice",
+      "LoF",
+      1
+     ],
+     [
+      "truncating",
+      "LoF",
+      1
+     ],
+     [
+      "whole-gene-deletion",
+      "LoF",
+      1
+     ]
+    ],
+    "explanation": "Phase 1/2a data and a recruiting phase 3; the phase 3 record lists SCN1A gain-of-function variants as an exclusion.",
+    "counter_evidence": [
+     "NCT06872125"
+    ]
+   }
+  ],
+  "automated_sodium_channel_disease_directions": [
+   {
+    "mondo": "MONDO:0011461",
+    "name": "generalized epilepsy with febrile seizures plus, type 2",
+    "gene": "SCN1A",
+    "direction": "LoF",
+    "lof": 1.2,
+    "gof": 0.0,
+    "basis": [
+     "G2P: loss of function",
+     "ClinGen dosage: Sufficient Evidence for Haploinsufficiency",
+     "gnomAD v4.1: LOEUF 0.10 < 0.35 (weak)"
+    ]
+   },
+   {
+    "mondo": "MONDO:0012320",
+    "name": "migraine, familial hemiplegic, 3",
+    "gene": "SCN1A",
+    "direction": null,
+    "lof": 0.6,
+    "gof": 0.0,
+    "basis": [
+     "ClinGen dosage: Sufficient Evidence for Haploinsufficiency",
+     "gnomAD v4.1: LOEUF 0.10 < 0.35 (weak)"
+    ]
+   },
+   {
+    "mondo": "MONDO:0030268",
+    "name": "developmental and epileptic encephalopathy 6B",
+    "gene": "SCN1A",
+    "direction": null,
+    "lof": 0.6,
+    "gof": 0.0,
+    "basis": [
+     "ClinGen dosage: Sufficient Evidence for Haploinsufficiency",
+     "gnomAD v4.1: LOEUF 0.10 < 0.35 (weak)"
+    ]
+   },
+   {
+    "mondo": "MONDO:0100079",
+    "name": "developmental and epileptic encephalopathy, 6A",
+    "gene": "SCN1A",
+    "direction": "LoF",
+    "lof": 0.8,
+    "gof": 0.0,
+    "basis": [
+     "ClinGen dosage: Sufficient Evidence for Haploinsufficiency",
+     "gnomAD v4.1: LOEUF 0.10 < 0.35 (weak)"
+    ]
+   },
+   {
+    "mondo": "MONDO:0011904",
+    "name": "seizures, benign familial infantile, 3",
+    "gene": "SCN2A",
+    "direction": null,
+    "lof": 0.6,
+    "gof": 0.0,
+    "basis": [
+     "ClinGen dosage: Sufficient Evidence for Haploinsufficiency",
+     "gnomAD v4.1: LOEUF 0.16 < 0.35 (weak)"
+    ]
+   },
+   {
+    "mondo": "MONDO:0013388",
+    "name": "developmental and epileptic encephalopathy, 11",
+    "gene": "SCN2A",
+    "direction": null,
+    "lof": 0.6,
+    "gof": 0.0,
+    "basis": [
+     "ClinGen dosage: Sufficient Evidence for Haploinsufficiency",
+     "gnomAD v4.1: LOEUF 0.16 < 0.35 (weak)"
+    ]
+   },
+   {
+    "mondo": "MONDO:0030064",
+    "name": "episodic ataxia, type 9",
+    "gene": "SCN2A",
+    "direction": null,
+    "lof": 0.6,
+    "gof": 0.0,
+    "basis": [
+     "ClinGen dosage: Sufficient Evidence for Haploinsufficiency",
+     "gnomAD v4.1: LOEUF 0.16 < 0.35 (weak)"
+    ]
+   },
+   {
+    "mondo": "MONDO:0100038",
+    "name": "complex neurodevelopmental disorder",
+    "gene": "SCN2A",
+    "direction": "LoF",
+    "lof": 0.8,
+    "gof": 0.0,
+    "basis": [
+     "ClinGen dosage: Sufficient Evidence for Haploinsufficiency",
+     "gnomAD v4.1: LOEUF 0.16 < 0.35 (weak)"
+    ]
+   },
+   {
+    "mondo": "MONDO:0013801",
+    "name": "developmental and epileptic encephalopathy, 13",
+    "gene": "SCN8A",
+    "direction": "mixed",
+    "lof": 0.8,
+    "gof": 0.8,
+    "basis": [
+     "G2P: dominant negative",
+     "DisMech: SCN8A Gain-of-Function Variant (Nav1.6)",
+     "gnomAD v4.1: LOEUF 0.19 < 0.35 (weak)"
+    ]
+   }
+  ],
+  "chembl_sodium_channel_blockers": {
+   "TOPIRAMATE": [
+    [
+     "ANTAGONIST",
+     "GRIA1,GRIA2,GRIA3,GRIA4"
+    ],
+    [
+     "ANTAGONIST",
+     "GRIK1,GRIK2,GRIK3,GRIK4,GRIK5"
+    ],
+    [
+     "BLOCKER",
+     "SCN10A,SCN11A,SCN1A,SCN2A,SCN3A,SCN4A"
+    ],
+    [
+     "INHIBITOR",
+     "CA2"
+    ],
+    [
+     "INHIBITOR",
+     "CA4"
+    ],
+    [
+     "POSITIVE MODULATOR",
+     "GABRA1,GABRA2,GABRA3,GABRA4,GABRA5,GABRA6"
+    ]
+   ],
+   "PHENYTOIN": [
+    [
+     "BLOCKER",
+     "SCN10A,SCN11A,SCN1A,SCN2A,SCN3A,SCN4A"
+    ]
+   ],
+   "CARBAMAZEPINE": [
+    [
+     "BLOCKER",
+     "SCN10A,SCN11A,SCN1A,SCN2A,SCN3A,SCN4A"
+    ]
+   ],
+   "LACOSAMIDE": [
+    [
+     "BLOCKER",
+     "SCN10A,SCN11A,SCN1A,SCN2A,SCN3A,SCN4A"
+    ]
+   ],
+   "RUFINAMIDE": [
+    [
+     "BLOCKER",
+     "SCN10A,SCN11A,SCN1A,SCN2A,SCN3A,SCN4A"
+    ]
+   ],
+   "OXCARBAZEPINE": [
+    [
+     "BLOCKER",
+     "SCN10A,SCN11A,SCN1A,SCN2A,SCN3A,SCN4A"
+    ]
+   ],
+   "LAMOTRIGINE": [
+    [
+     "BLOCKER",
+     "SCN10A,SCN11A,SCN1A,SCN2A,SCN3A,SCN4A"
+    ]
+   ],
+   "ZONISAMIDE": [
+    [
+     "BLOCKER",
+     "SCN10A,SCN11A,SCN1A,SCN2A,SCN3A,SCN4A"
+    ]
+   ]
+  }
+ },
+ "runtime_s": 1.2
+}
