@@ -108,6 +108,7 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
   git ls-files | xargs grep -lE "sk-[A-Za-z0-9_-]{20,}|sk-proj-|Bearer [A-Za-z0-9._-]{24,}|eyJ[A-Za-z0-9_-]{30,}\.|gho_[A-Za-z0-9]{20,}"
   ```
   Also check that no personal emails are committed.
+  Known hits on 2026-10-04: org slugs ending in "sk-" (e.g. "cystisk-fibros"), DisMech text, and this file itself are false positives. `data/raw/testing/fedreg_clia_hipaa_2014.html` holds a federalregister.gov sign-in JWT from the saved page: strip it before making the repo public.
 
 ## People and credit
 
