@@ -24,11 +24,25 @@ Two filters stop nonsense:
 """
 from __future__ import annotations
 
+import importlib.util
+import re
 from collections import defaultdict
 
-from dcommon import CURATED, DERIVED, TODAY, Graph, pub_evidence, read_json, write_json
+from dcommon import CURATED, DERIVED, ROOT, TODAY, Graph, pub_evidence, read_json, write_json
 
-MAX_HYPOTHESES = 6
+MAX_HYPOTHESES = 10      # across all four families
+PER_CLASS = 2            # no single therapy class may fill the list
+PER_DISEASE = 2          # ... and no single disease
+FAILED_CONF = 0.5        # a therapy whose every developed_for edge is contested below this failed where it was tried
+MAX_RANK = 5             # a candidate must rank in the top 5 of its therapy's ranking
+LEAD_DEPTH = 8           # how deep each therapy's ranking is read for leads in opportunities.json
+RANK_CONF = {1: 0.2, 2: 0.17, 3: 0.15, 4: 0.13, 5: 0.12}
+# "specific mechanism" = not a generic effect and reached by at most MAX_SPECIFIC_DF of the 45 diseases
+GENERIC_MECH = {"mech:loss-of-function", "mech:haploinsufficiency", "mech:gain-of-function",
+                "mech:dominant-negative", "mech:lysosomal-storage"}
+MAX_SPECIFIC_DF = 10
+NOT_TRANSFERABLE_MODALITIES = {"gene_replacement", "aso", "gene_editing"}
+PROTEIN_SPECIFIC = re.compile(r"enzyme replacement|\balfa\b|pharmacological chaperone|structure-based", re.I)
 CHAIN_WEIGHT = {"driven_by": 1.0, "variant_group": 0.8, "pathway": 0.45, "cluster": 0.4}
 CHAIN_CONF = {"driven_by": 0.22, "variant_group": 0.18, "pathway": 0.14, "cluster": 0.12}
 
@@ -267,6 +281,14 @@ DETAIL = {
 # mechanism argument does not survive a human read. They are reported in opportunities.json, with
 # the reason, instead of being emitted as hypotheses.
 REJECT_ON_REVIEW = {
+    ("therapy:quinidine", "disease:KCNQ2"):
+        "Direction is backwards: quinidine is a potassium-channel blocker tried in KCNT1 gain-of-function epilepsy, "
+        "while KCNQ2 encephalopathy is driven by reduced Kv7 current (disease:KCNQ2|driven_by|mech:dominant-negative "
+        "is the supported edge). The shared node 'potassium channel activity' does not encode direction.",
+    ("therapy:kv7-openers", "disease:KCNT1"):
+        "Direction is backwards: Kv7 openers increase potassium current and were studied in loss-of-function "
+        "KCNQ2, while KCNT1-related epilepsy is driven by gain of function (disease:KCNT1|driven_by|"
+        "mech:gain-of-function). The shared node 'potassium channel activity' does not encode direction.",
     ("class:ache-inhibitors", "disease:SYT1"):
         "Tissue is wrong and the chain is pathway-only: SYT2, not SYT1, is the neuromuscular-junction isoform, and "
         "no neuromuscular transmission defect is reported in SYT1-related disorder. Kept visible as the worked "
@@ -332,145 +354,186 @@ def main():
             for c in classes:
                 tested_in[c].add((se["target"], s))
 
-    # ---- candidate search
-    candidates, rejected, approach_transfer = [], [], []
-    for te in g.edges_of("targets"):
-        t, mech = te["source"], te["target"]
-        tnode = g.nodes[t]
-        modality = tnode.get("attrs", {}).get("modality")
-        cid = klass(t)
-        for (d, m), chs in chains.items():
-            if m != mech or g.nodes[d]["type"] != "disease":
-                continue
-            best = max(chs, key=lambda c: CHAIN_WEIGHT[c["kind"]])
-            rec = {"therapy": t, "therapy_class": cid, "therapy_label": tnode["label"], "modality": modality,
-                   "disease": d, "disease_label": g.nodes[d]["label"], "mechanism": m,
-                   "mechanism_label": g.nodes[m]["label"], "chain_kind": best["kind"],
-                   "chain_edges": [te["id"]] + best["edges"],
-                   "chain_confidences": [round(g.edges[x]["confidence"], 2) for x in [te["id"]] + best["edges"]],
-                   "chain_contested": [x for x in [te["id"]] + best["edges"] if g.edges[x]["status"] == "contested"]}
-            trials = sorted(s for dd, s in tested_in[cid] if dd == d)
-            if d in developed[cid]:
-                rejected.append(dict(rec, reason="already developed_for (same therapy class)",
-                                     evidence_edge=sorted(e["id"] for e in g.edges_of("developed_for", target=d)
-                                                          if klass(e["source"]) == cid),
-                                     also_tested_in_studies=trials,
-                                     study_eligibility_notes=[g.nodes[s].get("attrs", {}).get("eligibility_note")
-                                                              for s in trials]))
-                continue
-            if trials:
-                rejected.append(dict(rec, reason="a study already tests this therapy class in this disease",
-                                     evidence_study=trials,
-                                     note=g.nodes[trials[0]].get("attrs", {}).get("eligibility_note")))
-                continue
-            if modality not in TRANSFERABLE_MODALITIES:
-                approach_transfer.append(dict(rec, reason=NOT_TRANSFERABLE_REASON.get(modality, "gene-specific product"),
-                                              target_genes=tnode.get("attrs", {}).get("target_genes")))
-                continue
-            candidates.append(rec)
+    # ---- candidate search: the benchmark's best honest scorer (docs/agent-reports/eval.md):
+    # TransferIndex.rank_candidates(..., scorer="pheno+mech") from pipeline/eval/transfer_score.py.
+    # Known diseases (developed_for, or a study that tests the class and studies the disease) are
+    # excluded by the scorer itself, over therapy classes. Gates below are filters, never rankers.
+    spec = importlib.util.spec_from_file_location("transfer_score", ROOT / "pipeline" / "eval" / "transfer_score.py")
+    ts = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ts)
+    tidx = ts.TransferIndex(ts.load_graph())
+    family = {d: (g.nodes[d].get("attrs") or {}).get("family") or "snare"
+              for d in g.nodes if g.nodes[d]["type"] == "disease"}
 
-    # ---- cluster chain: a curated cluster already places this therapy and this disease together.
-    # Needed because no driven_by edge points at a GO process, so UNC13A (linked to vesicle priming,
-    # not to Ca2+-triggered exocytosis) reaches the presynaptic drugs only through the curated
-    # cluster that groups them.
-    for cl in g.clusters:
-        ts = [m for m in cl["members"] if g.nodes.get(m, {}).get("type") == "therapy"]
-        ds = [m for m in cl["members"] if g.nodes.get(m, {}).get("type") == "disease"]
-        for t in ts:
-            cid = klass(t)
-            tnode = g.nodes[t]
-            modality = tnode.get("attrs", {}).get("modality")
-            targets = [e["id"] for e in g.edges_of("targets", source=t)]
-            for d in ds:
-                if d in developed[cid] or any(dd == d for dd, _s in tested_in[cid]):
-                    continue
-                if modality not in TRANSFERABLE_MODALITIES:
-                    continue
-                own = sorted((e for e in g.edges_of("driven_by", source=d)),
-                             key=lambda e: -e["confidence"])
-                chain = targets + [x for x in cl.get("edge_ids", []) if t in x] + \
-                        ([own[0]["id"]] if own else [])
-                candidates.append({
-                    "therapy": t, "therapy_class": cid, "therapy_label": tnode["label"], "modality": modality,
-                    "disease": d, "disease_label": g.nodes[d]["label"],
-                    "mechanism": cl["id"], "mechanism_label": cl["label"], "chain_kind": "cluster",
-                    "cluster": cl["id"], "chain_edges": chain,
-                    "chain_confidences": [round(g.edges[x]["confidence"], 2) for x in chain],
-                    "chain_contested": [x for x in chain if g.edges[x]["status"] == "contested"]})
+    def detail_key(cls):
+        return THERAPY_CLASS_ID.get(cls, cls)
 
-    # collapse to one row per (therapy class, disease), keeping the strongest chain
-    by_key = {}
+    def rep_of(cls):
+        mem = sorted(tidx.members[cls], key=lambda m: (-len(g.edges_of("developed_for", source=m)), m))
+        with_t = [m for m in mem if g.edges_of("targets", source=m)]
+        return (with_t or mem)[0]
+
+    def transferable(cls):
+        for m in tidx.members[cls]:
+            n_ = g.nodes.get(m, {})
+            mod = (n_.get("attrs") or {}).get("modality")
+            if mod in NOT_TRANSFERABLE_MODALITIES:
+                return False, NOT_TRANSFERABLE_REASON.get(mod, "gene-specific product")
+            if PROTEIN_SPECIFIC.search(n_.get("label", "")):
+                return False, ("the product replaces or binds one specific protein (an enzyme, or a pharmacological "
+                               "chaperone made for one protein), so only the approach transfers")
+        return True, None
+
+    def compact(cls, d, rank, n, score, ex):
+        return {"therapy_class": cls, "therapy": rep_of(cls), "therapy_label": g.nodes[rep_of(cls)]["label"],
+                "disease": d, "disease_label": g.nodes[d]["label"], "family": family.get(d),
+                "transfer_rank": rank, "transfer_n_candidates": n, "transfer_score": score, "explain": ex}
+
+    def failed_where_tried(cls):
+        de = [e for m_ in tidx.members[cls] for e in g.edges_of("developed_for", source=m_)]
+        return bool(de) and all(e["status"] == "contested" and e["confidence"] < FAILED_CONF for e in de), \
+            [e["id"] for e in de]
+
+    candidates, rejected, approach_transfer, reviewed_out = [], [], [], []
+    look_alike, generic_only, failed = [], [], []
+    for cls in sorted(tidx.targets):
+        for d, prov in sorted(tidx.known.get(cls, {}).items()):
+            rejected.append({"therapy_class": cls, "disease": d, "reason": "already developed for, or already "
+                             "tested in, this disease (over the therapy class)", "provenance": sorted(prov)})
+        ranked = tidx.rank_candidates(cls, scorer="pheno+mech")
+        n = len(ranked)
+        ok, why_not = transferable(cls)
+        fail, fail_edges = failed_where_tried(cls)
+        for rank, (d, score, ex) in enumerate(ranked, 1):
+            if score <= 0 or rank > LEAD_DEPTH:
+                continue
+            rec = compact(cls, d, rank, n, score, ex)
+            if not ex["mechanisms"]:
+                look_alike.append(dict(rec, reason="symptom similarity only: no target mechanism of this therapy is "
+                                                   "reached by the disease, so no candidate_for edge"))
+                continue
+            if not ok:
+                approach_transfer.append(dict(rec, reason=why_not))
+                continue
+            specific = [m for m in ex["mechanisms"]
+                        if m["mechanism"] not in GENERIC_MECH and m["n_diseases"] <= MAX_SPECIFIC_DF]
+            if not specific:
+                generic_only.append(dict(rec, reason="only a generic mechanism links them ("
+                                         + ", ".join(f"{m['mechanism']} in {m['n_diseases']} diseases"
+                                                     for m in ex["mechanisms"]) + ")"))
+                continue
+            if fail:
+                failed.append(dict(rec, reason="the therapy failed in the disease it was tried in (every developed_for "
+                                               f"edge contested, confidence < {FAILED_CONF})", edges=fail_edges))
+                continue
+            if (detail_key(cls), d) in REJECT_ON_REVIEW:
+                reviewed_out.append(dict(rec, review_rejection=REJECT_ON_REVIEW[(detail_key(cls), d)],
+                                         curated_detail=DETAIL.get((detail_key(cls), d))))
+                continue
+            candidates.append(dict(rec, specific=specific))
+    # quality first: best rank within its therapy, then score; at most PER_CLASS per therapy, MAX overall
+    candidates.sort(key=lambda c: (c["transfer_rank"], -c["transfer_score"], c["disease"]))
+    scored, per_class, per_dis, undetailed = [], defaultdict(int), defaultdict(int), []
     for c in candidates:
-        k = (c["therapy_class"], c["disease"])
-        if k not in by_key or CHAIN_WEIGHT[c["chain_kind"]] > CHAIN_WEIGHT[by_key[k]["chain_kind"]]:
-            by_key[k] = c
-    # rank: chain strength, then the weakest confidence on the chain, then fewer contested edges
-    ranked = sorted(by_key.values(),
-                    key=lambda c: (-CHAIN_WEIGHT[c["chain_kind"]], -min(c["chain_confidences"]),
-                                   len(c["chain_contested"]), c["disease"]))
-    reviewed_out = [dict(c, review_rejection=REJECT_ON_REVIEW[(c["therapy_class"], c["disease"])],
-                         curated_detail=DETAIL.get((c["therapy_class"], c["disease"])))
-                    for c in ranked if (c["therapy_class"], c["disease"]) in REJECT_ON_REVIEW]
-    scored = [c for c in ranked if (c["therapy_class"], c["disease"]) in DETAIL
-              and (c["therapy_class"], c["disease"]) not in REJECT_ON_REVIEW][:MAX_HYPOTHESES]
-    undetailed = [c for c in ranked if (c["therapy_class"], c["disease"]) not in DETAIL]
+        if len(scored) < MAX_HYPOTHESES and per_class[c["therapy_class"]] < PER_CLASS \
+                and per_dis[c["disease"]] < PER_DISEASE and c["transfer_rank"] <= MAX_RANK:
+            scored.append(c)
+            per_class[c["therapy_class"]] += 1
+            per_dis[c["disease"]] += 1
+        else:
+            undetailed.append(c)
 
     # ---- emit candidate_for edges
+    assets_by_disease = defaultdict(list)
+    for e in g.edges_of("covers"):
+        a = g.nodes.get(e["source"], {})
+        if (a.get("attrs") or {}).get("kind") in MODEL_ASSET_KINDS:
+            assets_by_disease[e["target"]].append(e["source"])
     edges = []
     for c in scored:
-        det = DETAIL[(c["therapy_class"], c["disease"])]
-        t, d = c["therapy"], c["disease"]
+        t, d, cls, ex = c["therapy"], c["disease"], c["therapy_class"], c["explain"]
+        det = DETAIL.get((detail_key(cls), d), {})
+        mech_ids = [m["mechanism"] for m in c["specific"]]
+        tgt_edges = [e["id"] for m_ in tidx.members[cls] for e in g.edges_of("targets", source=m_)
+                     if e["target"] in mech_ids]
+        chain_edges = list(dict.fromkeys(tgt_edges + [eid for m in c["specific"] for eid in m["edges"]]))
+        chain_edges = [x for x in chain_edges if x in g.edges]
+        contested = [x for x in chain_edges if g.edges[x]["status"] == "contested"]
+        weakest_edge = min(chain_edges, key=lambda x: g.edges[x]["confidence"])
+        we = g.edges[weakest_edge]
+        auto_weak = (f"the {we['type']} edge {weakest_edge} (confidence {we['confidence']}"
+                     + (f", contested with {len(we.get('counter_evidence') or [])} contradicting items" if we["status"] == "contested" else "")
+                     + ")")
+        if ex["phenotype_similarity"] < 0.05:
+            auto_weak += (f"; and the symptoms barely overlap with the closest known disease "
+                          f"({ex['nearest_known_by_phenotype']}, similarity {ex['phenotype_similarity']})")
+        weakest = det.get("weakest_link", auto_weak)
+        mech_txt = "; ".join(f"{g.nodes[m['mechanism']]['label']} (reached by {m['n_diseases']} of "
+                             f"{len(tidx.diseases)} diseases, via {m['chain'].replace('_', ' ')})" for m in c["specific"])
         evidence = [{"source": "Atlas", "ref": eid, "url": f"/path?from={d}&to={t}",
                      "title": g.edges[eid].get("explanation", eid)[:300], "kind": "computed",
-                     "extracted_by": "computed", "retrieved": TODAY} for eid in c["chain_edges"]]
-        caveat_ev = []
-        for _label, _text, cites in det["caveats"]:
+                     "extracted_by": "computed", "retrieved": TODAY} for eid in chain_edges]
+        caveat_ev, caveats = [], []
+        for lab, txt, cites in det.get("caveats", []):
+            caveats.append({"kind": lab, "text": txt})
             caveat_ev += ev_pub(cites)
+        if not det:
+            if contested:
+                caveats.append({"kind": "counter-evidence on a chain edge",
+                                "text": "Contested edges on the chain: " + ", ".join(contested) + "."})
+            if max(m["n_diseases"] for m in c["specific"]) >= 8:
+                caveats.append({"kind": "family-level mechanism",
+                                "text": "The shared mechanism is reached by "
+                                        f"{max(m['n_diseases'] for m in c['specific'])} diseases, so it does not single "
+                                        "out this pair; it says the approach is plausible, not that this disease responds."})
+            if ex["phenotype_similarity"] < 0.05:
+                caveats.append({"kind": "phenotype mismatch",
+                                "text": f"Symptom overlap with the closest known disease is minimal "
+                                        f"(similarity {ex['phenotype_similarity']})."})
+            caveats.append({"kind": "untested", "text": "No study, case report or model result in the graph tests "
+                                                        "this therapy class in this disease."})
         seen, uniq = set(), []
-        for e in caveat_ev:
-            if (e["ref"], e["quote"]) not in seen:
-                seen.add((e["ref"], e["quote"]))
-                uniq.append(e)
-        chain_words = {
-            "driven_by": f"{g.nodes[d]['label']} is linked to {c['mechanism_label']} by a driven_by edge, and "
-                         f"{c['therapy_label']} is aimed at that same mechanism",
-            "variant_group": f"a variant group in {c['disease'].split(':')[1]} has {c['mechanism_label']} as its "
-                             f"effect, and {c['therapy_label']} is aimed at that mechanism",
-            "pathway": f"the gene participates in {c['mechanism_label']} and {c['therapy_label']} is aimed at that "
-                       f"process (no edge says this disease dysregulates it in the direction the drug pushes)",
-            "cluster": f"the curated cluster '{c['mechanism_label']}' already places {g.nodes[d]['label']} and "
-                       f"{c['therapy_label']} in the same group, but only the other members of that cluster have a "
-                       f"therapy edge (no mechanism edge connects this disease to the drug's target mechanism)",
-        }[c["chain_kind"]]
+        for e_ in caveat_ev:
+            if (e_["ref"], e_["quote"]) not in seen:
+                seen.add((e_["ref"], e_["quote"]))
+                uniq.append(e_)
+        known = sorted(tidx.known_diseases(cls))
+        test = det.get("test") or {
+            "what_to_test": (f"In a {g.nodes[d]['label']} model, measure the readout of "
+                             f"{', '.join(g.nodes[m]['label'] for m in mech_ids)} with and without {c['therapy_label']}, "
+                             "using the same readout that supported it in its known disease(s)."),
+            "existing_assay_or_model": sorted(set(assets_by_disease.get(d, [])) |
+                                              {a for k in known for a in assets_by_disease.get(k, [])})[:8],
+            "existing_assay_note": "Model/assay assets in the graph for this disease or for the therapy's known diseases.",
+            "what_result_would_change_the_plan": ("Rescue of the readout in the model would justify a carefully "
+                                                  "monitored n-of-1 or case-series design; no effect retires the link."),
+        }
+        rank = c["transfer_rank"]
+        conf = RANK_CONF.get(rank, 0.10) - 0.02 * len(contested)
         edges.append({
-            "id": f"{t}|candidate_for|{d}",
-            "source": t, "target": d, "type": "candidate_for",
+            "id": f"{t}|candidate_for|{d}", "source": t, "target": d, "type": "candidate_for",
             "label": "hypothesis: could be worth testing",
-            "explanation": (f"HYPOTHESIS, not a finding. The atlas computed this chain: {chain_words}; and the graph "
-                            f"has no developed_for edge and no study testing this therapy class in this disease. "
-                            f"The weakest link is {det['weakest_link']} Nobody has tested this."),
+            "explanation": (f"HYPOTHESIS, not a finding. Ranked {rank} of {c['transfer_n_candidates']} candidate diseases "
+                            f"for {c['therapy_label']} by the benchmark's best scorer (phenotype + mechanism). Shared "
+                            f"mechanism: {mech_txt}. Symptoms closest to {g.nodes[ex['nearest_known_by_phenotype']]['label'] if ex['nearest_known_by_phenotype'] else 'none'}"
+                            f" (similarity {ex['phenotype_similarity']}). The graph has no developed_for edge and no "
+                            f"study testing this therapy class here. The weakest link is {weakest}. Nobody has tested this."),
             "evidence_level": "hypothesis", "status": "unverified",
-            "confidence": CHAIN_CONF[c["chain_kind"]] - 0.02 * len(c["chain_contested"]),
+            "confidence": round(max(0.05, min(0.25, conf)), 2),
             "evidence": evidence,
-            "counter_evidence": [e for e in uniq if e.get("supports") is False] or None,
+            **({"counter_evidence": [e_ for e_ in uniq if e_.get("supports") is False]}
+               if any(e_.get("supports") is False for e_ in uniq) else {}),
             "attrs": {
-                "title": det["title"],
-                "generated_by": "pipeline/derive/hypotheses.py",
-                "chain": {"kind": c["chain_kind"], "cluster": c.get("cluster"), "edges": c["chain_edges"],
-                          "edge_confidences": c["chain_confidences"], "contested_edges": c["chain_contested"],
-                          "mechanism": c["mechanism"], "therapy_class": c["therapy_class"]},
-                "weakest_link": det["weakest_link"],
-                "caveats": [{"kind": lab, "text": txt} for lab, txt, _ in det["caveats"]],
-                "caveat_citations": uniq,
-                "test": det["test"],
-                "not_addressed_check": {"developed_for_edges_for_class": sorted(developed[c["therapy_class"]]),
-                                        "studies_testing_class": sorted(s for dd, s in tested_in[c["therapy_class"]])},
+                "title": det.get("title", f"{c['therapy_label'].split(' (')[0]} for {g.nodes[d]['label']}"),
+                "family": family.get(d), "generated_by": "pipeline/derive/hypotheses.py",
+                "transfer_score": c["transfer_score"], "transfer_rank": rank,
+                "transfer_n_candidates": c["transfer_n_candidates"], "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+                "transfer_explanation": ex, "therapy_class": cls, "known_diseases_of_class": known,
+                "chain": {"mechanisms": mech_ids, "edges": chain_edges, "contested_edges": contested},
+                "weakest_link": weakest,
+                "caveats": caveats, "caveat_citations": uniq, "test": test,
             },
         })
-    for e in edges:
-        if e["counter_evidence"] is None:
-            del e["counter_evidence"]
-        e["confidence"] = round(max(0.05, min(0.25, e["confidence"])), 2)
 
     frag = {
         "nodes": [],
@@ -483,9 +546,9 @@ def main():
                         "for these diseases?",
             "what_is_missing": [f"{e['attrs']['title']} ({e['source']} -> {e['target']}): no trial, no model result, "
                                 f"no case report" for e in edges],
-            "searched": ["data/graph.json developed_for / tests / studies edges over therapy equivalence classes "
-                         "(amifampridine = 3,4-DAP = aminopyridine class; CAP-002 = AAV STXBP1; "
-                         "AAV9.SLC6A1 = scAAV9.P546.SLC6A1)",
+            "searched": ["data/graph.json developed_for / tests / studies edges over therapy classes as defined in "
+                         "pipeline/eval/transfer_score.py EQUIVALENCE (aminopyridines, AAV-STXBP1, AAV-SLC6A1, "
+                         "MEK1/2 inhibitors)",
                          "ClinicalTrials.gov records stored under data/raw/community/ctgov and data/raw/derive/ctgov"],
             "how_to_find_out": "Each edge carries attrs.test with the experiment, the existing assay or model to "
                                "borrow, and the result that would kill it. Start with the one whose chain has no "
@@ -533,9 +596,39 @@ def main():
                   "edge, so it cannot be mistaken for a finding."),
         "meta": {"generated": TODAY, "code": "pipeline/derive/hypotheses.py",
                  "hypotheses_emitted": len(edges), "hypotheses_file": "data/curated/hypotheses.json",
+                 "ranking": "TransferIndex.rank_candidates(scorer='pheno+mech') from pipeline/eval/transfer_score.py "
+                            "(best honest scorer in docs/agent-reports/eval.md); the curated-cluster chain is no "
+                            "longer used (clusters that list therapies leak the answer)",
+                 "gates": ["already developed for / tested in (over the therapy class)",
+                           "product transferability (no AAV, ASO, editing, enzyme replacement or one-protein chaperone "
+                           "across genes)",
+                           f"specific mechanism: at least one matched target mechanism that is not generic "
+                           f"({', '.join(sorted(GENERIC_MECH))}) and is reached by <= {MAX_SPECIFIC_DF} diseases",
+                           "curator review rejection (REJECT_ON_REVIEW), e.g. channel drugs whose direction is backwards",
+                           f"failed where tried: every developed_for edge contested below {FAILED_CONF}",
+                           "symptom-only matches never become edges (look_alike_leads)"],
+                 "selection": f"rank <= {MAX_RANK} within its therapy, at most {PER_CLASS} per therapy class and {PER_DISEASE} per "
+                     f"disease, at most "
+                              f"{MAX_HYPOTHESES} overall, sorted by rank then score",
                  "chain_kinds": {"driven_by": "disease -> mechanism edge (strongest)",
                                  "variant_group": "gene -> variant group -> effect mechanism",
                                  "pathway": "gene participates in the process (weakest: says nothing about direction)"}},
+        "look_alike_leads": {
+            "rule": "the disease ranks in a therapy's top 8 on symptom similarity, but reaches none of the therapy's "
+                    "target mechanisms; a lead to read, never a candidate_for edge",
+            "items": look_alike,
+        },
+        "failed_where_tried": {
+            "rule": "the therapy's every developed_for edge is contested with confidence < "
+                    f"{FAILED_CONF} (a documented failure in its own disease); transfer is not proposed",
+            "items": failed,
+        },
+        "generic_mechanism_only": {
+            "rule": "the only shared mechanism is generic (loss/gain of function, haploinsufficiency, dominant "
+                    "negative, lysosomal storage) or reaches more than "
+                    f"{MAX_SPECIFIC_DF} diseases",
+            "items": generic_only,
+        },
         "model_and_assay_transfer": {
             "rule": "two diseases are linked to the same EFFECT mechanism, one has a model/assay/biobank/"
                     "outcome-measure asset in the graph and the other has none",
@@ -548,7 +641,7 @@ def main():
                     "emitted as hypotheses",
             "items": reviewed_out,
         },
-        "therapy_equivalence_classes": list(cls_meta.values()),
+        "therapy_equivalence_classes": [{"id": k, "members": v} for k, v in ts.EQUIVALENCE.items()],
         "rejected_candidates": {
             "rule": "the therapy class is already developed for, or already tested in, this disease",
             "items": rejected,
@@ -558,9 +651,9 @@ def main():
                     "approach transfers; no candidate_for edge is emitted",
             "items": approach_transfer,
         },
-        "ranked_candidates_without_a_curated_test_plan": {
-            "note": "these passed the graph search but were not promoted to hypotheses (top "
-                    f"{MAX_HYPOTHESES} only, quality over count)",
+        "ranked_candidates_without_a_slot": {
+            "note": "these passed every gate but were not promoted (rank above "
+                    f"{MAX_RANK}, or the per-therapy cap of {PER_CLASS}, or the overall cap of {MAX_HYPOTHESES})",
             "items": undetailed,
         },
         "near_misses_one_edge_away": [
@@ -588,17 +681,17 @@ def main():
     }
     size_o = write_json(DERIVED / "opportunities.json", opportunities)
 
-    print(f"[hypotheses] {len(edges)} candidate_for edges ({size_h / 1024:.0f} KB), "
-          f"{len(rejected)} rejected, {len(approach_transfer)} approach-only, "
-          f"{len(undetailed)} unpromoted, {len(reviewed_out)} rejected on review, "
+    print(f"[hypotheses] {len(edges)} candidate_for edges ({size_h / 1024:.0f} KB); {len(rejected)} known pairs; "
+          f"{len(approach_transfer)} approach-only; {len(generic_only)} generic-only; {len(look_alike)} look-alike leads; "
+          f"{len(reviewed_out)} rejected on review; {len(failed)} failed-where-tried; {len(undetailed)} without a slot; "
           f"{len(transfer)} model-transfer pairs ({size_o / 1024:.0f} KB)")
     for e in edges:
-        print(f"  {e['confidence']:.2f} {e['source']} -> {e['target']}  [{e['attrs']['chain']['kind']}] "
-              f"{e['attrs']['title']}")
-    for r in rejected:
-        print(f"  REJECTED {r['therapy']} -> {r['disease']}: {r['reason']}")
-    for u in undetailed:
-        print(f"  unpromoted {u['therapy_class']} -> {u['disease']} [{u['chain_kind']}]")
+        a = e["attrs"]
+        print(f"  {e['confidence']:.2f} rank {a['transfer_rank']}/{a['transfer_n_candidates']} score {a['transfer_score']} "
+              f"[{a['family']}] {e['source']} -> {e['target']} via {a['chain']['mechanisms']}")
+        print(f"       weakest: {a['weakest_link'][:220]}")
+    for r in reviewed_out:
+        print(f"  REVIEW-REJECTED {r['therapy_class']} -> {r['disease']}")
 
 
 if __name__ == "__main__":

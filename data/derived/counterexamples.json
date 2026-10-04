@@ -2,7 +2,7 @@
  "about": "The places where the clean story breaks. Each item names edges that exist in data/graph.json, so a reader can open the evidence. Written for families first: the plain_language line should be readable by a parent, and the why_it_matters line says what it changes.",
  "meta": {
   "generated": "2026-10-04",
-  "graph": "2026-10-03T19:12:52+00:00",
+  "graph": "2026-10-04T00:57:15+00:00",
   "n_items": 10,
   "code": "pipeline/derive/counterexamples.py",
   "integrity": "the build fails if any edge_id is absent from the graph"
@@ -416,12 +416,39 @@
    "id": "cx:looking-alike-is-not-sharing-a-cause",
    "title": "The pair with the strongest symptom match shares no distinctive feature",
    "plain_language": "Two conditions can score as very similar because they share common things like seizures, low muscle tone and developmental delay. Sharing those does not mean they share a cause.",
-   "why_it_matters": "Phenotype similarity is computed, not observed: 1 of the slice's similarity edges have an empty list of shared DISTINCTIVE features, so the match is carried entirely by broad terms. The edges are kept with low confidence and the explanation names which shared features are broad, which is the only honest way to show them.",
+   "why_it_matters": "Phenotype similarity is computed, not observed: 4 of the slice's similarity edges have an empty list of shared DISTINCTIVE features, so the match is carried entirely by broad terms. The edges are kept with low confidence and the explanation names which shared features are broad, which is the only honest way to show them.",
    "edge_ids": [
+    "disease:GRIN2B|similar_phenotype|disease:VAMP2",
+    "disease:KCNT1|similar_phenotype|disease:SLC6A1",
+    "disease:KCNT1|similar_phenotype|disease:VAMP2",
     "disease:STXBP1|similar_phenotype|disease:VAMP2",
     "disease:STXBP1|similar_phenotype|disease:SLC6A1"
    ],
    "edges": [
+    {
+     "id": "disease:GRIN2B|similar_phenotype|disease:VAMP2",
+     "type": "similar_phenotype",
+     "status": "supported",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "disease:KCNT1|similar_phenotype|disease:SLC6A1",
+     "type": "similar_phenotype",
+     "status": "supported",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "disease:KCNT1|similar_phenotype|disease:VAMP2",
+     "type": "similar_phenotype",
+     "status": "supported",
+     "evidence_level": "inferred",
+     "confidence": 0.46,
+     "n_counter_evidence": 0
+    },
     {
      "id": "disease:STXBP1|similar_phenotype|disease:VAMP2",
      "type": "similar_phenotype",
@@ -442,11 +469,63 @@
   },
   {
    "id": "cx:truncating-to-haploinsufficiency-is-assumed",
-   "title": "16 'broken copy means missing protein' edges are assumptions, not experiments",
+   "title": "71 'broken copy means missing protein' edges are assumptions, not experiments",
    "plain_language": "When a change clearly breaks the gene, the atlas assumes the result is 'not enough protein'. For most genes here, no experiment has checked that in a human nerve cell.",
    "why_it_matters": "These edges are labelled inferred and unverified with confidence 0.45 on purpose. They are the quiet majority of the mechanism layer, and anything built on top of them - including the modality screen and the hypotheses - inherits that weakness.",
    "edge_ids": [
+    "vg:ARSA:splice|has_effect|mech:loss-of-function",
+    "vg:ARSA:truncating|has_effect|mech:loss-of-function",
+    "vg:ARSA:whole-gene-deletion|has_effect|mech:loss-of-function",
+    "vg:CACNA1A:splice|has_effect|mech:haploinsufficiency",
+    "vg:CACNA1A:truncating|has_effect|mech:haploinsufficiency",
+    "vg:CACNA1A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:CDKL5:splice|has_effect|mech:haploinsufficiency",
+    "vg:CDKL5:truncating|has_effect|mech:haploinsufficiency",
+    "vg:CDKL5:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:CLN3:splice|has_effect|mech:loss-of-function",
+    "vg:CLN3:truncating|has_effect|mech:loss-of-function",
+    "vg:CLN3:whole-gene-deletion|has_effect|mech:loss-of-function",
     "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency",
+    "vg:GAA:splice|has_effect|mech:loss-of-function",
+    "vg:GAA:truncating|has_effect|mech:loss-of-function",
+    "vg:GAA:whole-gene-deletion|has_effect|mech:loss-of-function",
+    "vg:GALC:splice|has_effect|mech:loss-of-function",
+    "vg:GALC:truncating|has_effect|mech:loss-of-function",
+    "vg:GALC:whole-gene-deletion|has_effect|mech:loss-of-function",
+    "vg:GBA1:splice|has_effect|mech:loss-of-function",
+    "vg:GBA1:truncating|has_effect|mech:loss-of-function",
+    "vg:GBA1:whole-gene-deletion|has_effect|mech:loss-of-function",
+    "vg:GLA:splice|has_effect|mech:loss-of-function",
+    "vg:GLA:truncating|has_effect|mech:loss-of-function",
+    "vg:GRIN2B:splice|has_effect|mech:haploinsufficiency",
+    "vg:GRIN2B:truncating|has_effect|mech:haploinsufficiency",
+    "vg:GRIN2B:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:HEXA:splice|has_effect|mech:loss-of-function",
+    "vg:HEXA:truncating|has_effect|mech:loss-of-function",
+    "vg:HEXA:whole-gene-deletion|has_effect|mech:loss-of-function",
+    "vg:IDS:splice|has_effect|mech:loss-of-function",
+    "vg:IDS:truncating|has_effect|mech:loss-of-function",
+    "vg:IDS:whole-gene-deletion|has_effect|mech:loss-of-function",
+    "vg:IDUA:splice|has_effect|mech:loss-of-function",
+    "vg:IDUA:truncating|has_effect|mech:loss-of-function",
+    "vg:IDUA:whole-gene-deletion|has_effect|mech:loss-of-function",
+    "vg:KCNQ2:splice|has_effect|mech:haploinsufficiency",
+    "vg:KCNQ2:truncating|has_effect|mech:haploinsufficiency",
+    "vg:KCNQ2:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:KCNT1:splice|has_effect|mech:haploinsufficiency",
+    "vg:KCNT1:truncating|has_effect|mech:haploinsufficiency",
+    "vg:NPC1:splice|has_effect|mech:loss-of-function",
+    "vg:NPC1:truncating|has_effect|mech:loss-of-function",
+    "vg:NPC1:whole-gene-deletion|has_effect|mech:loss-of-function",
+    "vg:SCN2A:splice|has_effect|mech:haploinsufficiency",
+    "vg:SCN2A:truncating|has_effect|mech:haploinsufficiency",
+    "vg:SCN2A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:SCN8A:splice|has_effect|mech:haploinsufficiency",
+    "vg:SCN8A:truncating|has_effect|mech:haploinsufficiency",
+    "vg:SCN8A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+    "vg:SMPD1:splice|has_effect|mech:loss-of-function",
+    "vg:SMPD1:truncating|has_effect|mech:loss-of-function",
+    "vg:SMPD1:whole-gene-deletion|has_effect|mech:loss-of-function",
     "vg:SNAP25:splice|has_effect|mech:haploinsufficiency",
     "vg:SNAP25:truncating|has_effect|mech:haploinsufficiency",
     "vg:STX1A:splice|has_effect|mech:haploinsufficiency",
@@ -458,6 +537,9 @@
     "vg:SYT1:whole-gene-deletion|has_effect|mech:haploinsufficiency",
     "vg:SYT2:splice|has_effect|mech:haploinsufficiency",
     "vg:SYT2:truncating|has_effect|mech:haploinsufficiency",
+    "vg:TPP1:splice|has_effect|mech:loss-of-function",
+    "vg:TPP1:truncating|has_effect|mech:loss-of-function",
+    "vg:TPP1:whole-gene-deletion|has_effect|mech:loss-of-function",
     "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency",
     "vg:UNC13A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
     "vg:VAMP2:splice|has_effect|mech:haploinsufficiency",
@@ -465,7 +547,423 @@
    ],
    "edges": [
     {
+     "id": "vg:ARSA:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:ARSA:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:ARSA:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CACNA1A:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CACNA1A:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CACNA1A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CDKL5:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CDKL5:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CDKL5:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CLN3:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CLN3:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:CLN3:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
      "id": "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GAA:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GAA:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GAA:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GALC:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GALC:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GALC:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GBA1:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GBA1:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GBA1:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GLA:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GLA:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GRIN2B:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GRIN2B:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:GRIN2B:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:HEXA:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:HEXA:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:HEXA:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:IDS:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:IDS:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:IDS:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:IDUA:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:IDUA:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:IDUA:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:KCNQ2:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:KCNQ2:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:KCNQ2:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:KCNT1:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:KCNT1:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:NPC1:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:NPC1:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:NPC1:whole-gene-deletion|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SCN2A:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SCN2A:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SCN2A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SCN8A:splice|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SCN8A:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SCN8A:whole-gene-deletion|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SMPD1:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SMPD1:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:SMPD1:whole-gene-deletion|has_effect|mech:loss-of-function",
      "type": "has_effect",
      "status": "unverified",
      "evidence_level": "inferred",
@@ -554,6 +1052,30 @@
     },
     {
      "id": "vg:SYT2:truncating|has_effect|mech:haploinsufficiency",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:TPP1:splice|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:TPP1:truncating|has_effect|mech:loss-of-function",
+     "type": "has_effect",
+     "status": "unverified",
+     "evidence_level": "inferred",
+     "confidence": 0.45,
+     "n_counter_evidence": 0
+    },
+    {
+     "id": "vg:TPP1:whole-gene-deletion|has_effect|mech:loss-of-function",
      "type": "has_effect",
      "status": "unverified",
      "evidence_level": "inferred",

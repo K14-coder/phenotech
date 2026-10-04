@@ -1,0 +1,857 @@
+{
+  "meta": {
+    "id": "testing_options",
+    "title": "Don't have a DNA file? Request one",
+    "retrieved": "2026-10-04",
+    "audience": "Families with no medical background",
+    "disclaimer": "Information only. Talk to your doctor or a genetic counsellor about which test is right.",
+    "legal_note": "Descriptions of legal rights and the request letter are general information, not legal advice.",
+    "verification": "Every quote was string-matched (whitespace and quote marks normalised) against the page text stored under data/raw/testing/ on the retrieval date. Programme details, forms and fees change: check the linked page before relying on them.",
+    "builder": "Built by agent; see docs/agent-reports/testing-options.md"
+  },
+  "sections": [
+    {
+      "id": "get_your_data",
+      "title": "Get your data from a test you already had",
+      "summary": "If you or your child already had a clinical genetic test (a gene panel, exome or genome), the lab usually still holds the data files behind the report. The labs below describe how to ask for them. Usually your doctor sends the request, or you sign the lab's consent form. Expect a wait of several weeks, and possibly a fee.",
+      "file_types": [
+        {
+          "format": "VCF",
+          "plain": "A list of the places where your DNA differs from the standard reference. Small, around 2 MB for an exome.",
+          "source": {
+            "url": "https://www.blueprintgenetics.com/faqs/?group=raw-data",
+            "quotes": [
+              "VCF (Variant Call Format) is a standard file format storing a list of sequence variants and their genomic positions.",
+              "It is ~2 MB in size."
+            ],
+            "raw_file": "data/raw/testing/blueprint_faq_raw_data.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "format": "BAM",
+          "plain": "The sequencing reads lined up against the reference genome. Large, about 4-8 GB for an exome.",
+          "source": {
+            "url": "https://www.blueprintgenetics.com/faqs/?group=raw-data",
+            "quotes": [
+              "BAM (Binary sequence Alignment Map) is a standard file format that contains sequence reads mapped to the human reference genome, including base quality and mapping quality scores.",
+              "BAM files are ~4-8 GB in size."
+            ],
+            "raw_file": "data/raw/testing/blueprint_faq_raw_data.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "format": "FASTQ",
+          "plain": "The raw sequence reads straight off the machine, before alignment.",
+          "source": {
+            "url": "https://www.baylorgenetics.com/wp-content/uploads/2021/12/baylor-genetics-institution-exome-data-release-form-english.pdf",
+            "quotes": [
+              "The FASTQ data files (text-based format for storing nucleotide sequences)"
+            ],
+            "raw_file": "data/raw/testing/baylor_institution_exome_release.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "format": "CRAM",
+          "plain": "A compressed alternative to BAM. None of the lab pages checked here mention CRAM, so ask the lab whether it can supply it.",
+          "source": null
+        }
+      ],
+      "labs": [
+        {
+          "id": "lab:labcorp",
+          "lab": "Labcorp (Labcorp Genetic Services)",
+          "region": "US",
+          "what_they_provide": [
+            "FASTQ (exome and genome tests only)",
+            "BAM",
+            "VCF",
+            "other data files on request"
+          ],
+          "who_can_ask": "A healthcare provider, the patient, or a parent/guardian.",
+          "how_to_request": "Fill in Labcorp's 'Consent for release of genetic testing data' form, signed by each person whose data is requested and by a healthcare provider. Labcorp then contacts you with download details. Allow about 30 days.",
+          "caveats": "Labcorp says the files can contain unprocessed and unreported data, including false positives, and medical decisions should not be based on them without a genetics professional.",
+          "invitae_note": "Invitae's website now carries a Labcorp copyright line. This form is a Labcorp form; ask Labcorp Genetic Services whether it applies to an older Invitae test.",
+          "source": {
+            "url": "https://MNGLabs.Labcorp.com/sites/default/files/2024-04/828820_DX_IC_ReleaseGeneticData_FORM.pdf",
+            "quotes": [
+              "A healthcare provider, patient, or parent/guardian can request the release of genetic testing data for a patient.",
+              "Signed consent is required from each individual for whom data is being requested.",
+              "Data will be provided via electronic file transfer. Please allow 30 days for requests to be fulfilled.",
+              "FASTQ (WES and WGS only)",
+              "I understand the data files may contain false positive and unconfirmed results."
+            ],
+            "raw_file": "data/raw/testing/labcorp_mngl_release_form.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://www.invitae.com/forms",
+              "quotes": [
+                "© 2026 Labcorp. All rights reserved."
+              ],
+              "raw_file": "data/raw/testing/invitae_forms.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "id": "lab:genedx",
+          "lab": "GeneDx",
+          "region": "US",
+          "what_they_provide": [
+            "raw data such as sequencing files (formats not listed on the page)"
+          ],
+          "who_can_ask": "Stated on GeneDx's provider forms page; ask your ordering provider to send the request, or email the data team.",
+          "how_to_request": "Email GeneDx's data send-out team at Clinicalgenomicsdata@GeneDx.com. For a copy of the test report sent to someone other than the ordering provider, contact GeneDx Customer Service.",
+          "source": {
+            "url": "https://www.genedx.com/forms/",
+            "quotes": [
+              "To request raw data on patients (e.g., sequencing files), please contact our data send out team at Clinicalgenomicsdata@GeneDx.com.",
+              "For GeneDx to release a copy of a patient’s test results to someone other than the ordering provider, please contact our Customer Service team at 888-729-1206 or email Support@GeneDx.com."
+            ],
+            "raw_file": "data/raw/testing/genedx_forms.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "lab:ambry",
+          "lab": "Ambry Genetics",
+          "region": "US",
+          "what_they_provide": [
+            "BAM",
+            "FASTQ",
+            "VCF (choose one per form)"
+          ],
+          "who_can_ask": "The requesting physician, with signed consent from the patient or guardian; extra named recipients can be authorised on the form.",
+          "how_to_request": "Complete Ambry's 'Raw Sequence Data Consent Form' (patient/guardian consent plus healthcare provider consent). Files come by secure link, usually 4-6 weeks after the final report.",
+          "caveats": "Data are released only after the final report. Ambry recommends using unprocessed data for research, not treatment decisions.",
+          "source": {
+            "url": "https://ambrygen.com/wp-content/uploads/2026/03/5b43e3861dd0d_Raw_Sequence_Data_Consent_0718_final.pdf",
+            "quotes": [
+              "Ambry Genetics provides the unprocessed data of an individual only when specifically requested",
+              "Note: Unprocessed data are not released until clinical testing is completed and a final report has been issued",
+              "Raw data will be provided via a secure link. The requesting physician and all authorized recipients will be notified by e-mail when the raw data are available for download, usually 4-6 weeks from the final report date.",
+              "Ambry recommends that such unprocessed data only be used for research purposes and not to make decisions about the treatment of a patient based on these data."
+            ],
+            "raw_file": "data/raw/testing/ambry_raw_consent.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "lab:blueprint",
+          "lab": "Blueprint Genetics",
+          "region": "EU (Finland), serving international customers",
+          "what_they_provide": [
+            "VCF",
+            "BAM (exome); VCF only for single genes"
+          ],
+          "who_can_ask": "The healthcare provider who placed the order, or a provider the results were shared with in Blueprint's Nucleus portal.",
+          "how_to_request": "Your provider downloads the Raw Data Request form (separate forms for exome and panel data) and sends it by post or fax, not email. Requests are possible up to 2 years after the report. Delivery is about 1 month after the report, via a download link that lasts 30 days.",
+          "cost_as_stated": "Blueprint states raw data for exomes and panels requested within two years is free; clinical exome raw data for panel orders costs extra.",
+          "source": {
+            "url": "https://www.blueprintgenetics.com/faqs/?group=raw-data",
+            "quotes": [
+              "Yes, we provide raw data for Whole Exome Sequencing (WES) and panel orders.",
+              "The data can be requested by the health care provider who placed the original order or by a health care provider with whom the results have been shared in Nucleus.",
+              "Complete the Raw Data Request form and send it to us by land mail or fax. Please do not send by e-mail.",
+              "The data can be requested up to 2 years after the initial report.",
+              "Raw data for WES and panels requested within two years after the original report is provided at no cost.",
+              "Blueprint Genetics delivers raw data in BAM and/or VCF file formats."
+            ],
+            "raw_file": "data/raw/testing/blueprint_faq_raw_data.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://www.blueprintgenetics.com/raw-data-request-forms/",
+              "quotes": [
+                "samples will be processed in Helsinki, Finland"
+              ],
+              "raw_file": "data/raw/testing/blueprint_raw_data_forms.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "id": "lab:baylor",
+          "lab": "Baylor Genetics",
+          "region": "US",
+          "what_they_provide": [
+            "test results",
+            "raw data (tick box on the access form)",
+            "FASTQ files for institutions (exome/genome)"
+          ],
+          "who_can_ask": "The patient or their personal representative (patient access form); institutions use a separate exome/genome data release form.",
+          "how_to_request": "Fill in Baylor Genetics' 'Patient Request for Access' form, tick 'Raw Data' and the genetic-information consent box, and email it to info@baylorgenetics.com or fax it. Baylor says it answers within 15 business days. It may charge a reasonable, cost-based fee and tells you the fee first.",
+          "source": {
+            "url": "https://www.baylorgenetics.com/wp-content/uploads/2026/05/baylor-genetics-compliance-patient-request-for-access-form.pdf",
+            "quotes": [
+              "PATIENT REQUEST FOR ACCESS (45 CFR §164.524)",
+              "Patients or their personal representative can complete this form for access to or release of protected health information (PHI) and submit it via email to info@baylorgenetics.com or to the fax number above.",
+              "Baylor Genetics will provide the requested PHI within 15 business days from receipt of the completed form unless an extension is requested.",
+              "A reasonable, cost-based fee for copies, including postage to mail records if requested. You will be notified of the fee before the request is processed."
+            ],
+            "raw_file": "data/raw/testing/baylor_patient_access_form.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://www.baylorgenetics.com/wp-content/uploads/2021/12/baylor-genetics-institution-exome-data-release-form-english.pdf",
+              "quotes": [
+                "The FASTQ data files (text-based format for storing nucleotide sequences) from the exome sequencing tests can be requested by an Institution."
+              ],
+              "raw_file": "data/raw/testing/baylor_institution_exome_release.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "id": "lab:centogene",
+          "lab": "CENTOGENE",
+          "region": "EU (international lab; its terms refer to the GDPR)",
+          "what_they_provide": [
+            "raw data of the analysis (formats not listed in the terms)"
+          ],
+          "who_can_ask": "The responsible physician (or a partner/reference lab), with the patient's consent. Raw data go only to the physician.",
+          "how_to_request": "Ask the doctor who ordered the test to send CENTOGENE a written request, with your consent.",
+          "cost_as_stated": "CENTOGENE's terms say it may charge a reasonable fee.",
+          "source": {
+            "url": "https://www.centogene.com/wp-content/uploads/2025/07/TermsConditions2025.pdf",
+            "quotes": [
+              "On written request of the Responsible Physician, Partner and/or a reference laboratory and subject to a respective consent of the Patient, either provided in copy or by confirmation of the Responsible Physician, CENTOGENE will provide solely to the Responsible Physician the raw data of a conducted analysis.",
+              "CENTOGENE may charge a reasonable fee."
+            ],
+            "raw_file": "data/raw/testing/centogene_terms_2025.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://www.centogene.com/wp-content/uploads/2021/11/LABEL-284-Consent-Form-General-V1-Web.pdf",
+              "quotes": [
+                "if raw data results are requested by the Physician, these may contain more data than ordered, analyzed, and reported by CENTOGENE"
+              ],
+              "raw_file": "data/raw/testing/centogene_consent_general.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "id": "lab:revvity",
+          "lab": "Revvity Omics",
+          "region": "US",
+          "what_they_provide": [
+            "FASTQ",
+            "raw (unannotated) VCF; exome and genome tests only"
+          ],
+          "who_can_ask": "The patient or their representative (parent/guardian signature for under-18s).",
+          "how_to_request": "Complete Revvity's 'Release of sequencing data request' form. Choose a secure hard drive (you pay for the drive and shipping) or an electronic download (needs up to 80 GB free space per person).",
+          "caveats": "Revvity does not accept raw-data requests for panel tests. Extra analyses count as research results.",
+          "source": {
+            "url": "https://resources.revvity.com/pdfs/Data Release form.pdf",
+            "quotes": [
+              "Available for exome and genome tests only",
+              "Revvity does not currently accept raw data requests for sequencing panel tests or the CNGnome® NGS Array.",
+              "Pricing is based on cost of hard drive and shipping fees to desired destination.",
+              "data downloads may require up to 80 gigabytes of free hard drive space for"
+            ],
+            "raw_file": "data/raw/testing/revvity_data_release.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "lab:myome",
+          "lab": "MyOme",
+          "region": "US",
+          "what_they_provide": [
+            "BAM",
+            "FASTQ",
+            "VCF"
+          ],
+          "who_can_ask": "Providers (the ordering doctor).",
+          "how_to_request": "Your provider emails support@myome.com and fills in the form MyOme sends. The ordering doctor gets a secure link within 30 days.",
+          "source": {
+            "url": "https://kb.myome.com/en/myome-knowledge-base/are-patients-or-providers-able-to-access-raw-data-what-type-of-file-is-used-for-this",
+            "quotes": [
+              "Providers can request raw data by emailing support@myome.com.",
+              "We offer access to bam, fastq, and vcf files via a secure link. The ordering MD will receive access to the data within 30 days from the time of the request."
+            ],
+            "raw_file": "data/raw/testing/myome_raw.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "lab:radboudumc",
+          "lab": "Radboudumc Genome Diagnostics (Nijmegen)",
+          "region": "EU (Netherlands)",
+          "what_they_provide": [
+            "unannotated VCF (exome)"
+          ],
+          "who_can_ask": "On request, with a document showing the patient's permission.",
+          "how_to_request": "Ask the referring clinician to request the exome VCF with your written permission. Radboudumc says it charges extra for retrieving raw data. It keeps BAM files for at least one year and VCF files for at least five.",
+          "source": {
+            "url": "https://order.radboudumc.nl/en/genetics/lab-information/faqs_1",
+            "quotes": [
+              "The BAM-files will be stored for a minimum of one year and the VCF-files are stored for at least five years.",
+              "The VCF-files (the unannotated files) can be obtained upon request. A document of permission of the patient needs to be provided. For the retreival of raw data an additional charge will apply (please contact us for more details)."
+            ],
+            "raw_file": "data/raw/testing/radboud_faq.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "lab:probably-genetic",
+          "lab": "Probably Genetic",
+          "region": "US",
+          "what_they_provide": [
+            "VCF (annotated)"
+          ],
+          "who_can_ask": "The patient, through their own dashboard.",
+          "how_to_request": "Sign in to your patient dashboard, go to Results, and select Download Raw Data.",
+          "caveats": "Probably Genetic recommends sending the file to your geneticist or doctor, and warns that third-party reinterpretation can be wrong.",
+          "source": {
+            "url": "https://help.probablygenetic.com/hc/en-us/articles/11577069483287",
+            "quotes": [
+              "You can access your raw data by signing in to your patient dashboard.",
+              "Once signed in, navigate to Results, then select Download Raw Data.",
+              "We recommend sending the file to your geneticist or another physician who can properly review and interpret the information.",
+              "Please note that running your raw data through third-party services carries a risk of incorrect reinterpretation."
+            ],
+            "raw_file": "data/raw/testing/probablygenetic_help.txt",
+            "retrieved": "2026-10-04"
+          }
+        }
+      ],
+      "rights": [
+        {
+          "id": "right:eu-gdpr-art15",
+          "name": "EU GDPR, Article 15: right of access",
+          "region": "EU",
+          "plain": "In the EU, you can ask an organisation that holds your personal data, such as a genetic testing lab, to confirm it holds the data and to give you a copy. If you ask electronically, the copy normally comes in a common electronic format.",
+          "source": {
+            "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
+            "quotes": [
+              "The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data",
+              "The controller shall provide a copy of the personal data undergoing processing.",
+              "Where the data subject makes the request by electronic means, and unless otherwise requested by the data subject, the information shall be provided in a commonly used electronic form."
+            ],
+            "raw_file": "data/raw/testing/eurlex_gdpr.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "right:uk-gdpr-art15",
+          "name": "UK GDPR, Article 15: right of access (subject access request)",
+          "region": "UK",
+          "plain": "The UK has the same right of access, called a subject access request (SAR). The ICO says organisations usually have one month to respond.",
+          "source": {
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/15",
+            "quotes": [
+              "The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data",
+              "The controller shall provide a copy of the personal data undergoing processing"
+            ],
+            "raw_file": "data/raw/testing/uk_gdpr_art15.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://ico.org.uk/for-the-public/getting-copies-of-your-information-subject-access-request/",
+              "quotes": [
+                "You can also ask them for copies of your personal information.",
+                "Organisations usually have one month to respond to a SAR."
+              ],
+              "raw_file": "data/raw/testing/ico_right_of_access.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "id": "right:us-hipaa-access",
+          "name": "US HIPAA Privacy Rule: right of access (45 CFR 164.524)",
+          "region": "US",
+          "plain": "In the US, HIPAA gives you the right to inspect and get a copy of your health information held in a 'designated record set'. HHS guidance says that for a lab covered by HIPAA this includes your lab test reports and the underlying data. For next generation sequencing, it includes the full gene variant information. Covered entities must act within 30 calendar days, with one possible 30-day extension.",
+          "source": {
+            "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.524",
+            "quotes": [
+              "an individual has a right of access to inspect and obtain a copy of protected health information about the individual in a designated record set"
+            ],
+            "raw_file": "data/raw/testing/ecfr_164_524.txt",
+            "retrieved": "2026-10-04",
+            "source_note": "Text fetched from the eCFR renderer API (https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-45?part=164&section=164.524)."
+          },
+          "extra_sources": [
+            {
+              "url": "https://www.hhs.gov/hipaa/for-professionals/faq/2048/does-an-individual-have-a-right-under-hipaa/index.html",
+              "quotes": [
+                "The designated record set includes not only the laboratory test reports but also the underlying information generated as part of the test, as well as other information concerning tests a laboratory runs on an individual.",
+                "a clinical laboratory that is a HIPAA covered entity and that conducts next generation sequencing (NGS) of DNA on an individual must provide the individual, upon the individual’s request for PHI concerning the NGS, with a copy of the completed test report, the full gene variant information generated by the test, as well as any other information in the designated record set concerning the test.",
+                "Content last reviewed June 24, 2016"
+              ],
+              "raw_file": "data/raw/testing/hhs_faq2048_genomic_archive.txt",
+              "retrieved": "2026-10-04",
+              "fetched_via": "web.archive.org",
+              "source_note": "hhs.gov returns 403 to automated fetches; text verified against the Internet Archive snapshot https://web.archive.org/web/20260511170710/https://www.hhs.gov/hipaa/for-professionals/faq/2048/does-an-individual-have-a-right-under-hipaa/index.html"
+            },
+            {
+              "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html",
+              "quotes": [
+                "clinical laboratory test reports",
+                "no later than 30 calendar days from receiving the individual's request.",
+                "Content last reviewed May 30, 2025"
+              ],
+              "raw_file": "data/raw/testing/hhs_access_guidance_archive.txt",
+              "retrieved": "2026-10-04",
+              "fetched_via": "web.archive.org",
+              "source_note": "hhs.gov returns 403 to automated fetches; text verified against the Internet Archive snapshot https://web.archive.org/web/20260327234142/https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html"
+            },
+            {
+              "url": "https://www.federalregister.gov/documents/2014/02/06/2014-02280/clia-program-and-hipaa-privacy-rule-patients-access-to-test-reports",
+              "quotes": [
+                "laboratories subject to CLIA may provide the patient, the patient's personal representative, or a person designated by the patient, as applicable, with copies of completed test reports"
+              ],
+              "raw_file": "data/raw/testing/fedreg_clia_hipaa_2014.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        }
+      ],
+      "request_letter_template": {
+        "label": "General information, not legal advice",
+        "title": "Request for a copy of my genetic test data",
+        "how_to_use": "Edit the [brackets], delete the lines that don't apply, and send it to the lab's records, privacy or client services contact, or ask your doctor to send it. Many labs have their own form (see the lab list above). If they do, use their form, and you can attach this letter.",
+        "body": "[Your name]\n[Your address]\n[Email / phone]\n[Date]\n\nTo: [Laboratory name], [Records / Privacy / Client Services team]\n\nSubject: Request for a copy of genetic test data for [patient name], date of birth [DD/MM/YYYY]\n\nDear [Laboratory name] team,\n\nI am writing to request a copy of the personal health information you hold about [me / my child, for whom I am the parent or legal guardian], relating to the following genetic test:\n- Test name: [e.g. exome sequencing / gene panel]\n- Lab reference or accession number: [number, if known]\n- Ordering clinician: [name, hospital]\n- Approximate date of sample: [month / year]\n\nPlease provide:\n1. The final test report(s).\n2. Where available, the underlying data files generated by the test, such as [VCF] [BAM or CRAM] [FASTQ].\n\n[US: I make this request under my right of access in the HIPAA Privacy Rule (45 CFR 164.524).]\n[EU/UK: I make this request under my right of access in Article 15 of the GDPR / UK GDPR.]\n\nI would prefer to receive the files electronically, by [secure download link / other method]. If you need a specific form, proof of identity, proof of guardianship or a signature from my doctor, please tell me what is required. If there is a fee, please tell me the amount before you process the request.\n\nI understand that raw data files can contain unconfirmed or unreported findings, and that I should discuss any questions about them with a doctor or genetic counsellor.\n\nThank you,\n[Signature]\n[Printed name]\n[Relationship to patient, if not the patient]",
+        "cites": [
+          "right:us-hipaa-access",
+          "right:eu-gdpr-art15",
+          "right:uk-gdpr-art15"
+        ]
+      }
+    },
+    {
+      "id": "if_no_testing",
+      "title": "If you haven't had genetic testing",
+      "summary": "There are three main routes: through a doctor or genetic counsellor, through a sponsored no-cost testing programme, or through a research study. Most need a doctor's involvement. Sponsored programmes are paid for by companies or charities, and the companies may receive de-identified data.",
+      "route_types": {
+        "doctor_or_counsellor": "Through a doctor or genetic counsellor",
+        "sponsored_no_cost": "Sponsored no-cost testing programmes",
+        "research": "Research programmes"
+      },
+      "routes": [
+        {
+          "id": "route:nsgc-find-gc",
+          "route_type": "doctor_or_counsellor",
+          "name": "NSGC 'Find a Genetic Counselor' directory",
+          "organisation": "National Society of Genetic Counselors (NSGC)",
+          "region": [
+            "US"
+          ],
+          "also_covers": "Canada",
+          "referral_needed": "no",
+          "referral_note": "Anyone can search the directory, in person or by telehealth. NSGC says it is not a referral service. Check your insurance coverage.",
+          "eligibility_in_source_words": "The Find a Genetic Counselor directory offers access to over 3,300 genetic counselors (US and Canada).",
+          "source": {
+            "url": "https://findageneticcounselor.nsgc.org/",
+            "quotes": [
+              "The Find a Genetic Counselor directory offers access to over 3,300 genetic counselors (US and Canada).",
+              "The NSGC Find A Counselor directory is not a referral service but rather a service to provide an up-to-date list of NSGC members.",
+              "Searches of the “Via Telehealth” directory will show genetic counselors who meet with patients via phone, video conferencing and other virtual methods.",
+              "Check with your insurance company to verify coverage of genetic counseling, testing and authorized providers."
+            ],
+            "raw_file": "data/raw/testing/nsgc_find_gc.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "route:nhs-genetic-testing",
+          "route_type": "doctor_or_counsellor",
+          "name": "Genetic and genomic testing on the NHS",
+          "organisation": "NHS (nhs.uk)",
+          "region": [
+            "UK"
+          ],
+          "referral_needed": "yes",
+          "referral_note": "A doctor must refer you. Testing is free on the NHS when a hospital specialist refers you. You may also be referred to a genetic counsellor.",
+          "eligibility_in_source_words": "You will generally only be referred if you have a suspected genetic health condition or if you have a particular type of cancer.",
+          "source": {
+            "url": "https://www.nhs.uk/conditions/genetic-and-genomic-testing/",
+            "quotes": [
+              "You need to be referred for genetic testing by a doctor.",
+              "Genetic testing is free on the NHS if you are referred for it by a hospital specialist.",
+              "You will generally only be referred if you have a suspected genetic health condition or if you have a particular type of cancer.",
+              "If you're offered a genetic test, you may be referred to a genetic counsellor to help you think through what the test means for you and your family.",
+              "Page last reviewed: 01 March 2023"
+            ],
+            "raw_file": "data/raw/testing/nhs_genetic_testing.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "route:genetic-alliance-uk-nhs-services",
+          "route_type": "doctor_or_counsellor",
+          "name": "NHS Genetic Services in the UK (regional clinical genetics services)",
+          "organisation": "Genetic Alliance UK",
+          "region": [
+            "UK"
+          ],
+          "referral_needed": "yes",
+          "referral_note": "Lists the regional NHS clinical genetics services, where doctors and genetic counsellors work. Access is normally through an NHS referral (see the NHS entry). The page lists contact details for each region; check them with the service before use.",
+          "eligibility_in_source_words": "Clinical genetics services – where doctors and genetic counsellors diagnose genetic conditions and/or assess the risk a patient will inherit or develop a genetic condition",
+          "source": {
+            "url": "https://geneticalliance.org.uk/information/services-and-testing/nhs-genetic-services-in-the-uk/",
+            "quotes": [
+              "Clinical genetics services – where doctors and genetic counsellors diagnose genetic conditions and/or assess the risk a patient will inherit or develop a genetic condition",
+              "Medical genetics services cover areas of England with populations of between 1 and 5 million people."
+            ],
+            "raw_file": "data/raw/testing/geneticalliance_nhs_services.txt",
+            "retrieved": "2026-10-04",
+            "fetched_via": "brightdata"
+          }
+        },
+        {
+          "id": "route:nhs-gms-wgs-rare",
+          "route_type": "doctor_or_counsellor",
+          "name": "Whole genome sequencing for rare disease (NHS Genomic Medicine Service, England)",
+          "organisation": "NHS England Genomic Medicine Service",
+          "region": [
+            "UK"
+          ],
+          "referral_needed": "yes",
+          "referral_note": "NHS clinicians request it. The National Genomic Test Directory sets who can be offered it.",
+          "eligibility_in_source_words": "The National Genomic Test Directory specifies which patients may be offered a WGS test; this should be targeted primarily at situations where a genetic diagnosis will affect the healthcare of a patient or their family members.",
+          "source": {
+            "url": "https://www.genomicseducation.hee.nhs.uk/supporting-the-nhs-genomic-medicine-service/requesting-whole-genome-sequencing-information-for-clinicians/",
+            "quotes": [
+              "Initially, WGS will only be available for patients with certain rare diseases and cancers.",
+              "The National Genomic Test Directory specifies which patients may be offered a WGS test; this should be targeted primarily at situations where a genetic diagnosis will affect the healthcare of a patient or their family members."
+            ],
+            "raw_file": "data/raw/testing/hee_requesting_wgs.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://www.england.nhs.uk/wp-content/uploads/2021/07/genome-sequencing-rare-disease-patient-information.pdf",
+              "quotes": [
+                "Through the NHS Genomic Medicine Service, whole genome sequencing is now available for certain conditions where the scientific evidence shows it can help improve patient care."
+              ],
+              "raw_file": "data/raw/testing/nhs_wgs_rare_patient_info.txt",
+              "retrieved": "2026-10-04"
+            },
+            {
+              "url": "https://www.england.nhs.uk/genomics/nhs-genomic-med-service/",
+              "quotes": [
+                "To be the first national health care system to offer whole genome sequencing as part of routine care."
+              ],
+              "raw_file": "data/raw/testing/nhs_gms_service.txt",
+              "retrieved": "2026-10-04",
+              "fetched_via": "brightdata"
+            }
+          ]
+        },
+        {
+          "id": "route:eu-ern",
+          "route_type": "doctor_or_counsellor",
+          "name": "European Reference Networks (ERNs) for rare diseases",
+          "organisation": "European Commission",
+          "region": [
+            "EU"
+          ],
+          "referral_needed": "yes",
+          "referral_note": "Families cannot contact an ERN directly. With your consent, your healthcare provider can consult the right ERN through national health rules.",
+          "eligibility_in_source_words": "Individual patients cannot directly access ERNs. However, with the patient's consent, healthcare providers can exchange information and consult the appropriate ERN member under national health regulations.",
+          "source": {
+            "url": "https://health.ec.europa.eu/rare-diseases-and-european-reference-networks/european-reference-networks_en",
+            "quotes": [
+              "Individual patients cannot directly access ERNs. However, with the patient's consent, healthcare providers can exchange information and consult the appropriate ERN member under national health regulations.",
+              "There are currently 24 ERNs across the EU and Norway"
+            ],
+            "raw_file": "data/raw/testing/ec_ern.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "route:behind-the-seizure",
+          "route_type": "sponsored_no_cost",
+          "name": "Behind the Seizure® program",
+          "organisation": "Labcorp / Invitae (offered in partnership with BioMarin)",
+          "region": [
+            "US"
+          ],
+          "referral_needed": "yes",
+          "referral_note": "A healthcare professional orders the test and confirms the child is eligible.",
+          "eligibility_in_source_words": "Children under the age of 10 who experienced their first unprovoked seizure between 2 and 5 years of age (inclusive)",
+          "sponsorship_as_stated": "Behind the Seizure is offered in partnership with BioMarin",
+          "data_sharing_as_stated": "Third parties and commercial organizations may receive de-identified (pseudonymized) patient data from this program, but at no time would they receive patient identifiable information.",
+          "counselling_as_stated": "Individuals tested through the Behind the Seizure program are eligible for post-test genetic counseling to help them understand their test results.",
+          "source": {
+            "url": "https://www.invitae.com/sponsored-testing/behind-the-seizure",
+            "quotes": [
+              "Sponsored, no-charge genetic testing",
+              "To be eligible for this program, patients in the US must meet the following criteria",
+              "Children under the age of 10 who experienced their first unprovoked seizure between 2 and 5 years of age (inclusive)",
+              "Behind the Seizure is offered in partnership with BioMarin",
+              "Healthcare professionals must confirm that patients meet certain criteria to use the program.",
+              "Third parties and commercial organizations may receive de-identified (pseudonymized) patient data from this program, but at no time would they receive patient identifiable information.",
+              "Individuals tested through the Behind the Seizure program are eligible for post-test genetic counseling to help them understand their test results."
+            ],
+            "raw_file": "data/raw/testing/behind_the_seizure.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "route:detect-lsds",
+          "route_type": "sponsored_no_cost",
+          "name": "Detect Lysosomal Storage Diseases (Detect LSDs) program",
+          "organisation": "Labcorp / Invitae (sponsor names are not given in the page text)",
+          "region": [
+            "US"
+          ],
+          "also_covers": "Canada",
+          "referral_needed": "yes",
+          "referral_note": "A healthcare professional orders the test and confirms eligibility.",
+          "eligibility_in_source_words": "To qualify for no-charge testing through the Invitae® Detect LSDs program, individuals must be located in the US or Canada and must be suspected of having an LSD based on at least one of the following: Clinical features; Or suspicion of, or known diagnosis of, a specific lysosomal storage disease; Or family history related to LSDs; Or lab result suggestive of LSDs or, presumptive positive newborn screening",
+          "sponsorship_as_stated": "While third parties and commercial organizations may provide financial support for this program, tests and services are performed by Invitae.",
+          "data_sharing_as_stated": "Third parties and commercial organizations may receive de-identified (pseudonymized) patient data from this program, but at no time would they receive patient identifiable information.",
+          "source": {
+            "url": "https://www.invitae.com/en/detectLSDs/",
+            "quotes": [
+              "To qualify for no-charge testing through the Invitae® Detect LSDs program, individuals must be located in the US or Canada and must be suspected of having an LSD based on at least one of the following:",
+              "Clinical features",
+              "Or suspicion of, or known diagnosis of, a specific lysosomal storage disease",
+              "Or family history related to LSDs",
+              "Or lab result suggestive of LSDs or, presumptive positive newborn screening",
+              "While third parties and commercial organizations may provide financial support for this program, tests and services are performed by Invitae.",
+              "Third parties and commercial organizations may receive de-identified (pseudonymized) patient data from this program, but at no time would they receive patient identifiable information.",
+              "Healthcare professionals must confirm that patients meet certain criteria to use the program."
+            ],
+            "raw_file": "data/raw/testing/detect_lsds.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "route:invitae-access-programs",
+          "route_type": "sponsored_no_cost",
+          "name": "Other Labcorp/Invitae genetic testing access programs",
+          "organisation": "Labcorp / Invitae",
+          "region": [
+            "US",
+            "worldwide"
+          ],
+          "referral_needed": "yes",
+          "referral_note": "A clinician orders through a program page. Availability varies by program and country. The page notes that paper ordering is not available in Europe.",
+          "eligibility_in_source_words": "Healthcare professionals must confirm that patients meet certain criteria to use the program.",
+          "data_sharing_as_stated": "Third parties and commercial organizations may receive de-identified (pseudonymized) patient data from this program, but at no time would they receive patient identifiable information.",
+          "source": {
+            "url": "https://www.invitae.com/sponsored-testing/how-to-order",
+            "quotes": [
+              "Prior to ordering a test through a genetic testing access program, discuss testing with the eligible patient and get their consent.",
+              "*Paper ordering for access program testing is not available in Europe.",
+              "Genetic testing and counseling availability varies per country, depending on the program.",
+              "Third parties and commercial organizations may receive de-identified (pseudonymized) patient data from this program, but at no time would they receive patient identifiable information."
+            ],
+            "raw_file": "data/raw/testing/invitae_sponsored_how_to_order.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "id": "route:probably-genetic-free",
+          "route_type": "sponsored_no_cost",
+          "name": "Probably Genetic free (no-cost) testing programs",
+          "organisation": "Probably Genetic",
+          "region": [
+            "US"
+          ],
+          "referral_needed": "no",
+          "referral_note": "Families apply themselves with an online profile and symptom assessment. If insurance-billed testing is offered instead, they are connected with a genetic counsellor.",
+          "eligibility_in_source_words": "Because funding is limited, we have a set number of tests available at any time and eligibility is based on how closely your profile matches an active program.",
+          "sponsorship_as_stated": "Funded through partnerships with patient advocacy groups, researchers, and pharmaceutical developers for specific genetic conditions.",
+          "data_sharing_as_stated": "Furthermore, any data we pass on to any partner we work with is de-identified and aggregated, so your individual data and privacy is always protected.",
+          "source": {
+            "url": "https://help.probablygenetic.com/hc/en-us/articles/38340265453335",
+            "quotes": [
+              "Funded through partnerships with patient advocacy groups, researchers, and pharmaceutical developers for specific genetic conditions.",
+              "Because funding is limited, we have a set number of tests available at any time and eligibility is based on how closely your profile matches an active program.",
+              "Create a profile and complete your symptom and health assessment"
+            ],
+            "raw_file": "data/raw/testing/probablygenetic_pathways.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://help.probablygenetic.com/hc/en-us/articles/11543451006871-How-is-this-funded",
+              "quotes": [
+                "Third parties or commercial organizations (i.e. patient advocacy groups, pharmaceutical or biotech companies, etc.) may provide financial support, but Probably Genetic will be the custodian of your data",
+                "Furthermore, any data we pass on to any partner we work with is de-identified and aggregated, so your individual data and privacy is always protected."
+              ],
+              "raw_file": "data/raw/testing/probablygenetic_funding.txt",
+              "retrieved": "2026-10-04"
+            },
+            {
+              "url": "https://help.probablygenetic.com/hc/en-us/articles/36960941833367-Do-you-offer-genetic-testing-outside-of-the-US",
+              "quotes": [
+                "At this time, we do not offer genetic testing services outside of the United States."
+              ],
+              "raw_file": "data/raw/testing/probablygenetic_outside_us.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "id": "route:udn",
+          "route_type": "research",
+          "name": "Undiagnosed Diseases Network (UDN)",
+          "organisation": "UDN (funded by the US National Institutes of Health)",
+          "region": [
+            "US"
+          ],
+          "referral_needed": "yes",
+          "referral_note": "Families submit the case online, but must upload a study recommendation letter from a healthcare provider. Insurance is not required.",
+          "eligibility_in_source_words": "Ideal participants for the UDN include individuals with: One or more objective findings pertinent to the phenotype for which a case was submitted. No diagnosis despite evaluation by specialists who assessed the patient for the objective finding(s). Agreement for the storage and sharing of information and biomaterials, in an identified fashion amongst the UDN centers, and in a de-identified fashion to research sites beyond the network.",
+          "data_sharing_as_stated": "Agreement for the storage and sharing of information and biomaterials, in an identified fashion amongst the UDN centers, and in a de-identified fashion to research sites beyond the network.",
+          "source": {
+            "url": "https://undiagnosed.hms.harvard.edu/faq/",
+            "quotes": [
+              "One or more objective findings pertinent to the phenotype for which a case was submitted.",
+              "No diagnosis despite evaluation by specialists who assessed the patient for the objective finding(s).",
+              "Agreement for the storage and sharing of information and biomaterials, in an identified fashion amongst the UDN centers, and in a de-identified fashion to research sites beyond the network.",
+              "You will also need to ask your health care provider to write a study recommendation letter.",
+              "Having insurance is not a requirement to participate in this study."
+            ],
+            "raw_file": "data/raw/testing/udn_faq.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://undiagnosed.hms.harvard.edu/apply/",
+              "quotes": [
+                "The Undiagnosed Diseases Network (UDN) is a research study that is funded by the National Institutes of Health."
+              ],
+              "raw_file": "data/raw/testing/udn_apply.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "id": "route:rare-genomes-project",
+          "route_type": "research",
+          "name": "Rare Genomes Project (RGP)",
+          "organisation": "Broad Institute of MIT and Harvard",
+          "region": [
+            "US"
+          ],
+          "status": "paused: not accepting new families (checked 2026-10-04)",
+          "referral_needed": "no",
+          "referral_note": "Families apply themselves, but must already be under the care of a medical provider. Participation is remote and free.",
+          "eligibility_in_source_words": "To be eligible, participants must: Have a rare and genetically undiagnosed condition; Live in the United States; Be currently under the care of a medical provider that is helping to understand the cause of the condition; Have access to a telephone and/or a computer",
+          "data_sharing_as_stated": "We will also share de-identified data broadly with the scientific community to empower discoveries in rare disease research.",
+          "source": {
+            "url": "https://raregenomes.org/",
+            "quotes": [
+              "The Rare Genomes Project has temporarily paused acceptance of applications from new families through this website.",
+              "We will also share de-identified data broadly with the scientific community to empower discoveries in rare disease research."
+            ],
+            "raw_file": "data/raw/testing/rare_genomes_project.txt",
+            "retrieved": "2026-10-04"
+          },
+          "extra_sources": [
+            {
+              "url": "https://raregenomes.org/eligibility-criteria",
+              "quotes": [
+                "Have a rare and genetically undiagnosed condition",
+                "Live in the United States",
+                "Be currently under the care of a medical provider that is helping to understand the cause of the condition",
+                "Have access to a telephone and/or a computer",
+                "Participation is entirely remote and free-of-cost."
+              ],
+              "raw_file": "data/raw/testing/rgp_eligibility.txt",
+              "retrieved": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "id": "route:nhs-gms-research-library",
+          "route_type": "research",
+          "name": "Genomics England research library (offered alongside NHS genome sequencing)",
+          "organisation": "NHS Genomic Medicine Service / Genomics England",
+          "region": [
+            "UK"
+          ],
+          "referral_needed": "yes",
+          "referral_note": "Offered only to patients who are having NHS whole genome sequencing (see the NHS GMS entry). It is optional.",
+          "eligibility_in_source_words": "As part of the NHS Genomic Medicine Service all patients will be given the option to contribute their genomic data to a secure library so that approved researchers may access that data in a form that does not identify them.",
+          "data_sharing_as_stated": "approved researchers may access that data in a form that does not identify them",
+          "source": {
+            "url": "https://www.england.nhs.uk/wp-content/uploads/2021/07/genome-sequencing-rare-disease-patient-information.pdf",
+            "quotes": [
+              "As part of the NHS Genomic Medicine Service all patients will be given the option to contribute their genomic data to a secure library so that approved researchers may access that data in a form that does not identify them."
+            ],
+            "raw_file": "data/raw/testing/nhs_wgs_rare_patient_info.txt",
+            "retrieved": "2026-10-04"
+          }
+        }
+      ]
+    },
+    {
+      "id": "consumer_tests",
+      "title": "Consumer tests: what they can and can't tell you",
+      "summary": "Many consumer DNA tests use a genotyping array (a 'SNP chip'). It checks a preset list of DNA positions and does not read your genes in full the way clinical sequencing does. Arrays work well for common variants but are unreliable for very rare variants, which usually cause single-gene (rare) conditions. A rare-disease result in consumer raw data can be a false alarm, and a clear result does not rule a condition out. Any finding needs confirming with a clinical test ordered through a doctor or genetic counsellor.",
+      "not_recommendations": "This atlas does not list or recommend consumer DNA companies.",
+      "points": [
+        {
+          "plain": "Consumer chips are good at common variants, but most of their 'positive' calls for very rare variants are wrong.",
+          "source": {
+            "url": "https://www.bmj.com/content/372/bmj.n214",
+            "quotes": [
+              "SNP chips are extremely unreliable for genotyping very rare pathogenic variants and should not be used to guide health decisions without validation.",
+              "Single gene disorders are usually caused by genetic variants that are very rare in the population (<1 in 10 000 people).",
+              "only 16% of 4757 heterozygous genotypes from the SNP chips were confirmed with sequencing data",
+              "many SNP chip designs, including those used by many direct to consumer companies, have been augmented to include rare pathogenic variants that cause single gene disorders"
+            ],
+            "raw_file": "data/raw/testing/bmj_weedon_2021.txt",
+            "retrieved": "2026-10-04",
+            "source_note": "Weedon MN et al. Use of SNP chips to detect rare pathogenic variants: retrospective, population based diagnostic evaluation. BMJ 2021;372:n214. PMID 33589468."
+          }
+        },
+        {
+          "plain": "Downloaded consumer raw data contains thousands of extra rare variants that have not been quality-checked.",
+          "source": {
+            "url": "https://www.bmj.com/content/372/bmj.n214",
+            "quotes": [
+              "which will often include many thousands of additional rare variants assayed on their SNP chip that have not undergone stringent quality control and are therefore much more likely to be false positives"
+            ],
+            "raw_file": "data/raw/testing/bmj_weedon_2021.txt",
+            "retrieved": "2026-10-04"
+          }
+        },
+        {
+          "plain": "When a clinical lab re-tested variants that people found in their consumer raw data, 40% turned out to be false positives.",
+          "source": {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29565420/",
+            "quotes": [
+              "Our analyses indicated that 40% of variants in a variety of genes reported in DTC raw data were false positives."
+            ],
+            "raw_file": "data/raw/testing/pubmed_29565420.txt",
+            "retrieved": "2026-10-04",
+            "fetched_via": "ncbi-eutils",
+            "source_note": "Tandy-Connor S et al. False-positive results released by direct-to-consumer genetic tests highlight the importance of clinical confirmation testing for appropriate patient care. Genet Med 2018;20(12):1515-1521."
+          }
+        },
+        {
+          "plain": "A negative consumer result doesn't rule a condition out, because these tests don't look at every variant. The FDA says they are not a substitute for seeing a healthcare provider.",
+          "source": {
+            "url": "https://www.fda.gov/medical-devices/in-vitro-diagnostics/direct-consumer-tests",
+            "quotes": [
+              "Some genetic health risk tests do not report all known genetic variants that might contribute to an increased risk of disease.",
+              "Remember that direct-to-consumer tests are not a substitute for a traditional health care evaluation, including health screenings and visits to your health care provider.",
+              "For genetic tests, you may also consider speaking with a genetic counselor, board-certified medical geneticist, or other equivalent health care provider.",
+              "Content current as of:"
+            ],
+            "raw_file": "data/raw/testing/fda_dtc.txt",
+            "retrieved": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}

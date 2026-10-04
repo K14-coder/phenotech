@@ -1,27 +1,83 @@
 {
-  "merge_nodes": {
-    "therapy:amifampridine": "therapy:3-4-diaminopyridine",
-    "therapy:cap-002": "therapy:aav-stxbp1-gene-replacement",
-    "therapy:aav9-slc6a1": "therapy:aav-slc6a1-gene-replacement"
+ "merge_nodes": {
+  "therapy:amifampridine": "therapy:3-4-diaminopyridine",
+  "therapy:cap-002": "therapy:aav-stxbp1-gene-replacement",
+  "therapy:aav9-slc6a1": "therapy:aav-slc6a1-gene-replacement"
+ },
+ "drop_edges": [
+  "therapy:3-4-diaminopyridine|developed_for|disease:VAMP2"
+ ],
+ "drop_nodes": [],
+ "node_patches": {
+  "therapy:fenfluramine": {
+   "attrs": {
+    "modality": "repurposed_drug",
+    "stage": "approved",
+    "approvals": [
+     {
+      "agency": "FDA",
+      "label": "FINTEPLA",
+      "source_ref": "FDA-label:FINTEPLA"
+     }
+    ]
+   }
   },
-  "drop_edges": [
-    "therapy:3-4-diaminopyridine|developed_for|disease:VAMP2"
-  ],
-  "drop_nodes": [],
-  "node_patches": {
-    "therapy:fenfluramine": {
-      "attrs": {
-        "modality": "repurposed_drug",
-        "stage": "approved",
-        "approvals": [
-          {
-            "agency": "FDA",
-            "label": "FINTEPLA",
-            "source_ref": "FDA-label:FINTEPLA"
-          }
-        ]
-      }
+  "gene:RIT1": {
+   "_note": "family_rasopathy.json took UniProt Q9C0K0 (BCL11B, whose synonyms include 'RIT1') from a gene_exact search; RIT1 is Q92963. Values from the EBI Proteins API record of Q92963 (data/raw/comparison/uniprot_Q92963.json).",
+   "synonyms": [
+    "GTP-binding protein Rit1",
+    "MGC125864",
+    "MGC125865",
+    "Ras-like protein expressed in many tissues",
+    "Ras-like without CAAX protein 1",
+    "RIBB",
+    "RIT",
+    "ROC1"
+   ],
+   "xrefs": {
+    "HGNC": "HGNC:10023",
+    "NCBIGene": "6016",
+    "Ensembl": "ENSG00000143622",
+    "OMIM": [
+     "609591"
+    ],
+    "UniProt": "Q92963",
+    "MANE_Select": "ENST00000368323.8"
+   },
+   "summary": "Plays a crucial role in coupling nerve growth factor (NGF) stimulation to the activation of both EPHB2 and MAPK14 signaling pathways and in NGF-dependent neuronal differentiation (PubMed:15632082). Involved in ELK1 transactivation through the Ras-MAPK signaling cascade that mediates a wide variety of cellular functions, including cell proliferation, survival, and differentiation (PubMed:23791108). Recognized by LZTR1, which mediates its ubiquitination by a BCR (BTB-CUL3-RBX1) E3 ubiquitin-protein ligase complex (PubMed:40934300)",
+   "attrs": {
+    "protein": "GTP-binding protein Rit1",
+    "function": "Plays a crucial role in coupling nerve growth factor (NGF) stimulation to the activation of both EPHB2 and MAPK14 signaling pathways and in NGF-dependent neuronal differentiation (PubMed:15632082). Involved in ELK1 transactivation through the Ras-MAPK signaling cascade that mediates a wide variety of cellular functions, including cell proliferation, survival, and differentiation (PubMed:23791108). Recognized by LZTR1, which mediates its ubiquitination by a BCR (BTB-CUL3-RBX1) E3 ubiquitin-protein ligase complex (PubMed:40934300)",
+    "protein_length_aa": 219,
+    "cds_length_bp": 660,
+    "family": "rasopathy",
+    "pathway_role": "RAS/MAPK signal transducer or activator"
+   },
+   "sources": [
+    {
+     "source": "HGNC",
+     "ref": "HGNC:10023",
+     "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:10023",
+     "title": "HGNC symbol report: RIT1 (Ras like without CAAX 1)",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "UniProt",
+     "ref": "Q92963",
+     "url": "https://www.uniprot.org/uniprotkb/Q92963/entry",
+     "title": "UniProtKB RIT1_HUMAN (GTP-binding protein Rit1)",
+     "quote": "Plays a crucial role in coupling nerve growth factor (NGF) stimulation to the activation of both EPHB2 and MAPK14 signaling pathways and in NGF-dependent neuronal differentiation (PubMed:15632082). Involved in ELK1 transactivation through the Ras-MAPK signaling cascade that mediates a wide variety of cellular functions, including cell proliferation, survival, and differentiation (PubMed:23791108). Recognized by LZTR1, which mediates its ubiquitination by a BCR (BTB-CUL3-RBX1) E3 ubiquitin-protein ligase complex (PubMed:40934300)",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "verified": true,
+     "retrieved": "2026-10-04"
     }
-  },
-  "edge_patches": {}
+   ]
+  }
+ },
+ "edge_patches": {}
 }

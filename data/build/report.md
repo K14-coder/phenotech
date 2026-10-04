@@ -1,12 +1,12 @@
 # Graph build report
 
-Built 2026-10-04T02:00:28+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanistic_links.json`, `openai_extracted.json`.
+Built 2026-10-04T02:34:42+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
 
 ## Summary
 
-- **1411 nodes, 2946 edges, 17 clusters, 60 gaps**
-- Edges with at least one source: **2946/2946**
-- Evidence items with a verbatim quote: 1963/4137; quotes string-verified against the stored source: **1963/1963**
+- **1411 nodes, 2953 edges, 17 clusters, 61 gaps**
+- Edges with at least one source: **2953/2953**
+- Evidence items with a verbatim quote: 1963/4149; quotes string-verified against the stored source: **1963/1963**
 - Contested edges (with counter-evidence): 76
 - OpenAI cross-check: 68 cited sources re-read and stamped; 111 new supporting and 2 new contradicting sources added (contradictions wait for human review)
 - Cited sources where the OpenAI reading disagrees with the curators: 8
@@ -23,7 +23,8 @@ Built 2026-10-04T02:00:28+00:00 from `biology.json`, `community.json`, `contribu
 | `family_dee.json` | 351 | 668 |
 | `family_lysosomal.json` | 416 | 653 |
 | `family_rasopathy.json` | 248 | 548 |
-| `hypotheses.json` | 0 | 5 |
+| `hypotheses.json` | 0 | 10 |
+| `mechanism_hierarchy.json` | 0 | 2 |
 | `mechanistic_links.json` | 0 | 406 |
 | `openai_extracted.json` | 17 | 57 |
 
@@ -69,16 +70,17 @@ Built 2026-10-04T02:00:28+00:00 from `biology.json`, `community.json`, `contribu
 - similar_protein_structure: 32
 - mechanistically_similar: 22
 - shares_pharmacology: 13
-- candidate_for: 5
+- candidate_for: 10
+- part_of: 2
 
 ## Edges by evidence level
 
-- curated: 1389
+- curated: 1391
 - inferred: 685
 - observational: 403
 - clinical: 274
 - experimental: 190
-- hypothesis: 5
+- hypothesis: 10
 
 ## Problems
 

@@ -37,7 +37,7 @@ NODE_TYPES = {
 EDGE_TYPES = {
     "causes", "variant_in", "has_effect", "participates_in", "driven_by", "has_phenotype",
     "shares_mechanism", "similar_phenotype", "serves", "maintains", "covers", "studies", "tests",
-    "targets", "developed_for", "candidate_for", "works_on", "authored", "funds", "about",
+    "targets", "developed_for", "candidate_for", "part_of", "works_on", "authored", "funds", "about",
     # computed disease-disease links on six mechanistic axes (pipeline/derive/mechsim.py)
     "shares_gene", "shares_pathway", "shares_tissue", "similar_mutation_spectrum", "similar_protein_fate",
     "similar_protein_structure", "shares_pharmacology", "mechanistically_similar",
@@ -384,7 +384,7 @@ def main():
         nodes.pop(node_id, None)
     for node_id, patch in overrides.get("node_patches", {}).items():
         if node_id in nodes:
-            nodes[node_id].update(patch)
+            nodes[node_id].update({k: v for k, v in patch.items() if not k.startswith("_")})
     rejected = set(overrides.get("drop_edges", []))
     for edge_id, patch in overrides.get("edge_patches", {}).items():
         if edge_id in edges:

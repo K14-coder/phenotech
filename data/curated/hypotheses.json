@@ -2,15 +2,544 @@
  "nodes": [],
  "edges": [
   {
+   "id": "therapy:hsct-krabbe|candidate_for|disease:IDS",
+   "source": "therapy:hsct-krabbe",
+   "target": "disease:IDS",
+   "type": "candidate_for",
+   "label": "hypothesis: could be worth testing",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 1 of 42 candidate diseases for Haematopoietic stem cell transplantation (early, for Krabbe disease) by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Lysosomal enzyme deficiency (reached by 10 of 45 diseases, via driven by). Symptoms closest to IDUA-related disorders (mucopolysaccharidosis type I: Hurler, Hurler-Scheie, Scheie) (similarity 0.23). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the targets edge therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency (confidence 0.6). Nobody has tested this.",
+   "evidence_level": "hypothesis",
+   "status": "unverified",
+   "confidence": 0.2,
+   "evidence": [
+    {
+     "source": "Atlas",
+     "ref": "therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency",
+     "url": "/path?from=disease:IDS&to=therapy:hsct-krabbe",
+     "title": "Haematopoietic stem cell transplantation (early, for Krabbe disease) acts on lysosomal enzyme deficiency: cell transplantation (donor cells supply the enzyme).",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "Atlas",
+     "ref": "disease:IDS|driven_by|mech:lysosomal-enzyme-deficiency",
+     "url": "/path?from=disease:IDS&to=therapy:hsct-krabbe",
+     "title": "Published work links IDS-related disorders to lysosomal enzyme deficiency. MPS II mutations cause a loss of enzyme activity.",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "title": "Haematopoietic stem cell transplantation for IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome)",
+    "family": "lysosomal",
+    "generated_by": "pipeline/derive/hypotheses.py",
+    "transfer_score": 2.0,
+    "transfer_rank": 1,
+    "transfer_n_candidates": 42,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:lysosomal-enzyme-deficiency",
+       "idf": 1.43,
+       "n_diseases": 10,
+       "chain": "driven_by",
+       "edges": [
+        "disease:IDS|driven_by|mech:lysosomal-enzyme-deficiency"
+       ]
+      }
+     ],
+     "clusters": [
+      "cluster:lysosomal-family"
+     ],
+     "nearest_known_by_phenotype": "disease:IDUA",
+     "phenotype_similarity": 0.23
+    },
+    "therapy_class": "therapy:hsct-krabbe",
+    "known_diseases_of_class": [
+     "disease:ARSA",
+     "disease:GALC",
+     "disease:IDUA"
+    ],
+    "chain": {
+     "mechanisms": [
+      "mech:lysosomal-enzyme-deficiency"
+     ],
+     "edges": [
+      "therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency",
+      "disease:IDS|driven_by|mech:lysosomal-enzyme-deficiency"
+     ],
+     "contested_edges": []
+    },
+    "weakest_link": "the targets edge therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency (confidence 0.6)",
+    "caveats": [
+     {
+      "kind": "family-level mechanism",
+      "text": "The shared mechanism is reached by 10 diseases, so it does not single out this pair; it says the approach is plausible, not that this disease responds."
+     },
+     {
+      "kind": "untested",
+      "text": "No study, case report or model result in the graph tests this therapy class in this disease."
+     }
+    ],
+    "caveat_citations": [],
+    "test": {
+     "what_to_test": "In a IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome) model, measure the readout of Lysosomal enzyme deficiency with and without Haematopoietic stem cell transplantation (early, for Krabbe disease), using the same readout that supported it in its known disease(s).",
+     "existing_assay_or_model": [],
+     "existing_assay_note": "Model/assay assets in the graph for this disease or for the therapy's known diseases.",
+     "what_result_would_change_the_plan": "Rescue of the readout in the model would justify a carefully monitored n-of-1 or case-series design; no effect retires the link."
+    }
+   }
+  },
+  {
+   "id": "therapy:trametinib|candidate_for|disease:SHOC2",
+   "source": "therapy:trametinib",
+   "target": "disease:SHOC2",
+   "type": "candidate_for",
+   "label": "hypothesis: could be worth testing",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 1 of 35 candidate diseases for Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: MAPK cascade (reached by 8 of 45 diseases, via pathway). Symptoms closest to RAF1-related disorders (similarity 0.365). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the targets edge therapy:trametinib|targets|mech:mapk-cascade (confidence 0.7). Nobody has tested this.",
+   "evidence_level": "hypothesis",
+   "status": "unverified",
+   "confidence": 0.2,
+   "evidence": [
+    {
+     "source": "Atlas",
+     "ref": "therapy:trametinib|targets|mech:mapk-cascade",
+     "url": "/path?from=disease:SHOC2&to=therapy:trametinib",
+     "title": "Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies acts on mapk cascade (see quoted source).",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "Atlas",
+     "ref": "therapy:selumetinib|targets|mech:mapk-cascade",
+     "url": "/path?from=disease:SHOC2&to=therapy:trametinib",
+     "title": "Selumetinib (MEK1/2 inhibitor; Koselugo) acts on mapk cascade (see quoted source).",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "Atlas",
+     "ref": "therapy:mirdametinib|targets|mech:mapk-cascade",
+     "url": "/path?from=disease:SHOC2&to=therapy:trametinib",
+     "title": "Mirdametinib (MEK1/2 inhibitor; Gomekli) acts on mapk cascade (see quoted source).",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "Atlas",
+     "ref": "therapy:binimetinib|targets|mech:mapk-cascade",
+     "url": "/path?from=disease:SHOC2&to=therapy:trametinib",
+     "title": "Binimetinib (MEK162; MEK1/2 inhibitor) acts on mapk cascade (see quoted source).",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "Atlas",
+     "ref": "gene:SHOC2|participates_in|mech:mapk-cascade",
+     "url": "/path?from=disease:SHOC2&to=therapy:trametinib",
+     "title": "Gene Ontology annotates SHOC2 to mapk cascade (GO:0000165 or a more specific child term), evidence codes IDA.",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "title": "Trametinib for SHOC2-related disorders (Mazzanti syndrome)",
+    "family": "rasopathy",
+    "generated_by": "pipeline/derive/hypotheses.py",
+    "transfer_score": 2.0,
+    "transfer_rank": 1,
+    "transfer_n_candidates": 35,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:mapk-cascade",
+       "idf": 1.63,
+       "n_diseases": 8,
+       "chain": "pathway",
+       "edges": [
+        "gene:SHOC2|participates_in|mech:mapk-cascade"
+       ]
+      }
+     ],
+     "clusters": [
+      "cluster:rasopathy-family"
+     ],
+     "nearest_known_by_phenotype": "disease:RAF1",
+     "phenotype_similarity": 0.365
+    },
+    "therapy_class": "class:mek-inhibitors",
+    "known_diseases_of_class": [
+     "disease:BRAF",
+     "disease:HRAS",
+     "disease:KRAS",
+     "disease:LZTR1",
+     "disease:MAP2K1",
+     "disease:NF1",
+     "disease:PTPN11",
+     "disease:RAF1",
+     "disease:RIT1",
+     "disease:SOS1"
+    ],
+    "chain": {
+     "mechanisms": [
+      "mech:mapk-cascade"
+     ],
+     "edges": [
+      "therapy:trametinib|targets|mech:mapk-cascade",
+      "therapy:selumetinib|targets|mech:mapk-cascade",
+      "therapy:mirdametinib|targets|mech:mapk-cascade",
+      "therapy:binimetinib|targets|mech:mapk-cascade",
+      "gene:SHOC2|participates_in|mech:mapk-cascade"
+     ],
+     "contested_edges": []
+    },
+    "weakest_link": "the targets edge therapy:trametinib|targets|mech:mapk-cascade (confidence 0.7)",
+    "caveats": [
+     {
+      "kind": "family-level mechanism",
+      "text": "The shared mechanism is reached by 8 diseases, so it does not single out this pair; it says the approach is plausible, not that this disease responds."
+     },
+     {
+      "kind": "untested",
+      "text": "No study, case report or model result in the graph tests this therapy class in this disease."
+     }
+    ],
+    "caveat_citations": [],
+    "test": {
+     "what_to_test": "In a SHOC2-related disorders (Mazzanti syndrome) model, measure the readout of MAPK cascade with and without Trametinib (MEK1/2 inhibitor; Mekinist), off-label in RASopathies, using the same readout that supported it in its known disease(s).",
+     "existing_assay_or_model": [],
+     "existing_assay_note": "Model/assay assets in the graph for this disease or for the therapy's known diseases.",
+     "what_result_would_change_the_plan": "Rescue of the readout in the model would justify a carefully monitored n-of-1 or case-series design; no effect retires the link."
+    }
+   }
+  },
+  {
+   "id": "therapy:aminopyridine-presynaptic-boost|candidate_for|disease:STXBP1",
+   "source": "therapy:aminopyridine-presynaptic-boost",
+   "target": "disease:STXBP1",
+   "type": "candidate_for",
+   "label": "hypothesis: could be worth testing",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 1 of 41 candidate diseases for Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Ca2+-triggered neurotransmitter exocytosis (reached by 6 of 45 diseases, via pathway). Symptoms closest to VAMP2-related disorders (similarity 0.084). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the pathway chain plus the contested mechanism: STXBP1 reaches this drug class only through 'the gene participates in Ca2+-triggered exocytosis', while the direction of its own release defect is disputed in the literature.. Nobody has tested this.",
+   "evidence_level": "hypothesis",
+   "status": "unverified",
+   "confidence": 0.16,
+   "evidence": [
+    {
+     "source": "Atlas",
+     "ref": "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+     "url": "/path?from=disease:STXBP1&to=therapy:aminopyridine-presynaptic-boost",
+     "title": "3,4-Diaminopyridine (amifampridine) is aimed at ca2+-triggered neurotransmitter exocytosis.",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "Atlas",
+     "ref": "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+     "url": "/path?from=disease:STXBP1&to=therapy:aminopyridine-presynaptic-boost",
+     "title": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost is aimed at ca2+-triggered neurotransmitter exocytosis.",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "Atlas",
+     "ref": "gene:STXBP1|participates_in|mech:ca-triggered-exocytosis",
+     "url": "/path?from=disease:STXBP1&to=therapy:aminopyridine-presynaptic-boost",
+     "title": "Gene Ontology annotates STXBP1 to ca2+-triggered neurotransmitter exocytosis (GO:0048791 or a more specific child term), evidence codes IBA.",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "title": "Aminopyridines for STXBP1 variants that reduce release",
+    "family": "snare",
+    "generated_by": "pipeline/derive/hypotheses.py",
+    "transfer_score": 1.7471,
+    "transfer_rank": 1,
+    "transfer_n_candidates": 41,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:ca-triggered-exocytosis",
+       "idf": 1.88,
+       "n_diseases": 6,
+       "chain": "pathway",
+       "edges": [
+        "gene:STXBP1|participates_in|mech:ca-triggered-exocytosis"
+       ]
+      }
+     ],
+     "clusters": [
+      "cluster:dose-and-stability",
+      "cluster:dominant-negative-fusion-block",
+      "cluster:release-timing-and-clamping",
+      "cluster:snareopathy-family",
+      "cluster:dee-snare-shared-symptoms"
+     ],
+     "nearest_known_by_phenotype": "disease:VAMP2",
+     "phenotype_similarity": 0.084
+    },
+    "therapy_class": "class:aminopyridines",
+    "known_diseases_of_class": [
+     "disease:SNAP25",
+     "disease:SYT1",
+     "disease:SYT2",
+     "disease:VAMP2"
+    ],
+    "chain": {
+     "mechanisms": [
+      "mech:ca-triggered-exocytosis"
+     ],
+     "edges": [
+      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+      "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+      "gene:STXBP1|participates_in|mech:ca-triggered-exocytosis"
+     ],
+     "contested_edges": [
+      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+      "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis"
+     ]
+    },
+    "weakest_link": "the pathway chain plus the contested mechanism: STXBP1 reaches this drug class only through 'the gene participates in Ca2+-triggered exocytosis', while the direction of its own release defect is disputed in the literature.",
+    "caveats": [
+     {
+      "kind": "opposite-effect variants in one gene",
+      "text": "A homozygous STXBP1 variant (L446F) causes a gain-of-function phenotype for release probability, the opposite of the group a release-boosting drug would help."
+     },
+     {
+      "kind": "counter-evidence on a chain edge",
+      "text": "Every STXBP1 mechanism edge in the graph is contested: haploinsufficiency, destabilization and dominant-negative all carry counter-evidence."
+     },
+     {
+      "kind": "tissue mismatch",
+      "text": "No neuromuscular presentation is recorded for STXBP1, and the drug's clinical evidence base is neuromuscular."
+     },
+     {
+      "kind": "competing explanation",
+      "text": "Reduced release in STXBP1 comes with depleted interacting proteins (syntaxin-1, Doc2), so pushing the remaining machinery harder may not be equivalent to restoring it."
+     }
+    ],
+    "caveat_citations": [
+     {
+      "source": "PubMed",
+      "ref": "PMID:26280581",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26280581/",
+      "title": "Analysis of conditional heterozygous STXBP1 mutations in human neurons.",
+      "year": 2015,
+      "quote": "We demonstrated that heterozygous STXBP1 mutations lower the levels of Munc18-1 protein and its binding partner, the t-SNARE-protein Syntaxin-1, by approximately 30% and decrease spontaneous and evoked neurotransmitter release by nearly 50%.",
+      "kind": "publication",
+      "study_type": "functional_study",
+      "extracted_by": "agent-curation",
+      "verified": true,
+      "retrieved": "2026-10-03"
+     },
+     {
+      "source": "PubMed",
+      "ref": "PMID:38242640",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38242640/",
+      "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
+      "year": 2024,
+      "quote": "Using biochemical and cell biological readouts on mouse brains, cultured mouse neurons and heterologous cells, we found that the synaptic Munc18-1 interactors Doc2A and Doc2B are unstable in the absence of Munc18-1 and aggregate in the presence of disease-causing Munc18-1 mutants.",
+      "kind": "publication",
+      "study_type": "functional_study",
+      "extracted_by": "agent-curation",
+      "verified": true,
+      "retrieved": "2026-10-03"
+     }
+    ],
+    "test": {
+     "what_to_test": "In Stxbp1+/- neurons and in patient iPSC neurons, test whether 4-aminopyridine restores evoked release, and whether it does so without increasing spontaneous release or network hyperexcitability.",
+     "existing_assay_or_model": [
+      "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "asset:stxbp1-floxed-null-mouse-innoser",
+      "asset:stxbp1-s-comb-consortium",
+      "PMID:40181518"
+     ],
+     "existing_assay_note": "STXBP1 is the only disease in the slice with model assets and an outcome-measure consortium, so this is the cheapest of these experiments to run.",
+     "what_result_would_change_the_plan": "Network hyperexcitability in the model would end it immediately. A clean rescue would make a variant-stratified pilot arguable - but only alongside the existing anti-seizure regimen, never instead."
+    }
+   }
+  },
+  {
+   "id": "therapy:acetylcholinesterase-inhibitor-cms|candidate_for|disease:SNAP25",
+   "source": "therapy:acetylcholinesterase-inhibitor-cms",
+   "target": "disease:SNAP25",
+   "type": "candidate_for",
+   "label": "hypothesis: could be worth testing",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 1 of 44 candidate diseases for Acetylcholinesterase inhibitors (e.g. pyridostigmine) by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Ca2+-triggered neurotransmitter exocytosis (reached by 6 of 45 diseases, via pathway). Symptoms closest to SYT2-related presynaptic congenital myasthenic syndromes (similarity 0.154). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the pathway chain and the phenotype split: the drug argument needs a neuromuscular junction, and whether SNAP25-DEE patients have one has never been measured.. Nobody has tested this.",
+   "evidence_level": "hypothesis",
+   "status": "unverified",
+   "confidence": 0.2,
+   "evidence": [
+    {
+     "source": "Atlas",
+     "ref": "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+     "url": "/path?from=disease:SNAP25&to=therapy:acetylcholinesterase-inhibitor-cms",
+     "title": "Acetylcholinesterase inhibitors (e.g. pyridostigmine) is aimed at ca2+-triggered neurotransmitter exocytosis.",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "Atlas",
+     "ref": "gene:SNAP25|participates_in|mech:ca-triggered-exocytosis",
+     "url": "/path?from=disease:SNAP25&to=therapy:acetylcholinesterase-inhibitor-cms",
+     "title": "Gene Ontology annotates SNAP25 to ca2+-triggered neurotransmitter exocytosis (GO:0048791 or a more specific child term), evidence codes IEA.",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "counter_evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:40181518",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40181518/",
+     "title": "SNAP25 variant I67N: synaptic phenotypes, drug response and proteome changes in human neurons.",
+     "year": 2025,
+     "quote": "These phenotypes were distinct from those of human neurons differentiated from hiPSCs originating from a patient carrying the V48F variant, which displayed an increase in spontaneous release.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-03",
+     "supports": false
+    }
+   ],
+   "attrs": {
+    "title": "Cholinesterase inhibitors for the SNAP25 myasthenic presentation",
+    "family": "snare",
+    "generated_by": "pipeline/derive/hypotheses.py",
+    "transfer_score": 1.7,
+    "transfer_rank": 1,
+    "transfer_n_candidates": 44,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:ca-triggered-exocytosis",
+       "idf": 1.88,
+       "n_diseases": 6,
+       "chain": "pathway",
+       "edges": [
+        "gene:SNAP25|participates_in|mech:ca-triggered-exocytosis"
+       ]
+      }
+     ],
+     "clusters": [
+      "cluster:dominant-negative-fusion-block",
+      "cluster:release-timing-and-clamping",
+      "cluster:snareopathy-family"
+     ],
+     "nearest_known_by_phenotype": "disease:SYT2",
+     "phenotype_similarity": 0.154
+    },
+    "therapy_class": "therapy:acetylcholinesterase-inhibitor-cms",
+    "known_diseases_of_class": [
+     "disease:SYT2"
+    ],
+    "chain": {
+     "mechanisms": [
+      "mech:ca-triggered-exocytosis"
+     ],
+     "edges": [
+      "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
+      "gene:SNAP25|participates_in|mech:ca-triggered-exocytosis"
+     ],
+     "contested_edges": []
+    },
+    "weakest_link": "the pathway chain and the phenotype split: the drug argument needs a neuromuscular junction, and whether SNAP25-DEE patients have one has never been measured.",
+    "caveats": [
+     {
+      "kind": "tissue mismatch for most patients",
+      "text": "SNAP25 mostly causes a central epileptic encephalopathy; the cholinergic argument only applies to the myasthenic presentation (CMS18)."
+     },
+     {
+      "kind": "mechanism mismatch",
+      "text": "Cholinesterase inhibitors prolong the action of each released packet; they do not fix a presynaptic release defect, and in presynaptic CMS they are usually combined with a release-boosting drug rather than used alone."
+     },
+     {
+      "kind": "variant-class mismatch",
+      "text": "One SNAP25 variant is strongly dominant-negative and another increases spontaneous release, so the gene label does not predict who could benefit."
+     }
+    ],
+    "caveat_citations": [
+     {
+      "source": "PubMed",
+      "ref": "PMID:22911480",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22911480/",
+      "title": "Congenital myasthenic syndromes: current diagnostic and therapeutic approaches.",
+      "year": 2012,
+      "quote": "Most patients are eligible for drug therapy with esterase inhibitors, 3, 4-diaminopyridine, ephedrine, fluoxetine or quinidine, but the effect of these drugs differs depending on the underlying genetic defect.",
+      "kind": "publication",
+      "study_type": "review",
+      "extracted_by": "agent-curation",
+      "verified": true,
+      "retrieved": "2026-10-03"
+     },
+     {
+      "source": "PubMed",
+      "ref": "PMID:41579375",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41579375/",
+      "title": "SNAP-25 disease variants affect synaptic transmission by destabilizing SNARE complexes within a multimeric SNARE ring.",
+      "year": 2026,
+      "quote": "I192N is strongly dominant negative in the presence of wild-type SNAP-25, leading to impaired survival and reduced synaptic release.",
+      "kind": "publication",
+      "study_type": "functional_study",
+      "extracted_by": "agent-curation",
+      "verified": true,
+      "retrieved": "2026-10-03"
+     },
+     {
+      "source": "PubMed",
+      "ref": "PMID:40181518",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40181518/",
+      "title": "SNAP25 variant I67N: synaptic phenotypes, drug response and proteome changes in human neurons.",
+      "year": 2025,
+      "quote": "These phenotypes were distinct from those of human neurons differentiated from hiPSCs originating from a patient carrying the V48F variant, which displayed an increase in spontaneous release.",
+      "kind": "publication",
+      "study_type": "functional_study",
+      "extracted_by": "agent-curation",
+      "verified": true,
+      "retrieved": "2026-10-03",
+      "supports": false
+     }
+    ],
+    "test": {
+     "what_to_test": "In people with SNAP25 variants and any fatigable weakness, do repetitive nerve stimulation first; only those with a decrement are candidates for a supervised cholinesterase-inhibitor trial, with the SYT2 case series as the comparison.",
+     "existing_assay_or_model": [
+      "asset:cmdir-congenital-muscle-disease-registry",
+      "asset:rare-x-data-collection",
+      "study:NCT02562066",
+      "PMID:32776697"
+     ],
+     "existing_assay_note": "The SYT2 biallelic series (PMID:32776697) is the closest precedent: three patients improved on a cholinesterase inhibitor. CMDIR and the RARE-X SNAP25 programme can find the patients.",
+     "what_result_would_change_the_plan": "A decrement on repetitive nerve stimulation in SNAP25-DEE patients without a myasthenic diagnosis would turn this from a hypothesis into a clinical screening question (gap:snap25-cms-vs-dee)."
+    }
+   }
+  },
+  {
    "id": "therapy:4-phenylbutyrate|candidate_for|disease:VAMP2",
    "source": "therapy:4-phenylbutyrate",
    "target": "disease:VAMP2",
    "type": "candidate_for",
    "label": "hypothesis: could be worth testing",
-   "explanation": "HYPOTHESIS, not a finding. The atlas computed this chain: VAMP2-related disorders is linked to Protein destabilization / misfolding by a driven_by edge, and 4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone) is aimed at that same mechanism; and the graph has no developed_for edge and no study testing this therapy class in this disease. The weakest link is the VAMP2 destabilization edge itself: it is a contested edge resting on one 2025 paper, and that paper's 'stability' defect is a SNARE-complex property, not the degradation-and-rescue event that 4-PBA is known to act on. Nobody has tested this.",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 1 of 43 candidate diseases for 4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone) by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Protein destabilization / misfolding (reached by 8 of 45 diseases, via driven by). Symptoms closest to STXBP1-related disorders (similarity 0.084). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the VAMP2 destabilization edge itself: it is a contested edge resting on one 2025 paper, and that paper's 'stability' defect is a SNARE-complex property, not the degradation-and-rescue event that 4-PBA is known to act on.. Nobody has tested this.",
    "evidence_level": "hypothesis",
    "status": "unverified",
-   "confidence": 0.18,
+   "confidence": 0.16,
    "evidence": [
     {
      "source": "Atlas",
@@ -63,24 +592,50 @@
    ],
    "attrs": {
     "title": "4-phenylbutyrate for VAMP2-related disorders",
+    "family": "snare",
     "generated_by": "pipeline/derive/hypotheses.py",
+    "transfer_score": 1.4353,
+    "transfer_rank": 1,
+    "transfer_n_candidates": 43,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:protein-destabilization",
+       "idf": 1.63,
+       "n_diseases": 8,
+       "chain": "driven_by",
+       "edges": [
+        "disease:VAMP2|driven_by|mech:protein-destabilization"
+       ]
+      }
+     ],
+     "clusters": [
+      "cluster:dose-and-stability",
+      "cluster:release-timing-and-clamping",
+      "cluster:snareopathy-family",
+      "cluster:dee-snare-shared-symptoms"
+     ],
+     "nearest_known_by_phenotype": "disease:STXBP1",
+     "phenotype_similarity": 0.084
+    },
+    "therapy_class": "therapy:4-phenylbutyrate",
+    "known_diseases_of_class": [
+     "disease:SLC6A1",
+     "disease:STXBP1"
+    ],
     "chain": {
-     "kind": "driven_by",
-     "cluster": null,
+     "mechanisms": [
+      "mech:protein-destabilization"
+     ],
      "edges": [
       "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
       "disease:VAMP2|driven_by|mech:protein-destabilization"
      ],
-     "edge_confidences": [
-      0.8,
-      0.5
-     ],
      "contested_edges": [
       "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
       "disease:VAMP2|driven_by|mech:protein-destabilization"
-     ],
-     "mechanism": "mech:protein-destabilization",
-     "therapy_class": "class:4-pba"
+     ]
     },
     "weakest_link": "the VAMP2 destabilization edge itself: it is a contested edge resting on one 2025 paper, and that paper's 'stability' defect is a SNARE-complex property, not the degradation-and-rescue event that 4-PBA is known to act on.",
     "caveats": [
@@ -184,168 +739,124 @@
      ],
      "existing_assay_note": "The readouts already exist on both sides: the Munc18-1 chaperone work (PMID:30266908) established the rescue assay, and the VAMP2 variant panel (PMID:41166419) established the electrophysiology. The MRC UCL-Yale VAMP2 project is the group with the reagents; Simons Searchlight covers VAMP2 patients.",
      "what_result_would_change_the_plan": "If 4-PBA raises variant VAMP2 protein and restores evoked release without increasing spontaneous release, VAMP2 becomes a candidate arm on the existing phenylbutyrate protocol. If it only raises wild-type protein, or if it increases spontaneous release, the hypothesis dies and the STXBP1/SLC6A1 bridge stays a two-gene story."
-    },
-    "not_addressed_check": {
-     "developed_for_edges_for_class": [
-      "disease:SLC6A1",
-      "disease:STXBP1"
-     ],
-     "studies_testing_class": [
-      "study:NCT04937062",
-      "study:NCT04937062",
-      "study:NCT07847918"
-     ]
     }
    }
   },
   {
-   "id": "therapy:3-4-diaminopyridine|candidate_for|disease:STXBP1",
-   "source": "therapy:3-4-diaminopyridine",
-   "target": "disease:STXBP1",
+   "id": "therapy:arimoclomol|candidate_for|disease:HEXA",
+   "source": "therapy:arimoclomol",
+   "target": "disease:HEXA",
    "type": "candidate_for",
    "label": "hypothesis: could be worth testing",
-   "explanation": "HYPOTHESIS, not a finding. The atlas computed this chain: the gene participates in Ca2+-triggered neurotransmitter exocytosis and 3,4-Diaminopyridine (amifampridine) is aimed at that process (no edge says this disease dysregulates it in the direction the drug pushes); and the graph has no developed_for edge and no study testing this therapy class in this disease. The weakest link is the pathway chain plus the contested mechanism: STXBP1 reaches this drug class only through 'the gene participates in Ca2+-triggered exocytosis', while the direction of its own release defect is disputed in the literature. Nobody has tested this.",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 1 of 44 candidate diseases for Arimoclomol (heat-shock response amplifier) by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Protein destabilization / misfolding (reached by 8 of 45 diseases, via driven by). Symptoms closest to NPC1-related disorders (Niemann-Pick disease type C) (similarity 0.039). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the driven_by edge disease:HEXA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease:NPC1, similarity 0.039). Nobody has tested this.",
    "evidence_level": "hypothesis",
    "status": "unverified",
-   "confidence": 0.12,
+   "confidence": 0.18,
    "evidence": [
     {
      "source": "Atlas",
-     "ref": "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-     "url": "/path?from=disease:STXBP1&to=therapy:3-4-diaminopyridine",
-     "title": "3,4-Diaminopyridine (amifampridine) is aimed at ca2+-triggered neurotransmitter exocytosis.",
+     "ref": "therapy:arimoclomol|targets|mech:protein-destabilization",
+     "url": "/path?from=disease:HEXA&to=therapy:arimoclomol",
+     "title": "Arimoclomol (heat-shock response amplifier) acts on protein destabilization / misfolding: heat shock protein amplifier (oral), with miglustat. Its mechanism is debated; see counter-evidence.",
      "kind": "computed",
      "extracted_by": "computed",
      "retrieved": "2026-10-04"
     },
     {
      "source": "Atlas",
-     "ref": "gene:STXBP1|causes|disease:STXBP1",
-     "url": "/path?from=disease:STXBP1&to=therapy:3-4-diaminopyridine",
-     "title": "Variants in STXBP1 cause STXBP1-related disorders. Curated databases record 1 clinical entity under this umbrella; gene-disease validity is definitive in Gene2Phenotype and definitive in ClinGen.",
-     "kind": "computed",
-     "extracted_by": "computed",
-     "retrieved": "2026-10-04"
-    },
-    {
-     "source": "Atlas",
-     "ref": "gene:STXBP1|participates_in|mech:ca-triggered-exocytosis",
-     "url": "/path?from=disease:STXBP1&to=therapy:3-4-diaminopyridine",
-     "title": "Gene Ontology annotates STXBP1 to ca2+-triggered neurotransmitter exocytosis (GO:0048791 or a more specific child term), evidence codes IBA.",
+     "ref": "disease:HEXA|driven_by|mech:protein-destabilization",
+     "url": "/path?from=disease:HEXA&to=therapy:arimoclomol",
+     "title": "Published work links HEXA-related disorders to protein destabilization / misfolding. Many HEXA variants can be partly rescued in patient cells by a pharmacological chaperone (pyrimethamine).",
      "kind": "computed",
      "extracted_by": "computed",
      "retrieved": "2026-10-04"
     }
    ],
    "attrs": {
-    "title": "Aminopyridines for STXBP1 variants that reduce release",
+    "title": "Arimoclomol for HEXA-related disorders (Tay-Sachs disease)",
+    "family": "lysosomal",
     "generated_by": "pipeline/derive/hypotheses.py",
-    "chain": {
-     "kind": "pathway",
-     "cluster": null,
-     "edges": [
-      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-      "gene:STXBP1|causes|disease:STXBP1",
-      "gene:STXBP1|participates_in|mech:ca-triggered-exocytosis"
+    "transfer_score": 1.2781,
+    "transfer_rank": 1,
+    "transfer_n_candidates": 44,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:protein-destabilization",
+       "idf": 1.63,
+       "n_diseases": 8,
+       "chain": "driven_by",
+       "edges": [
+        "disease:HEXA|driven_by|mech:protein-destabilization"
+       ]
+      }
      ],
-     "edge_confidences": [
-      0.8,
-      0.92,
-      0.8
+     "clusters": [
+      "cluster:lysosomal-family"
+     ],
+     "nearest_known_by_phenotype": "disease:NPC1",
+     "phenotype_similarity": 0.039
+    },
+    "therapy_class": "therapy:arimoclomol",
+    "known_diseases_of_class": [
+     "disease:NPC1"
+    ],
+    "chain": {
+     "mechanisms": [
+      "mech:protein-destabilization"
+     ],
+     "edges": [
+      "therapy:arimoclomol|targets|mech:protein-destabilization",
+      "disease:HEXA|driven_by|mech:protein-destabilization"
      ],
      "contested_edges": [
-      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis"
-     ],
-     "mechanism": "mech:ca-triggered-exocytosis",
-     "therapy_class": "class:aminopyridines"
+      "therapy:arimoclomol|targets|mech:protein-destabilization"
+     ]
     },
-    "weakest_link": "the pathway chain plus the contested mechanism: STXBP1 reaches this drug class only through 'the gene participates in Ca2+-triggered exocytosis', while the direction of its own release defect is disputed in the literature.",
+    "weakest_link": "the driven_by edge disease:HEXA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease:NPC1, similarity 0.039)",
     "caveats": [
      {
-      "kind": "opposite-effect variants in one gene",
-      "text": "A homozygous STXBP1 variant (L446F) causes a gain-of-function phenotype for release probability, the opposite of the group a release-boosting drug would help."
-     },
-     {
       "kind": "counter-evidence on a chain edge",
-      "text": "Every STXBP1 mechanism edge in the graph is contested: haploinsufficiency, destabilization and dominant-negative all carry counter-evidence."
+      "text": "Contested edges on the chain: therapy:arimoclomol|targets|mech:protein-destabilization."
      },
      {
-      "kind": "tissue mismatch",
-      "text": "No neuromuscular presentation is recorded for STXBP1, and the drug's clinical evidence base is neuromuscular."
+      "kind": "family-level mechanism",
+      "text": "The shared mechanism is reached by 8 diseases, so it does not single out this pair; it says the approach is plausible, not that this disease responds."
      },
      {
-      "kind": "competing explanation",
-      "text": "Reduced release in STXBP1 comes with depleted interacting proteins (syntaxin-1, Doc2), so pushing the remaining machinery harder may not be equivalent to restoring it."
+      "kind": "phenotype mismatch",
+      "text": "Symptom overlap with the closest known disease is minimal (similarity 0.039)."
+     },
+     {
+      "kind": "untested",
+      "text": "No study, case report or model result in the graph tests this therapy class in this disease."
      }
     ],
-    "caveat_citations": [
-     {
-      "source": "PubMed",
-      "ref": "PMID:26280581",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/26280581/",
-      "title": "Analysis of conditional heterozygous STXBP1 mutations in human neurons.",
-      "year": 2015,
-      "quote": "We demonstrated that heterozygous STXBP1 mutations lower the levels of Munc18-1 protein and its binding partner, the t-SNARE-protein Syntaxin-1, by approximately 30% and decrease spontaneous and evoked neurotransmitter release by nearly 50%.",
-      "kind": "publication",
-      "study_type": "functional_study",
-      "extracted_by": "agent-curation",
-      "verified": true,
-      "retrieved": "2026-10-03"
-     },
-     {
-      "source": "PubMed",
-      "ref": "PMID:38242640",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/38242640/",
-      "title": "Disease-linked mutations in Munc18-1 deplete synaptic Doc2.",
-      "year": 2024,
-      "quote": "Using biochemical and cell biological readouts on mouse brains, cultured mouse neurons and heterologous cells, we found that the synaptic Munc18-1 interactors Doc2A and Doc2B are unstable in the absence of Munc18-1 and aggregate in the presence of disease-causing Munc18-1 mutants.",
-      "kind": "publication",
-      "study_type": "functional_study",
-      "extracted_by": "agent-curation",
-      "verified": true,
-      "retrieved": "2026-10-03"
-     }
-    ],
+    "caveat_citations": [],
     "test": {
-     "what_to_test": "In Stxbp1+/- neurons and in patient iPSC neurons, test whether 4-aminopyridine restores evoked release, and whether it does so without increasing spontaneous release or network hyperexcitability.",
-     "existing_assay_or_model": [
-      "asset:stxbp1-haploinsufficient-mice-xue-lab",
-      "asset:stxbp1-floxed-null-mouse-innoser",
-      "asset:stxbp1-s-comb-consortium",
-      "PMID:40181518"
-     ],
-     "existing_assay_note": "STXBP1 is the only disease in the slice with model assets and an outcome-measure consortium, so this is the cheapest of these experiments to run.",
-     "what_result_would_change_the_plan": "Network hyperexcitability in the model would end it immediately. A clean rescue would make a variant-stratified pilot arguable - but only alongside the existing anti-seizure regimen, never instead."
-    },
-    "not_addressed_check": {
-     "developed_for_edges_for_class": [
-      "disease:SNAP25",
-      "disease:SYT1",
-      "disease:SYT2",
-      "disease:VAMP2"
-     ],
-     "studies_testing_class": [
-      "study:NCT02562066",
-      "study:NCT02562066"
-     ]
+     "what_to_test": "In a HEXA-related disorders (Tay-Sachs disease) model, measure the readout of Protein destabilization / misfolding with and without Arimoclomol (heat-shock response amplifier), using the same readout that supported it in its known disease(s).",
+     "existing_assay_or_model": [],
+     "existing_assay_note": "Model/assay assets in the graph for this disease or for the therapy's known diseases.",
+     "what_result_would_change_the_plan": "Rescue of the readout in the model would justify a carefully monitored n-of-1 or case-series design; no effect retires the link."
     }
    }
   },
   {
-   "id": "therapy:3-4-diaminopyridine|candidate_for|disease:STX1B",
-   "source": "therapy:3-4-diaminopyridine",
+   "id": "therapy:aminopyridine-presynaptic-boost|candidate_for|disease:STX1B",
+   "source": "therapy:aminopyridine-presynaptic-boost",
    "target": "disease:STX1B",
    "type": "candidate_for",
    "label": "hypothesis: could be worth testing",
-   "explanation": "HYPOTHESIS, not a finding. The atlas computed this chain: the gene participates in Ca2+-triggered neurotransmitter exocytosis and 3,4-Diaminopyridine (amifampridine) is aimed at that process (no edge says this disease dysregulates it in the direction the drug pushes); and the graph has no developed_for edge and no study testing this therapy class in this disease. The weakest link is the direction of effect: the gene's own variants point both ways, so a gene-level hypothesis is unsafe and only a variant-level one survives. Nobody has tested this.",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 2 of 41 candidate diseases for Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Ca2+-triggered neurotransmitter exocytosis (reached by 6 of 45 diseases, via pathway). Symptoms closest to VAMP2-related disorders (similarity 0.072). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the direction of effect: the gene's own variants point both ways, so a gene-level hypothesis is unsafe and only a variant-level one survives.. Nobody has tested this.",
    "evidence_level": "hypothesis",
    "status": "unverified",
-   "confidence": 0.12,
+   "confidence": 0.13,
    "evidence": [
     {
      "source": "Atlas",
      "ref": "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-     "url": "/path?from=disease:STX1B&to=therapy:3-4-diaminopyridine",
+     "url": "/path?from=disease:STX1B&to=therapy:aminopyridine-presynaptic-boost",
      "title": "3,4-Diaminopyridine (amifampridine) is aimed at ca2+-triggered neurotransmitter exocytosis.",
      "kind": "computed",
      "extracted_by": "computed",
@@ -353,9 +864,9 @@
     },
     {
      "source": "Atlas",
-     "ref": "gene:STX1B|causes|disease:STX1B",
-     "url": "/path?from=disease:STX1B&to=therapy:3-4-diaminopyridine",
-     "title": "Variants in STX1B cause STX1B-related epilepsies. Curated databases record 2 clinical entities under this umbrella; gene-disease validity is strong in Gene2Phenotype and definitive in ClinGen.",
+     "ref": "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
+     "url": "/path?from=disease:STX1B&to=therapy:aminopyridine-presynaptic-boost",
+     "title": "Aminopyridines (4-AP / 3,4-DAP) as a presynaptic boost is aimed at ca2+-triggered neurotransmitter exocytosis.",
      "kind": "computed",
      "extracted_by": "computed",
      "retrieved": "2026-10-04"
@@ -363,7 +874,7 @@
     {
      "source": "Atlas",
      "ref": "gene:STX1B|participates_in|mech:ca-triggered-exocytosis",
-     "url": "/path?from=disease:STX1B&to=therapy:3-4-diaminopyridine",
+     "url": "/path?from=disease:STX1B&to=therapy:aminopyridine-presynaptic-boost",
      "title": "Gene Ontology annotates STX1B to ca2+-triggered neurotransmitter exocytosis (GO:0048791 or a more specific child term), evidence codes IEA.",
      "kind": "computed",
      "extracted_by": "computed",
@@ -372,25 +883,52 @@
    ],
    "attrs": {
     "title": "Aminopyridines for the loss-of-function end of STX1B epilepsy",
+    "family": "snare",
     "generated_by": "pipeline/derive/hypotheses.py",
+    "transfer_score": 1.6452,
+    "transfer_rank": 2,
+    "transfer_n_candidates": 41,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:ca-triggered-exocytosis",
+       "idf": 1.88,
+       "n_diseases": 6,
+       "chain": "pathway",
+       "edges": [
+        "gene:STX1B|participates_in|mech:ca-triggered-exocytosis"
+       ]
+      }
+     ],
+     "clusters": [
+      "cluster:release-timing-and-clamping",
+      "cluster:snareopathy-family",
+      "cluster:dee-snare-shared-symptoms"
+     ],
+     "nearest_known_by_phenotype": "disease:VAMP2",
+     "phenotype_similarity": 0.072
+    },
+    "therapy_class": "class:aminopyridines",
+    "known_diseases_of_class": [
+     "disease:SNAP25",
+     "disease:SYT1",
+     "disease:SYT2",
+     "disease:VAMP2"
+    ],
     "chain": {
-     "kind": "pathway",
-     "cluster": null,
+     "mechanisms": [
+      "mech:ca-triggered-exocytosis"
+     ],
      "edges": [
       "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-      "gene:STX1B|causes|disease:STX1B",
+      "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis",
       "gene:STX1B|participates_in|mech:ca-triggered-exocytosis"
      ],
-     "edge_confidences": [
-      0.8,
-      0.92,
-      0.6
-     ],
      "contested_edges": [
-      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis"
-     ],
-     "mechanism": "mech:ca-triggered-exocytosis",
-     "therapy_class": "class:aminopyridines"
+      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
+      "therapy:aminopyridine-presynaptic-boost|targets|mech:ca-triggered-exocytosis"
+     ]
     },
     "weakest_link": "the direction of effect: the gene's own variants point both ways, so a gene-level hypothesis is unsafe and only a variant-level one survives.",
     "caveats": [
@@ -461,327 +999,302 @@
      ],
      "existing_assay_note": "The STX1B iPSC network assay exists (PMID:42673765) and the SNAP25 I67N study (PMID:40181518) is the template for using 4-AP as a readout in human neurons. No STX1B patient organisation or registry exists to find participants.",
      "what_result_would_change_the_plan": "If 4-AP rescues the release-down class and worsens the release-up class, this becomes an argument for functional classification before any drug, not for the drug."
-    },
-    "not_addressed_check": {
-     "developed_for_edges_for_class": [
-      "disease:SNAP25",
-      "disease:SYT1",
-      "disease:SYT2",
-      "disease:VAMP2"
-     ],
-     "studies_testing_class": [
-      "study:NCT02562066",
-      "study:NCT02562066"
-     ]
     }
    }
   },
   {
-   "id": "therapy:acetylcholinesterase-inhibitor-cms|candidate_for|disease:SNAP25",
-   "source": "therapy:acetylcholinesterase-inhibitor-cms",
-   "target": "disease:SNAP25",
+   "id": "therapy:hsct-krabbe|candidate_for|disease:GLA",
+   "source": "therapy:hsct-krabbe",
+   "target": "disease:GLA",
    "type": "candidate_for",
    "label": "hypothesis: could be worth testing",
-   "explanation": "HYPOTHESIS, not a finding. The atlas computed this chain: the gene participates in Ca2+-triggered neurotransmitter exocytosis and Acetylcholinesterase inhibitors (e.g. pyridostigmine) is aimed at that process (no edge says this disease dysregulates it in the direction the drug pushes); and the graph has no developed_for edge and no study testing this therapy class in this disease. The weakest link is the pathway chain and the phenotype split: the drug argument needs a neuromuscular junction, and whether SNAP25-DEE patients have one has never been measured. Nobody has tested this.",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 2 of 42 candidate diseases for Haematopoietic stem cell transplantation (early, for Krabbe disease) by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Lysosomal enzyme deficiency (reached by 10 of 45 diseases, via driven by). Symptoms closest to GALC-related disorders (Krabbe disease) (similarity 0.064). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the targets edge therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency (confidence 0.6). Nobody has tested this.",
    "evidence_level": "hypothesis",
    "status": "unverified",
-   "confidence": 0.14,
+   "confidence": 0.17,
    "evidence": [
     {
      "source": "Atlas",
-     "ref": "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
-     "url": "/path?from=disease:SNAP25&to=therapy:acetylcholinesterase-inhibitor-cms",
-     "title": "Acetylcholinesterase inhibitors (e.g. pyridostigmine) is aimed at ca2+-triggered neurotransmitter exocytosis.",
+     "ref": "therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency",
+     "url": "/path?from=disease:GLA&to=therapy:hsct-krabbe",
+     "title": "Haematopoietic stem cell transplantation (early, for Krabbe disease) acts on lysosomal enzyme deficiency: cell transplantation (donor cells supply the enzyme).",
      "kind": "computed",
      "extracted_by": "computed",
      "retrieved": "2026-10-04"
     },
     {
      "source": "Atlas",
-     "ref": "gene:SNAP25|causes|disease:SNAP25",
-     "url": "/path?from=disease:SNAP25&to=therapy:acetylcholinesterase-inhibitor-cms",
-     "title": "Variants in SNAP25 cause SNAP25-related disorders. Curated databases record 2 clinical entities under this umbrella and definitive in ClinGen.",
+     "ref": "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency",
+     "url": "/path?from=disease:GLA&to=therapy:hsct-krabbe",
+     "title": "Published work links GLA-related disorders to lysosomal enzyme deficiency. Fabry disease is due to deficient or absent alpha-galactosidase A activity.",
      "kind": "computed",
      "extracted_by": "computed",
      "retrieved": "2026-10-04"
-    },
-    {
-     "source": "Atlas",
-     "ref": "gene:SNAP25|participates_in|mech:ca-triggered-exocytosis",
-     "url": "/path?from=disease:SNAP25&to=therapy:acetylcholinesterase-inhibitor-cms",
-     "title": "Gene Ontology annotates SNAP25 to ca2+-triggered neurotransmitter exocytosis (GO:0048791 or a more specific child term), evidence codes IEA.",
-     "kind": "computed",
-     "extracted_by": "computed",
-     "retrieved": "2026-10-04"
-    }
-   ],
-   "counter_evidence": [
-    {
-     "source": "PubMed",
-     "ref": "PMID:40181518",
-     "url": "https://pubmed.ncbi.nlm.nih.gov/40181518/",
-     "title": "SNAP25 variant I67N: synaptic phenotypes, drug response and proteome changes in human neurons.",
-     "year": 2025,
-     "quote": "These phenotypes were distinct from those of human neurons differentiated from hiPSCs originating from a patient carrying the V48F variant, which displayed an increase in spontaneous release.",
-     "kind": "publication",
-     "study_type": "functional_study",
-     "extracted_by": "agent-curation",
-     "verified": true,
-     "retrieved": "2026-10-03",
-     "supports": false
     }
    ],
    "attrs": {
-    "title": "Cholinesterase inhibitors for the SNAP25 myasthenic presentation",
+    "title": "Haematopoietic stem cell transplantation for GLA-related disorders (Fabry disease)",
+    "family": "lysosomal",
     "generated_by": "pipeline/derive/hypotheses.py",
-    "chain": {
-     "kind": "pathway",
-     "cluster": null,
-     "edges": [
-      "therapy:acetylcholinesterase-inhibitor-cms|targets|mech:ca-triggered-exocytosis",
-      "gene:SNAP25|causes|disease:SNAP25",
-      "gene:SNAP25|participates_in|mech:ca-triggered-exocytosis"
+    "transfer_score": 1.2768,
+    "transfer_rank": 2,
+    "transfer_n_candidates": 42,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:lysosomal-enzyme-deficiency",
+       "idf": 1.43,
+       "n_diseases": 10,
+       "chain": "driven_by",
+       "edges": [
+        "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency"
+       ]
+      }
      ],
-     "edge_confidences": [
-      0.8,
-      0.5,
-      0.6
+     "clusters": [
+      "cluster:lysosomal-family"
      ],
-     "contested_edges": [],
-     "mechanism": "mech:ca-triggered-exocytosis",
-     "therapy_class": "class:ache-inhibitors"
+     "nearest_known_by_phenotype": "disease:GALC",
+     "phenotype_similarity": 0.064
     },
-    "weakest_link": "the pathway chain and the phenotype split: the drug argument needs a neuromuscular junction, and whether SNAP25-DEE patients have one has never been measured.",
+    "therapy_class": "therapy:hsct-krabbe",
+    "known_diseases_of_class": [
+     "disease:ARSA",
+     "disease:GALC",
+     "disease:IDUA"
+    ],
+    "chain": {
+     "mechanisms": [
+      "mech:lysosomal-enzyme-deficiency"
+     ],
+     "edges": [
+      "therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency",
+      "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency"
+     ],
+     "contested_edges": []
+    },
+    "weakest_link": "the targets edge therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency (confidence 0.6)",
     "caveats": [
      {
-      "kind": "tissue mismatch for most patients",
-      "text": "SNAP25 mostly causes a central epileptic encephalopathy; the cholinergic argument only applies to the myasthenic presentation (CMS18)."
+      "kind": "family-level mechanism",
+      "text": "The shared mechanism is reached by 10 diseases, so it does not single out this pair; it says the approach is plausible, not that this disease responds."
      },
      {
-      "kind": "mechanism mismatch",
-      "text": "Cholinesterase inhibitors prolong the action of each released packet; they do not fix a presynaptic release defect, and in presynaptic CMS they are usually combined with a release-boosting drug rather than used alone."
-     },
-     {
-      "kind": "variant-class mismatch",
-      "text": "One SNAP25 variant is strongly dominant-negative and another increases spontaneous release, so the gene label does not predict who could benefit."
+      "kind": "untested",
+      "text": "No study, case report or model result in the graph tests this therapy class in this disease."
      }
     ],
-    "caveat_citations": [
-     {
-      "source": "PubMed",
-      "ref": "PMID:22911480",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/22911480/",
-      "title": "Congenital myasthenic syndromes: current diagnostic and therapeutic approaches.",
-      "year": 2012,
-      "quote": "Most patients are eligible for drug therapy with esterase inhibitors, 3, 4-diaminopyridine, ephedrine, fluoxetine or quinidine, but the effect of these drugs differs depending on the underlying genetic defect.",
-      "kind": "publication",
-      "study_type": "review",
-      "extracted_by": "agent-curation",
-      "verified": true,
-      "retrieved": "2026-10-03"
-     },
-     {
-      "source": "PubMed",
-      "ref": "PMID:41579375",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41579375/",
-      "title": "SNAP-25 disease variants affect synaptic transmission by destabilizing SNARE complexes within a multimeric SNARE ring.",
-      "year": 2026,
-      "quote": "I192N is strongly dominant negative in the presence of wild-type SNAP-25, leading to impaired survival and reduced synaptic release.",
-      "kind": "publication",
-      "study_type": "functional_study",
-      "extracted_by": "agent-curation",
-      "verified": true,
-      "retrieved": "2026-10-03"
-     },
-     {
-      "source": "PubMed",
-      "ref": "PMID:40181518",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40181518/",
-      "title": "SNAP25 variant I67N: synaptic phenotypes, drug response and proteome changes in human neurons.",
-      "year": 2025,
-      "quote": "These phenotypes were distinct from those of human neurons differentiated from hiPSCs originating from a patient carrying the V48F variant, which displayed an increase in spontaneous release.",
-      "kind": "publication",
-      "study_type": "functional_study",
-      "extracted_by": "agent-curation",
-      "verified": true,
-      "retrieved": "2026-10-03",
-      "supports": false
-     }
-    ],
+    "caveat_citations": [],
     "test": {
-     "what_to_test": "In people with SNAP25 variants and any fatigable weakness, do repetitive nerve stimulation first; only those with a decrement are candidates for a supervised cholinesterase-inhibitor trial, with the SYT2 case series as the comparison.",
-     "existing_assay_or_model": [
-      "asset:cmdir-congenital-muscle-disease-registry",
-      "asset:rare-x-data-collection",
-      "study:NCT02562066",
-      "PMID:32776697"
-     ],
-     "existing_assay_note": "The SYT2 biallelic series (PMID:32776697) is the closest precedent: three patients improved on a cholinesterase inhibitor. CMDIR and the RARE-X SNAP25 programme can find the patients.",
-     "what_result_would_change_the_plan": "A decrement on repetitive nerve stimulation in SNAP25-DEE patients without a myasthenic diagnosis would turn this from a hypothesis into a clinical screening question (gap:snap25-cms-vs-dee)."
-    },
-    "not_addressed_check": {
-     "developed_for_edges_for_class": [
-      "disease:SYT2"
-     ],
-     "studies_testing_class": []
+     "what_to_test": "In a GLA-related disorders (Fabry disease) model, measure the readout of Lysosomal enzyme deficiency with and without Haematopoietic stem cell transplantation (early, for Krabbe disease), using the same readout that supported it in its known disease(s).",
+     "existing_assay_or_model": [],
+     "existing_assay_note": "Model/assay assets in the graph for this disease or for the therapy's known diseases.",
+     "what_result_would_change_the_plan": "Rescue of the readout in the model would justify a carefully monitored n-of-1 or case-series design; no effect retires the link."
     }
    }
   },
   {
-   "id": "therapy:3-4-diaminopyridine|candidate_for|disease:UNC13A",
-   "source": "therapy:3-4-diaminopyridine",
-   "target": "disease:UNC13A",
+   "id": "therapy:arimoclomol|candidate_for|disease:GAA",
+   "source": "therapy:arimoclomol",
+   "target": "disease:GAA",
    "type": "candidate_for",
    "label": "hypothesis: could be worth testing",
-   "explanation": "HYPOTHESIS, not a finding. The atlas computed this chain: the curated cluster 'Presynaptic neuromuscular-junction failure (drug-responsive)' already places UNC13A-related disorders and 3,4-Diaminopyridine (amifampridine) in the same group, but only the other members of that cluster have a therapy edge (no mechanism edge connects this disease to the drug's target mechanism); and the graph has no developed_for edge and no study testing this therapy class in this disease. The weakest link is the pathway chain: UNC13A reaches the aminopyridines only through 'the gene participates in vesicle priming', which is a statement about the protein, not about the direction the drug should push a particular patient's synapse. Nobody has tested this.",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 2 of 44 candidate diseases for Arimoclomol (heat-shock response amplifier) by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Protein destabilization / misfolding (reached by 8 of 45 diseases, via driven by). Symptoms closest to NPC1-related disorders (Niemann-Pick disease type C) (similarity 0.026). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the driven_by edge disease:GAA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease:NPC1, similarity 0.026). Nobody has tested this.",
    "evidence_level": "hypothesis",
    "status": "unverified",
-   "confidence": 0.06,
+   "confidence": 0.15,
    "evidence": [
     {
      "source": "Atlas",
-     "ref": "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-     "url": "/path?from=disease:UNC13A&to=therapy:3-4-diaminopyridine",
-     "title": "3,4-Diaminopyridine (amifampridine) is aimed at ca2+-triggered neurotransmitter exocytosis.",
+     "ref": "therapy:arimoclomol|targets|mech:protein-destabilization",
+     "url": "/path?from=disease:GAA&to=therapy:arimoclomol",
+     "title": "Arimoclomol (heat-shock response amplifier) acts on protein destabilization / misfolding: heat shock protein amplifier (oral), with miglustat. Its mechanism is debated; see counter-evidence.",
      "kind": "computed",
      "extracted_by": "computed",
      "retrieved": "2026-10-04"
     },
     {
      "source": "Atlas",
-     "ref": "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
-     "url": "/path?from=disease:UNC13A&to=therapy:3-4-diaminopyridine",
-     "title": "3,4-Diaminopyridine (amifampridine) has been investigated for SYT2-related disorders (stage: clinical).",
-     "kind": "computed",
-     "extracted_by": "computed",
-     "retrieved": "2026-10-04"
-    },
-    {
-     "source": "Atlas",
-     "ref": "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-     "url": "/path?from=disease:UNC13A&to=therapy:3-4-diaminopyridine",
-     "title": "3,4-Diaminopyridine (amifampridine) is aimed at ca2+-triggered neurotransmitter exocytosis.",
-     "kind": "computed",
-     "extracted_by": "computed",
-     "retrieved": "2026-10-04"
-    },
-    {
-     "source": "Atlas",
-     "ref": "disease:UNC13A|driven_by|mech:loss-of-function",
-     "url": "/path?from=disease:UNC13A&to=therapy:3-4-diaminopyridine",
-     "title": "Published work links UNC13A-related disorders to loss of function. Recessive truncating loss of function with microcephaly and fatal myasthenia.",
+     "ref": "disease:GAA|driven_by|mech:protein-destabilization",
+     "url": "/path?from=disease:GAA&to=therapy:arimoclomol",
+     "title": "Published work links GAA-related disorders to protein destabilization / misfolding. A small-molecule chaperone binds and stabilizes mutant acid alpha-glucosidase.",
      "kind": "computed",
      "extracted_by": "computed",
      "retrieved": "2026-10-04"
     }
    ],
    "attrs": {
-    "title": "Aminopyridines for the UNC13A presynaptic myasthenic presentation",
+    "title": "Arimoclomol for GAA-related disorders (Pompe disease)",
+    "family": "lysosomal",
     "generated_by": "pipeline/derive/hypotheses.py",
-    "chain": {
-     "kind": "cluster",
-     "cluster": "cluster:presynaptic-nmj-treatable",
-     "edges": [
-      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-      "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
-      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-      "disease:UNC13A|driven_by|mech:loss-of-function"
+    "transfer_score": 1.1821,
+    "transfer_rank": 2,
+    "transfer_n_candidates": 44,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:protein-destabilization",
+       "idf": 1.63,
+       "n_diseases": 8,
+       "chain": "driven_by",
+       "edges": [
+        "disease:GAA|driven_by|mech:protein-destabilization"
+       ]
+      }
      ],
-     "edge_confidences": [
-      0.8,
-      0.8,
-      0.8,
-      0.6
+     "clusters": [
+      "cluster:lysosomal-family"
+     ],
+     "nearest_known_by_phenotype": "disease:NPC1",
+     "phenotype_similarity": 0.026
+    },
+    "therapy_class": "therapy:arimoclomol",
+    "known_diseases_of_class": [
+     "disease:NPC1"
+    ],
+    "chain": {
+     "mechanisms": [
+      "mech:protein-destabilization"
+     ],
+     "edges": [
+      "therapy:arimoclomol|targets|mech:protein-destabilization",
+      "disease:GAA|driven_by|mech:protein-destabilization"
      ],
      "contested_edges": [
-      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis",
-      "therapy:3-4-diaminopyridine|developed_for|disease:SYT2",
-      "therapy:3-4-diaminopyridine|targets|mech:ca-triggered-exocytosis"
-     ],
-     "mechanism": "cluster:presynaptic-nmj-treatable",
-     "therapy_class": "class:aminopyridines"
+      "therapy:arimoclomol|targets|mech:protein-destabilization"
+     ]
     },
-    "weakest_link": "the pathway chain: UNC13A reaches the aminopyridines only through 'the gene participates in vesicle priming', which is a statement about the protein, not about the direction the drug should push a particular patient's synapse.",
+    "weakest_link": "the driven_by edge disease:GAA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease:NPC1, similarity 0.026)",
     "caveats": [
      {
-      "kind": "tissue mismatch within one gene",
-      "text": "The release-boosting argument applies to the neuromuscular junction. Most UNC13A patients have a central neurodevelopmental syndrome, where the same drug lowers the seizure threshold."
+      "kind": "counter-evidence on a chain edge",
+      "text": "Contested edges on the chain: therapy:arimoclomol|targets|mech:protein-destabilization."
      },
      {
-      "kind": "variant-class mismatch",
-      "text": "Three mechanisms coexist in UNC13A, including gain of function; a drug that increases release is the wrong direction for the gain-of-function class."
+      "kind": "family-level mechanism",
+      "text": "The shared mechanism is reached by 8 diseases, so it does not single out this pair; it says the approach is plausible, not that this disease responds."
      },
      {
-      "kind": "evidence only from model systems",
-      "text": "The strongest UNC13A release-deficit evidence is one patient's in vitro microelectrode study plus worm and mouse neuron assays."
+      "kind": "phenotype mismatch",
+      "text": "Symptom overlap with the closest known disease is minimal (similarity 0.026)."
      },
      {
-      "kind": "chain weakness",
-      "text": "UNC13A is linked to vesicle priming in the graph, not to Ca2+-triggered exocytosis that the aminopyridines target, so the mechanism match is one step looser than for SNAP25 or SYT2."
+      "kind": "untested",
+      "text": "No study, case report or model result in the graph tests this therapy class in this disease."
      }
     ],
-    "caveat_citations": [
-     {
-      "source": "PubMed",
-      "ref": "PMID:22703551",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/22703551/",
-      "title": "Clinical overview of the seizure risk of dalfampridine.",
-      "year": 2012,
-      "quote": "Its mechanism of action and narrow therapeutic range suggest the need to evaluate the seizure risk in treated MS patients.",
-      "kind": "publication",
-      "study_type": "review",
-      "extracted_by": "agent-curation",
-      "verified": true,
-      "retrieved": "2026-10-03"
-     },
-     {
-      "source": "PubMed",
-      "ref": "PMID:41125872",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41125872/",
-      "title": "Pathogenic UNC13A variants cause a neurodevelopmental syndrome by impairing synaptic function.",
-      "year": 2025,
-      "quote": "Using assays with expression of UNC13A variants in mouse hippocampal neurons and in Caenorhabditis elegans, we identify three mechanisms of pathogenicity, including reduction in synaptic strength caused by reduced UNC13A protein expression, increased neurotransmission caused by UNC13A gain-of-function and impaired regulation of neurotransmission by second messenger signalling.",
-      "kind": "publication",
-      "study_type": "functional_study",
-      "extracted_by": "agent-curation",
-      "verified": true,
-      "retrieved": "2026-10-03"
-     },
-     {
-      "source": "PubMed",
-      "ref": "PMID:27648472",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/27648472/",
-      "title": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia.",
-      "year": 2016,
-      "quote": "RESULTS: Neuromuscular transmission was severely compromised by marked depletion of the readily releasable pool of quanta, but the probability of quantal release was normal.",
-      "kind": "publication",
-      "study_type": "case_report",
-      "extracted_by": "agent-curation",
-      "verified": true,
-      "retrieved": "2026-10-03"
-     }
-    ],
+    "caveat_citations": [],
     "test": {
-     "what_to_test": "In a patient with biallelic truncating UNC13A and fatigable weakness, repetitive nerve stimulation before and after a single supervised 3,4-DAP dose, with the quantal content measured if a muscle biopsy is available; and in parallel the same readout in an UNC13A-null neuromuscular model.",
-     "existing_assay_or_model": [
-      "asset:cmdir-congenital-muscle-disease-registry",
-      "study:NCT02562066",
-      "PMID:27648472"
-     ],
-     "existing_assay_note": "CMDIR lists UNC13A in its gene list, so the patients are findable; NCT02562066 is the completed amifampridine CMS protocol whose design (MFM score plus up-titration) could be reused. PMID:27648472 is the microelectrode protocol.",
-     "what_result_would_change_the_plan": "Post-tetanic facilitation plus clinical improvement would make UNC13A a candidate addition to the CMS eligibility list. No facilitation, or any seizure worsening, ends it."
+     "what_to_test": "In a GAA-related disorders (Pompe disease) model, measure the readout of Protein destabilization / misfolding with and without Arimoclomol (heat-shock response amplifier), using the same readout that supported it in its known disease(s).",
+     "existing_assay_or_model": [],
+     "existing_assay_note": "Model/assay assets in the graph for this disease or for the therapy's known diseases.",
+     "what_result_would_change_the_plan": "Rescue of the readout in the model would justify a carefully monitored n-of-1 or case-series design; no effect retires the link."
+    }
+   }
+  },
+  {
+   "id": "therapy:4-phenylbutyrate|candidate_for|disease:HEXA",
+   "source": "therapy:4-phenylbutyrate",
+   "target": "disease:HEXA",
+   "type": "candidate_for",
+   "label": "hypothesis: could be worth testing",
+   "explanation": "HYPOTHESIS, not a finding. Ranked 2 of 43 candidate diseases for 4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone) by the benchmark's best scorer (phenotype + mechanism). Shared mechanism: Protein destabilization / misfolding (reached by 8 of 45 diseases, via driven by). Symptoms closest to SLC6A1-related disorders (similarity 0.026). The graph has no developed_for edge and no study testing this therapy class here. The weakest link is the driven_by edge disease:HEXA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease:SLC6A1, similarity 0.026). Nobody has tested this.",
+   "evidence_level": "hypothesis",
+   "status": "unverified",
+   "confidence": 0.15,
+   "evidence": [
+    {
+     "source": "Atlas",
+     "ref": "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+     "url": "/path?from=disease:HEXA&to=therapy:4-phenylbutyrate",
+     "title": "4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone) is aimed at protein destabilization / misfolding.",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
     },
-    "not_addressed_check": {
-     "developed_for_edges_for_class": [
-      "disease:SNAP25",
-      "disease:SYT1",
-      "disease:SYT2",
-      "disease:VAMP2"
+    {
+     "source": "Atlas",
+     "ref": "disease:HEXA|driven_by|mech:protein-destabilization",
+     "url": "/path?from=disease:HEXA&to=therapy:4-phenylbutyrate",
+     "title": "Published work links HEXA-related disorders to protein destabilization / misfolding. Many HEXA variants can be partly rescued in patient cells by a pharmacological chaperone (pyrimethamine).",
+     "kind": "computed",
+     "extracted_by": "computed",
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "title": "4-Phenylbutyrate / glycerol phenylbutyrate for HEXA-related disorders (Tay-Sachs disease)",
+    "family": "lysosomal",
+    "generated_by": "pipeline/derive/hypotheses.py",
+    "transfer_score": 1.1366,
+    "transfer_rank": 2,
+    "transfer_n_candidates": 43,
+    "scorer": "pheno+mech (pipeline/eval/transfer_score.py)",
+    "transfer_explanation": {
+     "mechanisms": [
+      {
+       "mechanism": "mech:protein-destabilization",
+       "idf": 1.63,
+       "n_diseases": 8,
+       "chain": "driven_by",
+       "edges": [
+        "disease:HEXA|driven_by|mech:protein-destabilization"
+       ]
+      }
      ],
-     "studies_testing_class": [
-      "study:NCT02562066",
-      "study:NCT02562066"
+     "clusters": [],
+     "nearest_known_by_phenotype": "disease:SLC6A1",
+     "phenotype_similarity": 0.026
+    },
+    "therapy_class": "therapy:4-phenylbutyrate",
+    "known_diseases_of_class": [
+     "disease:SLC6A1",
+     "disease:STXBP1"
+    ],
+    "chain": {
+     "mechanisms": [
+      "mech:protein-destabilization"
+     ],
+     "edges": [
+      "therapy:4-phenylbutyrate|targets|mech:protein-destabilization",
+      "disease:HEXA|driven_by|mech:protein-destabilization"
+     ],
+     "contested_edges": [
+      "therapy:4-phenylbutyrate|targets|mech:protein-destabilization"
      ]
+    },
+    "weakest_link": "the driven_by edge disease:HEXA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease:SLC6A1, similarity 0.026)",
+    "caveats": [
+     {
+      "kind": "counter-evidence on a chain edge",
+      "text": "Contested edges on the chain: therapy:4-phenylbutyrate|targets|mech:protein-destabilization."
+     },
+     {
+      "kind": "family-level mechanism",
+      "text": "The shared mechanism is reached by 8 diseases, so it does not single out this pair; it says the approach is plausible, not that this disease responds."
+     },
+     {
+      "kind": "phenotype mismatch",
+      "text": "Symptom overlap with the closest known disease is minimal (similarity 0.026)."
+     },
+     {
+      "kind": "untested",
+      "text": "No study, case report or model result in the graph tests this therapy class in this disease."
+     }
+    ],
+    "caveat_citations": [],
+    "test": {
+     "what_to_test": "In a HEXA-related disorders (Tay-Sachs disease) model, measure the readout of Protein destabilization / misfolding with and without 4-Phenylbutyrate / glycerol phenylbutyrate (chemical chaperone), using the same readout that supported it in its known disease(s).",
+     "existing_assay_or_model": [
+      "asset:combinedbrain-biorepository",
+      "asset:stxbp1-floxed-null-mouse-innoser",
+      "asset:stxbp1-haploinsufficient-mice-xue-lab",
+      "asset:stxbp1-s-comb-consortium"
+     ],
+     "existing_assay_note": "Model/assay assets in the graph for this disease or for the therapy's known diseases.",
+     "what_result_would_change_the_plan": "Rescue of the readout in the model would justify a carefully monitored n-of-1 or case-series design; no effect retires the link."
     }
    }
   }
@@ -793,14 +1306,19 @@
    "about": "computed candidate_for edges",
    "question": "Has anyone tested the therapy classes the atlas flags as mechanism-matched but undeveloped for these diseases?",
    "what_is_missing": [
-    "4-phenylbutyrate for VAMP2-related disorders (therapy:4-phenylbutyrate -> disease:VAMP2): no trial, no model result, no case report",
-    "Aminopyridines for STXBP1 variants that reduce release (therapy:3-4-diaminopyridine -> disease:STXBP1): no trial, no model result, no case report",
-    "Aminopyridines for the loss-of-function end of STX1B epilepsy (therapy:3-4-diaminopyridine -> disease:STX1B): no trial, no model result, no case report",
+    "Haematopoietic stem cell transplantation for IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome) (therapy:hsct-krabbe -> disease:IDS): no trial, no model result, no case report",
+    "Trametinib for SHOC2-related disorders (Mazzanti syndrome) (therapy:trametinib -> disease:SHOC2): no trial, no model result, no case report",
+    "Aminopyridines for STXBP1 variants that reduce release (therapy:aminopyridine-presynaptic-boost -> disease:STXBP1): no trial, no model result, no case report",
     "Cholinesterase inhibitors for the SNAP25 myasthenic presentation (therapy:acetylcholinesterase-inhibitor-cms -> disease:SNAP25): no trial, no model result, no case report",
-    "Aminopyridines for the UNC13A presynaptic myasthenic presentation (therapy:3-4-diaminopyridine -> disease:UNC13A): no trial, no model result, no case report"
+    "4-phenylbutyrate for VAMP2-related disorders (therapy:4-phenylbutyrate -> disease:VAMP2): no trial, no model result, no case report",
+    "Arimoclomol for HEXA-related disorders (Tay-Sachs disease) (therapy:arimoclomol -> disease:HEXA): no trial, no model result, no case report",
+    "Aminopyridines for the loss-of-function end of STX1B epilepsy (therapy:aminopyridine-presynaptic-boost -> disease:STX1B): no trial, no model result, no case report",
+    "Haematopoietic stem cell transplantation for GLA-related disorders (Fabry disease) (therapy:hsct-krabbe -> disease:GLA): no trial, no model result, no case report",
+    "Arimoclomol for GAA-related disorders (Pompe disease) (therapy:arimoclomol -> disease:GAA): no trial, no model result, no case report",
+    "4-Phenylbutyrate / glycerol phenylbutyrate for HEXA-related disorders (Tay-Sachs disease) (therapy:4-phenylbutyrate -> disease:HEXA): no trial, no model result, no case report"
    ],
    "searched": [
-    "data/graph.json developed_for / tests / studies edges over therapy equivalence classes (amifampridine = 3,4-DAP = aminopyridine class; CAP-002 = AAV STXBP1; AAV9.SLC6A1 = scAAV9.P546.SLC6A1)",
+    "data/graph.json developed_for / tests / studies edges over therapy classes as defined in pipeline/eval/transfer_score.py EQUIVALENCE (aminopyridines, AAV-STXBP1, AAV-SLC6A1, MEK1/2 inhibitors)",
     "ClinicalTrials.gov records stored under data/raw/community/ctgov and data/raw/derive/ctgov"
    ],
    "how_to_find_out": "Each edge carries attrs.test with the experiment, the existing assay or model to borrow, and the result that would kill it. Start with the one whose chain has no contested edge."

@@ -32,5 +32,5 @@ Record at 1440×900 in the deployed app, with the guided tour ("Follow Maria") o
    - ⟨705⟩ quotes string-verified against their sources.
    - An independent OpenAI re-reading agrees with our curation ⟨88⟩% of the time; disagreements go to a biochemist.
    - Gaps are shown, not hidden.
-6. **10× (20 s).** STXBP1 families waited about 13 years from gene discovery to a first trial. SLC6A1 families got there in about 6, by joining STXBP1's trial on a shared mechanism. VAMP2 families are 7.5 years in with no trial, and VAMP2 shares that machinery. The atlas makes those matches findable in minutes. ⟨Landscape-assessment baseline from Woan-Yu Lin, RTW Foundation.⟩
+6. **10× (20 s).** STXBP1 families waited about 13 years from gene discovery to a first trial. SLC6A1 families got there in about 6, by joining STXBP1's trial on a shared mechanism. VAMP2 families are 7.5 years in with no trial, and VAMP2 shares that machinery. The atlas makes those matches findable in minutes.
 7. **Next (10 s).** Test it with real patient groups, starting with VAMP2, and grow the map one mechanism family at a time.
