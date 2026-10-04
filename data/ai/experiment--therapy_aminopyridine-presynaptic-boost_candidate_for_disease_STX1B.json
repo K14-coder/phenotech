@@ -1,0 +1,87 @@
+{
+  "kind": "experiment",
+  "id": "therapy:aminopyridine-presynaptic-boost|candidate_for|disease:STX1B",
+  "title": "A variant-level cell test of 4-AP in STX1B epilepsy",
+  "sections": [
+    {
+      "heading": "What we would test",
+      "sentences": [
+        {
+          "text": "This is a hypothesis, not a finding; its weakest link is the direction of effect, because STX1B variants can affect release in opposite directions.",
+          "edge_ids": [
+            "therapy:aminopyridine-presynaptic-boost|candidate_for|disease:STX1B"
+          ]
+        },
+        {
+          "text": "Classify variants as release-down or release-up, then test whether 4-aminopyridine (4-AP) improves release in release-down neurons without worsening network excitability.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Model or assay to use",
+      "sentences": [
+        {
+          "text": "Use human iPSC-derived neurons, prioritizing the published STX1B G226R network-excitability assay and the SNAP25 I67N study as a template for 4-AP testing.",
+          "edge_ids": []
+        },
+        {
+          "text": "Ask the lab which variant models are available and which additional models would need to be built.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What to measure",
+      "sentences": [
+        {
+          "text": "Measure release direction before treatment, then compare release and network excitability before and after 4-AP in the release-down class.",
+          "edge_ids": []
+        },
+        {
+          "text": "Confirm that the selected assays can distinguish release changes from network-excitability changes before proceeding.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Controls",
+      "sentences": [
+        {
+          "text": "Include untreated neurons from each tested variant and retain untreated release-up neurons as a classification comparator.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What result would change the plan",
+      "sentences": [
+        {
+          "text": "Stop expansion if release does not improve or network excitability worsens; a selective improvement would justify further variant-level cell testing, not patient treatment.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Caveats",
+      "sentences": [
+        {
+          "text": "The graph contains no study testing this therapy class in STX1B-related epilepsies, and its STX1B pathway annotation is inferred rather than direct treatment evidence.",
+          "edge_ids": [
+            "therapy:aminopyridine-presynaptic-boost|candidate_for|disease:STX1B",
+            "gene:STX1B|participates_in|mech:ca-triggered-exocytosis"
+          ]
+        },
+        {
+          "text": "This release-down-only experiment would not establish what 4-AP does in release-up variants.",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T04:39:10.168Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 2
+}

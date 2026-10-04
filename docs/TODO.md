@@ -36,6 +36,8 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P1: model and evidence quality
 
+- [ ] Fix the PTPN11 direction in `data/derived/direction/gene_direction.json`: Noonan PTPN11 is gain of function, and only NSML is loss of function. Split by variant group / subtype (`pipeline/ingest/direction_build.py`).
+
 - [x] **Direction-aware therapy matching** (done 2026-10-04): neutral on PrimeKG, no contraindication shift, atlas gain = target leakage → keep it as a flag only. See eval.md section 6.
 - [x] (done 2026-10-04, commit 19be6ce) **Independent AI review of the review sheet** → `docs/review/ai-review-2026-10-04.md` and patches in `data/curated/overrides.json`. Review records use `by: "ai-review:claude"`.
   - [x] (web agent, commit 2a3070c) Web: render ai-review records as "Independently reviewed by AI (not a human expert)". Human reviews keep "Reviewed by a biochemist".
@@ -55,7 +57,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 - [x] (web agent, commit 2a3070c) Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
 - [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:40 CEST) Direction coverage: add MONDO:0100135 (Dravet) to the G2P/ClinGen join (obsolete id MONDO:0011794). Get directions for relutrigine and NBI-921352 (Nav1.6 inhibitors; ChEMBL has no mechanism record for them).
 - [x] Hypotheses recomputed with the cross-family links (10 ideas, now including 4-PBA → SCN1A and rapamycin → NF1).
-- [ ] Precompute `experiment` AI drafts for the new top ideas (dev server plus signed-in ChatGPT: `node web/scripts/precompute-ai.mjs --only experiment`).
+- [x] Experiment AI drafts for all 10 current ideas (gpt-6-astra).
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
 - [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:32 CEST) The STXBP1 enrollment total in the Research view includes multi-disease Simons Searchlight. Exclude multi-disease registries from the sum.

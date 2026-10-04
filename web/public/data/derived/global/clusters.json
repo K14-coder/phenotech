@@ -2708,8 +2708,8 @@
    "mechanism_mix": {
     "unassigned": 42,
     "gain of function": 4,
-    "loss of function": 3,
-    "haploinsufficiency": 3
+    "haploinsufficiency": 3,
+    "loss of function": 3
    },
    "dominant_mechanism": "gain of function",
    "distinctive_phenotypes": [
@@ -11136,7 +11136,7 @@
   },
   {
    "id": "MC0103",
-   "label": "Interferon gamma signaling · loss of function · unusual mycobacterial infection",
+   "label": "Interferon gamma signaling · haploinsufficiency · unusual mycobacterial infection",
    "size": 23,
    "small": false,
    "top_pathways": [
@@ -11161,11 +11161,11 @@
    ],
    "mechanism_mix": {
     "unassigned": 19,
-    "loss of function": 3,
     "haploinsufficiency": 3,
+    "loss of function": 3,
     "gain of function": 1
    },
-   "dominant_mechanism": "loss of function",
+   "dominant_mechanism": "haploinsufficiency",
    "distinctive_phenotypes": [
     {
      "hpo": "HP:5210110",
@@ -11225,7 +11225,7 @@
     "MONDO:0958011",
     "MONDO:0971005"
    ],
-   "rationale": "23 single-gene diseases from 14 genes. Genes were grouped by Leiden on a graph whose edges require a shared mid-level Reactome pathway and weigh 0.6 x IDF-weighted pathway Jaccard + 0.4 x IC-weighted phenotype cosine (gene phenotype = centroid of its non-neoplastic diseases); each disease inherits its gene's cluster. 23/23 members share 'Interferon gamma signaling'. Mechanism class (G2P/ClinGen) known for 4/23, mostly loss of function. Phenotype refinement: 16 members with >= 5 terms; enriched for Unusual mycobacterial infection, Abnormal immune system morphology, Abnormal leukocyte count.",
+   "rationale": "23 single-gene diseases from 14 genes. Genes were grouped by Leiden on a graph whose edges require a shared mid-level Reactome pathway and weigh 0.6 x IDF-weighted pathway Jaccard + 0.4 x IC-weighted phenotype cosine (gene phenotype = centroid of its non-neoplastic diseases); each disease inherits its gene's cluster. 23/23 members share 'Interferon gamma signaling'. Mechanism class (G2P/ClinGen) known for 4/23, mostly haploinsufficiency. Phenotype refinement: 16 members with >= 5 terms; enriched for Unusual mycobacterial infection, Abnormal immune system morphology, Abnormal leukocyte count.",
    "evidence_basis": {
     "pathways": "Reactome NCBI2Reactome (lowest level) rolled up to depth 3",
     "mechanism": "G2P molecular mechanism; ClinGen dosage haploinsufficiency",

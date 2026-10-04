@@ -1,0 +1,92 @@
+{
+  "kind": "experiment",
+  "id": "therapy:hsct-krabbe|candidate_for|disease:GLA",
+  "title": "Testing a transplantation hypothesis in a Fabry disease model",
+  "sections": [
+    {
+      "heading": "What we would test",
+      "sentences": [
+        {
+          "text": "This is a hypothesis, not a finding: its weakest link is the claim that haematopoietic stem cell transplantation targets lysosomal enzyme deficiency.",
+          "edge_ids": [
+            "therapy:hsct-krabbe|candidate_for|disease:GLA",
+            "therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Test whether this approach can improve a lysosomal enzyme deficiency readout in a Fabry disease model, without proposing treatment of patients.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Model or assay to use",
+      "sentences": [
+        {
+          "text": "Before experiments, identify a suitable cell or animal model and assay; if unavailable, these would need to be built and validated.",
+          "edge_ids": []
+        },
+        {
+          "text": "Require an assay suitable for comparing the Fabry model with and without transplantation, preferably using the readout supporting the approach in its known disease.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What to measure",
+      "sentences": [
+        {
+          "text": "Fabry disease involves deficient or absent alpha-galactosidase A activity.",
+          "edge_ids": [
+            "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Select a lysosomal enzyme deficiency readout that addresses this defect, and define rescue before testing.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Controls",
+      "sentences": [
+        {
+          "text": "Compare the same Fabry model with and without the transplantation intervention, using the same readout.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What result would change the plan",
+      "sentences": [
+        {
+          "text": "Rescue would support further cell or animal testing; no effect would retire this proposed link.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Caveats",
+      "sentences": [
+        {
+          "text": "The shared mechanism spans multiple diseases and does not establish that Fabry disease responds.",
+          "edge_ids": [
+            "therapy:hsct-krabbe|candidate_for|disease:GLA"
+          ]
+        },
+        {
+          "text": "The graph contains no study testing this therapy class in Fabry disease; support for enzyme supply by donor cells does not establish rescue here.",
+          "edge_ids": [
+            "therapy:hsct-krabbe|candidate_for|disease:GLA",
+            "therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T04:40:04.707Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}
