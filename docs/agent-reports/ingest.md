@@ -186,3 +186,21 @@ The ordering is the same as on all cases.
 - **Post hoc choices.** The anchored tuner, the switched-off child mapping and the extended benchmark were all decided after the first run. Each is reported, and the primary benchmark was not re-tuned to favour any feature.
 - **Features take the maximum over the context.** A drug with many indications (corticosteroids, about 40) gets broad context, which inflates every similarity feature.
 - **Coverage gaps.** Phenotype is missing for 48 of 256 pool diseases (mostly cancers without HPO annotations), and structure_tm for 204.
+
+## 6. Applied: production similar-disease index (follow-up)
+
+`pipeline/ingest/similar_index.py` applies the recommended scorer, `phen + 0.5·genes + 0.5·full Reactome`, to every
+global-index disease that has HPO annotations: 10,690 diseases, with 10 neighbours each. Each neighbour carries:
+- the score and its three raw component scores;
+- up to 3 shared distinctive symptoms (HPO, IC ≥ 4);
+- "same gene" genes;
+- up to 2 shared pathway names.
+
+| File | Size |
+|---|---|
+| `data/derived/global/similar/<djb2(MONDO)%64>.json` | 13.5 MB raw / 3.3 MB gzipped (max shard 415 KB) |
+| `data/derived/global/gene_factors.json` (5,191 genes: constraint label, ClinVar dominant type, AlphaMissense label; explanation only) | 695 KB / 97 KB gzipped |
+
+Both files are documented in `data/derived/global/README.md`.
+
+Note for whoever deploys: `sync-data.mjs` copies all of `data/derived/global/`, so these files will be deployed, adding about 14 MB raw.

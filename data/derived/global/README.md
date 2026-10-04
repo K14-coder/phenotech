@@ -650,3 +650,92 @@ On a disease page, show the DisMech pathograph as a second, independently curate
   `SLC6A1-Related_Disorder` on "epilepsy with myoclonic atonic seizures"). 14 ids hold 2+ entries.
 - **Pinned commit.** The clone is a snapshot at the commit recorded in `meta.dismech.commit`.
   `run.sh --refresh` pulls the latest.
+
+## Similar diseases: `similar/<bucket>.json` (production scorer, added 2026-10-04)
+
+**What it is.** Top 10 similar diseases for **every index row with at least one HPO phenotype term (10,690 rows)**. It uses the
+scorer recommended in `docs/agent-reports/ingest.md`, which was validated on the external PrimeKG therapy-transfer
+benchmark: nested-CV MRR 0.374 against 0.324 for phenotype alone, over 1,300 cases.
+
+Built by `uv run --with numpy python3 pipeline/ingest/similar_index.py` (about 5 s). The file is additive: `neighbours/` is
+unchanged. Its bucket is the **same `djb2(id) % 64`** as `neighbours/`.
+
+```
+score = phen/max_phen + 0.5 · genes/max_genes + 0.5 · pathway/max_pathway
+```
+
+- **`phen`**: IC-weighted cosine of the ancestor-propagated HPO annotations.
+- **`genes`**: Jaccard of the `genes` sets.
+- **`pathway`**: IDF-weighted cosine of the genes' full Reactome sets (lowest level + all ancestors, from NCBI2Reactome).
+- **Normalisation**: each component is divided by its maximum over the query's candidates. The query itself and the
+  QTL / susceptibility rows are excluded as candidates, as in `neighbours/`.
+- **Score range**: 0 to 2. It ranks candidates and is not a probability.
+- **Short profiles**: rows with fewer than 5 terms are included here, unlike in `neighbours/`, so their phenotype part is noisier.
+
+```json
+{"bucket": 38,
+ "f": ["id","score","phenotype","genes","pathway","shared_hpo","same_genes","shared_pathways"],
+ "t": {"HP:0002340": ["Caudate atrophy", 6.12], ...},
+ "p": {"R-HSA-8986944": "Transcriptional Regulation by MECP2", ...},
+ "d": {"MONDO:0007739": [["MONDO:0011671", 1.65, 0.30, 1.0, 1.0, ["HP:0002340", ...], ["HTT"], ["R-HSA-9022692", "R-HSA-8986944"]], ...]}}
+```
+
+| field | meaning |
+|---|---|
+| `score` | The combined score above. |
+| `phenotype`, `genes`, `pathway` | The raw component similarities, before normalisation, each 0–1. |
+| `shared_hpo` | Up to 3 shared symptoms. They are the most informative shared HPO terms, with IC ≥ 4.0 (distinctive), and none is an ancestor of another listed term. If no shared term reaches IC 4.0, the single most informative one is shown. Labels and IC are in the shard's `t`. |
+| `same_genes` | Shared causal genes. Show them as "same gene: X". |
+| `shared_pathways` | Up to 2 shared Reactome pathways, most specific (highest IDF) first. Names are in the shard's `p`. The URL is `https://reactome.org/content/detail/<id>`. |
+
+**Sizes.** 64 shards hold 10,690 diseases, every one with 10 neighbours. They total **13.5 MB raw / 3.3 MB gzipped**, and the largest shard is 415 KB.
+
+**Examples.**
+
+| Disease | Top neighbours |
+|---|---|
+| Huntington disease | Lopes-Maciel-Rodan syndrome (same gene HTT), juvenile HD (HTT), HD-like 2, HD-like 1, SCA48, ... |
+| Dravet syndrome | GEFS+ (SCN1A, SCN1B, SCN2A, GABRG2, SCN9A), DEE 6A (SCN1A), DEE52 (SCN1B), GEFS+ type 2, PCDH19 clustering epilepsy, ... |
+| Tay-Sachs disease | AB variant, the Sandhoff forms, infantile Krabbe, adult MLD, GM1 gangliosidosis. Reasons include "cherry red spot of the macula" and "glycosphingolipid catabolism". |
+
+**Caveat.** This is a similarity ranking to help people look further. It is not evidence of a shared treatment.
+Contraindicated diseases are not ranked low by it (see ingest.md §3).
+
+## Gene explanatory factors: `gene_factors.json` (explanatory text only, not ranking)
+
+**What it is.** One row for each of the 5,191 index genes that has any of these factors. These factors did **not** improve ranking on the
+PrimeKG benchmark, so they are for UI text only. Built by the same script. Size: 695 KB raw / 97 KB gzipped.
+
+```json
+{"f": ["loeuf","pli","constraint_label","clinvar_dominant_type","clinvar_dominant_fraction","clinvar_pathogenic_n",
+       "clinvar_truncating_fraction","alphamissense_mean","alphamissense_label"],
+ "genes": {"SCN1A": [0.098, 1.0, "very intolerant to losing one copy", "missense (single amino-acid change)", 0.4637, 2273,
+                     0.471, 0.6161, "most missense changes predicted damaging"], ...}}
+```
+
+**Constraint label (gnomAD v4.1).** It comes from LOEUF and pLI:
+
+| Rule | Label |
+|---|---|
+| LOEUF < 0.35 or pLI ≥ 0.99 | "very intolerant to losing one copy" |
+| LOEUF < 0.6 or pLI ≥ 0.9 | "intolerant to losing one copy" |
+| LOEUF < 1 | "somewhat tolerant of losing one copy" |
+| otherwise | "tolerant of losing one copy" |
+
+Intolerance supports, but does not prove, haploinsufficiency.
+
+**ClinVar fields.** They come from `data/derived/ingest/clinvar_gene_spectrum.json`, full ClinVar P/LP as of 2026-09-29:
+- the dominant type, its fraction and the number of P/LP variants (n);
+- the truncating fraction, which is nonsense + frameshift + splice.
+
+Repeat expansions are under-represented in ClinVar's variant_summary P/LP rows. HTT, for example, shows 12 small variants
+and no CAG expansion. So for repeat disorders, say "ClinVar small variants".
+
+**AlphaMissense label.** It applies the AlphaMissense variant cut-offs to the gene mean:
+- ≥ 0.564: "most missense changes predicted damaging";
+- ≥ 0.34: "missense changes predicted mixed";
+- otherwise: "most missense changes predicted tolerated".
+
+Any field is `null` when its source has no value.
+
+**Not deployed yet.** `web/scripts/sync-data.mjs` copies `data/derived/global/**`, so both files deploy on the next sync. No web code reads them yet.
