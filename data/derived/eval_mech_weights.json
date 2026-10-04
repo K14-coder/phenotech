@@ -1,0 +1,391 @@
+{
+ "generated_by": "pipeline/eval/mech_weight_eval.py",
+ "cases_by_number_of_target_mechanisms": {
+  "2": 3,
+  "1": 45,
+  "0": 8
+ },
+ "settings_tying_best_mrr": 144,
+ "w_pheno_fine": {
+  "0.3": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "0.35": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "0.4": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "0.45": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "0.5": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "0.55": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "0.6": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "0.65": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "0.7": {
+   "recall@5": 0.725,
+   "mrr": 0.474
+  }
+ },
+ "evidence_level_weighting": {
+  "off": {
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  "observational 0.8, inferred 0.5": {
+   "recall@5": 0.743,
+   "mrr": 0.481
+  },
+  "observational 0.5, inferred 0.25": {
+   "recall@5": 0.743,
+   "mrr": 0.478
+  }
+ },
+ "cases": 56,
+ "settings": 1024,
+ "grid": {
+  "variant_group": [
+   0.0,
+   0.4,
+   0.8,
+   1.0
+  ],
+  "pathway": [
+   0.0,
+   0.35,
+   0.7,
+   1.0
+  ],
+  "generic": [
+   0.0,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "alpha": [
+   0.0,
+   0.5,
+   1.0,
+   2.0
+  ],
+  "w_pheno": [
+   0.0,
+   0.25,
+   0.5,
+   0.75
+  ]
+ },
+ "default": {
+  "variant_group": 0.8,
+  "pathway": 0.7,
+  "generic": 1.0,
+  "alpha": 1.0,
+  "w_pheno": 0.5
+ },
+ "default_result": {
+  "n": 56,
+  "recall@1": 0.293,
+  "recall@5": 0.725,
+  "mrr": 0.483
+ },
+ "one_knob_sweeps": {
+  "variant_group": [
+   {
+    "value": 0.0,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 0.4,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 0.8,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 1.0,
+    "recall@5": 0.697,
+    "mrr": 0.472
+   }
+  ],
+  "pathway": [
+   {
+    "value": 0.0,
+    "recall@5": 0.658,
+    "mrr": 0.429
+   },
+   {
+    "value": 0.35,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 0.7,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 1.0,
+    "recall@5": 0.725,
+    "mrr": 0.473
+   }
+  ],
+  "generic": [
+   {
+    "value": 0.0,
+    "recall@5": 0.701,
+    "mrr": 0.472
+   },
+   {
+    "value": 0.25,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 0.5,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 1.0,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   }
+  ],
+  "alpha": [
+   {
+    "value": 0.0,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 0.5,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 1.0,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 2.0,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   }
+  ],
+  "w_pheno": [
+   {
+    "value": 0.0,
+    "recall@5": 0.633,
+    "mrr": 0.406
+   },
+   {
+    "value": 0.25,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 0.5,
+    "recall@5": 0.725,
+    "mrr": 0.483
+   },
+   {
+    "value": 0.75,
+    "recall@5": 0.725,
+    "mrr": 0.471
+   }
+  ]
+ },
+ "in_sample_top10_optimistic": [
+  {
+   "setting": {
+    "variant_group": 0.8,
+    "pathway": 0.7,
+    "generic": 1.0,
+    "alpha": 1.0,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.4,
+    "pathway": 0.7,
+    "generic": 1.0,
+    "alpha": 1.0,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.8,
+    "pathway": 0.35,
+    "generic": 1.0,
+    "alpha": 1.0,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.8,
+    "pathway": 0.7,
+    "generic": 0.5,
+    "alpha": 1.0,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.8,
+    "pathway": 0.7,
+    "generic": 1.0,
+    "alpha": 0.5,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.8,
+    "pathway": 0.7,
+    "generic": 1.0,
+    "alpha": 1.0,
+    "w_pheno": 0.25
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.8,
+    "pathway": 0.7,
+    "generic": 1.0,
+    "alpha": 2.0,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.0,
+    "pathway": 0.7,
+    "generic": 1.0,
+    "alpha": 1.0,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.4,
+    "pathway": 0.35,
+    "generic": 1.0,
+    "alpha": 1.0,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  },
+  {
+   "setting": {
+    "variant_group": 0.4,
+    "pathway": 0.7,
+    "generic": 0.5,
+    "alpha": 1.0,
+    "w_pheno": 0.5
+   },
+   "recall@1": 0.293,
+   "recall@5": 0.725,
+   "mrr": 0.483
+  }
+ ],
+ "nested_cv": {
+  "n": 56,
+  "recall@1": 0.275,
+  "recall@5": 0.725,
+  "mrr": 0.471,
+  "outer_folds": 38,
+  "delta_vs_default_mrr": -0.012,
+  "delta_mrr_95ci": [
+   -0.036,
+   0.0
+  ],
+  "delta_vs_default_recall@5": 0.0,
+  "delta_recall@5_95ci": [
+   0.0,
+   0.0
+  ],
+  "chosen_values_over_folds": {
+   "variant_group": {
+    "0.8": 38,
+    "0.0": 0,
+    "0.4": 0,
+    "1.0": 0
+   },
+   "pathway": {
+    "0.7": 37,
+    "1.0": 1,
+    "0.0": 0,
+    "0.35": 0
+   },
+   "generic": {
+    "1.0": 38,
+    "0.0": 0,
+    "0.25": 0,
+    "0.5": 0
+   },
+   "alpha": {
+    "1.0": 38,
+    "0.0": 0,
+    "0.5": 0,
+    "2.0": 0
+   },
+   "w_pheno": {
+    "0.5": 38,
+    "0.0": 0,
+    "0.25": 0,
+    "0.75": 0
+   }
+  }
+ }
+}

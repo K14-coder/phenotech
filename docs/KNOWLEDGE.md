@@ -44,6 +44,7 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
   - **Direction-aware matching (drug up/down × disease LoF/GoF) is neutral on PrimeKG** (+0.004 MRR, the interval includes 0; eval.md section 6). The drug's target is a gene of the held-out disease in only 8 of 1,300 cases. When it fires it is right (8/8 match). Use it as a flag, not as a score term.
   - **Any "therapy target = disease gene" bonus is leakage on the curated 56-case benchmark:** the graph's `target_genes` are the genes of the diseases the therapy was developed for (32/56 held-out cases). An undirected target bonus lifts MRR 0.49 → 0.75. Always run that control.
   - **Pathway-level direction is about a coin flip** (117 match vs 96 mismatch over all PrimeKG pairs). Keep direction to the direct target.
+- **Mechanism weights can't be tuned on this benchmark:** 45 of 56 cases have a single target mechanism, so IDF strength and generic-class factors don't reorder candidates; chain weights (keep pathway chains) and the phenotype/mechanism mix (anywhere in 0.25–0.65) are what count. A 1,024-setting search with nested CV found nothing better than the default (`mech_weight_eval.py`, eval.md section 8). More multi-target therapies (curated `targets` edges) would be needed to separate weightings.
 - **Production scorers:**
   - deep atlas: phenotype + the drug's curated target mechanism;
   - global similar lists: phenotype + 0.5·genes + 0.5·full Reactome pathway.

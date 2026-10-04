@@ -508,3 +508,23 @@ The 142 links proposed by the independent Claude reading and accepted by an AI r
 | mech+cluster-leaky (control) | 56 | 0.82 | 0.60 | 58 | 0.84 | 0.64 |
 
 Reading: the ranking of methods does not change (pheno+mech and combined stay on top; the leaky control stays above everything). Including the AI-reviewed links adds 2 test cases (mirdametinib → RIT1, miglustat → HEXA; the statin → PTPN11 link merges into an existing class) and new mechanism links (e.g. RAS-pathway `driven_by`), which lift most scorers by 0.04–0.07 top-5. That gain rests on AI-found, AI-reviewed links from the same literature, so the published numbers stay the hidden ones until a person reviews the links. The PrimeKG benchmark uses the global layer, not the curated graph, so it is unaffected (it needs `data/raw/downloads/` to rerun).
+
+## 8. Mechanism weighting search (2026-10-04)
+
+`python3 pipeline/eval/mech_weight_eval.py` (stdlib, ~6 s) → `data/derived/eval_mech_weights.json`. Same 56 cases as section 1. Grid of 1,024 settings over the pheno+mech scorer: chain weight of variant-group chains {0, 0.4, 0.8, 1}, of pathway chains {0, 0.35, 0.7, 1}, a multiplier for the generic classes LoF/HI/GoF/DN {0, 0.25, 0.5, 1}, the IDF exponent {0, 0.5, 1, 2} and the phenotype weight {0, 0.25, 0.5, 0.75}; plus a finer phenotype sweep and evidence-level down-weighting of chains. Honest estimate by nested CV grouped by therapy class (38 outer folds).
+
+| Knob (others at default) | Values → top-5 / MRR |
+|---|---|
+| default (vg 0.8, pathway 0.7, generic 1, IDF^1, w_pheno 0.5) | **0.725 / 0.483** |
+| variant-group chain weight | 0 / 0.4 / 0.8 → 0.725 / 0.483; 1.0 → 0.697 / 0.472 |
+| pathway chain weight | **0 → 0.658 / 0.429**; 0.35 / 0.7 → 0.725 / 0.483; 1.0 → 0.725 / 0.473 |
+| generic-class multiplier | **0 → 0.701 / 0.472**; 0.25–1 → 0.725 / 0.483 |
+| IDF exponent | 0 / 0.5 / 1 / 2 → 0.725 / 0.483 (no effect) |
+| phenotype weight | **0 → 0.633 / 0.406**; 0.25–0.65 → 0.725 / 0.483; 0.7 → 0.725 / 0.474; 0.75 → 0.725 / 0.471 |
+| evidence-level weights (obs 0.8, inferred 0.5) | 0.743 / 0.481 (one case; MRR slightly down) |
+
+- **No setting beats the default.** It is the in-sample best (144 of 1,024 settings tie with it), and nested CV picks it in 37–38 of 38 folds (nested MRR 0.471; Δ vs default 95% CI [−0.036, 0.000]).
+- **Why the score is flat:** 45 of the 56 cases have a therapy with exactly one target mechanism (8 have none, 3 have two). With one target, any multiplicative weight on that mechanism (IDF strength, generic factor) cannot reorder candidates; only which diseases reach the target (chain presence) and the phenotype/mechanism mix matter.
+- **What matters:** keep pathway chains (dropping them costs 0.07 top-5), keep generic classes (dropping them costs 0.02), and keep the phenotype term between 0.25 and 0.65 of the mix (mechanism alone: 0.63 / 0.41).
+- **With the AI-reviewed links included** (58 cases, more multi-target therapies) the in-sample best (IDF^2, w_pheno 0.25: MRR 0.509) does not survive nested CV (0.482 vs default 0.500): overfitting. The default stays.
+- To separate the weightings, the benchmark needs therapies with several target mechanisms, which means more curated `targets` edges, not more tuning.
