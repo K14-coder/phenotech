@@ -1,4 +1,4 @@
-# Tasukeru: project knowledge
+# Phenotech: project knowledge
 
 The non-obvious things we learned, the decisions we made and why, and the traps. Read this together with `CLAUDE.md` (how to run, status) and `docs/TODO.md` (what's next). The layer reports in `docs/agent-reports/` hold the details.
 
@@ -7,7 +7,7 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 - **The challenge:** Hack-Nation Challenge 05, "AI Atlas for the World's Rare Diseases" (OpenAI × Buffalo Initiative).
   - Judging covers graph quality, evidence integrity, patient progress, 10× impact and product craft.
   - Prize-track eligibility requires using OpenAI models or tools.
-- **The name:** Tasukeru (助ける, "to help"). The internal ids, routes and Vercel project still say rare-disease-atlas.
+- **The name:** Phenotech ("Phenotech: a rare-disease atlas"). Renamed Tasukeru → Phenotech on 2026-10-04 (before that, "Rare Disease Atlas"). The internal ids, routes, env vars, file names (`rare-atlas-worker.mjs`) and Vercel project still say rare-disease-atlas.
 - **Four views:** Simple is the default, for families; then Detailed (patient-group leaders), Research and Industry. The internal ids are family, leader, researcher and biotech, and `?as=` overrides the view. Persona names (Devon, Maria and so on) are deliberately not shown.
 - **Depth plus breadth:**
   - 45 diseases are curated in depth with verbatim quotes.
@@ -98,7 +98,7 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
   - **Env vars:**
     - KV (Upstash);
     - `SESSION_SECRET`, `ADMIN_TOKEN`, `CRON_SECRET`;
-    - `EMAIL_FROM="Tasukeru <no-reply@mehro.ch>"`;
+    - `EMAIL_FROM="Phenotech <no-reply@mehro.ch>"`;
     - `SMTP_HOST=mail.infomaniak.com`, `SMTP_PORT=587`, `SMTP_USER`, `SMTP_PASS` (secret).
   - A new env var only takes effect after a redeploy.
 - **Local:**

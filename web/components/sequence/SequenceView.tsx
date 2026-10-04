@@ -702,7 +702,7 @@ function PrintReport({ rows, geneRef, summary, source }: { rows: Row[]; geneRef:
         </tbody>
       </table>
       <p style={{ marginTop: "12pt", fontSize: "9pt" }}>
-        This is not a diagnostic test. Only an accredited lab can confirm results. Compared in the browser with Tasukeru; reference coding
+        This is not a diagnostic test. Only an accredited lab can confirm results. Compared in the browser with Phenotech; reference coding
         sequences from Ensembl (MANE Select); ClinVar pathogenic / likely pathogenic records as stored by the atlas.
       </p>
     </div>

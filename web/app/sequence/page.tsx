@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { SequenceView } from "@/components/sequence/SequenceView";
 
-export const metadata: Metadata = { title: "Check a DNA sequence or VCF file · Tasukeru" };
+export const metadata: Metadata = { title: "Check a DNA sequence or VCF file · Phenotech" };
 
 export default function Page() {
   return (

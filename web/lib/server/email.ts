@@ -1,9 +1,9 @@
-// Email for Tasukeru: SMTP (the mehro.ch mailbox) or Resend's HTTP API, with a dry-run sender for local tests.
+// Email for Phenotech: SMTP (the mehro.ch mailbox) or Resend's HTTP API, with a dry-run sender for local tests.
 //  - EMAIL_DRY_RUN=1: write each email to web/.data/outbox/ (gitignored) instead of sending.
 //  - SMTP_HOST + SMTP_PORT + SMTP_USER + SMTP_PASS: send through that server with nodemailer
 //    (port 465: TLS from the start; 587: STARTTLS required; other ports: STARTTLS if offered).
 //  - RESEND_API_KEY: send through https://api.resend.com/emails.
-//  - EMAIL_FROM: the sender, e.g. "Tasukeru <no-reply@mehro.ch>".
+//  - EMAIL_FROM: the sender, e.g. "Phenotech <no-reply@mehro.ch>".
 //  - neither: log "email disabled" (never the address); notices stay in the inbox only.
 // Until a sending domain is verified, Resend delivers only to the account owner's own address:
 // EMAIL_DOMAIN_VERIFIED=1 tells the admin page the domain is verified.
@@ -27,10 +27,10 @@ export function emailStatus() {
   return { mode: emailMode(), domainVerified: process.env.EMAIL_DOMAIN_VERIFIED === "1" };
 }
 
-/** Sender: EMAIL_FROM (e.g. "Tasukeru <no-reply@mehro.ch>"); a bare address gets the Tasukeru display name. */
+/** Sender: EMAIL_FROM (e.g. "Phenotech <no-reply@mehro.ch>"); a bare address gets the Phenotech display name. */
 export function fromAddress(): string {
   const raw = (process.env.EMAIL_FROM ?? "").trim() || (emailMode() === "smtp" ? (process.env.SMTP_USER ?? "") : "onboarding@resend.dev");
-  return raw.includes("<") ? raw : `Tasukeru <${raw}>`;
+  return raw.includes("<") ? raw : `Phenotech <${raw}>`;
 }
 
 /** Absolute base URL for links in emails: APP_URL, else the production URL Vercel provides, else the request. */
@@ -143,14 +143,14 @@ export async function sendEmail(e: Email): Promise<SendResult> {
 
 /** Admin "send a test email to myself". */
 export function testEmail(to: string): Email {
-  const subject = "Tasukeru: test email";
+  const subject = "Phenotech: test email";
   return {
     to,
     subject,
     tag: "test",
     ...render(subject, {
-      paragraphs: ["Good news: email from Tasukeru reaches you.", `This test went out through the ${emailMode()} transport on ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC. Nothing else to do.`],
-      why: "you asked for a test email on the Tasukeru admin page.",
+      paragraphs: ["Good news: email from Phenotech reaches you.", `This test went out through the ${emailMode()} transport on ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC. Nothing else to do.`],
+      why: "you asked for a test email on the Phenotech admin page.",
     }),
   };
 }
@@ -233,7 +233,7 @@ function render(subject: string, b: Block): { html: string; text: string } {
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent">${esc(preheader)}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="bg" bgcolor="${C.bg}" style="background:${C.bg}"><tr><td align="center" style="padding:32px 12px 40px">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%">
-<tr><td align="center" style="padding:0 0 20px"><a href="${esc(origin)}" style="text-decoration:none"><img src="${esc(origin)}/email/logo.png" width="120" height="32" alt="Tasukeru" style="display:block;border:0;outline:none;width:120px;height:32px"></a></td></tr>
+<tr><td align="center" style="padding:0 0 20px"><a href="${esc(origin)}" style="text-decoration:none"><img src="${esc(origin)}/email/logo.png" width="120" height="32" alt="Phenotech" style="display:block;border:0;outline:none;width:120px;height:32px"></a></td></tr>
 <tr><td class="card pad" bgcolor="${C.card}" style="background:${C.card};border:1px solid ${C.line};border-radius:18px;padding:40px 40px 32px">
 <p class="ink" style="margin:0 0 18px;font-family:${FONT};font-size:18px;font-weight:600;color:${C.ink}">${esc(greet)}</p>
 ${b.paragraphs.map(p).join("\n")}
@@ -241,12 +241,12 @@ ${quote}${items}${button}
 <p class="muted rule" style="margin:18px 0 0;padding-top:16px;border-top:1px solid ${C.line};font-family:${FONT};font-size:13px;line-height:1.55;color:${C.muted}"><strong style="font-weight:600">Why you’re getting this:</strong> ${esc(b.why)}</p>
 </td></tr>
 <tr><td align="center" class="muted" style="padding:22px 16px 0;font-family:${FONT};font-size:12px;line-height:1.7;color:${C.muted}">
-With care, the Tasukeru team<br>Tasukeru (助ける) means “to help” in Japanese.<br>
+With care, the Phenotech team<br>Phenotech · a rare-disease atlas<br>
 ${b.unsubscribe ? `<a class="link" href="${esc(b.unsubscribe.page)}" style="color:${C.muted};text-decoration:underline">Unsubscribe in one click</a> &nbsp;·&nbsp; ` : ""}<a class="link" href="${esc(origin)}/privacy" style="color:${C.muted};text-decoration:underline">Privacy</a>
 </td></tr>
 </table></td></tr></table></body></html>`;
   const text = [
-    "Tasukeru",
+    "Phenotech",
     "",
     greet,
     "",
@@ -257,8 +257,8 @@ ${b.unsubscribe ? `<a class="link" href="${esc(b.unsubscribe.page)}" style="colo
     `Why you're getting this: ${b.why}`,
     "",
     "--",
-    "With care, the Tasukeru team",
-    "Tasukeru (助ける) means \"to help\" in Japanese.",
+    "With care, the Phenotech team",
+    "Phenotech · a rare-disease atlas",
     ...(b.unsubscribe ? [`Unsubscribe in one click: ${b.unsubscribe.page}`] : []),
     `Privacy: ${origin}/privacy`,
   ].join("\n");
@@ -266,27 +266,27 @@ ${b.unsubscribe ? `<a class="link" href="${esc(b.unsubscribe.page)}" style="colo
 }
 
 export function verificationEmail(to: string, url: string): Email {
-  const subject = "Tasukeru: please confirm your email";
+  const subject = "Phenotech: please confirm your email";
   return {
     to,
     subject,
     tag: "verify",
     ...render(subject, {
-      paragraphs: ["Welcome to Tasukeru. We’re really glad you’re here.", "One small step left: please confirm this is your email address, so we can send you the updates you asked for. The button works for 7 days."],
+      paragraphs: ["Welcome to Phenotech. We’re really glad you’re here.", "One small step left: please confirm this is your email address, so we can send you the updates you asked for. The button works for 7 days."],
       button: { label: "Confirm my email", url },
-      why: "this address was used to create a Tasukeru account. If that wasn’t you, just ignore this email and nothing will happen.",
+      why: "this address was used to create a Phenotech account. If that wasn’t you, just ignore this email and nothing will happen.",
     }),
   };
 }
 
 export function resetEmail(to: string, url: string): Email {
-  const subject = "Tasukeru: reset your password";
+  const subject = "Phenotech: reset your password";
   return {
     to,
     subject,
     tag: "reset",
     ...render(subject, {
-      paragraphs: ["We got a request to reset the password for your Tasukeru account.", "Choose a new one with the button below. It works once, for one hour."],
+      paragraphs: ["We got a request to reset the password for your Phenotech account.", "Choose a new one with the button below. It works once, for one hour."],
       button: { label: "Choose a new password", url },
       why: "someone asked to reset the password for this address. If that wasn’t you, you can ignore this email; your password stays the same.",
     }),
@@ -300,7 +300,7 @@ export function announcementEmail(
   meUrl: string,
   unsubscribe: Unsub,
 ): Email {
-  const subject = `Tasukeru: a new study for ${diseases}`;
+  const subject = `Phenotech: a new study for ${diseases}`;
   return {
     to,
     subject,
@@ -317,7 +317,7 @@ export function announcementEmail(
 }
 
 export function contactEmail(to: string, organisation: string, message: string, diseases: string, verified: boolean, meUrl: string, unsubscribe: Unsub): Email {
-  const subject = `Tasukeru: a researcher would like to hear from families (${diseases})`;
+  const subject = `Phenotech: a researcher would like to hear from families (${diseases})`;
   return {
     to,
     subject,
@@ -330,7 +330,7 @@ export function contactEmail(to: string, organisation: string, message: string, 
       ],
       quote: { lines: [message] },
       button: { label: "Read it in my atlas", url: meUrl },
-      why: "you said researchers may contact you through Tasukeru. You can turn this off anytime in My atlas.",
+      why: "you said researchers may contact you through Phenotech. You can turn this off anytime in My atlas.",
       unsubscribe,
     }),
   };
@@ -339,12 +339,12 @@ export function contactEmail(to: string, organisation: string, message: string, 
 export function trialsEmail(to: string, items: { disease: string; title: string; url: string; meta?: string }[], weekly: boolean, meUrl: string, unsubscribe: Unsub): Email {
   const grantsOnly = items.every((i) => i.disease.startsWith("New research"));
   const subject = weekly
-    ? "Your Tasukeru weekly summary"
+    ? "Your Phenotech weekly summary"
     : grantsOnly
-      ? `Tasukeru: new researchers working on ${items[0].disease.replace(/^New research · /, "")}`
+      ? `Phenotech: new researchers working on ${items[0].disease.replace(/^New research · /, "")}`
       : items.length === 1
-        ? `Tasukeru: a study is recruiting for ${items[0].disease}`
-        : "Tasukeru: news for diseases you follow";
+        ? `Phenotech: a study is recruiting for ${items[0].disease}`
+        : "Phenotech: news for diseases you follow";
   return {
     to,
     subject,
@@ -399,9 +399,9 @@ export function sampleEmails(base: string): { name: string; email: Email }[] {
         unsub,
       ),
     },
-    { name: "Researcher message", email: contactEmail(to, "Example University Hospital", "We would like to hear how sleep affects your family. If you are interested, reply through Tasukeru.", "SCN2A-related disorders", true, `${base}/me`, unsub) },
+    { name: "Researcher message", email: contactEmail(to, "Example University Hospital", "We would like to hear how sleep affects your family. If you are interested, reply through Phenotech.", "SCN2A-related disorders", true, `${base}/me`, unsub) },
     { name: "Study notice", email: trialsEmail(to, items, false, `${base}/me`, unsub) },
     { name: "Weekly summary", email: trialsEmail(to, items, true, `${base}/me`, unsub) },
-    { name: "Admin test", email: { ...testEmail(to), ...render("Tasukeru: test email", { paragraphs: ["Good news: email from Tasukeru reaches you.", "This test went out through the smtp transport. Nothing else to do."], button: { label: "Open Tasukeru", url: base }, why: "you asked for a test email on the Tasukeru admin page." }) } },
+    { name: "Admin test", email: { ...testEmail(to), ...render("Phenotech: test email", { paragraphs: ["Good news: email from Phenotech reaches you.", "This test went out through the smtp transport. Nothing else to do."], button: { label: "Open Phenotech", url: base }, why: "you asked for a test email on the Phenotech admin page." }) } },
   ];
 }

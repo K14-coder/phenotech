@@ -84,7 +84,7 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
   // re-applies the static title on client navigation between /d/ pages)
   useEffect(() => {
     if (!row) return;
-    const title = `${capFirst(row.name)} · Tasukeru`;
+    const title = `${capFirst(row.name)} · Phenotech`;
     document.title = title;
     const t = setTimeout(() => {
       document.title = title;

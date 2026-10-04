@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { PathView } from "@/components/path/PathView";
 
-export const metadata: Metadata = { title: "Path · Tasukeru" };
+export const metadata: Metadata = { title: "Path · Phenotech" };
 
 export default function Page() {
   return (

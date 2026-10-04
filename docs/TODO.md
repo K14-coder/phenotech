@@ -1,4 +1,4 @@
-# Tasukeru: to-do list
+# Phenotech: to-do list
 
 Keep this file current: tick items when done (with the commit), and add new ones at the right priority. Items marked **(you)** need a human; everything else an agent can do. Read `CLAUDE.md` and `docs/KNOWLEDGE.md` first.
 
@@ -59,7 +59,7 @@ Several Claude agents and people work in parallel. Follow this every time:
   - [ ] Review the 8 Claude disagreements in the report: five are failed trials filed as limiting (quinidine/ADNFLE, phenytoin/Dravet, simvastatin and lovastatin/NF1, tipifarnib/NF1); two are the PTPN11 Noonan-GoF vs LEOPARD-LoF split (same paper, PMID:16358218).
 - [x] (vibrant-babbage, 2026-10-04) Outreach drafts for all 45 deep diseases (42 new, by Claude through the app's evidence packs and `sanitizeDoc`; `web/scripts/agent-ai.mjs`; 0 citations dropped).
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
-- [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
+- [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Phenotech. Count steps, time and errors; put the result on `/impact`.
 - [x] (vibrant-babbage, 2026-10-04) The STXBP1 enrollment total in the Research view excluded multi-disease registries: a study linked to 3+ atlas diseases or listing more than 5 conditions is shown as "not counted" (STXBP1: 101,363 → 863 across 8 studies).
 
 ## P2: contacts and community
@@ -67,7 +67,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 - [x] Contact people only: `pipeline/contacts/filter_people.py` keeps contact roles (66 people at 20 orgs) and drops board members and advisors.
 
 - [x] Named contact persons published by organisations (112, `data/derived/contacts/people.json`), Call/Email buttons in every view, "Report or remove a contact" form on /privacy, handled in /admin.
-- [ ] Email: works via Infomaniak SMTP (`no-reply@mehro.ch`, sender "Tasukeru"). Watch the deliverability of the first real alerts. Optionally add SPF/DKIM/DMARC checks for mehro.ch.
+- [ ] Email: works via Infomaniak SMTP (`no-reply@mehro.ch`, sender "Phenotech"). Watch the deliverability of the first real alerts. Optionally add SPF/DKIM/DMARC checks for mehro.ch.
 - [ ] Researcher verification beyond the email domain (ORCID sign-in or an institutional confirmation link).
 - [ ] Passkeys; a trial waitlist through patient groups; letting patient groups claim their entry and see member counts.
 - [ ] More AI drafts: experiment drafts for the new hypotheses, outreach for more diseases (`node web/scripts/precompute-ai.mjs --ids ...`, dev server running, ChatGPT plan signed in).
