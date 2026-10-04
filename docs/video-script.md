@@ -20,7 +20,7 @@ The brief asks for **a team video** and **a 1-minute walkthrough** that follows 
 | 0:28 | 5. Work that already exists | "Already covers VAMP2" | Simons Searchlight already enrols VAMP2 families today, and STXBP1's natural history study and outcome measures could be adapted. |
 | 0:36 | 6. Before we join forces | Compare VAMP2 vs STXBP1 | Side by side: what the two communities share, what differs, and what an expert should check first. |
 | 0:44 | 7. A sourced proposal | Precomputed proposal | The group drafts a proposal to the STXBP1 Foundation. Every sentence links to the evidence it rests on. |
-| 0:51 | 8. How we know | `/method` numbers | All ⟨2,953⟩ links have a source, ⟨2,090⟩ quotes are checked word for word, and an independent OpenAI reading agrees ⟨88⟩% of the time. From an isolated diagnosis to a justified collaboration, with the next step in hand. |
+| 0:51 | 8. How we know | `/method` numbers | All ⟨2,977⟩ links have a source, ⟨2,130⟩ quotes are checked word for word, and an independent OpenAI reading agrees ⟨88⟩% of the time. From an isolated diagnosis to a justified collaboration, with the next step in hand. |
 
 **Alternative ending (honest gap):** cut from step 6 to the second tour, "Follow a family with no patient group" (SYT2), and use this narration instead:
 
@@ -34,14 +34,14 @@ The brief asks for **a team video** and **a 1-minute walkthrough** that follows 
    - Families become research organisers overnight, but the knowledge they need is scattered, and disease names hide shared biology.
 3. **The insight (15 s).** Different genes can break the same machine. Tasukeru connects diseases by mechanism and distinctive symptoms. We went deep where we could check every claim, and broad everywhere else.
 4. **What we built (35 s).**
-   - **Depth:** ⟨45⟩ diseases in 4 mechanism families, curated with verbatim, source-checked quotes: ⟨1,411⟩ nodes and ⟨2,953⟩ links.
+   - **Depth:** ⟨45⟩ diseases in 4 mechanism families, curated with verbatim, source-checked quotes: ⟨1,412⟩ nodes and ⟨2,977⟩ links.
    - **Breadth:** ⟨11,456⟩ diseases searchable, ⟨10,309⟩ with sourced automated data.
    - **Four views**, from Simple for families to Industry for biotech.
    - **A DNA checker** that runs on your device against all of ClinVar.
    - **Community:** live trial and grant alerts, and a research queue where volunteers extend the atlas.
    - **OpenAI** extracts and cross-checks claims, explains paths and drafts proposals, with every sentence cited.
 5. **Why we trust it (20 s).**
-   - ⟨2,090⟩ quotes string-verified against their sources; ⟨75⟩ contested links shown with their counter-evidence.
+   - ⟨2,130⟩ quotes string-verified against their sources; ⟨75⟩ contested links shown with their counter-evidence.
    - An independent OpenAI re-reading agrees with our curation ⟨88⟩% of the time.
    - On ⟨1,300⟩ external PrimeKG cases, the hidden disease lands in the top 5 ⟨49⟩% of the time, against ⟨2⟩% by chance.
    - Gaps are shown, not hidden.

@@ -14,7 +14,7 @@ Hack-Nation 7th Global AI Hackathon · Challenge 05: AI Atlas for the World's Ra
 
 | Tier | Diseases | What you get |
 |---|---|---|
-| **Deep** | 45, in 4 mechanism families: SNAREopathies (11), developmental and epileptic encephalopathies (10), lysosomal diseases (12), RASopathies (12) | Curated graph with verbatim, string-verified quotes; patient groups, assets, trials, grants, researchers; ideas worth testing; AI drafts |
+| **Deep** | 45, in 4 mechanism families: SNAREopathies (11), developmental and epileptic encephalopathies (10), lysosomal diseases (12), RASopathies (12) | Curated graph with verbatim, string-verified quotes; patient groups, assets, trials, grants, researchers; cross-family links; ideas worth testing; AI drafts |
 | **Breadth** | 10,309 with sourced, automated data | Symptoms (HPO), genes, mechanism class (G2P, ClinGen), pathways (Reactome), DisMech pathographs, similar diseases, trials, patient groups, prevalence |
 | **Searchable** | 11,456 (MONDO-based global index) | A page at `/d/<MONDO>` for every disease |
 
@@ -88,13 +88,14 @@ Current build of the deep graph (live numbers on `/method` and in `data/build/re
 
 | Measure | Value |
 |---|---|
-| Nodes / links | 1,411 / 2,953 |
-| Links with at least one source | 2,953 / 2,953 |
-| Quotes string-verified against the stored source | 2,090 / 2,090 |
+| Nodes / links | 1,412 / 2,977 |
+| Links with at least one source | 2,977 / 2,977 |
+| Quotes string-verified against the stored source | 2,130 / 2,130 |
 | Contested links shown with their counter-evidence | 75 |
 | Agreement between the OpenAI re-reading and the curators, on papers both cite | 60 / 68 (88%) |
 | Links independently reviewed by AI (not a human expert) | 63 |
-| Gaps recorded, each with the searches behind it | 61 |
+| Diseases with a specific mechanism link to another family | 29 / 45 |
+| Gaps recorded, each with the searches behind it | 63 |
 
 ## Benchmarks
 
@@ -102,14 +103,14 @@ Current build of the deep graph (live numbers on `/method` and in `data/build/re
 
 | Benchmark | Cases | Method | Top-5 recall | MRR | Random (top-5 / MRR) |
 |---|---|---|---|---|---|
-| Curated leave-one-out (`pipeline/eval/transfer_eval.py`) | 56 | Symptoms + specific mechanism | 73% | 0.49 | 12% / 0.10 |
+| Curated leave-one-out (`pipeline/eval/transfer_eval.py`) | 56 | Symptoms + specific mechanism | 73% | 0.48 | 12% / 0.10 |
 | PrimeKG external (`pipeline/eval/primekg_eval.py`) | 1,300, pool of 256 diseases | Symptoms + 0.5·genes + 0.5·pathways | 49% | 0.37 | 2% / 0.02 |
 
 What they taught us (details in [docs/agent-reports/eval.md](docs/agent-reports/eval.md) and [docs/KNOWLEDGE.md](docs/KNOWLEDGE.md)):
 
 - **Symptoms carry the cross-gene signal.** On PrimeKG, distinctive shared symptoms (HPO, information-content weighted) are the only factor that works across different genes. Same gene and shared pathways add a little.
 - Tissue, mutation spectrum, gnomAD constraint, AlphaMissense and AlphaFold structure didn't improve ranking, so they are shown as explanations, not scores. A coarse loss/gain-of-function label made ranking worse.
-- **Direction-aware matching** (does the drug raise or lower the function the disease lacks?) is neutral on PrimeKG and right whenever it fires, so it is kept as a flag, not a score.
+- **Direction-aware matching** (does the drug raise or lower the function the disease lacks?) is neutral on PrimeKG and right whenever it fires, so it is kept as a flag, not a score. The app shows it per variant group ("fits" or "direction mismatch") next to therapies, ideas and approaches, and only for the drug's direct target.
 - **Similarity is not a safety signal:** contraindicated drugs rank mid-pool.
 - The curated benchmark is partly circular: the same literature built the graph and the test. Read a high rank as a reason to look, not as proof. Weights are tuned with nested cross-validation.
 
@@ -129,7 +130,7 @@ The milestone: a small patient group starts contributing natural history data a 
 | **Reconcile** | Resolves names and synonyms (protein names, older disease names) to one stable node, choosing only from candidate nodes. |
 | **Cross-check** | Compares its reading with the curated links: agreements stamp the evidence, disagreements go to review (88% agreement on the SNAREopathy papers). |
 | **Explain** | Turns a path through the graph into plain language a family can follow. Every sentence cites the links that support it. |
-| **Draft** | Writes sourced collaboration proposals, outreach emails and experiment plans from a disease's neighbours, shared assets, partners and gaps. 58 drafts are precomputed in `data/ai/`. |
+| **Draft** | Writes sourced collaboration proposals, outreach emails and experiment plans from a disease's neighbours, shared assets, partners and gaps. 66 drafts are precomputed in `data/ai/`. |
 | **Research queue** | Volunteers' OpenAI (or Claude) extractions for breadth diseases, re-verified by the server. |
 
 Model output is constrained to the evidence it is given. Citations that point outside it are dropped. Sentences without a source are shown muted as "AI framing, no direct source".

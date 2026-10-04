@@ -93,10 +93,10 @@ Every literature quote is string-verified against a stored source. Every automat
    - the CBL and SCN8A mechanism classes, which disagree with G2P;
    - possibly missing MONDO xrefs (CDKL5 MONDO:0100039, GLUT1 MONDO:0000188, Gaucher MONDO:0018150, NPC MONDO:0018982, MLD MONDO:0018868);
    - the obsolete Dravet id MONDO:0011794 → MONDO:0100135.
-3. A curated LZTR1/RIT1 → MAPK link from the literature. GO has none; see `gap:ras-to-mapk-hierarchy`.
-4. The STXBP1 enrollment total for the Research view includes the multi-disease Simons Searchlight. Exclude multi-disease registries from the sum.
+3. ~~A curated LZTR1/RIT1 → MAPK link~~: done in `data/curated/cross_family.json` (29/45 diseases now cross-linked).
+4. ~~STXBP1 enrollment total includes Simons Searchlight~~: done; multi-disease registries are listed as "not counted".
 5. Before merging `data/curated/crowd.json`, review it: crowd diseases become `disease:<GENE>` nodes.
-6. Videos: see `docs/video-script.md`, and refresh the numbers from `/method`.
+6. Videos: the script in `docs/video-script.md` is refreshed (Oct 4); re-check the ⟨…⟩ numbers on `/method` right before recording.
 7. Delete the duplicate Vercel project "web".
 
 ## Conventions

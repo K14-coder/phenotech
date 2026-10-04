@@ -16,17 +16,8 @@ Several Claude agents and people work in parallel. Follow this every time:
 ## P0: submission blockers
 
 - [ ] **(you, later)** Make the repo public before submission (team decision: later). The GitHub repo `K14-coder/rare-disease-atlas` is private for now. Either make it public, or share it the way Hack-Nation asks. Run a final secret scan before making it public (see KNOWLEDGE.md → "Secret scan").
-- [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:32 CEST) Refresh `README.md` for the current product:
-  - the name Tasukeru;
-  - the four views;
-  - search across 11,456 diseases;
-  - the FASTA/VCF checker with genome-wide ClinVar;
-  - community accounts and alerts, and the research queue;
-  - the benchmarks (56-case curated eval and the 1,300-case PrimeKG eval);
-  - how OpenAI is used;
-  - the architecture diagram;
-  - the acknowledgements.
-- [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:32 CEST) Refresh `docs/video-script.md`: the Tasukeru name, the current numbers from `/method`, and the guided tour "Follow a patient group" as the 1-minute walkthrough.
+- [x] (vibrant-babbage, 2026-10-04) Refresh `README.md` for the current product: Tasukeru, depth/breadth tiers, four views, `/sequence` with genome-wide ClinVar, community and research queue, both benchmarks, OpenAI use, updated architecture diagram, acknowledgements.
+- [x] (vibrant-babbage, 2026-10-04) Refresh `docs/video-script.md`: Tasukeru name, current `/method` numbers (⟨…⟩ marks numbers to re-check before recording), the 8-step "Follow a patient group" tour as the 1-minute walkthrough.
 - [ ] **(you)** Record the team video and the 1-minute walkthrough.
 - [ ] Do a final consistency pass on the deployed site:
   - Simple view on a phone;
@@ -55,12 +46,13 @@ Several Claude agents and people work in parallel. Follow this every time:
   - [ ] Follow-up: find PTPN11 → mTOR evidence independent of PMID 21339643 (the rapamycin-NSML paper; using it would leak into the benchmark).
   - [ ] Follow-up: still not cross-linked: KCNT1, SCN2A, SCN8A, SLC2A1, ARSA, GALC, IDS, IDUA, SMPD1, TPP1, CPLX1, NSF, SNAP25, STX1A, STX1B, UNC13A. Candidates: non-IEA evidence for SNAP25/STX1B in Ca2+-triggered exocytosis, an HCN/excitability node for NF1, UPR markers in DEE/SNARE iPSC neurons.
 - [x] (web agent, commit 2a3070c) Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
-- [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:40 CEST) Direction coverage: add MONDO:0100135 (Dravet) to the G2P/ClinGen join (obsolete id MONDO:0011794). Get directions for relutrigine and NBI-921352 (Nav1.6 inhibitors; ChEMBL has no mechanism record for them).
+- [x] (vibrant-babbage, 2026-10-04) Direction coverage: relutrigine and NBI-921352 now "decrease" from PubMed (`CURATED_DIRECTION` in `direction_build.py`, PMID:35037706 and PMID:40808385); curated therapies with a direction 39 → 41. `mechanism_index.py` now follows MONDO `replaced_by` for G2P/ClinGen rows (Dravet MONDO:0011794 → MONDO:0100135).
+  - [ ] Rerun `global_index.py` → `mechanism_index.py` → `direction_build.py` (full) → `direction_eval.py` on a machine with `data/raw/downloads/`, so Dravet gets its G2P mechanism record and a disease-side direction. The cloud session could not reach EBI, ClinGen or OBO hosts.
 - [x] Hypotheses recomputed with the cross-family links (10 ideas, now including 4-PBA → SCN1A and rapamycin → NF1).
 - [x] Experiment AI drafts for all 10 current ideas (gpt-6-astra).
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
-- [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:32 CEST) The STXBP1 enrollment total in the Research view includes multi-disease Simons Searchlight. Exclude multi-disease registries from the sum.
+- [x] (vibrant-babbage, 2026-10-04) The STXBP1 enrollment total in the Research view excluded multi-disease registries: a study linked to 3+ atlas diseases or listing more than 5 conditions is shown as "not counted" (STXBP1: 101,363 → 863 across 8 studies).
 
 ## P2: contacts and community
 
@@ -86,6 +78,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- README and video script refreshed; Research-view enrollment excludes multi-disease registries; relutrigine and NBI-921352 directions; obsolete-MONDO join in the mechanism layer (vibrant-babbage).
 - Web: direction flag ("Direction fits" / "Direction mismatch", direct target only, per variant group where a gene mixes directions) on disease therapy evidence, idea cards, /approach programmes, /variant and /sequence; AI reviews labelled "Independently reviewed by AI (not a human expert)" and counted separately on /method; direction result on /method (commit 2a3070c).
 - Cross-family biology: RAS → MAPK (LZTR1, RIT1, SOS1, CBL), SYNGAP1 ↔ MAPK/mTOR, mTOR, synaptic plasticity, misfolding (SCN1A, KCNQ2), autophagy; 11/45 → 29/45 diseases cross-linked by a specific mechanism. `docs/agent-reports/cross-family.md`.
 - Independent AI review (Claude, not a human expert): 63 links, 31 confirmed, 26 corrected, 6 needs-human; MONDO umbrella ids for CDKL5/SLC2A1/GBA1/NPC1/ARSA; Dravet MONDO:0011794 → MONDO:0100135 on SCN1A and SCN2A. `docs/review/ai-review-2026-10-04.md`.
