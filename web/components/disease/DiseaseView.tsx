@@ -19,6 +19,7 @@ import { FollowButton } from "../community/AccountBits";
 import { OseiSections } from "../research/OseiSections";
 import { GeneFactors } from "./GeneFactors";
 import { OrgContact } from "../contacts/ContactLine";
+import { DirectionFlags } from "../direction/DirectionFlag";
 import { DisMechForAtlas } from "../global/MechanismBits";
 import { atlasHref, clustersOf, clusterSlot, compareHref, diseaseHref, diseaseIdFromParam, pathHref, type GraphIndex } from "@/lib/graph";
 import {
@@ -323,6 +324,7 @@ function Disease({ idx, id, as: persona, embedded = false }: { idx: GraphIndex; 
                         {t.node.type === "therapy" && t.node.attrs?.stage ? ` · ${THERAPY_STAGE_LABEL[t.node.attrs.stage] ?? t.node.attrs.stage}` : ""}
                       </p>
                       <p className="mt-1.5 text-sm leading-relaxed text-ink-2">{t.edge.explanation}</p>
+                      <DirectionFlags therapyId={t.node.id} diseaseId={node.id} plain={persona === "family" || embedded} />
                     </div>
                     <EvidenceChip edge={t.edge} label="Evidence" />
                   </li>
@@ -339,7 +341,7 @@ function Disease({ idx, id, as: persona, embedded = false }: { idx: GraphIndex; 
             What should we do together?
           </h2>
 
-          <div className="mt-6 rounded-lg border border-line border-l-[3px] border-l-accent-700 px-6 py-5">
+          <div className="mt-6 rounded-lg border border-line border-l-[3px] border-l-accent-700 px-6 py-5 [overflow-wrap:anywhere]">
             <p className="text-xs font-semibold text-accent-700">Suggested next step</p>
             <p className="mt-1.5 text-[18px] font-semibold leading-snug text-ink">{step.title}</p>
             {step.why && <p className="mt-2 max-w-[760px] text-sm leading-relaxed text-ink-2">{step.why}</p>}
@@ -689,7 +691,7 @@ function OrgCard({ o, note }: { o: OrgPartner; note: string }) {
 
 function UnknownsBox({ gaps, disease, family = false }: { gaps: Gap[]; disease: AtlasNode; family?: boolean }) {
   return (
-    <section aria-labelledby="unknown-h" className="mt-10 rounded-lg border-2 border-ink px-6 py-5" data-tour="gaps">
+    <section aria-labelledby="unknown-h" className="mt-10 rounded-lg border-2 border-ink px-6 py-5 [overflow-wrap:anywhere]" data-tour="gaps">
       <h3 id="unknown-h" className="text-[17px] font-semibold text-ink">
         {family ? "What nobody knows yet, and how you could help" : "What we don’t know yet"}
       </h3>

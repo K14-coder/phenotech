@@ -1,0 +1,91 @@
+{
+  "kind": "experiment",
+  "id": "therapy:hsct-krabbe|candidate_for|disease:IDS",
+  "title": "Testing the HSCT hypothesis in an IDS-related disease model",
+  "sections": [
+    {
+      "heading": "What we would test",
+      "sentences": [
+        {
+          "text": "This is a hypothesis, not a finding; its weakest link is the claim that haematopoietic stem cell transplantation (HSCT), used early for Krabbe disease, targets lysosomal enzyme deficiency.",
+          "edge_ids": [
+            "therapy:hsct-krabbe|candidate_for|disease:IDS",
+            "therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Test whether HSCT improves a lysosomal enzyme deficiency readout in a non-patient model of IDS-related disease (Hunter syndrome).",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Model or assay to use",
+      "sentences": [
+        {
+          "text": "Before starting, identify or build a suitable cell or animal model and establish an assay; this plan does not specify a ready-to-use model or protocol.",
+          "edge_ids": []
+        },
+        {
+          "text": "Seek the readout used to support HSCT in its known disease context before selecting the experimental setup.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What to measure",
+      "sentences": [
+        {
+          "text": "IDS-related disease involves loss of enzyme activity and accumulation of glycosaminoglycans, including heparan sulfate and dermatan sulfate.",
+          "edge_ids": [
+            "disease:IDS|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Choose an established readout of that deficiency and compare it with and without HSCT.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Controls",
+      "sentences": [
+        {
+          "text": "Use the same disease model without HSCT as the comparison, measuring the same readout in both conditions.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What result would change the plan",
+      "sentences": [
+        {
+          "text": "Rescue would support further cell or animal testing; no effect would retire this link from the current experimental plan.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Caveats",
+      "sentences": [
+        {
+          "text": "The shared mechanism spans multiple diseases and does not establish that Hunter syndrome responds.",
+          "edge_ids": [
+            "therapy:hsct-krabbe|candidate_for|disease:IDS"
+          ]
+        },
+        {
+          "text": "The graph contains no study testing this therapy class in this disease.",
+          "edge_ids": [
+            "therapy:hsct-krabbe|candidate_for|disease:IDS"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T04:37:16.574Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

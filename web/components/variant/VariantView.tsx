@@ -10,6 +10,7 @@ import { atlasHref, diseaseHref, neighbors, type GraphIndex } from "@/lib/graph"
 import { useDerived, type ModalityData } from "@/lib/derived";
 import { lookupVariant, type LookupResult, type VariantsData } from "@/lib/variant";
 import { CLS_PLAIN, lookupHgvs } from "@/lib/clinvar";
+import { VgDirectionList } from "../direction/DirectionFlag";
 import { useResource } from "@/lib/resource";
 import type { AtlasEdge, AtlasNode } from "@/lib/types";
 
@@ -196,6 +197,11 @@ function Result({ idx, r, scopeNote, modality }: { idx: GraphIndex; r: LookupRes
       </Card>
 
       {vgId && <MechanismCard idx={idx} vgId={vgId} diseaseId={disease?.id} />}
+      {vgId && gene && (
+        <div className="rounded-lg border border-line px-6 py-4 empty:hidden">
+          <VgDirectionList gene={gene} vgId={vgId} />
+        </div>
+      )}
       {disease && modality?.assessments[disease.id] && consequence && (
         <TherapyCard modality={modality} diseaseId={disease.id} vgSlug={vgSlug} consequence={consequence} />
       )}

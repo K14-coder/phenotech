@@ -7,11 +7,13 @@ import { WithGraph } from "../GraphProvider";
 import { AccuracySection } from "./AccuracySection";
 import { CollectionList } from "./CollectionList";
 import { PrimeKgSection } from "./PrimeKgSection";
+import { DirectionNote } from "./DirectionNote";
 import { EvidenceLegend } from "../evidence/EvidenceBits";
 import { CounterexampleCard } from "../disease/DerivedSections";
 import { useDerived, type Counterexample } from "@/lib/derived";
 import type { GraphIndex } from "@/lib/graph";
 import { isPlaceholderUrl } from "@/lib/text";
+import { isAiReview } from "@/lib/types";
 
 export function MethodView() {
   return <WithGraph>{(idx) => <Method idx={idx} />}</WithGraph>;
@@ -32,7 +34,8 @@ function Method({ idx }: { idx: GraphIndex }) {
     const verified = quoted.filter((ev) => ev.verified).length;
     const crossChecked = edges.filter((e) => [...e.evidence, ...(e.counter_evidence ?? [])].some((ev) => ev.cross_checked));
     const disagreements = edges.filter((e) => [...e.evidence, ...(e.counter_evidence ?? [])].some((ev) => ev.cross_checked && !ev.cross_checked.agrees || ev.needs_review)).length;
-    const reviewed = edges.filter((e) => e.review);
+    const reviewed = edges.filter((e) => e.review && !isAiReview(e.review));
+    const aiReviewed = edges.filter((e) => isAiReview(e.review));
     const contested = edges.filter((e) => e.status === "contested").length;
     const inferred = edges.filter((e) => e.evidence_level === "inferred" || e.evidence_level === "hypothesis").length;
     return {
@@ -44,6 +47,10 @@ function Method({ idx }: { idx: GraphIndex }) {
       disagreements,
       reviewed: reviewed.length,
       corrected: reviewed.filter((e) => e.review?.verdict !== "confirmed").length,
+      aiReviewed: aiReviewed.length,
+      aiConfirmed: aiReviewed.filter((e) => e.review?.verdict === "confirmed").length,
+      aiNeedsHuman: aiReviewed.filter((e) => e.review?.verdict === "needs-human").length,
+      aiChanged: aiReviewed.filter((e) => e.review?.verdict === "corrected" || e.review?.verdict === "rejected").length,
       contested,
       inferred,
       gaps: g.gaps.length,
@@ -62,6 +69,13 @@ function Method({ idx }: { idx: GraphIndex }) {
       big: `${s.reviewed}`,
       label: "connections reviewed by a biochemist",
       body: s.reviewed ? `${s.corrected} corrected or rejected after review.` : "Human review results are added as they arrive. Until then, nothing is marked as reviewed.",
+    },
+    {
+      big: `${s.aiReviewed}`,
+      label: "connections independently reviewed by AI",
+      body: s.aiReviewed
+        ? `Not a human expert. ${s.aiConfirmed} confirmed, ${s.aiChanged} corrected or rejected, ${s.aiNeedsHuman} passed on to a human expert. Each shows the AI’s note.`
+        : "An independent AI review of flagged connections. Results are added as they arrive.",
     },
     { big: `${s.contested}`, label: "contested connections", body: "Sources disagree. Both sides are shown in the evidence panel, never hidden." },
     { big: `${s.gaps}`, label: "open questions recorded", body: "Things the atlas could not answer, with what was searched and how to find out." },
@@ -95,6 +109,7 @@ function Method({ idx }: { idx: GraphIndex }) {
 
       <AccuracySection />
       <PrimeKgSection />
+      <DirectionNote />
 
       <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
         <section aria-labelledby="built-h">

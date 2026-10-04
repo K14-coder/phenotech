@@ -1,5 +1,6 @@
 "use client";
 
+import { DirectionFlags } from "../direction/DirectionFlag";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
@@ -260,6 +261,7 @@ function DiseaseRow({ idx, data, diseaseId, cell, rank, open }: { idx: GraphInde
                   <li key={p.therapy}>
                     {p.label} <span className="text-xs text-ink-3">· {p.stage}{p.trials.length ? ` · ${p.trials.join(", ")} (${p.trial_status.join(", ").toLowerCase().replace(/_/g, " ")})` : ""}</span>
                     {p.why_stopped.length > 0 && <span className="block text-xs font-medium text-warn-ink">Stopped: {p.why_stopped.join("; ")}</span>}
+                    <DirectionFlags therapyId={p.therapy} diseaseId={diseaseId} />
                   </li>
                 ))}
                 {stopped

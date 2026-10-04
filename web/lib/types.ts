@@ -340,9 +340,13 @@ export interface AtlasEdge {
 export interface EdgeReview {
   by: string;
   date: string;
-  verdict: "confirmed" | "corrected" | "rejected";
+  /** "ai-review:<model>" for the independent AI review (not a human expert); anything else is a human reviewer */
+  verdict: "confirmed" | "corrected" | "rejected" | "needs-human";
   note?: string;
 }
+
+/** Review records written by the independent AI review pass, kept apart from human expert review. */
+export const isAiReview = (r?: { by?: string } | null) => !!r?.by?.startsWith("ai-review:");
 
 // ---------- Top level ----------
 

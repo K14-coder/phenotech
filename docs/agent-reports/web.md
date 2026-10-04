@@ -1101,3 +1101,20 @@ The header already had a mark: three connected dots in the site's accent colours
 - The report form reached the admin queue and was marked as handled; the test entry lived only in a throwaway store.
 - No console errors and no sideways scroll at 1440 or 390 px.
 - `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Direction flag, AI review label, direction on /method
+
+- **Data:** sync slims `data/derived/direction/{gene_direction,drug_direction}.json` into `web/public/data/derived/web/direction.json` (13 KB): 37 curated therapies with a direction and direct gene targets, 45 atlas disease directions, and 133 variant-group sides. It also sets the `available.direction` and `available.eval_direction` flags.
+- **Flag (`web/lib/direction.ts`, `components/direction/DirectionFlag.tsx`):**
+  - It shows only when the drug's direct target is the disease gene, with the text "Direction fits / Direction mismatch (drug): this drug lowers/raises X activity; <disease or variant group> involves too much/too little X activity".
+  - Where a gene mixes directions, it is given per variant group. For example, elsunersen and sodium-channel blockers fit SCN2A gain-of-function missense and mismatch the loss-of-function and splice groups.
+  - The Simple view uses plain words plus "Discuss with your clinician."
+  - Placement: disease therapy evidence (plain in Simple "Learn more"), idea cards, /approach "Existing programmes", and the /variant and /sequence results per variant group.
+  - It is a flag, not a score.
+- **AI review:** review records whose `by` starts with `ai-review:` show "Independently reviewed by AI (not a human expert)", with the model, date, verdict (including "Needs a human expert") and the note, without the duplicated disclaimer. Human reviews keep "Reviewed by a biochemist". /method counts them separately: a new tile with the confirmed, corrected/rejected and passed-to-a-human counts.
+- **/method:** a new section, "Does the treatment push the gene the right way?" (`#direction`): right when it fires (8 of 8), too rare to change rankings (MRR 0.375 → 0.379), so shown as a flag.
+- **Also fixed:** two cases of sideways scroll at 390 px on the Research view, from long text in "What we don't know yet" and in the next-step box.
+- **Checks:**
+  - At 1440 and 390 px: SCN1A in Detailed shows 3 flags (ETX101 and zorevunersen fit; sodium-channel blockers mismatch). SCN2A in Research shows 6 per-group flags. Flags also appear in SCN1A Simple "Learn more", on /approach for STXBP1, on /variant for STXBP1 c.1162C>T, and on the /sequence synthetic VCF.
+  - The CBL evidence panel shows the AI review label.
+  - No console errors and no sideways scroll; `tsc` and `eslint` are clean; one `npm run build` passed.

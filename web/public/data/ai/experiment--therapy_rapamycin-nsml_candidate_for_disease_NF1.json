@@ -1,0 +1,96 @@
+{
+  "kind": "experiment",
+  "id": "therapy:rapamycin-nsml|candidate_for|disease:NF1",
+  "title": "Testing the rapamycin–mTOR hypothesis in NF1 cells",
+  "sections": [
+    {
+      "heading": "What we would test",
+      "sentences": [
+        {
+          "text": "This is a hypothesis, not a finding; its weakest link is the connection between the NF1 gene and TOR (mTOR) signaling.",
+          "edge_ids": [
+            "therapy:rapamycin-nsml|candidate_for|disease:NF1",
+            "gene:NF1|participates_in|mech:tor-signaling"
+          ]
+        },
+        {
+          "text": "Test whether rapamycin (sirolimus) changes an mTOR signaling readout in NF1-deficient cells.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Model or assay to use",
+      "sentences": [
+        {
+          "text": "The cited NF1 evidence describes constitutive mTOR activation in NF1-deficient primary cells in the absence of growth factors.",
+          "edge_ids": [
+            "gene:NF1|participates_in|mech:tor-signaling"
+          ]
+        },
+        {
+          "text": "Use that cell context as the starting point; the lab would need to establish a usable model and signaling assay before testing.",
+          "edge_ids": []
+        },
+        {
+          "text": "Check the cited studies for a suitable readout rather than inventing an assay or assuming one is ready to use.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What to measure",
+      "sentences": [
+        {
+          "text": "Measure the same selected mTOR signaling readout before and after rapamycin exposure, comparing treated and untreated cells.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Controls",
+      "sentences": [
+        {
+          "text": "Include NF1-deficient cells without rapamycin, keeping the assay conditions otherwise matched.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What result would change the plan",
+      "sentences": [
+        {
+          "text": "A reproducible reduction in the signaling readout would support further bench testing, not establish disease benefit.",
+          "edge_ids": []
+        },
+        {
+          "text": "No effect in a working assay would argue against pursuing this hypothesis in that model.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Caveats",
+      "sentences": [
+        {
+          "text": "The graph contains no study, case report or model result testing this therapy class in NF1-related disorders.",
+          "edge_ids": [
+            "therapy:rapamycin-nsml|candidate_for|disease:NF1"
+          ]
+        },
+        {
+          "text": "Rapamycin reversed cardiac defects in LS/+ mice in the cited evidence, but that is not an NF1 result.",
+          "edge_ids": [
+            "therapy:rapamycin-nsml|targets|mech:tor-signaling",
+            "therapy:rapamycin-nsml|candidate_for|disease:NF1"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T04:37:43.028Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

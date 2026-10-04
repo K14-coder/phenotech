@@ -2,7 +2,7 @@
  "about": "The places where the clean story breaks. Each item names edges that exist in data/graph.json, so a reader can open the evidence. Written for families first: the plain_language line should be readable by a parent, and the why_it_matters line says what it changes.",
  "meta": {
   "generated": "2026-10-04",
-  "graph": "2026-10-04T00:57:15+00:00",
+  "graph": "2026-10-04T04:34:03+00:00",
   "n_items": 10,
   "code": "pipeline/derive/counterexamples.py",
   "integrity": "the build fails if any edge_id is absent from the graph"
@@ -50,8 +50,8 @@
      "id": "therapy:aminopyridine-presynaptic-boost|developed_for|disease:SNAP25",
      "type": "developed_for",
      "status": "contested",
-     "evidence_level": "clinical",
-     "confidence": 0.6,
+     "evidence_level": "experimental",
+     "confidence": 0.5,
      "n_counter_evidence": 2
     },
     {
@@ -59,7 +59,7 @@
      "type": "driven_by",
      "status": "contested",
      "evidence_level": "experimental",
-     "confidence": 0.5,
+     "confidence": 0.4,
      "n_counter_evidence": 1
     },
     {
@@ -67,8 +67,8 @@
      "type": "driven_by",
      "status": "contested",
      "evidence_level": "experimental",
-     "confidence": 0.5,
-     "n_counter_evidence": 0
+     "confidence": 0.4,
+     "n_counter_evidence": 1
     }
    ]
   },
@@ -76,7 +76,7 @@
    "id": "cx:stx1b-both-directions",
    "title": "STX1B variants point both ways, and one does both at once",
    "plain_language": "For STX1B, one change leaves fewer vesicles ready to go, another makes fusion easier, and in patient-derived neurons a third change does both at the same time.",
-   "why_it_matters": "Both the loss-of-function and the gain-of-function edge for STX1B are contested in the graph (the loss-of-function edge carries 3 contradicting items). Any plan that treats 'STX1B epilepsy' as one entity is treating at least two.",
+   "why_it_matters": "Both the loss-of-function and the gain-of-function edge for STX1B are contested in the graph (the loss-of-function edge carries 2 contradicting items). Any plan that treats 'STX1B epilepsy' as one entity is treating at least two.",
    "edge_ids": [
     "disease:STX1B|driven_by|mech:loss-of-function",
     "disease:STX1B|driven_by|mech:gain-of-function",
@@ -89,7 +89,7 @@
      "status": "contested",
      "evidence_level": "experimental",
      "confidence": 0.7,
-     "n_counter_evidence": 3
+     "n_counter_evidence": 2
     },
     {
      "id": "disease:STX1B|driven_by|mech:gain-of-function",
@@ -206,7 +206,7 @@
      "type": "has_effect",
      "status": "contested",
      "evidence_level": "experimental",
-     "confidence": 0.6,
+     "confidence": 0.5,
      "n_counter_evidence": 3
     },
     {
@@ -223,7 +223,7 @@
    "id": "cx:bridge-contested",
    "title": "The headline bridge between STXBP1 and SLC6A1 is contested",
    "plain_language": "One trial already enrols children with either an STXBP1 or an SLC6A1 change, on the idea that both make an unstable protein that a chaperone drug could rescue. The two proteins are unstable in different ways, and the drug may partly work by helping the healthy copy rather than fixing the faulty one.",
-   "why_it_matters": "This is the most interesting edge in the atlas and it carries 9 contradicting items. If the shared mechanism is really two different stories joined by one convenient drug, the cross-gene trial design is weaker than it looks - and that is a question for a biochemist, not a graph.",
+   "why_it_matters": "This is the most interesting edge in the atlas and it carries 8 contradicting items. If the shared mechanism is really two different stories joined by one convenient drug, the cross-gene trial design is weaker than it looks - and that is a question for a biochemist, not a graph.",
    "edge_ids": [
     "disease:STXBP1|shares_mechanism|disease:SLC6A1",
     "disease:SLC6A1|driven_by|mech:protein-destabilization",
@@ -238,7 +238,7 @@
      "status": "contested",
      "evidence_level": "experimental",
      "confidence": 0.6,
-     "n_counter_evidence": 9
+     "n_counter_evidence": 8
     },
     {
      "id": "disease:SLC6A1|driven_by|mech:protein-destabilization",
@@ -270,7 +270,7 @@
      "status": "contested",
      "evidence_level": "clinical",
      "confidence": 0.8,
-     "n_counter_evidence": 4
+     "n_counter_evidence": 3
     }
    ]
   },
@@ -353,7 +353,7 @@
      "type": "targets",
      "status": "supported",
      "evidence_level": "experimental",
-     "confidence": 0.6,
+     "confidence": 0.5,
      "n_counter_evidence": 0
     },
     {

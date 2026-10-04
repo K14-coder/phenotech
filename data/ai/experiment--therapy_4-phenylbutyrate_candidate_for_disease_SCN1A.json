@@ -1,0 +1,96 @@
+{
+  "kind": "experiment",
+  "id": "therapy:4-phenylbutyrate|candidate_for|disease:SCN1A",
+  "title": "Testing a chemical-chaperone hypothesis in SCN1A cells",
+  "sections": [
+    {
+      "heading": "What we would test",
+      "sentences": [
+        {
+          "text": "This is a hypothesis, not a finding; its weakest link is whether SCN1A missense variants cause protein destabilization or misfolding.",
+          "edge_ids": [
+            "therapy:4-phenylbutyrate|candidate_for|disease:SCN1A",
+            "vg:SCN1A:missense|has_effect|mech:protein-destabilization"
+          ]
+        },
+        {
+          "text": "Test whether 4-phenylbutyrate / glycerol phenylbutyrate improves a folding-related readout in a cellular model of a folding-defective SCN1A variant.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Model or assay to use",
+      "sentences": [
+        {
+          "text": "Prioritize adapting the cellular work underlying the evidence for folding-defective SCN1A mutants and their partial rescue.",
+          "edge_ids": [
+            "vg:SCN1A:missense|has_effect|mech:protein-destabilization"
+          ]
+        },
+        {
+          "text": "Ask the lab to confirm access to that model and its readout; if unavailable, a suitable SCN1A cellular model would need to be built before testing.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What to measure",
+      "sentences": [
+        {
+          "text": "Use the existing SCN1A folding-related readout, including cell-surface delivery if available, to compare treated and untreated cells.",
+          "edge_ids": [
+            "vg:SCN1A:missense|has_effect|mech:protein-destabilization"
+          ]
+        },
+        {
+          "text": "Confirm the baseline defect before interpreting any apparent rescue.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Controls",
+      "sentences": [
+        {
+          "text": "Include the same SCN1A model without therapy and, if feasible, a low-temperature rescue comparison, since partial rescue by low temperature is reported.",
+          "edge_ids": [
+            "vg:SCN1A:missense|has_effect|mech:protein-destabilization"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What result would change the plan",
+      "sentences": [
+        {
+          "text": "Rescue would support further bench validation; no effect despite a confirmed, rescuable baseline defect would argue against pursuing this model–therapy link.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Caveats",
+      "sentences": [
+        {
+          "text": "Folding defects apply only to a subset of SCN1A missense variants, and the graph contains no study testing this therapy class in this disease.",
+          "edge_ids": [
+            "vg:SCN1A:missense|has_effect|mech:protein-destabilization",
+            "therapy:4-phenylbutyrate|candidate_for|disease:SCN1A"
+          ]
+        },
+        {
+          "text": "The proposed drug mechanism is contested; high required concentrations and potential toxicity limit interpretation.",
+          "edge_ids": [
+            "therapy:4-phenylbutyrate|targets|mech:protein-destabilization"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T04:39:37.468Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

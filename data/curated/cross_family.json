@@ -1,0 +1,1093 @@
+{
+ "nodes": [
+  {
+   "id": "mech:autophagy",
+   "type": "mechanism",
+   "label": "Autophagy",
+   "xrefs": {
+    "GO": "GO:0006914"
+   },
+   "summary": "The cell's self-digestion pathway: material is wrapped in autophagosomes and delivered to lysosomes for breakdown.",
+   "attrs": {
+    "kind": "process",
+    "go_id": "GO:0006914",
+    "go_name": "autophagy",
+    "family": "cross"
+   },
+   "sources": [
+    {
+     "source": "GO",
+     "ref": "GO:0006914",
+     "url": "https://www.ebi.ac.uk/QuickGO/term/GO:0006914",
+     "title": "autophagy (GO:0006914), go-basic.obo",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    }
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "id": "gene:LZTR1|participates_in|mech:mapk-cascade",
+   "source": "gene:LZTR1",
+   "target": "mech:mapk-cascade",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "LZTR1 is the adaptor that tags RAS proteins for ubiquitin-mediated degradation; losing it, or carrying dominant Noonan-syndrome LZTR1 mutations, increases the RAS pool and RAS-MAPK (ERK) pathway activity.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30442766",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30442766/",
+     "title": "LZTR1 is a regulator of RAS ubiquitination and signaling.",
+     "year": 2018,
+     "quote": "We propose that LZTR1 acts as a conserved regulator of RAS ubiquitination and MAPK pathway activation.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:30481304",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30481304/",
+     "title": "Dominant Noonan syndrome-causing LZTR1 mutations specifically affect the Kelch domain substrate-recognition surface and enhance RAS-MAPK signaling.",
+     "year": 2019,
+     "quote": "We provide the first evidence that these mutations, but not the missense changes occurring as biallelic mutations in recessive NS, enhance stimulus-dependent RAS-MAPK signaling, which is triggered, at least in part, by an increased RAS protein pool.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:31337872",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31337872/",
+     "title": "LZTR1 facilitates polyubiquitination and degradation of RAS-GTPases.",
+     "year": 2020,
+     "quote": "Here, we demonstrate that LZTR1 facilitates the polyubiquitination and degradation of RAS via the ubiquitin-proteasome pathway, leading to the inhibition of the RAS/MAPK signaling.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:RIT1|participates_in|mech:mapk-cascade",
+   "source": "gene:RIT1",
+   "target": "mech:mapk-cascade",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Noonan-syndrome RIT1 variants increase MEK-ERK signalling and ERK-target (ELK1) transactivation in cell assays; pathogenic RIT1 or LZTR1 mutations prevent normal LZTR1-mediated RIT1 degradation.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25959749",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25959749/",
+     "title": "Mutations in RIT1 cause Noonan syndrome - additional functional evidence and expanding the clinical phenotype.",
+     "year": 2016,
+     "quote": "Both variants resulted in increased MEK-ERK signaling compared to wild-type, underscoring gain-of-function as the primary functional mechanism.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:23791108",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23791108/",
+     "title": "Gain-of-function mutations in RIT1 cause Noonan syndrome, a RAS/MAPK pathway syndrome.",
+     "year": 2013,
+     "quote": "Luciferase assays in NIH 3T3 cells showed that five RIT1 alterations identified in children with Noonan syndrome enhanced ELK1 transactivation.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:30872527",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30872527/",
+     "title": "RIT1 oncoproteins escape LZTR1-mediated proteolysis.",
+     "year": 2019,
+     "quote": "Pathogenic mutations affecting either RIT1 or LZTR1 resulted in incomplete degradation of RIT1. This led to RIT1 accumulation and dysregulated growth factor signaling responses.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:RIT1|participates_in|mech:ras-protein-signal-transduction",
+   "source": "gene:RIT1",
+   "target": "mech:ras-protein-signal-transduction",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "RIT1 encodes a RAS-subfamily GTPase; Gene Ontology annotates it to Ras protein signal transduction (GO:0007265, IDA from the paper that linked RIT1 to Noonan syndrome).",
+   "evidence_level": "curated",
+   "status": "supported",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "source": "GO",
+     "ref": "GO:0007265",
+     "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q92963&goId=GO:0007265&goUsage=descendants",
+     "title": "QuickGO: 2 annotation(s) of UniProtKB:Q92963 (RIT1) to GO:0007265; evidence IBA, IDA",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:23791108",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23791108/",
+     "title": "Gain-of-function mutations in RIT1 cause Noonan syndrome, a RAS/MAPK pathway syndrome.",
+     "year": 2013,
+     "quote": "we identified a total of nine missense, nonsynonymous mutations in RIT1, encoding a member of the RAS subfamily",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family",
+    "go_evidence_codes": [
+     "IBA",
+     "IDA"
+    ],
+    "go_terms_hit": [
+     "GO:0007265"
+    ]
+   }
+  },
+  {
+   "id": "gene:SOS1|participates_in|mech:mapk-cascade",
+   "source": "gene:SOS1",
+   "target": "mech:mapk-cascade",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "SOS1 is a RAS guanine-nucleotide exchange factor; Noonan-syndrome SOS1 mutants enhance RAS and ERK activation in two independent studies.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:17143285",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17143285/",
+     "title": "Germline gain-of-function mutations in SOS1 cause Noonan syndrome.",
+     "year": 2007,
+     "quote": "Noonan syndrome-associated SOS1 mutations are hypermorphs encoding products that enhance RAS and ERK activation.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:17143282",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17143282/",
+     "title": "Gain-of-function SOS1 mutations cause a distinctive form of Noonan syndrome.",
+     "year": 2007,
+     "quote": "In addition, ectopic expression of two Noonan syndrome-associated mutants induces enhanced RAS and ERK activation.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:CBL|participates_in|mech:mapk-cascade",
+   "source": "gene:CBL",
+   "target": "mech:mapk-cascade",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Germline CBL mutants found in a Noonan-like disorder cause constitutive or enhanced ERK phosphorylation in cell models, which the authors attribute to augmented RAS-MAPK signalling.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.8,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:20694012",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20694012/",
+     "title": "Germline CBL mutations cause developmental abnormalities and predispose to juvenile myelomonocytic leukemia.",
+     "year": 2010,
+     "quote": "the common p.371Y>H altered Cbl protein induces cytokine-independent growth and constitutive phosphorylation of ERK, AKT and S6 only in hematopoietic cells in which normal Cbl expression is reduced by RNA interference",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:25178484",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25178484/",
+     "title": "RASopathy-associated CBL germline mutations cause aberrant ubiquitylation and trafficking of EGFR.",
+     "year": 2014,
+     "quote": "Since we detected enhanced ERK phosphorylation in cells expressing mutant CBL, we conclude that aberrant EGFR trafficking contributes to augmented RAS-MAPK signaling, the common trait of Noonan syndrome and related RASopathies.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:SYNGAP1|participates_in|mech:mapk-cascade",
+   "source": "gene:SYNGAP1",
+   "target": "mech:mapk-cascade",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "SynGAP is a synaptic Ras GTPase-activating protein. Heterozygous or knockout Syngap1 mice and neurons show raised ERK activation and MEK/ERK hyperphosphorylation, the same pathway over-activated in RASopathies. The same papers note limits: SynGAP's role in LTP likely involves other targets, and a MEK inhibitor normalised basal transmission but not the LTP deficit in Syngap1+/- mice (PMID 12427827, 29940508).",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:12427827",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/12427827/",
+     "title": "SynGAP regulates ERK/MAPK signaling, synaptic plasticity, and learning in the complex with postsynaptic density 95 and NMDA receptor.",
+     "year": 2002,
+     "quote": "Although basal levels of activated ERK2 were elevated in hippocampal extracts from SynGAP(-/+) mice, NMDAR stimulation still induced a robust increase in ERK activation in slices from SynGAP(-/+) mice.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:16537406",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16537406/",
+     "title": "SynGAP regulates synaptic strength and mitogen-activated protein kinases in cultured neurons.",
+     "year": 2006,
+     "quote": "Furthermore, ERK activation is up-regulated in neurons from SynGAP knockout mice, whereas P38 MAPK function is depressed.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:29940508",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29940508/",
+     "title": "Chronic treatment with a MEK inhibitor reverses enhanced excitatory field potentials in Syngap1+/- mice.",
+     "year": 2018,
+     "quote": "SYNGAP1 deficiency is associated with hyperphosphorylation of MEK and ERK kinases and with altered synaptic function in Syngap1+/- mice.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:SYNGAP1|participates_in|mech:tor-signaling",
+   "source": "gene:SYNGAP1",
+   "target": "mech:tor-signaling",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "In cortical neurons SynGAP limits protein synthesis through a pathway that involves ERK, mTOR and Rheb.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.6,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:24391850",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24391850/",
+     "title": "SynGAP regulates protein synthesis and homeostatic synaptic plasticity in developing cortical networks.",
+     "year": 2013,
+     "quote": "The data presented here from in vitro, rat and mouse cortical networks, demonstrate that regulation of translation by SynGAP involves ERK, mTOR, and the small GTP-binding protein Rheb.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:NF1|participates_in|mech:tor-signaling",
+   "source": "gene:NF1",
+   "target": "mech:tor-signaling",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Neurofibromin (a RasGAP) restrains mTOR: mTOR is constitutively active in NF1-deficient cells and tumours, through Ras, PI3K and AKT inactivation of TSC2.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.65,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:15937108",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/15937108/",
+     "title": "The NF1 tumor suppressor critically regulates TSC2 and mTOR.",
+     "year": 2005,
+     "quote": "We show here that the mTOR pathway is tightly regulated by neurofibromin. mTOR is constitutively activated in both NF1-deficient primary cells and human tumors in the absence of growth factors.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:CDKL5|participates_in|mech:tor-signaling",
+   "source": "gene:CDKL5",
+   "target": "mech:tor-signaling",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Two independent CDKL5 mouse models show altered AKT-mTOR signalling after CDKL5 loss.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.75,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:30288694",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30288694/",
+     "title": "Neuron-Type Specific Loss of CDKL5 Leads to Alterations in mTOR Signaling and Synaptic Markers.",
+     "year": 2019,
+     "quote": "Taken together, these data support a model in which loss of CDKL5 alters mTOR signaling and synaptic compositions in a neuron-type specific manner",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:23236174",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23236174/",
+     "title": "Loss of CDKL5 disrupts kinome profile and event-related potentials leading to autistic-like phenotypes in mice.",
+     "year": 2012,
+     "quote": "kinome profiling uncovers disruption of multiple signal transduction pathways, including the AKT-mammalian target of rapamycin (mTOR) cascade, upon Cdkl5 loss-of-function",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:NPC1|participates_in|mech:tor-signaling",
+   "source": "gene:NPC1",
+   "target": "mech:tor-signaling",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Loss of the lysosomal cholesterol exporter NPC1 traps cholesterol in lysosomes and drives mTORC1 hyperactivation; mTORC1 inhibition restores lysosomal proteolysis in NPC models.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.8,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:33308480",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33308480/",
+     "title": "NPC1-mTORC1 Signaling Couples Cholesterol Sensing to Organelle Homeostasis and Is a Targetable Pathway in Niemann-Pick Type C.",
+     "year": 2021,
+     "quote": "In Niemann-Pick type C (NPC), loss of the cholesterol exporter, NPC1, causes cholesterol accumulation within lysosomes, leading to mTORC1 hyperactivation, disrupted mitochondrial function, and neurodegeneration.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:31548609",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31548609/",
+     "title": "ER-lysosome contacts enable cholesterol sensing by mTORC1 and drive aberrant growth signalling in Niemann-Pick type C.",
+     "year": 2019,
+     "quote": "OSBP-mediated cholesterol trafficking drives constitutive mTORC1 activation in a disease model caused by the loss of the lysosomal cholesterol transporter, Niemann-Pick C1 (NPC1).",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:GBA1|participates_in|mech:tor-signaling",
+   "source": "gene:GBA1",
+   "target": "mech:tor-signaling",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "In Gaucher-disease iPSC neurons mTORC1 is hyperactive, driven by glycosphingolipid accumulation, and mTOR inhibition restores lysosomal biogenesis and autophagic clearance.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.6,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:31519738",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31519738/",
+     "title": "mTOR hyperactivity mediates lysosomal dysfunction in Gaucher's disease iPSC-neuronal cells.",
+     "year": 2019,
+     "quote": "We found that mTORC1 is hyperactive in GD cells as evidenced by increased phosphorylation of its downstream protein substrates.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:GAA|participates_in|mech:tor-signaling",
+   "source": "gene:GAA",
+   "target": "mech:tor-signaling",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "mTOR signalling is dysregulated in Pompe-disease muscle cells; reactivating mTOR in Pompe mice reversed atrophy and autophagic buildup.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.6,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:28130275",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28130275/",
+     "title": "Modulation of mTOR signaling as a strategy for the treatment of Pompe disease.",
+     "year": 2017,
+     "quote": "Here, we report the dysregulation of mTOR signaling in the diseased muscle cells, and we focus on potential sites for therapeutic intervention.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:PTPN11|participates_in|mech:regulation-of-synaptic-plasticity",
+   "source": "gene:PTPN11",
+   "target": "mech:regulation-of-synaptic-plasticity",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Noonan-syndrome Ptpn11 (SHP2) mutations raise ERK activity in excitatory hippocampal neurons and impair long-term potentiation and spatial learning in mice; MEK inhibition or lovastatin reversed the deficits.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.8,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:25383899",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25383899/",
+     "title": "Mechanism and treatment for learning and memory deficits in mouse models of Noonan syndrome.",
+     "year": 2014,
+     "quote": "Our results demonstrate that increased basal Erk activity and corresponding baseline increases in excitatory synaptic function are responsible for the LTP impairments and, consequently, the learning deficits in mouse models of NS.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:30837304",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30837304/",
+     "title": "Excitatory neuron-specific SHP2-ERK signaling network regulates synaptic plasticity and memory.",
+     "year": 2019,
+     "quote": "expressing the NS-associated mutant SHP2D61G in excitatory, but not inhibitory, hippocampal neurons increased ERK signaling and impaired both long-term potentiation (LTP) and spatial memory in mice",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:NF1|participates_in|mech:regulation-of-synaptic-plasticity",
+   "source": "gene:NF1",
+   "target": "mech:regulation-of-synaptic-plasticity",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "In Nf1 mutant mice, neurofibromin-regulated ERK/synapsin I signalling increases GABA release, which modulates hippocampal LTP and learning.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.6,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:18984165",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18984165/",
+     "title": "Neurofibromin regulation of ERK signaling modulates GABA release and learning.",
+     "year": 2008,
+     "quote": "Our results demonstrate that neurofibromin modulates ERK/synapsin I-dependent GABA release, which in turn modulates hippocampal LTP and learning.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:HRAS|participates_in|mech:regulation-of-synaptic-plasticity",
+   "source": "gene:HRAS",
+   "target": "mech:regulation-of-synaptic-plasticity",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Activated H-Ras (G12V) changes synaptic plasticity in mice: it enhances presynaptic plasticity in visual cortex, and Costello-syndrome HRas G12V mice have impaired mGluR-dependent LTD (LTP was unaffected).",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.75,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:20937865",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20937865/",
+     "title": "Constitutively active H-ras accelerates multiple forms of plasticity in developing visual cortex.",
+     "year": 2010,
+     "quote": "We show that a constitutively active form of H-ras (H-ras(G12V)), expressed presynaptically at excitatory synapses in mice, accelerates and enhances multiple, mechanistically distinct forms of plasticity in the developing visual cortex.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:28455524",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28455524/",
+     "title": "Mechanisms underlying cognitive deficits in a mouse model for Costello Syndrome are distinct from other RASopathy mouse models.",
+     "year": 2017,
+     "quote": "HRas G12V/G12V mice showed robust upregulation of ERK signaling, neuronal hypertrophy, increased brain volume, spatial learning deficits, and impaired mGluR-dependent long-term depression (LTD).",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:GBA1|participates_in|mech:regulation-of-synaptic-plasticity",
+   "source": "gene:GBA1",
+   "target": "mech:regulation-of-synaptic-plasticity",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "In heterozygous Gba1 L444P mice (a Parkinson-risk model, not Gaucher disease itself) hippocampal synaptic plasticity and basal transmission are disrupted, independently of substrate accumulation.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.5,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:39562000",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39562000/",
+     "title": "Synaptic and cognitive impairment associated with L444P heterozygous glucocerebrosidase mutation.",
+     "year": 2025,
+     "quote": "The mutation disrupts hippocampal synaptic plasticity and basal synaptic transmission by reducing the density of hippocampal CA3-CA1 synapses",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:CACNA1A|participates_in|mech:ca-triggered-exocytosis",
+   "source": "gene:CACNA1A",
+   "target": "mech:ca-triggered-exocytosis",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "CaV2.1 (P/Q-type) channels supply the presynaptic Ca2+ that triggers neurotransmitter release; gain-of-function (S218L) knock-in mice release more transmitter and loss-of-function (leaner) mice release less.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.75,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:20631222",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20631222/",
+     "title": "Severe and progressive neurotransmitter release aberrations in familial hemiplegic migraine type 1 Cacna1a S218L knock-in mice.",
+     "year": 2010,
+     "quote": "These channels mediate neurotransmitter release at many central synapses and at the neuromuscular junction (NMJ).",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:18293354",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18293354/",
+     "title": "Reduced ACh release at neuromuscular synapses of heterozygous leaner Ca(v)2.1-mutant mice.",
+     "year": 2008,
+     "quote": "Ln/wt mice had approximately 25% reduced spontaneous uniquantal ACh release and approximately 10% reduced nerve-stimulation evoked release, compared with wild-type.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "vg:SCN1A:missense|has_effect|mech:protein-destabilization",
+   "source": "vg:SCN1A:missense",
+   "target": "mech:protein-destabilization",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "Several epileptogenic SCN1A (NaV1.1) missense mutants are folding-defective, reach the cell surface poorly, and can be partly rescued by low temperature, interacting proteins or pharmacological chaperones. This applies to a subset of missense variants, not all.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.75,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:19402159",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/19402159/",
+     "title": "A rescuable folding defective Nav1.1 (SCN1A) sodium channel mutant causes GEFS+: common mechanism in Nav1.1 related epilepsies?",
+     "year": 2009,
+     "quote": "Thus, loss of function caused by folding defects that can be attenuated by molecular interactions may be a common pathogenic mechanism for Na(v)1.1 epileptogenic mutants.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:25576396",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25576396/",
+     "title": "Rescuable folding defective NaV1.1 (SCN1A) mutants in epilepsy: properties, occurrence, and novel rescuing strategy with peptides targeted to the endoplasmic reticulum.",
+     "year": 2015,
+     "quote": "Thus, Na(V)1.1 folding defective mutants can be relatively common and mutations inducing rescuable folding defects are spread in all Na(V)1.1 domains.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "vg:KCNQ2:missense-lof|has_effect|mech:protein-destabilization",
+   "source": "vg:KCNQ2:missense-lof",
+   "target": "mech:protein-destabilization",
+   "type": "has_effect",
+   "label": "has effect",
+   "explanation": "An epilepsy KCNQ2 (Kv7.2) missense variant, W344R, misfolds during translation, giving non-functional channels that fail to traffic; misfolding has been suggested for other KCNQ2 epilepsy variants.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.55,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:34020651",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34020651/",
+     "title": "An epilepsy-causing mutation leads to co-translational misfolding of the Kv7.2 channel.",
+     "year": 2021,
+     "quote": "Mutations in the KCNQ2 gene associated with human epilepsy have been suggested to cause misfolding of the encoded Kv7.2 channel.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:34020651",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34020651/",
+     "title": "An epilepsy-causing mutation leads to co-translational misfolding of the Kv7.2 channel.",
+     "year": 2021,
+     "quote": "this mutation impedes proper folding during translation within the cell by forcing the nascent chain to follow a folding route that leads to a non-native configuration",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:CDKL5|participates_in|mech:autophagy",
+   "source": "gene:CDKL5",
+   "target": "mech:autophagy",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "CDKL5 kinase activity drives selective autophagy of protein aggregates (via SINTBAD/TBK1/p62) and of viral capsids; CDKL5-deficient mice accumulate insoluble protein aggregates in the brain.",
+   "evidence_level": "experimental",
+   "status": "supported",
+   "confidence": 0.7,
+   "evidence": [
+    {
+     "source": "PubMed",
+     "ref": "PMID:42779792",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42779792/",
+     "title": "CDKL5 deficiency impairs TBK1-mediated autophagy and clearance of neuronal protein aggregates.",
+     "year": 2026,
+     "quote": "These findings define a CDKL5/SINTBAD/TBK1 signaling axis that couples proteotoxic stress to activation of selective autophagy receptors and identify impaired proteostasis as a previously unrecognized consequence of CDKL5 deficiency.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:37917202",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37917202/",
+     "title": "CDKL5 regulates p62-mediated selective autophagy and confers protection against neurotropic viruses.",
+     "year": 2024,
+     "quote": "We found that deletion of CDKL5 or expression of a clinically relevant pathogenic mutant of CDKL5 reduced virophagy of Sindbis virus (SINV)",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family"
+   }
+  },
+  {
+   "id": "gene:GBA1|participates_in|mech:autophagy",
+   "source": "gene:GBA1",
+   "target": "mech:autophagy",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Gene Ontology annotates GBA1 to autophagy (IMP), and autophagy-lysosomal dysfunction is described as a key event in GBA1-associated neurodegeneration.",
+   "evidence_level": "curated",
+   "status": "supported",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "source": "GO",
+     "ref": "GO:0006914",
+     "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P04062&goId=GO:0006914&goUsage=descendants",
+     "title": "QuickGO: 2 annotation(s) of UniProtKB:P04062 (GBA1) to GO:0006914; evidence IEA, IMP",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:31519738",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31519738/",
+     "title": "mTOR hyperactivity mediates lysosomal dysfunction in Gaucher's disease iPSC-neuronal cells.",
+     "year": 2019,
+     "quote": "Dysfunction of the autophagy-lysosomal pathway represents a key pathogenic event in GBA1-associated neurodegeneration.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family",
+    "go_evidence_codes": [
+     "IEA",
+     "IMP"
+    ],
+    "go_terms_hit": [
+     "GO:0006914"
+    ]
+   }
+  },
+  {
+   "id": "gene:NPC1|participates_in|mech:autophagy",
+   "source": "gene:NPC1",
+   "target": "mech:autophagy",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Gene Ontology annotates NPC1 to autophagy (IGI); in NPC cell models, suppressing aberrant mTORC1 signalling restores autophagic function.",
+   "evidence_level": "curated",
+   "status": "supported",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "source": "GO",
+     "ref": "GO:0006914",
+     "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=O15118&goId=GO:0006914&goUsage=descendants",
+     "title": "QuickGO: 1 annotation(s) of UniProtKB:O15118 (NPC1) to GO:0006914; evidence IGI",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:31548609",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31548609/",
+     "title": "ER-lysosome contacts enable cholesterol sensing by mTORC1 and drive aberrant growth signalling in Niemann-Pick type C.",
+     "year": 2019,
+     "quote": "Chemical and genetic inactivation of OSBP suppresses aberrant mTORC1 signalling and restores autophagic function in cellular models of Niemann-Pick type C (NPC).",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family",
+    "go_evidence_codes": [
+     "IGI"
+    ],
+    "go_terms_hit": [
+     "GO:0006914"
+    ]
+   }
+  },
+  {
+   "id": "gene:GAA|participates_in|mech:autophagy",
+   "source": "gene:GAA",
+   "target": "mech:autophagy",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Gene Ontology annotates GAA to glycophagy, a form of autophagy (IMP); Pompe mouse muscle shows autophagic buildup that mTOR reactivation removed.",
+   "evidence_level": "curated",
+   "status": "supported",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "source": "GO",
+     "ref": "GO:0006914",
+     "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=P10253&goId=GO:0006914&goUsage=descendants",
+     "title": "QuickGO: 2 annotation(s) of UniProtKB:P10253 (GAA) to GO:0061723; evidence IEA, IMP",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:28130275",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28130275/",
+     "title": "Modulation of mTOR signaling as a strategy for the treatment of Pompe disease.",
+     "year": 2017,
+     "quote": "Reactivation of mTOR in the whole muscle of Pompe mice by TSC knockdown resulted in the reversal of atrophy and a striking removal of autophagic buildup.",
+     "kind": "publication",
+     "study_type": "animal_model",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family",
+    "go_evidence_codes": [
+     "IEA",
+     "IMP"
+    ],
+    "go_terms_hit": [
+     "GO:0061723"
+    ]
+   }
+  },
+  {
+   "id": "gene:CLN3|participates_in|mech:autophagy",
+   "source": "gene:CLN3",
+   "target": "mech:autophagy",
+   "type": "participates_in",
+   "label": "takes part in",
+   "explanation": "Gene Ontology annotates CLN3 to autophagy-related terms (ISS/IEA); CLN3-knockout cells show altered autophagy-lysosome function (more autophagosomes, fewer lysosomes, lower lysosomal enzyme activity).",
+   "evidence_level": "curated",
+   "status": "supported",
+   "confidence": 0.8,
+   "evidence": [
+    {
+     "source": "GO",
+     "ref": "GO:0006914",
+     "url": "https://www.ebi.ac.uk/QuickGO/annotations?geneProductId=Q13286&goId=GO:0006914&goUsage=descendants",
+     "title": "QuickGO: 4 annotation(s) of UniProtKB:Q13286 (CLN3) to GO:0016243, GO:0061909, GO:0097352; evidence IEA, ISS",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    },
+    {
+     "source": "PubMed",
+     "ref": "PMID:34964690",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34964690/",
+     "title": "Converging roles of PSENEN/PEN2 and CLN3 in the autophagy-lysosome system.",
+     "year": 2022,
+     "quote": "We observed in PSENEN- and CLN3-knockout cells corresponding alterations in the autophagy-lysosome system.",
+     "kind": "publication",
+     "study_type": "functional_study",
+     "supports": true,
+     "extracted_by": "agent-curation",
+     "verified": true,
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "curated_by": "cross-family",
+    "go_evidence_codes": [
+     "IEA",
+     "ISS"
+    ],
+    "go_terms_hit": [
+     "GO:0016243",
+     "GO:0061909",
+     "GO:0097352"
+    ]
+   }
+  }
+ ],
+ "clusters": [],
+ "gaps": [
+  {
+   "id": "gap:cross-rasopathy-calcium-excitability",
+   "about": "RASopathies / mech:voltage-gated-calcium-channel-activity",
+   "question": "Do RASopathy genes change neuronal calcium-channel function or excitability in a way that maps onto the DEE channel mechanisms?",
+   "what_is_missing": [
+    "Found: NF1 loss reduces HCN channel current and raises interneuron excitability (PMID:25917366, PMID:35589737); Noonan SHP2 mutants enhance Ca2+ oscillations in cardiomyocytes (PMID:16461457). Neither maps onto an existing atlas mechanism node (no HCN or calcium-signalling node), so no edge was added."
+   ],
+   "searched": [
+    "PubMed: (Nf1 OR neurofibromin) AND (HCN OR sodium channel OR calcium channel) AND neurons",
+    "PubMed: (Noonan OR RASopathy) AND calcium AND (cardiomyocyte* OR channel)"
+   ],
+   "how_to_find_out": "Add a GO-backed node such as 'regulation of neuronal action potential' only if a DEE gene can be attached with the same evidence standard."
+  },
+  {
+   "id": "gap:cross-er-stress",
+   "about": "mech:protein-destabilization",
+   "question": "Is ER stress / the unfolded protein response a shared process across lysosomal, SNARE and DEE genes?",
+   "what_is_missing": [
+    "QuickGO: none of the 45 deep-disease genes is annotated to 'response to endoplasmic reticulum stress' (GO:0034976) or descendants.",
+    "Misfolding is now sourced for SCN1A and KCNQ2 missense subsets, but no abstract checked shows UPR activation in DEE or SNARE patient cells."
+   ],
+   "searched": [
+    "QuickGO annotation search GO:0034976 for all 45 genes",
+    "PubMed: SCN1A / KCNQ2 / CACNA1A / SLC2A1 with misfolding terms"
+   ],
+   "how_to_find_out": "Look for UPR markers (BiP, CHOP, XBP1 splicing) in patient iPSC neurons for STXBP1, SCN1A, KCNQ2."
+  }
+ ]
+}

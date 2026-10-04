@@ -1,16 +1,16 @@
 # Graph build report
 
-Built 2026-10-04T04:32:28+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
+Built 2026-10-04T04:42:03+00:00 from `biology.json`, `community.json`, `contributions.json`, `cross_family.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
 
 ## Summary
 
-- **1411 nodes, 2953 edges, 17 clusters, 61 gaps**
-- Edges with at least one source: **2953/2953**
-- Evidence items with a verbatim quote: 1972/4158; quotes string-verified against the stored source: **1972/1972**
+- **1412 nodes, 2977 edges, 17 clusters, 63 gaps**
+- Edges with at least one source: **2977/2977**
+- Evidence items with a verbatim quote: 2012/4201; quotes string-verified against the stored source: **2012/2012**
 - Contested edges (with counter-evidence): 75
 - OpenAI cross-check: 73 cited sources re-read and stamped; 108 new supporting and 0 new contradicting sources added (contradictions wait for human review)
 - Cited sources where the OpenAI reading disagrees with the curators: 12
-- Human-reviewed edges: 63
+- Human-reviewed edges: 0; AI-reviewed edges (not human): 63
 - Dropped by review: 1; dropped as dangling: 0
 
 ## Fragments
@@ -20,6 +20,7 @@ Built 2026-10-04T04:32:28+00:00 from `biology.json`, `community.json`, `contribu
 | `biology.json` | 201 | 332 |
 | `community.json` | 200 | 280 |
 | `contributions.json` | 0 | 0 |
+| `cross_family.json` | 1 | 24 |
 | `family_dee.json` | 351 | 668 |
 | `family_lysosomal.json` | 416 | 653 |
 | `family_rasopathy.json` | 248 | 548 |
@@ -40,7 +41,7 @@ Built 2026-10-04T04:32:28+00:00 from `biology.json`, `community.json`, `contribu
 - therapy: 47
 - disease: 45
 - gene: 45
-- mechanism: 32
+- mechanism: 33
 
 ## Edges by type
 
@@ -48,14 +49,14 @@ Built 2026-10-04T04:32:28+00:00 from `biology.json`, `community.json`, `contribu
 - studies: 252
 - variant_in: 214
 - works_on: 193
-- has_effect: 143
+- has_effect: 145
 - serves: 124
 - covers: 102
 - shares_pathway: 101
+- participates_in: 100
 - similar_protein_fate: 100
 - driven_by: 92
 - tests: 85
-- participates_in: 78
 - similar_phenotype: 75
 - funds: 72
 - shares_tissue: 65
@@ -75,11 +76,11 @@ Built 2026-10-04T04:32:28+00:00 from `biology.json`, `community.json`, `contribu
 
 ## Edges by evidence level
 
-- curated: 1391
+- curated: 1396
 - inferred: 687
 - observational: 404
 - clinical: 272
-- experimental: 189
+- experimental: 208
 - hypothesis: 10
 
 ## Problems

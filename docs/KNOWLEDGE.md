@@ -51,6 +51,12 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 
 ## Data traps
 
+- **Direction flag in the web app** (`web/lib/direction.ts`, data slimmed by sync to `web/public/data/derived/web/direction.json`): it fires only when a curated therapy's `targets` (from `drug_direction.json` `curated`, not the graph's `target_genes`, which lists disease genes) include the disease gene. Gene-level "mixed" diseases (SCN2A, SCN8A, CACNA1A, GRIN2B, STX1B, UNC13A) fall back to per-variant-group flags. Cross-disease ideas (4-PBA → VAMP2) never get a flag, by design. `gene_direction.json` labels PTPN11 as LoF, although Noonan PTPN11 is usually GoF; no curated therapy targets PTPN11, so no flag shows, but check it before using that label elsewhere.
+
+- **Cross-family links come from the literature, not GO.** QuickGO over all 45 genes found no TOR-signalling or ER-stress annotation at all, and MAPK cascade only for the core RAF/MEK/RAS genes. LZTR1, RIT1, SOS1, CBL and SYNGAP1 reach the MAPK cascade only through functional papers (`data/curated/cross_family.json`).
+- **The connectivity metric ignores `part_of` (mechanism → mechanism) edges.** `transfer_eval.py` links diseases only through `driven_by`, gene `participates_in` and variant-group `has_effect` edges to the *same* node. A hierarchy edge does not create a cross-family link; a gene-level edge does.
+- **One bridge edge can carry a whole family.** SYNGAP1 → MAPK cascade alone makes 8 RASopathies "cross-family". Report bridge counts per edge, not only per disease.
+- **Avoid benchmark leakage when adding mechanism edges.** Never source a disease → target edge from the same paper as a held-out `developed_for` edge. For example, PTPN11 → mTOR from PMID 21339643 would leak the rapamycin–NSML case. Adding shared processes also widens tie sets, which can lower ranks slightly (MEK inhibitors now tie SYNGAP1 and CBL with NF1 and PTPN11).
 - **Disease ids:** deep diseases are gene-defined umbrellas, `disease:<GENE>`; the specific MONDO/OMIM/ORPHA ids sit in xrefs and subtypes. The global index uses MONDO. `atlas_flags.py` links the two.
 - **Sharding:** everything at global scale is sharded by `djb2(id) % 64` (Python and TypeScript match; see `data/derived/global/README.md` for the test vectors).
 - **Duplicate drug nodes across layers** (amifampridine = 3,4-DAP; CAP-002 = AAV-STXBP1) are merged through `overrides.json` → `merge_nodes`.
@@ -63,6 +69,17 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 - **GeneCards** blocks automated access and needs a licence for non-academic reuse, so we don't use it.
 - **Bright Data** (`pipeline/brightdata.py`) caches responses, including bad ones. Delete empty cache files before retrying a URL.
 - **solve-rd.eu** showed injected spam; don't link it.
+- **Edge and node patches in `overrides.json` replace whole fields** (`dict.update`) before the OpenAI cross-check runs. So: copy the full current list when patching `evidence`/`counter_evidence`; a patched list hides evidence that fragments add later; patch `status` yourself when removing all counter-evidence (the build only promotes supported → contested, never back); node `xrefs`/`attrs` must be complete. Keys starting with `_` (e.g. `_review`) are not copied into the graph.
+- **To dismiss an AI-only contradiction, move it, don't delete it.** The cross-check re-adds any crosscheck paper whose ref is not already on the edge. Moving it to `evidence` (or keeping it with `needs_review` cleared) is what makes the decision stick.
+- **Common curation errors found by the AI review (2026-10-04):**
+  - sources about a sibling gene cited on a link (VAMP2/SNAP25 papers on SYT1 and STXBP1 therapy links);
+  - one sentence filed as both support and counter-evidence;
+  - a positive result filed as a "limit" (the quote must state the limitation);
+  - "clinical" level on iPSC-only data;
+  - author speculation ("likely", "thought to") recorded as experimental.
+  Check these first in any new curation.
+- **Some mechanism labels are frame-dependent.** CBL is "loss of ligase function" or "gain of signalling" (G2P says GoF). SYT1 P401L has more release, but the authors call it dominant-negative. SNAP25 I67N is LoF and also DN, because it inhibits even with wild-type present. Record both readings with sources instead of picking one silently.
+- **Don't build a graph for commit while other agents have uncommitted fragments in `data/curated/`.** The build globs every `*.json` there. To commit a consistent graph, build from `git ls-files data/curated` in a scratch copy.
 
 ## Infrastructure
 

@@ -392,6 +392,28 @@ const writeShards = (dir, entries) => {
     }
     if (existsSync(join(idir, "primekg_eval.json"))) copyJson(idir, join(webRoot, "public", "data", "derived", "ingest"), ["primekg_eval.json"]);
   }
+  // direction layer (data/derived/direction, eval.md section 6), slimmed to what the UI flag needs: curated
+  // therapies (direction + direct gene targets), atlas disease directions and variant-group sides
+  {
+    const ddir = join(dataRoot, "derived", "direction");
+    const gd = readJson(join(ddir, "gene_direction.json"));
+    const dd = readJson(join(ddir, "drug_direction.json"));
+    if (gd && dd) {
+      const therapies = {};
+      for (const [id, t] of Object.entries(dd.curated ?? {}))
+        if ((t.direction === "increase" || t.direction === "decrease") && t.targets?.length) therapies[id] = { d: t.direction, t: t.targets, b: t.basis ?? null };
+      const diseases = {};
+      for (const [id, x] of Object.entries(gd.atlas_graph ?? {})) diseases[id] = { g: x.gene, d: x.direction ?? null };
+      const vgs = {};
+      for (const [id, x] of Object.entries(gd.atlas_variant_groups ?? {})) {
+        const sides = [...new Set((x.sides ?? []).map((q) => q.side))];
+        vgs[id] = { g: x.gene, d: sides.length === 1 ? sides[0] : sides.length ? "mixed" : null };
+      }
+      mkdirSync(join(webRoot, "public", "data", "derived", "web"), { recursive: true });
+      writeFileSync(join(webRoot, "public", "data", "derived", "web", "direction.json"), JSON.stringify({ generated: gd.generated ?? null, therapies, diseases, vgs }));
+      console.log(`[sync-data] direction: ${Object.keys(therapies).length} therapies with a direct target, ${Object.keys(diseases).length} diseases, ${Object.keys(vgs).length} variant groups`);
+    }
+  }
   const list = (dir) => (existsSync(dir) ? readdirSync(dir).filter((x) => x.endsWith(".json")).sort() : []);
   const available = {
     generated: new Date().toISOString().slice(0, 10),
@@ -408,6 +430,8 @@ const writeShards = (dir, entries) => {
     clinvar_full: existsSync(join(webRoot, "public", "data", "derived", "web", "clinvar_genes.json")),
     factors: existsSync(join(webRoot, "public", "data", "derived", "web", "factors", "0.json")),
     primekg_eval: existsSync(join(webRoot, "public", "data", "derived", "ingest", "primekg_eval.json")),
+    direction: existsSync(join(webRoot, "public", "data", "derived", "web", "direction.json")),
+    eval_direction: existsSync(join(webRoot, "public", "data", "derived", "eval_direction.json")),
     similar: existsSync(join(webRoot, "public", "data", "derived", "global", "similar", "0.json")),
     contacts: existsSync(join(webRoot, "public", "data", "derived", "contacts", "orgs.json")) || existsSync(join(webRoot, "public", "data", "derived", "contacts", "trials.json")),
   };
