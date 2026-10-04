@@ -32,6 +32,7 @@ per-feature scores. Evaluated in pipeline/eval/feature_eval.py; the existing Tra
 from __future__ import annotations
 
 import json
+import os
 import math
 import pathlib
 from collections import defaultdict
@@ -62,6 +63,8 @@ def load_graph(path=GRAPH):
 
 
 def _ai_proposed_ai_reviewed(e):
+    if os.environ.get("EVAL_INCLUDE_AI_REVIEWED") == "1":   # sensitivity run: count them like curated links
+        return False
     by = str((e.get("review") or {}).get("by", ""))
     return (by.startswith("ai-review:") and (e.get("attrs") or {}).get("extraction") == "claude"
             and all(str(ev.get("extracted_by", "")).startswith("claude:") for ev in e.get("evidence", [])))

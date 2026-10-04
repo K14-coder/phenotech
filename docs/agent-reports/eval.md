@@ -488,3 +488,23 @@ uv run -q --with numpy --with scipy python3 pipeline/eval/direction_eval.py     
 - Disease direction comes from keyword and class rules. DisMech keywords on gene-named steps can misfire, and the basis text is kept so a reviewer can check. G2P's "dominant negative" is counted as LoF.
 - ChEMBL MoA covers mostly approved drugs. 99 of the 257 benchmark drugs have no directed action, mainly corticosteroids, cytotoxics and biologics against non-gene targets.
 - The evaluation was designed once and not re-tuned. The gene-level fallback and the pathway variant are reported as sensitivity analyses, not as the primary result.
+
+## 7. AI-reviewed links: hidden vs included (2026-10-04)
+
+The 142 links proposed by the independent Claude reading and accepted by an AI review (`data/curated/claude_reviewed.json`) are hidden from the benchmark by default (`transfer_score._ai_proposed_ai_reviewed`). Sensitivity run: `EVAL_INCLUDE_AI_REVIEWED=1 python3 pipeline/eval/transfer_eval.py` (writes `data/derived/eval.json`; rerun without the variable afterwards).
+
+| Scorer | Hidden (default): n | R@5 | MRR | Included: n | R@5 | MRR |
+|---|---|---|---|---|---|---|
+| random | 56 | 0.12 | 0.10 | 58 | 0.12 | 0.10 |
+| phenotype | 56 | 0.46 | 0.30 | 58 | 0.50 | 0.29 |
+| mechanism | 56 | 0.63 | 0.41 | 58 | 0.68 | 0.43 |
+| **pheno+mech (site)** | 56 | **0.72** | **0.48** | 58 | **0.79** | **0.50** |
+| mech+cluster | 56 | 0.69 | 0.43 | 58 | 0.75 | 0.47 |
+| combined | 56 | 0.70 | 0.46 | 58 | 0.79 | 0.48 |
+| mech-similarity | 56 | 0.39 | 0.32 | 58 | 0.40 | 0.31 |
+| same-family | 56 | 0.42 | 0.26 | 58 | 0.44 | 0.26 |
+| naive-driven_by | 56 | 0.35 | 0.22 | 58 | 0.40 | 0.27 |
+| hypotheses-rule | 56 | 0.62 | 0.38 | 58 | 0.62 | 0.37 |
+| mech+cluster-leaky (control) | 56 | 0.82 | 0.60 | 58 | 0.84 | 0.64 |
+
+Reading: the ranking of methods does not change (pheno+mech and combined stay on top; the leaky control stays above everything). Including the AI-reviewed links adds 2 test cases (mirdametinib → RIT1, miglustat → HEXA; the statin → PTPN11 link merges into an existing class) and new mechanism links (e.g. RAS-pathway `driven_by`), which lift most scorers by 0.04–0.07 top-5. That gain rests on AI-found, AI-reviewed links from the same literature, so the published numbers stay the hidden ones until a person reviews the links. The PrimeKG benchmark uses the global layer, not the curated graph, so it is unaffected (it needs `data/raw/downloads/` to rerun).
