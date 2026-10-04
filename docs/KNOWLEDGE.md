@@ -63,6 +63,17 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 - **GeneCards** blocks automated access and needs a licence for non-academic reuse, so we don't use it.
 - **Bright Data** (`pipeline/brightdata.py`) caches responses, including bad ones. Delete empty cache files before retrying a URL.
 - **solve-rd.eu** showed injected spam; don't link it.
+- **Edge and node patches in `overrides.json` replace whole fields** (`dict.update`) before the OpenAI cross-check runs. So: copy the full current list when patching `evidence`/`counter_evidence`; a patched list hides evidence that fragments add later; patch `status` yourself when removing all counter-evidence (the build only promotes supported → contested, never back); node `xrefs`/`attrs` must be complete. Keys starting with `_` (e.g. `_review`) are not copied into the graph.
+- **To dismiss an AI-only contradiction, move it, don't delete it.** The cross-check re-adds any crosscheck paper whose ref is not already on the edge. Moving it to `evidence` (or keeping it with `needs_review` cleared) is what makes the decision stick.
+- **Common curation errors found by the AI review (2026-10-04):**
+  - sources about a sibling gene cited on a link (VAMP2/SNAP25 papers on SYT1 and STXBP1 therapy links);
+  - one sentence filed as both support and counter-evidence;
+  - a positive result filed as a "limit" (the quote must state the limitation);
+  - "clinical" level on iPSC-only data;
+  - author speculation ("likely", "thought to") recorded as experimental.
+  Check these first in any new curation.
+- **Some mechanism labels are frame-dependent.** CBL is "loss of ligase function" or "gain of signalling" (G2P says GoF). SYT1 P401L has more release, but the authors call it dominant-negative. SNAP25 I67N is LoF and also DN, because it inhibits even with wild-type present. Record both readings with sources instead of picking one silently.
+- **Don't build a graph for commit while other agents have uncommitted fragments in `data/curated/`.** The build globs every `*.json` there. To commit a consistent graph, build from `git ls-files data/curated` in a scratch copy.
 
 ## Infrastructure
 

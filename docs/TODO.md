@@ -37,9 +37,17 @@ Several Claude agents and people work in parallel. Follow this every time:
 ## P1: model and evidence quality
 
 - [x] **Direction-aware therapy matching** (done 2026-10-04): neutral on PrimeKG, no contraindication shift, atlas gain = target leakage → keep it as a flag only. See eval.md section 6.
-- [~] (claimed by main-session agent "ai-review", 2026-10-04) **Independent AI review of the review sheet** → `docs/review/ai-review-2026-10-04.md` and patches in `data/curated/overrides.json`. Review records use `by: "ai-review:claude"`.
+- [x] (done 2026-10-04, commit 19be6ce) **Independent AI review of the review sheet** → `docs/review/ai-review-2026-10-04.md` and patches in `data/curated/overrides.json`. Review records use `by: "ai-review:claude"`.
   - [~] (claimed by web agent, 2026-10-04 06:35 CEST) Web: render ai-review records as "Independently reviewed by AI (not a human expert)". Human reviews keep "Reviewed by a biochemist".
   - [ ] **(you, optional)** A human expert works through the "needs-human" list from that report.
+    - SYT1 → gain of function (P401L: the authors call it dominant-negative, i.e. loss of clamping): keep or reject?
+    - VAMP2 → protein destabilization (really SNARE-complex instability): reject? Same for `vg:VAMP2:missense|has_effect|mech:protein-destabilization`.
+    - AChE inhibitors → targets Ca2+-triggered exocytosis (pharmacologically wrong): re-point or reject; the SNAP25 AChEI hypothesis depends on it.
+    - CBL → loss of function vs G2P "gain of function" (disease and missense variant group): choose the class.
+    - Aminopyridines → SYT1: is there a published SYT1 patient on 4-AP/3,4-DAP? If so, restore the clinical level.
+    - SYT2 → dominant-negative: add functional evidence if any exists.
+  - [ ] `pipeline/build_graph.py`: count `ai-review:*` records separately from human reviews in `data/build/report.md` (it currently says "Human-reviewed edges: 63").
+  - [ ] `pipeline/review_sheet.py` should skip or mark `ai-review` items, and the sheet should be regenerated (its item 20 uses a pre-merge id).
 - [~] (claimed by main-session agent "cross-family", 2026-10-04) **Cross-family biology**: the RAS → MAPK link for LZTR1/RIT1/SOS1, SYNGAP1 ↔ RAS/ERK, misfolding/ER stress, lysosomal/autophagy and synaptic-release links → `data/curated/cross_family.json`. Target: well above 11 of 45 diseases with a specific cross-family link. Re-run the eval.
 - [~] (claimed by web agent, 2026-10-04 06:35 CEST) Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
 - [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:40 CEST) Direction coverage: add MONDO:0100135 (Dravet) to the G2P/ClinGen join (obsolete id MONDO:0011794). Get directions for relutrigine and NBI-921352 (Nav1.6 inhibitors; ChEMBL has no mechanism record for them).
@@ -72,6 +80,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- Independent AI review (Claude, not a human expert): 63 links, 31 confirmed, 26 corrected, 6 needs-human; MONDO umbrella ids for CDKL5/SLC2A1/GBA1/NPC1/ARSA; Dravet MONDO:0011794 → MONDO:0100135 on SCN1A and SCN2A. `docs/review/ai-review-2026-10-04.md`.
 - Direction layer (`data/derived/direction/`, `DirectionIndex` in `transfer_score.py`) and evaluation (`data/derived/eval_direction.json`, eval.md section 6). Not adopted in ranking.
 - Friendlier emails with logo; Tasukeru rebrand; SMTP via Infomaniak.
 - Live daily ClinicalTrials.gov and NIH RePORTER alerts; published org and trial contacts.
