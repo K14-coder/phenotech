@@ -366,7 +366,7 @@ function CompareBody({ idx, c }: { idx: GraphIndex; c: Comparison }) {
           ) : (
             <p className="mt-4 text-sm text-ink-2">No differences were found that need an expert’s view, which usually means the data is thin, not that the diseases are the same.</p>
           )}
-          <div className="mt-6 border-t border-line pt-4">
+          <div className="mt-6 border-t border-line pt-4 empty:hidden">
             <AiAction
               key={`${c.a.disease.id}|${c.b.disease.id}`}
               idx={idx}

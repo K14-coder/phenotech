@@ -4,12 +4,12 @@ The brief asks for **a team video** and **a 1-minute walkthrough** that follows 
 
 **Recording setup:**
 - Record at 1440×900 on the live site (https://rare-disease-atlas-five.vercel.app) in the **Detailed** view.
-- Start the guided tour **"Follow a patient group"** (`lib/tours.ts`, id `maria`), so every click lands where the narration says. Its 8 steps match the rows below one to one.
+- Click **"Take a tour: a patient group (VAMP2)"** on the home page (`lib/tours.ts`, id `maria`), so every click lands where the narration says. Its 8 steps match the rows below one to one.
 - Use the precomputed AI proposal (the tour's step 7 shows it), so nothing waits on a live call.
 - Numbers marked ⟨…⟩ were read from `/method` on 2026-10-04. Re-check them on the live page right before recording; they are counted live from the data.
 - Say "Tasukeru" (ta-sú-ke-ru, Japanese for "to help"). Don't say "Maria" or other persona names on screen: the site doesn't show them.
 
-## 1-minute walkthrough: "Follow a patient group" (about 150 spoken words)
+## 1-minute walkthrough: "Take a tour: a patient group (VAMP2)" (about 150 spoken words)
 
 | Time | Tour step | Screen | Narration |
 |---|---|---|---|
@@ -22,7 +22,7 @@ The brief asks for **a team video** and **a 1-minute walkthrough** that follows 
 | 0:44 | 7. A sourced proposal | Precomputed proposal | The group drafts a proposal to the STXBP1 Foundation. Every sentence links to the evidence it rests on. |
 | 0:51 | 8. How we know | `/method` numbers | All ⟨2,977⟩ links have a source, ⟨2,130⟩ quotes are checked word for word, and an independent OpenAI reading agrees ⟨88⟩% of the time. From an isolated diagnosis to a justified collaboration, with the next step in hand. |
 
-**Alternative ending (honest gap):** cut from step 6 to the second tour, "Follow a family with no patient group" (SYT2), and use this narration instead:
+**Alternative ending (honest gap):** cut from step 6 to the second tour, "Take a tour: a family with no patient group (SYT2)", and use this narration instead:
 
 > "A family with a SYT2 diagnosis finds no patient group. Tasukeru says so plainly, points to the registry that already accepts them, turns treatment evidence into questions for their doctor, and helps them start the missing community."
 

@@ -218,7 +218,7 @@ function PathResultView({
       </div>
 
       {result.steps.length > 0 && (
-        <div className="mt-5">
+        <div className="mt-5 empty:hidden">
           <AiAction
             key={`${result.nodes[0]}>${result.nodes[result.nodes.length - 1]}>${includeHypotheses}`}
             idx={idx}

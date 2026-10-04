@@ -1,18 +1,18 @@
 # Graph build report
 
-Built 2026-10-04T05:16:14+00:00 from `biology.json`, `claude_extracted.json`, `community.json`, `contributions.json`, `cross_family.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
+Built 2026-10-04T05:33:44+00:00 from `biology.json`, `claude_extracted.json`, `claude_reviewed.json`, `community.json`, `contributions.json`, `cross_family.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `mechanistic_links.json`, `openai_extracted.json`.
 
 ## Summary
 
-- **1412 nodes, 2977 edges, 17 clusters, 63 gaps**
-- Edges with at least one source: **2977/2977**
-- Evidence items with a verbatim quote: 2286/4475; quotes string-verified against the stored source: **2286/2286**
+- **1412 nodes, 3119 edges, 17 clusters, 63 gaps**
+- Edges with at least one source: **3119/3119**
+- Evidence items with a verbatim quote: 2467/4656; quotes string-verified against the stored source: **2467/2467**
 - Contested edges (with counter-evidence): 75
 - OpenAI cross-check: 73 cited sources re-read and stamped; 108 new supporting and 0 new contradicting sources added (contradictions wait for human review)
 - Claude cross-check: 179 cited sources re-read and stamped; 274 new supporting and 0 new contradicting sources added (contradictions wait for human review)
 - Cited sources where the OpenAI reading disagrees with the curators: 12
-- Cited sources where the Claude reading disagrees with the curators: 8
-- Human-reviewed edges: 0; AI-reviewed edges (not human): 63
+- Cited sources where the Claude reading disagrees with the curators: 9
+- Human-reviewed edges: 0; AI-reviewed edges (not human): 211
 - Dropped by review: 1; dropped as dangling: 0
 
 ## Fragments
@@ -21,6 +21,7 @@ Built 2026-10-04T05:16:14+00:00 from `biology.json`, `claude_extracted.json`, `c
 |---|---|---|
 | `biology.json` | 201 | 332 |
 | `claude_extracted.json` | 46 | 0 |
+| `claude_reviewed.json` | 0 | 143 |
 | `community.json` | 200 | 280 |
 | `contributions.json` | 0 | 0 |
 | `cross_family.json` | 1 | 24 |
@@ -48,27 +49,27 @@ Built 2026-10-04T05:16:14+00:00 from `biology.json`, `claude_extracted.json`, `c
 
 ## Edges by type
 
-- has_phenotype: 812
+- has_phenotype: 906
 - studies: 252
 - variant_in: 214
 - works_on: 193
-- has_effect: 145
+- has_effect: 151
 - serves: 124
+- driven_by: 118
+- participates_in: 106
 - covers: 102
 - shares_pathway: 101
-- participates_in: 100
 - similar_protein_fate: 100
-- driven_by: 92
 - tests: 85
 - similar_phenotype: 75
 - funds: 72
+- developed_for: 66
 - shares_tissue: 65
 - about: 64
-- developed_for: 63
 - shares_mechanism: 47
+- targets: 46
 - causes: 45
 - similar_mutation_spectrum: 41
-- targets: 39
 - maintains: 35
 - shares_gene: 32
 - similar_protein_structure: 32
@@ -81,9 +82,9 @@ Built 2026-10-04T05:16:14+00:00 from `biology.json`, `claude_extracted.json`, `c
 
 - curated: 1396
 - inferred: 687
-- observational: 404
-- clinical: 272
-- experimental: 208
+- observational: 514
+- clinical: 273
+- experimental: 239
 - hypothesis: 10
 
 ## Problems

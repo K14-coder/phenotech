@@ -23,7 +23,7 @@ export interface Tour {
 export const TOURS: Record<string, Tour> = {
   maria: {
     id: "maria",
-    name: "Follow a patient group",
+    name: "Tour: a patient group (VAMP2)",
     persona: "leader",
     steps: [
       {
@@ -81,7 +81,7 @@ export const TOURS: Record<string, Tour> = {
   },
   syt2: {
     id: "syt2",
-    name: "Follow a family with no patient group",
+    name: "Tour: a family with no patient group (SYT2)",
     persona: "family",
     steps: [
       {

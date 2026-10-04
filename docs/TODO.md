@@ -27,7 +27,7 @@ Several Claude agents and people work in parallel. Follow this every time:
   - no console errors;
   - load times.
 
-- [~] (claimed by agent "vibrant-babbage", 2026-10-04 10:40 CEST) No AI buttons that fail on the deployed (precomputed-only) site: audit every AI action, hide or fix the ones without a precomputed result.
+- [x] (vibrant-babbage, 2026-10-04) No AI buttons that fail on the deployed site: `AiAction` renders only where a precomputed result exists when live AI is off (compare and path pairs without a draft no longer show a button). Tour buttons renamed "Take a tour".
 
 ## P1: model and evidence quality
 
@@ -57,8 +57,9 @@ Several Claude agents and people work in parallel. Follow this every time:
 - [x] Hypotheses recomputed with the cross-family links (10 ideas, now including 4-PBA → SCN1A and rapamycin → NF1).
 - [x] Experiment AI drafts for all 10 current ideas (gpt-6-astra).
 - [x] (vibrant-babbage, 2026-10-04) **Independent Claude re-reading of the cited family abstracts**: 256 abstracts (DEE 47, lysosomal 98, RASopathy 84, cross-family 27), 1,499 claims, all quote-verified by code; agreement with the curators 172/179 (96.1%), 274 new supporting sources on existing edges, 56 synonyms. `READER=claude` in `pipeline/openai/*`, report `docs/agent-reports/claude-extraction.md`.
-  - [~] (claimed by agent "vibrant-babbage", 2026-10-04 10:40 CEST) Review the 169 Claude candidate edges in `data/build/claude_candidate_edges.json` (not merged; move accepted ones into a curated fragment).
-  - [~] (claimed by agent "vibrant-babbage", 2026-10-04 10:40 CEST) Review the 8 Claude disagreements in the report: five are failed trials filed as limiting (quinidine/ADNFLE, phenytoin/Dravet, simvastatin and lovastatin/NF1, tipifarnib/NF1); two are the PTPN11 Noonan-GoF vs LEOPARD-LoF split (same paper, PMID:16358218).
+  - [x] (vibrant-babbage, 2026-10-04) Review the 169 Claude candidate edges (independent AI review, not a human): 142 accepted into `data/curated/claude_reviewed.json`, 11 rejected, 16 needs-human. `docs/review/claude-candidates-2026-10-04.md`.
+  - [ ] **(you, optional)** A human expert checks the 16 needs-human candidates in that file (mostly variant-group direction: SCN2A, SCN8A, KCNQ2, CACNA1A missense; LZTR1 haploinsufficiency; PTPN11 mTOR).
+  - [x] (vibrant-babbage, 2026-10-04) Review the 8 Claude disagreements: failed trials stay limiting (curators right); phenytoin/Dravet finding added as supporting (edge stays contested); PTPN11 readings are subtype-specific (filings stand). Review notes in `overrides.json`.
 - [x] (vibrant-babbage, 2026-10-04) Outreach drafts for all 45 deep diseases (42 new, by Claude through the app's evidence packs and `sanitizeDoc`; `web/scripts/agent-ai.mjs`; 0 citations dropped).
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
@@ -88,6 +89,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- AI review of the 169 Claude candidate edges (142 accepted, AI-labelled, kept out of the benchmark) and the 8 reader disagreements; AI actions hidden where no precomputed draft exists; "Take a tour" buttons (vibrant-babbage).
 - Independent Claude re-reading of 256 family abstracts (96.1% agreement, 274 new supporting sources); 42 Claude outreach drafts; `/method` counts both readers (vibrant-babbage).
 - Web: seven-factor view. Disease fingerprint (7 rows) on atlas and /d/ pages (plain in Simple "Learn more", open in Research/Industry); 7-segment factor bars with the strongest factors in words on closest diseases (atlas) and most similar diseases (/d/); "Seven factors side by side" on /compare; atlas factor lens (Off / All / each factor, width = similarity) and a Research weights panel (tested defaults symptoms 1, genes 0.5, pathway 0.5); "The seven factors" on /method (commit 912f426).
 - README and video script refreshed; Research-view enrollment excludes multi-disease registries; relutrigine and NBI-921352 directions; obsolete-MONDO join in the mechanism layer (vibrant-babbage).
