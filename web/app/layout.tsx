@@ -10,17 +10,17 @@ import { TourProvider } from "@/components/tour/TourProvider";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "Tasukeru: a rare-disease atlas", template: "%s" },
+  title: { default: "Phenotech: a rare-disease atlas", template: "%s" },
   description:
-    "Tasukeru (助ける, \u201cto help\u201d) is a rare-disease atlas: find who shares your disease's biology, what useful work already exists, and what to do together, with the evidence for every connection.",
-  applicationName: "Tasukeru",
+    "Phenotech is a rare-disease atlas: find who shares your disease's biology, what useful work already exists, and what to do together, with the evidence for every connection.",
+  applicationName: "Phenotech",
   openGraph: {
-    title: "Tasukeru: a rare-disease atlas",
+    title: "Phenotech: a rare-disease atlas",
     description: "Find who shares your disease's biology, what useful work already exists, and what to do together, with the evidence for every connection.",
-    siteName: "Tasukeru",
+    siteName: "Phenotech",
     type: "website",
   },
-  twitter: { card: "summary", title: "Tasukeru: a rare-disease atlas" },
+  twitter: { card: "summary", title: "Phenotech: a rare-disease atlas" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

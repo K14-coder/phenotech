@@ -1,6 +1,6 @@
-# Rare Disease Atlas: handoff for collaborators and their Claude
+# Phenotech: handoff for collaborators and their Claude
 
-This is the project for Hack-Nation Challenge 05, "AI Atlas for the World's Rare Diseases". The README covers the product; this file covers where things stand and how to keep working.
+This is Phenotech ("Phenotech: a rare-disease atlas"; named Tasukeru until 2026-10-04), the project for Hack-Nation Challenge 05, "AI Atlas for the World's Rare Diseases". Internal ids, routes, env vars and the Vercel project keep the old rare-disease-atlas names. The README covers the product; this file covers where things stand and how to keep working.
 
 **Start here:** read this file, then `docs/KNOWLEDGE.md` (decisions, benchmark lessons, traps) and `docs/TODO.md` (the prioritized to-do list; keep it updated).
 
@@ -13,7 +13,7 @@ cd web && npm install && npm run dev      # http://127.0.0.1:3000 (must be 127.0
 ```
 
 - **Live site:** https://rare-disease-atlas-five.vercel.app (Vercel project `rare-disease-atlas`; `web/` is linked to it).
-- **Deploy:** `npx vercel deploy --prod` from `web/`, after `npm run build` passes.
+- **Deploy:** Vercel's Root Directory is `web`, so deploy from the **repo root**: `npx vercel deploy --prod` (`.vercelignore` skips the raw caches). The commit author must be a member of the Vercel team or the deploy is blocked. **GitHub is connected (2026-10-04): every push to `main` deploys automatically**. Manual deploys are only for emergencies. Pushes by accounts outside the Vercel team (e.g. Chronify-CH) are blocked by Vercel Hobby until someone on the team pushes.
 - **Data:** run `node web/scripts/sync-data.mjs` after changing anything in `data/`. `predev` and `prebuild` also run it.
 
 ## Not in git: recreate locally
@@ -52,7 +52,7 @@ Every literature quote is string-verified against a stored source. Every automat
 | Patient groups and registries | Org websites (verified quotes), NORD, Global Genes, EURORDIS, Genetic Alliance UK directories, Bright Data search, Simons Searchlight, CoRDS, IAMRARE, Citizen Health; published org contact emails and phones | `data/derived/scale/`, `data/derived/contacts/` |
 | Population | Orphanet prevalence (product 9) | `data/derived/population/` |
 | Genetic testing options | Lab raw-data pages, GDPR/HIPAA texts, NSGC, NHS, UDN and others (125 verified quotes) | `data/curated/testing_options.json` |
-| AI | OpenAI gpt-6-astra via Sign in with ChatGPT: claim extraction and cross-check on the SNAREopathies (88% agreement), 66 precomputed drafts. Claude agent reading of the other families' cited abstracts (`READER=claude`, 256 abstracts, 96% agreement; candidate edges in `data/build/claude_candidate_edges.json` wait for review) and 42 outreach drafts (`web/scripts/agent-ai.mjs`). 108 drafts in `data/ai/` | `pipeline/openai`, `web/scripts/precompute-ai.mjs`, `web/scripts/agent-ai.mjs` |
+| AI | OpenAI gpt-6-astra via Sign in with ChatGPT: claim extraction and cross-check on the SNAREopathies (88% agreement), 66 precomputed drafts. Claude agent reading of the other families' cited abstracts (`READER=claude`, 256 abstracts, 96% agreement; candidate edges AI-reviewed: 142 of 169 accepted into `data/curated/claude_reviewed.json`, kept out of the benchmark) and 42 outreach drafts (`web/scripts/agent-ai.mjs`). 108 drafts in `data/ai/` | `pipeline/openai`, `web/scripts/precompute-ai.mjs`, `web/scripts/agent-ai.mjs` |
 | Community research | Volunteers' OpenAI or Claude extractions via the research queue, server-verified | `/research-queue`, `pipeline/crowd/export.mjs` → `data/curated/crowd.json` (review before merging) |
 
 **Refresh cadence:**

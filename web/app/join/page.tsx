@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { JoinView } from "@/components/community/JoinView";
 
-export const metadata: Metadata = { title: "Join the community · Tasukeru" };
+export const metadata: Metadata = { title: "Join the community · Phenotech" };
 
 export default function Page() {
   return (

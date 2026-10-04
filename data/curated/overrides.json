@@ -2186,6 +2186,54 @@
     "verdict": "confirmed",
     "note": "Independent AI review (Claude), not a human expert. CLAUDE.md flag (G2P disagreement). 34431999 (all three generalized-epilepsy variants were loss of function; 34 individuals with loss-of-function variants) and 25725044 (heterozygous loss-of-function mutations cause intellectual disability) support a loss-of-function subgroup with a different phenotype. Correct as a separate edge."
    }
+  },
+  "therapy:quinidine|developed_for|disease:KCNT1": {
+   "review": {
+    "by": "ai-review:claude",
+    "date": "2026-10-04",
+    "verdict": "confirmed",
+    "note": "Independent AI review (Claude), not a human expert. The curators are right: a negative trial is limiting evidence for this therapy-disease link, so the edge stays contested. The Claude reading took trial participation as support (developed_for in the literal sense). PMID:29196578: no efficacy in ADNFLE, cardiac side effects."
+   }
+  },
+  "therapy:statins-nf1-cognition|developed_for|disease:NF1": {
+   "review": {
+    "by": "ai-review:claude",
+    "date": "2026-10-04",
+    "verdict": "confirmed",
+    "note": "Independent AI review (Claude), not a human expert. The curators are right: a negative trial is limiting evidence for this therapy-disease link, so the edge stays contested. The Claude reading took trial participation as support (developed_for in the literal sense). PMID:18632543 (simvastatin) and PMID:27956565 (lovastatin): no cognitive benefit in children with NF1."
+   }
+  },
+  "therapy:tipifarnib|developed_for|disease:NF1": {
+   "review": {
+    "by": "ai-review:claude",
+    "date": "2026-10-04",
+    "verdict": "confirmed",
+    "note": "Independent AI review (Claude), not a human expert. The curators are right: a negative trial is limiting evidence for this therapy-disease link, so the edge stays contested. The Claude reading took trial participation as support (developed_for in the literal sense). PMID:24500418: time to progression of plexiform neurofibromas not prolonged."
+   }
+  },
+  "therapy:sodium-channel-blockers|developed_for|disease:SCN1A": {
+   "review": {
+    "by": "ai-review:claude",
+    "date": "2026-10-04",
+    "verdict": "corrected",
+    "note": "Independent AI review (Claude), not a human expert. Both readings are right about PMID:36314457: its background states that sodium channel blockers are generally contraindicated in Dravet syndrome (kept as limiting), and its finding is benefit from long-term phenytoin in four Dravet patients (now added as supporting). The edge stays contested; this is a question for the neurologist, not a recommendation."
+   }
+  },
+  "disease:PTPN11|driven_by|mech:dominant-negative": {
+   "review": {
+    "by": "ai-review:claude",
+    "date": "2026-10-04",
+    "verdict": "confirmed",
+    "note": "Independent AI review (Claude), not a human expert. Both readings are right about PMID:16358218, for different subtypes: Noonan-causing PTPN11 mutations are (weaker) gain of function, the NSML (LEOPARD) substitutions Y279C and T468M lose catalytic activity. The curated filing supports the NSML dominant-negative mechanism together with PMID:16377799 and PMID:21339643; the Noonan gain of function is a separate edge."
+   }
+  },
+  "vg:PTPN11:missense|has_effect|mech:gain-of-function": {
+   "review": {
+    "by": "ai-review:claude",
+    "date": "2026-10-04",
+    "verdict": "confirmed",
+    "note": "Independent AI review (Claude), not a human expert. Both readings are right about PMID:16358218: Noonan-causing missense variants are gain of function (this edge), while the NSML missense subset (Y279C, T468M) loses catalytic activity, which the separate missense dominant-negative edge covers. Missense direction in PTPN11 is subtype-specific."
+   }
   }
  }
 }

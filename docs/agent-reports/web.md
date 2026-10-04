@@ -1148,3 +1148,50 @@ The atlas now shows, everywhere, that it is built on seven factors, always in th
   - All seven rows render in the fixed order. The bars appear on 6 closest diseases (STXBP1) and 10 similar diseases (cystic fibrosis).
   - The atlas at 390 px scrolls sideways; this is the pre-existing fixed desktop grid.
   - `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Rename to Phenotech; atlas controls
+
+- **Rename (commit a7f6a4f):** every user-facing "Tasukeru" in `web/` is now Phenotech.
+  - Covered: titles and metadata/OG ("Phenotech: a rare-disease atlas"), the header, the chooser, page copy, `/method` (the 助ける line is removed), `/privacy`, and all emails (subjects "Phenotech: …", header, footer "With care, the Phenotech team", sender fallback "Phenotech <…>").
+  - The email logo PNG is regenerated with the Phenotech wordmark. The icons are the unchanged mark.
+  - Worker banner and user agent `phenotech-worker/…`; live-alerts user agent `phenotech/0.1`; NCBI tool `phenotech`.
+  - Repo docs: README, CLAUDE.md, KNOWLEDGE (with a dated note on the name change), video script and TODO. Ids, routes, env vars and file names are unchanged.
+- **Atlas controls** (`AtlasView`, `LeftRail`, `GraphCanvas`):
+  - a search box on the map sets the focus;
+  - "Steps from <focus>" 1 / 2 / 3 / all (default 1, previously a fixed 2);
+  - "Links to show": eleven link groups (gene causes disease, mechanism, symptoms, treatments, studies, organisations, researchers and funding, similar symptoms, shares mechanism, hypotheses, factor-lens links). A hidden group also stops the neighbourhood growing through it;
+  - right-click or long-press on a node opens "Show only this and its neighbours" or "Hide this node", with a "Hidden: n · Show all" chip;
+  - the factor lens is off by default, with a "×" chip. Computed factor links never widen the neighbourhood, so the lens draws only links between shown nodes;
+  - all choices live in the URL (`depth`, `hide`, `hn`, `lens`, `types`). Toggles only switch classes and never re-run the layout.
+- **Phone layout:** at 390 px the map comes first, with "Filters" and "Details" bottom sheets. There is no more sideways scroll.
+- **Fix:** clicks and hovers on the map landed in the wrong place after the view chooser closed, because Cytoscape caches its container offset. It is now refreshed before each pointer event.
+- **Checks** on STXBP1:
+  - 77 / 247 / 551 nodes shown at depths 1 / 2 / all;
+  - depth 2 without symptom links shows 189;
+  - the lens chip and its "×" work;
+  - right-click → hide works, and "Show all" restores;
+  - a shared URL restores depth, hidden links and lens;
+  - the phone filter sheet opens;
+  - no console errors at 1440 or 390 px, no sideways scroll; `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Smooth guided tour
+
+`components/tour/TourProvider.tsx` and `app/globals.css`:
+
+- **One overlay for the whole tour.** It is keyed by the tour id, not by the step, so steps and page changes never remount it. It lives in the root layout, so it survives route changes.
+- **A gliding spotlight.** One fixed element is positioned with `translate3d` and transitions transform, width and height over 420 ms with `cubic-bezier(0.22, 1, 0.36, 1)`. While a step loads it shrinks to a zero-size box at the centre, so the whole page dims gently instead of cutting. `will-change` is set only during the glide. Because the element is fixed, it never causes reflow.
+- **Each step in order:**
+  1. navigate if needed, with the next step's route prefetched;
+  2. wait for the target to exist with a box, and for its box to stay still for 4 animation frames (data and layout loaded);
+  3. run the step's action;
+  4. smooth-scroll the target to the centre only if it is out of view, then wait until its box is still for 6 frames (the scroll has ended);
+  5. only then glide.
+  After the glide, the spotlight follows user scrolling and resizing without animation.
+- **Caption.** It has a fixed position at the bottom. Its content fades and rises 6 px when it changes, and "Loading the next step…" skeleton lines show while it waits. If the target isn't found within 3 s, the caption centres with "This part of the page isn't showing right now" and the Next button becomes **Skip**. The overlay keeps looking quietly in the background.
+- **Reduced motion:** opacity-only fades, with no glide and no rise.
+- **Keyboard:** Esc closes; the arrow keys go back and forward (ignored while typing in a field).
+- **Test:** both tours end to end at 1440 and 390 px, plus one with reduced motion.
+  - Every step reached "shown". Maria 8 of 8, typically 0.2–1.7 s per step including page loads and scrolls; SYT2 6 of 6.
+  - The keys worked (→ 2, ← 1, Esc closes).
+  - The console was clean.
+  - When a test started the Maria tour without its Detailed view, the targets were missing; the centred Skip fallback showed instead of jumping.

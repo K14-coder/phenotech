@@ -3,7 +3,7 @@ import { DiseaseView } from "@/components/disease/DiseaseView";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
-  return { title: `${decodeURIComponent(id).replace(/^disease:/, "")} · Tasukeru` };
+  return { title: `${decodeURIComponent(id).replace(/^disease:/, "")} · Phenotech` };
 }
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {

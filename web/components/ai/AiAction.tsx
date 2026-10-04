@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { GraphIndex } from "@/lib/graph";
-import { generate, generateLive, loadPrecomputed, type AIResult, type AiProgressEvent } from "@/lib/ai";
+import { aiTargetId, generate, generateLive, hasPrecomputed, loadPrecomputed, type AIResult, type AiProgressEvent } from "@/lib/ai";
 import { AiConnect, ContinueWithChatGPT } from "./AiConnect";
 import { AiDocView, AiMeta, docToText } from "./AiDocView";
 import { useAi } from "./AiProvider";
@@ -10,6 +10,8 @@ import { useAi } from "./AiProvider";
 /**
  * One AI action (button + result). Shows a precomputed result when one exists (instant, no usage),
  * otherwise generates live when the local server has a usable sign-in. Handles every error state.
+ * On the deployed site (precomputed only) the action is not rendered at all when no precomputed
+ * result exists for this target, so there is never a button that cannot produce anything.
  */
 export function AiAction({
   idx,
@@ -29,6 +31,18 @@ export function AiAction({
   const [res, setRes] = useState<AIResult | null>(null);
   const [copied, setCopied] = useState(false);
   const [progress, setProgress] = useState<Progress | null>(null);
+  const targetId = aiTargetId(kind, payload);
+  const key = targetId ? `${kind}|${targetId}` : null;
+  const [checked, setChecked] = useState<{ key: string; ok: boolean } | null>(null);
+  useEffect(() => {
+    if (!key || !targetId) return;
+    let alive = true;
+    void hasPrecomputed(kind, targetId).then((ok) => alive && setChecked({ key, ok }));
+    return () => {
+      alive = false;
+    };
+  }, [key, kind, targetId]);
+  const available = !key ? false : checked?.key === key ? checked.ok : null;
 
   const onEvent = (e: AiProgressEvent) =>
     setProgress((p) => {
@@ -54,6 +68,9 @@ export function AiAction({
     const pre = await loadPrecomputed(kind, payload);
     setRes(pre ?? { status: "not_connected", source: "none", text: "No precomputed version exists for this yet." });
   };
+
+  // precomputed-only (deployed) site: show the action only where a precomputed result exists
+  if (!ai.canGenerateLive && (!ai.loaded || available !== true)) return null;
 
   return (
     <div className="space-y-3">

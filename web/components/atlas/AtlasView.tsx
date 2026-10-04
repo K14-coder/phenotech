@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { SearchBox } from "../search/SearchBox";
 import { WithGraph } from "../GraphProvider";
 import { useEvidence } from "../evidence/EvidenceProvider";
 import { LeftRail, type SymptomMode } from "./LeftRail";
@@ -24,7 +25,21 @@ const GraphCanvas = dynamic(() => import("./GraphCanvas"), {
 
 /** Shown by default. Variant groups appear for the selected gene; people and funding stay off. */
 export const DEFAULT_TYPES: NodeType[] = ["disease", "gene", "mechanism", "patient_org", "asset", "study", "therapy"];
-const FOCUS_HOPS = 2;
+/** Link groups the user can hide (each maps to relation types in the graph). */
+export const LINK_GROUPS: { id: string; label: string; types: string[] }[] = [
+  { id: "causes", label: "Gene causes disease", types: ["causes", "variant_in", "part_of"] },
+  { id: "mechanism", label: "Mechanism", types: ["driven_by", "has_effect", "participates_in"] },
+  { id: "symptoms", label: "Symptoms", types: ["has_phenotype"] },
+  { id: "treatments", label: "Treatments", types: ["developed_for", "targets"] },
+  { id: "studies", label: "Studies", types: ["studies", "tests"] },
+  { id: "orgs", label: "Organisations", types: ["serves", "covers", "maintains"] },
+  { id: "people", label: "Researchers and funding", types: ["works_on", "funds", "about", "authored"] },
+  { id: "simsym", label: "Similar symptoms", types: ["similar_phenotype"] },
+  { id: "sharemech", label: "Shares mechanism", types: ["shares_mechanism"] },
+  { id: "ideas", label: "Hypotheses", types: ["candidate_for"] },
+  { id: "factor", label: "Factor-lens links", types: [...MECHSIM_RELATIONS] },
+];
+type Depth = 1 | 2 | 3 | "all";
 /** "Distinctive shared" symptom: specific (information content >= 3.5) and seen in 2+ diseases. */
 const DISTINCTIVE_IC = 3.5;
 
@@ -58,7 +73,19 @@ function Atlas({ idx }: { idx: GraphIndex }) {
   const { openEdge, edgeId } = useEvidence();
 
   const validFocus = focus && idx.nodeById.has(focus) ? focus : null;
-  const [visibleTypes, setVisibleTypes] = useState<Set<NodeType>>(() => new Set(DEFAULT_TYPES));
+  const [visibleTypes, setVisibleTypes] = useState<Set<NodeType>>(() => {
+    const t = params.get("types");
+    return new Set(t ? (t.split(",") as NodeType[]) : DEFAULT_TYPES);
+  });
+  // hop depth from the focused item (default 1), hidden link groups and individually hidden nodes, all in the URL
+  const [depth, setDepth] = useState<Depth>(() => {
+    const d = params.get("depth");
+    return d === "all" ? "all" : d === "2" ? 2 : d === "3" ? 3 : 1;
+  });
+  const [hiddenGroups, setHiddenGroups] = useState<Set<string>>(() => new Set((params.get("hide") ?? "").split(",").filter((g) => LINK_GROUPS.some((x) => x.id === g))));
+  const [hiddenNodes, setHiddenNodes] = useState<Set<string>>(() => new Set((params.get("hn") ?? "").split(",").filter((id) => idx.nodeById.has(id))));
+  const [menu, setMenu] = useState<{ id: string; x: number; y: number } | null>(null);
+  const [sheet, setSheet] = useState<"filters" | "details" | null>(null);
   const [symptoms, setSymptoms] = useState<SymptomMode>("distinctive");
   const [hiddenClusters, setHiddenClusters] = useState<Set<string>>(new Set());
   const [selection, setSelection] = useState<Selection>(() => (validFocus ? { kind: "node", id: validFocus } : null));
@@ -90,13 +117,31 @@ function Atlas({ idx }: { idx: GraphIndex }) {
     }
   }
 
-  const syncUrl = (id: string | null, all: boolean) => {
+  // the URL carries the selection plus the view choices, so a link reproduces what the user sees
+  const urlState = useRef<{ id: string | null; all: boolean }>({ id: validFocus, all: viewAll });
+  const writeUrl = useCallback(() => {
+    const { id, all } = urlState.current;
     const q = new URLSearchParams();
     if (id) q.set("focus", id);
     if (all && id) q.set("view", "all");
+    if (depth !== 1) q.set("depth", String(depth));
+    if (hiddenGroups.size) q.set("hide", [...hiddenGroups].join(","));
+    if (hiddenNodes.size) q.set("hn", [...hiddenNodes].join(","));
+    if (lens) q.set("lens", lens);
+    const def = new Set(DEFAULT_TYPES);
+    if (visibleTypes.size !== def.size || [...visibleTypes].some((t) => !def.has(t))) q.set("types", [...visibleTypes].join(","));
     const s = q.toString();
     window.history.replaceState(null, "", s ? `/atlas?${s}` : "/atlas");
-  };
+  }, [depth, hiddenGroups, hiddenNodes, lens, visibleTypes]);
+  useEffect(() => writeUrl(), [writeUrl]);
+  const syncUrl = useCallback(
+    (id: string | null, all: boolean) => {
+      urlState.current = { id, all };
+      writeUrl();
+    },
+    [writeUrl],
+  );
+  const hiddenEdgeTypes = useMemo(() => new Set(LINK_GROUPS.filter((g) => hiddenGroups.has(g.id)).flatMap((g) => g.types)), [hiddenGroups]);
 
   const selectedNode = selection?.kind === "node" ? idx.nodeById.get(selection.id) : undefined;
   const selectedCluster = selection?.kind === "cluster" ? idx.clusterById.get(selection.id) : undefined;
@@ -127,13 +172,14 @@ function Atlas({ idx }: { idx: GraphIndex }) {
           if (!g || !contextGenes.has(g)) return false;
         }
       } else if (!visibleTypes.has(n.type)) return false;
+      if (hiddenNodes.has(n.id)) return false;
       if (!ignoreClusters) {
         const cs = clustersOf(idx, n.id);
         if (cs.length && cs.every((c) => hiddenClusters.has(c.id))) return false;
       }
       return true;
     },
-    [idx, symptoms, distinctive, visibleTypes, contextGenes, hiddenClusters],
+    [idx, symptoms, distinctive, visibleTypes, contextGenes, hiddenClusters, hiddenNodes],
   );
 
   const visibleIds = useMemo(() => {
@@ -142,12 +188,14 @@ function Atlas({ idx }: { idx: GraphIndex }) {
     if (scope.mode === "focus" && idx.nodeById.has(scope.id)) {
       ids = new Set([scope.id]);
       let frontier = [scope.id];
-      for (let h = 0; h < FOCUS_HOPS; h++) {
+      const hops = depth === "all" ? 99 : depth;
+      for (let h = 0; h < hops && frontier.length; h++) {
         const next: string[] = [];
         for (const id of frontier) {
           for (const nb of idx.adjacency.get(id) ?? []) {
             if (ids.has(nb.other)) continue;
-            if (!showMechsim && MECHSIM_RELATIONS.includes(nb.edge.type)) continue;
+            // computed factor links never widen the neighbourhood: the lens only draws links between shown nodes
+            if (MECHSIM_RELATIONS.includes(nb.edge.type) || hiddenEdgeTypes.has(nb.edge.type)) continue;
             const o = idx.nodeById.get(nb.other);
             if (!o || !(passes(o) || forced.has(o.id))) continue;
             ids.add(o.id);
@@ -159,9 +207,9 @@ function Atlas({ idx }: { idx: GraphIndex }) {
     } else {
       ids = new Set(idx.graph.nodes.filter((n) => passes(n)).map((n) => n.id));
     }
-    for (const id of forced) ids.add(id);
+    for (const id of forced) if (!hiddenNodes.has(id) || id === (scope.mode === "focus" ? scope.id : "")) ids.add(id);
     return ids;
-  }, [idx, scope, passes, selectedNode, showMechsim]);
+  }, [idx, scope, passes, selectedNode, depth, hiddenEdgeTypes, hiddenNodes]);
 
   const hiddenNodeIds = useMemo(() => new Set(idx.graph.nodes.filter((n) => !visibleIds.has(n.id)).map((n) => n.id)), [idx, visibleIds]);
 
@@ -201,7 +249,7 @@ function Atlas({ idx }: { idx: GraphIndex }) {
       syncUrl(id, scope.mode === "all");
       if (center) setCenterRequest((r) => ({ id, n: (r?.n ?? 0) + 1 }));
     },
-    [idx, scope],
+    [idx, scope, syncUrl],
   );
 
   const focusOn = (id: string) => {
@@ -230,40 +278,84 @@ function Atlas({ idx }: { idx: GraphIndex }) {
   }, []);
 
   const focusNode = scope.mode === "focus" ? idx.nodeById.get(scope.id) : undefined;
+  const hiddenCount = hiddenNodes.size + hiddenGroups.size;
+  const showAllHidden = () => {
+    setHiddenNodes(new Set());
+    setHiddenGroups(new Set());
+  };
+  const hideNode = (id: string) => {
+    setHiddenNodes((s) => new Set([...s, id]));
+    if (selection?.kind === "node" && selection.id === id) setSelection(null);
+    setMenu(null);
+  };
+  const onlyNeighbours = (id: string) => {
+    setDepth(1);
+    focusOn(id);
+    setMenu(null);
+  };
+
+  const rail = (
+    <LeftRail
+      idx={idx}
+      hiddenClusters={hiddenClusters}
+      onToggleCluster={(id) =>
+        setHiddenClusters((s) => {
+          const next = new Set(s);
+          if (next.has(id)) next.delete(id);
+          else next.add(id);
+          return next;
+        })
+      }
+      onSetAllClusters={(visible) => setHiddenClusters(visible ? new Set() : new Set(idx.graph.clusters.map((c) => c.id)))}
+      visibleTypes={visibleTypes}
+      onToggleType={(t) =>
+        setVisibleTypes((s) => {
+          const next = new Set(s);
+          if (next.has(t)) next.delete(t);
+          else next.add(t);
+          return next;
+        })
+      }
+      symptoms={symptoms}
+      onSymptoms={setSymptoms}
+      distinctiveCount={distinctive.size}
+      selectedClusterId={selectedCluster?.id ?? null}
+      onSelectCluster={selectCluster}
+      lens={lens}
+      onLens={setLens}
+      weightsFor={persona === "researcher" ? (selectedNode?.type === "disease" ? selectedNode.id : null) : undefined}
+      linkGroups={LINK_GROUPS}
+      hiddenGroups={hiddenGroups}
+      onToggleGroup={(g) =>
+        setHiddenGroups((s) => {
+          const next = new Set(s);
+          if (next.has(g)) next.delete(g);
+          else next.add(g);
+          return next;
+        })
+      }
+    />
+  );
+  const details = selectedNode ? (
+    <NodePanel
+      key={selectedNode.id}
+      idx={idx}
+      node={selectedNode}
+      onSelectNode={(id) => selectNode(id, true)}
+      onSelectCluster={(id) => selectCluster(id)}
+      onFocus={scope.mode === "focus" && scope.id === selectedNode.id ? undefined : () => focusOn(selectedNode.id)}
+    />
+  ) : selectedCluster ? (
+    <ClusterPanel key={selectedCluster.id} idx={idx} cluster={selectedCluster} onSelectNode={(id) => selectNode(id, true)} />
+  ) : (
+    <OverviewPanel idx={idx} onSelectNode={(id) => focusOn(id)} />
+  );
 
   return (
-    <div className="grid h-[calc(100vh-57px)] grid-cols-[256px_minmax(0,1fr)_372px] xl:grid-cols-[272px_minmax(0,1fr)_400px]">
-      <LeftRail
-        idx={idx}
-        hiddenClusters={hiddenClusters}
-        onToggleCluster={(id) =>
-          setHiddenClusters((s) => {
-            const next = new Set(s);
-            if (next.has(id)) next.delete(id);
-            else next.add(id);
-            return next;
-          })
-        }
-        onSetAllClusters={(visible) => setHiddenClusters(visible ? new Set() : new Set(idx.graph.clusters.map((c) => c.id)))}
-        visibleTypes={visibleTypes}
-        onToggleType={(t) =>
-          setVisibleTypes((s) => {
-            const next = new Set(s);
-            if (next.has(t)) next.delete(t);
-            else next.add(t);
-            return next;
-          })
-        }
-        symptoms={symptoms}
-        onSymptoms={setSymptoms}
-        distinctiveCount={distinctive.size}
-        selectedClusterId={selectedCluster?.id ?? null}
-        onSelectCluster={selectCluster}
-        lens={lens}
-        onLens={setLens}
-        weightsFor={persona === "researcher" ? (selectedNode?.type === "disease" ? selectedNode.id : null) : undefined}
-      />
-      <div className="relative min-w-0 bg-white">
+    <div className="relative h-[calc(100dvh-57px)] md:grid md:grid-cols-[256px_minmax(0,1fr)_372px] xl:grid-cols-[272px_minmax(0,1fr)_400px]">
+      {/* desktop: three columns; phone: map first, filters and details as bottom sheets */}
+      <div className="hidden min-h-0 md:block">{rail}</div>
+      <div className="relative h-full min-w-0 bg-white">
         <h1 className="sr-only">Atlas map</h1>
         <GraphCanvas
           idx={idx}
@@ -278,41 +370,111 @@ function Atlas({ idx }: { idx: GraphIndex }) {
           dimOnSelect={!(scope.mode === "focus" && selectedNode?.id === scope.id)}
           showMechsim={showMechsim}
           lens={lens}
-          onSelectNode={(id) => selectNode(id)}
+          hiddenEdgeTypes={hiddenEdgeTypes}
+          onSelectNode={(id) => {
+            selectNode(id);
+            setMenu(null);
+            if (id) setSheet((s) => (s === "filters" ? s : "details"));
+          }}
           onSelectEdge={(id) => openEdge(id)}
+          onNodeMenu={(id, x, y) => setMenu({ id, x, y })}
         />
-        <div className="pointer-events-none absolute inset-x-3 top-3 flex flex-wrap items-center gap-2">
-          {focusNode ? (
-            <p className="pointer-events-auto flex items-center gap-2 rounded-md border border-line bg-white/95 px-2.5 py-1.5 text-xs text-ink-2 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
-              Showing what is within two steps of <span className="font-medium text-ink">{focusNode.label}</span>
-              <span className="text-ink-3">· {visibleIds.size} of {idx.graph.nodes.length}</span>
-              <button type="button" onClick={showWhole} className="ml-1 font-medium text-accent-700 hover:underline">
-                Show whole atlas
-              </button>
-            </p>
-          ) : (
-            <p className="rounded bg-white/90 px-1.5 py-0.5 text-xs text-ink-3">
-              {visibleIds.size} of {idx.graph.nodes.length} shown · hover to highlight neighbours · click a line for its evidence
-            </p>
-          )}
+        <div className="pointer-events-none absolute inset-x-2 top-2 flex flex-col gap-2 sm:inset-x-3 sm:top-3">
+          <div className="pointer-events-auto flex flex-wrap items-center gap-2">
+            <div className="w-full max-w-[340px] sm:w-[300px]">
+              <SearchBox variant="field" shortcut={false} label="Find in the atlas" placeholder="Find a disease, gene, symptom…" onPick={(n) => focusOn(n.id)} />
+            </div>
+            <div className="flex items-center gap-1 rounded-md border border-line bg-white/95 px-1.5 py-1 text-xs text-ink-2 shadow-[0_1px_2px_rgba(16,24,40,0.05)]" role="group" aria-label="Connection depth">
+              <span className="px-1">{focusNode ? "Steps from" : "Search to focus"}</span>
+              {focusNode && <span className="max-w-[140px] truncate font-medium text-ink">{focusNode.label.split(" (")[0]}</span>}
+              {([1, 2, 3, "all"] as Depth[]).map((d) => (
+                <button
+                  key={String(d)}
+                  type="button"
+                  disabled={!focusNode}
+                  aria-pressed={focusNode ? depth === d : false}
+                  onClick={() => setDepth(d)}
+                  className={`h-7 min-w-[28px] rounded px-1.5 font-medium disabled:opacity-40 ${focusNode && depth === d ? "bg-accent-700 text-white" : "hover:bg-subtle"}`}
+                >
+                  {d === "all" ? "all" : d}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="pointer-events-auto flex flex-wrap items-center gap-2 text-xs">
+            {focusNode ? (
+              <span className="rounded-md border border-line bg-white/95 px-2 py-1 text-ink-2">
+                {visibleIds.size} of {idx.graph.nodes.length} shown
+                <button type="button" onClick={showWhole} className="ml-2 font-medium text-accent-700 hover:underline">
+                  Show whole atlas
+                </button>
+              </span>
+            ) : (
+              <span className="rounded bg-white/90 px-1.5 py-0.5 text-ink-3">
+                {visibleIds.size} of {idx.graph.nodes.length} shown · right-click or long-press a node for options
+              </span>
+            )}
+            {hiddenCount > 0 && (
+              <span className="rounded-md border border-warn-line bg-warn-bg px-2 py-1 text-warn-ink">
+                Hidden: {hiddenCount}
+                <button type="button" onClick={showAllHidden} className="ml-2 font-medium underline">
+                  Show all
+                </button>
+              </span>
+            )}
+            {lens && (
+              <span className="inline-flex items-center gap-1 rounded-md border border-accent-200 bg-accent-50 px-2 py-1 text-accent-900">
+                Factor lens: {lens === "all" ? "all factors" : FACTORS.find((f) => f.key === lens)?.label}
+                <button type="button" onClick={() => setLens(null)} aria-label="Turn the factor lens off" className="ml-1 rounded px-1 text-[15px] leading-none hover:bg-white">
+                  ×
+                </button>
+              </span>
+            )}
+          </div>
+        </div>
+        {menu && (
+          <div
+            role="menu"
+            aria-label="Node options"
+            className="absolute z-30 w-56 rounded-lg border border-line bg-white py-1 text-sm shadow-[0_8px_24px_rgba(16,24,40,0.14)]"
+            style={{ left: Math.max(8, Math.min(menu.x, 9999)), top: menu.y }}
+          >
+            <p className="truncate px-3 py-1.5 text-xs text-ink-3">{idx.nodeById.get(menu.id)?.label}</p>
+            <button type="button" role="menuitem" onClick={() => onlyNeighbours(menu.id)} className="block w-full px-3 py-2 text-left hover:bg-subtle">
+              Show only this and its neighbours
+            </button>
+            <button type="button" role="menuitem" onClick={() => hideNode(menu.id)} className="block w-full px-3 py-2 text-left hover:bg-subtle">
+              Hide this node
+            </button>
+            <button type="button" role="menuitem" onClick={() => setMenu(null)} className="block w-full px-3 py-2 text-left text-ink-3 hover:bg-subtle">
+              Cancel
+            </button>
+          </div>
+        )}
+        {/* phone controls */}
+        <div className="absolute inset-x-2 bottom-3 flex justify-center gap-2 md:hidden">
+          <button type="button" onClick={() => setSheet(sheet === "filters" ? null : "filters")} className="min-h-[44px] rounded-full border border-line bg-white px-4 text-sm font-medium text-ink shadow">
+            Filters
+          </button>
+          <button type="button" onClick={() => setSheet(sheet === "details" ? null : "details")} className="min-h-[44px] rounded-full border border-line bg-white px-4 text-sm font-medium text-ink shadow">
+            {selectedNode ? "Details" : "Overview"}
+          </button>
         </div>
       </div>
-      <aside aria-label="Selection details" className="panel-scroll h-full overflow-y-auto border-l border-line">
-        {selectedNode ? (
-          <NodePanel
-            key={selectedNode.id}
-            idx={idx}
-            node={selectedNode}
-            onSelectNode={(id) => selectNode(id, true)}
-            onSelectCluster={(id) => selectCluster(id)}
-            onFocus={scope.mode === "focus" && scope.id === selectedNode.id ? undefined : () => focusOn(selectedNode.id)}
-          />
-        ) : selectedCluster ? (
-          <ClusterPanel key={selectedCluster.id} idx={idx} cluster={selectedCluster} onSelectNode={(id) => selectNode(id, true)} />
-        ) : (
-          <OverviewPanel idx={idx} onSelectNode={(id) => focusOn(id)} />
-        )}
+      <aside aria-label="Selection details" className="panel-scroll hidden h-full overflow-y-auto border-l border-line md:block">
+        {details}
       </aside>
+      {sheet && (
+        <div className="fixed inset-x-0 bottom-0 z-40 max-h-[70dvh] overflow-y-auto rounded-t-2xl border-t border-line bg-white shadow-[0_-8px_30px_rgba(16,24,40,0.15)] md:hidden" role="dialog" aria-label={sheet === "filters" ? "Map filters" : "Details"}>
+          <div className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-white px-4 py-2">
+            <span className="text-sm font-semibold text-ink">{sheet === "filters" ? "Filters" : selectedNode ? "Details" : "Overview"}</span>
+            <button type="button" onClick={() => setSheet(null)} aria-label="Close" className="h-9 w-9 rounded-md text-lg text-ink-3 hover:bg-subtle">
+              ×
+            </button>
+          </div>
+          {sheet === "filters" ? rail : details}
+        </div>
+      )}
     </div>
   );
 }

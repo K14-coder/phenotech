@@ -1,8 +1,8 @@
-# Tasukeru: an AI atlas for the world's rare diseases
+# Phenotech: an AI atlas for the world's rare diseases
 
 **An evidence-backed map that connects rare diseases by mechanism and symptoms, so a family or patient group facing an untreated disease can find who shares its biology, what already exists, and what to do together.**
 
-Tasukeru (助ける) means "to help" or "to rescue" in Japanese.
+Phenotech is a rare-disease atlas: phenotypes (symptoms) and the technology to connect them across genes, pathways and tissues.
 
 Hack-Nation 7th Global AI Hackathon · Challenge 05: AI Atlas for the World's Rare Diseases (OpenAI × Buffalo Initiative)
 
@@ -30,9 +30,9 @@ The deep families started with one mechanism done properly. **SNAREopathies** ar
 | **What useful work already exists?** | Registries, natural history studies, outcome measures, models and trials from neighbouring diseases, marked *already covers your disease*, *could be adapted* or *not applicable*. |
 | **What should we do together?** | Candidate partners (patient groups, researchers who already bridge diseases), a suggested first step, a sourced collaboration proposal, and an honest list of what nobody knows yet. |
 
-**Guided tour: "Follow a patient group".** A small VAMP2 patient group types the gene name. The atlas shows that VAMP2 disrupts the same fusion machinery as STXBP1, a much larger community. Simons Searchlight already enrols VAMP2. The STXBP1 community has a natural history study, outcome measures and mouse models. The group leaves with a drafted, cited proposal to the STXBP1 Foundation.
+**Take a tour: a patient group (VAMP2).** A small VAMP2 patient group types the gene name. The atlas shows that VAMP2 disrupts the same fusion machinery as STXBP1, a much larger community. Simons Searchlight already enrols VAMP2. The STXBP1 community has a natural history study, outcome measures and mouse models. The group leaves with a drafted, cited proposal to the STXBP1 Foundation.
 
-**Guided tour: "Follow a family with no patient group".** A family with a SYT2 diagnosis finds no patient group. The atlas says so plainly and shows the closest community (a registry that accepts SYT2). It turns treatment evidence into questions for the child's doctor, and lets the family start the missing group.
+**Take a tour: a family with no patient group (SYT2).** A family with a SYT2 diagnosis finds no patient group. The atlas says so plainly and shows the closest community (a registry that accepts SYT2). It turns treatment evidence into questions for the child's doctor, and lets the family start the missing group.
 
 ## Four views
 
@@ -80,7 +80,7 @@ This is the core design principle, enforced in code rather than promised:
 - **Every literature claim carries a verbatim quote,** string-matched against the stored source text. A quote that doesn't match is rejected, never "fixed".
 - **Evidence levels** separate clinical proof, curated databases, experimental work, observational reports, links the atlas inferred, and hypotheses. Hypotheses are drawn dashed and capped at confidence 0.25.
 - **Contradicting evidence is shown, not hidden.** A link with counter-evidence is marked *contested*.
-- **Independent AI re-readings** of the cited papers cross-check the curated links, blind to the curation: OpenAI for the SNAREopathies (78 abstracts), Claude for the other three families and the cross-family links (256 abstracts), with the same instructions, schema and quote check. Disagreements are flagged for expert review. New links the readers propose wait for review before they enter the graph (Claude) or enter only as *unverified* (OpenAI).
+- **Independent AI re-readings** of the cited papers cross-check the curated links, blind to the curation: OpenAI for the SNAREopathies (78 abstracts), Claude for the other three families and the cross-family links (256 abstracts), with the same instructions, schema and quote check. Disagreements are flagged for expert review. New links the Claude reading proposed went through an independent AI review (142 of 169 accepted, 16 left for a human; `docs/review/claude-candidates-2026-10-04.md`); OpenAI's enter only as *unverified*. AI-reviewed links are kept out of the benchmark until a person reviews them.
 - **Review is labelled for what it is.** An independent AI review (not a human expert) went through the expert review sheet. A biochemist's review is still open. AI reviews are never shown as human ones.
 - **Gaps are first-class data.** Each records what was searched and how to find out more.
 
@@ -88,13 +88,13 @@ Current build of the deep graph (live numbers on `/method` and in `data/build/re
 
 | Measure | Value |
 |---|---|
-| Nodes / links | 1,412 / 2,977 |
-| Links with at least one source | 2,977 / 2,977 |
-| Quotes string-verified against the stored source | 2,404 / 2,404 |
+| Nodes / links | 1,412 / 3,119 |
+| Links with at least one source | 3,119 / 3,119 |
+| Quotes string-verified against the stored source | 2,585 / 2,585 |
 | Contested links shown with their counter-evidence | 75 |
 | Agreement between the OpenAI re-reading and the curators, on papers both cite (SNAREopathies) | 60 / 68 (88%) |
 | Agreement between the Claude re-reading and the curators, on papers both cite (other 3 families + cross-family) | 172 / 179 (96%) |
-| Links independently reviewed by AI (not a human expert) | 63 |
+| Links independently reviewed by AI (not a human expert) | 211 (63 from the expert review sheet, 142 links proposed by the Claude reading and accepted, 6 reader disagreements) |
 | Diseases with a specific mechanism link to another family | 29 / 45 |
 | Gaps recorded, each with the searches behind it | 63 |
 

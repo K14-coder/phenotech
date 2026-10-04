@@ -61,6 +61,12 @@ def load_graph(path=GRAPH):
     return json.loads(pathlib.Path(path).read_text())
 
 
+def _ai_proposed_ai_reviewed(e):
+    by = str((e.get("review") or {}).get("by", ""))
+    return (by.startswith("ai-review:") and (e.get("attrs") or {}).get("extraction") == "claude"
+            and all(str(ev.get("extracted_by", "")).startswith("claude:") for ev in e.get("evidence", [])))
+
+
 class TransferIndex:
     """Precomputed disease profiles. `classes` maps class id -> member therapy ids."""
 
@@ -69,7 +75,11 @@ class TransferIndex:
         self.family = family or {}
         self.nodes = {n["id"]: n for n in graph["nodes"]}
         ex = set(exclude_levels)
-        self.edges = [e for e in graph["edges"] if e["evidence_level"] not in ex and e["type"] != "candidate_for"]
+        # Edges proposed by an independent AI reading and accepted only by an AI review (data/curated/claude_reviewed.json)
+        # stay out of the benchmark until a person reviews them: AI-found, AI-reviewed links from the same literature
+        # would otherwise raise the score on their own (top-5 0.73 -> 0.79 when included).
+        self.edges = [e for e in graph["edges"] if e["evidence_level"] not in ex and e["type"] != "candidate_for"
+                      and not _ai_proposed_ai_reviewed(e)]
         self.diseases = sorted(n for n, v in self.nodes.items() if v["type"] == "disease")
         N = len(self.diseases)
         by = defaultdict(list)

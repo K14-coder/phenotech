@@ -204,7 +204,7 @@ export async function loadProfiles(ids: string[], base: string): Promise<Map<str
 
 // ---------- live sources ----------
 
-const UA = { "User-Agent": "tasukeru/0.1 (followed-disease alerts)" };
+const UA = { "User-Agent": "phenotech/0.1 (followed-disease alerts)" };
 const status = (s?: string) => (s ?? "").toLowerCase().replace(/_/g, " ");
 
 interface CtStudy {

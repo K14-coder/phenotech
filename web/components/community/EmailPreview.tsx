@@ -42,7 +42,7 @@ export function EmailPreview() {
         </Link>
       </p>
       <h1 className="text-[26px] font-semibold text-ink">Email previews</h1>
-      <p className="text-[15px] text-ink-3">Every email Tasukeru sends, with sample data. Nothing is sent from this page.</p>
+      <p className="text-[15px] text-ink-3">Every email Phenotech sends, with sample data. Nothing is sent from this page.</p>
       <form
         className="flex flex-wrap gap-2"
         onSubmit={(e) => {

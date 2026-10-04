@@ -144,7 +144,7 @@ export function IdeaCard({ idx, edge, compact = false }: { idx: GraphIndex; edge
               )}
             </div>
           )}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 empty:hidden">
             <AiAction idx={idx} kind="experiment" payload={{ id: edge.id }} label="Draft the experiment" busyLabel="Drafting…" />
           </div>
         </div>

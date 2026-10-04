@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { CompareView } from "@/components/compare/CompareView";
 
-export const metadata: Metadata = { title: "Before we join forces · Tasukeru" };
+export const metadata: Metadata = { title: "Before we join forces · Phenotech" };
 
 export default function Page() {
   return (
