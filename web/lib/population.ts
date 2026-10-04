@@ -116,6 +116,8 @@ export interface Available {
   factors?: boolean;
   primekg_eval?: boolean;
   similar?: boolean;
+  direction?: boolean;
+  eval_direction?: boolean;
 }
 
 async function fetchJson<T>(url: string): Promise<T> {

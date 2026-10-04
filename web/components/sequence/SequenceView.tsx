@@ -12,6 +12,7 @@ import { diseaseHref, type GraphIndex } from "@/lib/graph";
 import { useDerived } from "@/lib/derived";
 import { loadAvailableOnce } from "@/lib/population";
 import { useResource } from "@/lib/resource";
+import { VgDirectionList } from "../direction/DirectionFlag";
 import { CLS_PLAIN, bucketOfGene as djb2Bucket, genesAt, keyMap, loadGeneSpans, type ClinvarHit } from "@/lib/clinvar";
 import {
   CONSEQUENCE_PLAIN,
@@ -626,6 +627,7 @@ function ResultCard({ r, idx }: { r: Row; idx: GraphIndex }) {
             In the atlas it belongs to “{vg.label}”.{mechPlain ? ` Changes like this usually work like this: ${mechPlain}` : ""}
           </p>
         )}
+        {r.record?.variant_group && r.gene && <VgDirectionList gene={r.gene} vgId={r.record.variant_group} plain />}
         {disease && (
           <p>
             <Link href={diseaseHref(disease.id)} className="text-accent-700 hover:underline">

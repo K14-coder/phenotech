@@ -1,5 +1,6 @@
 "use client";
 
+import { DirectionFlags } from "../direction/DirectionFlag";
 import Link from "next/link";
 import { EvidenceChip, EvidenceLevelBadge } from "../evidence/EvidenceBits";
 import { SourceCard } from "../evidence/EvidencePanel";
@@ -59,6 +60,7 @@ export function IdeaCard({ idx, edge, compact = false }: { idx: GraphIndex; edge
         </span>
       </div>
       {a.chain?.kind && <p className="mt-2 text-sm text-ink-3">Kind of link: {CHAIN_WORDS[a.chain.kind] ?? a.chain.kind}.</p>}
+      <DirectionFlags therapyId={edge.source} diseaseId={edge.target} />
 
       <ol className="mt-3 space-y-1.5" aria-label="Chain of links">
         {steps.map((s, i) => {

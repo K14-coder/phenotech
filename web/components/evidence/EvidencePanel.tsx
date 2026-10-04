@@ -12,7 +12,7 @@ import {
   rubricFor,
   isEvidenceBacked,
 } from "@/lib/text";
-import type { AtlasEdge, AtlasNode, Evidence } from "@/lib/types";
+import { isAiReview, type AtlasEdge, type AtlasNode, type Evidence } from "@/lib/types";
 import { NodeTypeIcon } from "../NodeTypeIcon";
 import { ContributedBadge, contributionsOf } from "../ContributedBadge";
 import { ConfidenceMeter, EvidenceLegend, EvidenceLevelBadge, StatusBadge } from "./EvidenceBits";
@@ -203,20 +203,25 @@ export function modelName(by: string): string {
     .join("-");
 }
 
-const VERDICT: Record<string, string> = { confirmed: "Confirmed", corrected: "Corrected", rejected: "Rejected" };
+const VERDICT: Record<string, string> = { confirmed: "Confirmed", corrected: "Corrected", rejected: "Rejected", "needs-human": "Needs a human expert" };
 
 function ReviewNote({ review }: { review: NonNullable<AtlasEdge["review"]> }) {
-  const rejected = review.verdict === "rejected";
+  const ai = isAiReview(review);
+  const warn = review.verdict === "rejected" || review.verdict === "needs-human";
+  // AI notes start with their own disclaimer; the label already says it, so it is not repeated
+  const note = ai ? review.note?.replace(/^Independent AI review \([^)]*\), not a human expert\.\s*/i, "") : review.note;
+  const model = ai ? review.by.replace(/^ai-review:/, "") : "";
   return (
-    <section className={`rounded-lg border px-4 py-3 ${rejected ? "border-warn-line bg-warn-bg" : "border-[#bcd9c6] bg-[#f3f9f5]"}`}>
-      <p className={`flex flex-wrap items-center gap-x-2 text-sm font-medium ${rejected ? "text-warn-ink" : "text-ok"}`}>
+    <section className={`rounded-lg border px-4 py-3 ${warn ? "border-warn-line bg-warn-bg" : ai ? "border-accent-200 bg-accent-50" : "border-[#bcd9c6] bg-[#f3f9f5]"}`}>
+      <p className={`flex flex-wrap items-center gap-x-2 text-sm font-medium ${warn ? "text-warn-ink" : ai ? "text-accent-900" : "text-ok"}`}>
         <CheckGlyph />
-        Reviewed by a biochemist
+        {ai ? "Independently reviewed by AI (not a human expert)" : "Reviewed by a biochemist"}
         <span className="font-normal text-ink-3">
-          · {review.date} · {VERDICT[review.verdict] ?? review.verdict}
+          · {model ? `${model.charAt(0).toUpperCase()}${model.slice(1)} · ` : ""}
+          {review.date} · {VERDICT[review.verdict] ?? review.verdict}
         </span>
       </p>
-      {review.note && <p className="mt-1.5 text-sm leading-relaxed text-ink-2">“{review.note}”</p>}
+      {note && <p className="mt-1.5 text-sm leading-relaxed text-ink-2">“{note}”</p>}
     </section>
   );
 }
