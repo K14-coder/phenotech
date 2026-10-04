@@ -72,10 +72,14 @@ function Population({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
   const studies = (idx.adjacency.get(node.id) ?? [])
     .filter((n) => n.edge.type === "studies" && n.dir === "in")
     .map((n) => ({ s: idx.nodeById.get(n.other)!, e: n.edge }))
-    .map(({ s, e }) => ({ s, e, a: (s.attrs ?? {}) as { enrollment?: number; status?: string; study_type?: string; phase?: string } }))
+    .map(({ s, e }) => ({ s, e, a: (s.attrs ?? {}) as { enrollment?: number; status?: string; study_type?: string; phase?: string; conditions?: string[] } }))
     .filter((x) => typeof x.a.enrollment === "number")
-    .sort((a, b) => (b.a.enrollment ?? 0) - (a.a.enrollment ?? 0));
-  const enrolled = studies.reduce((n, x) => n + (x.a.enrollment ?? 0), 0);
+    .map((x) => ({ ...x, multi: isMultiDisease(idx, x.s.id, x.a.conditions) }))
+    .sort((a, b) => Number(a.multi) - Number(b.multi) || (b.a.enrollment ?? 0) - (a.a.enrollment ?? 0));
+  // Multi-disease registries (Simons Searchlight: 100,000 across ~200 conditions) would swamp the total, so they are listed but not summed.
+  const specific = studies.filter((x) => !x.multi);
+  const multi = studies.filter((x) => x.multi);
+  const enrolled = specific.reduce((n, x) => n + (x.a.enrollment ?? 0), 0);
   return (
     <section aria-labelledby="pop-h" className="max-w-[920px]">
       <p className={EYEBROW}>For researchers</p>
@@ -142,16 +146,23 @@ function Population({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
           {studies.length ? (
             <>
               <p className="mt-1 text-sm text-ink">
-                {enrolled.toLocaleString("en-US")} planned or actual participants across {studies.length} studies (overlap possible)
+                {specific.length
+                  ? `${enrolled.toLocaleString("en-US")} planned or actual participants across ${specific.length} ${specific.length === 1 ? "study" : "studies"} (overlap possible)`
+                  : "No disease-specific study enrollment recorded."}
               </p>
+              {multi.length > 0 && (
+                <p className="mt-0.5 text-xs text-ink-3">
+                  Not counted: {multi.length} multi-disease {multi.length === 1 ? "registry or study" : "registries or studies"}, whose totals cover many other conditions.
+                </p>
+              )}
               <ul className="mt-2 space-y-1 text-sm">
-                {studies.slice(0, 4).map(({ s, e, a }) => (
+                {[...specific.slice(0, 4), ...multi.slice(0, 2)].map(({ s, e, a, multi: m }) => (
                   <li key={s.id} className="flex items-center justify-between gap-2">
                     <span className="min-w-0 truncate text-ink-2" title={s.label}>
                       {s.label}
                     </span>
                     <span className="flex shrink-0 items-center gap-2 tabular-nums text-ink">
-                      {a.enrollment}
+                      {m ? <span className="text-ink-3" title="Multi-disease: not counted in the total">{a.enrollment!.toLocaleString("en-US")} · not counted</span> : a.enrollment}
                       <EvidenceChip edge={e} label={a.status?.toLowerCase().replace(/_/g, " ")} className="min-h-[22px] px-1.5 py-0" />
                     </span>
                   </li>
@@ -165,6 +176,13 @@ function Population({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
       </div>
     </section>
   );
+}
+
+// A study counts as multi-disease when it links to 3+ atlas diseases or lists more than 5 conditions.
+// Two-disease studies (e.g. STXBP1 + SYNGAP1) stay in the sum under "overlap possible".
+function isMultiDisease(idx: GraphIndex, studyId: string, conditions?: string[]): boolean {
+  const diseases = (idx.adjacency.get(studyId) ?? []).filter((n) => n.edge.type === "studies" && n.dir === "out").length;
+  return diseases >= 3 || (conditions?.length ?? 0) > 5;
 }
 
 const MARK: Record<ReadinessStatus, { glyph: string; cls: string; word: string }> = {
