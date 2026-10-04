@@ -26,6 +26,10 @@ export interface PublicUser {
   country: string | null;
   consent: { trials: boolean; researcherContact: boolean; weeklyDigest: boolean; groupForms: boolean };
   verified: boolean;
+  /** the address was confirmed through the emailed link */
+  emailVerified: boolean;
+  /** unsubscribed from notification emails */
+  emailOptOut: boolean;
   created: string;
   saved: SavedItem[];
 }

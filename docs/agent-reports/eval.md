@@ -205,3 +205,167 @@ Both are worth a biochemist's look.
 - **Mild selection effect.** The recommended scorer (d) was picked post hoc over the pre-declared (f), although the two are equal within noise.
 - **Narrow agreement checks.** The OpenAI check covers one family and one model, and only abstracts. DisMech is 3 diseases. Evidence levels are assigned by curators.
 - **Data hygiene.** 27 phenotype nodes have no edge, and they make up the 27 small components.
+
+## 5. Richer biological features: multi-feature scorer (added 2026-10-04)
+
+**Question.** Does weighting in genes and gene families, signalling pathways, tissue, symptoms, protein
+families and domains, mutation type and molecular consequence beat the phenotype + mechanism scorer (d)?
+
+```bash
+python3 pipeline/eval/build_features.py    # ~2 s, offline once the raw downloads exist (URLs in the script)
+python3 pipeline/eval/feature_eval.py      # ~60 s, numpy, offline, no OpenAI
+```
+
+- Code: `pipeline/eval/build_features.py` (features), `pipeline/eval/feature_eval.py` (benchmark), and `MultiFeatureIndex` / `rank_candidates_multi()` in `pipeline/eval/transfer_score.py` (the existing `TransferIndex` API is unchanged; `transfer_eval.py` output is unchanged).
+- Features: `data/derived/features/atlas_features.json` (45 diseases, 376 KB), `gene_families.json` (PANTHER / InterPro / Pfam for 5,168 of the 5,244 genes in the global index), `gene_tissue.json` (HPA tissue specificity for 5,161 genes).
+- Raw downloads in `data/raw/downloads/` (gitignored): one UniProt REST stream query (20,431 reviewed human proteins: InterPro, Pfam, PANTHER, GO BP/MF/CC, subcellular location, length), InterPro `entry.list` (entry types), the HPA API tissue-specificity table. Reactome, GO, HPO, G2P and ClinGen files were already there.
+- Results: `data/derived/eval_features.json`.
+
+### Features
+
+Each feature is a similarity, normalised per query by its maximum over the candidates. A **context** feature compares the candidate with the therapy's other known diseases (maximum over them), so it is 0 in the 26 rediscovery cases. A **therapy** feature compares the candidate with the therapy's own `targets`. The IDF is `ln((N+1)/(df+1))`, counted globally: over the 20,431 reviewed human proteins for families, domains and GO; over Reactome genes; over HPA genes; and over HPO-annotated diseases. Only the vocabularies that are local to the graph use the 45 diseases.
+
+| Feature (user's category) | Data | Similarity | Coverage (of 45) |
+|---|---|---|---|
+| `symptoms` (symptoms) | curated HPO phenotypes | IC-weighted Jaccard (old scorer b) | 45 |
+| `phenotype_systems` (tissue: anatomy) | HPO terms → the 23 top-level organ systems (children of HP:0000118) in hp.obo | IDF-weighted cosine of IC-weighted system profiles | 45 |
+| `tissue` (tissue: expression) | HPA RNA tissue specificity and enriched tissues (nTPM) | cosine of log1p(nTPM) × tissue IDF | 23 (the others are "low tissue specificity", including most lysosomal and RAS genes) |
+| `gene_family` (genes) | PANTHER family + InterPro *Family* entries | IDF-weighted cosine | 45 |
+| `shared_gene` (genes) | the causal gene | identity | degenerate: no two atlas diseases share a gene. It is reported, and excluded from tuning. |
+| `protein_domains` (protein structure) | InterPro Domain / Repeat / Homologous superfamily + Pfam | IDF-weighted cosine | 45 |
+| `reactome` (signalling pathway) | Reactome, lowest level plus all ancestors (the shard mid-level pathways are a subset) | IDF-weighted cosine | 41 |
+| `go_process` (signalling pathway) | UniProt GO BP, propagated over is_a / part_of | IDF-weighted cosine | 45 |
+| `compartment` (extra) | UniProt GO CC, propagated | IDF-weighted cosine | 45 |
+| `mutation_type` (mutation type) | ClinVar P/LP spectrum from the variant_group `clinvar_counts`: truncating / missense / in-frame / splice / CNV | 1 − Jensen–Shannon divergence | 45 |
+| `molecular_consequence` (molecular consequence) | LoF / HI / DN / GoF / destabilisation from `driven_by` (1.0) and variant-group `has_effect` (0.8), plus G2P / ClinGen classes and the G2P variant consequence | IDF-weighted cosine | 45 (41 with an external class) |
+| `mechanism_target` (therapy) | old scorer (c): the therapy's target mechanisms reached over graph chains | sum of IDF | n/a |
+| `target_go` (therapy, new) | the GO term of a therapy target mechanism, found in the candidate gene's propagated UniProt GO | sum of GO IDF | n/a |
+
+### Tuning without leakage
+
+- The outer loop holds out **all the cases of one therapy class** at a time (38 folds). Weights are chosen on the other 37 classes only, and then score the held-out class.
+- Two tuners were declared before the run:
+  - `grid`: every weight in {0, 1}, which is a feature-subset search over 12 features (4,095 settings). The objective is the inner MRR, and ties go to fewer features.
+  - `logit`: a conditional-logit ranking model, a softmax over each case's candidates, with weights ≥ 0 and an L2 penalty λ = 1.
+- A third, smaller tuner was **added after seeing the first run**, and is labelled as post hoc. `anchored` keeps the old best at weight 1 and adds at most two other features at weight 0.5 (67 settings).
+- Untuned references: the old best, and equal weight on all features.
+- The ties, filtered ranking and class bootstrap (2,000 draws) are the same as in section 2.
+
+### Results: all 56 developed_for cases
+
+| Scorer | R@1 | R@3 | R@5 [95% CI] | MRR [95% CI] | Transfer subset MRR / R@5 (n = 30) | Rediscovery MRR (n = 26) |
+|---|---|---|---|---|---|---|
+| random | 0.02 | 0.07 | 0.12 | 0.10 | 0.10 / 0.12 | 0.10 |
+| **old best (symptoms + mechanism_target)** | **0.29** | **0.60** | **0.73 [0.63–0.82]** | **0.491 [0.39–0.59]** | **0.599 / 0.83** | 0.367 |
+| equal weight, all 12 (untuned) | 0.32 | 0.52 | 0.68 [0.53–0.81] | 0.480 [0.36–0.60] | 0.567 / 0.73 | 0.379 |
+| nested grid | 0.26 | 0.56 | 0.71 [0.56–0.82] | 0.457 [0.36–0.56] | 0.538 / 0.80 | 0.363 |
+| nested logit | 0.28 | 0.52 | 0.66 [0.51–0.78] | 0.458 [0.35–0.56] | 0.528 / 0.70 | 0.379 |
+| nested anchored (post hoc) | 0.29 | 0.58 | 0.73 [0.58–0.85] | 0.485 [0.38–0.59] | 0.587 / 0.83 | 0.367 |
+| *grid refit, in-sample (optimistic)* | *0.35* | *0.58* | *0.75* | *0.515* | *0.643 / 0.87* | |
+| *anchored refit, in-sample (optimistic)* | *0.32* | *0.61* | *0.76* | *0.510* | *0.625 / 0.90* | |
+| single: mechanism_target | 0.24 | 0.46 | 0.59 [0.48–0.69] | 0.402 [0.31–0.48] | 0.431 / 0.57 | 0.367 |
+| single: compartment | 0.21 | 0.30 | 0.35 [0.19–0.51] | 0.302 [0.15–0.46] | 0.478 / 0.57 | 0.098 |
+| single: symptoms | 0.15 | 0.39 | 0.46 [0.30–0.61] | 0.298 [0.19–0.39] | 0.472 / 0.77 | 0.098 |
+| single: reactome | 0.14 | 0.32 | 0.43 [0.25–0.59] | 0.281 [0.16–0.41] | 0.439 / 0.70 | 0.098 |
+| single: target_go | 0.19 | 0.29 | 0.33 [0.23–0.44] | 0.279 [0.18–0.37] | 0.337 / 0.38 | **0.212** |
+| single: go_process | 0.14 | 0.28 | 0.34 [0.18–0.48] | 0.258 [0.14–0.39] | 0.398 / 0.53 | 0.098 |
+| single: protein_domains | 0.16 | 0.25 | 0.31 [0.18–0.45] | 0.256 [0.14–0.38] | 0.393 / 0.48 | 0.098 |
+| single: gene_family | 0.14 | 0.23 | 0.27 [0.15–0.39] | 0.231 [0.13–0.34] | 0.347 / 0.41 | 0.098 |
+| single: phenotype_systems | 0.12 | 0.21 | 0.32 [0.16–0.49] | 0.228 [0.12–0.34] | 0.341 / 0.50 | 0.098 |
+| single: mutation_type | 0.06 | 0.23 | 0.32 [0.18–0.43] | 0.208 [0.13–0.28] | 0.303 / 0.50 | 0.098 |
+| single: molecular_consequence | 0.06 | 0.13 | 0.30 [0.17–0.42] | 0.171 [0.13–0.22] | 0.234 / 0.46 | 0.098 |
+| single: tissue | 0.02 | 0.12 | 0.18 [0.10–0.29] | 0.123 [0.09–0.16] | 0.144 / 0.24 | 0.098 |
+| single: shared_gene | 0.02 | 0.07 | 0.12 | 0.102 | 0.105 / 0.12 | 0.098 |
+
+Paired MRR differences against the old best (95% CI over classes):
+
+| Tuner | All cases | Transfer subset |
+|---|---|---|
+| nested grid | −0.073 to 0.000 | −0.144 to 0.000 |
+| nested logit | −0.078 to +0.008 | −0.171 to −0.004 |
+| nested anchored | −0.040 to +0.024 | −0.088 to +0.041 |
+| equal weight | −0.062 to +0.040 | −0.139 to +0.069 |
+
+**Tuned weights (refit on all 56 cases; the nested numbers above are the honest estimate).**
+
+- grid: `symptoms`, `mechanism_target`, `phenotype_systems`, `gene_family`, `compartment`, `mutation_type` and `molecular_consequence`, all at 1. Selection frequency in the outer folds: `symptoms`, `mechanism_target` and `mutation_type` 38/38, `phenotype_systems` 35, `molecular_consequence` 34, `gene_family` and `compartment` 33.
+- logit:
+
+  | Feature | Weight |
+  |---|---|
+  | mechanism_target | 3.15 |
+  | symptoms | 1.10 |
+  | gene_family | 1.08 |
+  | mutation_type | 0.98 |
+  | target_go | 0.97 |
+  | phenotype_systems | 0.85 |
+  | tissue | 0.67 |
+  | protein_domains | 0.43 |
+  | reactome | 0.18 |
+  | molecular_consequence | 0.14 |
+  | compartment | 0.09 |
+  | go_process | 0.09 |
+
+  The weights are stable across folds.
+- anchored: the old best + 0.5 `target_go` + 0.5 `mutation_type`, selected in 35/38 folds.
+
+**Ablation (drop one feature, re-run the whole nested procedure; MRR).**
+
+| Dropped | anchored | grid | logit |
+|---|---|---|---|
+| none | 0.485 | 0.457 | 0.458 |
+| mechanism_target | n/a | **0.390** | **0.386** |
+| symptoms | n/a | **0.403** | 0.432 |
+| mutation_type | 0.457 | 0.440 | 0.456 |
+| target_go | 0.472 | 0.471 | 0.465 |
+| gene_family | 0.485 | 0.452 | 0.460 |
+| phenotype_systems | 0.485 | 0.463 | 0.478 |
+| protein_domains / reactome / tissue | 0.485 | 0.457 | 0.459–0.464 |
+| go_process | 0.510 | 0.456 | 0.459 |
+| compartment | 0.510 | 0.456 | 0.461 |
+| molecular_consequence | 0.485 | 0.460 | 0.461 |
+
+Only two features carry the score: removing `mechanism_target` or `symptoms` costs 0.06–0.10 MRR. Every other drop moves MRR by ≤ 0.03, in both directions. Dropping `go_process` or `compartment` *raises* the anchored tuner to 0.510, because the 3 folds that picked them were hurt. That is tuning noise, not a finding, and it was not used to pick anything.
+
+### Verdict
+
+**The richer features do not beat the old best (d) on this benchmark.**
+
+- All three tuners score at or below it under nested CV: 0.457, 0.458 and 0.485 vs 0.491 MRR.
+- The in-sample refits look better (0.510–0.515), and that is the overfitting gap a naive tune would have reported.
+- `MULTI_WEIGHTS` in `transfer_score.py` is therefore the old best, so `scorer="multi"` ranks identically to `"pheno+mech"`. `ANCHORED_WEIGHTS` is provided as the documented alternative.
+- What the new features add:
+  - Explanation: `MultiFeatureIndex.explain()` names the nearest known disease per feature.
+  - One non-circular signal: `target_go` reaches rediscovery MRR 0.21 vs random 0.10, using UniProt GO rather than curator edges. The curated `mechanism_target` gets 0.37 there, but partly by construction.
+  - Untuned equal weighting raises R@1 (0.32 vs 0.29) while lowering R@5.
+
+### Known-collaboration checks (ranks; scorer columns from `eval_features.json`)
+
+| Case | old best | grid refit | logit refit | anchored | notable single features |
+|---|---|---|---|---|---|
+| 4-PBA: SLC6A1 given STXBP1 | 1 / 44 | 1 | 1 | 1 | tissue 3 (both brain-enriched), molecular_consequence 1 |
+| 4-PBA: STXBP1 given SLC6A1 | 1 / 44 | 1 | 1 | 1 | reactome 2, tissue 2 |
+| MEK LOO (10 RASopathies) | 2–3 / 36 | 1–4 | 1–5 | 1–3 | reactome 1–3 for every RASopathy except LZTR1 (33); tissue useless (28.5: all low specificity) |
+| MEK from NF1 alone: LZTR1 | 37 | 24 | **11** | 25 | phenotype_systems 3 |
+| MEK from NF1 alone: RIT1 / SOS1 | 9 / 8 | 21 / 20 | 12 / 9 | 9 / 8 | reactome 12 / 9; symptoms 7 / 2 |
+| miglustat LOO: NPC1, HEXA, GAA, CLN3, GBA1 | 3, 3, 5, 8, 8 / 41 | 8, 5, 7, 8, 8 | 7, 4, 6, 8, 8 | 2, 3, 5, 8, 8 | |
+| miglustat from GBA1 alone: HEXA / NPC1 | 7 / 10 | **2 / 3** | 3 / 8 | 9 / 7 | molecular_consequence 1 / 2; phenotype_systems 1 / 5 |
+
+**Did substrate- or tissue-level features pick the right lysosomal disease?**
+
+- **Tissue: no.** HPA calls almost every lysosomal gene "low tissue specificity", so the tissue feature is blank for them, and for most RAS genes too.
+- **Substrate: partly, and not in a way this benchmark rewards.**
+  - From GBA1 alone, Reactome's top 5 are GALC, GLA, SMPD1, ARSA and HEXA, all sphingolipidoses. That is the biologically sensible set for a glucosylceramide-synthase inhibitor.
+  - But miglustat's other known diseases are NPC1 (Reactome: cholesterol transport, rank 29), GAA (glycogen) and CLN3. The links to GAA and CLN3 rest on other rationales.
+  - Within the 8 lysosomal candidates in leave-one-out, Reactome's mean rank is 6.0, against 4.5 at random. The best single features there are `protein_domains` (4.0), `mutation_type` (4.2) and `molecular_consequence` (4.4), barely better than random.
+- The within-family ordering is still the ceiling, as in section 3.
+
+### Honesty notes (overfitting and circularity)
+
+- **n is small.** 56 cases, 38 classes; one class (MEK, 10 cases) dominates several features. The CIs of every tuned row overlap the old best, and the *direction* of the difference is negative for all three tuners.
+- **Selection.** Three tuners plus the post-hoc anchored one were tried, and the final weights were picked by the best honest MRR. Picking the old best is the conservative outcome of that selection, not a winner's curse.
+- **Circularity.**
+  - The new protein, GO, Reactome, HPA and ClinVar features come from external databases, not from the curators, so they are *less* circular than `mechanism_target`. That is probably part of why they score lower.
+  - The families themselves are biology-defined: gene-family, Reactome and compartment similarity largely re-derive "same family". The same-family baseline is MRR 0.26.
+- **Unknowns count as negatives**, as before. Reactome's sphingolipidosis ranking for miglustat is penalised, because GALC, GLA and SMPD1 are not labelled positives.
+- **Coverage gaps.** Reactome is missing for 4 genes; HPA enriched tissues for 22; G2P / ClinGen for 4. Two features are degenerate or near-degenerate: `shared_gene` (constant) and `tissue`.

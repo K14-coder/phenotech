@@ -29,7 +29,7 @@ if (existsSync(src)) {
 
 // derived data products (lazy-loaded by the pages that need them)
 //   ../data/derived/*.json            -> public/data/derived/
-//   ../data/curated/{modality,impact}.json -> public/data/curated/
+//   ../data/curated/{modality,impact,testing_options}.json -> public/data/curated/
 const copyJson = (from, toDir, names) => {
   if (!existsSync(from)) return 0;
   mkdirSync(toDir, { recursive: true });
@@ -49,7 +49,7 @@ const copyJson = (from, toDir, names) => {
   return n;
 };
 const nDerived = copyJson(join(dataRoot, "derived"), join(webRoot, "public", "data", "derived"));
-const nCurated = copyJson(join(dataRoot, "curated"), join(webRoot, "public", "data", "curated"), ["modality.json", "impact.json"]);
+const nCurated = copyJson(join(dataRoot, "curated"), join(webRoot, "public", "data", "curated"), ["modality.json", "impact.json", "testing_options.json"]);
 if (nDerived || nCurated) console.log(`[sync-data] copied ${nDerived} derived and ${nCurated} curated file(s)`);
 
 // global disease index (every rare disease, basic data; see data/derived/global/README.md), folder
@@ -288,6 +288,8 @@ const writeShards = (dir, entries) => {
     groups: existsSync(join(webRoot, "public", "data", "derived", "global", "groups.json")),
     sequences: list(join(webRoot, "public", "data", "derived", "sequences")).map((f) => f.replace(/\.json$/, "")),
     variant_positions: existsSync(join(webRoot, "public", "data", "derived", "variant_positions.json")),
+    eval: existsSync(join(webRoot, "public", "data", "derived", "eval.json")),
+    testing_options: existsSync(join(webRoot, "public", "data", "curated", "testing_options.json")),
   };
   mkdirSync(join(webRoot, "public", "data", "derived", "web"), { recursive: true });
   writeFileSync(join(webRoot, "public", "data", "derived", "web", "available.json"), JSON.stringify(available, null, 2) + "\n");

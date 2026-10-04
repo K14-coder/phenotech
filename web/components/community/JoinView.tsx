@@ -42,6 +42,7 @@ function Join({ idx }: { idx: GraphIndex }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
   const a = acct?.data;
   if (!a) return <p className="mx-auto max-w-[560px] px-4 py-16 text-ink-3">One moment…</p>;
@@ -67,6 +68,7 @@ function Join({ idx }: { idx: GraphIndex }) {
       <Shell>
         <h1 className="text-[26px] font-semibold text-ink">Welcome. You’re part of the community now.</h1>
         <ul className="mt-5 space-y-3 text-[16px] text-ink-2">
+          {emailSent && <li>We’ve emailed you a link to confirm your address. Until you confirm, notices appear only in My atlas.</li>}
           {diseases.length > 0 && <li>You follow {diseases.map(name).join(", ")}. New studies and resources for {diseases.length > 1 ? "them" : "it"} appear in your inbox.</li>}
           <li>You are counted anonymously, so researchers can see that families exist and where. They never see your email.</li>
           {trials && <li>When a study starts recruiting for a disease you follow, you’ll see it first in your inbox.</li>}
@@ -88,8 +90,9 @@ function Join({ idx }: { idx: GraphIndex }) {
     setBusy(true);
     setError(null);
     try {
-      await api("/api/account/signup", "POST", { role, diseases, country: country || null, email, password, consentTrials: trials, consentContact: contact, weeklyDigest: digest, groupForms });
+      const r = await api<{ emailSent?: boolean }>("/api/account/signup", "POST", { role, diseases, country: country || null, email, password, consentTrials: trials, consentContact: contact, weeklyDigest: digest, groupForms, labels: Object.fromEntries(diseases.map((d) => [d, name(d)])) });
       refreshAccount();
+      setEmailSent(!!r.emailSent);
       setDone(true);
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));

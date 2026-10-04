@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-import { currentUser, deleteMe, inboxFor, jsonError, myAnnouncements, rateLimit, readBody, requireUser, assertSameOrigin, updateMe } from "@/lib/server/community";
+import { currentUser, deleteMe, publicUser, inboxFor, jsonError, myAnnouncements, rateLimit, readBody, requireUser, assertSameOrigin, updateMe } from "@/lib/server/community";
+import { emailMode } from "@/lib/server/email";
 import { storeMode } from "@/lib/server/store";
 
 /** Who am I: the store mode (so the UI can say "Sign-up opens soon"), the account, inbox and own announcements. */
@@ -10,11 +11,9 @@ export async function GET() {
     const mode = storeMode();
     const u = mode === "off" ? null : await currentUser();
     if (!u) return Response.json({ mode, user: null });
-    const { hash: _h, salt: _s, ...user } = u;
-    void _h;
-    void _s;
+    const user = publicUser(u);
     const announcements = u.role === "researcher" || u.role === "industry" ? await myAnnouncements(u) : [];
-    return Response.json({ mode, user, inbox: await inboxFor(u), announcements }, { headers: { "Cache-Control": "no-store" } });
+    return Response.json({ mode, emailMode: emailMode(), user, inbox: await inboxFor(u), announcements }, { headers: { "Cache-Control": "no-store" } });
   } catch (e) {
     return jsonError(e);
   }

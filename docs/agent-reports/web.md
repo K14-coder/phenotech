@@ -759,3 +759,94 @@ Run against a local `next start` on port 3015 (file store, test `ADMIN_TOKEN`), 
 
 ### AI drafts
 41 precomputed files are synced (28 proposals, 5 explain-path, 3 compare-questions, 2 experiments, 3 outreach). The STXBP1 outreach draft renders on the Research view.
+
+## Email, DNA-file requests, accuracy on /method, impact cleanup
+
+### Email (Resend over plain HTTP)
+`web/lib/server/email.ts` sends email with `fetch("https://api.resend.com/emails")`; there is no SDK. It has three modes:
+- **dry-run:** with `EMAIL_DRY_RUN=1`, each email is written to `web/.data/outbox/` (gitignored) as `.json` (to, subject, headers, text) plus `.html`.
+- **resend:** with `RESEND_API_KEY` and `EMAIL_FROM` set, email is sent.
+- **disabled:** with neither set, the server logs `email disabled (<tag>)` and never the address. Notices stay in the inbox on /me, and the UI does not claim an email was sent.
+
+What it does:
+- **Templates:** confirmation, password reset, approved announcement, relayed researcher message, and new recruiting studies (single notice or weekly summary). Each has HTML and text versions and says why the reader is receiving it.
+- **Unsubscribe:** every notification email has an unsubscribe link, plus the `List-Unsubscribe` and `List-Unsubscribe-Post: List-Unsubscribe=One-Click` headers.
+
+**Tokens** are HMAC-signed with `SESSION_SECRET`, bound to a purpose, and compared with `timingSafeEqual`:
+- confirmation: 7 days;
+- reset: 1 hour and single use (a nonce is stored as `reset:<uid>` and deleted on use);
+- unsubscribe: no expiry.
+
+**Rules:**
+- Notification emails go only to confirmed addresses that have not unsubscribed, and only for the matching consent (trials or researcher contact).
+- Unconfirmed accounts see a banner with "Send the link again" and get no study emails.
+- "Forgot password" gives the same answer whether or not the address exists.
+- A plain GET of the unsubscribe API changes nothing, because link scanners prefetch links. The `/unsubscribe` page and mail clients POST instead.
+
+**Cron:** `/api/cron/digest` runs daily from `web/vercel.json` (08:00 UTC). It accepts `Authorization: Bearer <CRON_SECRET>` (what Vercel sends) or `x-cron-secret`, and is closed if `CRON_SECRET` is unset.
+- It reads open studies per followed disease from the synced data: `population/channels.json` for atlas diseases and the `web/scale` shards for global ids.
+- It keeps a per-disease baseline (`trials:known:<d>`). The first run only records the baseline.
+- New studies are emailed at once to members who chose single notices. For weekly members they are queued (`pending:<uid>`, together with approved announcements) and sent once 7 days have passed.
+- `sent:<uid>` prevents duplicates.
+- It returns counts only.
+
+**Admin:** `/admin` shows the email mode, and "Email delivery is in test mode" unless `EMAIL_DOMAIN_VERIFIED=1`. After an approval it says how many members were emailed and how many were queued.
+
+**New routes:**
+- `/api/account/verify` and `/api/account/verify/resend`
+- `/api/account/forgot` and `/api/account/reset`
+- `/api/account/unsubscribe`
+- `/api/cron/digest`
+
+**New pages:** `/verify`, `/forgot`, `/reset`, `/unsubscribe`. Sign-in has a "Forgot password?" link, and /me has an "Email me these notices" switch. `/privacy` now has an Emails section.
+
+Followed-disease names travel with follow and sign-up (`labels`, sanitized). Emails can therefore say "SCN2A-related disorder" rather than an id.
+
+**Local test support:** `STORE_FILE` (a separate throwaway JSON store) and `NEXT_DIST_DIR` (in `next.config.ts`) let an isolated dev server run next to the shared one without touching `.next` or `.data/store.json`. Neither is used in production.
+
+### Email test (38/38 passed)
+The test ran against an isolated dry-run dev server on port 3100, with its own store file and throwaway `example.org`/`example.edu` accounts. All accounts were deleted, and the store file and build folder were removed afterwards. It covered:
+- Sign-up writes a confirmation email. A tampered token is refused (400). The valid link confirms the account.
+- Admin GET reports the dry-run mode and test mode. Approval emails the one opted-in follower, with the disease named and both unsubscribe headers, and without the researcher's address.
+- A contact relay emails the opted-in member, and the researcher's response contains no address.
+- Forgot/reset:
+  - an unknown address gets the same answer and no email;
+  - a short password is refused;
+  - the reset works once, and the link is refused the second time;
+  - the old password fails and the new one works.
+- Unsubscribe: a GET only redirects. The RFC 8058 POST unsubscribes, and a tampered token is refused.
+- Cron:
+  - 401 without the secret or with the wrong one;
+  - run 1 records the baseline and sends nothing;
+  - after 2 studies were made "new", run 2 sends one single-notice email and one weekly summary listing both;
+  - run 3 sends nothing (no duplicates).
+- The server log contains no email addresses.
+
+### "Don't have a DNA file?" (`/sequence/request`)
+- `/sequence` has the line "Don't have one and want to request one? Click here" under "Your sequence never leaves this device".
+- The page asks "Have you already had a genetic test?":
+  - **Yes:**
+    - which files to ask for (VCF, BAM, FASTQ, CRAM);
+    - lab cards with a region filter: what each lab provides, who can ask, how to ask, cost as stated, caveats, source links, and the verbatim quotes under "What the page says";
+    - rights for the EU, UK and US, labelled general information, not legal advice;
+    - an editable request letter with Copy and Print (Print opens a plain page so the site menus are not printed).
+  - **No:**
+    - a doctor or genetic counsellor first, then sponsored no-cost programmes, then research programmes, filtered by where you live;
+    - route cards show the status (for example "paused"), whether a referral is needed, eligibility in the source's words, who pays and what happens to the data;
+    - the consumer-test caution with its sources.
+  - **Not sure:** six questions to ask your doctor, which can be printed.
+- All content comes from `data/curated/testing_options.json`. It is now synced, with an `available.testing_options` flag, and no company outside that file is named. Without the file, the page says so.
+
+### "How well does it work?" on /method
+This section reads `data/derived/eval.json` (synced automatically with the derived files; flag `available.eval`). Every number comes from the file, so it follows re-runs.
+- **Big numbers:** 73% in the top 5 (random 12%), 29% first (random 2%), 83% in the top 5 when the therapy already helps another disease, and 60/68 readings agreeing with the independent AI.
+- **A table of 8 ranking methods:** top 1, top 5 and MRR, with 95% ranges for the best honest method. It includes the same-family baseline and the rule behind today's ideas page.
+- **The rest:** the 5-sentence plain summary, the known-collaboration checks (4-PBA, MEK inhibitors, miglustat), agreement with other sources, the limitations, and a link to the full JSON. The wording follows `docs/agent-reports/eval.md`.
+
+### /impact
+The landscape step is gone from impact.json, and the "awaiting expert figure" code path is removed. The gene-to-trial timeline links now wrap on phones; they caused 17 px of sideways scroll at 390 px.
+
+### Checks
+- `tsc --noEmit` and `eslint` are clean. One `npm run build` at the end passed.
+- These pages were checked at 1440 and 390 px with headless Chromium, with no sideways scroll and no console errors: `/sequence/request` (yes, no, not sure), `/method`, `/impact`, `/verify`, `/forgot`, `/reset`, `/me` (signed out, and signed in with the confirm banner), `/admin` (test-mode notice) and `/sequence`.
+- The only console error found was a deliberately invalid unsubscribe link, which shows a 400 and a friendly page.

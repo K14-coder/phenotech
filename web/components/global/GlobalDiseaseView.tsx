@@ -38,6 +38,7 @@ import { DevonPage } from "../devon/DevonPage";
 import { JoinBox } from "../community/JoinBox";
 import { buildGlobalDevonModel } from "../devon/devonGlobal";
 import { DisMechIfAny, MechanismLayer } from "./MechanismBits";
+import { CommunityResearch } from "../queue/CommunityResearch";
 import { capFirst, joinList, plural } from "@/lib/text";
 
 const H2 = "text-[22px] font-semibold tracking-tight text-ink";
@@ -187,6 +188,7 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
         {/* curated mechanism records (same djb2 bucketing) and DisMech's independent chain */}
         <MechanismLayer id={row.id} gi={gi} />
         <DisMechIfAny mondo={row.id} />
+        <CommunityResearch id={row.id} />
 
         {shardState === "error" ? (
           <p className="max-w-[760px] rounded-lg border border-dashed border-ink-4 px-5 py-4 text-sm text-ink-2">

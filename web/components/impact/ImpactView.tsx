@@ -161,7 +161,6 @@ function ImpactPage({ idx }: { idx: GraphIndex }) {
 
 function RouteCell({ n, step, atlas = false }: { n: number; step?: RouteStep; atlas?: boolean }) {
   if (!step) return <div className="px-5 py-4" />;
-  const awaiting = step.time === "BASELINE_FROM_EXPERT";
   return (
     <div className="px-5 py-4">
       <div className="flex items-start justify-between gap-4">
@@ -169,9 +168,7 @@ function RouteCell({ n, step, atlas = false }: { n: number; step?: RouteStep; at
           <span className="mr-2 tabular-nums text-ink-3">{n}</span>
           {step.step}
         </p>
-        <p className={`shrink-0 text-right text-sm ${awaiting ? "text-ink-3" : atlas ? "font-semibold text-accent-700" : "font-semibold text-ink"}`}>
-          {awaiting ? "awaiting expert figure" : step.time}
-        </p>
+        <p className={`shrink-0 text-right text-sm font-semibold ${atlas ? "text-accent-700" : "text-ink"}`}>{step.time}</p>
       </div>
       {step.how && <p className="mt-1 text-sm leading-relaxed text-ink-3">{step.how}</p>}
       {step.basis && (
@@ -229,12 +226,12 @@ function Timelines({ idx, timelines }: { idx: GraphIndex; timelines: Timeline[] 
                     </span>
                   )}
                 </div>
-                <div className="relative mt-1 flex justify-between gap-3 text-xs text-ink-3">
-                  <a href={t.gene_discovery.url} target="_blank" rel="noopener noreferrer" className="hover:text-accent-700" title={t.gene_discovery.title}>
+                <div className="relative mt-1 flex justify-between gap-3 text-xs text-ink-3 [overflow-wrap:anywhere]">
+                  <a href={t.gene_discovery.url} target="_blank" rel="noopener noreferrer" className="min-w-0 hover:text-accent-700" title={t.gene_discovery.title}>
                     Gene found {fmt(t.gene_discovery.date)} · <span className="text-accent-700">{t.gene_discovery.ref} ↗</span>
                   </a>
                   {t.first_trial ? (
-                    <a href={t.first_trial.url} target="_blank" rel="noopener noreferrer" className="text-right hover:text-accent-700" title={t.first_trial.title}>
+                    <a href={t.first_trial.url} target="_blank" rel="noopener noreferrer" className="min-w-0 text-right hover:text-accent-700" title={t.first_trial.title}>
                       First trial {fmt(t.first_trial.date)} · <span className="text-accent-700">{t.first_trial.ref} ↗</span>
                     </a>
                   ) : (

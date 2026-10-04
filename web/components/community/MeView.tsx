@@ -74,9 +74,14 @@ function SignIn() {
             {error}
           </p>
         )}
-        <button type="submit" disabled={busy} className={`${BTN} w-full bg-accent-700 text-white hover:bg-accent-900 sm:w-auto`}>
-          {busy ? "Signing in…" : "Sign in"}
-        </button>
+        <div className="flex flex-wrap items-center gap-4">
+          <button type="submit" disabled={busy} className={`${BTN} w-full bg-accent-700 text-white hover:bg-accent-900 sm:w-auto`}>
+            {busy ? "Signing in…" : "Sign in"}
+          </button>
+          <Link href="/forgot" className="text-[15px] text-accent-700 underline">
+            Forgot password?
+          </Link>
+        </div>
       </form>
       <p className="mt-6 text-[15px] text-ink-2">
         New here?{" "}
@@ -164,6 +169,7 @@ function Home({ idx, a, u }: { idx: GraphIndex; a: AccountState; u: PublicUser }
           {msg}
         </p>
       )}
+      {!u.emailVerified && a.emailMode !== "disabled" && <ConfirmBanner />}
 
       <section aria-labelledby="follow-h">
         <h2 id="follow-h" className={H2}>
@@ -191,8 +197,8 @@ function Home({ idx, a, u }: { idx: GraphIndex; a: AccountState; u: PublicUser }
             shortcut={false}
             label="Follow another disease"
             placeholder="Follow another disease"
-            onPick={(n) => n.type === "disease" && void save({ diseases: [...new Set([...u.diseases, n.id])] }, "Following.")}
-            onPickGlobal={(r) => void save({ diseases: [...new Set([...u.diseases, r.id])] }, "Following.")}
+            onPick={(n) => n.type === "disease" && void save({ diseases: [...new Set([...u.diseases, n.id])], labels: { [n.id]: n.label } }, "Following.")}
+            onPickGlobal={(r) => void save({ diseases: [...new Set([...u.diseases, r.id])], labels: { [r.id]: r.name } }, "Following.")}
           />
         </div>
       </section>
@@ -285,8 +291,23 @@ function Home({ idx, a, u }: { idx: GraphIndex; a: AccountState; u: PublicUser }
             ))}
           </select>
         </label>
+        <label className="flex cursor-pointer items-start gap-3 text-[15px] text-ink">
+          <input type="checkbox" checked={!u.emailOptOut} onChange={(e) => void save({ emails: e.target.checked }, "Updated.")} className="mt-0.5 h-5 w-5 shrink-0 accent-[#1f5a96]" />
+          <span>
+            Email me these notices
+            <span className="block text-sm text-ink-3">
+              {a.emailMode === "disabled"
+                ? "This site doesn’t send email yet; notices appear here."
+                : u.emailVerified
+                  ? "Every notice also appears here. Each email has a one-click unsubscribe link."
+                  : "Confirm your email first; until then, notices appear only here."}
+            </span>
+          </span>
+        </label>
         <p className="text-sm text-ink-3">
-          We send no emails yet: notices appear here. <Link href="/privacy" className="underline">How we handle your data</Link>
+          <Link href="/privacy" className="underline">
+            How we handle your data
+          </Link>
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           <a href="/api/account/export" className={`${BTN} border border-line text-ink-2`}>
@@ -297,6 +318,36 @@ function Home({ idx, a, u }: { idx: GraphIndex; a: AccountState; u: PublicUser }
       </section>
 
       {researcher && <ResearcherTools idx={idx} a={a} u={u} />}
+    </div>
+  );
+}
+
+function ConfirmBanner() {
+  const [state, setState] = useState<"idle" | "busy" | "sent" | string>("idle");
+  return (
+    <div className="rounded-xl border border-line bg-accent-50 px-4 py-3 text-[15px] text-ink-2" role="status">
+      <p>
+        <span className="font-medium text-ink">Please confirm your email.</span> We sent you a link when you signed up. Until you confirm, notices appear only here and we send no study emails.
+      </p>
+      <div className="mt-2 flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          disabled={state === "busy" || state === "sent"}
+          onClick={async () => {
+            setState("busy");
+            try {
+              await api("/api/account/verify/resend", "POST", {});
+              setState("sent");
+            } catch (e) {
+              setState(e instanceof Error ? e.message : String(e));
+            }
+          }}
+          className="min-h-[44px] rounded-lg border border-line bg-white px-4 font-medium text-accent-700 disabled:opacity-60"
+        >
+          {state === "busy" ? "Sending…" : state === "sent" ? "Sent. Check your inbox" : "Send the link again"}
+        </button>
+        {state !== "idle" && state !== "busy" && state !== "sent" && <span className="text-warn-ink">{state}</span>}
+      </div>
     </div>
   );
 }

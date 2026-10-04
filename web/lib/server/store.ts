@@ -43,7 +43,8 @@ interface FileDb {
   kv: Record<string, { v: string; exp?: number }>;
   sets: Record<string, string[]>;
 }
-const FILE = path.join(process.cwd(), ".data", "store.json");
+// STORE_FILE lets a local test server use its own throwaway file (never set in production).
+const FILE = process.env.STORE_FILE ? path.resolve(process.env.STORE_FILE) : path.join(process.cwd(), ".data", "store.json");
 let queue: Promise<unknown> = Promise.resolve();
 
 async function readDb(): Promise<FileDb> {

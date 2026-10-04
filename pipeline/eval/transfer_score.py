@@ -22,6 +22,12 @@ query. `combined` (adds the cluster term) was pre-declared as the default but sc
 noise in the leave-one-out benchmark, so the simpler score is recommended.
 `explain()` returns the matched mechanisms, chains, clusters and nearest known disease so a UI can
 show why a candidate ranks where it does.
+
+MultiFeatureIndex (below) adds 11 biological feature similarities from data/derived/features/
+(protein families/domains, GO, Reactome, compartment, HPA tissue, HPO organ systems, ClinVar mutation
+spectrum, mechanism class, GO-based target match). `MultiFeatureIndex.rank_candidates(t, scorer="multi")`
+or `rank_candidates_multi(t)`; `score_weighted(weights, ...)` for any weights; `feature_matrix()` for the
+per-feature scores. Evaluated in pipeline/eval/feature_eval.py; the existing TransferIndex API is unchanged.
 """
 from __future__ import annotations
 
@@ -284,6 +290,157 @@ SIMPLE = {
     "mech+cluster": ("s_mech_plus_cluster", {}),
     "mech+cluster-leaky": ("s_mech_plus_cluster", {"include_therapy_informed": True}),
 }
+
+
+# ====================================================================== multi-feature scorer
+FEATURES = ROOT / "data" / "derived" / "features" / "atlas_features.json"
+# context features compare the candidate with the therapy's known diseases (max over them);
+# therapy features compare the candidate with the therapy's own targets (usable with no known disease).
+CONTEXT_FEATURES = ["symptoms", "phenotype_systems", "gene_family", "protein_domains", "go_process", "reactome",
+                    "compartment", "tissue", "mutation_type", "molecular_consequence", "shared_gene"]
+THERAPY_FEATURES = ["mechanism_target", "target_go"]
+ALL_FEATURES = THERAPY_FEATURES + CONTEXT_FEATURES
+FEATURE_DOC = {
+    "symptoms": "IC-weighted Jaccard of curated HPO phenotypes (the old phenotype scorer)",
+    "phenotype_systems": "cosine of IC-weighted HPO top-level organ-system profiles, system IDF over HPO diseases",
+    "gene_family": "IDF-weighted cosine of PANTHER family + InterPro Family entries (gene-family membership)",
+    "protein_domains": "IDF-weighted cosine of InterPro Domain/Repeat/Homologous-superfamily + Pfam (structure)",
+    "go_process": "IDF-weighted cosine of UniProt GO biological-process terms, propagated over is_a/part_of",
+    "reactome": "IDF-weighted cosine of Reactome pathways incl. ancestors (signalling / metabolic pathway)",
+    "compartment": "IDF-weighted cosine of UniProt GO cellular-component terms, propagated",
+    "tissue": "cosine of HPA enriched-tissue vectors, log1p(nTPM) x tissue IDF (0 for low-specificity genes)",
+    "mutation_type": "1 - Jensen-Shannon divergence of ClinVar P/LP spectra (truncating/missense/inframe/splice/CNV)",
+    "molecular_consequence": "IDF-weighted cosine of mechanism classes (LoF/HI/DN/GoF/destabilization + G2P consequence)",
+    "shared_gene": "1 if the candidate's causal gene is a known disease's gene (degenerate here: one gene per disease)",
+    "mechanism_target": "the old IDF-weighted therapy-target mechanism match over graph chains",
+    "target_go": "therapy target mechanism's GO term found in the candidate gene's propagated UniProt GO, x GO IDF",
+}
+# Result of pipeline/eval/feature_eval.py (data/derived/eval_features.json): no tuned combination of the
+# richer features beat the old best under nested leave-one-therapy-class-out CV (nested MRR 0.457-0.485 vs
+# 0.491), so the default multi-feature weights ARE the old best (identical ranking to "pheno+mech").
+# ANCHORED_WEIGHTS is the best-scoring alternative (old best + half-weight target_go and mutation_type);
+# selected in 35/38 outer folds, nested MRR 0.485, in-sample 0.510. Use it only as a tie-breaker/explainer.
+MULTI_WEIGHTS = {"symptoms": 1.0, "mechanism_target": 1.0}
+ANCHORED_WEIGHTS = {"symptoms": 1.0, "mechanism_target": 1.0, "target_go": 0.5, "mutation_type": 0.5}
+
+
+def _cos(a, b):
+    num = sum(a[k] * b[k] for k in a.keys() & b.keys())
+    den = math.sqrt(sum(x * x for x in a.values()) * sum(x * x for x in b.values()))
+    return num / den if den else 0.0
+
+
+class MultiFeatureIndex(TransferIndex):
+    """TransferIndex plus biological feature similarities from data/derived/features/atlas_features.json
+    (built by pipeline/eval/build_features.py). Scorer names: "multi" (MULTI_WEIGHTS), "feat:<name>" for one
+    feature, or score_weighted(weights, ...) for any weight dict."""
+
+    def __init__(self, graph, features_path=FEATURES, weights=None, **kw):
+        super().__init__(graph, **kw)
+        fx = json.loads(pathlib.Path(features_path).read_text())
+        self.fx = fx["diseases"]
+        self.fidf = fx["idf"]
+        self.mech_go = fx.get("mechanism_go", {})
+        self.weights = dict(weights or MULTI_WEIGHTS)
+        N = len(self.diseases)
+        mc_df = defaultdict(int)
+        for d in self.diseases:
+            for c in self.fx[d]["molecular_consequence"]:
+                mc_df[c] += 1
+        self.mc_idf = {c: math.log((N + 1) / (v + 1)) for c, v in mc_df.items()}
+        self.vec = {}
+        for d in self.diseases:
+            p = self.fx[d]
+            ti = self.fidf["tissue"]
+            self.vec[d] = {
+                "phenotype_systems": {s: w * self.fidf["phenotype_system"].get(s, 0) for s, w in p["phenotype_systems"].items()},
+                "gene_family": {t: self.fidf["family"][t] for t in p["family_tokens"]},
+                "protein_domains": {t: self.fidf["domain"][t] for t in p["domain_tokens"]},
+                "go_process": {t: self.fidf["go_bp"][t] for t in p["go_bp"]},
+                "reactome": {t: self.fidf["reactome"][t] for t in p["reactome"]},
+                "compartment": {t: self.fidf["go_cc"][t] for t in p["go_cc"]},
+                "tissue": {t: math.log1p(v) * ti.get(t, 0) for t, v in p["hpa_enriched_nTPM"].items()},
+                "molecular_consequence": {c: w * self.mc_idf[c] for c, w in p["molecular_consequence"].items()},
+            }
+            self.vec[d]["_go_all"] = set(p["go_bp"]) | set(p["go_mf"]) | set(p["go_cc"])
+        self._fsim = {}
+
+    # ---------------------------------------------------------------- disease-disease feature similarity
+    def feat_sim(self, f, a, b):
+        if f == "symptoms":
+            return self.phen_sim(a, b)
+        if f == "shared_gene":
+            return 1.0 if self.fx[a]["gene"] == self.fx[b]["gene"] else 0.0
+        k = (f, a, b) if a < b else (f, b, a)
+        if k in self._fsim:
+            return self._fsim[k]
+        if f == "mutation_type":
+            pa, pb = self.fx[a]["clinvar_spectrum"], self.fx[b]["clinvar_spectrum"]
+            if not pa or not pb:
+                v = 0.0
+            else:
+                js = 0.0
+                for s in pa:
+                    m = (pa[s] + pb[s]) / 2
+                    for x in (pa[s], pb[s]):
+                        if x > 0:
+                            js += 0.5 * x * math.log2(x / m)
+                v = 1.0 - js
+        else:
+            v = _cos(self.vec[a][f], self.vec[b][f])
+        self._fsim[k] = v
+        return v
+
+    def feature(self, f, cls, context, d):
+        if f == "mechanism_target":
+            return self.s_mechanism(cls, context, d)
+        if f == "target_go":
+            tot = 0.0
+            for m in self.targets.get(cls, ()):
+                mg = self.mech_go.get(m)
+                if mg and mg["go"] in self.vec[d]["_go_all"]:
+                    tot += mg["idf"]
+            return tot
+        return max((self.feat_sim(f, d, k) for k in context), default=0.0)
+
+    def feature_matrix(self, cls, context, candidates, feats=ALL_FEATURES):
+        """{feature: {disease: score normalised by the max over candidates}}"""
+        context = set(context)
+        out = {}
+        for f in feats:
+            raw = {d: self.feature(f, cls, context, d) for d in candidates}
+            mx = max(raw.values(), default=0.0)
+            out[f] = {d: (v / mx if mx > 0 else 0.0) for d, v in raw.items()}
+        return out
+
+    def score_weighted(self, weights, cls, context, candidates):
+        fm = self.feature_matrix(cls, context, candidates, [f for f, w in weights.items() if w])
+        return {d: sum(w * fm[f][d] for f, w in weights.items() if w) for d in candidates}
+
+    def score(self, scorer, cls, context, candidates):
+        if scorer == "multi":
+            return self.score_weighted(self.weights, cls, context, candidates)
+        if scorer.startswith("feat:"):
+            return self.score_weighted({scorer[5:]: 1.0}, cls, context, candidates)
+        return super().score(scorer, cls, context, candidates)
+
+    def explain(self, cls, known, d):
+        out = super().explain(cls, known, d)
+        fm = {}
+        for f, w in self.weights.items():
+            if not w or f in THERAPY_FEATURES:
+                continue
+            near = max(known, key=lambda k: self.feat_sim(f, d, k), default=None)
+            if near:
+                fm[f] = {"nearest_known": near, "similarity": round(self.feat_sim(f, d, near), 3)}
+        out["features"] = fm
+        return out
+
+
+def rank_candidates_multi(therapy, known=None, top=None, graph=None, weights=None):
+    """Convenience wrapper: rank diseases for `therapy` with the tuned multi-feature scorer."""
+    idx = MultiFeatureIndex(graph or load_graph(), weights=weights)
+    return idx.rank_candidates(therapy, known=known, scorer="multi", top=top)
 
 
 if __name__ == "__main__":

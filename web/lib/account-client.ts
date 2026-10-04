@@ -4,6 +4,8 @@ import { retry } from "./resource";
 
 export interface AccountState {
   mode: "redis" | "file" | "off";
+  /** "disabled" when the site sends no email (no Resend key); notices then appear only on /me */
+  emailMode?: "dry-run" | "resend" | "disabled";
   user: PublicUser | null;
   inbox?: InboxMessage[];
   announcements?: Announcement[];

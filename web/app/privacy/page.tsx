@@ -26,6 +26,14 @@ export default function Page() {
       </p>
       <p className={P}>We never sell or share your contact details. Study announcements are reviewed by a person before they reach anyone.</p>
 
+      <h2 className={H2}>Emails</h2>
+      <p className={P}>
+        We email you only after you confirm your address, and only what you asked for: new studies for diseases you follow (one at a time or as a
+        weekly summary), approved study announcements, and messages researchers send through the atlas. Each email says why you are getting it and
+        has a one-click unsubscribe link. Password-reset and confirmation emails are sent only when you ask for them. Emails are delivered by
+        Resend, which receives your address and the message for that purpose only.
+      </p>
+
       <h2 className={H2}>Your controls</h2>
       <p className={P}>
         In “My atlas” you can change every choice, export everything we hold about you as a file, and delete your account. Deleting removes your
@@ -35,7 +43,7 @@ export default function Page() {
       <h2 className={H2}>Technical notes</h2>
       <p className={P}>
         We use one cookie, to keep you signed in (httpOnly, signed, 30 days). There is no advertising or tracking. Data is stored in a managed Redis
-        database. We send no emails yet; notices appear in your inbox on the site. This is a hackathon prototype: please do not store anything
+        database. Every notice also appears in your inbox on the site. This is a hackathon prototype: please do not store anything
         sensitive in free-text fields.
       </p>
     </div>

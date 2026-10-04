@@ -276,6 +276,12 @@ function Sequence({ idx }: { idx: GraphIndex }) {
           </svg>
           Your sequence never leaves this device.
         </p>
+        <p className="mt-2 text-[15px] text-ink-2">
+          Don’t have one and want to request one?{" "}
+          <Link href="/sequence/request" className="font-medium text-accent-700 underline" aria-label="Click here to see how to request a DNA file">
+            Click here
+          </Link>
+        </p>
         <p className="mt-3 text-[16px] leading-relaxed text-ink-2">
           Everything is compared here, in your browser. We list each change, what it does to the protein, and what ClinVar and the atlas say
           about it, so you can show your doctor.

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PERSONAS } from "@/lib/persona";
 import { useMemo } from "react";
 import { WithGraph } from "../GraphProvider";
+import { AccuracySection } from "./AccuracySection";
 import { EvidenceLegend } from "../evidence/EvidenceBits";
 import { CounterexampleCard } from "../disease/DerivedSections";
 import { useDerived, type Counterexample } from "@/lib/derived";
@@ -86,6 +87,8 @@ function Method({ idx }: { idx: GraphIndex }) {
           </div>
         ))}
       </section>
+
+      <AccuracySection />
 
       <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
         <section aria-labelledby="built-h">

@@ -16,9 +16,22 @@ interface Pending {
   created: string;
 }
 
+interface EmailStatus {
+  mode: "dry-run" | "resend" | "disabled";
+  domainVerified: boolean;
+}
+
+const EMAIL_NOTE: Record<EmailStatus["mode"], string> = {
+  "dry-run": "Email is in dry-run mode: messages are written to .data/outbox/ on the server, not sent.",
+  disabled: "Email is switched off (RESEND_API_KEY and EMAIL_FROM are not set). Notices appear only in members’ inboxes on My atlas.",
+  resend: "Email is sent through Resend.",
+};
+
 export function AdminView() {
   const [token, setToken] = useState("");
   const [items, setItems] = useState<Pending[] | null>(null);
+  const [email, setEmail] = useState<EmailStatus | null>(null);
+  const [note, setNote] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const call = async (method: "GET" | "POST", body?: unknown) => {
@@ -27,21 +40,24 @@ export function AdminView() {
       headers: { "x-admin-token": token, ...(body ? { "Content-Type": "application/json" } : {}) },
       body: body ? JSON.stringify(body) : undefined,
     });
-    const j = (await r.json()) as { pending?: Pending[]; error?: string };
+    const j = (await r.json()) as { pending?: Pending[]; email?: EmailStatus; emailed?: number; queued?: number; error?: string };
     if (!r.ok) throw new Error(j.error ?? `HTTP ${r.status}`);
     return j;
   };
   const load = async () => {
     setError(null);
     try {
-      setItems((await call("GET")).pending ?? []);
+      const j = await call("GET");
+      setItems(j.pending ?? []);
+      setEmail(j.email ?? null);
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     }
   };
   const decide = async (id: string, decision: "approved" | "rejected") => {
     try {
-      await call("POST", { id, decision });
+      const j = await call("POST", { id, decision });
+      setNote(decision === "approved" ? `Approved. Emailed ${j.emailed ?? 0} member(s) now; ${j.queued ?? 0} will get it in their weekly summary.` : "Rejected.");
       await load();
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
@@ -66,6 +82,22 @@ export function AdminView() {
       {error && (
         <p className="rounded-lg border border-warn-line bg-warn-bg px-3 py-2 text-warn-ink" role="alert">
           {error}
+        </p>
+      )}
+      {email && (
+        <div className="space-y-2 text-[15px]">
+          {!email.domainVerified && (
+            <p className="rounded-lg border border-warn-line bg-warn-bg px-3 py-2 text-warn-ink" role="status">
+              <b>Email delivery is in test mode.</b> Until the sending domain is verified in Resend (then set EMAIL_DOMAIN_VERIFIED=1), Resend only delivers to the account owner’s own address;
+              other members see their notices in My atlas only.
+            </p>
+          )}
+          <p className="text-ink-3">{EMAIL_NOTE[email.mode]}</p>
+        </div>
+      )}
+      {note && (
+        <p className="rounded-lg bg-subtle px-3 py-2 text-[15px] text-ink-2" role="status">
+          {note}
         </p>
       )}
       {items && !items.length && <p className="text-ink-3">Nothing waiting for review.</p>}

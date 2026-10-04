@@ -108,6 +108,8 @@ export interface Available {
   groups?: boolean;
   sequences?: string[];
   variant_positions?: boolean;
+  eval?: boolean;
+  testing_options?: boolean;
 }
 
 async function fetchJson<T>(url: string): Promise<T> {
