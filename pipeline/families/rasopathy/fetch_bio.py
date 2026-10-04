@@ -50,7 +50,14 @@ def uniprot(sym):
                       params={"query": f"gene_exact:{sym} AND organism_id:9606 AND reviewed:true",
                               "format": "json"}, refresh=REFRESH)
     res = obj.get("results", [])
-    return res[0] if res else None
+    # gene_exact also matches aliases (e.g. "RIT1" is an alias of BCL11B): require the entry's PRIMARY gene name
+    # to be the HGNC symbol.
+    primary = [r for r in res if any((g.get("geneName") or {}).get("value") == sym for g in r.get("genes", []))]
+    if not primary:
+        print(f"  ! no UniProt entry with primary gene name {sym} (results: "
+              f"{[r['primaryAccession'] for r in res]})")
+        return None
+    return primary[0]
 
 
 def ensembl_cds(enst):
@@ -160,7 +167,8 @@ def main():
         rec = {"symbol": h["symbol"], "hgnc_id": h["hgnc_id"], "name": h["name"],
                "alias_symbol": h.get("alias_symbol", []), "prev_symbol": h.get("prev_symbol", []),
                "entrez_id": h.get("entrez_id"), "omim_id": h.get("omim_id", []),
-               "ensembl_gene_id": h.get("ensembl_gene_id"), "mane_select": h.get("mane_select", []),
+               "ensembl_gene_id": h.get("ensembl_gene_id"), "uniprot_ids_hgnc": h.get("uniprot_ids", []),
+               "mane_select": h.get("mane_select", []),
                "hgnc_url": f"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/{h['hgnc_id']}",
                "protein_synonyms_curated": PROTEIN_SYNONYMS.get(sym, [])}
         if u:

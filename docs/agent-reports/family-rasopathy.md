@@ -317,3 +317,10 @@ single-paper senior authors. This is a precision-over-recall choice, not an abse
 - **Parallel agents.** Other agents edited their own fragments while this ran. The final `build_graph.py` merged 8
   fragment files, including `family_dee` and `family_lysosomal`, with **Problems: None**. The other families' numbers are
   outside this report.
+- **RIT1 UniProt mix-up (fixed 2026-10-04).** The UniProt search `gene_exact:RIT1` also matches BCL11B (Q9C0K0), which
+  lists RIT1 as a gene synonym, and `fetch_bio.py` took the first hit. So `gene:RIT1` carried BCL11B's accession, name,
+  length (894 aa) and function. It now has Q92963 (GTP-binding protein Rit1, 219 aa, consistent with the 660 bp MANE
+  CDS). The function text was taken from the EBI Proteins API copy of that UniProtKB entry, because rest.uniprot.org was
+  unreachable. `fetch_bio.py` (and the DEE and biology fetchers) now require the entry's primary gene name to equal the
+  HGNC symbol, as the lysosomal fetcher already did, and the RASopathy fetcher records `uniprot_ids_hgnc`. All 45 gene
+  nodes in `data/graph.json` were checked against the HGNC complete set: every UniProt accession matches.

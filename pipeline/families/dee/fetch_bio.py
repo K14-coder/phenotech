@@ -47,7 +47,14 @@ def uniprot(symbol):
                       params={"query": f"gene_exact:{symbol} AND organism_id:9606 AND reviewed:true",
                               "format": "json"}, refresh=REFRESH)
     res = obj.get("results", [])
-    return res[0] if res else None
+    # gene_exact also matches aliases (e.g. "RIT1" is an alias of BCL11B): require the entry's PRIMARY gene name
+    # to be the HGNC symbol.
+    primary = [r for r in res if any((g.get("geneName") or {}).get("value") == symbol for g in r.get("genes", []))]
+    if not primary:
+        print(f"  ! no UniProt entry with primary gene name {symbol} (results: "
+              f"{[r['primaryAccession'] for r in res]})")
+        return None
+    return primary[0]
 
 
 def ensembl_cds(enst):
