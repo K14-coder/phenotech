@@ -476,7 +476,7 @@ def main():
         f"{added_contra} new contradicting sources added (contradictions wait for human review)",
         f"- Cited sources where the OpenAI reading disagrees with the curators: "
         f"{sum(1 for e in edges.values() for ev in e.get('evidence', []) + e.get('counter_evidence', []) if ev.get('cross_checked', {}).get('agrees') is False)}",
-        f"- Human-reviewed edges: {sum(1 for e in edges.values() if e.get('review'))}",
+        f"- Human-reviewed edges: {sum(1 for e in edges.values() if e.get('review') and not str(e['review'].get('by', '')).startswith('ai-review:'))}; AI-reviewed edges (not human): {sum(1 for e in edges.values() if str((e.get('review') or {}).get('by', '')).startswith('ai-review:'))}",
         f"- Dropped by review: {len(rejected)}; dropped as dangling: {len(dangling)}",
         "",
         "## Fragments",
