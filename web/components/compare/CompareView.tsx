@@ -1,5 +1,6 @@
 "use client";
 
+import { CompareFactors } from "../factors/CompareFactors";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
@@ -63,7 +64,10 @@ function Compare({ idx }: { idx: GraphIndex }) {
       ) : !c ? (
         <p className="mt-10 rounded-lg border border-dashed border-ink-4 px-5 py-4 text-sm text-ink-2">Pick two different diseases from the atlas.</p>
       ) : (
-        <CompareBody idx={idx} c={c} />
+        <>
+          <CompareFactors idx={idx} a={a} b={b} />
+          <CompareBody idx={idx} c={c} />
+        </>
       )}
     </div>
   );

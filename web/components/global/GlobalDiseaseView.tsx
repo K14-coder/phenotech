@@ -35,6 +35,10 @@ import {
 import { loadAvailableOnce } from "@/lib/population";
 import { GeneFactors } from "../disease/GeneFactors";
 import { OrgContact, StudyContact } from "../contacts/ContactLine";
+import { GlobalFingerprint, useGeneFeatures, useMechClass } from "../factors/Fingerprint";
+import { PairFactorsView } from "../factors/PairFactors";
+import { FactorLegend } from "../factors/FactorBits";
+import { geneLevelScores, type FactorScores } from "@/lib/factors";
 import { orgContact, useContacts } from "@/lib/contacts";
 import { retry, useResource } from "@/lib/resource";
 import { usePersona } from "@/lib/persona";
@@ -192,6 +196,7 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
       </header>
 
       <div className="mx-auto max-w-[1120px] space-y-14 px-8 pt-12">
+        <GlobalFingerprint row={row} entry={entry} terms={terms} plain={persona === "family"} open={persona === "researcher" || persona === "biotech"} />
         {/* curated mechanism records (same djb2 bucketing) and DisMech's independent chain */}
         <MechanismLayer id={row.id} gi={gi} />
         <DisMechIfAny mondo={row.id} />
@@ -503,9 +508,13 @@ async function loadSimilar(id: string): Promise<SimilarShard | null> {
 function SimilarBest({ id, gi, idx, fallback }: { id: string; gi: GlobalIndex; idx: GraphIndex; fallback: React.ReactNode }) {
   const load = useCallback(() => loadSimilar(id), [id]);
   const res = useResource<SimilarShard | null>(shardKey("similar", id), load);
-  if (res?.status === "loading") return <p className="text-sm text-ink-3">Loading similar diseases…</p>;
   const shard = res?.data;
   const list = shard?.d[id];
+  const me = gi.byId.get(id);
+  const nbGenes = [...new Set([...(me?.genes ?? []), ...(list ?? []).slice(0, 10).flatMap(([nid]) => gi.byId.get(nid)?.genes.slice(0, 3) ?? [])])].slice(0, 40);
+  const feats = useGeneFeatures(nbGenes);
+  const mc = useMechClass();
+  if (res?.status === "loading") return <p className="text-sm text-ink-3">Loading similar diseases…</p>;
   if (!shard || !list?.length) return <>{fallback}</>;
   return (
     <section aria-labelledby="sim-h" className="max-w-[760px]">
@@ -517,8 +526,12 @@ function SimilarBest({ id, gi, idx, fallback }: { id: string; gi: GlobalIndex; i
         Ranked by shared distinctive symptoms, with extra weight for the same gene and shared biological pathways. This combination was checked on
         1,300 external test cases. It helps you look further; it is not evidence of a shared treatment.
       </p>
+      <div className="mt-2">
+        <FactorLegend />
+      </div>
       <ol className="mt-4 space-y-3">
-        {list.slice(0, 10).map(([nid, score, , , , hpo, sameGenes, paths], i) => {
+        {list.slice(0, 10).map((tuple, i) => {
+          const [nid, score, , , , hpo, sameGenes, paths] = tuple;
           const r = gi.byId.get(nid);
           const name = r ? capFirst(r.name) : nid;
           return (
@@ -536,6 +549,16 @@ function SimilarBest({ id, gi, idx, fallback }: { id: string; gi: GlobalIndex; i
                   {r && mappedAtlasId(r, idx) && <span className="rounded-full border border-accent-200 px-2 py-0.5 text-[11px] text-accent-700">mapped in depth</span>}
                   <span className="text-xs tabular-nums text-ink-3">score {score.toFixed(2)}</span>
                 </div>
+                {(() => {
+                  const r = gi.byId.get(nid);
+                  const extra = feats && mc && r ? geneLevelScores(me?.genes ?? [], r.genes, feats, mc, id, nid) : { tissue: null, structure: null, mutation: null, fate: null };
+                  const scores: FactorScores = { gene: tuple[3], pathway: tuple[4], symptoms: tuple[2], ...extra };
+                  const words: Partial<Record<keyof FactorScores, string>> = {};
+                  if (sameGenes.length) words.gene = `same gene: ${sameGenes.slice(0, 2).join(", ")}`;
+                  if (paths.length) words.pathway = `same pathway: ${shard.p[paths[0]] ?? paths[0]}`;
+                  if (hpo.length) words.symptoms = `shared symptom: ${shard.t[hpo[0]]?.[0] ?? hpo[0]}`;
+                  return <PairFactorsView scores={scores} words={words} />;
+                })()}
                 <ul className="mt-1 flex flex-wrap gap-1.5 text-xs">
                   {sameGenes.length > 0 && <li className="rounded-full bg-accent-50 px-2 py-0.5 font-medium text-accent-900">same gene: {sameGenes.slice(0, 3).join(", ")}</li>}
                   {hpo.map((h) => (

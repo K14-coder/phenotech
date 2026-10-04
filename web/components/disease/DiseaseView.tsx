@@ -18,6 +18,8 @@ import { JoinBox } from "../community/JoinBox";
 import { FollowButton } from "../community/AccountBits";
 import { OseiSections } from "../research/OseiSections";
 import { GeneFactors } from "./GeneFactors";
+import { AtlasFingerprint } from "../factors/Fingerprint";
+import { AtlasPairFactors } from "../factors/PairFactors";
 import { OrgContact } from "../contacts/ContactLine";
 import { DirectionFlags } from "../direction/DirectionFlag";
 import { DisMechForAtlas } from "../global/MechanismBits";
@@ -224,6 +226,7 @@ function Disease({ idx, id, as: persona, embedded = false }: { idx: GraphIndex; 
             </div>
           </section>
         )}
+        <AtlasFingerprint idx={idx} node={node} plain={embedded} open={persona === "researcher" || persona === "biotech"} />
         {persona === "researcher" && <OseiSections idx={idx} node={node} />}
         {persona === "researcher" && <ResearcherMechanisms idx={idx} ctx={ctx} />}
         {persona === "biotech" && <BiotechNeed ctx={ctx} items={items} ownOrgs={ownOrgs} umbrellaOrgs={umbrellaOrgs} />}
@@ -503,6 +506,9 @@ function MatchCard({ me, m, rank }: { me: DiseaseContext; m: DiseaseMatch; rank:
           </div>
         </div>
         <OverlapMeter score={m.score} />
+      </div>
+      <div className="pl-8">
+        <AtlasPairFactors a={me.disease.id} b={m.disease.id} />
       </div>
       <dl className="mt-3 space-y-2.5 pl-8 text-sm">
         <Reason k="Shared mechanism">
