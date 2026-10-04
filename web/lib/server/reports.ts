@@ -1,5 +1,5 @@
 // "Report or remove a contact": requests from the public about a phone, email or named contact person shown on
-// Tasukeru. They go into the admin moderation queue (reports:pending); nothing is changed automatically.
+// Phenotech. They go into the admin moderation queue (reports:pending); nothing is changed automatically.
 import { HttpError } from "./community";
 import { getJson, sadd, setJson, smembers, srem } from "./store";
 import { randomBytes } from "node:crypto";

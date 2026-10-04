@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ReportContact } from "@/components/community/ReportContact";
 
-export const metadata: Metadata = { title: "Privacy · Tasukeru" };
+export const metadata: Metadata = { title: "Privacy · Phenotech" };
 
 const H2 = "mt-8 text-[19px] font-semibold text-ink";
 const P = "mt-2 text-[16px] leading-relaxed text-ink-2";
@@ -9,8 +9,8 @@ const P = "mt-2 text-[16px] leading-relaxed text-ink-2";
 export default function Page() {
   return (
     <div className="mx-auto w-full max-w-[680px] px-4 pb-24 pt-10">
-      <h1 className="text-[28px] font-semibold text-ink">Privacy at Tasukeru</h1>
-      <p className={P}>You can use all of Tasukeru without an account. Searches, pages and DNA checks are not tied to you, and the DNA sequence and VCF check runs entirely in your browser.</p>
+      <h1 className="text-[28px] font-semibold text-ink">Privacy at Phenotech</h1>
+      <p className={P}>You can use all of Phenotech without an account. Searches, pages and DNA checks are not tied to you, and the DNA sequence and VCF check runs entirely in your browser.</p>
 
       <h2 className={H2}>If you create an account, we keep</h2>
       <ul className="mt-2 list-disc space-y-1 pl-5 text-[16px] text-ink-2">

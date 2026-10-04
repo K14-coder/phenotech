@@ -1,4 +1,4 @@
-# Tasukeru: to-do list
+# Phenotech: to-do list
 
 Keep this file current: tick items when done (with the commit), and add new ones at the right priority. Items marked **(you)** need a human; everything else an agent can do. Read `CLAUDE.md` and `docs/KNOWLEDGE.md` first.
 
@@ -15,7 +15,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P0: submission blockers
 
-- [~] (claimed by main-session web agent, 2026-10-04) **Rename to Phenotech** everywhere (site, emails, worker, docs; `EMAIL_FROM` on Vercel is already "Phenotech <no-reply@mehro.ch>") **plus atlas controls:** hop-depth slider from the searched/focused item, toggles to hide link types and factor links, hide node types and individual nodes, lens links limited to the shown neighbourhood.
+- [x] (web agent, commits a7f6a4f + atlas controls commit) **Rename to Phenotech** everywhere (site, emails, worker, docs; `EMAIL_FROM` on Vercel is already "Phenotech <no-reply@mehro.ch>") **plus atlas controls:** hop-depth slider from the searched/focused item, toggles to hide link types and factor links, hide node types and individual nodes, lens links limited to the shown neighbourhood.
 
 - [ ] **(you, later)** Make the repo public before submission (team decision: later). The GitHub repo `K14-coder/rare-disease-atlas` is private for now. Either make it public, or share it the way Hack-Nation asks. Run a final secret scan before making it public (see KNOWLEDGE.md → "Secret scan").
 - [x] (vibrant-babbage, 2026-10-04) Refresh `README.md` for the current product: Tasukeru, depth/breadth tiers, four views, `/sequence` with genome-wide ClinVar, community and research queue, both benchmarks, OpenAI use, updated architecture diagram, acknowledgements.
@@ -62,7 +62,7 @@ Several Claude agents and people work in parallel. Follow this every time:
   - [x] (vibrant-babbage, 2026-10-04) Review the 8 Claude disagreements: failed trials stay limiting (curators right); phenytoin/Dravet finding added as supporting (edge stays contested); PTPN11 readings are subtype-specific (filings stand). Review notes in `overrides.json`.
 - [x] (vibrant-babbage, 2026-10-04) Outreach drafts for all 45 deep diseases (42 new, by Claude through the app's evidence packs and `sanitizeDoc`; `web/scripts/agent-ai.mjs`; 0 citations dropped).
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
-- [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
+- [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Phenotech. Count steps, time and errors; put the result on `/impact`.
 - [x] (vibrant-babbage, 2026-10-04) The STXBP1 enrollment total in the Research view excluded multi-disease registries: a study linked to 3+ atlas diseases or listing more than 5 conditions is shown as "not counted" (STXBP1: 101,363 → 863 across 8 studies).
 
 ## P2: contacts and community
@@ -70,7 +70,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 - [x] Contact people only: `pipeline/contacts/filter_people.py` keeps contact roles (66 people at 20 orgs) and drops board members and advisors.
 
 - [x] Named contact persons published by organisations (112, `data/derived/contacts/people.json`), Call/Email buttons in every view, "Report or remove a contact" form on /privacy, handled in /admin.
-- [ ] Email: works via Infomaniak SMTP (`no-reply@mehro.ch`, sender "Tasukeru"). Watch the deliverability of the first real alerts. Optionally add SPF/DKIM/DMARC checks for mehro.ch.
+- [ ] Email: works via Infomaniak SMTP (`no-reply@mehro.ch`, sender "Phenotech"). Watch the deliverability of the first real alerts. Optionally add SPF/DKIM/DMARC checks for mehro.ch.
 - [ ] Researcher verification beyond the email domain (ORCID sign-in or an institutional confirmation link).
 - [ ] Passkeys; a trial waitlist through patient groups; letting patient groups claim their entry and see member counts.
 - [ ] More AI drafts: experiment drafts for the new hypotheses, outreach for more diseases (`node web/scripts/precompute-ai.mjs --ids ...`, dev server running, ChatGPT plan signed in).
@@ -90,6 +90,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 ## Done (most recent first)
 
 - AI review of the 169 Claude candidate edges (142 accepted, AI-labelled, kept out of the benchmark) and the 8 reader disagreements; AI actions hidden where no precomputed draft exists; "Take a tour" buttons (vibrant-babbage).
+- Renamed Tasukeru → Phenotech (site, emails, logo, worker, docs). Atlas controls: search box sets the focus; "steps from" depth 1/2/3/all (default 1); link-group toggles; right-click / long-press → hide node or show only it and its neighbours; "Hidden: n · Show all"; factor lens off by default with ×, drawing only links between shown nodes; depth / hidden types / hidden nodes / lens in the URL; phone layout (map first, filters and details as bottom sheets); fixed Cytoscape's stale click offset after the view chooser closes.
 - Independent Claude re-reading of 256 family abstracts (96.1% agreement, 274 new supporting sources); 42 Claude outreach drafts; `/method` counts both readers (vibrant-babbage).
 - Web: seven-factor view. Disease fingerprint (7 rows) on atlas and /d/ pages (plain in Simple "Learn more", open in Research/Industry); 7-segment factor bars with the strongest factors in words on closest diseases (atlas) and most similar diseases (/d/); "Seven factors side by side" on /compare; atlas factor lens (Off / All / each factor, width = similarity) and a Research weights panel (tested defaults symptoms 1, genes 0.5, pathway 0.5); "The seven factors" on /method (commit 912f426).
 - README and video script refreshed; Research-view enrollment excludes multi-disease registries; relutrigine and NBI-921352 directions; obsolete-MONDO join in the mechanism layer (vibrant-babbage).

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { MechanismsView } from "@/components/mechanisms/MechanismsView";
 
-export const metadata: Metadata = { title: "Mechanistic similarity · Tasukeru" };
+export const metadata: Metadata = { title: "Mechanistic similarity · Phenotech" };
 
 export default function Page() {
   return <MechanismsView />;

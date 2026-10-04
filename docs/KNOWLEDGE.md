@@ -1,4 +1,4 @@
-# Tasukeru: project knowledge
+# Phenotech: project knowledge
 
 The non-obvious things we learned, the decisions we made and why, and the traps. Read this together with `CLAUDE.md` (how to run, status) and `docs/TODO.md` (what's next). The layer reports in `docs/agent-reports/` hold the details.
 
@@ -7,7 +7,7 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 - **The challenge:** Hack-Nation Challenge 05, "AI Atlas for the World's Rare Diseases" (OpenAI × Buffalo Initiative).
   - Judging covers graph quality, evidence integrity, patient progress, 10× impact and product craft.
   - Prize-track eligibility requires using OpenAI models or tools.
-- **The name:** Tasukeru (助ける, "to help"). The internal ids, routes and Vercel project still say rare-disease-atlas.
+- **The name:** Phenotech ("Phenotech: a rare-disease atlas"). Renamed Tasukeru → Phenotech on 2026-10-04 (before that, "Rare Disease Atlas"). The internal ids, routes, env vars, file names (`rare-atlas-worker.mjs`) and Vercel project still say rare-disease-atlas.
 - **Four views:** Simple is the default, for families; then Detailed (patient-group leaders), Research and Industry. The internal ids are family, leader, researcher and biotech, and `?as=` overrides the view. Persona names (Devon, Maria and so on) are deliberately not shown.
 - **Depth plus breadth:**
   - 45 diseases are curated in depth with verbatim quotes.
@@ -50,6 +50,9 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 - **Nested cross-validation:** always tune weights with nested CV grouped by therapy class. Non-nested tuning inflated MRR by about 0.03–0.05.
 
 ## Data traps
+
+- **Cytoscape click offset:** Cytoscape caches the container's page offset and refreshes it only on window resize/scroll. When content above the map changes height (the first-visit view chooser closing), clicks and hovers land on the wrong spot. `GraphCanvas` calls `cy.resize()` in a capture-phase pointer listener whenever the container has moved. Keep that if you touch the atlas layout.
+- **Atlas URL state:** `/atlas?focus=<id>&depth=1|2|3|all&hide=<link groups>&hn=<node ids>&lens=<factor|all>&types=<node types>`. Computed factor links never widen the hop neighbourhood; the lens only draws links between nodes already shown.
 
 - **Seven-factor view (`web/lib/factors.ts`):** atlas pairs take gene, pathway, tissue, mutation, consequence (mechsim `fate`) and structure from `mechsim.json` pair scores. Symptoms are recomputed as the IC-weighted Jaccard of curated HPO symptoms in the graph, because mechsim's `symptom_cosine` is a tissue-anchor profile (VAMP2 vs STXBP1 scores 1.0 there just because both point to the brain). Non-atlas pairs use per-gene data from `web/factors` shards (HPA tissues, PANTHER/Pfam/InterPro, ClinVar spectrum) and `web/mechclass.json` (G2P/ClinGen class + direction), with symptoms/genes/pathway from `global/similar`. The atlas page is desktop-only: its fixed 3-column grid scrolls sideways at 390 px (pre-existing).
 
@@ -100,7 +103,7 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
   - **Env vars:**
     - KV (Upstash);
     - `SESSION_SECRET`, `ADMIN_TOKEN`, `CRON_SECRET`;
-    - `EMAIL_FROM="Tasukeru <no-reply@mehro.ch>"`;
+    - `EMAIL_FROM="Phenotech <no-reply@mehro.ch>"`;
     - `SMTP_HOST=mail.infomaniak.com`, `SMTP_PORT=587`, `SMTP_USER`, `SMTP_PASS` (secret).
   - A new env var only takes effect after a redeploy.
 - **Local:**

@@ -1,8 +1,8 @@
-# Tasukeru: an AI atlas for the world's rare diseases
+# Phenotech: an AI atlas for the world's rare diseases
 
 **An evidence-backed map that connects rare diseases by mechanism and symptoms, so a family or patient group facing an untreated disease can find who shares its biology, what already exists, and what to do together.**
 
-Tasukeru (助ける) means "to help" or "to rescue" in Japanese.
+Phenotech is a rare-disease atlas: phenotypes (symptoms) and the technology to connect them across genes, pathways and tissues.
 
 Hack-Nation 7th Global AI Hackathon · Challenge 05: AI Atlas for the World's Rare Diseases (OpenAI × Buffalo Initiative)
 

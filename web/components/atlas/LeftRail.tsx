@@ -30,6 +30,9 @@ export function LeftRail({
   lens = null,
   onLens,
   weightsFor,
+  linkGroups = [],
+  hiddenGroups,
+  onToggleGroup,
 }: {
   idx: GraphIndex;
   hiddenClusters: Set<string>;
@@ -49,6 +52,10 @@ export function LeftRail({
   onLens?: (l: FactorKey | "all" | null) => void;
   /** Research view: show the weights panel for this disease (undefined = hidden) */
   weightsFor?: string | null;
+  /** link groups the user can hide */
+  linkGroups?: { id: string; label: string; types: string[] }[];
+  hiddenGroups?: Set<string>;
+  onToggleGroup?: (id: string) => void;
 }) {
   const mechsimCount = idx.graph.edges.filter((e) => MECHSIM_RELATIONS.includes(e.type)).length;
   const lensCounts: Record<string, number> = Object.fromEntries(FACTORS.map((f) => [f.key, idx.graph.edges.filter((e) => e.type === f.edge).length]));
@@ -205,6 +212,29 @@ export function LeftRail({
         </p>
       </section>
 
+      {onToggleGroup && linkGroups.length > 0 && (
+        <section aria-labelledby="links-h" className="mt-7">
+          <h2 id="links-h" className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-3">
+            Links to show
+          </h2>
+          <ul className="mt-2 space-y-0.5">
+            {linkGroups.map((g) => {
+              const n = idx.graph.edges.filter((e) => g.types.includes(e.type)).length;
+              if (!n) return null;
+              return (
+                <li key={g.id}>
+                  <label className="flex cursor-pointer items-center gap-2 rounded px-1 py-1 text-sm text-ink-2 hover:bg-subtle">
+                    <input type="checkbox" checked={!hiddenGroups?.has(g.id)} onChange={() => onToggleGroup(g.id)} className="accent-[#1f5a96]" />
+                    <span className="flex-1">{g.label}</span>
+                    <span className="text-[11px] tabular-nums text-ink-3">{n}</span>
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+          <p className="mt-1 text-xs text-ink-3">Hidden links also stop the neighbourhood from growing through them. Right-click or long-press a node to hide it.</p>
+        </section>
+      )}
       {weightsFor !== undefined && <WeightsPanel idx={idx} diseaseId={weightsFor} />}
 
       <section aria-labelledby="lines-h" className="mt-7">

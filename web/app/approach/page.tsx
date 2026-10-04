@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ApproachView } from "@/components/approach/ApproachView";
 
-export const metadata: Metadata = { title: "Therapy approaches · Tasukeru" };
+export const metadata: Metadata = { title: "Therapy approaches · Phenotech" };
 
 export default function Page() {
   return (

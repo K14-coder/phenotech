@@ -1,6 +1,6 @@
-# Rare Disease Atlas: handoff for collaborators and their Claude
+# Phenotech: handoff for collaborators and their Claude
 
-This is the project for Hack-Nation Challenge 05, "AI Atlas for the World's Rare Diseases". The README covers the product; this file covers where things stand and how to keep working.
+This is Phenotech ("Phenotech: a rare-disease atlas"; named Tasukeru until 2026-10-04), the project for Hack-Nation Challenge 05, "AI Atlas for the World's Rare Diseases". Internal ids, routes, env vars and the Vercel project keep the old rare-disease-atlas names. The README covers the product; this file covers where things stand and how to keep working.
 
 **Start here:** read this file, then `docs/KNOWLEDGE.md` (decisions, benchmark lessons, traps) and `docs/TODO.md` (the prioritized to-do list; keep it updated).
 

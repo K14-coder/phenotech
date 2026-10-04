@@ -7,13 +7,13 @@ The brief asks for **a team video** and **a 1-minute walkthrough** that follows 
 - Click **"Take a tour: a patient group (VAMP2)"** on the home page (`lib/tours.ts`, id `maria`), so every click lands where the narration says. Its 8 steps match the rows below one to one.
 - Use the precomputed AI proposal (the tour's step 7 shows it), so nothing waits on a live call.
 - Numbers marked ⟨…⟩ were read from `/method` on 2026-10-04. Re-check them on the live page right before recording; they are counted live from the data.
-- Say "Tasukeru" (ta-sú-ke-ru, Japanese for "to help"). Don't say "Maria" or other persona names on screen: the site doesn't show them.
+- Say "Phenotech" (FEE-no-tech). Don't say "Maria" or other persona names on screen: the site doesn't show them.
 
 ## 1-minute walkthrough: "Take a tour: a patient group (VAMP2)" (about 150 spoken words)
 
 | Time | Tour step | Screen | Narration |
 |---|---|---|---|
-| 0:00 | 1. Start with the gene name | Home, typing "VAMP2" | A small patient group for VAMP2 (a rare disorder with no treatment and only a handful of known families) opens Tasukeru and types the gene name. |
+| 0:00 | 1. Start with the gene name | Home, typing "VAMP2" | A small patient group for VAMP2 (a rare disorder with no treatment and only a handful of known families) opens Phenotech and types the gene name. |
 | 0:07 | 2. What goes wrong | Disease page, mechanism chips | The page explains in plain words what goes wrong: VAMP2 breaks the machinery nerve cells use to release their signals. Every chip opens its source. |
 | 0:15 | 3. The closest disease | Closest disease: STXBP1 | Organised by mechanism instead of by name, the closest neighbour is STXBP1, a much larger community. |
 | 0:21 | 4. Every link shows its evidence | Limiting evidence open | Every link shows its quotes and its strength, and what limits or contradicts it is listed too, never hidden. |
@@ -24,7 +24,7 @@ The brief asks for **a team video** and **a 1-minute walkthrough** that follows 
 
 **Alternative ending (honest gap):** cut from step 6 to the second tour, "Take a tour: a family with no patient group (SYT2)", and use this narration instead:
 
-> "A family with a SYT2 diagnosis finds no patient group. Tasukeru says so plainly, points to the registry that already accepts them, turns treatment evidence into questions for their doctor, and helps them start the missing community."
+> "A family with a SYT2 diagnosis finds no patient group. Phenotech says so plainly, points to the registry that already accepts them, turns treatment evidence into questions for their doctor, and helps them start the missing community."
 
 ## Team video (about 2 minutes)
 
@@ -32,7 +32,7 @@ The brief asks for **a team video** and **a 1-minute walkthrough** that follows 
 2. **The problem (20 s).**
    - About 10,000 rare diseases, and fewer than 5% have an approved treatment.
    - Families become research organisers overnight, but the knowledge they need is scattered, and disease names hide shared biology.
-3. **The insight (15 s).** Different genes can break the same machine. Tasukeru connects diseases by mechanism and distinctive symptoms. We went deep where we could check every claim, and broad everywhere else.
+3. **The insight (15 s).** Different genes can break the same machine. Phenotech connects diseases by mechanism and distinctive symptoms. We went deep where we could check every claim, and broad everywhere else.
 4. **What we built (35 s).**
    - **Depth:** ⟨45⟩ diseases in 4 mechanism families, curated with verbatim, source-checked quotes: ⟨1,412⟩ nodes and ⟨2,977⟩ links.
    - **Breadth:** ⟨11,456⟩ diseases searchable, ⟨10,309⟩ with sourced automated data.
@@ -49,5 +49,5 @@ The brief asks for **a team video** and **a 1-minute walkthrough** that follows 
    - STXBP1 families waited about 13 years from gene discovery to a first trial.
    - SLC6A1 families got there in about 6, by joining STXBP1's trial on a shared mechanism.
    - VAMP2 families are 7.5 years in with no trial, and VAMP2 shares that machinery.
-   - Tasukeru makes those matches findable in minutes.
+   - Phenotech makes those matches findable in minutes.
 7. **Next (10 s).** Test it with real patient groups, starting with VAMP2, get the biochemist review finished, and grow the deep tier one mechanism family at a time.

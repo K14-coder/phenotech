@@ -1148,3 +1148,28 @@ The atlas now shows, everywhere, that it is built on seven factors, always in th
   - All seven rows render in the fixed order. The bars appear on 6 closest diseases (STXBP1) and 10 similar diseases (cystic fibrosis).
   - The atlas at 390 px scrolls sideways; this is the pre-existing fixed desktop grid.
   - `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Rename to Phenotech; atlas controls
+
+- **Rename (commit a7f6a4f):** every user-facing "Tasukeru" in `web/` is now Phenotech.
+  - Covered: titles and metadata/OG ("Phenotech: a rare-disease atlas"), the header, the chooser, page copy, `/method` (the 助ける line is removed), `/privacy`, and all emails (subjects "Phenotech: …", header, footer "With care, the Phenotech team", sender fallback "Phenotech <…>").
+  - The email logo PNG is regenerated with the Phenotech wordmark. The icons are the unchanged mark.
+  - Worker banner and user agent `phenotech-worker/…`; live-alerts user agent `phenotech/0.1`; NCBI tool `phenotech`.
+  - Repo docs: README, CLAUDE.md, KNOWLEDGE (with a dated note on the name change), video script and TODO. Ids, routes, env vars and file names are unchanged.
+- **Atlas controls** (`AtlasView`, `LeftRail`, `GraphCanvas`):
+  - a search box on the map sets the focus;
+  - "Steps from <focus>" 1 / 2 / 3 / all (default 1, previously a fixed 2);
+  - "Links to show": eleven link groups (gene causes disease, mechanism, symptoms, treatments, studies, organisations, researchers and funding, similar symptoms, shares mechanism, hypotheses, factor-lens links). A hidden group also stops the neighbourhood growing through it;
+  - right-click or long-press on a node opens "Show only this and its neighbours" or "Hide this node", with a "Hidden: n · Show all" chip;
+  - the factor lens is off by default, with a "×" chip. Computed factor links never widen the neighbourhood, so the lens draws only links between shown nodes;
+  - all choices live in the URL (`depth`, `hide`, `hn`, `lens`, `types`). Toggles only switch classes and never re-run the layout.
+- **Phone layout:** at 390 px the map comes first, with "Filters" and "Details" bottom sheets. There is no more sideways scroll.
+- **Fix:** clicks and hovers on the map landed in the wrong place after the view chooser closed, because Cytoscape caches its container offset. It is now refreshed before each pointer event.
+- **Checks** on STXBP1:
+  - 77 / 247 / 551 nodes shown at depths 1 / 2 / all;
+  - depth 2 without symptom links shows 189;
+  - the lens chip and its "×" work;
+  - right-click → hide works, and "Show all" restores;
+  - a shared URL restores depth, hidden links and lens;
+  - the phone filter sheet opens;
+  - no console errors at 1440 or 390 px, no sideways scroll; `tsc` and `eslint` are clean; one `npm run build` passed.
