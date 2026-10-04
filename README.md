@@ -231,6 +231,27 @@ The global layers (`pipeline/derive/global_index.py`, `mechanism_index.py`, `pip
 - Researcher records contain professional, public information only.
 - The atlas does not give medical advice. Treatment evidence is shown as published findings to discuss with a clinician. The DNA checker is not a diagnostic test.
 
+## Where this could go with more data and tokens
+
+Everything in this atlas was built within the token credits we received during the competition and one personal ChatGPT Plus plan. Those limits shaped what we could do:
+
+- **The OpenAI re-reading covered 78 abstracts.** That is every biology paper for the SNAREopathies, but only 16 of 587 community papers, before the plan's usage cap stopped us.
+- **The deep, quote-verified tier stops at 45 diseases in 4 families.** The other 11,000+ diseases have automated breadth data only.
+- **We read abstracts, not full texts.** Many mechanisms, phenotypes and trial details only appear in the full paper.
+- **Precomputed AI drafts exist only for selected diseases and pairs.** The live site can't generate new ones on demand.
+
+The pipelines are built to scale. Extraction, quote verification, reconciliation and the cross-check are cached and resumable, and the research queue already lets volunteers add their own model runs. With more data access and more OpenAI tokens, we could:
+
+- re-read every cited paper, and then the wider literature, for every disease;
+- grow the deep tier one mechanism family at a time (mitochondrial disease, ciliopathies, glycosylation disorders, leukodystrophies and more);
+- move from abstracts to full texts;
+- draft proposals, outreach and comparisons for every disease and every closely related pair;
+- keep the whole atlas current as new papers, trials and patient groups appear.
+
+More curated mechanism links are also what our benchmark says improves the predictions most. Better weights didn't help; more evidence did.
+
+We truly believe in this mission: no family should have to find, on their own, the people who share their disease's biology. We would love to see this through, and we welcome token credits, data access or any other support that helps us get there.
+
 ## Acknowledgements
 
 We thank Woan-Yu Lin (RTW Foundation, Rare Disease Advising Program) and Joe Katakowski for conversations that gave us valuable insight while we built the atlas.
