@@ -105,6 +105,9 @@ export interface Available {
   dismech: boolean;
   dismech_snippets: boolean;
   mechanism: boolean;
+  groups?: boolean;
+  sequences?: string[];
+  variant_positions?: boolean;
 }
 
 async function fetchJson<T>(url: string): Promise<T> {
@@ -126,7 +129,7 @@ export async function loadPopulationFile<T>(name: "prevalence.json" | "readiness
 }
 
 let availablePromise: Promise<Available> | null = null;
-function loadAvailableOnce() {
+export function loadAvailableOnce() {
   availablePromise ??= loadAvailable();
   return availablePromise;
 }

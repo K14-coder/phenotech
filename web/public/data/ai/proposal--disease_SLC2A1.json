@@ -1,0 +1,146 @@
+{
+  "kind": "proposal",
+  "id": "disease:SLC2A1",
+  "title": "A first collaboration conversation with STXBP1 Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "On behalf of the Glut1 Deficiency Foundation, I invite STXBP1 Foundation to explore a careful, family-focused collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Both disorders are linked to haploinsufficiency—one working gene copy is not enough—but the STXBP1 explanation is contested because it does not fully explain differences between patients.",
+          "edge_ids": [
+            "disease:SLC2A1|driven_by|mech:haploinsufficiency",
+            "disease:STXBP1|driven_by|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "The atlas identifies shared developmental delay, seizures and intellectual disability; the STXBP1 symptom links remain unverified by human review.",
+          "edge_ids": [
+            "disease:STXBP1|has_phenotype|phenotype:HP:0001263",
+            "disease:STXBP1|has_phenotype|phenotype:HP:0001250",
+            "disease:STXBP1|has_phenotype|phenotype:HP:0001249"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Our Foundation’s natural history study includes people with SLC2A1-related disorders, while STARR (STXBP1 Clinical Trial Ready) follows people with STXBP1-related disorders over time.",
+          "edge_ids": [
+            "asset:glut1-deficiency-natural-history-study|covers|disease:SLC2A1",
+            "asset:stxbp1-starr-natural-history-study|covers|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "An epilepsy-dyskinesia survey study and the Registry and Natural History of Epilepsy-Dyskinesia Syndromes also list SLC2A1 and STXBP1.",
+          "edge_ids": [
+            "study:NCT06585605|studies|disease:SLC2A1",
+            "study:NCT06967727|studies|disease:SLC2A1"
+          ]
+        },
+        {
+          "text": "Could we compare study approaches before considering any shared data collection?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please review both supporting and limiting evidence for the contested STXBP1 mechanism; transferring study designs across disorders remains a hypothesis.",
+          "edge_ids": [
+            "disease:SLC2A1|driven_by|mech:haploinsufficiency",
+            "disease:STXBP1|driven_by|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "SLC2A1 participates in moving glucose across cell membranes, so we should not assume the disorders have identical biology.",
+          "edge_ids": [
+            "gene:SLC2A1|participates_in|mech:glucose-transmembrane-transport"
+          ]
+        },
+        {
+          "text": "Please check whether paroxysmal lethargy, increased sodium inside cells and spontaneous hemolytic crises also occur in STXBP1-related disorders, rather than treating missing records as proof of absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "Before proceeding, please also check for additional SLC2A1 patient organisations, registries, trials and research groups.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send STXBP1 Foundation one focused enquiry asking whether STARR could include SLC2A1-related disorders and what eligibility review would be needed.",
+          "edge_ids": [
+            "asset:stxbp1-starr-natural-history-study|covers|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "What patient organisations, registries, trials and research groups exist for SLC2A1-related disorders beyond those verified here?",
+          "edge_ids": []
+        },
+        {
+          "text": "We propose checking patient-organisation partner lists, Citizen Health, RARE-X and Simons Searchlight intake lists, trial registries and published research groups directly.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear STXBP1 Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we explore a small natural history collaboration?",
+          "edge_ids": []
+        },
+        {
+          "text": "Our Foundation has a natural history study for SLC2A1-related disorders.",
+          "edge_ids": [
+            "asset:glut1-deficiency-natural-history-study|covers|disease:SLC2A1"
+          ]
+        },
+        {
+          "text": "Would you advise whether STARR could consider including this community?",
+          "edge_ids": [
+            "asset:stxbp1-starr-natural-history-study|covers|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "We would welcome a careful review of similarities and differences before proceeding.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Glut1 Deficiency Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:20:38.044Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

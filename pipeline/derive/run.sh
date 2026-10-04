@@ -89,6 +89,11 @@ else
   python3 dismech.py   # needs pyyaml
 fi
 
+echo "== extra: disease groups (MONDO is_a), variant genomic positions, reference sequences + synthetic examples"
+python3 groups.py
+python3 variant_positions.py
+python3 sequences.py ${REFRESH:+--refresh}
+
 cd ../..
 echo
 echo "== sizes (neighbour shards: $(du -sh data/derived/global/neighbours 2>/dev/null | cut -f1); mechanism shards: $(du -sh data/derived/global/mechanism 2>/dev/null | cut -f1); 64 files each)"

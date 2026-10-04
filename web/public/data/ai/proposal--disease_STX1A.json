@@ -1,0 +1,156 @@
+{
+  "kind": "proposal",
+  "id": "disease:STX1A",
+  "title": "A shared first step for STX1A families and VAMP2.org / Raging Raymond Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "We hope to connect our STX1A families with your VAMP2 community around shared biology: published work links both disorders to reduced protein function.",
+          "edge_ids": [
+            "org:vamp2-org|serves|disease:VAMP2",
+            "disease:STX1A|driven_by|mech:loss-of-function",
+            "disease:VAMP2|driven_by|mech:loss-of-function",
+            "disease:VAMP2|shares_mechanism|disease:STX1A"
+          ]
+        },
+        {
+          "text": "Intellectual disability and autistic features are reported in both communities.",
+          "edge_ids": [
+            "disease:STX1A|driven_by|mech:loss-of-function",
+            "disease:VAMP2|has_phenotype|phenotype:HP:0000729",
+            "disease:VAMP2|has_phenotype|phenotype:HP:0001249"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The MRC-funded UCL–Yale VAMP2 / SNAREopathy research project and Simons Searchlight offer starting points for discussing shared research approaches.",
+          "edge_ids": [
+            "asset:vamp2-mrc-ucl-yale-project|covers|disease:VAMP2",
+            "asset:simons-searchlight|covers|disease:VAMP2"
+          ]
+        },
+        {
+          "text": "RARE-X and CMDIR also include SNAP25-related disorders; extending resources to STX1A remains a possibility to check, not a confirmed offer.",
+          "edge_ids": [
+            "asset:rare-x-data-collection|covers|disease:SNAP25",
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:SNAP25"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Confirm platform acceptance and adaptations: VAMP2 resources list excessive protein activity, unstable or misfolded proteins, and two unspecified mechanisms not shown for STX1A.",
+          "edge_ids": [
+            "asset:vamp2-mrc-ucl-yale-project|covers|disease:VAMP2",
+            "asset:simons-searchlight|covers|disease:VAMP2",
+            "study:NCT01238250|studies|disease:VAMP2",
+            "study:NCT06585605|studies|disease:VAMP2",
+            "study:NCT06967727|studies|disease:VAMP2"
+          ]
+        },
+        {
+          "text": "SNAP25 resources list altered proteins blocking working proteins, excessive activity and another unspecified mechanism; autistic behavior is not recorded there.",
+          "edge_ids": [
+            "asset:rare-x-data-collection|covers|disease:SNAP25",
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:SNAP25",
+            "study:NCT02562066|studies|disease:SNAP25"
+          ]
+        },
+        {
+          "text": "Check eligibility directly: Searchlight’s SNAP25/VAMP2 coverage comes from its website, not the ClinicalTrials.gov condition list; both epilepsy-dyskinesia studies list STXBP1 and VAMP2.",
+          "edge_ids": [
+            "study:NCT01238250|studies|disease:VAMP2",
+            "study:NCT06585605|studies|disease:VAMP2",
+            "study:NCT06967727|studies|disease:VAMP2"
+          ]
+        },
+        {
+          "text": "The congenital myasthenic syndrome trial includes SYT2 and SNAP25B deficiency but is not directly applicable; any treatment evidence belongs in discussion with a neurologist.",
+          "edge_ids": [
+            "study:NCT02562066|studies|disease:SNAP25"
+          ]
+        },
+        {
+          "text": "Shared loss-of-function claims for SNAP25 and STX1B are contested; the STX1A/VAMP2 one-working-copy explanation is atlas-inferred, unverified and below 0.5 confidence.",
+          "edge_ids": [
+            "disease:STX1B|driven_by|mech:loss-of-function",
+            "disease:SNAP25|driven_by|mech:loss-of-function",
+            "vg:STX1A:splice|has_effect|mech:haploinsufficiency",
+            "vg:VAMP2:splice|has_effect|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "Please help check for an existing STX1A group and registry before starting a family network, and consider inviting Konrad Platzer, who works on STX1A and SNAP25, to review the plan.",
+          "edge_ids": [
+            "researcher:konrad-platzer--university-of-leipzig|works_on|disease:SNAP25",
+            "researcher:konrad-platzer--university-of-leipzig|works_on|disease:STX1A"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let us send one joint inquiry to SLC6A1 Connect asking whether Simons Searchlight could include STX1A-related neurodevelopmental disorder.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Is there a dedicated STX1A patient organization, an enrolling registry or natural history study, an enrolling interventional trial, or a documented animal or cell model with verified access in the atlas?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear VAMP2.org / Raging Raymond Foundation,",
+          "edge_ids": []
+        },
+        {
+          "text": "I’m writing on behalf of families affected by STX1A-related neurodevelopmental disorder.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our communities share published links to reduced protein function.",
+          "edge_ids": [
+            "disease:STX1A|driven_by|mech:loss-of-function",
+            "disease:VAMP2|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "Would you join our inquiry about STX1A inclusion in Simons Searchlight?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome your guidance before taking anything further.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of families affected by STX1A-related neurodevelopmental disorder",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:22:52.082Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

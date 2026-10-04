@@ -1,0 +1,152 @@
+{
+  "kind": "proposal",
+  "id": "disease:SHOC2",
+  "title": "A shared registry conversation for SHOC2 and RAF1 families",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "As a RASopathies Network leader, I invite Noonan Syndrome Association (UK) to explore collaboration for families affected by SHOC2-related disorders (Mazzanti syndrome).",
+          "edge_ids": []
+        },
+        {
+          "text": "The atlas infers your RAF1 community connection; your website describes Noonan syndrome support without naming RAF1.",
+          "edge_ids": [
+            "org:noonan-syndrome-association-uk|serves|disease:RAF1"
+          ]
+        },
+        {
+          "text": "SHOC2 and some RAF1 changes make proteins overactive, and both genes participate in MAPK cell signalling.",
+          "edge_ids": [
+            "disease:SHOC2|driven_by|mech:gain-of-function",
+            "disease:RAF1|driven_by|mech:gain-of-function",
+            "gene:SHOC2|participates_in|mech:mapk-cascade",
+            "gene:RAF1|participates_in|mech:mapk-cascade"
+          ]
+        },
+        {
+          "text": "Their symptom similarity is atlas-inferred, with confidence 0.43—below 0.5—not proof that families have identical needs.",
+          "edge_ids": [
+            "disease:RAF1|similar_phenotype|disease:SHOC2"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "PATRAS (EURAS) and our contact registry are possible starting points, although their SHOC2 coverage is atlas-inferred and the contact registry page describes it as being built.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:SHOC2",
+            "asset:rasopathies-network-contact-registry|covers|disease:SHOC2"
+          ]
+        },
+        {
+          "text": "The Clinical, Genetic, and Epidemiologic Study of Children and Adults With RASopathies explicitly includes SHOC2; its connection to RAS-CM is atlas-inferred.",
+          "edge_ids": [
+            "study:NCT04888936|studies|disease:SHOC2",
+            "study:NCT07344480|studies|disease:SHOC2"
+          ]
+        },
+        {
+          "text": "The RASopathy Biorepository is another potential resource to adapt, with RAF1 coverage inferred by the atlas.",
+          "edge_ids": [
+            "study:NCT04395495|studies|disease:RAF1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please help check whether loose anagen hair, myelofibrosis and duplicated collecting system occur in RAF1 families rather than assuming missing records mean absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "For adaptable resources, check loose anagen hair, myelofibrosis and the five additional, unspecified symptom gaps flagged in the input.",
+          "edge_ids": [
+            "study:NCT04395495|studies|disease:RAF1",
+            "study:NCT01556568|studies|disease:RAF1",
+            "study:NCT06555237|studies|disease:RAF1",
+            "study:NCT07817186|studies|disease:RAF1"
+          ]
+        },
+        {
+          "text": "Confirm study eligibility, any required eligibility changes, and each variant’s effect before extending participation.",
+          "edge_ids": []
+        },
+        {
+          "text": "RAF1 variants can increase or impair protein activity, so a single overactivity label is insufficient.",
+          "edge_ids": [
+            "disease:RAF1|driven_by|mech:gain-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let us hold one short joint review of a draft PATRAS invitation for RAF1 families, making any offer conditional on confirmation of registry eligibility.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Is any interventional study open specifically to SHOC2-, CBL- or HRAS-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants are activating, catalytically impaired—working less effectively—or loss of function?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Noonan Syndrome Association (UK),",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we explore a small registry collaboration for SHOC2 and RAF1 families?",
+          "edge_ids": []
+        },
+        {
+          "text": "PATRAS offers a starting point, but its SHOC2 connection is atlas-inferred.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:SHOC2"
+          ]
+        },
+        {
+          "text": "Would you review a draft family invitation with us this month?",
+          "edge_ids": []
+        },
+        {
+          "text": "Let us confirm eligibility and symptom coverage before sharing it.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this invitation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of RASopathies Network (RASopathiesNet USA / UK)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:19:55.300Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

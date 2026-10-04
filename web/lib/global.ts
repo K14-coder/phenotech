@@ -302,3 +302,42 @@ export interface NeighbourShard {
 export function fillTemplate(tpl: string, vars: Record<string, string>): string {
   return tpl.replace(/\{(\w+)\}/g, (_, k: string) => vars[k] ?? "");
 }
+
+// ---------- "did you mean" (when nothing matched) ----------
+
+function trigrams(t: string): Set<string> {
+  const s = `  ${t} `;
+  const out = new Set<string>();
+  for (let i = 0; i + 3 <= s.length; i++) out.add(s.slice(i, i + 3));
+  return out;
+}
+
+/** Closest names by trigram similarity (Dice), for misspellings like "huntingdon" or "duchene". */
+export function suggestGlobal(gi: GlobalIndex, query: string, limit = 4): { row: GlobalRow; matched: string; score: number }[] {
+  const q = normalizeTerm(query);
+  if (q.length < 3) return [];
+  const qt = trigrams(q);
+  const best: { row: GlobalRow; matched: string; score: number }[] = [];
+  for (let i = 0; i < gi.rows.length; i++) {
+    let top = 0;
+    let matched = "";
+    for (const k of gi.keys[i]) {
+      if (k.kind === "id") continue;
+      // compare against the same number of leading words, so long names are not penalised
+      const t = k.t.split(" ").slice(0, Math.max(1, q.split(" ").length)).join(" ");
+      if (Math.abs(t.length - q.length) > Math.max(4, q.length)) continue;
+      const tt = trigrams(t);
+      let inter = 0;
+      for (const g of qt) if (tt.has(g)) inter++;
+      const dice = (2 * inter) / (qt.size + tt.size);
+      if (dice > top) {
+        top = dice;
+        matched = k.raw;
+      }
+    }
+    if (top >= (q.includes(" ") ? 0.6 : 0.45)) best.push({ row: gi.rows[i], matched, score: top + gi.rows[i].n / 10000 });
+  }
+  best.sort((a, b) => b.score - a.score);
+  const seen = new Set<string>();
+  return best.filter((b) => !seen.has(b.row.id) && (seen.add(b.row.id), true)).slice(0, limit);
+}

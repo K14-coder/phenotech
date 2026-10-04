@@ -1,0 +1,139 @@
+{
+  "kind": "proposal",
+  "id": "disease:IDUA",
+  "title": "A small shared step for MPS I families: proposal to MPS Society (UK)",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At Canadian MPS Society, we share your commitment to families affected by IDUA-related MPS I: Hurler, Hurler-Scheie and Scheie.",
+          "edge_ids": [
+            "org:canadian-mps-society|serves|disease:IDUA",
+            "org:mps-society-uk|serves|disease:IDUA"
+          ]
+        },
+        {
+          "text": "MPS I and MPS II (Hunter syndrome) both involve missing enzyme activity and a build-up of substances inside cells.",
+          "edge_ids": [
+            "disease:IDUA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:IDUA|driven_by|mech:lysosomal-storage",
+            "disease:IDS|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:IDS|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptoms, but that connection has confidence 0.49, below 0.5; sharing research approaches is a possibility to explore, not a proven fit.",
+          "edge_ids": [
+            "disease:IDUA|similar_phenotype|disease:IDS"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The Canadian MPS Registry, Mucopolysaccharidosis I (MPS I) Registry and Registry of Patients Diagnosed With Lysosomal Storage Diseases are listed as resources for MPS I.",
+          "edge_ids": [
+            "asset:canadian-mps-registry|covers|disease:IDUA",
+            "asset:nct00144794-mucopolysaccharidosis-i-mps-i-registry|covers|disease:IDUA",
+            "asset:nct05619900-registry-of-patients-diagnosed-with-lysosomal-st|covers|disease:IDUA"
+          ]
+        },
+        {
+          "text": "The input marks these resources as reusable as-is because they cover this disease; we propose sharing information about them first, rather than assuming access to patient data.",
+          "edge_ids": [
+            "asset:canadian-mps-registry|covers|disease:IDUA",
+            "asset:nct00144794-mucopolysaccharidosis-i-mps-i-registry|covers|disease:IDUA",
+            "asset:nct05619900-registry-of-patients-diagnosed-with-lysosomal-st|covers|disease:IDUA"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please help confirm whether low tissue alpha-L-iduronidase activity and hand pain also occur in MPS II.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should also check underdevelopment of the rounded top of the thigh bone, and review all three features before extending comparisons to Gaucher disease or acid sphingomyelinase deficiency.",
+          "edge_ids": []
+        },
+        {
+          "text": "Please treat missing symptom records as questions, not proof that a feature is absent.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should verify study eligibility and permission to reuse resources before making any commitments.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send one focused inquiry to MPS Society (UK), asking whether Mucopolysaccharidosis Type II Natural History could include people with MPS I, with the symptom checks above attached.",
+          "edge_ids": [
+            "asset:nct03529786-mucopolysaccharidosis-type-ii-natural-history|covers|disease:IDS"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "No open questions are recorded yet.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear MPS Society (UK) team,",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome a small collaboration for MPS I families.",
+          "edge_ids": []
+        },
+        {
+          "text": "Your organization and ours both support this community.",
+          "edge_ids": [
+            "org:mps-society-uk|serves|disease:IDUA",
+            "org:canadian-mps-society|serves|disease:IDUA"
+          ]
+        },
+        {
+          "text": "Could you help us explore whether Mucopolysaccharidosis Type II Natural History could include MPS I?",
+          "edge_ids": [
+            "asset:nct03529786-mucopolysaccharidosis-type-ii-natural-history|covers|disease:IDS"
+          ]
+        },
+        {
+          "text": "We suggest starting with the eligibility and symptom checks, without assuming the study can expand.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this first conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Canadian MPS Society",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:11:54.338Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

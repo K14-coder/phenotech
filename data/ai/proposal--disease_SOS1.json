@@ -1,0 +1,139 @@
+{
+  "kind": "proposal",
+  "id": "disease:SOS1",
+  "title": "A shared registry step for SOS1 families: proposal to Noonan Syndrome Association (UK)",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "Our RASopathies Network supports SOS1 families; the atlas infers your SOS1 connection from your Noonan syndrome support, rather than an explicit gene listing.",
+          "edge_ids": [
+            "org:rasopathies-network|serves|disease:SOS1",
+            "org:noonan-syndrome-association-uk|serves|disease:SOS1"
+          ]
+        },
+        {
+          "text": "SOS1-related Noonan syndrome and some RAF1-related disorders share overactive protein signalling, offering a reason to explore collaboration.",
+          "edge_ids": [
+            "disease:SOS1|driven_by|mech:gain-of-function",
+            "disease:RAF1|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "Their symptom similarity is atlas-inferred, with confidence 0.43—below 0.5—not proof that families have identical needs.",
+          "edge_ids": [
+            "disease:SOS1|similar_phenotype|disease:RAF1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "PATRAS, the PATient-based Registry for phenotyping and therapy evaluation in RASopathies (EURAS), and our contact registry are potential starting points; their SOS1 coverage is atlas-inferred.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:SOS1",
+            "asset:rasopathies-network-contact-registry|covers|disease:SOS1"
+          ]
+        },
+        {
+          "text": "The Clinical, Genetic, and Epidemiologic Study of Children and Adults With RASopathies explicitly lists SOS1.",
+          "edge_ids": [
+            "study:NCT04888936|studies|disease:SOS1"
+          ]
+        },
+        {
+          "text": "We propose sharing information about these resources, not assuming permission to share family records.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Before offering PATRAS to RAF1 families, let us confirm eligibility, registry stewardship and permission to circulate an invitation.",
+          "edge_ids": []
+        },
+        {
+          "text": "Please check whether a sunken lower breastbone and reduced clotting factor VIII and XI activity occur in RAF1 and KRAS families, rather than treating missing records as absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "For PTPN11, please check reduced factor VIII and XI activity and gum overgrowth.",
+          "edge_ids": []
+        },
+        {
+          "text": "We must distinguish individual genetic changes: published RAF1 evidence includes both increased and impaired enzyme activity.",
+          "edge_ids": [
+            "disease:RAF1|driven_by|mech:gain-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let us jointly draft one short PATRAS invitation for RAF1 families this month, holding circulation until eligibility and the checks above are confirmed.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Which individual genetic changes increase activity, impair enzyme activity or cause loss of function?",
+          "edge_ids": []
+        },
+        {
+          "text": "We propose asking for a variant-by-variant table linking ClinVar records to published functional measurements, using ClinGen RASopathy specifications.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Noonan Syndrome Association (UK),",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of our SOS1 community to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "PATRAS is a promising starting point, although its SOS1 connection is atlas-inferred.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:SOS1"
+          ]
+        },
+        {
+          "text": "Would you help draft an invitation for RAF1 families this month?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would hold circulation until eligibility and differences are checked.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this shared first step.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of RASopathies Network (RASopathiesNet USA / UK)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:22:05.474Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

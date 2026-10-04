@@ -1,0 +1,148 @@
+{
+  "kind": "proposal",
+  "id": "disease:CLN3",
+  "title": "BBDF and Noah's Hope: a careful first step for CLN3 and CLN2 families",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At Beyond Batten Disease Foundation (BBDF), we support CLN3 families, while Noah's Hope supports families affected by CLN2 disease.",
+          "edge_ids": [
+            "org:beyond-batten-disease-foundation|serves|disease:CLN3",
+            "org:noahs-hope|serves|disease:TPP1"
+          ]
+        },
+        {
+          "text": "Both diseases involve material building up in lysosomes, the cell's recycling compartments.",
+          "edge_ids": [
+            "disease:CLN3|driven_by|mech:lysosomal-storage",
+            "disease:TPP1|driven_by|mech:lysosomal-storage",
+            "disease:CLN3|shares_mechanism|disease:TPP1"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptoms, but that comparison has confidence 0.4, below 0.5, so it is a starting point rather than proof of matching needs.",
+          "edge_ids": [
+            "disease:CLN3|similar_phenotype|disease:TPP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The BDCRC longitudinal natural history study includes people with CLN3 disease and offers a starting point for discussing shared learning.",
+          "edge_ids": [
+            "asset:bdcrc-natural-history-study|covers|disease:CLN3"
+          ]
+        },
+        {
+          "text": "Other CLN3 resources include the International DEM-CHILD Database, the Natural History Study of Batten Disease, and the Batten Disease Clinical Research Consortium.",
+          "edge_ids": [
+            "asset:nct04613089-natural-history-and-longitudinal-clinical-assess|covers|disease:CLN3",
+            "asset:nct04644549-natural-history-study-of-batten-disease|covers|disease:CLN3",
+            "asset:bdcrc|covers|disease:CLN3"
+          ]
+        },
+        {
+          "text": "We propose exploring useful study information, not promising CLN2 eligibility or access to data.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please help confirm whether CLN2 also involves foveal atrophy, an undetectable dark-adapted electroretinogram, and central thinning of the retina's outer nuclear layer—the specific eye findings flagged for comparison.",
+          "edge_ids": [
+            "disease:CLN3|similar_phenotype|disease:TPP1"
+          ]
+        },
+        {
+          "text": "We should check what CLN3 does, what material accumulates, and whether the study can appropriately include CLN2 families before offering participation.",
+          "edge_ids": []
+        },
+        {
+          "text": "The atlas's predictions that certain CLN3 and TPP1 variants remove protein function are unverified, inferred connections with confidence 0.45, below 0.5.",
+          "edge_ids": [
+            "vg:CLN3:splice|has_effect|mech:loss-of-function",
+            "vg:TPP1:splice|has_effect|mech:loss-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let us jointly draft a short enquiry to the BDCRC study team asking whether and how study information or participation could be offered to CLN2 families.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "What does the CLN3 protein do, and what exactly is stored?",
+          "edge_ids": []
+        },
+        {
+          "text": "CLN3's recorded roles in protein breakdown and lysosome organization rely on inferred annotations.",
+          "edge_ids": [
+            "gene:CLN3|participates_in|mech:lysosomal-protein-catabolism",
+            "gene:CLN3|participates_in|mech:lysosome-organization"
+          ]
+        },
+        {
+          "text": "We propose a biochemist's review of recent structural and lipid studies before drawing stronger conclusions.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Noah's Hope team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I'm writing on behalf of BBDF to explore a modest collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "CLN3 and CLN2 share evidence of lysosomal storage.",
+          "edge_ids": [
+            "disease:CLN3|driven_by|mech:lysosomal-storage",
+            "disease:TPP1|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Could we draft an enquiry to the BDCRC study team together this month?",
+          "edge_ids": []
+        },
+        {
+          "text": "Let's check suitability before making any invitation to families.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Beyond Batten Disease Foundation (BBDF)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:05:30.319Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

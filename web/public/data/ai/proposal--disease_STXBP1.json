@@ -1,0 +1,132 @@
+{
+  "kind": "proposal",
+  "id": "disease:STXBP1",
+  "title": "A careful first collaboration for STXBP1 and VAMP2 families",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "To VAMP2.org / Raging Raymond Foundation: we would welcome exploring a collaboration from the perspective of STXBP1 families.",
+          "edge_ids": []
+        },
+        {
+          "text": "STXBP1 and VAMP2 help assemble the same machinery for communication between nerve cells, called the SNARE complex.",
+          "edge_ids": [
+            "gene:STXBP1|participates_in|mech:snare-complex-assembly",
+            "gene:VAMP2|participates_in|mech:snare-complex-assembly",
+            "disease:STXBP1|shares_mechanism|disease:VAMP2"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptoms, but its confidence is 0.46, below 0.5; this is a starting point for questions, not proof that families’ experiences are alike.",
+          "edge_ids": [
+            "disease:STXBP1|similar_phenotype|disease:VAMP2"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Could we start by exploring lessons from STARR (STXBP1 Clinical Trial Ready), rather than promising VAMP2 families access to the study?",
+          "edge_ids": []
+        },
+        {
+          "text": "We propose considering S-COMB outcome measures and the STXBP1 patient registry at University Hospital Heidelberg as further discussion topics, subject to permission and suitability checks.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please help check whether impaired horizontal smooth pursuit, infantile encephalopathy and cerebral hypomyelination occur in VAMP2-related disorders, rather than treating gaps in recording as confirmed differences.",
+          "edge_ids": []
+        },
+        {
+          "text": "Could Scott Demarest review the plan, with confirmation of his work across SLC6A1- and STXBP1-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "Before offering STARR to VAMP2 families, let us confirm eligibility, permissions and which study elements would need adaptation.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should also review the variant-function and chaperone questions below and check their relevance to this collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Mechanisms cannot be assumed identical: gain-of-function links are contested, and the VAMP2 ‘one working copy is not enough’ link is atlas-inferred, unverified and below 0.5 confidence.",
+          "edge_ids": [
+            "disease:STXBP1|driven_by|mech:gain-of-function",
+            "disease:VAMP2|driven_by|mech:gain-of-function",
+            "vg:VAMP2:splice|has_effect|mech:haploinsufficiency"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let us jointly send STARR’s team one short feasibility request asking whether and how its approach could be offered or adapted for VAMP2 families.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Which individual variants increase activity, impair catalytic activity or cause loss of function?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which variants in GBA1, HEXA, NPC1 and GAA might be amenable to a protein-folding helper, or chaperone, using GLA variant classification as a comparison?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear VAMP2.org / Raging Raymond Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome a small, careful collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our communities have a biological connection through SNARE complex assembly.",
+          "edge_ids": [
+            "gene:STXBP1|participates_in|mech:snare-complex-assembly",
+            "gene:VAMP2|participates_in|mech:snare-complex-assembly",
+            "disease:STXBP1|shares_mechanism|disease:VAMP2"
+          ]
+        },
+        {
+          "text": "Could we jointly ask STARR’s team about feasibility this month?",
+          "edge_ids": []
+        },
+        {
+          "text": "Let us clarify suitability before making any offer to families.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Asociación Síndrome STXBP1",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:46:52.551Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

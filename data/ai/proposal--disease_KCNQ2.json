@@ -1,0 +1,133 @@
+{
+  "kind": "proposal",
+  "id": "disease:KCNQ2",
+  "title": "A first collaboration conversation with FamilieSCN2A Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At KCNQ2 Cure Alliance, we support KCNQ2 families, while FamilieSCN2A Foundation supports families with SCN2A-related disorders.",
+          "edge_ids": [
+            "org:kcnq2-cure-alliance|serves|disease:KCNQ2",
+            "org:familiescn2a-foundation|serves|disease:SCN2A"
+          ]
+        },
+        {
+          "text": "Both genes help nerve cells fire, and published research describes variants that make their proteins do too much.",
+          "edge_ids": [
+            "gene:KCNQ2|participates_in|mech:action-potential",
+            "gene:SCN2A|participates_in|mech:action-potential",
+            "vg:KCNQ2:missense-gof|has_effect|mech:gain-of-function",
+            "disease:SCN2A|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptoms between our disorders, but this connection has confidence 0.48, below 0.5—not proof that families have the same needs.",
+          "edge_ids": [
+            "disease:SCN2A|similar_phenotype|disease:KCNQ2"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Citizen Health collects medical-record information about life with KCNQ2-related disorders, and the COMBINEDBrain Biorepository holds family-donated samples for KCNQ2 research.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:KCNQ2",
+            "asset:combinedbrain-biorepository|covers|disease:KCNQ2"
+          ]
+        },
+        {
+          "text": "The Registry and Natural History of Epilepsy-Dyskinesia Syndromes also includes KCNQ2 in its study criteria.",
+          "edge_ids": [
+            "study:NCT06967727|studies|disease:KCNQ2"
+          ]
+        },
+        {
+          "text": "We could begin by comparing these resources and discussing which approaches might be useful together, without assuming access or compatibility.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "The proposed biological bridge is loss of function—reduced protein activity—but the broad KCNQ2 connection is contested because other variants have different effects; we should read both sides in the evidence panel.",
+          "edge_ids": [
+            "disease:KCNQ2|driven_by|mech:loss-of-function",
+            "disease:SCN2A|driven_by|mech:loss-of-function",
+            "vg:KCNQ2:missense-gof|has_effect|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "Please help us check whether poor gross motor coordination, facial erythema and myokymia occur in SCN2A-related disorders, rather than treating missing records as absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "Before joining forces, we should also identify additional KCNQ2 organizations and research resources, and check individual variant effects.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send FamilieSCN2A Foundation one focused inquiry asking whether the Dragonfly patient registry could include KCNQ2-related disorders and what would need checking first.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "What patient organizations, registries, trials and research groups exist for KCNQ2-related disorders beyond those verified here?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants are activating, catalytically impaired—that is, less able to perform their chemical work—or loss of function?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear FamilieSCN2A Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am reaching out on behalf of KCNQ2 Cure Alliance to explore a modest collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we discuss whether the Dragonfly patient registry could include KCNQ2-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome your guidance on feasibility and the differences we should check first.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of KCNQ2 Cure Alliance",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:12:36.156Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

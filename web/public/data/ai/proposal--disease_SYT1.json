@@ -1,0 +1,161 @@
+{
+  "kind": "proposal",
+  "id": "disease:SYT1",
+  "title": "A first collaboration conversation with STXBP1 Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At The Baker-Gordon Syndrome Foundation, we support families affected by SYT1-related disorders (Baker-Gordon syndrome), while your foundation supports STXBP1 families.",
+          "edge_ids": [
+            "org:baker-gordon-syndrome-foundation|serves|disease:SYT1",
+            "org:stxbp1-foundation|serves|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "SYT1 and STXBP1 both help nerve cells release chemical messages by joining tiny storage sacs to the cell membrane.",
+          "edge_ids": [
+            "gene:SYT1|participates_in|mech:synaptic-vesicle-fusion",
+            "gene:STXBP1|participates_in|mech:synaptic-vesicle-fusion"
+          ]
+        },
+        {
+          "text": "This shared biology offers a reason to explore collaboration—not proof that the same study design will fit both communities.",
+          "edge_ids": [
+            "disease:STXBP1|shares_mechanism|disease:SYT1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Our community has a natural history study at the University of Missouri, a foundation registry, and a Cambridge/Melbourne research collaboration.",
+          "edge_ids": [
+            "asset:bagos-natural-history-study|covers|disease:SYT1",
+            "asset:bagos-registry|covers|disease:SYT1",
+            "asset:syt1-research-collaboration|covers|disease:SYT1"
+          ]
+        },
+        {
+          "text": "Citizen Health, RARE-X and the ENDD Center provide existing STXBP1-linked resources whose suitability we could explore together.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:rare-x-data-collection|covers|disease:STXBP1",
+            "asset:endd-stxbp1-syngap1-center|covers|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please confirm whether these resources accept SYT1-related disorders.",
+          "edge_ids": []
+        },
+        {
+          "text": "Their atlas comparisons flag focal-spike EEG patterns, unusual eyebrow location and 21 other SYT1 features as unrecorded there; please check whether these occur in STXBP1, including athetoid cerebral palsy.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:rare-x-data-collection|covers|disease:STXBP1",
+            "asset:endd-stxbp1-syngap1-center|covers|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "Please review differences flagged only on the STXBP1 side: loss of protein function, unstable or misfolded proteins, and two further unspecified mechanisms.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:rare-x-data-collection|covers|disease:STXBP1",
+            "asset:endd-stxbp1-syngap1-center|covers|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "Several proposed protein effects remain contested, so shared biology should not imply identical effects for every genetic change.",
+          "edge_ids": [
+            "disease:SYT1|driven_by|mech:gain-of-function",
+            "disease:SYT1|driven_by|mech:haploinsufficiency",
+            "disease:STXBP1|driven_by|mech:dominant-negative",
+            "disease:STXBP1|driven_by|mech:gain-of-function",
+            "disease:STXBP1|driven_by|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "Could Ege Kavalali review the plan, with confirmation of his SYT1 and VAMP2 work alongside his documented SNAP25 work?",
+          "edge_ids": [
+            "researcher:ege-kavalali--vanderbilt-university|works_on|disease:SNAP25"
+          ]
+        },
+        {
+          "text": "Before proceeding, please also check trial enrollment and access to SYT1 animal or cell models.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send one inquiry to STXBP1 Foundation asking whether STARR (STXBP1 Clinical Trial Ready) could include SYT1-related disorders, requesting an initial eligibility assessment rather than a commitment.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Is any interventional trial enrolling people with SYT1-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "Is there a documented, accessible SYT1 animal or cell model in the atlas?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants increase activity, impair the protein's chemical work, or cause loss of function?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear STXBP1 Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we explore whether STARR could include SYT1 families?",
+          "edge_ids": []
+        },
+        {
+          "text": "Our communities share biology involved in nerve-cell messaging.",
+          "edge_ids": [
+            "gene:SYT1|participates_in|mech:synaptic-vesicle-fusion",
+            "gene:STXBP1|participates_in|mech:synaptic-vesicle-fusion"
+          ]
+        },
+        {
+          "text": "We would welcome an initial eligibility assessment this month.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this small first step together.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of The Baker-Gordon Syndrome Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:25:06.393Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

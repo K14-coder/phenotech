@@ -1,0 +1,52 @@
+{
+  "kind": "explain-path",
+  "id": "disease:SLC6A1__to__disease:STXBP1",
+  "title": "A link through a shared study",
+  "sections": [
+    {
+      "heading": "Following the route",
+      "sentences": [
+        {
+          "text": "The route starts with SLC6A1-related disorders and leads to Simons Searchlight, an online study that includes people with these disorders.",
+          "edge_ids": [
+            "study:NCT01238250|studies|disease:SLC6A1"
+          ]
+        },
+        {
+          "text": "Simons Searchlight also includes people with STXBP1-related disorders, bringing the route to its endpoint.",
+          "edge_ids": [
+            "study:NCT01238250|studies|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "How strong is the link?",
+      "sentences": [
+        {
+          "text": "Both steps are supported by a checked database record, with confidence scores of 0.9.",
+          "edge_ids": [
+            "study:NCT01238250|studies|disease:SLC6A1",
+            "study:NCT01238250|studies|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "A route is only as strong as its weakest step.",
+          "edge_ids": []
+        },
+        {
+          "text": "The input lists the SLC6A1-to-study link as the weakest step, although both steps have the same confidence score.",
+          "edge_ids": [
+            "study:NCT01238250|studies|disease:SLC6A1",
+            "study:NCT01238250|studies|disease:STXBP1"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:48:06.090Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

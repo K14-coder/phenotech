@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { PERSONAS } from "@/lib/persona";
 import { useMemo } from "react";
 import { WithGraph } from "../GraphProvider";
 import { EvidenceLegend } from "../evidence/EvidenceBits";
@@ -186,6 +187,24 @@ function Method({ idx }: { idx: GraphIndex }) {
           </Link>
         </aside>
       </div>
+
+      <section aria-labelledby="views-h" className="mt-14 border-t border-line pt-8">
+        <h2 id="views-h" className="text-[19px] font-semibold text-ink">
+          One atlas, four views
+        </h2>
+        <p className="mt-2 max-w-[760px] text-sm leading-relaxed text-ink-2">
+          The same sourced data is shown four ways; switch at the top right. The evidence behind every view is identical, only the
+          wording and what comes first change.
+        </p>
+        <dl className="mt-4 grid max-w-[900px] gap-3 sm:grid-cols-2">
+          {PERSONAS.map((p) => (
+            <div key={p.id} className="rounded-lg border border-line px-4 py-3">
+              <dt className="text-sm font-semibold text-ink">{p.label}</dt>
+              <dd className="mt-0.5 text-sm text-ink-3">{p.short}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
     </div>
   );
 }

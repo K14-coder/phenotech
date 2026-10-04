@@ -1,0 +1,114 @@
+{
+  "kind": "compare-questions",
+  "id": "disease:SLC6A1__vs__disease:STXBP1",
+  "title": "SLC6A1 and STXBP1: Questions Before Joining Forces",
+  "sections": [
+    {
+      "heading": "Biology",
+      "sentences": [
+        {
+          "text": "Given the disputed evidence in both disorders, are unstable or incorrectly folded proteins a strong enough shared basis for a joint project?",
+          "edge_ids": [
+            "disease:SLC6A1|driven_by|mech:protein-destabilization",
+            "disease:STXBP1|driven_by|mech:protein-destabilization"
+          ]
+        },
+        {
+          "text": "Does having one working gene copy that is not enough explain both groups well enough for joint research, given the disputed evidence in STXBP1?",
+          "edge_ids": [
+            "disease:SLC6A1|driven_by|mech:haploinsufficiency",
+            "disease:STXBP1|driven_by|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "Are the listed differences in GABA recycling for SLC6A1 and release of nerve signals for STXBP1 real biological differences or gaps in what has been studied?",
+          "edge_ids": [
+            "gene:SLC6A1|participates_in|mech:gaba-reuptake",
+            "gene:STXBP1|participates_in|mech:synaptic-vesicle-fusion",
+            "gene:STXBP1|participates_in|mech:ca-triggered-exocytosis",
+            "gene:STXBP1|participates_in|mech:snare-complex-assembly",
+            "gene:STXBP1|participates_in|mech:synaptic-vesicle-priming"
+          ]
+        },
+        {
+          "text": "How would disputed STXBP1 findings about altered proteins blocking working proteins, or sometimes doing too much, affect the case for studying both disorders together?",
+          "edge_ids": [
+            "disease:STXBP1|driven_by|mech:dominant-negative",
+            "disease:STXBP1|driven_by|mech:gain-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Who can take part",
+      "sentences": [
+        {
+          "text": "Do the entry rules and study schedule for Simons Searchlight suit families from both groups equally?",
+          "edge_ids": [
+            "study:NCT01238250|studies|disease:SLC6A1",
+            "study:NCT01238250|studies|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "Do the entry rules and visit schedule for the phenylbutyrate study suit families from both groups equally?",
+          "edge_ids": [
+            "study:NCT04937062|studies|disease:SLC6A1",
+            "study:NCT04937062|studies|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Measuring progress",
+      "sentences": [
+        {
+          "text": "Given the different mixes of gene changes, would ways of measuring progress developed for one disorder work for the other?",
+          "edge_ids": [
+            "vg:SLC6A1:contiguous-gene-deletion|variant_in|gene:SLC6A1",
+            "vg:SLC6A1:missense|variant_in|gene:SLC6A1",
+            "vg:SLC6A1:splice|variant_in|gene:SLC6A1",
+            "vg:STXBP1:contiguous-gene-deletion|variant_in|gene:STXBP1",
+            "vg:STXBP1:missense|variant_in|gene:STXBP1",
+            "vg:STXBP1:splice|variant_in|gene:STXBP1"
+          ]
+        },
+        {
+          "text": "Are the listed differences in seizures, eyelid jerks, difficulty following movement sideways with the eyes, and brain dysfunction in infancy real differences or gaps in records?",
+          "edge_ids": [
+            "disease:SLC6A1|has_phenotype|phenotype:HP:0011170",
+            "disease:SLC6A1|has_phenotype|phenotype:HP:0025097",
+            "disease:STXBP1|has_phenotype|phenotype:HP:0001151",
+            "disease:STXBP1|has_phenotype|phenotype:HP:0007105"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Practical checks",
+      "sentences": [
+        {
+          "text": "What would need to change for the COMBINEDBrain / Across Matrix SLC6A1 natural history platform to include STXBP1 families?",
+          "edge_ids": [
+            "asset:combinedbrain-matrix-slc6a1-nhs|covers|disease:SLC6A1"
+          ]
+        },
+        {
+          "text": "Could Citizen Health, COMBINEDBrain Biorepository, or Simons Searchlight support a joint project using the records or samples they collect from both communities?",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:SLC6A1",
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:combinedbrain-biorepository|covers|disease:SLC6A1",
+            "asset:combinedbrain-biorepository|covers|disease:STXBP1",
+            "asset:simons-searchlight|covers|disease:SLC6A1",
+            "asset:simons-searchlight|covers|disease:STXBP1"
+          ]
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:47:52.179Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

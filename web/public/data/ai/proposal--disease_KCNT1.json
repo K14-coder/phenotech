@@ -1,0 +1,146 @@
+{
+  "kind": "proposal",
+  "id": "disease:KCNT1",
+  "title": "A careful first collaboration with DEE-P Connections (DEEP)",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "From the KCNT1 Epilepsy Foundation, we invite DEEP to explore a practical collaboration for families.",
+          "edge_ids": [
+            "org:kcnt1-epilepsy-foundation|serves|disease:KCNT1"
+          ]
+        },
+        {
+          "text": "KCNT1 and KCNQ2 both help potassium channels work.",
+          "edge_ids": [
+            "gene:KCNT1|participates_in|mech:potassium-channel-activity",
+            "gene:KCNQ2|participates_in|mech:potassium-channel-activity"
+          ]
+        },
+        {
+          "text": "The atlas infers overlapping seizures and severe developmental delays, but this similarity has confidence 0.48, below 0.5.",
+          "edge_ids": [
+            "disease:KCNQ2|similar_phenotype|disease:KCNT1"
+          ]
+        },
+        {
+          "text": "It also infers DEEP's connection to KCNQ2 families from a KCNQ2 Cure Alliance partnership logo, not a formal membership record.",
+          "edge_ids": [
+            "org:dee-p-connections|serves|disease:KCNQ2"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Our Foundation manages the KCNT1 International Registry on NORD IAMRARE for people with KCNT1-related disorders.",
+          "edge_ids": [
+            "asset:kcnt1-international-registry|covers|disease:KCNT1"
+          ]
+        },
+        {
+          "text": "Citizen Health includes KCNT1, and epilepsy-dyskinesia study and registry records list both KCNT1 and KCNQ2.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:KCNT1",
+            "study:NCT06585605|studies|disease:KCNT1",
+            "study:NCT06967727|studies|disease:KCNT1"
+          ]
+        },
+        {
+          "text": "We could start by sharing registry experience rather than promising cross-disease enrollment.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Before offering the registry to KCNQ2 families, let us confirm eligibility and whether its questions fit their needs.",
+          "edge_ids": []
+        },
+        {
+          "text": "Please help check whether KCNQ2 families experience focal autonomic seizures with palpitations, fast or slow heartbeat or heart pauses; inability to walk by childhood or adolescence; and personality disorder, rather than treating missing records as absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should identify additional KCNT1 organizations, registries, trials and research groups, and check which individual variants increase activity, impair protein activity or cause loss of function.",
+          "edge_ids": []
+        },
+        {
+          "text": "The proposed 'one working copy is not enough' links for both genes are atlas inferences, unverified and below 0.5 confidence.",
+          "edge_ids": [
+            "vg:KCNT1:splice|has_effect|mech:haploinsufficiency",
+            "vg:KCNQ2:splice|has_effect|mech:haploinsufficiency"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Hold one joint registry-review call this month to decide whether and how an offer to KCNQ2 families could be appropriate.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "What additional patient organizations, registries, trials and research groups exist for KCNT1-related disorders beyond those verified here?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants are activating, catalytically impaired or loss of function?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear DEE-P Connections (DEEP),",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome a small, family-focused collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our Foundation manages the KCNT1 International Registry on NORD IAMRARE.",
+          "edge_ids": [
+            "asset:kcnt1-international-registry|covers|disease:KCNT1"
+          ]
+        },
+        {
+          "text": "Could we review its suitability for KCNQ2 families together this month?",
+          "edge_ids": []
+        },
+        {
+          "text": "Let us check eligibility and differences before making any offer.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of KCNT1 Epilepsy Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:13:18.624Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

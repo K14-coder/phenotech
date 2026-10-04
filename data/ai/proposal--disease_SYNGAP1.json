@@ -1,0 +1,159 @@
+{
+  "kind": "proposal",
+  "id": "disease:SYNGAP1",
+  "title": "CURE SYNGAP1 to GRIN2B Foundation: exploring a shared registry opportunity",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "CURE SYNGAP1 supports SYNGAP1 families, while GRIN2B Foundation supports families with GRIN2B-related disorders.",
+          "edge_ids": [
+            "org:cure-syngap1|serves|disease:SYNGAP1",
+            "org:grin2b-foundation|serves|disease:GRIN2B"
+          ]
+        },
+        {
+          "text": "Published research links both disorders to loss of function, and both genes help regulate how connections between brain cells adapt.",
+          "edge_ids": [
+            "disease:SYNGAP1|driven_by|mech:loss-of-function",
+            "disease:GRIN2B|driven_by|mech:loss-of-function",
+            "gene:SYNGAP1|participates_in|mech:regulation-of-synaptic-plasticity",
+            "gene:GRIN2B|participates_in|mech:regulation-of-synaptic-plasticity"
+          ]
+        },
+        {
+          "text": "This suggests a hypothesis worth exploring: some research approaches could be shared, without assuming the disorders are interchangeable.",
+          "edge_ids": [
+            "disease:SYNGAP1|driven_by|mech:loss-of-function",
+            "disease:GRIN2B|driven_by|mech:loss-of-function",
+            "gene:SYNGAP1|participates_in|mech:regulation-of-synaptic-plasticity",
+            "gene:GRIN2B|participates_in|mech:regulation-of-synaptic-plasticity"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Simons Searchlight, Citizen Health and RARE-X already include SYNGAP1 families; we could compare their approaches to collecting family experiences.",
+          "edge_ids": [
+            "asset:simons-searchlight|covers|disease:SYNGAP1",
+            "asset:citizen-health|covers|disease:SYNGAP1",
+            "asset:rare-x-data-collection|covers|disease:SYNGAP1"
+          ]
+        },
+        {
+          "text": "The ENDD Center and the STXBP1 and SYNGAP1 Related Disorders Natural History Study offer further starting points for discussion.",
+          "edge_ids": [
+            "asset:endd-stxbp1-syngap1-center|covers|disease:SYNGAP1",
+            "study:NCT06555965|studies|disease:SYNGAP1"
+          ]
+        },
+        {
+          "text": "The GRIN Variant Patient Registry includes GRIN2B-related disorders; extending its scope would need confirmation.",
+          "edge_ids": [
+            "asset:grin-variant-patient-registry|covers|disease:GRIN2B"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "GRIN2B variants can cause either increased or reduced function, so we should check which groups are genuinely comparable.",
+          "edge_ids": [
+            "disease:GRIN2B|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "The GRIN2B link to having only one working gene copy is inferred by the atlas, unverified and below 0.5 confidence.",
+          "edge_ids": [
+            "vg:GRIN2B:splice|has_effect|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "Please help check whether eating-induced seizures, myoclonic absence seizures and congenital muscular torticollis occur in GRIN2B-related disorders, rather than treating missing records as proof of absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "Before proceeding, let's verify therapy evidence, identify additional patient organisations, registries, trials and research groups, and confirm registry eligibility.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send GRIN2B Foundation one focused enquiry asking whether the GRIN Variant Patient Registry could include SYNGAP1-related disorders and what eligibility review would be needed.",
+          "edge_ids": [
+            "asset:grin-variant-patient-registry|covers|disease:GRIN2B"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Is there a trial-stage or approved therapy for SYNGAP1-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "What additional patient organisations, registries, trials and research groups exist beyond those verified here?",
+          "edge_ids": []
+        },
+        {
+          "text": "Let's check ClinicalTrials.gov and PubMed, request a partner list, and confirm platform intake lists directly.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear GRIN2B Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I'm writing on behalf of CURE SYNGAP1 to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Research links both communities' disorders to loss of function.",
+          "edge_ids": [
+            "disease:SYNGAP1|driven_by|mech:loss-of-function",
+            "disease:GRIN2B|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "Could the GRIN Variant Patient Registry consider including SYNGAP1-related disorders?",
+          "edge_ids": [
+            "asset:grin-variant-patient-registry|covers|disease:GRIN2B"
+          ]
+        },
+        {
+          "text": "Could we begin this month by clarifying eligibility and the differences that need review?",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of CURE SYNGAP1",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:24:22.133Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

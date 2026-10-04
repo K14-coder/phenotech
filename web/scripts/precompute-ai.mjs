@@ -18,6 +18,7 @@
 //                                  explain-path {"from": "...", "to": "..."}, compare-questions {"kind": "compare-questions", "a": "...", "b": "..."}
 //   --out DIR                      output directory (default ../data/ai)
 //   --base URL                     dev server (default http://127.0.0.1:3000)
+//   --ids VAMP2,STXBP1             only targets whose id contains one of these
 //   --force                        regenerate files that already exist
 //   --dry-run                      print the plan only
 //
@@ -42,6 +43,8 @@ const limit = Number(opt("limit", "Infinity"));
 const pairsFile = resolve(opt("pairs", join(webRoot, "scripts", "ai-targets.json")));
 const dryRun = flag("dry-run");
 const force = flag("force");
+// --ids a,b: only targets whose id contains one of these strings (e.g. --ids VAMP2,STXBP1)
+const idFilter = opt("ids", null)?.split(",").filter(Boolean) ?? null;
 
 const fileName = (kind, id) => `${kind}--${id.replace(/[^A-Za-z0-9._-]/g, "_")}.json`;
 const pathId = (from, to, hyp) => `${from}__to__${to}${hyp ? "__hyp" : ""}`;
@@ -112,7 +115,7 @@ console.log(`auth path: ${status.authPath}${status.authPath === "chatgpt" ? " (u
 
 mkdirSync(outDir, { recursive: true });
 let calls = 0;
-for (const t of targets) {
+for (const t of targets.filter((t) => !idFilter || idFilter.some((f) => t.id.includes(f)))) {
   const file = join(outDir, fileName(t.kind, t.id));
   if (!force && existsSync(file)) {
     console.log(`= ${t.kind} ${t.id} (exists, use --force)`);

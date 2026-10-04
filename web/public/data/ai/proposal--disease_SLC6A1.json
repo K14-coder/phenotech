@@ -1,0 +1,148 @@
+{
+  "kind": "proposal",
+  "id": "disease:SLC6A1",
+  "title": "A first collaboration conversation with STXBP1 Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "On behalf of SLC6A1 Connect UK / Arthur's Quest, I propose exploring what our communities could learn together.",
+          "edge_ids": []
+        },
+        {
+          "text": "Evidence suggests that some SLC6A1 and STXBP1 variants produce unstable or incorrectly folded proteins, but this shared connection is contested and does not cover every variant.",
+          "edge_ids": [
+            "disease:SLC6A1|driven_by|mech:protein-destabilization",
+            "disease:STXBP1|driven_by|mech:protein-destabilization",
+            "disease:STXBP1|shares_mechanism|disease:SLC6A1"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptoms, including seizures with sudden loss of muscle tone, but its confidence is 0.46, below 0.5.",
+          "edge_ids": [
+            "disease:STXBP1|similar_phenotype|disease:SLC6A1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "SLC6A1 resources include the COMBINEDBrain / Across Matrix natural history platform, Simons Searchlight, Citizen Health and the COMBINEDBrain Biorepository.",
+          "edge_ids": [
+            "asset:combinedbrain-matrix-slc6a1-nhs|covers|disease:SLC6A1",
+            "asset:simons-searchlight|covers|disease:SLC6A1",
+            "asset:citizen-health|covers|disease:SLC6A1",
+            "asset:combinedbrain-biorepository|covers|disease:SLC6A1"
+          ]
+        },
+        {
+          "text": "STARR follows STXBP1-related disorders over time; we could explore sharing study designs and experience rather than assuming eligibility transfers.",
+          "edge_ids": [
+            "asset:stxbp1-starr-natural-history-study|covers|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "SLC6A1 clears the brain messenger GABA after release; shared protein-folding problems do not mean identical pathways.",
+          "edge_ids": [
+            "gene:SLC6A1|participates_in|mech:gaba-reuptake",
+            "disease:STXBP1|shares_mechanism|disease:SLC6A1"
+          ]
+        },
+        {
+          "text": "We should read both supporting and limiting evidence: some SLC6A1 proteins reach the cell surface but work poorly, and an STXBP1 exception increases activity.",
+          "edge_ids": [
+            "disease:SLC6A1|driven_by|mech:protein-destabilization",
+            "disease:STXBP1|driven_by|mech:protein-destabilization"
+          ]
+        },
+        {
+          "text": "Please help confirm whether generalized myoclonic-atonic seizures, eyelid myoclonus and absence seizures occur in STXBP1-related disorders.",
+          "edge_ids": []
+        },
+        {
+          "text": "We could invite Scott Demarest, whose work covers both disorders, to review the plan.",
+          "edge_ids": [
+            "researcher:scott-demarest--university-of-colorado|works_on|disease:SLC6A1",
+            "researcher:scott-demarest--university-of-colorado|works_on|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "Before joining forces, we should also check model access and the variant-specific protein-folding questions below.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send STXBP1 Foundation one enquiry asking whether STARR could include SLC6A1-related disorders, without presuming expansion is possible.",
+          "edge_ids": [
+            "asset:stxbp1-starr-natural-history-study|covers|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Is there a documented, accessible SLC6A1 animal or cell model in the atlas?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which GBA1, HEXA, NPC1 and GAA variants might respond to a protein-folding helper, as GLA variants are classified for migalastat?",
+          "edge_ids": []
+        },
+        {
+          "text": "Any treatment discussion should concern published evidence to discuss with a neurologist, not a recommendation.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear STXBP1 Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we explore a small collaboration for our communities?",
+          "edge_ids": []
+        },
+        {
+          "text": "STARR currently studies STXBP1-related disorders.",
+          "edge_ids": [
+            "asset:stxbp1-starr-natural-history-study|covers|disease:STXBP1"
+          ]
+        },
+        {
+          "text": "Would you consider whether it could include SLC6A1-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome an initial discussion of feasibility and evidence gaps.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of SLC6A1 Connect UK / Arthur's Quest",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:50:07.433Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

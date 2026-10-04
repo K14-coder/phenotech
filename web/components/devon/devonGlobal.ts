@@ -129,6 +129,7 @@ export function buildGlobalDevonModel(
     ],
     related: [],
     contributeHref: "/contribute",
+    generalHelpFirst: true,
     loading,
   };
 }

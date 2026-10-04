@@ -23,12 +23,12 @@ export interface Tour {
 export const TOURS: Record<string, Tour> = {
   maria: {
     id: "maria",
-    name: "Follow Maria",
+    name: "Follow a patient group",
     persona: "leader",
     steps: [
       {
         title: "Start with the gene name",
-        caption: "Maria leads a small patient group for VAMP2. She starts by typing the gene name into the search box.",
+        caption: "A small patient group for VAMP2 starts by typing the gene name into the search box.",
         path: "/?q=VAMP2",
         target: '[data-tour="search"]',
         action: "openSearch",
@@ -54,7 +54,7 @@ export const TOURS: Record<string, Tour> = {
       },
       {
         title: "Work that already exists",
-        caption: "Simons Searchlight already covers VAMP2, so Maria’s families can join a study that exists today.",
+        caption: "Simons Searchlight already covers VAMP2, so the group’s families can join a study that exists today.",
         path: "/disease/VAMP2",
         target: '[data-tour="covers-group"] li',
       },
@@ -66,7 +66,7 @@ export const TOURS: Record<string, Tour> = {
       },
       {
         title: "A sourced proposal",
-        caption: "Maria drafts a collaboration proposal to the STXBP1 Foundation. Every sentence links to the evidence it relies on.",
+        caption: "The group drafts a collaboration proposal to the STXBP1 Foundation. Every sentence links to the evidence it relies on.",
         path: "/disease/VAMP2",
         target: '[data-tour="proposal"]',
         action: "showPrecomputedProposal",
@@ -81,7 +81,7 @@ export const TOURS: Record<string, Tour> = {
   },
   syt2: {
     id: "syt2",
-    name: "A family with no patient group",
+    name: "Follow a family with no patient group",
     persona: "family",
     steps: [
       {

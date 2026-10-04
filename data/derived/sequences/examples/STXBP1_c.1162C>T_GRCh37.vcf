@@ -1,0 +1,10 @@
+##fileformat=VCFv4.2
+##fileDate=20261004
+##comment=SYNTHETIC EXAMPLE – not a real person. Built from the reference genome and ClinVar VCV000006730 for testing the atlas variant checker.
+##reference=GRCh37 (https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.1_GRCh37/)
+##contig=<ID=9,length=141213431,assembly=GRCh37>
+##INFO=<ID=GENE,Number=1,Type=String,Description="Gene symbol">
+##INFO=<ID=NOTE,Number=1,Type=String,Description="Why this synthetic line is here">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SYNTHETIC_EXAMPLE
+9	130438134	.	C	T	50	PASS	GENE=STXBP1;NOTE=STXBP1_c.1162C>T_p.Arg388Ter_ClinVar_VCV000006730	GT	0/1

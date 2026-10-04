@@ -4,8 +4,8 @@ import { useEffect, useId, useRef, useState } from "react";
 import { PERSONAS, personaMeta, setPersona, usePersona, usePersonaChosen, type Persona } from "@/lib/persona";
 
 /**
- * The one profile switch, top right on every page: "Viewing as: Devon (new to this) ▾". The menu gives
- * each profile a one-line description. Every page reads the profile and changes its content.
+ * The one mode switch, top right on every page: "Viewing: Simple ▾". The menu gives each mode a
+ * one-line description. Every page reads the profile and changes its content.
  */
 export function ViewingAs() {
   const persona = usePersona();
@@ -46,9 +46,8 @@ export function ViewingAs() {
         data-tour="viewing-as"
         className="flex h-9 items-center gap-1.5 rounded-md border border-line bg-white px-2.5 text-sm text-ink hover:border-accent-500"
       >
-        <span className="hidden text-ink-3 sm:inline">Viewing as:</span>
+        <span className="hidden text-ink-3 sm:inline">View:</span>
         <span className="font-medium">{current.name}</span>
-        <span className="hidden text-ink-3 md:inline">({current.short})</span>
         <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" className="text-ink-3">
           <path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" strokeWidth="1.4" />
         </svg>
@@ -57,11 +56,11 @@ export function ViewingAs() {
         <ul
           id={listId}
           role="listbox"
-          aria-label="Switch profile"
+          aria-label="Switch view"
           className="absolute right-0 z-50 mt-1.5 w-[min(340px,calc(100vw-24px))] overflow-hidden rounded-lg border border-line bg-white py-1 shadow-[0_8px_24px_rgba(16,24,40,0.10)]"
         >
           <li className="px-3 pb-1 pt-1.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3" role="presentation">
-            Switch profile
+            Choose a view
           </li>
           {PERSONAS.map((p) => (
             <li key={p.id} role="option" aria-selected={p.id === persona}>
@@ -84,7 +83,7 @@ export function ViewingAs() {
   );
 }
 
-/** Asked once, gently, on a first visit. Devon is preselected; nothing is blocked while it shows. */
+/** Asked once, gently, on a first visit. Simple is preselected; nothing is blocked while it shows. */
 export function FirstVisitChooser() {
   const chosen = usePersonaChosen();
   const persona = usePersona();
@@ -94,9 +93,9 @@ export function FirstVisitChooser() {
     <div className="border-b border-line bg-subtle/70 print:hidden">
       <div className="mx-auto flex max-w-[1120px] flex-col gap-3 px-4 py-4 sm:px-8 md:flex-row md:items-center">
         <p className="shrink-0 text-[15px] font-medium text-ink">
-          Who are you? <span className="font-normal text-ink-3">(You can change this anytime)</span>
+          How should we show things? <span className="font-normal text-ink-3">(You can change this anytime)</span>
         </p>
-        <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Choose a profile">
+        <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Choose a view">
           {PERSONAS.map((p) => (
             <button
               key={p.id}
@@ -105,11 +104,12 @@ export function FirstVisitChooser() {
               aria-checked={pick === p.id}
               onClick={() => setPick(p.id)}
               title={p.hint}
-              className={`rounded-full border px-3 py-1.5 text-sm ${
+              className={`rounded-lg border px-3 py-1.5 text-left text-sm ${
                 pick === p.id ? "border-accent-700 bg-white font-medium text-ink" : "border-line bg-white text-ink-2 hover:border-accent-500"
               }`}
             >
-              {p.label}
+              <span className="block font-medium text-ink">{p.label}</span>
+              <span className="block text-xs text-ink-3">{p.short}</span>
             </button>
           ))}
         </div>

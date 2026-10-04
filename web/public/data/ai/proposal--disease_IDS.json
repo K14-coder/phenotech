@@ -1,0 +1,138 @@
+{
+  "kind": "proposal",
+  "id": "disease:IDS",
+  "title": "Exploring a shared registry opportunity with Canadian MPS Society",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At National MPS Society, we support families affected by MPS II (Hunter syndrome); Canadian MPS Society supports families affected by MPS I.",
+          "edge_ids": [
+            "org:national-mps-society|serves|disease:IDS",
+            "org:canadian-mps-society|serves|disease:IDUA"
+          ]
+        },
+        {
+          "text": "Both conditions involve missing enzyme activity and a buildup of heparan and dermatan sulfate, although the enzymes differ.",
+          "edge_ids": [
+            "disease:IDS|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:IDS|driven_by|mech:lysosomal-storage",
+            "disease:IDUA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:IDUA|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptom patterns, but its confidence is 0.49—below 0.5—so this is a starting point for discussion, not proof that our communities have identical needs.",
+          "edge_ids": [
+            "disease:IDUA|similar_phenotype|disease:IDS"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Mucopolysaccharidosis Type II Natural History and the Registry of Patients Diagnosed With Lysosomal Storage Diseases already include people with MPS II.",
+          "edge_ids": [
+            "asset:nct03529786-mucopolysaccharidosis-type-ii-natural-history|covers|disease:IDS",
+            "asset:nct05619900-registry-of-patients-diagnosed-with-lysosomal-st|covers|disease:IDS"
+          ]
+        },
+        {
+          "text": "We could begin by comparing what these resources collect, rather than proposing a new registry.",
+          "edge_ids": []
+        },
+        {
+          "text": "The atlas lists Canadian MPS Registry as including MPS I, but its quoted source discusses newborn screening rather than registry participation, so that claim needs confirmation.",
+          "edge_ids": [
+            "asset:canadian-mps-registry|covers|disease:IDUA"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "We should preserve the distinction between the enzyme affected in MPS II, iduronate-2-sulfatase, and the enzyme affected in MPS I, alpha-L-iduronidase.",
+          "edge_ids": [
+            "disease:IDS|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:IDS|driven_by|mech:lysosomal-storage",
+            "disease:IDUA|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Please help us check whether decreased iduronate sulfatase level, tracheobronchomalacia and intestinal pseudo-obstruction also occur in MPS I, rather than treating gaps in the atlas as confirmed differences.",
+          "edge_ids": []
+        },
+        {
+          "text": "Before any sharing, let us confirm registry eligibility and which information could meaningfully be compared.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "This month, I propose sending Canadian MPS Society one focused inquiry asking whether Canadian MPS Registry could include people with IDS-related MPS II, and requesting confirmation of its current scope.",
+          "edge_ids": [
+            "asset:canadian-mps-registry|covers|disease:IDUA"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "No open questions are recorded yet in the supplied atlas.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Canadian MPS Society team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of National MPS Society to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our MPS II community and the MPS I families you support share enzyme-deficiency and storage-related biology.",
+          "edge_ids": [
+            "org:national-mps-society|serves|disease:IDS",
+            "org:canadian-mps-society|serves|disease:IDUA",
+            "disease:IDS|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:IDS|driven_by|mech:lysosomal-storage",
+            "disease:IDUA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:IDUA|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Could you confirm Canadian MPS Registry's scope and whether it could include MPS II?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome your guidance before taking this further.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of National MPS Society",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:11:12.351Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

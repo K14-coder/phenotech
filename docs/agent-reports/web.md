@@ -673,3 +673,89 @@ The DisMech chain sits on the detailed page.
 - **`/d/` pages:**
   - The mechanism layer: G2P and ClinGen records, Reactome pathways, the mechanism family and its members.
   - The DisMech chain, only where DisMech has a record. It loads only when opened and carries attribution.
+
+---
+
+## View names, guided search, sequence and VCF check
+
+No live AI calls were made in this round.
+
+- **View names:** Simple (default), Detailed, Research and Industry, each with a one-line description. Persona names are gone from the switch, the first-visit chooser, the tours ("Follow a patient group", "Follow a family with no patient group"), Home and Impact. /method now has "One atlas, four views". Ids and `?as=` are unchanged.
+- **Guided search (Simple only):**
+  - The search box shows one result: the general disease. That is an in-depth disease when the atlas has a strong match; otherwise the global row's head from `data/derived/global/groups.json`, falling back to a name-stem heuristic in `lib/groups.ts` behind the same interface. "Not it? See all matches" opens the normal list.
+  - Picking it opens `/start?d=<id>`:
+    - a reassurance;
+    - "Do you know which type?" with large options and plain distinctions;
+    - "I'm not sure, show me the general information";
+    - a collapsed "Similar names that are different conditions".
+  - It then goes to the plain diagnosis page, which repeats the type that was chosen.
+- **/sequence:** FASTA or VCF (.vcf, .vcf.gz via DecompressionStream), compared in the browser. The page says so prominently.
+  - **FASTA:** banded global alignment against the MANE CDS (`data/derived/sequences/<GENE>.json`), with HGVS c. (3'-shifted indels, dup detection) and p., and a consequence class with a splice-region flag.
+  - **VCF:**
+    - Streams line by line and detects GRCh37 or GRCh38 from ##reference or ##contig, with a manual override.
+    - Maps changes in the 45 genes through the exon table, both strands, including intronic c.N±k. Checked against ClinVar HGVS: 543 of 543 substitutions agree.
+    - Looks up `variant_positions.json` (exact substitution keys and SPDI indels).
+    - Gives a count summary.
+  - **Shared by both:**
+    - ClinVar lookups through `lib/variant.ts` (`variants.json`).
+    - A one-page "Print for your doctor" with the disclaimer.
+    - An opt-in NCBI BLAST POST form; the sequence is never put in a URL.
+    - Synthetic examples.
+    - A kind message, linking to the report-line lookup, for genes outside the 45.
+- **Linked from:** Simple Home and the Simple diagnosis pages of the 45 deep genes.
+- **Sync:** `data/derived/sequences/**` is copied. `web/sequence_examples.json` and the availability flags for groups, sequences and variant positions are written.
+
+---
+
+## Community accounts, onboarding and the no-result flow
+
+### Wording and no-result flow (Simple view)
+- **Landing:** "Which disease are you looking for?", with copy that also suits relatives and friends. The safety note no longer assumes a child.
+- **Nothing matched:** the search box says "We couldn't find '<q>' in the atlas yet." It offers "Did you mean" (trigram similarity over the global index and index_extra) and a link to `/help?q=`.
+  - In Simple, the loosest fuzzy atlas matches no longer hide this answer.
+- **/help:**
+  - Did you mean.
+  - Closely related problems: symptoms recorded in the atlas, matched by phrase or word, with their diseases; and partial gene symbols with their conditions.
+  - Who you can contact now (`components/help/GeneralHelp.tsx`): NORD, EURORDIS, Global Genes RARE Concierge, Genetic Alliance UK, and a genetic counsellor by referral.
+  - Tell us about this disease, linking to /contribute.
+- **Basic-data `/d/` pages:** in Simple, they start with the same "Who you can contact now" block.
+
+### Accounts
+- **Storage (`lib/server/store.ts`):**
+  - Upstash Redis over REST, using `KV_REST_API_URL`/`KV_REST_API_TOKEN` or `UPSTASH_REDIS_REST_*`.
+  - Locally, a JSON file in `web/.data/` (gitignored). Redis is used locally only with `STORE=redis`.
+  - On Vercel without Redis: off, and the UI says "Sign-up opens soon".
+- **Server (`lib/server/community.ts`):**
+  - Passwords: scrypt with a per-user salt.
+  - Sessions: an HMAC-signed, httpOnly, sameSite=lax cookie (secure in production), signed with `SESSION_SECRET`.
+  - Validation of every field; same-origin checks; rate limits per IP; no logging of emails.
+- **Routes:** `/api/account` (GET, PATCH, DELETE), `signup`, `login`, `logout`, `export`, `/api/research/{announce,interest,contact}`, `/api/admin/announcements` (needs the `ADMIN_TOKEN` header).
+- **Pages:**
+  - Join box (`components/community/JoinBox.tsx`): appears at 40% scroll, can be dismissed for 7 days, hidden during tours, and shows "Sign-up opens soon" when off.
+  - `/join`: 3 steps, then a welcome screen.
+  - `/me`: followed diseases; inbox with reviewed announcements, relayed researcher messages, and studies recruiting now from the channels and scale data; saved items; privacy toggles; export; a real delete; researcher tools.
+  - `/admin`: the moderation queue.
+  - `/privacy`.
+  - A header link ("Sign in" or "My atlas"), and "Save to my atlas" on the doctor questions.
+- **Researcher tools:**
+  - Announce a study (pending review).
+  - Community interest: counts per disease and coarse country, with k ≥ 5.
+  - Request contact: relayed only to members who opted in; a delivery count is shown only at 5 or more.
+  - Researcher accounts are verified by institutional email domain; the page says how full verification would work.
+- **Cheap extras built:** "notify me when a patient group forms", a weekly-digest preference, export my data.
+
+### End-to-end test
+Run against a local `next start` on port 3015 (file store, test `ADMIN_TOKEN`), plus the UI on the dev server:
+- The family follows STXBP1 with contact consent.
+- A researcher signs up from an `.edu` address and comes out verified.
+- The researcher's announcement is pending, and the family inbox is empty.
+- The admin queue shows 1; after approval, the family inbox has the announcement and the researcher sees "approved".
+- A contact request is relayed: the note says fewer than 5, so no number is shown, and the family inbox gets the message.
+- The interest count is withheld (fewer than 5 members).
+- A family account cannot announce. A wrong password is refused. A cross-site PATCH is refused.
+- Export returns the account and inbox.
+- In the UI, a third account went through the join steps, the welcome screen, `/me` with the inbox, and "Delete my account".
+- All three accounts were deleted, the store file was wiped, and no emails appear in the server log.
+
+### AI drafts
+41 precomputed files are synced (28 proposals, 5 explain-path, 3 compare-questions, 2 experiments, 3 outreach). The STXBP1 outreach draft renders on the Research view.

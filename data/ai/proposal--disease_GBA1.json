@@ -1,0 +1,138 @@
+{
+  "kind": "proposal",
+  "id": "disease:GBA1",
+  "title": "A first collaboration between The Gauchers Association and INPDA",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "We support families affected by Gaucher disease; INPDA supports families affected by acid sphingomyelinase deficiency (ASMD, Niemann-Pick A/B).",
+          "edge_ids": [
+            "org:gauchers-association|serves|disease:GBA1",
+            "org:inpda|serves|disease:SMPD1"
+          ]
+        },
+        {
+          "text": "Both diseases involve missing enzyme activity and fatty substances building up in cells’ recycling compartments, called lysosomes.",
+          "edge_ids": [
+            "disease:GBA1|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GBA1|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptoms, but that comparison has confidence 0.48, below 0.5, so it needs careful checking.",
+          "edge_ids": [
+            "disease:GBA1|similar_phenotype|disease:SMPD1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The Registry of Patients Diagnosed With Lysosomal Storage Diseases and the Institutional Registry of Rare Diseases both include Gaucher disease.",
+          "edge_ids": [
+            "asset:nct05619900-registry-of-patients-diagnosed-with-lysosomal-st|covers|disease:GBA1",
+            "asset:nct06573723-institutional-registry-of-rare-diseases|covers|disease:GBA1"
+          ]
+        },
+        {
+          "text": "We propose comparing their approaches to collecting information, rather than assuming their data or participation arrangements can transfer across diseases.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "The deficient enzymes and stored substances differ between Gaucher disease and ASMD.",
+          "edge_ids": [
+            "disease:GBA1|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GBA1|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Please help check whether short horizontal eye movements, raised blood glucosylsphingosine and reduced beta-glucocerebrosidase also occur in ASMD, rather than treating missing records as proof of absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "Before combining information, we should also review the brain-disease evidence and how to represent GBA1’s role in Parkinson disease.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "This month, we propose sending INPDA one inquiry asking whether the National Multicentre Study of the Natural History of Acid Sphingo-myelinase Deficiency in Adults and Children could include Gaucher disease.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "What published evidence could we discuss with a neurologist about addressing brain disease in Gaucher types 2/3, ASMD type A, MPS I Hurler and neuronopathic MPS II, separately from effects on the body?",
+          "edge_ids": []
+        },
+        {
+          "text": "How should GBA1’s role in Parkinson disease be represented?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which GBA1, HEXA, NPC1 and GAA variants might respond to protein-stabilising approaches, and how could they be classified as GLA variants are?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear International Niemann-Pick Disease Alliance (INPDA),",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of The Gauchers Association to propose a small shared inquiry.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our diseases share enzyme deficiency and storage within lysosomes.",
+          "edge_ids": [
+            "disease:GBA1|shares_mechanism|disease:SMPD1"
+          ]
+        },
+        {
+          "text": "Could you help us ask whether the natural-history study named above could include Gaucher disease?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome your guidance on what needs checking first.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this proposal.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of The Gauchers Association",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-03T23:54:04.395Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

@@ -39,7 +39,8 @@ As of about 02:00 on Oct 4, ChatGPT plan calls fail with "this app's usage limit
 ## Status (newest first)
 
 **Done and deployed**
-- Profiles: Devon (default), Maria, Dr. Osei and Priya. See `docs/persona-spec.md`.
+- Views: Simple (default), Detailed, Research and Industry (internal ids family/leader/researcher/biotech). See `docs/persona-spec.md`.
+- Guided Simple search (`/start`, using `data/derived/global/groups.json`) and the on-device FASTA/VCF checker (`/sequence`).
 - `/research` cohort table.
 - Global search over 11,456 diseases (plus DisMech extras) and `/d/<MONDO>` pages.
 - 4 deep families covering 45 diseases.

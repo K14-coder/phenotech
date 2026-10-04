@@ -1,0 +1,147 @@
+{
+  "kind": "proposal",
+  "id": "disease:GRIN2B",
+  "title": "A small collaboration proposal to FamilieSCN2A Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At GRIN2B Foundation, we support GRIN2B families, while FamilieSCN2A Foundation supports SCN2A families.",
+          "edge_ids": [
+            "org:grin2b-foundation|serves|disease:GRIN2B",
+            "org:familiescn2a-foundation|serves|disease:SCN2A"
+          ]
+        },
+        {
+          "text": "Published work links both conditions to variants that make a protein do too much or lose function.",
+          "edge_ids": [
+            "disease:GRIN2B|driven_by|mech:gain-of-function",
+            "disease:GRIN2B|driven_by|mech:loss-of-function",
+            "disease:SCN2A|driven_by|mech:gain-of-function",
+            "disease:SCN2A|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar seizure and developmental features, but confidence is 0.45, below 0.5; this is a starting point, not proof of interchangeable needs.",
+          "edge_ids": [
+            "disease:SCN2A|similar_phenotype|disease:GRIN2B"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The GRIN Variant Patient Registry and Simons Searchlight already include people with GRIN2B-related disorders.",
+          "edge_ids": [
+            "asset:grin-variant-patient-registry|covers|disease:GRIN2B",
+            "asset:simons-searchlight|covers|disease:GRIN2B"
+          ]
+        },
+        {
+          "text": "Citizen Health includes SCN2A-related disorders.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:SCN2A"
+          ]
+        },
+        {
+          "text": "We could begin by comparing registry questions and family-facing information rather than combining records.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please help check whether mild microcephaly, delayed sitting and reduced eye contact occur in SCN2A, and review Citizen Health's listed gaps: mild microcephaly, delayed sitting and 15 further symptoms.",
+          "edge_ids": [
+            "disease:SCN2A|similar_phenotype|disease:GRIN2B",
+            "asset:citizen-health|covers|disease:SCN2A"
+          ]
+        },
+        {
+          "text": "We should compare GRIN2B's NMDA receptor biology with the neuronal firing and sodium-channel activity listed on the SCN2A side, and confirm whether Citizen Health accepts related conditions.",
+          "edge_ids": [
+            "gene:GRIN2B|participates_in|mech:nmda-receptor-activity",
+            "asset:citizen-health|covers|disease:SCN2A"
+          ]
+        },
+        {
+          "text": "The suggestion that one working gene copy is insufficient in both conditions is atlas-inferred, unverified and below 0.5 confidence.",
+          "edge_ids": [
+            "vg:GRIN2B:splice|has_effect|mech:haploinsufficiency",
+            "vg:SCN2A:splice|has_effect|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "Before joint work, let's review individual variant effects and the therapy-evidence questions below.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send FamilieSCN2A Foundation one inquiry asking whether the Dragonfly patient registry could include GRIN2B-related disorders, without assuming eligibility.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Could a follow-up review capture the published evidence flagged but not encoded in the atlas for GRIN2B (memantine, L-serine, radiprodil), SLC2A1 (ketogenic diet, triheptanoin) and CACNA1A, solely for discussion with a neurologist?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants increase activity, impair the protein's chemical activity, or cause loss of function, and how can published functional measurements clarify this?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear FamilieSCN2A Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome a small registry-focused conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "Both conditions have published links to increased and reduced protein function.",
+          "edge_ids": [
+            "disease:GRIN2B|driven_by|mech:gain-of-function",
+            "disease:GRIN2B|driven_by|mech:loss-of-function",
+            "disease:SCN2A|driven_by|mech:gain-of-function",
+            "disease:SCN2A|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "Could Dragonfly potentially include GRIN2B-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "May we start this month by clarifying eligibility and questions needing review?",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of GRIN2B Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:09:07.103Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}
