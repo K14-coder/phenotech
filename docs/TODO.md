@@ -15,6 +15,8 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P0: submission blockers
 
+- [~] (claimed by main-session web agent, 2026-10-04) Smooth guided tour: gliding spotlight and caption, smooth scroll before moving, overlay kept across route changes with a loading state and prefetch, reduced-motion cross-fades, keyboard, 3 s fallback.
+
 - [x] (web agent, commits a7f6a4f + atlas controls commit) **Rename to Phenotech** everywhere (site, emails, worker, docs; `EMAIL_FROM` on Vercel is already "Phenotech <no-reply@mehro.ch>") **plus atlas controls:** hop-depth slider from the searched/focused item, toggles to hide link types and factor links, hide node types and individual nodes, lens links limited to the shown neighbourhood.
 
 - [ ] **(you, later)** Make the repo public before submission (team decision: later). The GitHub repo `K14-coder/phenotech` is private for now. Either make it public, or share it the way Hack-Nation asks. Run a final secret scan before making it public (see KNOWLEDGE.md → "Secret scan").
