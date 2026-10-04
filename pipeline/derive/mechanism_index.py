@@ -44,6 +44,8 @@ CLASS_LABEL = {"mech:loss-of-function": "loss of function", "mech:haploinsuffici
 G2P_URL = "https://www.ebi.ac.uk/gene2phenotype/lgd/{}"
 REACTOME_URL = "https://reactome.org/content/detail/{}"
 HI_TEXT = {3: "sufficient", 2: "some"}
+# used when global_entries.json predates its "mondo_replaced" map (from mondo-base.obo replaced_by)
+MONDO_REPLACED_FALLBACK = {"MONDO:0011794": "MONDO:0100135"}
 
 # ---------------------------------------------------------------- pathway rule
 MID_DEPTH = 3          # top-level Reactome pathway = depth 0; e.g. Metabolism(0) > Metabolism of lipids(1)
@@ -133,9 +135,14 @@ def main():
     validity = defaultdict(list)
     join_stats = Counter()
 
+    # G2P and ClinGen still cite some obsolete MONDO ids (Dravet: MONDO:0011794 -> MONDO:0100135)
+    replaced = {**MONDO_REPLACED_FALLBACK, **G.get("mondo_replaced", {})}
+
     def attach_targets(mondo, mims, gene):
         if mondo and mondo in by_mondo:
             return [mondo], "MONDO"
+        if mondo and replaced.get(mondo) in by_mondo:
+            return [replaced[mondo]], "MONDO (obsolete id replaced_by)"
         hits = set().union(*(by_omim.get(m, set()) for m in mims)) if mims else set()
         if len(hits) == 1:
             return list(hits), "OMIM"
@@ -205,6 +212,7 @@ def main():
                 continue
             hi_dis = (r.get("Haploinsufficiency Disease ID") or "").strip()
             targets = set()
+            hi_dis = hi_dis if hi_dis in by_mondo else replaced.get(hi_dis, hi_dis)
             if hi_dis in by_mondo:
                 targets.add(hi_dis)
             for k in by_gene_single.get(sym, ()):   # gene-level score: only dominant entries of that gene

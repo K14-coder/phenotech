@@ -5,6 +5,8 @@
     curl -o data/raw/downloads/opentargets/drug_molecule.parquet \
       https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/latest/output/drug_molecule/00000000.parquet
     uv run --with pyarrow --with pandas python3 pipeline/ingest/direction_build.py      # ~20 s, offline after download
+    python3 pipeline/ingest/direction_build.py --curated-only   # no downloads: re-classify only the atlas'
+                                                                # therapies, reusing the ChEMBL table already in drug_direction.json
 
 Writes data/derived/direction/gene_direction.json and drug_direction.json (each with sources).
 
@@ -35,10 +37,9 @@ import csv
 import json
 import pathlib
 import re
+import sys
 import time
 from collections import defaultdict
-
-import pandas as pd
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 RAW = ROOT / "data/raw/downloads"
@@ -192,6 +193,8 @@ def graph_side(graph):
 
 # ---------------------------------------------------------------------------------- drugs
 def drug_side(sym_of_ens):
+    import pandas as pd
+
     moa = pd.read_parquet(RAW / "opentargets/drug_mechanism_of_action.parquet")
     mol = pd.read_parquet(RAW / "opentargets/drug_molecule.parquet")
     parent = {}
@@ -247,6 +250,18 @@ TARGET_OVERRIDE = {
 }
 
 
+# Drugs with no ChEMBL mechanism record and no direction word in their summary: direction from the literature.
+# Each quote is verbatim from the PubMed abstract or title it cites.
+CURATED_DIRECTION = {
+    "therapy:relutrigine": ("decrease", ["SCN2A", "SCN8A"], {
+        "pmid": "35037706", "doi": "10.1111/epi.17149",
+        "quote": "The novel persistent sodium current inhibitor PRAX-562 has potent anticonvulsant activity"}),
+    "therapy:nbi-921352": ("decrease", ["SCN8A"], {
+        "pmid": "40808385", "doi": "10.4103/NRR.NRR-D-25-00260",
+        "quote": "the selective Nav1.6 inhibitor NBI-921352"}),
+}
+
+
 def curated_therapies(graph, chembl_by_name=None):
     """Classify the atlas' own therapy nodes from modality + summary text. The basis is recorded."""
     out = {}
@@ -295,6 +310,9 @@ def curated_therapies(graph, chembl_by_name=None):
                         genes = sorted({t for x in acts if x["direction"] == dr for t in x["targets"]})
                         basis = f"ChEMBL MoA by name ({hit['name']}): " + "; ".join(sorted({x['action_type'] + ' ' + x['target_name'] for x in acts}))[:200]
                     break
+        if not dr and n["id"] in CURATED_DIRECTION:
+            dr, genes, ref = CURATED_DIRECTION[n["id"]]
+            basis = f"literature (PMID:{ref['pmid']}): \"{ref['quote']}\""
         if re.search(r"substrate reduction|slows production", sl):
             dr, basis, genes = None, "substrate reduction: acts on an upstream enzyme, not on the disease gene", []
         out[n["id"]] = {"label": n.get("label"), "modality": mod, "direction": dr, "targets": genes,
@@ -302,7 +320,29 @@ def curated_therapies(graph, chembl_by_name=None):
     return out
 
 
+def curated_only():
+    """Re-classify the atlas therapies without the raw downloads; the ChEMBL/DrugBank table is reused as is."""
+    path = OUTD / "drug_direction.json"
+    out = json.load(open(path))
+    by_name = {}
+    for v in out["drugbank"].values():
+        if v.get("name"):
+            by_name.setdefault(v["name"].lower(), v)
+    cur = curated_therapies(json.load(open(ROOT / "data/graph.json")), by_name)
+    out["curated"] = cur
+    out["counts"]["curated_with_direction"] = sum(1 for v in cur.values() if v["direction"])
+    out["counts"]["curated_total"] = len(cur)
+    out["sources"]["curated_literature"] = "CURATED_DIRECTION in pipeline/ingest/direction_build.py (PubMed, verbatim quotes)"
+    out["curated_refreshed"] = time.strftime("%Y-%m-%d")
+    path.write_text(json.dumps(out, separators=(",", ":")))
+    print(json.dumps(out["counts"]))
+    for k, v in cur.items():
+        print(f"  {k:45s} {v['direction']!s:9s} {v['targets']} | {v['basis']}")
+
+
 def main():
+    if "--curated-only" in sys.argv:
+        return curated_only()
     t0 = time.time()
     OUTD.mkdir(parents=True, exist_ok=True)
     sym_of_ens = {}
@@ -358,7 +398,8 @@ def main():
                             "(https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/latest/output/drug_mechanism_of_action/); "
                             "ChEMBL REST API returned HTTP 500 at build time",
                             "drugbank_ids": "Open Targets drug_molecule crossReferences (source drugbank)",
-                            "curated": "data/graph.json therapy nodes, classified from modality + summary (basis per therapy)"},
+                            "curated": "data/graph.json therapy nodes, classified from modality + summary (basis per therapy)",
+                            "curated_literature": "CURATED_DIRECTION in pipeline/ingest/direction_build.py (PubMed, verbatim quotes)"},
                 "action_map": {"decrease": sorted(DECREASE), "increase": sorted(INCREASE)},
                 "counts": {"moa_rows": n_moa, "drugbank_drugs": len(drugs), **dcount,
                            "curated_with_direction": sum(1 for v in cur.values() if v["direction"]),

@@ -483,6 +483,9 @@ def main():
         "hpo_names": {t: hterms[t]["name"] for t in {t for e in entries.values() for t in e["direct"]} | set(ic)
                       if t in hterms},
         "ancestors": {t: sorted(anc(t)) for t in {t for e in entries.values() for t in e["direct"]}},
+        # obsolete MONDO -> live replacement, so mechanism_index.py can join sources that still cite old ids
+        "mondo_replaced": {mid: t["replaced_by"] for mid, t in mondo.items()
+                           if t["obsolete"] and t.get("replaced_by") in mondo and not mondo[t["replaced_by"]]["obsolete"]},
     }, compact=True)
 
     # ---------------------------------------------------------------- write shards
