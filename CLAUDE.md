@@ -41,7 +41,7 @@ Every literature quote is string-verified against a stored source. Every automat
 |---|---|---|
 | Genes and diseases | HGNC, UniProt, Ensembl (MANE Select CDS and exons, GRCh37/38), MONDO, OMIM ids, Orphanet/Orphadata, Monarch, Open Targets | `pipeline/biology`, `pipeline/families/*`, `pipeline/derive` |
 | Symptoms | HPO annotations (IC-weighted over about 12.9k diseases) | `hpo.py`, `global_index.py` |
-| Variants | ClinVar pathogenic and likely pathogenic records (E-utilities), genomic positions for VCF | `clinvar.py`, `data/derived/variants.json`, `variant_positions.json` |
+| Variants | Full ClinVar `variant_summary` (387k P/LP, 13,292 genes), gnomAD v4.1 constraint, AlphaMissense gene means | `clinvar.py`, `data/derived/variants.json`, `variant_positions.json` |
 | Mechanisms | PubMed abstracts (curated, quote-verified), GO (QuickGO, go-basic), Reactome, Gene2Phenotype, ClinGen, DisMech (Monarch, 3,238 records, 143k snippets) | families, `data/derived/global/mechanism`, `dismech/` |
 | Protein structure and families | AlphaFold all-vs-all TM-align (17,578 pairs), InterPro, Pfam, PANTHER | `data/derived/mechsim.json` (colleague), `data/derived/features/` |
 | Tissue | Human Protein Atlas tissue specificity, HPO organ systems | `data/derived/features/` |
@@ -78,9 +78,11 @@ Every literature quote is string-verified against a stored source. Every automat
 - **Community:** accounts, onboarding, inbox, researcher announcements with moderation, relayed contact, export and delete. Email code is in, but needs the Resend env vars.
 - **Research queue:** OpenAI or Claude, BYOK in the browser or the local worker (`/worker/rare-atlas-worker.mjs`).
 
-**In progress (Oct 4, morning)**
-- Live daily trial and grant alerts for followed diseases.
-- Contact phones and emails for organisations and trial central contacts (`data/derived/contacts/`).
+**Also done (Oct 4)**
+- Live daily ClinicalTrials.gov and NIH RePORTER alerts for followed diseases (crons in `web/vercel.json`; `CRON_SECRET` is set).
+- Published contacts: 210 orgs and 1,463 recruiting-trial central contacts (`data/derived/contacts/`, privacy-validated).
+- Full ClinVar (387k P/LP in 13,292 genes) for the genome-wide VCF and variant lookup; gnomAD constraint and AlphaMissense as explanatory gene factors.
+- PrimeKG external benchmark (1,300 cases): symptoms carry the cross-gene signal. The global similar lists use phenotype + 0.5·genes + 0.5·pathway (`data/derived/global/similar/`). See `docs/agent-reports/ingest.md`.
 
 **Open**
 1. Resend: run `npx vercel integration add resend` (accept the terms), set `EMAIL_FROM`, decide on a domain, and set `CRON_SECRET`.
