@@ -37,6 +37,8 @@ Keep this file current: tick items when done (with the commit), and add new ones
 
 ## P2: contacts and community
 
+- [ ] Decide whether to show board members who list their own email (5 orgs show 12–19 people). Option: filter `people.json` to contact roles (family support, executive director, founder, president). See `pipeline/contacts/people_review.json`.
+
 - [x] Named contact persons published by organisations (112, `data/derived/contacts/people.json`), Call/Email buttons in every view, "Report or remove a contact" form on /privacy, handled in /admin.
 - [ ] Email: works via Infomaniak SMTP (`no-reply@mehro.ch`, sender "Tasukeru"). Watch the deliverability of the first real alerts. Optionally add SPF/DKIM/DMARC checks for mehro.ch.
 - [ ] Researcher verification beyond the email domain (ORCID sign-in or an institutional confirmation link).
