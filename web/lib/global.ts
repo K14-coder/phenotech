@@ -268,7 +268,7 @@ export interface GlobalMeta {
 export const loadGlobalMeta = () => fetchJson<GlobalMeta>(`${GLOBAL_BASE}/meta.json`);
 
 /** Shard folders under data/derived/global, all bucketed by djb2(id) % 64. */
-export type GlobalShardKind = "neighbours";
+export type GlobalShardKind = "neighbours" | "similar";
 
 export function shardKey(kind: GlobalShardKind, id: string) {
   return `global:${kind}:${bucketOf(id)}`;
@@ -289,6 +289,16 @@ export interface NeighbourEntry {
   inh: string[];
   atlas: AtlasTuple[];
   far: boolean;
+}
+
+/** similar/<bucket>.json (production scorer: symptoms + 0.5 same gene + 0.5 shared pathways), see data/derived/global/README.md */
+export type SimilarTuple = [string, number, number, number, number, string[], string[], string[]];
+export interface SimilarShard {
+  bucket: number;
+  f: string[];
+  t: Record<string, [string, number]>;
+  p: Record<string, string>;
+  d: Record<string, SimilarTuple[]>;
 }
 
 export interface NeighbourShard {

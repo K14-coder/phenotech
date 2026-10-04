@@ -308,6 +308,70 @@ const writeShards = (dir, entries) => {
       console.log(`[sync-data] contacts: ${Object.keys(orgs).length} organisations, ${Object.keys(trials).length} recruiting studies (names dropped)`);
     } else if (existsSync(cdst)) rmSync(cdst, { recursive: true, force: true });
   }
+  // full ClinVar P/LP shards (data/derived/ingest/clinvar/<djb2(gene)%64>.json), loaded one shard at a time by
+  // /sequence and /variant, plus a position -> gene interval index built from their exact keys, so a VCF line
+  // finds its gene shard by position alone
+  {
+    const idir = join(dataRoot, "derived", "ingest");
+    const cvDst = join(webRoot, "public", "data", "derived", "ingest", "clinvar");
+    const nCv = copyTreeAll(join(idir, "clinvar"), cvDst);
+    if (nCv) {
+      const spans = { GRCh38: new Map(), GRCh37: new Map() };
+      for (const f of readdirSync(cvDst).filter((x) => x.endsWith(".json"))) {
+        const shard = readJson(join(cvDst, f));
+        const F = Object.fromEntries((shard?.f ?? []).map((k, i) => [k, i]));
+        for (const [gene, g] of Object.entries(shard?.g ?? {})) {
+          for (const v of g.v ?? []) {
+            for (const asm of ["GRCh38", "GRCh37"]) {
+              const key = v[F[asm.toLowerCase()]];
+              if (!key) continue;
+              const [chrom, posS] = key.split(":");
+              const pos = Number(posS);
+              if (!Number.isFinite(pos)) continue;
+              const k = `${chrom}|${gene}`;
+              const cur = spans[asm].get(k);
+              if (!cur) spans[asm].set(k, [pos, pos]);
+              else {
+                if (pos < cur[0]) cur[0] = pos;
+                if (pos > cur[1]) cur[1] = pos;
+              }
+            }
+          }
+        }
+      }
+      const out = { note: "chrom -> [start, end, gene] sorted by start: span of each gene's ClinVar P/LP keys (+-200 bp)", GRCh38: {}, GRCh37: {} };
+      for (const asm of ["GRCh38", "GRCh37"]) {
+        for (const [k, [a, b]] of spans[asm]) {
+          const [chrom, gene] = k.split("|");
+          (out[asm][chrom] ??= []).push([Math.max(1, a - 200), b + 200, gene]);
+        }
+        for (const c of Object.keys(out[asm])) out[asm][c].sort((x, y) => x[0] - y[0]);
+      }
+      mkdirSync(join(webRoot, "public", "data", "derived", "web"), { recursive: true });
+      writeFileSync(join(webRoot, "public", "data", "derived", "web", "clinvar_genes.json"), JSON.stringify(out));
+      console.log(`[sync-data] copied ${nCv} ClinVar shard(s) and wrote web/clinvar_genes.json (${spans.GRCh38.size} gene spans on GRCh38)`);
+    }
+    // explanatory gene factors (gnomAD constraint, ClinVar spectrum, AlphaMissense), sharded by djb2(gene)%64
+    const cons = readJson(join(idir, "constraint.json"));
+    const spec = readJson(join(idir, "clinvar_gene_spectrum.json"));
+    const am = readJson(join(idir, "alphamissense_gene.json"));
+    if (cons || spec || am) {
+      const CF = Object.fromEntries((cons?.f ?? []).map((k, i) => [k, i]));
+      const genesAll = new Set([...Object.keys(cons?.genes ?? {}), ...Object.keys(spec?.genes ?? {}), ...Object.keys(am?.genes ?? {})]);
+      const r3 = (x) => (typeof x === "number" ? Math.round(x * 1000) / 1000 : null);
+      writeShards(
+        join(webRoot, "public", "data", "derived", "web", "factors"),
+        [...genesAll].map((g) => {
+          const c = cons?.genes?.[g];
+          const sp = spec?.genes?.[g];
+          const a = am?.genes?.[g];
+          return [g, { pli: c ? r3(c[CF.pLI]) : null, loeuf: c ? r3(c[CF.LOEUF]) : null, misz: c ? r3(c[CF.mis_z]) : null, am: a ? r3(a[0]) : null, n: sp?.n ?? 0, c: sp?.c ?? null }];
+        }),
+      );
+      console.log(`[sync-data] wrote web/factors shards for ${genesAll.size} genes`);
+    }
+    if (existsSync(join(idir, "primekg_eval.json"))) copyJson(idir, join(webRoot, "public", "data", "derived", "ingest"), ["primekg_eval.json"]);
+  }
   const list = (dir) => (existsSync(dir) ? readdirSync(dir).filter((x) => x.endsWith(".json")).sort() : []);
   const available = {
     generated: new Date().toISOString().slice(0, 10),
@@ -321,6 +385,10 @@ const writeShards = (dir, entries) => {
     variant_positions: existsSync(join(webRoot, "public", "data", "derived", "variant_positions.json")),
     eval: existsSync(join(webRoot, "public", "data", "derived", "eval.json")),
     testing_options: existsSync(join(webRoot, "public", "data", "curated", "testing_options.json")),
+    clinvar_full: existsSync(join(webRoot, "public", "data", "derived", "web", "clinvar_genes.json")),
+    factors: existsSync(join(webRoot, "public", "data", "derived", "web", "factors", "0.json")),
+    primekg_eval: existsSync(join(webRoot, "public", "data", "derived", "ingest", "primekg_eval.json")),
+    similar: existsSync(join(webRoot, "public", "data", "derived", "global", "similar", "0.json")),
     contacts: existsSync(join(webRoot, "public", "data", "derived", "contacts", "orgs.json")) || existsSync(join(webRoot, "public", "data", "derived", "contacts", "trials.json")),
   };
   mkdirSync(join(webRoot, "public", "data", "derived", "web"), { recursive: true });

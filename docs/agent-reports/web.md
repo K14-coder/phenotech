@@ -931,3 +931,55 @@ The landscape step is gone from impact.json, and the "awaiting expert figure" co
 **Fixed along the way:** 748 px of sideways scroll on the Research view at 390 px (the ClinVar variant-type grid).
 
 **Checks:** `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Full ClinVar, gene factors, similar diseases, PrimeKG on /method
+
+### Full ClinVar in /sequence and /variant
+- **Sync:** `sync-data.mjs` copies all 64 shards, unfiltered, to `public/data/derived/ingest/clinvar/` (43 MB raw). It also writes `web/clinvar_genes.json` (361 KB), which holds, per assembly and chromosome, the span of each gene's exact ClinVar keys ±200 bp. That covers 6,206 genes; genes with only CNV-style records have no exact keys to match anyway.
+- **Lookup library:** `web/lib/clinvar.ts` finds the genes covering a position by binary search, with a running maximum of span ends. It loads shards lazily, one at a time, and caches them.
+- **VCF check (`/sequence`)** runs in two passes:
+  1. Read every line. Keep only variants inside an atlas gene or a ClinVar gene span.
+  2. Group by gene, fetch only the shards those genes need (24 genes at a time), and match exact `chr:pos:ref:alt` keys.
+- **Results:**
+  - The 45 atlas genes keep their c./p. mapping and atlas context.
+  - Other genes are listed only when they match. They show ClinVar's own name, consequence, class and stars, and a link to the record.
+  - The summary says how many genes and files were checked.
+  - The printout includes these matches.
+- **Report-line lookup (`/variant`):** a gene outside the atlas falls back to that gene's shard. It matches the c. change, treating `c.1100delC` and `c.1100del` as the same, then the protein change.
+
+### Explanatory gene factors
+- **Data:** sync-data builds `web/factors/<djb2(gene)%64>.json` (2.4 MB in total; each shard is small) for 25,335 genes. It draws on `constraint.json`, `clinvar_gene_spectrum.json` and `alphamissense_gene.json`.
+- **Labels:** the rules in the global README's "Gene explanatory factors" section.
+- **Display:** `components/disease/GeneFactors.tsx`, titled "What the gene tells us". It shows:
+  - gnomAD constraint (LOEUF and pLI) with a plain label;
+  - the ClinVar mutation spectrum as a stacked bar with a legend;
+  - the AlphaMissense mean with a plain label.
+- **Placement:** the Research and Industry views and Simple's "Learn more" on atlas pages, and every view except Detailed on `/d/` pages.
+- **Wording:** each panel says these are explanations, not a score, because they did not improve rankings on the PrimeKG test.
+
+### Similar diseases on /d/
+- **Source:** `global/similar/<bucket>.json`, flag `available.similar`.
+- **Display:** "Diseases most similar to this one" lists the top 10, each with its reasons as chips: "same gene: X", shared distinctive symptoms, and shared Reactome pathways linked to Reactome.
+- **Coverage:** rows with too few symptoms for `neighbours/` now get a list too.
+- **Fallback:** the old symptom-only list.
+
+### /method
+- **"Tested on 1,300 external cases":** PrimeKG, `primekg_eval.json`.
+  - Three big numbers: 0.37 for the site's scorer (symptoms, same gene and pathways), 0.32 for symptoms alone, and 49% in the top 5.
+  - A table of 10 single factors: MRR, top 5, and MRR on the 644 cases where the diseases share no gene.
+  - The plain conclusion.
+- **"What we collect":** now also lists full ClinVar, gene factors and similar diseases.
+
+### Tests
+**VCF test:** the synthetic `STXBP1_c.1162C>T_GRCh38.vcf` plus two lines on chr22, CHEK2 c.1100delC (GRCh38 22:28695868 AG>A) and a nearby change that is not in ClinVar.
+- Result: 4 variants checked; 2 in atlas genes; 2 known disease-causing.
+  - STXBP1 c.1162C>T, p.Arg388Ter, is Pathogenic (VCV000006730), with the atlas variant group.
+  - CHEK2 c.1100del, p.Thr367fs, matched with ClinVar's name `NM_007194.4(CHEK2):c.1100del (p.Thr367fs)` and variation 128042: pathogenic, several labs agree.
+  - The nearby change was not listed.
+- Only 2 shard files were fetched (buckets 39 and 18).
+
+**`/variant?q=CHEK2 c.1100delC`:** "Found in ClinVar", with the same record.
+
+**UI:** at 1440 and 390 px there is no sideways scroll and no console errors on `/sequence`, `/variant`, `/d/MONDO:0010679` (Research and Simple), `/disease/STXBP1` (Research and Simple) and `/method`.
+
+**Checks:** `tsc` and `eslint` are clean; one `npm run build` passed.

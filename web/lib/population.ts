@@ -112,6 +112,10 @@ export interface Available {
   eval?: boolean;
   testing_options?: boolean;
   contacts?: boolean;
+  clinvar_full?: boolean;
+  factors?: boolean;
+  primekg_eval?: boolean;
+  similar?: boolean;
 }
 
 async function fetchJson<T>(url: string): Promise<T> {

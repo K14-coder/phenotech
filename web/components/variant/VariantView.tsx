@@ -9,6 +9,8 @@ import { EvidenceChip, WarnGlyph } from "../evidence/EvidenceBits";
 import { atlasHref, diseaseHref, neighbors, type GraphIndex } from "@/lib/graph";
 import { useDerived, type ModalityData } from "@/lib/derived";
 import { lookupVariant, type LookupResult, type VariantsData } from "@/lib/variant";
+import { CLS_PLAIN, lookupHgvs } from "@/lib/clinvar";
+import { useResource } from "@/lib/resource";
 import type { AtlasEdge, AtlasNode } from "@/lib/types";
 
 export const EXAMPLE_VARIANT = "NM_003165.6(STXBP1):c.1162C>T (p.Arg388Ter)";
@@ -124,17 +126,8 @@ function Result({ idx, r, scopeNote, modality }: { idx: GraphIndex; r: LookupRes
       </div>
     );
   }
-  if (r.status === "gene_not_in_atlas") {
-    return (
-      <div className="mt-8">
-      <Card title={`${r.query.non_slice_gene} is outside this atlas`}>
-        <p className="text-sm leading-relaxed text-ink-2">
-          The atlas currently covers {idx.graph.nodes.filter((n) => n.type === "gene").length} genes of the synaptic vesicle
-          release machinery. {r.query.non_slice_gene} is not one of them, so the atlas can’t say anything about this variant yet.
-        </p>
-      </Card>
-      </div>
-    );
+  if (r.status === "gene_not_in_atlas" && r.query.non_slice_gene) {
+    return <ClinvarFallback gene={r.query.non_slice_gene} c={r.query.c} p={r.query.p} />;
   }
 
   return (
@@ -363,5 +356,60 @@ function SameGeneCard({ idx, geneId, vgId }: { idx: GraphIndex; geneId: string; 
         <p className="mt-3 text-sm text-ink-3">In the atlas, the other {gene} variant groups point to the same mechanisms as this one.</p>
       )}
     </section>
+  );
+}
+
+const STARS_PLAIN: Record<number, string> = { 4: "practice guideline", 3: "reviewed by an expert panel", 2: "several labs agree", 1: "one lab", 0: "no review criteria" };
+const CV_WORDS: Record<string, string> = {
+  frameshift: "a frameshift: the gene is read out of step, so the protein is usually cut short",
+  nonsense: "an early stop: the protein is usually cut short",
+  missense: "a missense change: one building block of the protein is swapped",
+  splice_canonical: "a change at a splice site, where the gene’s pieces are joined",
+  splice_region: "a change near a splice site",
+  start_lost: "a change that removes the start signal",
+  stop_lost: "a change that removes the stop signal",
+};
+
+/** Genes outside the in-depth atlas: look the line up in the full ClinVar P/LP shard for that gene. */
+function ClinvarFallback({ gene, c, p }: { gene: string; c: string | null; p: string | null }) {
+  const key = `cv-hgvs:${gene}:${c ?? ""}:${p ?? ""}`;
+  const res = useResource(key, () => lookupHgvs(gene, c, p));
+  const d = res?.data;
+  const search = `https://www.ncbi.nlm.nih.gov/clinvar/?term=${encodeURIComponent(`${gene}[gene]${c ? ` AND "${c}"` : ""}`)}`;
+  if (!d) return <p className="mt-8 text-sm text-ink-3">Looking {gene} up in ClinVar…</p>;
+  return (
+    <div className="mt-8 space-y-6">
+      <Card title={d.hits.length ? "Found in ClinVar" : d.geneKnown ? "Not among ClinVar’s pathogenic records" : `${gene} has no disease-causing record in ClinVar`}>
+        {d.hits.length ? (
+          <div className="space-y-3 text-sm leading-relaxed text-ink-2">
+            {d.hits.slice(0, 3).map((h) => (
+              <div key={h.vid}>
+                <p className="break-all font-mono text-[15px] font-semibold text-ink">{h.name}</p>
+                <p>
+                  ClinVar lists it as <b className="font-medium text-ink">{CLS_PLAIN[h.cls]?.toLowerCase()}</b> ({STARS_PLAIN[h.stars] ?? `${h.stars} stars`}).
+                  {CV_WORDS[h.consequence] ? ` It is ${CV_WORDS[h.consequence]}.` : ""}{" "}
+                  <a href={h.url} target="_blank" rel="noopener noreferrer" className="text-accent-700 hover:underline">
+                    See it in ClinVar (variation {h.vid}) ↗
+                  </a>
+                </p>
+              </div>
+            ))}
+            {d.on === "p" && <p className="text-warn-ink">Matched on the protein change only; confirm the DNA change and transcript with your genetic counsellor.</p>}
+          </div>
+        ) : (
+          <p className="text-sm leading-relaxed text-ink-2">
+            {d.geneKnown
+              ? `This change is not among the changes ClinVar lists as disease-causing for ${gene}. That does not mean it is harmless; it may be uncertain, new, or written differently.`
+              : `We found no pathogenic or likely-pathogenic record for ${gene} in ClinVar. Check the spelling of the gene.`}{" "}
+            <a href={search} target="_blank" rel="noopener noreferrer" className="text-accent-700 hover:underline">
+              Search ClinVar ↗
+            </a>
+          </p>
+        )}
+        <p className="mt-3 text-xs text-ink-3">
+          {gene} is outside the genes the atlas maps in depth, so there is no mechanism or treatment view here. Source: ClinVar pathogenic / likely-pathogenic records (2026-09-29).
+        </p>
+      </Card>
+    </div>
   );
 }

@@ -36,6 +36,9 @@ export function CollectionList({ idx }: { idx: GraphIndex }) {
   if (a?.population?.length) rows.push({ what: "How many people, trial readiness and ways to reach families", from: "Orphanet prevalence and the atlas’s own channels", how: "Refreshed when the site is rebuilt." });
   if (a?.dismech) rows.push({ what: "Disease mechanism chains", from: "DisMech (Monarch Initiative)", how: "Refreshed when the site is rebuilt." });
   if (a?.mechanism) rows.push({ what: "Mechanism class per gene", from: "Gene2Phenotype and ClinGen", how: "Refreshed when the site is rebuilt." });
+  if (a?.clinvar_full) rows.push({ what: "ClinVar’s full list of disease-causing changes (387,722 in 13,292 genes), for the DNA checker", from: "ClinVar (NCBI), release of 2026-09-29", how: "Refreshed when the site is rebuilt." });
+  if (a?.factors) rows.push({ what: "Gene constraint, mutation spectrum and AlphaMissense, shown as explanations", from: "gnomAD v4.1, ClinVar, AlphaMissense", how: "Refreshed when the site is rebuilt." });
+  if (a?.similar) rows.push({ what: "Similar diseases for every rare disease with symptoms", from: "HPO symptoms, genes and Reactome pathways, checked against PrimeKG", how: "Refreshed when the site is rebuilt." });
   if (a?.contacts) rows.push({ what: "Published phone numbers and emails of organisations and recruiting studies", from: "Organisations’ own websites and ClinicalTrials.gov", how: "Refreshed when the site is rebuilt; each shows its retrieval date." });
   if (a?.testing_options) rows.push({ what: "How to get a DNA file or a genetic test", from: "Lab, regulator and programme pages, quoted word for word", how: "Refreshed when the site is rebuilt." });
   if (a?.eval) rows.push({ what: "Accuracy evaluation", from: "Computed from the atlas itself", how: "Re-run after curation changes." });

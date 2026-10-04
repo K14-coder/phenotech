@@ -30,7 +30,10 @@ import {
   type GlobalRow,
   type NeighbourEntry,
   type NeighbourShard,
+  type SimilarShard,
 } from "@/lib/global";
+import { loadAvailableOnce } from "@/lib/population";
+import { GeneFactors } from "../disease/GeneFactors";
 import { retry, useResource } from "@/lib/resource";
 import { usePersona } from "@/lib/persona";
 import { loadScale, type ScaleEntry } from "@/lib/population";
@@ -202,15 +205,22 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
           </p>
         ) : !entry ? (
           <p className="max-w-[760px] rounded-lg border border-dashed border-ink-4 px-5 py-4 text-sm leading-relaxed text-ink-2">
-            {row.n} annotated {row.n === 1 ? "symptom" : "symptoms"}: too few to compare with other diseases. The links above lead to what
+            {row.n} annotated {row.n === 1 ? "symptom" : "symptoms"}: too few for the full symptom comparison. The links above lead to what
             is known.
           </p>
         ) : (
           <>
             <Distinctive entry={entry} terms={terms} icCut={icCut} meta={meta} />
-            <Similar entry={entry} terms={terms} icCut={icCut} gi={gi} idx={idx} />
+            <SimilarBest id={row.id} gi={gi} idx={idx} fallback={<Similar entry={entry} terms={terms} icCut={icCut} gi={gi} idx={idx} />} />
             <Closest idx={idx} entry={entry} terms={terms} meta={meta} families={families} compared={comparedFamilies(families, shardRes?.data)} />
           </>
+        )}
+
+        {shardState !== "loading" && shardState !== "error" && !entry && <SimilarBest id={row.id} gi={gi} idx={idx} fallback={null} />}
+        {persona !== "leader" && row.genes.length > 0 && (
+          <div className="max-w-[760px]">
+            <GeneFactors genes={row.genes} />
+          </div>
         )}
 
         <section aria-labelledby="map-h" className="max-w-[760px]">
@@ -419,6 +429,73 @@ function Closest({
           {meta?.far_text && <p className="text-xs leading-relaxed text-ink-3">{meta.far_text}</p>}
         </div>
       )}
+    </section>
+  );
+}
+
+async function loadSimilar(id: string): Promise<SimilarShard | null> {
+  const a = await loadAvailableOnce();
+  if (!a.similar) return null;
+  return loadShard<SimilarShard>("similar", id).catch(() => null);
+}
+
+/** "Diseases most similar to this one" from similar/<bucket>.json, with the reasons; the old symptom-only list is the fallback. */
+function SimilarBest({ id, gi, idx, fallback }: { id: string; gi: GlobalIndex; idx: GraphIndex; fallback: React.ReactNode }) {
+  const load = useCallback(() => loadSimilar(id), [id]);
+  const res = useResource<SimilarShard | null>(shardKey("similar", id), load);
+  if (res?.status === "loading") return <p className="text-sm text-ink-3">Loading similar diseases…</p>;
+  const shard = res?.data;
+  const list = shard?.d[id];
+  if (!shard || !list?.length) return <>{fallback}</>;
+  return (
+    <section aria-labelledby="sim-h" className="max-w-[760px]">
+      <p className={EYEBROW}>Look-alikes</p>
+      <h2 id="sim-h" className={`mt-1 ${H2}`}>
+        Diseases most similar to this one
+      </h2>
+      <p className="mt-1.5 text-sm text-ink-3">
+        Ranked by shared distinctive symptoms, with extra weight for the same gene and shared biological pathways. This combination was checked on
+        1,300 external test cases. It helps you look further; it is not evidence of a shared treatment.
+      </p>
+      <ol className="mt-4 space-y-3">
+        {list.slice(0, 10).map(([nid, score, , , , hpo, sameGenes, paths], i) => {
+          const r = gi.byId.get(nid);
+          const name = r ? capFirst(r.name) : nid;
+          return (
+            <li key={nid} className="flex gap-3">
+              <span className="w-5 shrink-0 pt-0.5 text-right text-sm tabular-nums text-ink-3">{i + 1}</span>
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-baseline gap-x-2">
+                  {r ? (
+                    <Link href={rowHref(r, idx)} className="text-[15px] font-medium text-ink hover:text-accent-700 hover:underline">
+                      {name}
+                    </Link>
+                  ) : (
+                    <span className="text-[15px] font-medium text-ink">{name}</span>
+                  )}
+                  {r && mappedAtlasId(r, idx) && <span className="rounded-full border border-accent-200 px-2 py-0.5 text-[11px] text-accent-700">mapped in depth</span>}
+                  <span className="text-xs tabular-nums text-ink-3">score {score.toFixed(2)}</span>
+                </div>
+                <ul className="mt-1 flex flex-wrap gap-1.5 text-xs">
+                  {sameGenes.length > 0 && <li className="rounded-full bg-accent-50 px-2 py-0.5 font-medium text-accent-900">same gene: {sameGenes.slice(0, 3).join(", ")}</li>}
+                  {hpo.map((h) => (
+                    <li key={h} className="rounded-full bg-subtle px-2 py-0.5 text-ink-2">
+                      {shard.t[h]?.[0] ?? h}
+                    </li>
+                  ))}
+                  {paths.map((pid) => (
+                    <li key={pid}>
+                      <a href={`https://reactome.org/content/detail/${pid}`} target="_blank" rel="noopener noreferrer" className="inline-block rounded-full border border-line px-2 py-0.5 text-ink-2 hover:border-accent-500">
+                        pathway: {shard.p[pid] ?? pid} ↗
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
     </section>
   );
 }

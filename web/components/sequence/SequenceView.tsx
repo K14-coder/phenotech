@@ -12,6 +12,7 @@ import { diseaseHref, type GraphIndex } from "@/lib/graph";
 import { useDerived } from "@/lib/derived";
 import { loadAvailableOnce } from "@/lib/population";
 import { useResource } from "@/lib/resource";
+import { CLS_PLAIN, bucketOfGene as djb2Bucket, genesAt, keyMap, loadGeneSpans, type ClinvarHit } from "@/lib/clinvar";
 import {
   CONSEQUENCE_PLAIN,
   checkSequence,
@@ -95,6 +96,8 @@ interface Row {
   outsideNote?: string;
   genomic?: { assembly: string; chrom: string; pos: number; ref: string; alt: string };
   position?: PositionHit | null;
+  /** exact match in the full ClinVar P/LP shards (any gene) */
+  cv?: ClinvarHit | null;
 }
 
 interface Summary {
@@ -103,6 +106,9 @@ interface Summary {
   pathogenic: number;
   assembly: Assembly | null;
   detected: Assembly | null;
+  /** genes looked up in the full ClinVar shards, and how many shards were fetched */
+  cvGenes: number;
+  shards: number;
 }
 
 export function SequenceView() {
@@ -170,16 +176,23 @@ function Sequence({ idx }: { idx: GraphIndex }) {
     setSummary(null);
     setBusy(true);
     try {
-      const refs = await Promise.all(genes.map((g) => loadGene(g).catch(() => null)));
-      const positions = idxRes?.data?.positions ? await loadPositions() : null;
+      const [refs, positions, cvSpans] = await Promise.all([
+        Promise.all(genes.map((g) => loadGene(g).catch(() => null))),
+        idxRes?.data?.positions ? loadPositions() : Promise.resolve(null),
+        loadGeneSpans(),
+      ]);
       const header: string[] = [];
       let detected: Assembly | null = null;
       let asm: Assembly | null = asmChoice === "auto" ? null : asmChoice;
       let checked = 0;
-      let inGenes = 0;
-      let pathogenic = 0;
-      const out: Row[] = [];
       let spans: { g: GeneRef; chrom: string; start: number; end: number }[] = [];
+      const makeSpans = (a: Assembly) =>
+        refs.filter((g): g is GeneRef => !!g).flatMap((g) => {
+          const sp = geneSpan(g, a, 1000);
+          return sp ? [{ g, ...sp }] : [];
+        });
+      // pass 1: read every line; keep only variants inside an atlas gene or a ClinVar gene span
+      const kept: { v: VcfRecord; atlas: GeneRef | null; cvGenes: string[] }[] = [];
       for await (const line of fileLines(file)) {
         if (!line) continue;
         if (line.startsWith("##")) {
@@ -189,54 +202,60 @@ function Sequence({ idx }: { idx: GraphIndex }) {
         if (line.startsWith("#")) {
           detected = detectAssembly(header);
           asm = asm ?? detected ?? "GRCh38";
-          spans = refs
-            .filter((g): g is GeneRef => !!g)
-            .map((g) => ({ g, s: geneSpan(g, asm!, 1000) }))
-            .filter((x): x is { g: GeneRef; s: { chrom: string; start: number; end: number } } => !!x.s)
-            .map((x) => ({ g: x.g, ...x.s }));
+          spans = makeSpans(asm);
           continue;
         }
         if (!asm) {
           asm = detected ?? "GRCh38";
-          spans = refs.filter((g): g is GeneRef => !!g).flatMap((g) => {
-            const s = geneSpan(g, asm!, 1000);
-            return s ? [{ g, ...s }] : [];
-          });
+          spans = makeSpans(asm);
         }
         for (const v of parseVcfLine(line)) {
           checked++;
-          const hitGene = spans.find((s) => s.chrom === v.chrom && v.pos >= s.start && v.pos <= s.end);
-          const pos = lookupPosition(positions, asm, v);
-          if (hitGene) {
-            inGenes++;
-            const ch = vcfToChange(hitGene.g, asm, v);
-            if (ch && !("outsideCds" in ch)) {
-              const row = { ...describe(hitGene.g.gene, ch), position: pos, tx: hitGene.g.refseq ?? hitGene.g.transcript };
-              if (row.record && /pathogenic/i.test(row.record.classification) && !/benign|uncertain/i.test(row.record.classification)) pathogenic++;
-              else if (pos) pathogenic++;
-              out.push(row);
-            } else
-              out.push({
-                key: `${v.chrom}-${v.pos}-${v.alt}`,
-                gene: hitGene.g.gene,
-                change: null,
-                record: null,
-                lookup: "outside",
-                outsideNote: ch && "outsideCds" in ch ? ch.note : "near the gene but outside its exons",
-                genomic: { assembly: asm, chrom: v.chrom, pos: v.pos, ref: v.ref, alt: v.alt },
-                position: pos,
-              });
-          } else if (pos) {
-            pathogenic++;
-            if (out.length < 300)
-              out.push({ key: `${v.chrom}-${v.pos}-${v.alt}`, gene: null, change: null, record: null, lookup: "outside", outsideNote: "outside the genes the atlas maps in depth", genomic: { assembly: asm, chrom: v.chrom, pos: v.pos, ref: v.ref, alt: v.alt }, position: pos });
+          const atlas = spans.find((sp) => sp.chrom === v.chrom && v.pos >= sp.start && v.pos <= sp.end)?.g ?? null;
+          const cvGenes = genesAt(cvSpans, asm, v.chrom, v.pos);
+          if (atlas || cvGenes.length) kept.push({ v, atlas, cvGenes });
+        }
+      }
+      const a: Assembly = asm ?? "GRCh38";
+      // pass 2: group by gene and fetch only the shards those genes need
+      const needed = [...new Set(kept.flatMap((k) => k.cvGenes))];
+      const maps = new Map<string, Map<string, ClinvarHit>>();
+      for (let i = 0; i < needed.length; i += 24) {
+        const part = needed.slice(i, i + 24);
+        const got = await Promise.all(part.map((g) => keyMap(g, a)));
+        part.forEach((g, j) => maps.set(g, got[j]));
+      }
+      const shards = new Set(needed.map((g) => djb2Bucket(g))).size;
+      let inGenes = 0;
+      let pathogenic = 0;
+      const out: Row[] = [];
+      const extra: Row[] = [];
+      for (const { v, atlas, cvGenes } of kept) {
+        const key = `${v.chrom.replace(/^chr/i, "")}:${v.pos}:${v.ref}:${v.alt}`;
+        const cvGene = cvGenes.find((g) => maps.get(g)?.has(key));
+        const cv = cvGene ? maps.get(cvGene)!.get(key)! : null;
+        const genomic = { assembly: a, chrom: v.chrom, pos: v.pos, ref: v.ref, alt: v.alt };
+        if (atlas) {
+          inGenes++;
+          const pos = lookupPosition(positions, a, v);
+          const ch = vcfToChange(atlas, a, v);
+          if (ch && !("outsideCds" in ch)) {
+            const row = { ...describe(atlas.gene, ch), position: pos, cv, tx: atlas.refseq ?? atlas.transcript };
+            if ((row.record && /pathogenic/i.test(row.record.classification) && !/benign|uncertain/i.test(row.record.classification)) || pos || cv) pathogenic++;
+            out.push(row);
+          } else {
+            if (pos || cv) pathogenic++;
+            out.push({ key: `${v.chrom}-${v.pos}-${v.alt}`, gene: atlas.gene, change: null, record: null, lookup: "outside", outsideNote: ch && "outsideCds" in ch ? ch.note : "near the gene but outside its exons", genomic, position: pos, cv });
           }
+        } else if (cv) {
+          pathogenic++;
+          extra.push({ key: `${v.chrom}-${v.pos}-${v.alt}`, gene: cv.gene, change: null, record: null, lookup: "outside", outsideNote: "in a gene outside the atlas’s in-depth map", genomic, cv });
         }
       }
       setGeneRef(null);
       setSource({ label, synthetic });
-      setSummary({ checked, inGenes, pathogenic, assembly: asm, detected });
-      setRows(out);
+      setSummary({ checked, inGenes, pathogenic, assembly: a, detected, cvGenes: needed.length, shards });
+      setRows([...out, ...extra.slice(0, 300)]);
       showResults();
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
@@ -263,7 +282,7 @@ function Sequence({ idx }: { idx: GraphIndex }) {
   };
 
   const examples = idxRes?.data?.examples ?? [];
-  const printable = rows?.filter((r) => r.change || r.position) ?? [];
+  const printable = rows?.filter((r) => r.change || r.position || r.cv) ?? [];
 
   return (
     <div className="mx-auto w-full max-w-[760px] space-y-8 px-4 pb-24 pt-8 sm:px-6 sm:pt-12">
@@ -440,6 +459,10 @@ function Sequence({ idx }: { idx: GraphIndex }) {
               {summary.inGenes === 1 ? "falls" : "fall"} in genes the atlas maps in depth; {summary.pathogenic} {summary.pathogenic === 1 ? "is" : "are"} known to
               ClinVar as disease-causing.{" "}
               <span className="text-sm text-ink-3">
+                Every variant was compared with ClinVar’s full list of disease-causing changes ({summary.cvGenes.toLocaleString("en-US")}{" "}
+                {summary.cvGenes === 1 ? "gene" : "genes"} near your variants, {summary.shards} {summary.shards === 1 ? "file" : "files"} fetched).{" "}
+              </span>
+              <span className="text-sm text-ink-3">
                 Genome version: {summary.assembly}
                 {summary.detected ? " (detected from the file)" : asmChoice === "auto" ? " (could not detect; assumed)" : " (your choice)"}.
               </span>
@@ -447,7 +470,7 @@ function Sequence({ idx }: { idx: GraphIndex }) {
           )}
           {!rows.length && (
             <p className="text-[16px] text-ink-2">
-              {summary ? "No changes in the genes the atlas maps in depth, and none matched a ClinVar record we hold." : "No differences from the reference coding sequence."}
+              {summary ? "No changes in the genes the atlas maps in depth, and none matched ClinVar’s list of disease-causing changes." : "No differences from the reference coding sequence."}
             </p>
           )}
           <ul className="space-y-3">
@@ -470,6 +493,25 @@ function Sequence({ idx }: { idx: GraphIndex }) {
     </div>
   );
 }
+
+/** ClinVar shard consequence codes, in plain words */
+const CV_CONSEQUENCE: Record<string, string> = {
+  frameshift: "It shifts how the gene is read, so the protein is usually cut short.",
+  nonsense: "It puts an early stop in the gene, so the protein is usually cut short.",
+  missense: "It swaps one building block (amino acid) of the protein.",
+  splice_canonical: "It changes a spot where the gene’s pieces are joined (splice site).",
+  splice_region: "It is close to a spot where the gene’s pieces are joined (splice region).",
+  start_lost: "It removes the gene’s start signal.",
+  stop_lost: "It removes the gene’s stop signal.",
+  inframe_del: "It removes a few building blocks of the protein.",
+  inframe_ins: "It adds a few building blocks to the protein.",
+  inframe_delins: "It replaces a few building blocks of the protein.",
+  inframe_dup: "It repeats a few building blocks of the protein.",
+  synonymous: "It doesn’t change the protein’s building blocks, but ClinVar lists it as disease-causing.",
+  intronic: "It lies between the gene’s coding pieces.",
+  utr5: "It lies just before the gene’s coding part.",
+  utr3: "It lies just after the gene’s coding part.",
+};
 
 const STARS: Record<number, string> = { 4: "practice guideline", 3: "reviewed by an expert panel", 2: "several labs agree", 1: "one lab", 0: "no review criteria" };
 
@@ -511,11 +553,26 @@ function ResultCard({ r, idx }: { r: Row; idx: GraphIndex }) {
         </>
       ) : (
         <>
-          <p className="font-mono text-[15px] font-semibold text-ink">
-            {r.genomic ? `chr${r.genomic.chrom}:${r.genomic.pos} ${r.genomic.ref}>${r.genomic.alt}` : "Change"}
-            {r.gene ? <span className="font-sans text-ink-3"> · {r.gene}</span> : null}
-          </p>
-          <p className="mt-1 text-[16px] text-ink">This change is {r.outsideNote ?? "outside the genes the atlas maps in depth"}.</p>
+          {r.cv ? (
+            <>
+              <p className="font-mono text-[15px] font-semibold text-ink">
+                {r.cv.gene} {r.cv.hgvs}
+                {r.cv.protein ? <span className="text-ink-2"> → {r.cv.protein}</span> : null}
+              </p>
+              <p className="mt-1 text-sm text-ink-3">
+                ClinVar’s name: <span className="break-all font-mono">{r.cv.name}</span> · chr{r.genomic?.chrom}:{r.genomic?.pos} {r.genomic?.ref}&gt;{r.genomic?.alt}
+              </p>
+              <p className="mt-1 text-[16px] text-ink">{CV_CONSEQUENCE[r.cv.consequence] ?? "A change ClinVar lists for this gene."}</p>
+            </>
+          ) : (
+            <>
+              <p className="font-mono text-[15px] font-semibold text-ink">
+                {r.genomic ? `chr${r.genomic.chrom}:${r.genomic.pos} ${r.genomic.ref}>${r.genomic.alt}` : "Change"}
+                {r.gene ? <span className="font-sans text-ink-3"> · {r.gene}</span> : null}
+              </p>
+              <p className="mt-1 text-[16px] text-ink">This change is {r.outsideNote ?? "outside the genes the atlas maps in depth"}.</p>
+            </>
+          )}
         </>
       )}
 
@@ -525,6 +582,13 @@ function ResultCard({ r, idx }: { r: Row; idx: GraphIndex }) {
             ClinVar lists this change as <b className="font-medium text-ink">{r.record.classification}</b> ({STARS[r.record.stars] ?? `${r.record.stars} stars`}).{" "}
             <a href={r.record.url} target="_blank" rel="noopener noreferrer" className="text-accent-700 hover:underline">
               See it in ClinVar ({r.record.accession}) ↗
+            </a>
+          </p>
+        ) : r.cv ? (
+          <p>
+            ClinVar lists this exact change as <b className="font-medium text-ink">{CLS_PLAIN[r.cv.cls]?.toLowerCase()}</b> ({STARS[r.cv.stars] ?? `${r.cv.stars} stars`}).{" "}
+            <a href={r.cv.url} target="_blank" rel="noopener noreferrer" className="text-accent-700 hover:underline">
+              See it in ClinVar (variation {r.cv.vid}) ↗
             </a>
           </p>
         ) : r.position ? (
@@ -606,7 +670,7 @@ function PrintReport({ rows, geneRef, summary, source }: { rows: Row[]; geneRef:
       <h1 style={{ fontSize: "17pt", fontWeight: 600 }}>DNA changes to discuss with our doctor</h1>
       <p style={{ marginTop: "4pt", fontSize: "10pt" }}>
         {geneRef ? `Gene ${geneRef.gene}, transcript ${geneRef.transcript}${geneRef.refseq ? ` (${geneRef.refseq})` : ""}, ${geneRef.assembly}.` : ""}
-        {summary ? ` VCF checked on ${summary.assembly}: ${summary.checked} variants, ${summary.inGenes} in genes mapped in depth.` : ""}
+        {summary ? ` VCF checked on ${summary.assembly}: ${summary.checked} variants, ${summary.inGenes} in genes mapped in depth, all compared with ClinVar P/LP (2026-09-29).` : ""}
         {source?.synthetic ? " SYNTHETIC EXAMPLE, not a real person." : ""}
       </p>
       <table style={{ marginTop: "10pt", width: "100%", borderCollapse: "collapse", fontSize: "10pt" }}>
@@ -623,12 +687,12 @@ function PrintReport({ rows, geneRef, summary, source }: { rows: Row[]; geneRef:
           {rows.map((r) => (
             <tr key={r.key}>
               <td style={{ padding: "3pt", borderBottom: "1px solid #ccc" }}>
-                {r.change ? `${r.tx ?? r.gene}(${r.gene}):${r.change.c}` : r.genomic ? `${r.genomic.assembly} chr${r.genomic.chrom}:g.${r.genomic.pos}${r.genomic.ref}>${r.genomic.alt}` : ""}
+                {r.change ? `${r.tx ?? r.gene}(${r.gene}):${r.change.c}` : r.cv ? r.cv.name : r.genomic ? `${r.genomic.assembly} chr${r.genomic.chrom}:g.${r.genomic.pos}${r.genomic.ref}>${r.genomic.alt}` : ""}
               </td>
               <td style={{ padding: "3pt", borderBottom: "1px solid #ccc" }}>{r.change?.p ?? ""}</td>
-              <td style={{ padding: "3pt", borderBottom: "1px solid #ccc" }}>{r.change?.consequence.replace(/_/g, " ") ?? "outside mapped genes"}</td>
+              <td style={{ padding: "3pt", borderBottom: "1px solid #ccc" }}>{r.change?.consequence.replace(/_/g, " ") ?? r.cv?.consequence.replace(/_/g, " ") ?? "outside mapped genes"}</td>
               <td style={{ padding: "3pt", borderBottom: "1px solid #ccc" }}>
-                {r.record ? `${r.record.classification} (${r.record.accession}) ${r.record.url}` : r.position ? `${r.position.classification} (${r.position.accession}) ${r.position.url}` : "not in the atlas’s ClinVar list"}
+                {r.record ? `${r.record.classification} (${r.record.accession}) ${r.record.url}` : r.cv ? `${CLS_PLAIN[r.cv.cls]} (variation ${r.cv.vid}) ${r.cv.url}` : r.position ? `${r.position.classification} (${r.position.accession}) ${r.position.url}` : "not in the atlas’s ClinVar list"}
               </td>
               <td style={{ padding: "3pt", borderBottom: "1px solid #ccc" }}>{r.record?.variant_group ?? ""}</td>
             </tr>

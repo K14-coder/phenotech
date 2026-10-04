@@ -17,6 +17,7 @@ import { DevonDisease } from "../devon/DevonDisease";
 import { JoinBox } from "../community/JoinBox";
 import { FollowButton } from "../community/AccountBits";
 import { OseiSections } from "../research/OseiSections";
+import { GeneFactors } from "./GeneFactors";
 import { DisMechForAtlas } from "../global/MechanismBits";
 import { atlasHref, clustersOf, clusterSlot, compareHref, diseaseHref, diseaseIdFromParam, pathHref, type GraphIndex } from "@/lib/graph";
 import {
@@ -224,6 +225,7 @@ function Disease({ idx, id, as: persona, embedded = false }: { idx: GraphIndex; 
         {persona === "researcher" && <OseiSections idx={idx} node={node} />}
         {persona === "researcher" && <ResearcherMechanisms idx={idx} ctx={ctx} />}
         {persona === "biotech" && <BiotechNeed ctx={ctx} items={items} ownOrgs={ownOrgs} umbrellaOrgs={umbrellaOrgs} />}
+        {(persona === "researcher" || persona === "biotech" || embedded) && <GeneFactors genes={genes} />}
         {(persona === "researcher" || persona === "biotech" || embedded) && <DisMechForAtlas atlasId={id} />}
         {/* 1 */}
         <section id="shares" aria-labelledby="shares-h" className="scroll-mt-20">
