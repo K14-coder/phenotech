@@ -166,3 +166,7 @@ This runs the biology layer, the community layer, the OpenAI cross-check (when s
 - Mechanism labels are often variant-specific (some SNAP25 and STX1B variants act in opposite directions). The atlas records minority mechanisms rather than forcing one label per gene.
 - Researcher records contain professional, public information only. Names are only merged on matching institution or ORCID.
 - The atlas does not give medical advice. Treatment evidence is shown as published findings to discuss with a clinician.
+
+## Acknowledgements
+
+We thank Woan-Yu Lin (RTW Foundation, Rare Disease Advising Program) and Joe Katakowski for conversations that gave us valuable insight while we built the atlas. Mechanism data from [DisMech](https://dismech.monarchinitiative.org) (Monarch Initiative, BSD-3-Clause).

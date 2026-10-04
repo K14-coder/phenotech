@@ -55,7 +55,6 @@ As of about 02:00 on Oct 4, ChatGPT plan calls fail with "this app's usage limit
    - possibly missing MONDO xrefs: CDKL5 MONDO:0100039, GLUT1 MONDO:0000188, Gaucher MONDO:0018150, NPC MONDO:0018982 and MLD MONDO:0018868;
    - the SCN1A/SCN2A nodes use the obsolete Dravet id MONDO:0011794 (replacement MONDO:0100135).
 3. The STXBP1 enrollment total for Dr. Osei includes Simons Searchlight (multi-disease, 100k), so it reads inflated. Exclude multi-disease registries from the sum.
-4. 10× page: add the landscape-assessment baseline from Woan-Yu Lin (RTW Foundation).
 5. Videos: see `docs/video-script.md`. Refresh the numbers from the `/method` page.
 6. A duplicate Vercel project called "web" was created by mistake. Delete it in the dashboard.
 
