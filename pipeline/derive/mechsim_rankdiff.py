@@ -37,7 +37,8 @@ def rankings(path, top):
 
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    argv = sys.argv[1:]
+    args = [a for k, a in enumerate(argv) if not a.startswith("--") and (k == 0 or argv[k - 1] not in ("--top", "--out"))]
     top = int(sys.argv[sys.argv.index("--top") + 1]) if "--top" in sys.argv else 5
     old_path, new_path = args[0], (args[1] if len(args) > 1 else "data/derived/mechsim.json")
     old, om = rankings(old_path, top)
