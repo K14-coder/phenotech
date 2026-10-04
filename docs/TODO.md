@@ -15,6 +15,8 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P0: submission blockers
 
+- [~] (claimed by main-session web agent, 2026-10-04) **Rename to Phenotech** everywhere (site, emails, worker, docs; `EMAIL_FROM` on Vercel is already "Phenotech <no-reply@mehro.ch>") **plus atlas controls:** hop-depth slider from the searched/focused item, toggles to hide link types and factor links, hide node types and individual nodes, lens links limited to the shown neighbourhood.
+
 - [ ] **(you, later)** Make the repo public before submission (team decision: later). The GitHub repo `K14-coder/rare-disease-atlas` is private for now. Either make it public, or share it the way Hack-Nation asks. Run a final secret scan before making it public (see KNOWLEDGE.md → "Secret scan").
 - [x] (vibrant-babbage, 2026-10-04) Refresh `README.md` for the current product: Tasukeru, depth/breadth tiers, four views, `/sequence` with genome-wide ClinVar, community and research queue, both benchmarks, OpenAI use, updated architecture diagram, acknowledgements.
 - [x] (vibrant-babbage, 2026-10-04) Refresh `docs/video-script.md`: Tasukeru name, current `/method` numbers (⟨…⟩ marks numbers to re-check before recording), the 8-step "Follow a patient group" tour as the 1-minute walkthrough.
