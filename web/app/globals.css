@@ -145,3 +145,28 @@ body {
 .term:focus-visible .term-tip {
   display: block;
 }
+
+/* guided tour caption: a short fade + rise when its content changes (cross-fade only with reduced motion) */
+@keyframes tour-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.tour-card-in {
+  animation: tour-card-in 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  @keyframes tour-card-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
