@@ -13,7 +13,7 @@ cd web && npm install && npm run dev      # http://127.0.0.1:3000 (must be 127.0
 ```
 
 - **Live site:** https://rare-disease-atlas-five.vercel.app (Vercel project `rare-disease-atlas`; `web/` is linked to it).
-- **Deploy:** Vercel's Root Directory is `web`, so deploy from the **repo root**: `npx vercel deploy --prod` (`.vercelignore` skips the raw caches). The commit author must be a member of the Vercel team or the deploy is blocked. Once GitHub is connected, a push to `main` deploys automatically.
+- **Deploy:** Vercel's Root Directory is `web`, so deploy from the **repo root**: `npx vercel deploy --prod` (`.vercelignore` skips the raw caches). The commit author must be a member of the Vercel team or the deploy is blocked. **GitHub is connected (2026-10-04): every push to `main` deploys automatically**. Manual deploys are only for emergencies. Pushes by accounts outside the Vercel team (e.g. Chronify-CH) are blocked by Vercel Hobby until someone on the team pushes.
 - **Data:** run `node web/scripts/sync-data.mjs` after changing anything in `data/`. `predev` and `prebuild` also run it.
 
 ## Not in git: recreate locally
