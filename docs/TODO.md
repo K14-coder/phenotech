@@ -27,6 +27,8 @@ Several Claude agents and people work in parallel. Follow this every time:
   - no console errors;
   - load times.
 
+- [~] (claimed by agent "vibrant-babbage", 2026-10-04 10:40 CEST) No AI buttons that fail on the deployed (precomputed-only) site: audit every AI action, hide or fix the ones without a precomputed result.
+
 ## P1: model and evidence quality
 
 - [x] (web agent, commit 912f426) **Seven-factor view everywhere (must-have):** genes involved, signalling pathway, tissue type, symptoms, protein structure and families, mutation type and molecular consequence. Covers the factor fingerprint on disease pages, per-factor breakdowns on similar-disease and compare views, a factor lens and weights in the atlas, and the use of `data/derived/mechsim.json` (colleague) plus the features and ingest data.
@@ -55,8 +57,8 @@ Several Claude agents and people work in parallel. Follow this every time:
 - [x] Hypotheses recomputed with the cross-family links (10 ideas, now including 4-PBA → SCN1A and rapamycin → NF1).
 - [x] Experiment AI drafts for all 10 current ideas (gpt-6-astra).
 - [x] (vibrant-babbage, 2026-10-04) **Independent Claude re-reading of the cited family abstracts**: 256 abstracts (DEE 47, lysosomal 98, RASopathy 84, cross-family 27), 1,499 claims, all quote-verified by code; agreement with the curators 172/179 (96.1%), 274 new supporting sources on existing edges, 56 synonyms. `READER=claude` in `pipeline/openai/*`, report `docs/agent-reports/claude-extraction.md`.
-  - [ ] Review the 169 Claude candidate edges in `data/build/claude_candidate_edges.json` (not merged; move accepted ones into a curated fragment).
-  - [ ] Review the 8 Claude disagreements in the report: five are failed trials filed as limiting (quinidine/ADNFLE, phenytoin/Dravet, simvastatin and lovastatin/NF1, tipifarnib/NF1); two are the PTPN11 Noonan-GoF vs LEOPARD-LoF split (same paper, PMID:16358218).
+  - [~] (claimed by agent "vibrant-babbage", 2026-10-04 10:40 CEST) Review the 169 Claude candidate edges in `data/build/claude_candidate_edges.json` (not merged; move accepted ones into a curated fragment).
+  - [~] (claimed by agent "vibrant-babbage", 2026-10-04 10:40 CEST) Review the 8 Claude disagreements in the report: five are failed trials filed as limiting (quinidine/ADNFLE, phenytoin/Dravet, simvastatin and lovastatin/NF1, tipifarnib/NF1); two are the PTPN11 Noonan-GoF vs LEOPARD-LoF split (same paper, PMID:16358218).
 - [x] (vibrant-babbage, 2026-10-04) Outreach drafts for all 45 deep diseases (42 new, by Claude through the app's evidence packs and `sanitizeDoc`; `web/scripts/agent-ai.mjs`; 0 citations dropped).
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Phenotech. Count steps, time and errors; put the result on `/impact`.
