@@ -51,6 +51,10 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 
 ## Data traps
 
+- **Cross-family links come from the literature, not GO.** QuickGO over all 45 genes found no TOR-signalling or ER-stress annotation at all, and MAPK cascade only for the core RAF/MEK/RAS genes. LZTR1, RIT1, SOS1, CBL and SYNGAP1 reach the MAPK cascade only through functional papers (`data/curated/cross_family.json`).
+- **The connectivity metric ignores `part_of` (mechanism → mechanism) edges.** `transfer_eval.py` links diseases only through `driven_by`, gene `participates_in` and variant-group `has_effect` edges to the *same* node. A hierarchy edge does not create a cross-family link; a gene-level edge does.
+- **One bridge edge can carry a whole family.** SYNGAP1 → MAPK cascade alone makes 8 RASopathies "cross-family". Report bridge counts per edge, not only per disease.
+- **Avoid benchmark leakage when adding mechanism edges.** Never source a disease → target edge from the same paper as a held-out `developed_for` edge. For example, PTPN11 → mTOR from PMID 21339643 would leak the rapamycin–NSML case. Adding shared processes also widens tie sets, which can lower ranks slightly (MEK inhibitors now tie SYNGAP1 and CBL with NF1 and PTPN11).
 - **Disease ids:** deep diseases are gene-defined umbrellas, `disease:<GENE>`; the specific MONDO/OMIM/ORPHA ids sit in xrefs and subtypes. The global index uses MONDO. `atlas_flags.py` links the two.
 - **Sharding:** everything at global scale is sharded by `djb2(id) % 64` (Python and TypeScript match; see `data/derived/global/README.md` for the test vectors).
 - **Duplicate drug nodes across layers** (amifampridine = 3,4-DAP; CAP-002 = AAV-STXBP1) are merged through `overrides.json` → `merge_nodes`.
