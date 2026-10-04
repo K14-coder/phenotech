@@ -3,7 +3,7 @@
 // Per-factor breakdown for one pair of diseases: the 7-segment bar plus the strongest factors in words.
 // Atlas pairs use mechsim; other pairs pass precomputed scores.
 import { useDerived } from "@/lib/derived";
-import { mechsimIndex, mechsimScores, strongest, type FactorKey, type FactorScores, type MechsimData } from "@/lib/factors";
+import { mechsimIndex, mechsimScores, strongest, topTypes, type FactorKey, type FactorScores, type MechsimData } from "@/lib/factors";
 import { FactorBar } from "./FactorBits";
 import { useAtlas } from "../GraphProvider";
 
@@ -34,9 +34,17 @@ export function pairWords(ix: ReturnType<typeof useMechsim>, a: string, b: strin
   if (p?.tm_score != null) words.structure = `similar structure (TM-score ${p.tm_score.toFixed(2)})`;
   const pf = (pa.structure?.pfam ?? []).filter((x) => (pb.structure?.pfam ?? []).includes(x));
   if (pf.length) words.structure = `same protein family: ${ix.data.pfam[pf[0]]?.name ?? pf[0]}${p?.tm_score != null ? ` (TM-score ${p.tm_score.toFixed(2)})` : ""}`;
-  if (p?.mutation != null) words.mutation = `similar mutation types (${Math.round(p.mutation * 100)}%)`;
+  if (p?.mutation != null) words.mutation = mutationWords(pa.mutation?.types, pb.mutation?.types) ?? "similar mix of mutation types";
   if (p?.fate != null) words.fate = `same molecular consequence (${Math.round(p.fate * 100)}%)`;
   return words;
+}
+
+/** What kind of DNA change causes each disease: "both mostly substitutions" or "substitutions vs deletions". */
+export function mutationWords(a: Record<string, number> | null | undefined, b: Record<string, number> | null | undefined): string | null {
+  const ta = topTypes(a, 1)[0];
+  const tb = topTypes(b, 1)[0];
+  if (!ta || !tb) return null;
+  return ta.key === tb.key ? `both mostly ${ta.words}` : `mostly ${ta.words} vs mostly ${tb.words}`;
 }
 
 export function PairFactorsView({ scores, words }: { scores: FactorScores; words?: Partial<Record<FactorKey, string>> }) {

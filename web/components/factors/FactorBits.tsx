@@ -1,7 +1,7 @@
 "use client";
 
 // Small shared pieces of the seven-factor view: the 7-segment bar and the fingerprint table.
-import { FACTORS, type FactorKey, type FactorScores } from "@/lib/factors";
+import { DNA_TYPES, FACTORS, normTypes, type FactorKey, type FactorScores } from "@/lib/factors";
 
 export const FACTOR_COLOR: Record<FactorKey, string> = {
   gene: "#1f5a96",
@@ -147,6 +147,29 @@ export function SpectrumMini({ c, n }: { c: Record<string, number>; n: number })
         {parts
           .filter(([k]) => c[k] / total >= 0.12)
           .map(([k, l]) => `${l} ${Math.round((100 * c[k]) / total)}%`)
+          .join(" · ")}{" "}
+        ({n.toLocaleString("en")} in ClinVar)
+      </span>
+    </span>
+  );
+}
+
+/** Bar of DNA change types (substitution, deletion, duplication, inversion, …) with the main shares in words. */
+export function TypeSpectrumMini({ t, n }: { t: Record<string, number>; n: number }) {
+  const nt = normTypes(t) ?? {};
+  const total = Object.values(nt).reduce((a, b) => a + b, 0) || 1;
+  const parts = DNA_TYPES.filter((d) => nt[d.key]);
+  return (
+    <span className="inline-flex flex-wrap items-center gap-2">
+      <span className="inline-flex h-2.5 w-36 overflow-hidden rounded-full bg-subtle" role="img" aria-label={parts.map((d) => `${d.label} ${Math.round((100 * nt[d.key]) / total)}%`).join(", ")}>
+        {parts.map((d) => (
+          <span key={d.key} title={`${d.label}: ${nt[d.key]}`} style={{ width: `${(100 * nt[d.key]) / total}%`, background: d.color }} />
+        ))}
+      </span>
+      <span className="text-xs text-ink-3">
+        {parts
+          .filter((d) => nt[d.key] / total >= 0.05 || d.key === "inv" || d.key === "trans")
+          .map((d) => `${d.label} ${Math.max(1, Math.round((100 * nt[d.key]) / total))}%`)
           .join(" · ")}{" "}
         ({n.toLocaleString("en")} in ClinVar)
       </span>

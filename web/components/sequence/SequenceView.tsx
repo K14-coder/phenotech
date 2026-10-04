@@ -4,6 +4,7 @@
 // entirely in the browser (lib/sequence.ts); nothing is uploaded. Each change gets HGVS names, a plain
 // consequence, the ClinVar record when the atlas has one, and a one-page report for the doctor.
 import Link from "next/link";
+import { DNA_TYPE_PLAIN, hgvsType } from "@/lib/factors";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useRef, useState } from "react";
 import { WithGraph } from "../GraphProvider";
@@ -533,6 +534,19 @@ function clinvarSearch(r: Row): string {
   return "https://www.ncbi.nlm.nih.gov/clinvar/";
 }
 
+/** Kind of DNA change (substitution, deletion, duplication, insertion, inversion, …) in plain words. */
+function DnaType({ code }: { code: string | null | undefined }) {
+  const plain = code ? DNA_TYPE_PLAIN[code] : undefined;
+  if (!plain) return null;
+  const [label, ...rest] = plain.split(": ");
+  return (
+    <p className="mt-1 text-sm text-ink-2">
+      <span className="rounded bg-subtle px-1.5 py-0.5 text-xs font-semibold uppercase tracking-[0.04em] text-ink-2">{label}</span>{" "}
+      {rest.join(": ").replace(/^./, (x) => x.toUpperCase())}
+    </p>
+  );
+}
+
 function ResultCard({ r, idx }: { r: Row; idx: GraphIndex }) {
   const c = r.change;
   const vg = vgPlain(idx, r.record?.variant_group ?? null);
@@ -546,6 +560,7 @@ function ResultCard({ r, idx }: { r: Row; idx: GraphIndex }) {
             {r.gene} {c.c}
             {c.p ? <span className="text-ink-2"> → {c.p}</span> : null}
           </p>
+          <DnaType code={hgvsType(c.c)} />
           <p className="mt-1 text-[16px] text-ink">{CONSEQUENCE_PLAIN[c.consequence]}</p>
           {c.nearBoundary && c.consequence !== "splice_region" && c.consequence !== "intronic" && (
             <p className="mt-1 text-sm text-ink-3">It is close to an edge where the gene’s pieces are joined (splice region).</p>
@@ -563,6 +578,7 @@ function ResultCard({ r, idx }: { r: Row; idx: GraphIndex }) {
               <p className="mt-1 text-sm text-ink-3">
                 ClinVar’s name: <span className="break-all font-mono">{r.cv.name}</span> · chr{r.genomic?.chrom}:{r.genomic?.pos} {r.genomic?.ref}&gt;{r.genomic?.alt}
               </p>
+              <DnaType code={r.cv.type} />
               <p className="mt-1 text-[16px] text-ink">{CV_CONSEQUENCE[r.cv.consequence] ?? "A change ClinVar lists for this gene."}</p>
             </>
           ) : (

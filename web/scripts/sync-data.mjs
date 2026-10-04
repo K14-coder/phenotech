@@ -400,6 +400,7 @@ const writeShards = (dir, entries) => {
               am: a ? r3(a[0]) : null,
               n: sp?.n ?? 0,
               c: sp?.c ?? null,
+              t: sp?.t ?? null,
               ...(f ? { uni: f[FF.uniprot] ?? null, len: f[FF.length] ?? null, panther: f[FF.panther_family] ?? [], ipr: f[FF.interpro_family] ?? [], pfam: f[FF.pfam] ?? [] } : {}),
               ...(t ? { hpa: t[0] ?? null, tis: t[1] ?? {} } : {}),
             },

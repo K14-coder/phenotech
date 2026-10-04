@@ -5,13 +5,13 @@
 //  - GlobalFingerprint: any disease in the global index (per-gene data + G2P/Reactome mechanism shard + HPO).
 import { useDerived } from "@/lib/derived";
 import { useDirection } from "@/lib/direction";
-import { loadGeneFeatures, loadMechClass, type GeneFeature, type MechClass, type MechsimData } from "@/lib/factors";
+import { loadGeneFeatures, loadMechClass, sumTypes, typeSentence, type GeneFeature, type MechClass, type MechsimData } from "@/lib/factors";
 import { GLOBAL_BASE, bucketOf, type GlobalRow, type NeighbourEntry } from "@/lib/global";
 import type { GraphIndex } from "@/lib/graph";
 import { diseaseContext, phenotypeIc } from "@/lib/insights";
 import { useResource } from "@/lib/resource";
 import type { AtlasNode } from "@/lib/types";
-import { FingerprintTable, SpectrumMini, topSpectrumWords, type FingerprintRow } from "./FactorBits";
+import { FingerprintTable, SpectrumMini, TypeSpectrumMini, topSpectrumWords, type FingerprintRow } from "./FactorBits";
 
 const loaders = new Map<string, () => Promise<Record<string, GeneFeature>>>();
 function geneLoader(joined: string) {
@@ -72,7 +72,7 @@ function sumSpec(feats: GeneFeature[]) {
     n += f.n ?? 0;
     for (const [k, v] of Object.entries(f.c ?? {})) c[k] = (c[k] ?? 0) + v;
   }
-  return n ? { c, n } : null;
+  return n ? { c, n, t: sumTypes(feats) } : null;
 }
 
 function commonRows(genes: string[], feats: GeneFeature[], pfamNames?: MechsimData["pfam"]): FingerprintRow[] {
@@ -139,8 +139,17 @@ function commonRows(genes: string[], feats: GeneFeature[], pfamNames?: MechsimDa
   if (sp)
     rows.push({
       key: "mutation",
-      value: <SpectrumMini c={sp.c} n={sp.n} />,
-      plain: `Most disease-causing changes are ${topSpectrumWords(sp.c) ?? "of mixed types"}.`,
+      value: sp.t ? (
+        <>
+          <TypeSpectrumMini t={sp.t} n={sp.n} />
+          {topSpectrumWords(sp.c) && <span className="mt-0.5 block text-xs text-ink-3">Effect on the protein: mostly {topSpectrumWords(sp.c)}.</span>}
+        </>
+      ) : (
+        <SpectrumMini c={sp.c} n={sp.n} />
+      ),
+      plain: sp.t
+        ? `The disease-causing DNA changes are mostly ${typeSentence(sp.t) ?? "of mixed kinds"}.`
+        : `Most disease-causing changes are ${topSpectrumWords(sp.c) ?? "of mixed types"}.`,
       source: g0 ? { label: "ClinVar", url: `https://www.ncbi.nlm.nih.gov/clinvar/?term=${encodeURIComponent(`${g0}[gene] AND (pathogenic[clinsig] OR likely_pathogenic[clinsig])`)}` } : null,
     });
   return rows;

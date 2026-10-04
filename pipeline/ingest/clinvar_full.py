@@ -268,6 +268,9 @@ def main():
          "keys": SPECTRUM_KEYS, "note": "counts of unique P/LP VariationIDs per gene; f = fraction of n; detail = fine consequence codes",
          "genes": dict(sorted(spec.items()))}, separators=(",", ":")))
     (OUT / "clinvar_meta.json").write_text(json.dumps(meta, indent=1))
+    # per-gene DNA change types ("t": substitution, deletion, inversion, ...) from the shards just written
+    import clinvar_types
+    clinvar_types.main()
     print(json.dumps(meta, indent=1))
     print(f"done in {time.time()-t0:.0f}s")
 

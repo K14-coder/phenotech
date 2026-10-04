@@ -33,7 +33,7 @@ export const FACTORS: FactorDef[] = [
   { key: "tissue", label: "Tissue type", short: "Tissue", edge: "shares_tissue", plain: "Where in the body the gene is most active and where the symptoms point.", sources: "Human Protein Atlas, GTEx v10, HPO anchors" },
   { key: "symptoms", label: "Symptoms", short: "Symptoms", edge: "similar_phenotype", plain: "The signs doctors record. The most distinctive ones count most.", sources: "HPO annotations (information-weighted)" },
   { key: "structure", label: "Protein structure & family", short: "Structure", edge: "similar_protein_structure", plain: "What the protein looks like and which protein family it belongs to.", sources: "AlphaFold (TM-align), Pfam, InterPro, PANTHER, UniProt" },
-  { key: "mutation", label: "Mutation type", short: "Mutation", edge: "similar_mutation_spectrum", plain: "What kinds of DNA changes cause it: early stops, swaps of one building block, deletions…", sources: "ClinVar pathogenic / likely pathogenic" },
+  { key: "mutation", label: "Mutation type", short: "Mutation", edge: "similar_mutation_spectrum", plain: "The kind of DNA change that causes it: a single-letter substitution, a deletion, a duplication, an insertion, an inversion, a translocation, a repeat expansion…", sources: "ClinVar pathogenic / likely pathogenic (variant type)" },
   { key: "fate", label: "Molecular consequence", short: "Consequence", edge: "similar_protein_fate", plain: "What the change does to the protein: missing, too little, poisoning its partners, or overactive.", sources: "G2P, ClinGen dosage, atlas variant-group evidence, direction layer" },
 ];
 
@@ -146,7 +146,10 @@ export interface GeneFeature {
   loeuf: number | null;
   am: number | null;
   n: number;
+  /** molecular consequence counts (missense, frameshift, …) */
   c: Record<string, number> | null;
+  /** DNA change type counts (ClinVar Type: snv, del, dup, ins, indel, inv, trans, cnv_loss, cnv_gain, str, …) */
+  t?: Record<string, number> | null;
   uni?: string | null;
   len?: number | null;
   panther?: string[];
@@ -209,6 +212,100 @@ function spectrumSim(a: Record<string, number> | null, b: Record<string, number>
   return 1 - Math.sqrt(Math.max(0, (kl(P) + kl(Q)) / 2));
 }
 
+// ---------- DNA change types (ClinVar "Type") ----------
+
+/** The kinds of DNA change, in display order: code, label, plural for sentences, colour. */
+export const DNA_TYPES: { key: string; label: string; words: string; color: string }[] = [
+  { key: "snv", label: "Substitution", words: "single-letter substitutions", color: "#1f5a96" },
+  { key: "del", label: "Deletion", words: "deletions", color: "#b07a22" },
+  { key: "dup", label: "Duplication", words: "duplications", color: "#d9a84e" },
+  { key: "ins", label: "Insertion", words: "insertions", color: "#6f97c4" },
+  { key: "indel", label: "Deletion-insertion", words: "deletion-insertions (indels)", color: "#7f520f" },
+  { key: "inv", label: "Inversion", words: "inversions", color: "#8a5aa8" },
+  { key: "trans", label: "Translocation", words: "translocations", color: "#a8436b" },
+  { key: "cnv_loss", label: "Copy-number loss", words: "losses of whole exons or genes", color: "#5f6672" },
+  { key: "cnv_gain", label: "Copy-number gain", words: "extra copies of exons or genes", color: "#8c939e" },
+  { key: "str", label: "Repeat expansion", words: "repeat expansions or contractions", color: "#3d8a6b" },
+  { key: "complex", label: "Complex", words: "complex rearrangements", color: "#a9733b" },
+  { key: "fusion", label: "Gene fusion", words: "gene fusions", color: "#b0566e" },
+  { key: "other", label: "Other", words: "other changes", color: "#c4c9d0" },
+];
+const MECHSIM_TYPE: Record<string, string> = {
+  "single nucleotide substitution": "snv", deletion: "del", duplication: "dup", insertion: "ins",
+  "insertion-deletion (indel)": "indel", inversion: "inv", translocation: "trans", "copy-number loss": "cnv_loss",
+  "copy-number gain": "cnv_gain", "repeat expansion / contraction": "str", "complex rearrangement": "complex", other: "other",
+};
+
+/** Plain meaning of each kind of DNA change, for one variant. */
+export const DNA_TYPE_PLAIN: Record<string, string> = {
+  snv: "Substitution: one DNA letter is swapped for another.",
+  del: "Deletion: one or more DNA letters are missing.",
+  dup: "Duplication: a stretch of DNA is copied twice.",
+  ins: "Insertion: extra DNA letters are added.",
+  indel: "Deletion-insertion: some letters are removed and others put in their place.",
+  inv: "Inversion: a stretch of DNA is flipped end to end.",
+  trans: "Translocation: a piece of DNA has moved to another place in the genome.",
+  cnv_loss: "Copy-number loss: whole exons or the whole gene are missing.",
+  cnv_gain: "Copy-number gain: whole exons or the whole gene are present in extra copies.",
+  str: "Repeat expansion: a short repeated stretch of DNA is longer (or shorter) than usual.",
+  complex: "Complex rearrangement: several kinds of change together.",
+  fusion: "Gene fusion: parts of two genes are joined.",
+};
+
+/** Kind of DNA change from an HGVS c. description (c.123A>G, c.12del, c.12dup, c.12_13insAT, c.12delinsAT, c.12_40inv). */
+export function hgvsType(c: string | null | undefined): string | null {
+  if (!c) return null;
+  if (/delins/.test(c)) return "indel";
+  if (/dup/.test(c)) return "dup";
+  if (/inv/.test(c)) return "inv";
+  if (/ins/.test(c)) return "ins";
+  if (/del/.test(c)) return "del";
+  if (/>/.test(c)) return "snv";
+  return null;
+}
+
+/** Type counts keyed by DNA_TYPES codes (accepts gene-level codes or mechsim's labels). */
+export function normTypes(t: Record<string, number> | null | undefined): Record<string, number> | null {
+  if (!t) return null;
+  const out: Record<string, number> = {};
+  for (const [k, v] of Object.entries(t)) {
+    const code = DNA_TYPES.some((d) => d.key === k) ? k : (MECHSIM_TYPE[k] ?? "other");
+    out[code] = (out[code] ?? 0) + v;
+  }
+  return Object.keys(out).length ? out : null;
+}
+
+/** The leading DNA change types with their share, most common first. */
+export function topTypes(t: Record<string, number> | null | undefined, max = 2): { key: string; words: string; label: string; pct: number }[] {
+  const n = normTypes(t);
+  if (!n) return [];
+  const total = Object.values(n).reduce((a, b) => a + b, 0);
+  return Object.entries(n)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, max)
+    .map(([k, v]) => {
+      const d = DNA_TYPES.find((x) => x.key === k)!;
+      return { key: k, words: d.words, label: d.label, pct: Math.round((100 * v) / total) };
+    });
+}
+
+/** "single-letter substitutions (70%) and deletions (18%)" */
+export function typeSentence(t: Record<string, number> | null | undefined): string | null {
+  const top = topTypes(t, 2);
+  return top.length ? top.map((x) => `${x.words} (${x.pct}%)`).join(" and ") : null;
+}
+
+export const sumTypes = (fs: GeneFeature[]) => {
+  const out: Record<string, number> = {};
+  let any = false;
+  for (const f of fs)
+    for (const [k, v] of Object.entries(f.t ?? {})) {
+      out[k] = (out[k] ?? 0) + v;
+      any = true;
+    }
+  return any ? out : null;
+};
+
 const sumSpectra = (fs: GeneFeature[]) => {
   const out: Record<string, number> = {};
   let any = false;
@@ -245,7 +342,8 @@ export function geneLevelScores(
   return {
     tissue: tissueA.size && tissueB.size ? jacc(tissueA, tissueB) : null,
     structure: famA.size && famB.size ? jacc(famA, famB) : null,
-    mutation: spectrumSim(sumSpectra(fa), sumSpectra(fb)),
+    // by DNA change type, as mechsim's mutation axis; the consequence spectrum only when types are missing
+    mutation: spectrumSim(sumTypes(fa), sumTypes(fb)) ?? spectrumSim(sumSpectra(fa), sumSpectra(fb)),
     fate,
   };
 }
