@@ -1,0 +1,151 @@
+{
+  "kind": "proposal",
+  "id": "disease:SMPD1",
+  "title": "A first collaboration conversation: INPDA and Hunter's Hope Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At INPDA, we support families affected by SMPD1-related disorders—acid sphingomyelinase deficiency (ASMD), also called Niemann-Pick A/B—while Hunter's Hope Foundation supports families affected by Krabbe disease.",
+          "edge_ids": [
+            "org:inpda|serves|disease:SMPD1",
+            "org:hunters-hope-foundation|serves|disease:GALC"
+          ]
+        },
+        {
+          "text": "Both diseases involve a shortage of enzymes in cells’ recycling compartments, and both affected genes help break down fats called sphingolipids.",
+          "edge_ids": [
+            "disease:SMPD1|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency",
+            "gene:SMPD1|participates_in|mech:sphingolipid-catabolism",
+            "gene:GALC|participates_in|mech:sphingolipid-catabolism"
+          ]
+        },
+        {
+          "text": "This shared biology offers a reason to explore collaboration, rather than assume that research approaches will transfer unchanged.",
+          "edge_ids": [
+            "disease:SMPD1|shares_mechanism|disease:GALC"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The National Multicentre Study of the Natural History of Acid Sphingo-myelinase Deficiency in Adults and Children and the International Niemann-Pick Disease Registry already include ASMD.",
+          "edge_ids": [
+            "asset:nct06985212-national-multicentre-study-of-the-natural-histor|covers|disease:SMPD1",
+            "asset:inpdr|covers|disease:SMPD1"
+          ]
+        },
+        {
+          "text": "We could explore lessons from these resources alongside KrabbeCURES, a Krabbe disease data platform run by KrabbeConnect.",
+          "edge_ids": [
+            "asset:nct06985212-national-multicentre-study-of-the-natural-histor|covers|disease:SMPD1",
+            "asset:inpdr|covers|disease:SMPD1",
+            "asset:krabbecures|covers|disease:GALC"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "First, confirm whether KrabbeCURES accepts related conditions; its suggested reuse for ASMD remains unverified.",
+          "edge_ids": [
+            "asset:krabbecures|covers|disease:GALC"
+          ]
+        },
+        {
+          "text": "Check whether elevated tissue sphingomyelin and acute promyelocytic leukemia occur in Krabbe disease, and review elevated circulating lysosphingomyelin and the additional unlisted differences flagged for the platform.",
+          "edge_ids": [
+            "disease:SMPD1|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:SMPD1|shares_mechanism|disease:GALC",
+            "asset:krabbecures|covers|disease:GALC"
+          ]
+        },
+        {
+          "text": "Treat missing records as questions to investigate, not proof that a feature is absent.",
+          "edge_ids": []
+        },
+        {
+          "text": "ASMD involves sphingomyelin buildup; the cited explanation linking Krabbe disease to toxic psychosine buildup is a hypothesis.",
+          "edge_ids": [
+            "disease:SMPD1|driven_by|mech:lysosomal-storage",
+            "disease:GALC|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "The atlas also infers loss of function from certain genetic changes in both diseases, but those links are unverified and below 0.5 confidence.",
+          "edge_ids": [
+            "vg:SMPD1:splice|has_effect|mech:loss-of-function",
+            "vg:GALC:splice|has_effect|mech:loss-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send Hunter's Hope Foundation one inquiry asking whether The Natural History of Infantile Globoid Cell Leukodystrophy could include SMPD1-related disorders, without assuming eligibility or Foundation oversight.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "No open questions are recorded yet in the supplied list.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Hunter's Hope Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of INPDA to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our communities’ diseases share an enzyme-deficiency mechanism.",
+          "edge_ids": [
+            "disease:SMPD1|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Could you help us ask whether The Natural History of Infantile Globoid Cell Leukodystrophy could include SMPD1-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome a discussion of eligibility and differences before going further.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this first conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of International Niemann-Pick Disease Alliance (INPDA)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:21:23.397Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

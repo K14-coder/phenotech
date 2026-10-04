@@ -1,0 +1,151 @@
+{
+  "kind": "proposal",
+  "id": "disease:TPP1",
+  "title": "A small first collaboration: Noah's Hope and BDFA",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At Noah's Hope, we support families affected by TPP1-related disorders (CLN2 disease).",
+          "edge_ids": [
+            "org:noahs-hope|serves|disease:TPP1"
+          ]
+        },
+        {
+          "text": "BDFA supports the wider Batten community; its CLN3 connection is inferred by the atlas rather than explicitly named on its page.",
+          "edge_ids": [
+            "org:batten-disease-family-association|serves|disease:CLN3"
+          ]
+        },
+        {
+          "text": "CLN2 and CLN3 both involve material building up in cells' recycling compartments, called lysosomes.",
+          "edge_ids": [
+            "disease:TPP1|driven_by|mech:lysosomal-storage",
+            "disease:CLN3|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Their symptom similarity is atlas-inferred, with confidence 0.4—below 0.5—not confirmed clinical equivalence.",
+          "edge_ids": [
+            "disease:CLN3|similar_phenotype|disease:TPP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The International DEM-CHILD Database already collects CLN2 natural-history information about how disease changes over time.",
+          "edge_ids": [
+            "asset:nct04613089-natural-history-and-longitudinal-clinical-assess|covers|disease:TPP1"
+          ]
+        },
+        {
+          "text": "The Batten Disease Clinical Research Consortium (BDCRC) and its longitudinal natural-history study are recorded as CLN3 resources, although the cited wording is Batten-wide.",
+          "edge_ids": [
+            "asset:bdcrc|covers|disease:CLN3",
+            "asset:bdcrc-natural-history-study|covers|disease:CLN3"
+          ]
+        },
+        {
+          "text": "Could we explore sharing study-design experience, without assuming that access or eligibility carries over?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please confirm whether BDCRC accepts CLN2 and whether low tissue TPP1 activity, trunk shaking (truncal titubation), and overshooting eye movements occur in CLN3.",
+          "edge_ids": []
+        },
+        {
+          "text": "Please review the additional symptom differences flagged for BDCRC before proposing shared assessments.",
+          "edge_ids": [
+            "asset:bdcrc|covers|disease:CLN3"
+          ]
+        },
+        {
+          "text": "For any wider Gaucher or Pompe collaboration, check low TPP1 activity, pigment buildup outside nerve cells and trunk shaking rather than treating missing records as absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "Before considering the Pompe-focused AMDA Research Grant, verify related-condition eligibility, its additional symptom gaps, and differences involving protein misfolding and glycogen breakdown.",
+          "edge_ids": [
+            "asset:amda-research-grant|covers|disease:GAA"
+          ]
+        },
+        {
+          "text": "Also seek clinician review of possible lysosomal–SNAREopathy symptom confusion and verify community-resource gaps.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send BDFA one eligibility enquiry this month asking whether the BDCRC longitudinal natural-history study could include people with CLN2.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Do lysosomal and SNAREopathy disorders overlap in symptoms enough to be confused clinically?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which lysosomal communities lack a verified patient organisation, registry or research group in the atlas?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Batten Disease Family Association team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of Noah's Hope to explore a modest collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "CLN2 and CLN3 share lysosomal material buildup.",
+          "edge_ids": [
+            "disease:TPP1|driven_by|mech:lysosomal-storage",
+            "disease:CLN3|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Could you help confirm whether the BDCRC longitudinal natural-history study could include CLN2?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome clarification of eligibility and disease-specific assessments before taking this further.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this enquiry.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Noah's Hope",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:25:48.951Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

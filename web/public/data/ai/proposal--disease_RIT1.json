@@ -1,0 +1,141 @@
+{
+  "kind": "proposal",
+  "id": "disease:RIT1",
+  "title": "A shared first step for RIT1-related Noonan syndrome families",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At RASopathies Network, we support RIT1-related Noonan syndrome families; the atlas infers that your Noonan Syndrome Association (UK) community includes them too, although your page does not name RIT1.",
+          "edge_ids": [
+            "org:rasopathies-network|serves|disease:RIT1",
+            "org:noonan-syndrome-association-uk|serves|disease:RIT1"
+          ]
+        },
+        {
+          "text": "RIT1 and some RAF1 changes make proteins do too much, offering a possible basis for collaboration—not proof that families have identical needs.",
+          "edge_ids": [
+            "disease:RIT1|driven_by|mech:gain-of-function",
+            "disease:RAF1|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "The atlas also infers symptom similarities with RAF1, SHOC2 and KRAS disorders, but all three connections have confidence below 0.5.",
+          "edge_ids": [
+            "disease:RAF1|similar_phenotype|disease:RIT1",
+            "disease:SHOC2|similar_phenotype|disease:RIT1",
+            "disease:KRAS|similar_phenotype|disease:RIT1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "PATRAS, the patient-based registry within EURAS, is a starting point; its inclusion of RIT1 families is inferred by the atlas rather than explicitly named.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:RIT1"
+          ]
+        },
+        {
+          "text": "Our contact registry is described as being built, with RIT1 coverage also inferred; the Clinical, Genetic, and Epidemiologic Study of Children and Adults With RASopathies explicitly lists RIT1.",
+          "edge_ids": [
+            "asset:rasopathies-network-contact-registry|covers|disease:RIT1",
+            "study:NCT04888936|studies|disease:RIT1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Before offering PATRAS more widely, let's confirm eligibility, availability and who can authorize sharing.",
+          "edge_ids": []
+        },
+        {
+          "text": "For RAF1, check whether loose skin on palms and soles, a relatively large head, and unusually stretchy skin occur.",
+          "edge_ids": []
+        },
+        {
+          "text": "For SHOC2, check loose palm-and-sole skin, thickening of the heart's left pumping chamber, and fluid around the lungs; for KRAS, check loose palm-and-sole skin, large size at birth for pregnancy length, and stretchy skin.",
+          "edge_ids": []
+        },
+        {
+          "text": "Please verify these recording gaps rather than treating them as confirmed differences.",
+          "edge_ids": []
+        },
+        {
+          "text": "We must distinguish individual variants: published RAF1 evidence includes both increased and impaired protein activity.",
+          "edge_ids": [
+            "disease:RAF1|driven_by|mech:gain-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let's jointly draft one eligibility enquiry to PATRAS about offering registry information to RAF1 families, including the checks above.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Which individual variants are activating, catalytically impaired—less able to perform their usual work—or loss of function?",
+          "edge_ids": []
+        },
+        {
+          "text": "We propose requesting a variant-by-variant table linking genetic records to published functional tests.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Noonan Syndrome Association (UK),",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we explore a small registry collaboration?",
+          "edge_ids": []
+        },
+        {
+          "text": "The atlas links PATRAS to RIT1 families, but that connection is inferred.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:RIT1"
+          ]
+        },
+        {
+          "text": "This month, would you help draft an enquiry about possible RAF1 inclusion?",
+          "edge_ids": []
+        },
+        {
+          "text": "Let's check eligibility and differences before inviting families.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of RASopathies Network (RASopathiesNet USA / UK)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:18:27.712Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

@@ -1,0 +1,176 @@
+{
+  "kind": "proposal",
+  "id": "disease:UNC13A",
+  "title": "A small collaboration proposal to DEE-P Connections",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "UNC13A and SNAP25 help nerve cells prepare to release messages, offering a starting point for sharing knowledge.",
+          "edge_ids": [
+            "gene:UNC13A|participates_in|mech:synaptic-vesicle-priming",
+            "gene:SNAP25|participates_in|mech:synaptic-vesicle-priming",
+            "disease:SNAP25|shares_mechanism|disease:UNC13A"
+          ]
+        },
+        {
+          "text": "The atlas infers DEEP’s SNAP25 connection from a website link, not formal membership; confidence is 0.45, below 0.5.",
+          "edge_ids": [
+            "org:dee-p-connections|serves|disease:SNAP25"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Congenital Muscle Disease International Registry (CMDIR) includes UNC13A families; RARE-X and Simons Searchlight include SNAP25 families.",
+          "edge_ids": [
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:UNC13A",
+            "asset:rare-x-data-collection|covers|disease:SNAP25",
+            "asset:simons-searchlight|covers|disease:SNAP25"
+          ]
+        },
+        {
+          "text": "Citizen Health, ENDD Center, ESCO and the STXBP1 Foundation Grants Program are further STXBP1 resources to explore, not confirmed UNC13A opportunities.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:endd-stxbp1-syngap1-center|covers|disease:STXBP1",
+            "asset:esco-european-stxbp1-consortium|covers|disease:STXBP1",
+            "asset:stxbp1-foundation-grants-program|covers|disease:STXBP1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Confirm related-condition eligibility for every proposed shared resource, including CMDIR; Simons Searchlight’s SNAP25/VAMP2 coverage comes from its website rather than the ClinicalTrials.gov condition list.",
+          "edge_ids": [
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:UNC13A",
+            "asset:rare-x-data-collection|covers|disease:SNAP25",
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:endd-stxbp1-syngap1-center|covers|disease:STXBP1",
+            "asset:esco-european-stxbp1-consortium|covers|disease:STXBP1",
+            "asset:stxbp1-foundation-grants-program|covers|disease:STXBP1",
+            "study:NCT01238250|studies|disease:SNAP25"
+          ]
+        },
+        {
+          "text": "Compare missing symptom fields: EEG central sharp waves, axonal spheroids and 20 more for SNAP25 resources, versus 13 more for STXBP1 resources.",
+          "edge_ids": [
+            "asset:rare-x-data-collection|covers|disease:SNAP25",
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:endd-stxbp1-syngap1-center|covers|disease:STXBP1",
+            "asset:esco-european-stxbp1-consortium|covers|disease:STXBP1",
+            "asset:stxbp1-foundation-grants-program|covers|disease:STXBP1",
+            "asset:simons-searchlight|covers|disease:SNAP25",
+            "study:NCT01238250|studies|disease:SNAP25"
+          ]
+        },
+        {
+          "text": "Check differing mechanisms: altered protein blocking normal protein in both groups, calcium-triggered message release plus one unspecified mechanism for SNAP25, and protein instability/misfolding plus three unspecified mechanisms for STXBP1.",
+          "edge_ids": [
+            "asset:rare-x-data-collection|covers|disease:SNAP25",
+            "asset:citizen-health|covers|disease:STXBP1",
+            "asset:endd-stxbp1-syngap1-center|covers|disease:STXBP1",
+            "asset:esco-european-stxbp1-consortium|covers|disease:STXBP1",
+            "asset:stxbp1-foundation-grants-program|covers|disease:STXBP1",
+            "asset:simons-searchlight|covers|disease:SNAP25",
+            "study:NCT01238250|studies|disease:SNAP25"
+          ]
+        },
+        {
+          "text": "Ask whether central sharp waves, axonal spheroids and intrahepatic inclusion bodies occur in neighboring conditions, especially STX1B.",
+          "edge_ids": []
+        },
+        {
+          "text": "Read both sides of the contested STX1B loss-of-function evidence; UNC13A gain-of-function and SNAP25 loss-of-function interpretations are also contested.",
+          "edge_ids": [
+            "disease:STX1B|driven_by|mech:loss-of-function",
+            "disease:UNC13A|driven_by|mech:gain-of-function",
+            "disease:SNAP25|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "Check for UNC13A and STX1B family groups, consider a family network, and seek clinic or researcher introductions before outreach.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let us jointly draft one CMDIR information note for STX1B families, for clinic-mediated sharing after eligibility checks, without promising enrollment.",
+          "edge_ids": [
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:UNC13A",
+            "disease:UNC13A|driven_by|mech:loss-of-function",
+            "disease:STX1B|driven_by|mech:loss-of-function",
+            "disease:STX1B|shares_mechanism|disease:UNC13A"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Is there a dedicated UNC13A patient organization?",
+          "edge_ids": []
+        },
+        {
+          "text": "Is any interventional trial enrolling people with UNC13A-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "Is there a documented, accessible UNC13A animal or cell model in the atlas?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants increase protein activity, impair its activity, or cause loss of function?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear DEE-P Connections team,",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we explore a modest collaboration?",
+          "edge_ids": []
+        },
+        {
+          "text": "CMDIR already includes UNC13A families.",
+          "edge_ids": [
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:UNC13A"
+          ]
+        },
+        {
+          "text": "We propose drafting an eligibility-checked information note for STX1B families this month.",
+          "edge_ids": []
+        },
+        {
+          "text": "Would you help us shape it and explore clinic introductions?",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of families affected by UNC13A-related disorders",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:26:38.564Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}
