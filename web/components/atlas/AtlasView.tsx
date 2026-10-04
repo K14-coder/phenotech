@@ -9,7 +9,7 @@ import { LeftRail, type SymptomMode } from "./LeftRail";
 import { ClusterPanel, NodePanel, OverviewPanel } from "./AtlasPanels";
 import { clustersOf, clusterSlot, neighbors, type GraphIndex } from "@/lib/graph";
 import { clusterColor } from "@/lib/style";
-import type { AtlasNode, NodeType } from "@/lib/types";
+import { MECHSIM_RELATIONS, type AtlasNode, type NodeType } from "@/lib/types";
 
 const GraphCanvas = dynamic(() => import("./GraphCanvas"), {
   ssr: false,
@@ -63,6 +63,7 @@ function Atlas({ idx }: { idx: GraphIndex }) {
   const [scope, setScope] = useState<Scope>(() => (validFocus && !viewAll ? { mode: "focus", id: validFocus } : { mode: "all" }));
   const [centerRequest, setCenterRequest] = useState<{ id: string; n: number } | null>(() => (validFocus ? { id: validFocus, n: 1 } : null));
   const [fitKey, setFitKey] = useState(1);
+  const [showMechsim, setShowMechsim] = useState(params.get("links") === "mechanistic");
 
   const distinctive = useMemo(() => distinctiveSharedSymptoms(idx), [idx]);
 
@@ -137,6 +138,7 @@ function Atlas({ idx }: { idx: GraphIndex }) {
         for (const id of frontier) {
           for (const nb of idx.adjacency.get(id) ?? []) {
             if (ids.has(nb.other)) continue;
+            if (!showMechsim && MECHSIM_RELATIONS.includes(nb.edge.type)) continue;
             const o = idx.nodeById.get(nb.other);
             if (!o || !(passes(o) || forced.has(o.id))) continue;
             ids.add(o.id);
@@ -150,7 +152,7 @@ function Atlas({ idx }: { idx: GraphIndex }) {
     }
     for (const id of forced) ids.add(id);
     return ids;
-  }, [idx, scope, passes, selectedNode]);
+  }, [idx, scope, passes, selectedNode, showMechsim]);
 
   const hiddenNodeIds = useMemo(() => new Set(idx.graph.nodes.filter((n) => !visibleIds.has(n.id)).map((n) => n.id)), [idx, visibleIds]);
 
@@ -248,6 +250,8 @@ function Atlas({ idx }: { idx: GraphIndex }) {
         distinctiveCount={distinctive.size}
         selectedClusterId={selectedCluster?.id ?? null}
         onSelectCluster={selectCluster}
+        showMechsim={showMechsim}
+        onShowMechsim={setShowMechsim}
       />
       <div className="relative min-w-0 bg-white">
         <h1 className="sr-only">Atlas map</h1>
@@ -262,6 +266,7 @@ function Atlas({ idx }: { idx: GraphIndex }) {
           centerRequest={centerRequest}
           fitKey={fitKey}
           dimOnSelect={!(scope.mode === "focus" && selectedNode?.id === scope.id)}
+          showMechsim={showMechsim}
           onSelectNode={(id) => selectNode(id)}
           onSelectEdge={(id) => openEdge(id)}
         />

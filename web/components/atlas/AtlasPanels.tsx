@@ -15,7 +15,7 @@ import {
   plural,
   relationName,
 } from "@/lib/text";
-import type { AtlasNode, Cluster, RelationType } from "@/lib/types";
+import { MECHSIM_RELATIONS, type AtlasNode, type Cluster, type RelationType } from "@/lib/types";
 import { NodeTypeIcon } from "../NodeTypeIcon";
 import { Term } from "../Term";
 import { EvidenceChip } from "../evidence/EvidenceBits";
@@ -46,7 +46,8 @@ const INVERSE_NAME: Partial<Record<RelationType, string>> = {
 };
 
 function groupName(n: Neighbor) {
-  if (n.edge.type === "shares_mechanism" || n.edge.type === "similar_phenotype") return relationName(n.edge.type);
+  if (n.edge.type === "shares_mechanism" || n.edge.type === "similar_phenotype" || MECHSIM_RELATIONS.includes(n.edge.type))
+    return relationName(n.edge.type);
   return n.dir === "out" ? relationName(n.edge.type) : INVERSE_NAME[n.edge.type] ?? relationName(n.edge.type);
 }
 

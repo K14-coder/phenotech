@@ -281,7 +281,28 @@ export type RelationType =
   | "authored"
   | "funds"
   | "about"
-  | "candidate_for";
+  | "candidate_for"
+  // computed disease-disease links on six mechanistic axes (pipeline/derive/mechsim.py)
+  | "shares_gene"
+  | "shares_pathway"
+  | "shares_tissue"
+  | "similar_mutation_spectrum"
+  | "similar_protein_fate"
+  | "similar_protein_structure"
+  | "shares_pharmacology"
+  | "mechanistically_similar";
+
+/** The computed mechanistic-similarity link types (hidden on the map unless switched on). */
+export const MECHSIM_RELATIONS: readonly RelationType[] = [
+  "shares_gene",
+  "shares_pathway",
+  "shares_tissue",
+  "similar_mutation_spectrum",
+  "similar_protein_fate",
+  "similar_protein_structure",
+  "shares_pharmacology",
+  "mechanistically_similar",
+];
 
 export type EvidenceLevel =
   | "clinical"

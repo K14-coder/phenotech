@@ -11,6 +11,7 @@ const PATHS = {
   beyond: "/data/derived/beyond_slice.json",
   counterexamples: "/data/derived/counterexamples.json",
   impact: "/data/curated/impact.json",
+  mechsim: "/data/derived/mechsim.json",
 } as const;
 export type DerivedName = keyof typeof PATHS;
 

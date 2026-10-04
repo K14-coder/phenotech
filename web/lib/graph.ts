@@ -8,6 +8,7 @@ import type {
   NodeType,
   RelationType,
 } from "./types";
+import { MECHSIM_RELATIONS } from "./types";
 
 // ---------- Index ----------
 
@@ -125,7 +126,9 @@ export function buildIndex(raw: AtlasGraph): GraphIndex {
   graph.edges = keptEdges;
 
   const degree = new Map<string, number>();
-  for (const id of nodeById.keys()) degree.set(id, adjacency.get(id)?.length ?? 0);
+  // the computed mechanistic-similarity overlay does not count towards how connected a node is
+  for (const id of nodeById.keys())
+    degree.set(id, (adjacency.get(id) ?? []).filter((nb) => !MECHSIM_RELATIONS.includes(nb.edge.type)).length);
 
   const clusterById = new Map<string, Cluster>();
   const clustersByNode = new Map<string, Cluster[]>();

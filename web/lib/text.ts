@@ -87,6 +87,14 @@ const RELATION_VERB: Record<RelationType, string> = {
   funds: "funds",
   about: "is about",
   candidate_for: "might be worth testing for",
+  shares_gene: "shares disease genes with",
+  shares_pathway: "acts in the same pathway as",
+  shares_tissue: "affects the same tissues as",
+  similar_mutation_spectrum: "has a similar mix of mutation types to",
+  similar_protein_fate: "does the same thing to its protein as",
+  similar_protein_structure: "has a structurally similar protein to",
+  shares_pharmacology: "has a protein hit by the same compounds as",
+  mechanistically_similar: "is mechanistically similar to",
 };
 
 export const RELATION_NAME: Record<RelationType, string> = {
@@ -110,6 +118,14 @@ export const RELATION_NAME: Record<RelationType, string> = {
   funds: "Funds",
   about: "About",
   candidate_for: "Hypothesis: worth testing",
+  shares_gene: "Same genes",
+  shares_pathway: "Same pathway",
+  shares_tissue: "Same tissue",
+  similar_mutation_spectrum: "Similar mutation types",
+  similar_protein_fate: "Same protein fate",
+  similar_protein_structure: "Similar protein structure",
+  shares_pharmacology: "Same compounds act on both",
+  mechanistically_similar: "Mechanistically similar",
 };
 
 export function relationVerb(e: AtlasEdge): string {

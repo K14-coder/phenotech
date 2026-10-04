@@ -1,12 +1,12 @@
 # Graph build report
 
-Built 2026-10-03T22:20:26+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `openai_extracted.json`.
+Built 2026-10-04T00:23:30+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanistic_links.json`, `openai_extracted.json`.
 
 ## Summary
 
-- **1411 nodes, 2540 edges, 17 clusters, 60 gaps**
-- Edges with at least one source: **2540/2540**
-- Evidence items with a verbatim quote: 1963/3731; quotes string-verified against the stored source: **1963/1963**
+- **1411 nodes, 2950 edges, 17 clusters, 60 gaps**
+- Edges with at least one source: **2950/2950**
+- Evidence items with a verbatim quote: 1963/4141; quotes string-verified against the stored source: **1963/1963**
 - Contested edges (with counter-evidence): 76
 - OpenAI cross-check: 68 cited sources re-read and stamped; 111 new supporting and 2 new contradicting sources added (contradictions wait for human review)
 - Cited sources where the OpenAI reading disagrees with the curators: 8
@@ -24,6 +24,7 @@ Built 2026-10-03T22:20:26+00:00 from `biology.json`, `community.json`, `contribu
 | `family_lysosomal.json` | 416 | 653 |
 | `family_rasopathy.json` | 248 | 548 |
 | `hypotheses.json` | 0 | 5 |
+| `mechanistic_links.json` | 0 | 410 |
 | `openai_extracted.json` | 17 | 57 |
 
 ## Nodes by type
@@ -49,24 +50,32 @@ Built 2026-10-03T22:20:26+00:00 from `biology.json`, `community.json`, `contribu
 - has_effect: 143
 - serves: 124
 - covers: 102
+- shares_pathway: 101
+- similar_protein_fate: 100
 - driven_by: 92
 - tests: 85
 - participates_in: 78
 - similar_phenotype: 75
 - funds: 72
+- shares_tissue: 65
 - about: 64
 - developed_for: 63
 - shares_mechanism: 47
 - causes: 45
+- similar_mutation_spectrum: 41
 - targets: 39
 - maintains: 35
+- shares_gene: 32
+- similar_protein_structure: 32
+- mechanistically_similar: 26
+- shares_pharmacology: 13
 - candidate_for: 5
 
 ## Edges by evidence level
 
 - curated: 1389
+- inferred: 689
 - observational: 403
-- inferred: 279
 - clinical: 274
 - experimental: 190
 - hypothesis: 5

@@ -14,7 +14,7 @@ import { bridgesOf } from "@/lib/bridges";
 import { centralityOf } from "@/lib/glance";
 import { NO_CLUSTER_COLOR, TYPE_FILL, TYPE_SHAPE } from "@/lib/style";
 import { relationName } from "@/lib/text";
-import type { AtlasNode } from "@/lib/types";
+import { MECHSIM_RELATIONS, type AtlasNode } from "@/lib/types";
 
 let registered = false;
 function ensureFcose() {
@@ -52,6 +52,8 @@ export interface GraphCanvasProps {
   fitKey: number;
   /** dim everything outside the selected node's neighbourhood (off for the focus node in focus mode) */
   dimOnSelect?: boolean;
+  /** draw the computed mechanistic-similarity links (off by default; they never shape the layout) */
+  showMechsim?: boolean;
   onSelectNode: (id: string | null) => void;
   onSelectEdge: (id: string) => void;
 }
@@ -109,10 +111,11 @@ function buildElements(idx: GraphIndex): ElementDefinition[] {
     edgeIds.add(e.id);
     const rel = e.label ?? relationName(e.type);
     const bridge = bridges.has(e.id);
+    const mechsim = MECHSIM_RELATIONS.includes(e.type);
     els.push({
       group: "edges",
       data: { id: e.id, source: e.source, target: e.target, conf: e.confidence, rel: bridge ? `Bridge across clusters · ${rel}` : rel },
-      classes: `lvl-${e.evidence_level}${e.status === "contested" ? " contested" : ""}${e.type === "candidate_for" ? " idea" : ""}${(e.attrs as { contributed?: unknown } | undefined)?.contributed ? " contrib" : ""}${bridge ? " bridge" : ""}`,
+      classes: `lvl-${e.evidence_level}${e.status === "contested" ? " contested" : ""}${e.type === "candidate_for" ? " idea" : ""}${(e.attrs as { contributed?: unknown } | undefined)?.contributed ? " contrib" : ""}${bridge ? " bridge" : ""}${mechsim ? " mechsim" : ""}`,
     });
   }
   return els;
@@ -244,6 +247,7 @@ function stylesheet(fontFamily: string): cytoscape.StylesheetJson {
     { selector: "edge.bridge.dim", style: { "underlay-opacity": 0.1 } },
     { selector: "node:selected", style: { "border-width": 3, "border-color": "#153e67", "border-opacity": 1 } },
     { selector: "edge:selected", style: { "line-color": "#1f5a96", width: 3, opacity: 1 } },
+    { selector: "edge.mechsim", style: { "line-style": "dashed", "line-dash-pattern": [2, 4], "line-color": "#7a5ea8", opacity: 0.55 } },
     { selector: ".hidden", style: { display: "none" } },
   ] as unknown as cytoscape.StylesheetJson;
 }
@@ -368,7 +372,7 @@ export default function GraphCanvas(props: GraphCanvasProps) {
         });
       });
       const seed = cy.nodes().not(".hidden");
-      const eles = seed.union(seed.edgesWith(seed));
+      const eles = seed.union(seed.edgesWith(seed).not(".mechsim"));
       try {
         eles.layout({ ...LAYOUT_BASE, randomize: true, animate: false, fit: false } as unknown as cytoscape.LayoutOptions).run();
       } catch {
@@ -393,6 +397,17 @@ export default function GraphCanvas(props: GraphCanvasProps) {
     if (fresh.length > 12) relax(cy, fresh);
     emphasize();
   }, [hiddenNodeIds]);
+
+  // computed mechanistic links: shown only when switched on
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy) return;
+    cy.batch(() => {
+      cy.edges(".mechsim").forEach((e) => {
+        e.toggleClass("hidden", !props.showMechsim);
+      });
+    });
+  }, [props.showMechsim]);
 
   // scope changes: fit everything visible, centred on the focus node if there is one
   useEffect(() => {
