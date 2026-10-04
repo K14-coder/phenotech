@@ -27,7 +27,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P1: model and evidence quality
 
-- [~] (claimed by main-session web agent, 2026-10-04) **Seven-factor view everywhere (must-have):** genes involved, signalling pathway, tissue type, symptoms, protein structure and families, mutation type and molecular consequence. Covers the factor fingerprint on disease pages, per-factor breakdowns on similar-disease and compare views, a factor lens and weights in the atlas, and the use of `data/derived/mechsim.json` (colleague) plus the features and ingest data.
+- [x] (web agent, commit 912f426) **Seven-factor view everywhere (must-have):** genes involved, signalling pathway, tissue type, symptoms, protein structure and families, mutation type and molecular consequence. Covers the factor fingerprint on disease pages, per-factor breakdowns on similar-disease and compare views, a factor lens and weights in the atlas, and the use of `data/derived/mechsim.json` (colleague) plus the features and ingest data.
 
 - [ ] Fix the PTPN11 direction in `data/derived/direction/gene_direction.json`: Noonan PTPN11 is gain of function, and only NSML is loss of function. Split by variant group / subtype (`pipeline/ingest/direction_build.py`).
 
@@ -81,6 +81,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- Web: seven-factor view. Disease fingerprint (7 rows) on atlas and /d/ pages (plain in Simple "Learn more", open in Research/Industry); 7-segment factor bars with the strongest factors in words on closest diseases (atlas) and most similar diseases (/d/); "Seven factors side by side" on /compare; atlas factor lens (Off / All / each factor, width = similarity) and a Research weights panel (tested defaults symptoms 1, genes 0.5, pathway 0.5); "The seven factors" on /method (commit 912f426).
 - README and video script refreshed; Research-view enrollment excludes multi-disease registries; relutrigine and NBI-921352 directions; obsolete-MONDO join in the mechanism layer (vibrant-babbage).
 - Web: direction flag ("Direction fits" / "Direction mismatch", direct target only, per variant group where a gene mixes directions) on disease therapy evidence, idea cards, /approach programmes, /variant and /sequence; AI reviews labelled "Independently reviewed by AI (not a human expert)" and counted separately on /method; direction result on /method (commit 2a3070c).
 - Cross-family biology: RAS → MAPK (LZTR1, RIT1, SOS1, CBL), SYNGAP1 ↔ MAPK/mTOR, mTOR, synaptic plasticity, misfolding (SCN1A, KCNQ2), autophagy; 11/45 → 29/45 diseases cross-linked by a specific mechanism. `docs/agent-reports/cross-family.md`.

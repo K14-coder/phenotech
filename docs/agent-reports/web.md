@@ -1118,3 +1118,33 @@ The header already had a mark: three connected dots in the site's accent colours
   - At 1440 and 390 px: SCN1A in Detailed shows 3 flags (ETX101 and zorevunersen fit; sodium-channel blockers mismatch). SCN2A in Research shows 6 per-group flags. Flags also appear in SCN1A Simple "Learn more", on /approach for STXBP1, on /variant for STXBP1 c.1162C>T, and on the /sequence synthetic VCF.
   - The CBL evidence panel shows the AI review label.
   - No console errors and no sideways scroll; `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Seven-factor view (must-have)
+
+The atlas now shows, everywhere, that it is built on seven factors, always in this order: genes involved · signalling pathway · tissue type · symptoms · protein structure & family · mutation type · molecular consequence. The shared code is `web/lib/factors.ts` (definitions, tested weights, the mechsim index, per-gene similarity) and `web/components/factors/`.
+
+- **Sync** (`sync-data.mjs`):
+  - the `web/factors/<b>.json` gene shards now also carry the UniProt id, length, PANTHER, InterPro and Pfam families (`features/gene_families.json`) and the HPA specificity and enriched tissues (`features/gene_tissue.json`): 25,368 genes, 3.1 MB;
+  - new `web/mechclass.json` (180 KB): the G2P/ClinGen class and the direction per disease id (3,244).
+- **Disease fingerprint** (`Fingerprint.tsx`), seven labelled rows with a source link each, on `/disease/<id>` and `/d/<id>`:
+  - genes involved: gene chips (HGNC);
+  - signalling pathway: the most specific Reactome/MSigDB sets, de-duplicated; on /d/ pages, the Reactome pathways of the mechanism shard;
+  - tissue type: HPA-enriched tissues and specificity, plus "symptoms point to" from the mechsim tissue anchors;
+  - symptoms: the most distinctive HPO terms;
+  - protein structure & family: Pfam (with names where mechsim has them), PANTHER, "AlphaFold structure available" and UniProt;
+  - mutation type: the ClinVar spectrum mini-bar;
+  - molecular consequence: LoF/GoF/mixed from the direction layer, plus the mechsim predicted protein fate (atlas) or the G2P/ClinGen class with its source (/d/).
+  - **Views:** Simple gets plain one-liners with "What does this mean?" inside "Learn more". Research and Industry get the full detail, open. Detailed gets it collapsed.
+- **Per-factor breakdown:** a 7-segment bar (filled by each factor's similarity, striped grey when there is no data) plus the strongest factors in words ("same pathway: …; same protein family: … (TM-score 0.36); same tissue: brain").
+  - Atlas "closest diseases": from mechsim pair scores, with symptoms from the curated HPO IC-weighted Jaccard.
+  - /d/ "Diseases most similar": symptoms, genes and pathway from the similar shard. Tissue, structure and mutation are computed in the browser from the gene shards (Jaccard of tissues and families; 1 − Jensen–Shannon of the spectra), and consequence from `mechclass`.
+- **/compare:** "Seven factors side by side" at the top, with the factor bar, legend, and each factor's value for both diseases plus how alike they are, with words.
+- **Atlas:**
+  - a **Factor lens** at the top of the left rail (Off / All factors / each of the seven, with link counts). Choosing a factor draws only that factor's disease–disease links (mechsim axis edges above their floors, or `similar_phenotype` for symptoms), coloured by factor, with width ∝ similarity; other edges fade. `?lens=<factor>` or `?links=mechanistic` opens it.
+  - a **Weights** panel in the Research view: seven sliders, tested defaults symptoms 1, genes 0.5, pathway 0.5, others 0. It re-ranks the closest diseases to the selected disease (default STXBP1) live, with factor bars, "Reset to tested defaults" and the honest note about the 1,300-case test.
+- **/method:** "The seven factors" (`#seven-factors`): each factor, its sources, and whether it is used for ranking (with its weight) or as an explanation, linked to the benchmark.
+- **Checks:**
+  - At 1440 and 390 px, with no console errors: STXBP1 in Research, Simple and Detailed; cystic fibrosis /d/ in Research and Simple; /compare VAMP2 vs STXBP1; /method; the atlas lens.
+  - All seven rows render in the fixed order. The bars appear on 6 closest diseases (STXBP1) and 10 similar diseases (cystic fibrosis).
+  - The atlas at 390 px scrolls sideways; this is the pre-existing fixed desktop grid.
+  - `tsc` and `eslint` are clean; one `npm run build` passed.
