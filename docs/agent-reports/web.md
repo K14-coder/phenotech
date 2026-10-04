@@ -1173,3 +1173,25 @@ The atlas now shows, everywhere, that it is built on seven factors, always in th
   - a shared URL restores depth, hidden links and lens;
   - the phone filter sheet opens;
   - no console errors at 1440 or 390 px, no sideways scroll; `tsc` and `eslint` are clean; one `npm run build` passed.
+
+## Smooth guided tour
+
+`components/tour/TourProvider.tsx` and `app/globals.css`:
+
+- **One overlay for the whole tour.** It is keyed by the tour id, not by the step, so steps and page changes never remount it. It lives in the root layout, so it survives route changes.
+- **A gliding spotlight.** One fixed element is positioned with `translate3d` and transitions transform, width and height over 420 ms with `cubic-bezier(0.22, 1, 0.36, 1)`. While a step loads it shrinks to a zero-size box at the centre, so the whole page dims gently instead of cutting. `will-change` is set only during the glide. Because the element is fixed, it never causes reflow.
+- **Each step in order:**
+  1. navigate if needed, with the next step's route prefetched;
+  2. wait for the target to exist with a box, and for its box to stay still for 4 animation frames (data and layout loaded);
+  3. run the step's action;
+  4. smooth-scroll the target to the centre only if it is out of view, then wait until its box is still for 6 frames (the scroll has ended);
+  5. only then glide.
+  After the glide, the spotlight follows user scrolling and resizing without animation.
+- **Caption.** It has a fixed position at the bottom. Its content fades and rises 6 px when it changes, and "Loading the next step…" skeleton lines show while it waits. If the target isn't found within 3 s, the caption centres with "This part of the page isn't showing right now" and the Next button becomes **Skip**. The overlay keeps looking quietly in the background.
+- **Reduced motion:** opacity-only fades, with no glide and no rise.
+- **Keyboard:** Esc closes; the arrow keys go back and forward (ignored while typing in a field).
+- **Test:** both tours end to end at 1440 and 390 px, plus one with reduced motion.
+  - Every step reached "shown". Maria 8 of 8, typically 0.2–1.7 s per step including page loads and scrolls; SYT2 6 of 6.
+  - The keys worked (→ 2, ← 1, Esc closes).
+  - The console was clean.
+  - When a test started the Maria tour without its Detailed view, the targets were missing; the centred Skip fallback showed instead of jumping.

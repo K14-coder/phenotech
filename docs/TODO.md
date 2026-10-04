@@ -15,7 +15,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P0: submission blockers
 
-- [~] (claimed by main-session web agent, 2026-10-04) Smooth guided tour: gliding spotlight and caption, smooth scroll before moving, overlay kept across route changes with a loading state and prefetch, reduced-motion cross-fades, keyboard, 3 s fallback.
+- [x] (web agent, commit 2488f6b) Smooth guided tour: gliding spotlight and caption, smooth scroll before moving, overlay kept across route changes with a loading state and prefetch, reduced-motion cross-fades, keyboard, 3 s fallback.
 
 - [x] (web agent, commits a7f6a4f + atlas controls commit) **Rename to Phenotech** everywhere (site, emails, worker, docs; `EMAIL_FROM` on Vercel is already "Phenotech <no-reply@mehro.ch>") **plus atlas controls:** hop-depth slider from the searched/focused item, toggles to hide link types and factor links, hide node types and individual nodes, lens links limited to the shown neighbourhood.
 
@@ -91,6 +91,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- Smooth guided tour: a single overlay across steps and pages, gliding spotlight and fading caption, smooth scroll with settle detection, loading skeleton and prefetch between pages, 3 s fallback with Skip, reduced-motion cross-fades, Esc / arrow keys (commit 2488f6b).
 - AI review of the 169 Claude candidate edges (142 accepted, AI-labelled, kept out of the benchmark) and the 8 reader disagreements; AI actions hidden where no precomputed draft exists; "Take a tour" buttons (vibrant-babbage).
 - Renamed Tasukeru → Phenotech (site, emails, logo, worker, docs). Atlas controls: search box sets the focus; "steps from" depth 1/2/3/all (default 1); link-group toggles; right-click / long-press → hide node or show only it and its neighbours; "Hidden: n · Show all"; factor lens off by default with ×, drawing only links between shown nodes; depth / hidden types / hidden nodes / lens in the URL; phone layout (map first, filters and details as bottom sheets); fixed Cytoscape's stale click offset after the view chooser closes.
 - Independent Claude re-reading of 256 family abstracts (96.1% agreement, 274 new supporting sources); 42 Claude outreach drafts; `/method` counts both readers (vibrant-babbage).
