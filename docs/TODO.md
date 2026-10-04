@@ -36,11 +36,13 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## P1: model and evidence quality
 
-- [~] (claimed by main-session agent "direction", 2026-10-04) **Direction-aware therapy matching**: disease too-little vs too-much function × drug increases vs decreases. Evaluate on PrimeKG indications and contraindications plus the sodium-channel cases → `docs/agent-reports/eval.md`, `data/derived/eval_direction.json`. Adopt it in production only if it helps; then update `/method` and the hypotheses ranking.
+- [x] **Direction-aware therapy matching** (done 2026-10-04): neutral on PrimeKG, no contraindication shift, atlas gain = target leakage → keep it as a flag only. See eval.md section 6.
 - [~] (claimed by main-session agent "ai-review", 2026-10-04) **Independent AI review of the review sheet** → `docs/review/ai-review-2026-10-04.md` and patches in `data/curated/overrides.json`. Review records use `by: "ai-review:claude"`.
   - [ ] Web: render ai-review records as "Independently reviewed by AI (not a human expert)". Human reviews keep "Reviewed by a biochemist".
   - [ ] **(you, optional)** A human expert works through the "needs-human" list from that report.
 - [~] (claimed by main-session agent "cross-family", 2026-10-04) **Cross-family biology**: the RAS → MAPK link for LZTR1/RIT1/SOS1, SYNGAP1 ↔ RAS/ERK, misfolding/ER stress, lysosomal/autophagy and synaptic-release links → `data/curated/cross_family.json`. Target: well above 11 of 45 diseases with a specific cross-family link. Re-run the eval.
+- [ ] Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
+- [ ] Direction coverage: add MONDO:0100135 (Dravet) to the G2P/ClinGen join (obsolete id MONDO:0011794). Get directions for relutrigine and NBI-921352 (Nav1.6 inhibitors; ChEMBL has no mechanism record for them).
 - [ ] Recompute hypotheses (`pipeline/derive/run.sh`) after the cross-family and direction work lands, then precompute `experiment` AI drafts for the new top ideas.
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
@@ -70,6 +72,7 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 ## Done (most recent first)
 
+- Direction layer (`data/derived/direction/`, `DirectionIndex` in `transfer_score.py`) and evaluation (`data/derived/eval_direction.json`, eval.md section 6). Not adopted in ranking.
 - Friendlier emails with logo; Tasukeru rebrand; SMTP via Infomaniak.
 - Live daily ClinicalTrials.gov and NIH RePORTER alerts; published org and trial contacts.
 - Genome-wide ClinVar in the VCF checker; gene factors panel; similar-disease lists (phenotype + genes + pathway); PrimeKG benchmark.

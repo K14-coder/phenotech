@@ -40,7 +40,10 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
   - "Same gene" is the second signal, and Reactome pathways and protein families add a little.
   - Tissue, ClinVar mutation spectrum, gnomAD constraint, AlphaMissense and AlphaFold structure didn't improve ranking. They're shown as explanations instead.
   - **Coarse mechanism class (LoF/GoF) makes ranking worse.**
-  - **Similarity is not a safety signal:** contraindications rank mid-pool. That's why direction-aware matching is being tested.
+  - **Similarity is not a safety signal:** contraindications rank mid-pool.
+  - **Direction-aware matching (drug up/down × disease LoF/GoF) is neutral on PrimeKG** (+0.004 MRR, the interval includes 0; eval.md section 6). The drug's target is a gene of the held-out disease in only 8 of 1,300 cases. When it fires it is right (8/8 match). Use it as a flag, not as a score term.
+  - **Any "therapy target = disease gene" bonus is leakage on the curated 56-case benchmark:** the graph's `target_genes` are the genes of the diseases the therapy was developed for (32/56 held-out cases). An undirected target bonus lifts MRR 0.49 → 0.75. Always run that control.
+  - **Pathway-level direction is about a coin flip** (117 match vs 96 mismatch over all PrimeKG pairs). Keep direction to the direct target.
 - **Production scorers:**
   - deep atlas: phenotype + the drug's curated target mechanism;
   - global similar lists: phenotype + 0.5·genes + 0.5·full Reactome pathway.
@@ -52,6 +55,9 @@ The non-obvious things we learned, the decisions we made and why, and the traps.
 - **Sharding:** everything at global scale is sharded by `djb2(id) % 64` (Python and TypeScript match; see `data/derived/global/README.md` for the test vectors).
 - **Duplicate drug nodes across layers** (amifampridine = 3,4-DAP; CAP-002 = AAV-STXBP1) are merged through `overrides.json` → `merge_nodes`.
 - **Rebuild order:** if a generated `web/public/data/graph.json` conflicts on a git merge, take either side, then rebuild: `python3 pipeline/build_graph.py && node web/scripts/sync-data.mjs`.
+- **Therapy `target_genes` lists disease genes, not drug targets** (the AChE inhibitor lists SYT2, the SCN8A ASO lists SCN1A). `pipeline/ingest/direction_build.py` keeps a documented `TARGET_OVERRIDE` table.
+- **ChEMBL REST** returned HTTP 500 on 2026-10-04. The same ChEMBL mechanism table, with action types, is in the Open Targets Platform bulk parquet (`drug_mechanism_of_action`, `drug_molecule` for the DrugBank xrefs; about 7 MB in all).
+- **Gene-level ClinGen HI scores are copied onto every dominant MONDO entry of the gene,** so they wrongly call GoF allelic disorders (SCN2A DEE11) "haploinsufficiency". Down-weight them. Direction has to be called per subtype or variant group, not per gene.
 - **ClinVar** lacks most repeat expansions (e.g. the HTT CAG repeat). Say "ClinVar small variants" for those diseases.
 - **Orphanet** website pages are JavaScript-rendered and unscrapeable. Use Orphadata products (prevalence = product 9, genes = product 6).
 - **GeneCards** blocks automated access and needs a licence for non-academic reuse, so we don't use it.
