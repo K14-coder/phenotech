@@ -191,6 +191,70 @@ S-COMB outcome-measure consortium are the reusable infrastructure, and VAMP2 (de
 gain-of-function, loss-of-function), SYT1 and SNAP25 (dominant-negative) are the diseases with a
 matching mechanism and `gap:<GENE>:models` still open.
 
+**Update 2026-10-04: GO mechanism hierarchy and the benchmark scorer.**
+
+*Mechanism hierarchy.* `pipeline/derive/mechanism_hierarchy.py` reads go-basic.obo (release
+2026-07-26) and writes `data/curated/mechanism_hierarchy.json`. It adds a `part_of` edge between
+GO-backed mechanism nodes wherever GO has a path of at most 3 steps over is_a, part_of or
+(positively/negatively) regulates. All 25 GO-backed nodes were searched. GO yields only **2 edges**:
+the positive and negative regulation of Ras signalling → Ras protein signal transduction.
+
+- **No GO path from "Ras protein signal transduction" to "MAPK cascade".** They are siblings, each
+  two steps below "intracellular signal transduction", so four steps apart with no specific term in
+  between.
+- **No Reactome help either.** Reactome annotates neither LZTR1 nor RIT1.
+- **LZTR1 is unchanged at rank 37 of 44** for the MEK inhibitors, starting from NF1. It already
+  reached Ras signalling, and the eval scorer does not follow `part_of` in any case.
+- **Recorded as a gap.** `gap:ras-to-mapk-hierarchy` names the real fix: curate gene-level
+  `participates_in` edges from the RASopathy literature.
+- **Benchmark unchanged.** `build_graph.py` reports "Problems: None", and the transfer benchmark
+  reproduces exactly:
+
+| Subset | Phenotype + mechanism (n, R@1, R@5, MRR, median rank) | Old chain rule (R@1, R@5, MRR, median rank) |
+|---|---|---|
+| All developed_for cases | 56; 0.29; 0.73; 0.49; 3.75 | 0.21; 0.65; 0.41; 4.5 |
+| Transfer subset | 30; 0.40; 0.83; 0.60; 2 | 0.27; 0.65; 0.45; 4 |
+
+*Hypotheses now ranked by the benchmark's best scorer.* `hypotheses.py` now uses
+`TransferIndex.rank_candidates(scorer="pheno+mech")` from `pipeline/eval/transfer_score.py`. The
+`hypotheses-rule` row in `eval.json` still emulates the old rule for comparison.
+
+The gates, all filters and never rankers:
+
+- already developed for, or tested in, the disease (over the therapy class);
+- product transferability: no AAV, ASO, editing, enzyme replacement or one-protein pharmacological
+  chaperone may cross to another gene's disease;
+- a **specific** mechanism: not loss/gain of function, haploinsufficiency, dominant negative or
+  lysosomal storage, and reached by at most 10 diseases;
+- **failed where tried**: every `developed_for` edge contested below 0.5, as for statins and
+  tipifarnib in NF1;
+- curator review rejection, which now also covers two channel drugs pointing the wrong way: Kv7
+  openers for KCNT1 gain of function, and quinidine for KCNQ2 loss of function.
+
+What changed in the output:
+
+- The cluster chain is gone, because clusters that list therapies leak the answer.
+- Symptom-only matches go to `opportunities.json → look_alike_leads`, never to edges.
+- Each edge stores `transfer_score`, `transfer_rank`, `transfer_n_candidates` and the full
+  `explain()` output.
+- Selection: rank ≤ 5 within its therapy, at most 2 per therapy class, 2 per disease and 10 overall.
+- Confidence stays ≤ 0.25.
+
+**10 hypotheses: lysosomal 5, SNARE 4, RASopathy 1, DEE 0.**
+
+| Family | Hypothesis | Rank | Confidence | Mechanism | Weakest link |
+|---|---|---|---|---|---|
+| lysosomal | Haematopoietic stem cell transplantation for IDS-related disorders (mucopolysaccharidosis type II, Hunter syndrome) | 1/42 | 0.2 | lysosomal-enzyme-deficiency | the targets edge therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency (confidence 0.6) |
+| rasopathy | Trametinib for SHOC2-related disorders (Mazzanti syndrome) | 1/35 | 0.2 | mapk-cascade | the targets edge therapy:trametinib|targets|mech:mapk-cascade (confidence 0.7) |
+| snare | Aminopyridines for STXBP1 variants that reduce release | 1/41 | 0.16 | ca-triggered-exocytosis | the pathway chain plus the contested mechanism: STXBP1 reaches this drug class only through 'the gene participates in Ca2+-triggered exocytosis', while the dire… |
+| snare | Cholinesterase inhibitors for the SNAP25 myasthenic presentation | 1/44 | 0.2 | ca-triggered-exocytosis | the pathway chain and the phenotype split: the drug argument needs a neuromuscular junction, and whether SNAP25-DEE patients have one has never been measured. |
+| snare | 4-phenylbutyrate for VAMP2-related disorders | 1/43 | 0.16 | protein-destabilization | the VAMP2 destabilization edge itself: it is a contested edge resting on one 2025 paper, and that paper's 'stability' defect is a SNARE-complex property, not th… |
+| lysosomal | Arimoclomol for HEXA-related disorders (Tay-Sachs disease) | 1/44 | 0.18 | protein-destabilization | the driven_by edge disease:HEXA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease… |
+| snare | Aminopyridines for the loss-of-function end of STX1B epilepsy | 2/41 | 0.13 | ca-triggered-exocytosis | the direction of effect: the gene's own variants point both ways, so a gene-level hypothesis is unsafe and only a variant-level one survives. |
+| lysosomal | Haematopoietic stem cell transplantation for GLA-related disorders (Fabry disease) | 2/42 | 0.17 | lysosomal-enzyme-deficiency | the targets edge therapy:hsct-krabbe|targets|mech:lysosomal-enzyme-deficiency (confidence 0.6) |
+| lysosomal | Arimoclomol for GAA-related disorders (Pompe disease) | 2/44 | 0.15 | protein-destabilization | the driven_by edge disease:GAA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease:… |
+| lysosomal | 4-Phenylbutyrate / glycerol phenylbutyrate for HEXA-related disorders (Tay-Sachs disease) | 2/43 | 0.15 | protein-destabilization | the driven_by edge disease:HEXA|driven_by|mech:protein-destabilization (confidence 0.6); and the symptoms barely overlap with the closest known disease (disease… |
+
 ## 4. Beyond the slice (`data/derived/beyond_slice.json`)
 
 Labelled **"phenotype similarity only; mechanism not assessed"**.

@@ -36,7 +36,8 @@ python3 variants.py
 echo "== 2/7 modality fit (draft rule set -> data/curated/modality.json)"
 python3 modality.py
 
-echo "== 3/7 hypotheses + opportunities (graph analytics)"
+echo "== 3/7 GO mechanism hierarchy (part_of edges) + hypotheses + opportunities (TransferIndex pheno+mech)"
+python3 mechanism_hierarchy.py
 python3 hypotheses.py
 
 echo "== 4/7 beyond the slice (HPO phenotype neighbours; reuses pipeline/biology/hpo.py)"

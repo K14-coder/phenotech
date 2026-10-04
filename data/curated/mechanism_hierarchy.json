@@ -1,0 +1,90 @@
+{
+ "nodes": [],
+ "edges": [
+  {
+   "id": "mech:negative-regulation-of-ras-signaling|part_of|mech:ras-protein-signal-transduction",
+   "source": "mech:negative-regulation-of-ras-signaling",
+   "target": "mech:ras-protein-signal-transduction",
+   "type": "part_of",
+   "label": "is part of / regulates (GO hierarchy)",
+   "explanation": "In the Gene Ontology, Negative regulation of Ras protein signal transduction (GO:0046580) leads to Ras protein signal transduction (GO:0007265) in 1 step(s): negative regulation of Ras protein signal transduction → negatively regulates Ras protein signal transduction (GO:0007265).",
+   "evidence_level": "curated",
+   "status": "supported",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "source": "GO",
+     "ref": "GO:0046580",
+     "url": "https://www.ebi.ac.uk/QuickGO/term/GO:0046580",
+     "title": "GO releases/2026-07-26: negative regulation of Ras protein signal transduction → Ras protein signal transduction",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "go_path": [
+     {
+      "relation": "negatively_regulates",
+      "term": "GO:0007265",
+      "name": "Ras protein signal transduction"
+     }
+    ],
+    "steps": 1,
+    "go_release": "releases/2026-07-26"
+   }
+  },
+  {
+   "id": "mech:positive-regulation-of-ras-signaling|part_of|mech:ras-protein-signal-transduction",
+   "source": "mech:positive-regulation-of-ras-signaling",
+   "target": "mech:ras-protein-signal-transduction",
+   "type": "part_of",
+   "label": "is part of / regulates (GO hierarchy)",
+   "explanation": "In the Gene Ontology, Positive regulation of Ras protein signal transduction (GO:0046579) leads to Ras protein signal transduction (GO:0007265) in 1 step(s): positive regulation of Ras protein signal transduction → positively regulates Ras protein signal transduction (GO:0007265).",
+   "evidence_level": "curated",
+   "status": "supported",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "source": "GO",
+     "ref": "GO:0046579",
+     "url": "https://www.ebi.ac.uk/QuickGO/term/GO:0046579",
+     "title": "GO releases/2026-07-26: positive regulation of Ras protein signal transduction → Ras protein signal transduction",
+     "kind": "database",
+     "study_type": "database_record",
+     "extracted_by": "database",
+     "retrieved": "2026-10-04"
+    }
+   ],
+   "attrs": {
+    "go_path": [
+     {
+      "relation": "positively_regulates",
+      "term": "GO:0007265",
+      "name": "Ras protein signal transduction"
+     }
+    ],
+    "steps": 1,
+    "go_release": "releases/2026-07-26"
+   }
+  }
+ ],
+ "clusters": [],
+ "gaps": [
+  {
+   "id": "gap:ras-to-mapk-hierarchy",
+   "about": "mech:ras-protein-signal-transduction / mech:mapk-cascade",
+   "question": "Should Ras signalling reach the MAPK cascade in the graph, so RAS-pathway genes (LZTR1, RIT1, SOS1) connect to MEK-inhibitor targets?",
+   "what_is_missing": [
+    "GO has no is_a / part_of / regulates path of <= 3 steps between 'Ras protein signal transduction' (GO:0007265) and 'MAPK cascade' (GO:0000165): they are siblings, two steps each below 'intracellular signal transduction'",
+    "Reactome (NCBI2Reactome) has no pathway annotation at all for LZTR1 or RIT1"
+   ],
+   "searched": [
+    "go-basic.obo releases/2026-07-26, all paths <= 3 steps between the GO-backed mechanism nodes",
+    "Reactome NCBI2Reactome.txt for LZTR1 (8216) and RIT1 (6016)"
+   ],
+   "how_to_find_out": "Curate gene-level participates_in edges from the RASopathy literature (e.g. LZTR1 -> MAPK cascade with a quoted functional paper), or accept a Reactome-sourced RAS -> RAF/MAP kinase cascade link as a separate, labelled relation."
+  }
+ ]
+}

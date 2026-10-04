@@ -1,12 +1,12 @@
 # Graph build report
 
-Built 2026-10-03T22:20:26+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `openai_extracted.json`.
+Built 2026-10-04T01:02:04+00:00 from `biology.json`, `community.json`, `contributions.json`, `family_dee.json`, `family_lysosomal.json`, `family_rasopathy.json`, `hypotheses.json`, `mechanism_hierarchy.json`, `openai_extracted.json`.
 
 ## Summary
 
-- **1411 nodes, 2540 edges, 17 clusters, 60 gaps**
-- Edges with at least one source: **2540/2540**
-- Evidence items with a verbatim quote: 1963/3731; quotes string-verified against the stored source: **1963/1963**
+- **1411 nodes, 2547 edges, 17 clusters, 61 gaps**
+- Edges with at least one source: **2547/2547**
+- Evidence items with a verbatim quote: 1963/3743; quotes string-verified against the stored source: **1963/1963**
 - Contested edges (with counter-evidence): 76
 - OpenAI cross-check: 68 cited sources re-read and stamped; 111 new supporting and 2 new contradicting sources added (contradictions wait for human review)
 - Cited sources where the OpenAI reading disagrees with the curators: 8
@@ -23,7 +23,8 @@ Built 2026-10-03T22:20:26+00:00 from `biology.json`, `community.json`, `contribu
 | `family_dee.json` | 351 | 668 |
 | `family_lysosomal.json` | 416 | 653 |
 | `family_rasopathy.json` | 248 | 548 |
-| `hypotheses.json` | 0 | 5 |
+| `hypotheses.json` | 0 | 10 |
+| `mechanism_hierarchy.json` | 0 | 2 |
 | `openai_extracted.json` | 17 | 57 |
 
 ## Nodes by type
@@ -60,16 +61,17 @@ Built 2026-10-03T22:20:26+00:00 from `biology.json`, `community.json`, `contribu
 - causes: 45
 - targets: 39
 - maintains: 35
-- candidate_for: 5
+- candidate_for: 10
+- part_of: 2
 
 ## Edges by evidence level
 
-- curated: 1389
+- curated: 1391
 - observational: 403
 - inferred: 279
 - clinical: 274
 - experimental: 190
-- hypothesis: 5
+- hypothesis: 10
 
 ## Problems
 
