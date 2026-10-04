@@ -1,0 +1,151 @@
+{
+  "kind": "proposal",
+  "id": "disease:HRAS",
+  "title": "Exploring a shared registry approach with CFC International",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "We at RASopathies Network support families affected by HRAS-related disorders (Costello syndrome).",
+          "edge_ids": [
+            "org:rasopathies-network|serves|disease:HRAS"
+          ]
+        },
+        {
+          "text": "Costello syndrome and KRAS-related RASopathies share a mechanism in which a protein does too much, and HRAS and KRAS participate in the MAPK cell-signalling pathway.",
+          "edge_ids": [
+            "disease:HRAS|driven_by|mech:gain-of-function",
+            "disease:KRAS|driven_by|mech:gain-of-function",
+            "gene:HRAS|participates_in|mech:mapk-cascade",
+            "gene:KRAS|participates_in|mech:mapk-cascade"
+          ]
+        },
+        {
+          "text": "The atlas infers CFC International’s KRAS community connection from CFC syndrome coverage; its broader symptom-similarity link with Costello syndrome is also inferred, with confidence 0.36, below 0.5.",
+          "edge_ids": [
+            "org:cfc-international|serves|disease:KRAS",
+            "disease:KRAS|similar_phenotype|disease:HRAS"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "CFC International’s CITIZEN CFC Syndrome Registry offers a possible starting point, although its KRAS coverage is inferred by the atlas rather than explicitly named on the registry page.",
+          "edge_ids": [
+            "asset:cfc-citizen-registry|covers|disease:KRAS"
+          ]
+        },
+        {
+          "text": "PATRAS and the RASopathies Network contact registry are also listed, with their HRAS coverage inferred by the atlas.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:HRAS",
+            "asset:rasopathies-network-contact-registry|covers|disease:HRAS"
+          ]
+        },
+        {
+          "text": "We propose comparing registry designs before considering any shared approach.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please confirm whether thickened Achilles tendon and deep-set nails occur in KRAS-related RASopathies, and review bladder carcinoma and the additional symptom gaps flagged for registry adaptation.",
+          "edge_ids": [
+            "asset:cfc-citizen-registry|covers|disease:KRAS"
+          ]
+        },
+        {
+          "text": "Please check all listed differences, including the “12 more” symptoms not individually named in the adaptation notes, rather than treating missing records as proof of absence.",
+          "edge_ids": [
+            "asset:cfc-citizen-registry|covers|disease:KRAS",
+            "study:NCT01556568|studies|disease:KRAS"
+          ]
+        },
+        {
+          "text": "Before extending any study design, please check eligibility changes, Costello-specific family representation, and whether individual variants increase activity, impair protein function or cause loss of function.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "This month, send CFC International one focused enquiry asking whether CITIZEN could include HRAS-related disorders (Costello syndrome), and what changes would be needed.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Which patient organisation specifically serves Costello syndrome, beyond the linked RASopathies Network?",
+          "edge_ids": [
+            "org:rasopathies-network|serves|disease:HRAS"
+          ]
+        },
+        {
+          "text": "Could we verify a Costello family-network contact through our network?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants are activating, catalytically impaired—meaning their usual activity is reduced—or loss of function?",
+          "edge_ids": []
+        },
+        {
+          "text": "Could a variant-by-variant review of published functional evidence resolve this?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear CFC International team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of our Costello syndrome community to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our conditions share evidence of overactive proteins.",
+          "edge_ids": [
+            "disease:HRAS|driven_by|mech:gain-of-function",
+            "disease:KRAS|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "Could your team consider whether CITIZEN could include HRAS-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome an initial discussion of symptom coverage and eligibility before making commitments.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this request.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of RASopathies Network (RASopathiesNet USA / UK)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:10:30.678Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

@@ -13,6 +13,7 @@ import { BiotechNeed, ResearcherMechanisms } from "./PersonaSections";
 import { IdeasSection, LookAlikes, PatternBreaks, VariantHint } from "./DerivedSections";
 import { usePersona, type Persona } from "@/lib/persona";
 import { DevonDisease } from "../devon/DevonDisease";
+import { JoinBox } from "../community/JoinBox";
 import { OseiSections } from "../research/OseiSections";
 import { DisMechForAtlas } from "../global/MechanismBits";
 import { atlasHref, clustersOf, clusterSlot, compareHref, diseaseHref, diseaseIdFromParam, pathHref, type GraphIndex } from "@/lib/graph";
@@ -47,9 +48,20 @@ export function DiseaseView({ param }: { param: string }) {
 function DiseaseByProfile({ idx, id }: { idx: GraphIndex; id: string }) {
   const persona = usePersona();
   const node = idx.nodeById.get(id);
+  const join = node?.type === "disease" ? <JoinBox diseaseId={node.id} diseaseName={node.id.replace(/^disease:/, "")} /> : null;
   if (persona === "family" && node?.type === "disease")
-    return <DevonDisease key={id} idx={idx} node={node} learnMore={<Disease idx={idx} id={id} as="leader" embedded />} />;
-  return <Disease idx={idx} id={id} as={persona} />;
+    return (
+      <>
+        <DevonDisease key={id} idx={idx} node={node} learnMore={<Disease idx={idx} id={id} as="leader" embedded />} />
+        {join}
+      </>
+    );
+  return (
+    <>
+      <Disease idx={idx} id={id} as={persona} />
+      {join}
+    </>
+  );
 }
 
 const H2 = "text-[22px] font-semibold tracking-tight text-ink";

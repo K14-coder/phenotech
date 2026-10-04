@@ -1,0 +1,130 @@
+{
+  "kind": "proposal",
+  "id": "disease:HEXA",
+  "title": "A first collaboration conversation with Hunter's Hope Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At Cure and Action for Tay-Sachs (CATS) Foundation, we support Tay-Sachs families; Hunter's Hope Foundation supports families affected by Krabbe disease.",
+          "edge_ids": [
+            "org:cats-foundation|serves|disease:HEXA",
+            "org:hunters-hope-foundation|serves|disease:GALC"
+          ]
+        },
+        {
+          "text": "Both diseases involve missing enzyme activity in cells’ recycling compartments, making shared research approaches worth exploring—not assuming.",
+          "edge_ids": [
+            "disease:HEXA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:HEXA|shares_mechanism|disease:GALC"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "A Natural History Study of the Gangliosidoses and Registry Gangliosidoses already include Tay-Sachs.",
+          "edge_ids": [
+            "asset:nct00668187-a-natural-history-study-of-the-gangliosidoses|covers|disease:HEXA",
+            "asset:nct04624789-registry-gangliosidoses|covers|disease:HEXA"
+          ]
+        },
+        {
+          "text": "We propose comparing their approaches to collecting information, rather than assuming they can be used unchanged for Krabbe.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Tay-Sachs involves GM2 buildup; in Krabbe, damage from psychosine buildup is described as a hypothesis.",
+          "edge_ids": [
+            "disease:HEXA|driven_by|mech:lysosomal-storage",
+            "disease:GALC|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Please help check whether GM2 buildup, loss of developmental and movement skills, and a cherry-red spot at the back of the eye also occur in Krabbe, rather than treating missing records as proof of absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "Before joining forces, we should also review the approval-status and gene-variant questions below with appropriate experts.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "This month, we propose sending Hunter's Hope one focused inquiry: could The Natural History of Infantile Globoid Cell Leukodystrophy include people with HEXA-related disorders (Tay-Sachs disease)?",
+          "edge_ids": []
+        },
+        {
+          "text": "The shared enzyme-deficiency biology motivates this question, but does not establish eligibility.",
+          "edge_ids": [
+            "disease:HEXA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:HEXA|shares_mechanism|disease:GALC"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Can we verify the reported approval gap—no approved disease-modifying therapy for Tay-Sachs, CLN3 disease or Krabbe, versus nine of twelve related diseases—and understand why?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which GBA1, HEXA, NPC1 and GAA variants might respond to a protein-stabilizing chaperone, and could they be classified like GLA variants in published migalastat evidence for discussion with a neurologist?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Hunter's Hope Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of CATS to explore a modest collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Tay-Sachs and Krabbe share underlying enzyme-deficiency biology.",
+          "edge_ids": [
+            "disease:HEXA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Could you help us ask whether The Natural History of Infantile Globoid Cell Leukodystrophy could include Tay-Sachs?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome your guidance on what needs checking first.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Cure and Action for Tay-Sachs (CATS) Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:09:46.903Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

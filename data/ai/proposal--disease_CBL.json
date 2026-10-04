@@ -1,0 +1,148 @@
+{
+  "kind": "proposal",
+  "id": "disease:CBL",
+  "title": "A first collaboration conversation: CBL-related disorder and CTF",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "On behalf of RASopathies Network, we would welcome a conversation with Children's Tumor Foundation (CTF) about including CBL families in shared research efforts.",
+          "edge_ids": []
+        },
+        {
+          "text": "CBL-related disorder and NF1 share loss of function: proteins that help switch off cell signals do not work properly.",
+          "edge_ids": [
+            "disease:CBL|driven_by|mech:loss-of-function",
+            "disease:NF1|driven_by|mech:loss-of-function",
+            "disease:NF1|shares_mechanism|disease:CBL"
+          ]
+        },
+        {
+          "text": "This offers a reason to explore collaboration, not proof that the same registry design will meet both communities' needs.",
+          "edge_ids": [
+            "disease:NF1|shares_mechanism|disease:CBL",
+            "asset:nf-registry-ctf|covers|disease:NF1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Our contact registry is described as being built; its inclusion of CBL families is inferred by the atlas, rather than explicitly confirmed on its page.",
+          "edge_ids": [
+            "asset:rasopathies-network-contact-registry|covers|disease:CBL"
+          ]
+        },
+        {
+          "text": "The Clinical, Genetic, and Epidemiologic Study of Children and Adults With RASopathies explicitly lists CBL.",
+          "edge_ids": [
+            "study:NCT04888936|studies|disease:CBL"
+          ]
+        },
+        {
+          "text": "CTF's NF Registry on the IAMRARE platform includes NF1; adapting it for CBL is a possibility to explore, not an established capability.",
+          "edge_ids": [
+            "asset:nf-registry-ctf|covers|disease:NF1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "We should confirm whether juvenile myelomonocytic leukemia and chylothorax also occur in NF1, rather than treating missing records as evidence of absence.",
+          "edge_ids": [
+            "disease:NF1|shares_mechanism|disease:CBL",
+            "asset:nf-registry-ctf|covers|disease:NF1"
+          ]
+        },
+        {
+          "text": "The NF1 resource comparisons flag those symptoms and ten other CBL features as unrecorded; the disease comparison also names finger joint hypermobility.",
+          "edge_ids": [
+            "asset:nf-registry-ctf|covers|disease:NF1",
+            "study:NCT00924196|studies|disease:NF1",
+            "study:NCT01410006|studies|disease:NF1",
+            "study:NCT01885767|studies|disease:NF1",
+            "study:NCT04395495|studies|disease:NF1"
+          ]
+        },
+        {
+          "text": "We should review differences in recorded cell-signalling mechanisms—MAPK cascade and Ras protein signal transduction—listed only on the NF1 side of these resource comparisons.",
+          "edge_ids": [
+            "asset:nf-registry-ctf|covers|disease:NF1",
+            "study:NCT00924196|studies|disease:NF1",
+            "study:NCT01410006|studies|disease:NF1",
+            "study:NCT01885767|studies|disease:NF1",
+            "study:NCT04395495|studies|disease:NF1"
+          ]
+        },
+        {
+          "text": "If PATRAS is considered later, check missing finger joint hypermobility, deep philtrum and eight other features, plus mechanisms involving overactive proteins or altered proteins blocking normal ones and one unnamed mechanism; its PTPN11 coverage is atlas-inferred.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:PTPN11"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send CTF one focused enquiry asking whether the NF Registry could include CBL-related disorder and what changes would need review.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "No open questions are recorded yet in the supplied atlas input.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Children's Tumor Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome an exploratory conversation about CBL families.",
+          "edge_ids": []
+        },
+        {
+          "text": "CBL-related disorder and NF1 share a loss-of-function mechanism.",
+          "edge_ids": [
+            "disease:CBL|driven_by|mech:loss-of-function",
+            "disease:NF1|driven_by|mech:loss-of-function",
+            "disease:NF1|shares_mechanism|disease:CBL"
+          ]
+        },
+        {
+          "text": "Could your NF Registry potentially include CBL-related disorder?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would like to review differences together before proposing any shared approach.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of RASopathies Network (RASopathiesNet USA / UK)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:03:59.392Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

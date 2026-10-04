@@ -1,0 +1,142 @@
+{
+  "kind": "proposal",
+  "id": "disease:CACNA1A",
+  "title": "A registry conversation with FamilieSCN2A Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "On behalf of CACNA1A Foundation, I invite FamilieSCN2A Foundation to explore a small collaboration for our families.",
+          "edge_ids": []
+        },
+        {
+          "text": "Published research links both CACNA1A- and SCN2A-related disorders to variants that make proteins do too much or lose function.",
+          "edge_ids": [
+            "disease:CACNA1A|driven_by|mech:gain-of-function",
+            "disease:CACNA1A|driven_by|mech:loss-of-function",
+            "disease:SCN2A|driven_by|mech:gain-of-function",
+            "disease:SCN2A|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "The atlas also infers similar symptom patterns, but this connection has confidence 0.47, below 0.5—not confirmation that families’ needs are identical.",
+          "edge_ids": [
+            "disease:SCN2A|similar_phenotype|disease:CACNA1A"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Our Contact Registry includes people with CACNA1A-related disorders, while your Dragonfly patient registry includes people with SCN2A-related disorders.",
+          "edge_ids": [
+            "asset:cacna1a-foundation-contact-registry|covers|disease:CACNA1A",
+            "asset:familiescn2a-dragonfly-registry|covers|disease:SCN2A"
+          ]
+        },
+        {
+          "text": "Citizen Health also lists CACNA1A among its communities.",
+          "edge_ids": [
+            "asset:citizen-health|covers|disease:CACNA1A"
+          ]
+        },
+        {
+          "text": "Could we compare registry designs rather than assume that either can serve both communities unchanged?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "The supplied comparison flags transient unilateral blurring of vision, bradyopsia and 13 more symptoms as not recorded in Dragonfly; please check the full list and whether these first two symptoms also occur in SCN2A-related disorders.",
+          "edge_ids": [
+            "asset:familiescn2a-dragonfly-registry|covers|disease:SCN2A"
+          ]
+        },
+        {
+          "text": "Please also check downbeat nystagmus rather than treating missing records as proof of absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "The comparison lists neuronal firing and voltage-gated sodium channel activity only on the SCN2A side, whereas CACNA1A is linked to voltage-gated calcium channel activity.",
+          "edge_ids": [
+            "asset:familiescn2a-dragonfly-registry|covers|disease:SCN2A",
+            "gene:CACNA1A|participates_in|mech:voltage-gated-calcium-channel-activity"
+          ]
+        },
+        {
+          "text": "Before proceeding, let’s check the wider CACNA1A organization and research landscape and establish which individual variants increase, impair or remove function.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "This month, send FamilieSCN2A Foundation one focused inquiry asking whether Dragonfly could include CACNA1A-related disorders and what changes would need review.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "What patient organizations, registries, trials and research groups exist for CACNA1A-related disorders beyond those verified here?",
+          "edge_ids": []
+        },
+        {
+          "text": "Which individual variants are activating, catalytically impaired or loss of function?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear FamilieSCN2A Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I’m reaching out on behalf of CACNA1A Foundation to explore learning together.",
+          "edge_ids": []
+        },
+        {
+          "text": "Published research identifies gain of function in both communities.",
+          "edge_ids": [
+            "disease:CACNA1A|driven_by|mech:gain-of-function",
+            "disease:SCN2A|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "Could Dragonfly potentially include CACNA1A-related disorders?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome an initial discussion of symptom coverage, variant differences and necessary adaptations.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of CACNA1A Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:03:16.244Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

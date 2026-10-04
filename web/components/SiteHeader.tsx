@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useAtlas } from "./GraphProvider";
 import { SearchBox } from "./search/SearchBox";
 import { FirstVisitChooser, ViewingAs } from "./ViewingAs";
+import { AccountLink } from "./community/AccountBits";
 import { usePersona } from "@/lib/persona";
 
 const NAV = [
@@ -63,6 +64,7 @@ export function SiteHeader() {
             </Link>
           )}
           {sample && <SampleBadge />}
+          <AccountLink />
           <ViewingAs />
         </div>
       </div>

@@ -35,6 +35,7 @@ import { retry, useResource } from "@/lib/resource";
 import { usePersona } from "@/lib/persona";
 import { loadScale, type ScaleEntry } from "@/lib/population";
 import { DevonPage } from "../devon/DevonPage";
+import { JoinBox } from "../community/JoinBox";
 import { buildGlobalDevonModel } from "../devon/devonGlobal";
 import { DisMechIfAny, MechanismLayer } from "./MechanismBits";
 import { capFirst, joinList, plural } from "@/lib/text";
@@ -229,14 +230,23 @@ function GlobalDisease({ idx, id }: { idx: GraphIndex; id: string }) {
     </div>
   );
 
+  const join = <JoinBox diseaseId={row.id} diseaseName={capFirst(row.name)} />;
   if (persona === "family")
     return (
-      <DevonPage
-        m={buildGlobalDevonModel(row, entry, terms, scaleRes?.data ?? null, shardState === "loading" || scaleRes?.status === "loading")}
-        learnMore={detail}
-      />
+      <>
+        <DevonPage
+          m={buildGlobalDevonModel(row, entry, terms, scaleRes?.data ?? null, shardState === "loading" || scaleRes?.status === "loading")}
+          learnMore={detail}
+        />
+        {join}
+      </>
     );
-  return detail;
+  return (
+    <>
+      {detail}
+      {join}
+    </>
+  );
 }
 
 function Distinctive({ entry, terms, icCut, meta }: { entry: NeighbourEntry; terms: Terms; icCut: number; meta?: GlobalMeta }) {

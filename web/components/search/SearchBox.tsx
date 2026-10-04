@@ -8,7 +8,7 @@ import { clustersOf, clusterSlot, neighbors, nodeHref, type GraphIndex } from "@
 import { headOf, loadGroups, type GroupsFile } from "@/lib/groups";
 import { usePersona } from "@/lib/persona";
 import { capFirst } from "@/lib/text";
-import { GLOBAL_INDEX_KEY, ensureGlobalIndex, mappedAtlasId, normalizeTerm, rowHref, searchGlobal, type GlobalHit, type GlobalIndex, type GlobalRow } from "@/lib/global";
+import { GLOBAL_INDEX_KEY, ensureGlobalIndex, mappedAtlasId, normalizeTerm, rowHref, searchGlobal, suggestGlobal, type GlobalHit, type GlobalIndex, type GlobalRow } from "@/lib/global";
 import { ensure, useResourceValue } from "@/lib/resource";
 import { MATCH_KIND_LABEL, type SearchHit } from "@/lib/search";
 import { clusterColor } from "@/lib/style";
@@ -126,7 +126,12 @@ export function SearchBox({
     if (mapped) return { id: mapped, label: idx.nodeById.get(mapped)!.label, via: top.matched };
     return { id: head.id, label: capFirst(head.name), via: top.kind !== "name" || head.id !== top.row.id ? top.matched : undefined };
   }, [guidedOn, idx, q, hits, gi, groupsRes]);
-  const options = guided ? [] : allOptions;
+  // Simple view without one clear answer: keep only strong matches, so a typo shows the plain "couldn't find" help
+  const options = guided
+    ? []
+    : guidedOn
+      ? allOptions.filter((o) => (o.kind === "atlas" ? o.hit.score <= 0.15 : o.hit.rank <= 3))
+      : allOptions;
 
   // a pasted report line ("STXBP1 R388X", "c.1162C>T", "NM_...(GENE):c...") gets a top "Look up this variant" option
   const variantOption = variant !== "field" && looksLikeVariant(q);
@@ -401,6 +406,8 @@ export function SearchBox({
             <div id={`${listId}-list`} role="listbox" aria-label="Search results" className="px-4 py-4 text-sm text-ink-3">
               {globalLoading && globalRes ? (
                 <>Searching every rare disease for “{q.trim()}”…</>
+              ) : persona === "family" || variant === "hero" ? (
+                <NoResult q={q.trim()} gi={gi} idx={idx} onGo={(href) => { setOpen(false); setQ(""); router.push(href); }} />
               ) : (
                 <>
                   No match for “{q.trim()}”{gi && globalAllowed ? ` in the atlas or among ${gi.rows.length.toLocaleString("en-US")} rare diseases` : ""}. Try a gene from a genetic
@@ -453,6 +460,47 @@ function HitRow({ idx, hit, detailed }: { idx: GraphIndex; hit: SearchHit; detai
         {detailed && n.summary && <div className="mt-0.5 line-clamp-1 text-xs text-ink-3">{n.summary}</div>}
         {linkedDisease && <div className="mt-0.5 text-xs text-ink-2">Linked disease: {linkedDisease}</div>}
       </div>
+    </div>
+  );
+}
+
+/** Nothing matched: say so plainly, offer close spellings, and a page with related problems and who to contact. */
+function NoResult({ q, gi, idx, onGo }: { q: string; gi: GlobalIndex | null; idx: GraphIndex | null; onGo: (href: string) => void }) {
+  const sugg = gi ? suggestGlobal(gi, q, 3) : [];
+  return (
+    <div className="space-y-3 text-[15px] text-ink-2">
+      <p className="text-[16px] font-medium text-ink">We couldn’t find “{q}” in the atlas yet.</p>
+      {sugg.length > 0 && (
+        <div>
+          <p className="text-sm text-ink-3">Did you mean</p>
+          <ul className="mt-1 space-y-1">
+            {sugg.map((s) => (
+              <li key={s.row.id}>
+                <button
+                  type="button"
+                  onMouseDown={(e) => {
+                    e.preventDefault();
+                    onGo(rowHref(s.row, idx));
+                  }}
+                  className="text-left text-accent-700 hover:underline"
+                >
+                  {capFirst(s.row.name)}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <button
+        type="button"
+        onMouseDown={(e) => {
+          e.preventDefault();
+          onGo(`/help?q=${encodeURIComponent(q)}`);
+        }}
+        className="font-medium text-accent-700 hover:underline"
+      >
+        Related problems and who you can contact now →
+      </button>
     </div>
   );
 }

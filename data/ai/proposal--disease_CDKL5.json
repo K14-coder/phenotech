@@ -1,0 +1,151 @@
+{
+  "kind": "proposal",
+  "id": "disease:CDKL5",
+  "title": "CDKL5 UK and DEE-P Connections: a small first step together",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At CDKL5 UK, we support families affected by CDKL5 deficiency disorder and would welcome exploring collaboration with DEE-P Connections (DEEP).",
+          "edge_ids": [
+            "org:cdkl5-uk|serves|disease:CDKL5"
+          ]
+        },
+        {
+          "text": "The atlas infers DEEP’s connection to our community from the International Foundation for CDKL5 Research (IFCR) logo on your collaborative page; this is a partnership signal, not a formal membership record.",
+          "edge_ids": [
+            "org:dee-p-connections|serves|disease:CDKL5"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "IFCR’s Connect CDKL5 community data platform already includes people with CDKL5-related disorders.",
+          "edge_ids": [
+            "asset:connect-cdkl5|covers|disease:CDKL5"
+          ]
+        },
+        {
+          "text": "The International CDKL5 Registry, International CDKL5 Clinical Research Network and Natural History of Rett Syndrome & Related Disorders also study CDKL5 deficiency disorder.",
+          "edge_ids": [
+            "study:NCT02738281|studies|disease:CDKL5",
+            "study:NCT04486768|studies|disease:CDKL5",
+            "study:NCT05558371|studies|disease:CDKL5"
+          ]
+        },
+        {
+          "text": "We could start by sharing information about these resources rather than creating something new.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please confirm DEEP’s current role with CDKL5 families before we describe a formal partnership.",
+          "edge_ids": []
+        },
+        {
+          "text": "Symptom similarities with UNC13A-, SCN1A- and CPLX1-related disorders are atlas inferences, each below 0.5 confidence.",
+          "edge_ids": [
+            "disease:CDKL5|similar_phenotype|disease:UNC13A",
+            "disease:SCN1A|similar_phenotype|disease:CDKL5",
+            "disease:CDKL5|similar_phenotype|disease:CPLX1"
+          ]
+        },
+        {
+          "text": "Claims that one working gene copy is insufficient in CDKL5, UNC13A and CPLX1 are unverified atlas inferences, also below 0.5 confidence.",
+          "edge_ids": [
+            "vg:CDKL5:splice|has_effect|mech:haploinsufficiency",
+            "vg:UNC13A:truncating|has_effect|mech:haploinsufficiency",
+            "vg:CPLX1:truncating|has_effect|mech:haploinsufficiency"
+          ]
+        },
+        {
+          "text": "The broad SCN1A loss-of-function connection is contested because other mechanisms occur; CPLX1 evidence is limited.",
+          "edge_ids": [
+            "disease:SCN1A|driven_by|mech:loss-of-function",
+            "disease:CPLX1|driven_by|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "Can we check touch sensitivity, broad finger bones near the knuckles and coldness across these comparison conditions, especially the first two in UNC13A, without treating missing records as absence?",
+          "edge_ids": []
+        },
+        {
+          "text": "Please also help identify additional patient organisations, registries, trials and research groups.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let us send one joint enquiry asking whether the Congenital Muscle Disease International Registry (CMDIR) could include CDKL5 deficiency disorder.",
+          "edge_ids": []
+        },
+        {
+          "text": "CMDIR includes UNC13A; published evidence links both conditions to reduced or lost protein function, but transferring registry approaches remains a hypothesis.",
+          "edge_ids": [
+            "asset:cmdir-congenital-muscle-disease-registry|covers|disease:UNC13A",
+            "disease:CDKL5|driven_by|mech:loss-of-function",
+            "disease:UNC13A|driven_by|mech:loss-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "What patient organisations, registries, trials and research groups exist for CDKL5-related disorders beyond those verified here?",
+          "edge_ids": []
+        },
+        {
+          "text": "We could ask patient organisations for partner lists and check registry intake lists and study databases directly.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear DEE-P Connections (DEEP),",
+          "edge_ids": []
+        },
+        {
+          "text": "I’m writing on behalf of CDKL5 UK to explore a modest collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we jointly ask CMDIR whether including CDKL5 deficiency disorder is feasible?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would keep this exploratory and check suitability before making any commitments.",
+          "edge_ids": []
+        },
+        {
+          "text": "Would you be willing to shape this enquiry with us this month?",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of CDKL5 UK",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:04:46.268Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

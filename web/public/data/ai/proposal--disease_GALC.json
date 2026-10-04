@@ -1,0 +1,141 @@
+{
+  "kind": "proposal",
+  "id": "disease:GALC",
+  "title": "A first conversation between Hunter's Hope Foundation and FIN",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At Hunter's Hope Foundation, we support families affected by Krabbe disease; Fabry International Network (FIN) supports families affected by Fabry disease.",
+          "edge_ids": [
+            "org:hunters-hope-foundation|serves|disease:GALC",
+            "org:fabry-international-network|serves|disease:GLA"
+          ]
+        },
+        {
+          "text": "Both conditions involve a shortage of enzymes in cells' recycling compartments and problems breaking down certain fats.",
+          "edge_ids": [
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "gene:GALC|participates_in|mech:sphingolipid-catabolism",
+            "gene:GLA|participates_in|mech:sphingolipid-catabolism"
+          ]
+        },
+        {
+          "text": "This shared biology offers a reason to explore collaboration, not proof that the same study design will suit both communities.",
+          "edge_ids": [
+            "disease:GLA|shares_mechanism|disease:GALC"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Krabbe resources include The Natural History of Infantile Globoid Cell Leukodystrophy, the Krabbe Disease Global Patient Registry and KrabbeConnect's KrabbeCURES data platform.",
+          "edge_ids": [
+            "asset:nct00983879-the-natural-history-of-infantile-globoid-cell-le|covers|disease:GALC",
+            "asset:nct02993796-krabbe-disease-global-patient-registry|covers|disease:GALC",
+            "asset:krabbecures|covers|disease:GALC"
+          ]
+        },
+        {
+          "text": "We could explore lessons from these resources before proposing shared data collection.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "The enzyme shortages differ: Krabbe involves galactocerebrosidase, while Fabry involves alpha-galactosidase A.",
+          "edge_ids": [
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Please help confirm whether persistent abnormal rhythmic brain-wave activity on EEG and structural differences in the medulla oblongata, part of the brainstem, also occur in Fabry disease.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should also check reduced tissue galactocerebrosidase activity rather than assume it is a shared feature.",
+          "edge_ids": []
+        },
+        {
+          "text": "The atlas's predictions that certain gene-splicing changes remove protein function are inferred, unverified and below 0.5 confidence for both GALC and GLA.",
+          "edge_ids": [
+            "vg:GALC:splice|has_effect|mech:loss-of-function",
+            "vg:GLA:splice|has_effect|mech:loss-of-function"
+          ]
+        },
+        {
+          "text": "Before sharing resources, let us check study eligibility and suitability for each community.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send FIN one inquiry asking whether Natural History in Fabry Disease With IVS4+919G>A Mutations could include people with GALC-related disorders (Krabbe disease), without assuming eligibility or FIN's involvement in running it.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "No open questions are recorded yet in the supplied proposal input.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Fabry International Network team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am reaching out on behalf of Hunter's Hope Foundation to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Krabbe and Fabry disease share underlying enzyme-deficiency biology.",
+          "edge_ids": [
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Could you help us ask whether Natural History in Fabry Disease With IVS4+919G>A Mutations might include Krabbe disease?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome an initial feasibility discussion, with differences and eligibility checked first.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Hunter's Hope Foundation",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:07:42.262Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

@@ -1,0 +1,140 @@
+{
+  "kind": "proposal",
+  "id": "disease:LZTR1",
+  "title": "A registry conversation with CTF for families affected by LZTR1-related disorders",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At RASopathies Network, we support families affected by LZTR1-related disorders.",
+          "edge_ids": [
+            "org:rasopathies-network|serves|disease:LZTR1"
+          ]
+        },
+        {
+          "text": "The atlas infers a connection with Children's Tumor Foundation (CTF) through your support for schwannomatosis; this does not confirm coverage of every LZTR1-related condition.",
+          "edge_ids": [
+            "org:childrens-tumor-foundation|serves|disease:LZTR1"
+          ]
+        },
+        {
+          "text": "LZTR1-related disorders and NF1 share a biological link: loss of gene function can weaken the cell's controls on RAS signals.",
+          "edge_ids": [
+            "disease:LZTR1|driven_by|mech:loss-of-function",
+            "disease:NF1|driven_by|mech:loss-of-function",
+            "disease:NF1|shares_mechanism|disease:LZTR1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "CTF's NF Registry on the IAMRARE platform covers NF1 and all types of schwannomatosis.",
+          "edge_ids": [
+            "asset:nf-registry-ctf|covers|disease:NF1"
+          ]
+        },
+        {
+          "text": "PATRAS and the RASopathies Network contact registry are potential starting points, although their LZTR1 coverage is inferred by the atlas from syndrome coverage rather than explicit gene naming.",
+          "edge_ids": [
+            "asset:patras-registry-euras|covers|disease:LZTR1",
+            "asset:rasopathies-network-contact-registry|covers|disease:LZTR1"
+          ]
+        },
+        {
+          "text": "The Clinical, Genetic, and Epidemiologic Study of Children and Adults With RASopathies explicitly names LZTR1.",
+          "edge_ids": [
+            "study:NCT04888936|studies|disease:LZTR1"
+          ]
+        },
+        {
+          "text": "We propose sharing resource descriptions first, rather than assuming records can be combined.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please help confirm whether prominent corneal nerve fibers and fetal pleural effusion also occur in NF1.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should also check abnormal coronary artery origin, and review all three features across SOS1- and PTPN11-related disorders rather than treating missing records as proof of absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "The atlas's symptom-similarity links to SOS1 and PTPN11 are inferred and below 0.5 confidence, at 0.36 and 0.30 respectively.",
+          "edge_ids": [
+            "disease:SOS1|similar_phenotype|disease:LZTR1",
+            "disease:PTPN11|similar_phenotype|disease:LZTR1"
+          ]
+        },
+        {
+          "text": "Please confirm registry eligibility and practical reuse before we promise families shared access.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "This month, let's send CTF one focused inquiry asking whether the NF Registry could include the wider range of LZTR1-related disorders and what eligibility checks would be needed.",
+          "edge_ids": [
+            "asset:nf-registry-ctf|covers|disease:NF1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "No open questions are recorded yet in the supplied proposal input.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Children's Tumor Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of RASopathies Network to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Our community includes families affected by LZTR1-related disorders.",
+          "edge_ids": [
+            "org:rasopathies-network|serves|disease:LZTR1"
+          ]
+        },
+        {
+          "text": "Could your NF Registry include the wider LZTR1 community?",
+          "edge_ids": []
+        },
+        {
+          "text": "Could we begin this month by clarifying eligibility and the differences that need checking?",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of RASopathies Network (RASopathiesNet USA / UK)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:14:41.059Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

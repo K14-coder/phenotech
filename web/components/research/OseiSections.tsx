@@ -301,6 +301,12 @@ function Reach({ idx, node }: { idx: GraphIndex; node: AtlasNode }) {
         <p className="mt-1.5 text-xs text-ink-3">
           Writes to the patient organisation proposing a study, citing the atlas. It never asks for personal data.
         </p>
+        <p className="mt-3 text-sm text-ink-2">
+          Have an approved study?{" "}
+          <a href="/me#rt-h" className="font-medium text-accent-700 hover:underline">
+            Announce it to this community, see anonymous member counts or request contact →
+          </a>
+        </p>
       </div>
     </section>
   );

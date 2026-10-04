@@ -5,6 +5,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { PlainText } from "../PlainText";
+import { GeneralHelp } from "../help/GeneralHelp";
 import {
   Checklist,
   ContactCard,
@@ -39,6 +40,8 @@ export interface DevonModel {
   sources: SourceLink[];
   related: Contact[];
   contributeHref: string;
+  /** basic-data pages: show general help first */
+  generalHelpFirst?: boolean;
   /** the type the family picked on the guided start page */
   chosenType?: string | null;
   /** a gene the in-browser sequence check covers (the 45 deep genes) */
@@ -139,6 +142,8 @@ export function DevonPage({ m, learnMore }: { m: DevonModel; learnMore?: React.R
           <SafetyNote />
         </div>
       </header>
+
+      {m.generalHelpFirst && <GeneralHelp />}
 
       <DevonSection id="plain" title="What this means, in plain words">
         {m.plain.map((p, i) => (

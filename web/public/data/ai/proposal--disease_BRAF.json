@@ -1,0 +1,136 @@
+{
+  "kind": "proposal",
+  "id": "disease:BRAF",
+  "title": "A shared registry conversation for CFC and RAF1 families",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At RASopathies Network, we support families affected by BRAF-related RASopathies; the atlas also links CFC International to these families through CFC syndrome, although your website does not name BRAF.",
+          "edge_ids": [
+            "org:rasopathies-network|serves|disease:BRAF",
+            "org:cfc-international|serves|disease:BRAF"
+          ]
+        },
+        {
+          "text": "BRAF and RAF1 share links to excess protein activity and the MAPK cell-signalling pathway, giving us a reason to explore collaboration—not proof that every family's needs are alike.",
+          "edge_ids": [
+            "disease:BRAF|driven_by|mech:gain-of-function",
+            "disease:RAF1|driven_by|mech:gain-of-function",
+            "gene:BRAF|participates_in|mech:mapk-cascade",
+            "gene:RAF1|participates_in|mech:mapk-cascade"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Your CITIZEN CFC Syndrome Registry, PATRAS and our developing contact registry offer starting points; their BRAF coverage is inferred by the atlas from syndrome descriptions.",
+          "edge_ids": [
+            "asset:cfc-citizen-registry|covers|disease:BRAF",
+            "asset:patras-registry-euras|covers|disease:BRAF",
+            "asset:rasopathies-network-contact-registry|covers|disease:BRAF"
+          ]
+        },
+        {
+          "text": "The Clinical, Genetic, and Epidemiologic Study of Children and Adults With RASopathies explicitly lists both BRAF and RAF1.",
+          "edge_ids": [
+            "study:NCT04888936|studies|disease:BRAF"
+          ]
+        },
+        {
+          "text": "We propose exploring shared registry experience before assuming that an existing CFC resource can accept RAF1 families.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Please help verify whether lentigo maligna melanoma, multiple plantar creases and hyperpigmented nevi occur in RAF1-related disorders, and check these features separately for SOS1 and PTPN11.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should treat missing symptom records as questions, not confirmed differences.",
+          "edge_ids": []
+        },
+        {
+          "text": "RAF1 changes can increase or impair protein activity, so its broad gain-of-function label needs variant-by-variant checking.",
+          "edge_ids": [
+            "disease:RAF1|driven_by|mech:gain-of-function"
+          ]
+        },
+        {
+          "text": "Could we confirm registry eligibility and any changes needed before inviting families?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Let's hold one short registry review with CFC International this month to decide whether offering CITIZEN to RAF1 families is feasible, using the symptom and variant questions above as our checklist.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Which individual gene changes increase activity, impair it or cause loss of function?",
+          "edge_ids": []
+        },
+        {
+          "text": "Could a variant-level table linking ClinVar records to published laboratory findings help answer that question?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear CFC International team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I'd welcome a small collaboration for our CFC community.",
+          "edge_ids": []
+        },
+        {
+          "text": "Your CITIZEN CFC Syndrome Registry offers a useful starting point.",
+          "edge_ids": [
+            "asset:cfc-citizen-registry|covers|disease:BRAF"
+          ]
+        },
+        {
+          "text": "Could we review whether it could also welcome RAF1 families this month?",
+          "edge_ids": []
+        },
+        {
+          "text": "Let's check eligibility and biological differences before any invitation.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of RASopathies Network (RASopathiesNet USA / UK)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:02:34.934Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

@@ -1,0 +1,144 @@
+{
+  "kind": "proposal",
+  "id": "disease:GLA",
+  "title": "A small first collaboration: FIN and Hunter's Hope Foundation",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At Fabry International Network (FIN), we support Fabry families; Hunter's Hope Foundation supports families affected by Krabbe disease.",
+          "edge_ids": [
+            "org:fabry-international-network|serves|disease:GLA",
+            "org:hunters-hope-foundation|serves|disease:GALC"
+          ]
+        },
+        {
+          "text": "Both conditions involve too little activity from enzymes in the cell's recycling system, offering a biological reason to explore shared learning.",
+          "edge_ids": [
+            "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GLA|shares_mechanism|disease:GALC"
+          ]
+        },
+        {
+          "text": "We propose exploring common research approaches without assuming our communities have identical needs.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "Natural History in Fabry Disease With IVS4+919G>A Mutations collects information about people with Fabry disease.",
+          "edge_ids": [
+            "asset:nct07506083-natural-history-in-fabry-disease-with-ivs4-919g|covers|disease:GLA"
+          ]
+        },
+        {
+          "text": "We could use that study as a starting point for discussing what information and study designs might be useful across our communities.",
+          "edge_ids": [
+            "asset:nct07506083-natural-history-in-fabry-disease-with-ivs4-919g|covers|disease:GLA"
+          ]
+        },
+        {
+          "text": "Let us check access and suitability rather than promise shared data or ready-made tools.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "The substances involved differ: Fabry involves Gb3 buildup, while harmful psychosine buildup in Krabbe is described as a hypothesis.",
+          "edge_ids": [
+            "disease:GLA|driven_by|mech:lysosomal-storage",
+            "disease:GALC|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Please help confirm whether lipiduria (fat in urine), urinary mulberry cells, and elevated blood Gb3 occur in Krabbe, rather than treating missing records as proof of absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should also check which gene variants might respond to protein-stabilizing medicines before drawing comparisons.",
+          "edge_ids": []
+        },
+        {
+          "text": "The atlas's GLA and GALC splice-variant loss-of-function links are inferred, unverified, and below 0.5 confidence.",
+          "edge_ids": [
+            "vg:GLA:splice|has_effect|mech:loss-of-function",
+            "vg:GALC:splice|has_effect|mech:loss-of-function"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send Hunter's Hope Foundation one inquiry asking whether The Natural History of Infantile Globoid Cell Leukodystrophy could include Fabry disease, requesting confirmation of feasibility rather than assuming eligibility.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Which variants in GBA1, HEXA, NPC1 and GAA are 'amenable'—able to respond to a chaperone—as GLA variants are classified for migalastat?",
+          "edge_ids": []
+        },
+        {
+          "text": "Published evidence on migalastat's protein-stabilizing effects is variant-dependent, and the atlas marks the broader connection as contested; this is evidence to discuss with a neurologist, not treatment guidance.",
+          "edge_ids": [
+            "disease:GLA|driven_by|mech:protein-destabilization"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear Hunter's Hope Foundation team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of FIN to invite a small exploratory collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Fabry and Krabbe share a link through deficient enzymes in the cell's recycling system.",
+          "edge_ids": [
+            "disease:GLA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GALC|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Could you advise whether The Natural History of Infantile Globoid Cell Leukodystrophy could include Fabry disease?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome a feasibility check before making any commitments.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Fabry International Network (FIN)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:08:24.893Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

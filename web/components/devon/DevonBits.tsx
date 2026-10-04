@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useId, useState } from "react";
 import { useEvidence } from "../evidence/EvidenceProvider";
 import { PlainText } from "../PlainText";
+import { SaveButton } from "../community/AccountBits";
 
 export interface SourceLink {
   label: string;
@@ -63,8 +64,7 @@ export function HowWeKnow({ how, className = "" }: { how?: How | null; className
 export function SafetyNote() {
   return (
     <p className="rounded-lg border border-line bg-white px-4 py-3 text-[15px] leading-relaxed text-ink-2">
-      This is information, not medical advice. Your child’s doctor or{" "}
-      <PlainText text="genetic counsellor" /> is the right person for decisions.
+      This is information, not medical advice. A doctor or <PlainText text="genetic counsellor" /> is the right person for decisions.
     </p>
   );
 }
@@ -223,6 +223,7 @@ export function DoctorQuestions({ name, questions, sources }: { name: string; qu
       >
         Print for your appointment
       </button>
+      <SaveButton title={`Questions for the doctor: ${name}`} kind="questions" />
       <div className="print-sheet" aria-hidden="true">
         <h1 style={{ fontSize: "18pt", fontWeight: 600 }}>Questions for our appointment</h1>
         <p style={{ marginTop: "4pt" }}>About: {name}</p>

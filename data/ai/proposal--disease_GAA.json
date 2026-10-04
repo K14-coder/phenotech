@@ -1,0 +1,149 @@
+{
+  "kind": "proposal",
+  "id": "disease:GAA",
+  "title": "AMDA and The Gauchers Association: a first conversation about shared registries",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At AMDA, we support Pompe families; The Gauchers Association supports Gaucher families.",
+          "edge_ids": [
+            "org:acid-maltase-deficiency-association|serves|disease:GAA",
+            "org:gauchers-association|serves|disease:GBA1"
+          ]
+        },
+        {
+          "text": "Both diseases involve missing enzyme activity and material building up inside lysosomes, the cell’s recycling compartments.",
+          "edge_ids": [
+            "disease:GAA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:GAA|driven_by|mech:lysosomal-storage",
+            "disease:GBA1|driven_by|mech:lysosomal-storage",
+            "disease:GBA1|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "This shared biology offers a reason to explore collaboration, not proof that the same approaches will work.",
+          "edge_ids": [
+            "disease:GBA1|shares_mechanism|disease:GAA"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The Registry of Patients Diagnosed With Lysosomal Storage Diseases and A Global Prospective Observational Registry of Patients With Pompe Disease already include Pompe.",
+          "edge_ids": [
+            "asset:nct05619900-registry-of-patients-diagnosed-with-lysosomal-st|covers|disease:GAA",
+            "asset:nct06121011-a-global-prospective-observational-registry-of-p|covers|disease:GAA"
+          ]
+        },
+        {
+          "text": "The AMDA Research Grant is another existing Pompe resource.",
+          "edge_ids": [
+            "asset:amda-research-grant|covers|disease:GAA"
+          ]
+        },
+        {
+          "text": "We could exchange information about these resources without assuming access, funding or suitability for Gaucher.",
+          "edge_ids": []
+        },
+        {
+          "text": "The Institutional Registry of Rare Diseases includes Gaucher and offers a concrete starting point for an inquiry.",
+          "edge_ids": [
+            "asset:nct06573723-institutional-registry-of-rare-diseases|covers|disease:GBA1"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "Pompe involves glycogen buildup in muscle, while Gaucher involves glucosylceramide buildup mainly in immune cells called macrophages.",
+          "edge_ids": [
+            "disease:GAA|driven_by|mech:lysosomal-storage",
+            "disease:GBA1|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Please help check whether difficulty descending stairs, reduced muscle alpha-1,4-glucosidase activity and elevated urine glucose tetrasaccharide also occur in Gaucher, rather than treating missing records as absence.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should also check variant-specific responses to protein-stabilizing compounds before drawing parallels.",
+          "edge_ids": []
+        },
+        {
+          "text": "The atlas’s splice-variant loss-of-function links are inferred, unverified and below 0.5 confidence; the Gaucher protein-misfolding connection carries contested evidence.",
+          "edge_ids": [
+            "vg:GAA:splice|has_effect|mech:loss-of-function",
+            "vg:GBA1:splice|has_effect|mech:loss-of-function",
+            "disease:GBA1|driven_by|mech:protein-destabilization"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send one inquiry to The Gauchers Association asking whether the Institutional Registry of Rare Diseases could include Pompe and who could confirm eligibility.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "Which variants in GBA1, HEXA, NPC1 and GAA are “amenable”—responsive to a protein-stabilizing chaperone—as GLA variants are classified for migalastat in published evidence to discuss with a neurologist?",
+          "edge_ids": []
+        },
+        {
+          "text": "Could a cross-gene table of laboratory responses distinguish actual responsiveness from genetic consequence labels and test the proposed connection to SLC6A1?",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear The Gauchers Association team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I’m writing on behalf of AMDA to explore a small collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "Pompe and Gaucher share lysosomal storage biology.",
+          "edge_ids": [
+            "disease:GAA|driven_by|mech:lysosomal-storage",
+            "disease:GBA1|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Could you help us ask whether the Institutional Registry of Rare Diseases could include Pompe?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome your guidance before taking this further.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of Acid Maltase Deficiency Association (AMDA)",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:07:01.676Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}

@@ -1,0 +1,137 @@
+{
+  "kind": "proposal",
+  "id": "disease:ARSA",
+  "title": "ArchAngel MLD Trust and INPDA: a small first step together",
+  "sections": [
+    {
+      "heading": "Why our communities are connected",
+      "sentences": [
+        {
+          "text": "At ArchAngel MLD Trust, we support families affected by ARSA-related metachromatic leukodystrophy (MLD), while INPDA supports families with acid sphingomyelinase deficiency (ASMD), also called Niemann-Pick A/B.",
+          "edge_ids": [
+            "org:archangel-mld-trust|serves|disease:ARSA",
+            "org:inpda|serves|disease:SMPD1"
+          ]
+        },
+        {
+          "text": "Both conditions involve too little of a working enzyme and a build-up of substances in cells’ recycling compartments.",
+          "edge_ids": [
+            "disease:ARSA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:ARSA|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "This shared biology offers a reason to explore collaboration, not proof that the same research approach will suit both communities.",
+          "edge_ids": [
+            "disease:SMPD1|shares_mechanism|disease:ARSA"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What already exists that we could share",
+      "sentences": [
+        {
+          "text": "The Natural History of Metachromatic Leukodystrophy Study (HOME Study) and the Rare Disease Patient Registry & Natural History Study at Sanford already include MLD.",
+          "edge_ids": [
+            "asset:nct04628364-the-natural-history-of-metachromatic-leukodystro|covers|disease:ARSA",
+            "asset:nct01793168-rare-disease-patient-registry-natural-history-st|covers|disease:ARSA"
+          ]
+        },
+        {
+          "text": "Our research grant programme also supports MLD research.",
+          "edge_ids": [
+            "asset:archangel-mld-grant-programme|covers|disease:ARSA"
+          ]
+        },
+        {
+          "text": "We could start by sharing information about these resources and exploring which study methods might transfer, without promising access, funding or wider eligibility.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What must be checked before we join forces",
+      "sentences": [
+        {
+          "text": "The stored substances differ: sulfatides in MLD and sphingomyelin in ASMD.",
+          "edge_ids": [
+            "disease:ARSA|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-storage"
+          ]
+        },
+        {
+          "text": "Before proceeding, please help check whether impaired cerebroside sulfate hydrolysis, reduced leukocyte arylsulfatase A activity and gallbladder dysfunction also occur in ASMD.",
+          "edge_ids": []
+        },
+        {
+          "text": "We should confirm study eligibility and whether methods can accommodate these differences rather than assume resources transfer unchanged.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Proposed first step this month",
+      "sentences": [
+        {
+          "text": "Send INPDA one enquiry asking whether the National Multicentre Study of the Natural History of Acid Sphingo-myelinase Deficiency in Adults and Children could include people with MLD.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "What we don't know yet",
+      "sentences": [
+        {
+          "text": "No open questions are recorded yet.",
+          "edge_ids": []
+        }
+      ]
+    },
+    {
+      "heading": "Short outreach email",
+      "sentences": [
+        {
+          "text": "Dear International Niemann-Pick Disease Alliance team,",
+          "edge_ids": []
+        },
+        {
+          "text": "I am writing on behalf of ArchAngel MLD Trust to explore a modest collaboration.",
+          "edge_ids": []
+        },
+        {
+          "text": "MLD and ASMD share enzyme deficiency and substance build-up within cells.",
+          "edge_ids": [
+            "disease:ARSA|driven_by|mech:lysosomal-enzyme-deficiency",
+            "disease:ARSA|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-storage",
+            "disease:SMPD1|driven_by|mech:lysosomal-enzyme-deficiency"
+          ]
+        },
+        {
+          "text": "Could you help us ask whether the natural history study named above could include MLD?",
+          "edge_ids": []
+        },
+        {
+          "text": "We would welcome checking disease differences and eligibility together before making any commitments.",
+          "edge_ids": []
+        },
+        {
+          "text": "Thank you for considering this first conversation.",
+          "edge_ids": []
+        },
+        {
+          "text": "[Your name], on behalf of ArchAngel MLD Trust",
+          "edge_ids": []
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6-astra",
+  "generated_at": "2026-10-04T00:01:52.767Z",
+  "auth_path": "chatgpt",
+  "structured_mode": "json_schema",
+  "dropped_citations": 0
+}
