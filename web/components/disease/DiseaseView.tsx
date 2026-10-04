@@ -11,6 +11,7 @@ import { ProposalDraft } from "./ProposalDraft";
 import { ContributedBadge, contributionsOf } from "../ContributedBadge";
 import { BiotechNeed, ResearcherMechanisms } from "./PersonaSections";
 import { IdeasSection, LookAlikes, PatternBreaks, VariantHint } from "./DerivedSections";
+import { ResearchRecommendations } from "./ResearchRecommendations";
 import { usePersona, type Persona } from "@/lib/persona";
 import { DevonDisease } from "../devon/DevonDisease";
 import { JoinBox } from "../community/JoinBox";
@@ -246,6 +247,8 @@ function Disease({ idx, id, as: persona, embedded = false }: { idx: GraphIndex; 
             </EmptyNote>
           )}
         </section>
+
+        <ResearchRecommendations diseaseId={id} short={short} />
 
         {/* 2 */}
         <section id="exists" aria-labelledby="exists-h" className="scroll-mt-20">

@@ -50,7 +50,9 @@ def uniprot(sym):
                       params={"query": f"gene_exact:{sym} AND organism_id:9606 AND reviewed:true",
                               "format": "json"}, refresh=REFRESH)
     res = obj.get("results", [])
-    return res[0] if res else None
+    # gene_exact also matches synonyms (BCL11B lists "RIT1"), so prefer the entry whose primary gene name is sym
+    primary = [r for r in res if any((g.get("geneName") or {}).get("value") == sym for g in r.get("genes", []))]
+    return (primary or res or [None])[0]
 
 
 def ensembl_cds(enst):

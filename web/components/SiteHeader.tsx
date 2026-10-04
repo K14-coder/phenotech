@@ -12,6 +12,7 @@ const NAV = [
   { href: "/", label: "Search" },
   { href: "/atlas", label: "Atlas" },
   { href: "/research", label: "Research" },
+  { href: "/mechanisms", label: "Mechanisms" },
   { href: "/path", label: "Path" },
   { href: "/method", label: "How we know" },
   { href: "/impact", label: "Why 10×" },

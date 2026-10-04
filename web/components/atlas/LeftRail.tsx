@@ -4,7 +4,8 @@ import { clusterSlot, type GraphIndex } from "@/lib/graph";
 import { bridgesOf } from "@/lib/bridges";
 import { clusterColor, NO_CLUSTER_COLOR } from "@/lib/style";
 import { TYPE_LABEL, plural } from "@/lib/text";
-import { NODE_TYPES, type NodeType } from "@/lib/types";
+import Link from "next/link";
+import { MECHSIM_RELATIONS, NODE_TYPES, type NodeType } from "@/lib/types";
 import { NodeTypeIcon } from "../NodeTypeIcon";
 
 export type SymptomMode = "none" | "distinctive" | "all";
@@ -21,6 +22,8 @@ export function LeftRail({
   distinctiveCount,
   selectedClusterId,
   onSelectCluster,
+  showMechsim = false,
+  onShowMechsim,
 }: {
   idx: GraphIndex;
   hiddenClusters: Set<string>;
@@ -33,7 +36,10 @@ export function LeftRail({
   distinctiveCount: number;
   selectedClusterId: string | null;
   onSelectCluster: (id: string | null) => void;
+  showMechsim?: boolean;
+  onShowMechsim?: (on: boolean) => void;
 }) {
+  const mechsimCount = idx.graph.edges.filter((e) => MECHSIM_RELATIONS.includes(e.type)).length;
   const typeCounts = new Map<NodeType, number>();
   for (const n of idx.graph.nodes) typeCounts.set(n.type, (typeCounts.get(n.type) ?? 0) + 1);
   const clusters = idx.graph.clusters;
@@ -153,6 +159,27 @@ export function LeftRail({
           start hidden.
         </p>
       </section>
+
+      {onShowMechsim && mechsimCount > 0 && (
+        <section aria-labelledby="mechsim-h" className="mt-7">
+          <h2 id="mechsim-h" className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-3">
+            Mechanistic links
+          </h2>
+          <label className="mt-2.5 flex cursor-pointer items-start gap-2 text-sm text-ink-2">
+            <input type="checkbox" className="mt-0.5" checked={showMechsim} onChange={(e) => onShowMechsim(e.target.checked)} />
+            <span>
+              Show {mechsimCount} computed links (same genes, pathway, tissue, mutation types, protein fate, protein structure, shared
+              compounds)
+            </span>
+          </label>
+          <p className="mt-2 text-xs leading-relaxed text-ink-3">
+            Drawn as purple dotted lines. Inferred by the atlas from public data, not curated.{" "}
+            <Link href="/mechanisms" className="text-accent-700 hover:underline">
+              Compare all six axes
+            </Link>
+          </p>
+        </section>
+      )}
 
       <section aria-labelledby="lines-h" className="mt-7">
         <h2 id="lines-h" className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-3">

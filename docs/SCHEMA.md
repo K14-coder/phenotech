@@ -85,6 +85,7 @@ Type-specific `attrs`:
 | disease → mechanism | `driven_by` |
 | disease → phenotype | `has_phenotype` |
 | disease → disease (computed) | `shares_mechanism`, `similar_phenotype` |
+| disease → disease (computed, six mechanistic axes; `pipeline/derive/mechsim.py`) | `shares_gene`, `shares_pathway`, `shares_tissue`, `similar_mutation_spectrum`, `similar_protein_fate`, `similar_protein_structure`, `shares_pharmacology`, `mechanistically_similar` |
 | patient_org → disease | `serves` |
 | patient_org / researcher → asset | `maintains` |
 | asset → disease | `covers` |

@@ -38,7 +38,12 @@ EDGE_TYPES = {
     "causes", "variant_in", "has_effect", "participates_in", "driven_by", "has_phenotype",
     "shares_mechanism", "similar_phenotype", "serves", "maintains", "covers", "studies", "tests",
     "targets", "developed_for", "candidate_for", "part_of", "works_on", "authored", "funds", "about",
+    # computed disease-disease links on six mechanistic axes (pipeline/derive/mechsim.py)
+    "shares_gene", "shares_pathway", "shares_tissue", "similar_mutation_spectrum", "similar_protein_fate",
+    "similar_protein_structure", "shares_pharmacology", "mechanistically_similar",
 }
+MECHSIM_TYPES = {"shares_gene", "shares_pathway", "shares_tissue", "similar_mutation_spectrum", "similar_protein_fate",
+                 "similar_protein_structure", "shares_pharmacology", "mechanistically_similar"}
 LEVEL_RANK = {"hypothesis": 1, "inferred": 2, "observational": 3, "experimental": 4, "curated": 5, "clinical": 6}
 NEEDS_QUOTE = {"PubMed", "Website"}
 
@@ -379,7 +384,7 @@ def main():
         nodes.pop(node_id, None)
     for node_id, patch in overrides.get("node_patches", {}).items():
         if node_id in nodes:
-            nodes[node_id].update(patch)
+            nodes[node_id].update({k: v for k, v in patch.items() if not k.startswith("_")})
     rejected = set(overrides.get("drop_edges", []))
     for edge_id, patch in overrides.get("edge_patches", {}).items():
         if edge_id in edges:
@@ -422,7 +427,9 @@ def main():
             merged_clusters.append(c)
             seen_cluster_ids.add(c["id"])
 
-    for node_id, value in betweenness(nodes, edges).items():
+    # computed mechanistic-similarity links are an optional overlay: they must not change node sizes
+    curated_edges = {k: e for k, e in edges.items() if e["type"] not in MECHSIM_TYPES}
+    for node_id, value in betweenness(nodes, curated_edges).items():
         nodes[node_id].setdefault("attrs", {})["centrality"] = value
 
     source_dates = defaultdict(set)
