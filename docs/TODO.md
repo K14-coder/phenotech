@@ -38,11 +38,11 @@ Several Claude agents and people work in parallel. Follow this every time:
 
 - [x] **Direction-aware therapy matching** (done 2026-10-04): neutral on PrimeKG, no contraindication shift, atlas gain = target leakage → keep it as a flag only. See eval.md section 6.
 - [~] (claimed by main-session agent "ai-review", 2026-10-04) **Independent AI review of the review sheet** → `docs/review/ai-review-2026-10-04.md` and patches in `data/curated/overrides.json`. Review records use `by: "ai-review:claude"`.
-  - [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:32 CEST) Web: render ai-review records as "Independently reviewed by AI (not a human expert)". Human reviews keep "Reviewed by a biochemist".
+  - [~] (claimed by web agent, 2026-10-04 06:35 CEST) Web: render ai-review records as "Independently reviewed by AI (not a human expert)". Human reviews keep "Reviewed by a biochemist".
   - [ ] **(you, optional)** A human expert works through the "needs-human" list from that report.
 - [~] (claimed by main-session agent "cross-family", 2026-10-04) **Cross-family biology**: the RAS → MAPK link for LZTR1/RIT1/SOS1, SYNGAP1 ↔ RAS/ERK, misfolding/ER stress, lysosomal/autophagy and synaptic-release links → `data/curated/cross_family.json`. Target: well above 11 of 45 diseases with a specific cross-family link. Re-run the eval.
-- [ ] Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
-- [ ] Direction coverage: add MONDO:0100135 (Dravet) to the G2P/ClinGen join (obsolete id MONDO:0011794). Get directions for relutrigine and NBI-921352 (Nav1.6 inhibitors; ChEMBL has no mechanism record for them).
+- [~] (claimed by web agent, 2026-10-04 06:35 CEST) Show the direction flag in the UI ("direction mismatch: this drug lowers SCN1A function; Dravet is SCN1A loss of function") from `data/derived/direction/` via `direction_compat()`. Apply it per variant group or subtype, not per gene-level disease node.
+- [~] (claimed by agent "vibrant-babbage", 2026-10-04 06:40 CEST) Direction coverage: add MONDO:0100135 (Dravet) to the G2P/ClinGen join (obsolete id MONDO:0011794). Get directions for relutrigine and NBI-921352 (Nav1.6 inhibitors; ChEMBL has no mechanism record for them).
 - [ ] Recompute hypotheses (`pipeline/derive/run.sh`) after the cross-family and direction work lands, then precompute `experiment` AI drafts for the new top ideas.
 - [ ] Merge the research-queue output: run `node pipeline/crowd/export.mjs`, review `data/curated/crowd.json` (crowd diseases become `disease:<GENE>` nodes), then merge.
 - [ ] A timed **10× measurement**: build a VAMP2 landscape (neighbours, reusable assets, partners, next step) by plain web search vs with Tasukeru. Count steps, time and errors; put the result on `/impact`.
